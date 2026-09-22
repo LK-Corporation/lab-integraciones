@@ -75,6 +75,14 @@ FHIR, los códigos de acuse— van en su forma original.
 
 ---
 
+## Licencias
+
+**El código va bajo MIT** y **los documentos bajo CC BY 4.0** —puedes compartirlos y adaptarlos,
+también comercialmente, citando la fuente—. El detalle, con qué cubre cada una y qué pasa con las
+respuestas de los modelos externos, está en [](LICENSE.md).
+
+---
+
 ## Aviso
 
 Todos los datos clínicos utilizados son **sintéticos**. Ni un dato de ningún paciente real.
