@@ -1,0 +1,66 @@
+casos puntuables: 456
+  agente         456 filas, 456 casan con la clave
+  v3-invariante  456 filas, 456 casan con la clave
+  v3-completo    456 filas, 456 casan con la clave
+  generico       456 filas, 456 casan con la clave
+
+==============================================================================================
+FALLO SILENCIOSO, POR OPERADOR - aciertos de cada brazo
+==============================================================================================
+operador                               n  agente  v3-inv  v3-comp generico  clase
+op-44                 8       8       8        8        0  C1 contrato
+op-45                        8       8       8        8        0  C1 contrato
+op-46                       8       8       8        8        0  C1 contrato
+op-48                         8       8       8        8        0  C1 contrato
+op-49                       8       8       8        8        0  C1 contrato
+op-12                            8       0       8        8        0  C1 contrato
+op-38                        8       0       8        8        0  C1 contrato
+op-15               8       1       1        8        0  C1 contrato
+op-35                 8       8       0        8        8  C2 catalogo
+op-41                8       8       0        8        8  C2 catalogo
+op-51                          8       7       0        8        0  C2 catalogo
+op-39                8       6       0        8        0  C2 catalogo
+op-53                          8       6       0        8        0  C2 catalogo
+op-60                      8       6       0        8        8  C2 catalogo
+op-47                      8       4       0        8        0  C2 catalogo
+op-29               8       0       0        8        2  C2 catalogo
+op-07             8       0       0        0        0  O0
+op-27         8       0       0        0        0  O0
+
+==============================================================================================
+LA CLASIFICACION
+==============================================================================================
+C1 contrato  lo detecta v3-invariante, escrito SOLO con el contrato
+             publicado: expresable por cualquiera con el contrato     8
+C2 catalogo  v3-invariante NO, v3-completo SI: expresable como
+             predicado, pero solo se te ocurre viendo el catalogo     8
+C3           el agente lo detecta y NINGUNA regla lo hace. Es la
+             unica clase que justificaria una Fase 13                0
+O0           no lo detecta nadie: la evidencia no esta en el bundle   2
+
+  C2 catalogo:
+     op-35             agente 8/8
+     op-41            agente 8/8
+     op-51                      agente 7/8
+     op-39            agente 6/8
+     op-53                      agente 6/8
+     op-60                  agente 6/8
+     op-47                  agente 4/8
+     op-29           agente 0/8
+
+  O0:
+     op-07         agente 0/8
+     op-27     agente 0/8
+
+==============================================================================================
+RESULTADO: operadores donde el agente detecta y NINGUN juego de reglas lo
+           hace: 0 de 18.
+
+Cero OBSERVADO no es probabilidad cero: la cota superior unilateral al 95%
+es 1-0,05^(1/18) = 15,3%, y eso suponiendo los 18 operadores independientes
+y representativos, que es falso. Con dependencia por familia, peor.
+
+Medido sobre A, que es un banco de mutaciones declarativas y por tanto el
+terreno mas favorable posible a las reglas. NO decide si E2 existe en un
+corpus emergente. Si da el PRIOR con el que decidir si hay Fase 13, y lo da
+con un numero en vez de con una lectura a mano de diez flecos.

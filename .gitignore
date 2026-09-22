@@ -1,0 +1,44 @@
+# --- secretos: red de seguridad, no sustituto de la disciplina -------------
+# El repositorio de trabajo nunca tuvo un secreto dentro, pero su .gitignore
+# tampoco lo habria impedido: solo llevaba __pycache__. Aqui si.
+*.key
+*.pem
+*.p12
+*.pfx
+.secrets/
+.secrets
+*secret*
+*credential*
+*token*
+.env
+.env.*
+*.toml
+id_rsa*
+*.ppk
+
+# --- la clave del banco: nunca entra -----------------------------------------
+catalogo_mutaciones.json
+tabla_casos*.tsv
+subconjuntos.tsv
+generador.py
+generador_*.py
+triador_regex_v2.py
+triador_regex_v3.py
+casos/
+desarrollo/
+nuevo/
+afinado/
+ciego/
+adversarios/
+informe*.tsv
+bloqueC*.tsv
+*_total.tsv
+
+# --- artefactos --------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.jar
+venv/
+.venv/
