@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Un agente local de 30B triando fallos de integracion HL7 v2 hacia FHIR: funciona y no hace falta. El hallazgo que se lleva el trabajo es del metodo.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://lk-corporation.github.io/lab-integraciones/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="El agente que no hacia falta">
+<meta property="og:description" content="Un agente local de 30B triando fallos de integracion HL7 v2 hacia FHIR: funciona y no hace falta. El hallazgo que se lleva el trabajo es del metodo.">
+<meta property="og:url" content="https://lk-corporation.github.io/lab-integraciones/">
+<meta name="twitter:card" content="summary">
+
+<title>El agente que no hacía falta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,500;0,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { color-scheme: light dark; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  .volver {
+    display: inline-block;
+    margin-top: .9rem;
+    font-family: var(--sans);
+    font-size: .8125rem;
+  }
+</style>
+</head>
+<body>
+<style>
+  :root {
+    --ground:   #F6F7F8;
+    --surface:  #FFFFFF;
+    --ink:      #14181C;
+    --ink-soft: #596470;
+    --ink-faint:#8B97A3;
+    --rule:     #DCE2E7;
+    --rule-firm:#B9C3CB;
+    --accent:   #16706B;
+    --accent-w: #E3F0EF;
+    --warn:     #9E5A17;
+    --warn-w:   #F6ECE0;
+    --good:     #2C6642;
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans:  "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #101418;
+      --surface:  #171C21;
+      --ink:      #E7ECF0;
+      --ink-soft: #9CA8B4;
+      --ink-faint:#6B7885;
+      --rule:     #262E35;
+      --rule-firm:#3A444D;
+      --accent:   #4FB3AB;
+      --accent-w: #12292A;
+      --warn:     #D9924A;
+      --warn-w:   #2A2015;
+      --good:     #5FB37F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:   #101418;
+    --surface:  #171C21;
+    --ink:      #E7ECF0;
+    --ink-soft: #9CA8B4;
+    --ink-faint:#6B7885;
+    --rule:     #262E35;
+    --rule-firm:#3A444D;
+    --accent:   #4FB3AB;
+    --accent-w: #12292A;
+    --warn:     #D9924A;
+    --warn-w:   #2A2015;
+    --good:     #5FB37F;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+  }
+  p { margin: 0 0 1.05em; max-width: 40em; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  a { color: var(--accent); }
+
+  /* ---- cabecera ---- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .6875rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 1.1rem;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.022em;
+    text-wrap: balance;
+    margin: 0 0 .7rem;
+    max-width: 16em;
+  }
+  .standfirst {
+    font-size: 1.22rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 34em;
+    margin: 0 0 2.2rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.75rem;
+    padding-block: 1rem;
+    border-block: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: .75rem;
+    color: var(--ink-soft);
+    margin-bottom: 3.2rem;
+  }
+  .meta b {
+    color: var(--ink);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- secciones ---- */
+  section { margin-bottom: 3.4rem; }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.38rem;
+    line-height: 1.24;
+    letter-spacing: -.012em;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--ink);
+    max-width: 24em;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: .8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    margin-bottom: .45rem;
+    letter-spacing: .06em;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: -.004em;
+    margin: 2rem 0 .7rem;
+    color: var(--ink);
+  }
+
+  /* ---- la tesis: las dos frases ---- */
+  .tesis {
+    background: var(--surface);
+    border: 1px solid var(--rule-firm);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem 1.6rem;
+    margin: 0 0 1.6rem;
+    font-size: 1.1rem;
+  }
+  .tesis p { margin: 0; max-width: none; }
+  .tesis .une {
+    display: block;
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: .9rem 0 .8rem;
+  }
+  .tesis .une::before { content: "└─ y a la vez ─"; }
+
+  /* ---- datos ---- */
+  .cifra { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+  table { border-collapse: collapse; width: 100%; font-size: .9375rem; }
+  .tabla-caja { overflow-x: auto; margin: 0 0 1.4rem; }
+  th, td {
+    text-align: left;
+    padding: .5rem .85rem .5rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: baseline;
+  }
+  th {
+    font-family: var(--sans);
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom-color: var(--rule-firm);
+  }
+  td.n, th.n {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    padding-right: 0;
+    white-space: nowrap;
+  }
+  tr.destaca td { background: var(--accent-w); font-weight: 600; }
+
+  /* ---- la escalera ---- */
+  figure { margin: 0 0 1.5rem; }
+  figcaption {
+    font-family: var(--sans);
+    font-size: .8125rem;
+    color: var(--ink-soft);
+    margin-top: .8rem;
+    max-width: 34em;
+  }
+  .escalera { width: 100%; height: auto; display: block; }
+  .escalera .barra    { fill: var(--rule-firm); }
+  .escalera .barra-a  { fill: var(--accent); }
+  .escalera .barra-w  { fill: var(--warn); }
+  .escalera .etiq     { fill: var(--ink); font-family: var(--sans); font-size: 11px; }
+  .escalera .etiq-s   { fill: var(--ink-soft); font-family: var(--sans); font-size: 11px; }
+  .escalera .val      { fill: var(--ink); font-family: var(--mono); font-size: 11px; font-weight: 500; }
+  .escalera .eje      { stroke: var(--rule); stroke-width: 1; }
+  .escalera .eje-t    { fill: var(--ink-faint); font-family: var(--mono); font-size: 9px; }
+
+  /* ---- bloques ---- */
+  .principio {
+    border-left: 3px solid var(--warn);
+    background: var(--warn-w);
+    padding: 1.1rem 1.3rem;
+    margin: 0 0 1.4rem;
+    font-size: 1.03rem;
+  }
+  .principio p { margin: 0; max-width: none; }
+  .principio .rot {
+    display: block;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--warn);
+    margin-bottom: .55rem;
+  }
+
+  pre {
+    font-family: var(--mono);
+    font-size: .8125rem;
+    line-height: 1.65;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    margin: 0 0 1.4rem;
+    color: var(--ink);
+  }
+  code { font-family: var(--mono); font-size: .88em; }
+
+  .limites { list-style: none; padding: 0; margin: 0; }
+  .limites li {
+    padding: .7rem 0 .7rem 1.7rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    max-width: 42em;
+  }
+  .limites li::before {
+    content: "no";
+    position: absolute;
+    left: 0;
+    top: .78rem;
+    font-family: var(--mono);
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--warn);
+    letter-spacing: .04em;
+  }
+
+  .reglas { margin: 0; }
+  .reglas dt {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.4rem;
+    max-width: 38em;
+  }
+  .reglas dd {
+    margin: .3rem 0 0;
+    color: var(--ink-soft);
+    font-size: .96rem;
+    max-width: 40em;
+  }
+  .reglas dd::before {
+    content: "← ";
+    color: var(--ink-faint);
+    font-family: var(--mono);
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: .8125rem;
+    color: var(--ink-faint);
+    max-width: 40em;
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding-block: 2.4rem 3.5rem; }
+    .meta { gap: .3rem 1.1rem; }
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Laboratorio de integraciones · septiembre 2026</p>
+  <h1>El agente que no hacía falta</h1>
+  <p class="standfirst">Un modelo local de 30B triando fallos de integración HL7, medido contra un
+    script sin cerebro sobre un conjunto reservado con las hipótesis selladas antes de abrirlo.</p>
+
+  <div class="meta">
+    <span>circuito <b>ADT^A01 → MLLP → FHIR Patient</b></span>
+    <span>modelo <b>qwen3-coder:30b</b>, local</span>
+    <span>corpus <b>327 casos</b> · 63 operadores</span>
+    <span>reservado <b>55 casos</b>, una pasada</span>
+  </div>
+
+  <section>
+    <h2><span class="num">RESUMEN</span>El resultado son dos frases, y no se separan</h2>
+
+    <div class="tesis">
+      <p><strong>El agente funciona.</strong> Detecta 10 de 18 operadores de fallo silencioso sin
+        una sola falsa alarma en 22 casos limpios, sobre un conjunto reservado que nadie había
+        visto.</p>
+      <span class="une"></span>
+      <p><strong>El agente no hace falta.</strong> Un script de expresiones regulares sin modelo lo
+        bate <span class="cifra">+0,873</span> contra <span class="cifra">+0,629</span>, y al agente
+        no le queda ni una detección propia.</p>
+    </div>
+
+    <p>Quedarse con la primera sería propaganda; con la segunda, derrotismo.</p>
+
+    <p><strong>Pero el hallazgo que se lleva el trabajo no es del modelo, es del método.</strong> Un
+      banco construido con <strong>operadores de mutación declarativos</strong> no puede contestar si
+      el modelo aporta: por construcción cada operador deja una firma mecánica, y un detector escrito
+      contra esas firmas llega al 100 % de lo observable. El defecto era de construcción y fue
+      invisible hasta el último día.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span>Qué se montó</h2>
+    <p>Un circuito completo y realista, congelado con huella antes de medir nada: un servicio MLLP
+      que recibe mensajes <code>ADT^A01</code>, una transformación a un canónico interno, una
+      operación que escribe recursos <code>Patient</code> en FHIR R4, y un acuse de aplicación al
+      emisor —<code>AA</code> si se creó, <code>AE</code> si hay que reintentar, <code>AR</code> si
+      no—.</p>
+    <p>Revisado por un modelo externo con sus 16 hallazgos corregidos, contrastado contra las tablas
+      normativas de HL7, y con 27 pruebas unitarias. Su huella se comprobó al principio y al final de
+      cada medición.</p>
+    <p>El <strong>agente</strong> es un modelo local de 30B corriendo <em>dentro</em> del motor de
+      integración, con tres herramientas de solo lectura acotadas por traza: el mensaje tal como
+      llegó por el cable, el recorrido con el canónico y el acuse, y el Event Log de esa sesión.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Cómo se blindó la pregunta antes de contestarla</h2>
+    <p>El <strong>fallo silencioso</strong> es el que importa: el circuito contesta «todo bien»,
+      escribe algo, y lo escrito está mal. No está en el mensaje ni en el log — está en la
+      <strong>discrepancia</strong> entre los dos.</p>
+    <p>Lo que se hizo para que la pregunta pudiera salir que no:</p>
+    <ul>
+      <li><strong>327 casos</strong> generados con 63 operadores, cada uno verificado contra su
+        firma.</li>
+      <li>Un <strong>puntuador con 16 autopruebas</strong>, rehecho entero después de que dos
+        revisiones externas lo rompieran.</li>
+      <li>Un <strong>banco de 20 adversarios sin cerebro</strong> como suelo, porque el criterio
+        exige batir <em>cualquier</em> lectura mecánica y no solo la primera que se te ocurra.</li>
+      <li><strong>Tres conjuntos disjuntos</strong> con sales distintas, comprobados disjuntos en
+        identificador y en contenido.</li>
+      <li>Una <strong>preinscripción sellada con huella</strong> antes de abrir el reservado. Se
+        reescribió tres veces porque dos rondas de panel externo la rompieron, y la versión final
+        <strong>predice el propio fracaso del autor</strong>.</li>
+    </ul>
+    <p>El conjunto reservado se corrió <strong>una vez</strong>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>El resultado</h2>
+    <div class="tabla-caja">
+      <table>
+        <thead>
+          <tr><th>Hipótesis preinscrita</th><th>Resultado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>H1 · primaria</strong></td>
+              <td>agente <span class="cifra">+0,629</span> · script <span class="cifra">+0,873</span>. Pierde por <span class="cifra">0,244</span>, dentro del intervalo predicho</td></tr>
+          <tr><td><strong>H2</strong></td>
+              <td>un solo caso propio del agente, y <em>no era una detección</em></td></tr>
+          <tr class="destaca"><td><strong>H3 · arriesgada</strong></td>
+              <td>los dos operadores declarados no identificables siguen a cero, por ambos</td></tr>
+          <tr><td><strong>H4</strong></td>
+              <td>10 de 18 operadores silenciosos (pedía ≥9) y 22 de 22 limpios (pedía ≥20)</td></tr>
+          <tr><td><strong>H5</strong></td>
+              <td>55 de 55 con una llamada a cada herramienta · canario 0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Las cinco. Todas.</strong></p>
+    <p><strong>H3 es la que más dice del aparato.</strong> Era la apuesta arriesgada —bastaba
+      <em>una</em> detección para tumbarla— y se sostiene. Un análisis mecánico previo había predicho
+      <strong>en frío, sin correr ningún modelo</strong>, exactamente qué dos operadores serían
+      invisibles para cualquiera. Siguen invisibles para el agente y para el script, en datos que
+      nadie había visto.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Por qué perdió: no fue el modelo, fue el banco</h2>
+    <p>Un corpus generado con operadores de mutación declarativos tiene una propiedad que no se ve
+      hasta que alguien la busca: <strong>por construcción, cada operador deja una firma
+      mecánica</strong> —para eso es un catálogo—. Un detector escrito contra esas firmas llega al
+      100 % de lo observable: <strong>16 de 18 operadores a 8 de 8</strong>.</p>
+    <p>Y los dos que falla son <em>exactamente</em> los dos que el análisis de observabilidad había
+      declarado no identificables el día anterior.</p>
+    <p>Lo decidió la forma de construir el banco un mes antes, y no se vio hasta que alguien escribió
+      el <strong>adversario mecánico fuerte</strong> — que lo pidió una revisión externa, no el
+      autor. El adversario ya estaba escrito sin saberlo: era la propia rutina de análisis.</p>
+    <div class="principio">
+      <span class="rot">La primera regla reutilizable</span>
+      <p>Construir el adversario mecánico fuerte <strong>antes</strong> que el agente. Si el script
+        llega al techo de lo observable, el banco no puede contestar la pregunta — y eso se sabe en
+        una tarde en vez de en un mes.</p>
+    </div>
+    <p>Subir la barra solo puede equivocarse en una dirección: un adversario demasiado fuerte causa
+      un falso negativo —concluir que el modelo no aporta cuando quizá aporta— pero nunca un falso
+      positivo. Por eso es legítimo escribir sus reglas mirando los datos; afinar el prompt del
+      agente con lo mismo sería trampa.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Lo que el modelo sí aporta, y es lo que transfiere</h2>
+
+    <figure>
+      <svg class="escalera" viewBox="0 0 640 232" role="img"
+           aria-label="Cinco brazos ordenados por nota macro: reglas con catálogo 0,875; prompt afinado con evidencia servida 0,787; reglas de solo contrato 0,705; el agente real 0,642; prompt genérico 0,615.">
+        <line class="eje" x1="250" y1="16" x2="250" y2="196"></line>
+        <line class="eje" x1="345" y1="16" x2="345" y2="196"></line>
+        <line class="eje" x1="440" y1="16" x2="440" y2="196"></line>
+        <line class="eje" x1="535" y1="16" x2="535" y2="196"></line>
+
+        <text class="etiq-s" x="250" y="212" text-anchor="middle">0,60</text>
+        <text class="etiq-s" x="345" y="212" text-anchor="middle">0,70</text>
+        <text class="etiq-s" x="440" y="212" text-anchor="middle">0,80</text>
+        <text class="etiq-s" x="535" y="212" text-anchor="middle">0,90</text>
+        <text class="eje-t" x="640" y="212" text-anchor="end">macro sobre 456 casos</text>
+
+        <text class="etiq" x="0" y="31">reglas que conocen el catálogo</text>
+        <rect class="barra-w" x="155" y="20" width="356.3" height="14"></rect>
+        <text class="val" x="519.3" y="31">0,875</text>
+
+        <text class="etiq-s" x="0" y="67">prompt afinado un mes, evidencia servida</text>
+        <rect class="barra" x="155" y="56" width="272.7" height="14"></rect>
+        <text class="val" x="435.7" y="67">0,787</text>
+
+        <text class="etiq" x="0" y="103">reglas de solo contrato publicado</text>
+        <rect class="barra-w" x="155" y="92" width="194.8" height="14"></rect>
+        <text class="val" x="357.8" y="103">0,705</text>
+
+        <text class="etiq" x="0" y="139">el agente real, con herramientas</text>
+        <rect class="barra-a" x="155" y="128" width="134.9" height="14"></rect>
+        <text class="val" x="297.9" y="139">0,642</text>
+
+        <text class="etiq-s" x="0" y="175">prompt genérico de 1.174 caracteres</text>
+        <rect class="barra" x="155" y="164" width="109.3" height="14"></rect>
+        <text class="val" x="272.3" y="175">0,615</text>
+      </svg>
+      <figcaption>Los cinco brazos. En ámbar, los dos juegos de reglas; en verde azulado, el agente
+        real. <strong>El eje no empieza en cero</strong> —arranca en 0,50— para que se vean unas
+        diferencias que son pequeñas y decisivas.</figcaption>
+    </figure>
+
+    <p>Leída de arriba abajo: <strong>un mes de prompt afinado, en las condiciones más favorables
+      posibles, apenas supera a unas reglas escritas con el contrato publicado delante.</strong> Y el
+      agente real, el que tiene que acertar las llamadas, queda por debajo de esas reglas.</p>
+
+    <p>Tres comprobaciones baratas, hechas en una tarde y sin gastar un solo caso reservado,
+      contestan qué significa esa escalera.</p>
+
+    <h3>¿Estaban los dos brazos leyendo la misma evidencia?</h3>
+    <p>Una revisión avisó de que el script leía columnas derivadas y el agente texto crudo. Se
+      reconstruyó el informe entero <strong>solo desde lo que ve el agente</strong>:
+      <strong class="cifra">0 de 456</strong> veredictos cambian, misma nota. La comparación era
+      justa.</p>
+
+    <h3>¿Ganó el script por conocer la clave del banco?</h3>
+    <p>Se partieron sus reglas en las que salen del <strong>contrato publicado</strong> y las que
+      solo se te ocurren <strong>viendo el catálogo</strong>. Las de solo contrato sacan
+      <span class="cifra">+0,705</span> y <strong>siguen batiendo al agente</strong>. La victoria no
+      venía de conocer la respuesta.</p>
+
+    <h3>¿Cuánto valía el mes de prompt?</h3>
+    <p>Se escribió el prompt que escribiría cualquiera —1.174 caracteres contra 17.136— y se corrió
+      en las mismas condiciones:</p>
+    <div class="tabla-caja">
+      <table>
+        <thead>
+          <tr><th>Clase de caso</th><th class="n">Genérico</th><th class="n">Afinado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>rechazo por política</td><td class="n">+1,000</td><td class="n">+1,000</td></tr>
+          <tr><td>sin problema</td><td class="n"><strong>+0,961</strong></td><td class="n">+0,938</td></tr>
+          <tr><td>fallo del mensaje</td><td class="n"><strong>+0,727</strong></td><td class="n">+0,710</td></tr>
+          <tr class="destaca"><td>fallo silencioso</td><td class="n">−0,229</td><td class="n">+0,500</td></tr>
+          <tr><td>operadores silenciosos detectados</td><td class="n">4 / 18</td><td class="n">15 / 18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>En todo salvo una clase, el prompt de mil caracteres es igual o mejor.</strong> El mes
+      de trabajo compró exactamente una cosa: detectar fallos silenciosos. Y tiene sentido, porque lo
+      que hace falta para ver infidelidad es <strong>el contrato de la transformación</strong>, que
+      es justo lo que el genérico no lleva.</p>
+
+    <div class="principio">
+      <span class="rot">Lo transferible, dicho entero</span>
+      <p>Lo que el modelo aporta se concentra en <strong>una sola clase</strong> —la que exige cruzar
+        el mensaje con el resultado— y hace falta <strong>darle el contrato de la
+        transformación</strong> para que lo aporte. Fuera de ahí un prompt genérico rinde igual, y
+        unas reglas escritas con ese mismo contrato rinden más.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Al intentar arreglarlo aparecieron dos cosas más</h2>
+    <p>La conclusión anterior pedía un banco distinto: fallos <strong>sin firma mecánica</strong>,
+      que emergieran de <em>ejecutar</em> el sistema en vez de escribirse como operadores. Al
+      diseñarlo aparecieron dos resultados que valen por sí solos.</p>
+
+    <h3>La clase que haría falta puede estar vacía, y se midió</h3>
+    <p>Respecto al paquete de evidencia que recibe un brazo, todo fallo cae en una de estas clases.
+      Solo la tercera justificaría seguir:</p>
+<pre>cubierto por reglas del contrato ................  8 operadores
+cubierto solo con el catalogo delante ...........  8
+DETECTADO POR EL MODELO Y POR NINGUNA REGLA .....  0
+no lo detecta nadie .............................  2</pre>
+    <p><strong>Cero de 18.</strong> Y de paso: el agente <strong>falla por completo tres operadores
+      que las reglas cubren a 8 de 8</strong>, dos de ellos con solo el contrato. No es que no haya
+      ventaja; hay déficit.</p>
+    <p><strong>Lo que ese cero significa, y no más.</strong> No es probabilidad cero: la cota
+      superior al 95 % es del <strong class="cifra">15,3 %</strong>, y eso suponiendo independencia
+      entre operadores, que es falsa. Y el instrumento con que se midió —un script escrito por el
+      propio autor usando solo el contrato— mezcla <em>expresabilidad</em> con <em>que se te
+      ocurra</em>, y conocer el catálogo <strong>sesga hacia el cero que salió</strong>. Es un
+      <em>prior</em>, no una respuesta, y se publica con la dirección de su sesgo escrita al lado.</p>
+
+    <h3>Los oráculos de estantería no ven el fallo silencioso</h3>
+    <p>Para construir un banco emergente hace falta un <strong>oráculo</strong>: algo que diga que un
+      resultado está mal. Y todo oráculo imprime su firma en lo que recoge. La salida obvia era usar
+      herramientas de terceros. Se probaron las dos disponibles, <strong>con la predicción escrita y
+      sellada antes de instalarlas</strong>.</p>
+    <p><strong>El validador oficial de FHIR</strong>, sobre los recursos realmente escritos. El
+      circuito había guardado un apellido con una <em>secuencia de escape HL7 literal dentro</em> y
+      otro con un <em>carácter de sustitución</em> donde iba una letra acentuada. Resultado:
+      <strong class="cifra">0 de 3</strong> fallos vistos, y exactamente la misma única advertencia
+      en los dieciséis recursos, defectuosos y correctos por igual. Contra el perfil base, una
+      secuencia de escape literal es una cadena perfectamente válida.</p>
+    <p><strong>Un comprobador de conformidad HL7 v2</strong>, sobre los acuses, donde los fallos eran
+      de código: el circuito contesta un error de <em>entorno</em> diciéndole al emisor que el error
+      es <em>suyo</em>. El control decisivo fue construir la <strong>variante corregida</strong> de
+      cada acuse y validar las dos: <strong class="cifra">6 de 6 idénticas</strong>. El comprobador
+      dice exactamente lo mismo con el código bueno que con el malo.</p>
+
+    <div class="principio">
+      <span class="rot">El principio, y transfiere</span>
+      <p>Un oráculo de conformidad comprueba que el mensaje esté bien formado y que sus códigos
+        <strong>existan</strong>. Un fallo silencioso es <strong>un valor válido en la situación
+        equivocada</strong>. Si quieres un oráculo que vea el silencio, tienes que escribirlo contra
+        el contrato — y entonces lleva tu firma, que es justo lo que querías evitar.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Lo que este trabajo no puede afirmar</h2>
+    <ul class="limites">
+      <li><strong>No prueba que un modelo mayor no aportara.</strong> Un modelo, una temperatura, un
+        circuito.</li>
+      <li><strong>No prueba que la clase útil esté vacía.</strong> El cero es un prior con cota del
+        15,3 %, sesgado hacia sí mismo, y medido sobre el terreno más favorable posible a las
+        reglas.</li>
+      <li><strong>No dice nada sobre fallos emergentes</strong>, que es exactamente lo que no se
+        llegó a construir.</li>
+      <li><strong>No generaliza a otro circuito, otro estándar u otra implementación.</strong> Un
+        solo mapeo.</li>
+      <li><strong>No mide coste operativo</strong> ni tiempo de detección en producción, que son
+        preguntas reales y distintas.</li>
+      <li><strong>Los 55 casos del reservado son pocos</strong>, sin un solo caso de fallo de
+        entorno, y sobre corpus sintético.</li>
+    </ul>
+    <p style="margin-top:1.4rem"><strong>La conclusión general defendible es la metodológica</strong>,
+      no la del modelo.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>El método, que es lo más reutilizable</h2>
+    <p>Cada regla con el error que la produjo.</p>
+    <dl class="reglas">
+      <dt>Construir el adversario mecánico fuerte antes que el agente.</dt>
+      <dd>Si llega al techo de lo observable, el banco no puede contestar la pregunta.</dd>
+
+      <dt>Una comprobación tiene que poder decir que no, y eso se prueba rompiendo el sistema a
+        propósito.</dt>
+      <dd>Una herramienta anunciaba «producción actualizada» llamando a una función que no existía,
+        porque el error venía dentro de una respuesta correcta.</dd>
+
+      <dt>Un control de discriminación compara correcto contra incorrecto en la misma estructura, no
+        defectuoso contra limpio.</dt>
+      <dd>Comparar acuses con error contra acuses sin error dio una diferencia que no era detección:
+        los limpios no llevaban el segmento que la disparaba.</dd>
+
+      <dt>Predecir el propio fracaso, por escrito y sellado, antes de medir.</dt>
+      <dd>Es la única protección real contra reinterpretar un resultado incómodo. Aquí funcionó tres
+        veces.</dd>
+
+      <dt>Todo parámetro del que dependa la medición viaja escrito con la medición.</dt>
+      <dd>Dos filas de la misma tabla no eran comparables porque el plazo de espera no estaba en
+        ninguna columna.</dd>
+
+      <dt>Un verde puede ser falso, y es peor que un rojo.</dt>
+      <dd>Un marco de pruebas anuncia «todo correcto» cuando ejecuta cero pruebas; un ajuste
+        inválido se ignora sin protestar; un segmento mal direccionado devuelve cadena vacía en vez
+        de error. Los tres fallan hacia el silencio.</dd>
+
+      <dt>Dos bugs que se cancelan dan un resultado correcto, y arreglar uno solo lo empeora.</dt>
+      <dd>Cuando un arreglo correcto empeora lo que se ve, no deshacerlo: buscar el segundo fallo.</dd>
+
+      <dt>Mirar el estándar antes de decidir cuesta tres minutos; suponer cuesta una tarde.</dt>
+      <dd>Pasó en las dos direcciones: eligiendo un código de error de memoria, y a punto de anotar
+        como defecto del circuito algo que el estándar declara correcto.</dd>
+
+      <dt>Reportar las dos frases juntas.</dt>
+      <dd>«Funciona» y «no hace falta» son el resultado; quedarse con una es propaganda o
+        derrotismo.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>Qué haría falta para contestar la pregunta de verdad</h2>
+    <p>Un corpus de fallos <strong>sin firma mecánica</strong>: que emerjan de ejecutar el sistema
+      —perturbación del transporte, de la codificación, de la gramática, carga, entorno, mensajes
+      reales con sus irregularidades naturales— y que los etiquete alguien externo que no haya visto
+      ni el catálogo ni el agente. Con preinscripción, conjunto reservado, y reglas escritas por
+      autores independientes bajo un presupuesto declarado.</p>
+    <p><strong>Está diseñado y no está pagado.</strong> El diseño pasó por cuatro rondas de panel
+      externo y sobrevive en su cuarta versión, partido en dos etapas: una barata que solo puede
+      decir «sigue» o «para de gastar», y la cara, que es la única que podría concluir.</p>
+    <p>Y hay una razón honesta para no haberlo hecho todavía: el prior está medido en cero, la única
+      clase que justificaría la fase puede no existir, y la herramienta independiente que se
+      necesitaba para construir el banco <strong>resultó ser ciega</strong>.</p>
+    <div class="principio">
+      <span class="rot">Y por eso esto es un final</span>
+      <p>Cuando sabes eso <strong>antes</strong> de pagar, no pagar es el resultado, no la
+        rendición.</p>
+    </div>
+  </section>
+
+  <footer>
+    Todos los datos clínicos utilizados son sintéticos. Ni un dato de ningún paciente real.
+    El circuito, el corpus y el aparato de medida están bajo control de versiones con huella; el
+    banco de casos no se publica, para que siga limpio.
+  </footer>
+
+</div>
+
+<p style="max-width:50rem;margin:0 auto;padding:0 20px 3rem;font-family:var(--sans);
+   font-size:.8125rem;color:var(--ink-faint)">
+  El c&oacute;digo, el dise&ntilde;o, las revisiones externas y las predicciones selladas est&aacute;n en
+  <a href="https://github.com/LK-Corporation/lab-integraciones" style="color:var(--accent)">github.com/LK-Corporation/lab-integraciones</a>.
+</p>
+</body>
+</html>
