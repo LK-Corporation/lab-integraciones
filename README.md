@@ -79,7 +79,7 @@ FHIR, los códigos de acuse— van en su forma original.
 
 **El código va bajo MIT** y **los documentos bajo CC BY 4.0** —puedes compartirlos y adaptarlos,
 también comercialmente, citando la fuente—. El detalle, con qué cubre cada una y qué pasa con las
-respuestas de los modelos externos, está en [](LICENSE.md).
+respuestas de los modelos externos, está en [`LICENSE.md`](LICENSE.md).
 
 ---
 
