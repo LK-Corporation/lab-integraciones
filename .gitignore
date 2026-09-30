@@ -24,6 +24,15 @@ generador.py
 generador_*.py
 triador_regex_v2.py
 triador_regex_v3.py
+respuestas_regex*.tsv
+# sellados en SELLO-RESERVADO.txt y no publicados: derivan del catalogo o lo
+# ejecutan (medido el 30-sep: ninguna regla los cubria)
+rederivar.py
+puntuar3.py
+correr_agente.py
+peldano1_prompt.py
+techo_correr.py
+qwen_correr.py
 casos/
 desarrollo/
 nuevo/

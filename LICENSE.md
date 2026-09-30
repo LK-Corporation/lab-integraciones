@@ -5,12 +5,15 @@ Este repositorio lleva **dos licencias**, porque tiene dos clases de contenido.
 | qué | licencia | dónde |
 |---|---|---|
 | **El código** | **MIT** | `codigo/`, y cualquier `.py` o `.cls` en cualquier carpeta | 
-| **Los documentos** | **CC BY 4.0** | `INFORME.md`, `README.md`, `diseno/`, `encargos-y-revisiones/`, `preinscripciones/`, `medidas/`, y cualquier `.md` o `.txt` |
+| **Los documentos** | **CC BY 4.0** | `INFORME.md`, `README.md`, `diseno/`, `encargos-y-revisiones/`, `preinscripciones/`, `medidas/`, la página `docs/index.html`, y cualquier `.md`, `.txt`, `.html` o `.sha256` |
+| **La configuración y las pruebas** | **MIT** | `tests/`, `.github/`, `pytest.ini`, `.gitignore`, y cualquier `.yml` o `.ini` |
+| **Las fuentes tipográficas** | **SIL OFL 1.1**, de sus autores | [`docs/fonts/`](docs/fonts/): Newsreader, Public Sans y JetBrains Mono, con su licencia al lado (`OFL-*.txt`) |
 
 Los textos completos están en [`LICENSES/MIT.txt`](LICENSES/MIT.txt) y
 [`LICENSES/CC-BY-4.0.md`](LICENSES/CC-BY-4.0.md).
 
-Identificadores SPDX: `MIT` para el código, `CC-BY-4.0` para los documentos.
+Identificadores SPDX: `MIT` para el código, la configuración y las pruebas; `CC-BY-4.0` para los
+documentos; `OFL-1.1` para las fuentes, que no son obra del autor.
 
 ---
 

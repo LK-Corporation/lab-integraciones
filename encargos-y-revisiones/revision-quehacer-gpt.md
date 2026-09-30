@@ -1,4 +1,4 @@
-<!-- modelo: or:openai/gpt-5.6-terra-pro · via: openrouter.ai · encargo: encargo_quehacer.md · 149 s · 85865 tokens -->
+<!-- modelo: or:openai/gpt-5.6-terra-pro · via: openrouter.ai · encargo: encargo_quehacer.md (no publicado: nombra operadores del catálogo) · 149 s · 85865 tokens -->
 
 ## Primero: el «prior = 0» está mal formulado
 

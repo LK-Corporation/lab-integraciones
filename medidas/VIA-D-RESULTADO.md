@@ -8,7 +8,7 @@ ninguno.**
 
 - **Java 21** (`default-jre-headless`, Ubuntu 24.04) y el **validador oficial de FHIR**,
   `validator_cli.jar` v6.10.4, 192 MB, de la release de `hapifhir/org.hl7.fhir.core`. Fuera del
-  repo, en `/datos/lab-integraciones/validador/`.
+  repo, en una carpeta local del servidor.
 - `via_d_traer.py`: trae de FHIR los recursos `Patient` **realmente escritos** por el circuito
   congelado, localizándolos por el `Identifier` del canónico. **16 recursos, 0 sin traer.**
 - `via_d_analizar.py`: cruza la salida del validador con la tabla de casos, con los limpios dentro

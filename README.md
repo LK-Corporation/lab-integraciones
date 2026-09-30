@@ -15,7 +15,8 @@ operadores de mutación declarativos **no puede contestar** si el modelo aporta,
 construcción cada operador deja una firma mecánica.
 
 👉 **Empieza por [`INFORME.md`](INFORME.md).** Es autocontenido y cuenta el laboratorio entero, con
-sus límites escritos.
+sus límites escritos. Hay una versión para leer en el navegador en
+[lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
 
 ---
 
@@ -25,7 +26,7 @@ sus límites escritos.
 |---|---|
 | [`INFORME.md`](INFORME.md) | el informe. Si solo vas a leer una cosa, es esta |
 | [`diseno/`](diseno/) | **cuatro versiones del diseño de la fase siguiente**, v1 → v4, cada una rota por el panel y reescrita. Más la especificación del agente y una nota sobre un modelo de decisión estructurada |
-| [`encargos-y-revisiones/`](encargos-y-revisiones/) | los encargos al panel externo y **sus diecinueve revisiones**. Cada ronda pedía explícitamente *rompedlo*, y lo rompieron |
+| [`encargos-y-revisiones/`](encargos-y-revisiones/) | los tres encargos al panel externo y **sus dieciséis revisiones** (un cuarto encargo no se publica porque nombra operadores del catálogo; su revisión lo dice en la cabecera). Cada ronda pedía explícitamente *rompedlo*, y lo rompieron |
 | [`preinscripciones/`](preinscripciones/) | las **predicciones selladas con huella antes de medir**, incluida la que predice el propio fracaso del autor |
 | [`medidas/`](medidas/) | las medidas con su control negativo: el prior, las dos mitades de la vía de oráculo independiente, y la auditoría de la interfaz de evidencia |
 | [`codigo/`](codigo/) | el puntuador con sus dieciséis autopruebas, el banco de adversarios, el árbol que mide fuga por el arnés, la matriz de observabilidad, y las clases del arnés |
@@ -63,8 +64,20 @@ donde la narración depende de que signifiquen algo —sin sus parámetros ni su
 mutación—. Cuatro de esos trece están en **documentos sellados**, que no se tocan: un documento de
 preinscripción vale porque su huella verifica, y alterarlo para anonimizarlo lo dejaría sin valor.
 
-**Las huellas.** Los `PRE-*.md` y `SELLO-RESERVADO.txt` se copiaron **verbatim**. Sus `sha256`
-aparecen citados en los documentos que los referencian, y siguen verificando.
+**Las huellas.** Los `PRE-*.md` y `SELLO-RESERVADO.txt` se copiaron **verbatim**; qué huella
+está citada dónde, sin redondear:
+
+- `PRE-TEST.md` tiene su `sha256` completa dentro de `SELLO-RESERVADO.txt`, y la línea `CONJUNTA`
+  del sello verifica;
+- `PRE-VIA-D.md` y `PRE-VIA-D-V2.md` se citan por un prefijo en las medidas que los contrastan;
+- `PRE-POLARIDAD.md` y el propio `SELLO-RESERVADO.txt` **no tienen su huella citada en ningún
+  documento de este repositorio**. Su sello es un commit del repositorio de trabajo (`f1d9792`,
+  21-sep-2026 23:05, y `694b64e`, 22-sep 15:26), que desde aquí no se puede comprobar.
+
+El testigo público empieza con el primer commit de este repositorio (22-sep-2026).
+[`preinscripciones/HUELLAS.sha256`](preinscripciones/HUELLAS.sha256), añadido el 30-sep, recoge
+las cinco huellas para comprobarlas con `sha256sum -c HUELLAS.sha256` desde esa carpeta: atestigua que los ficheros no han cambiado
+desde que se publicaron, no la fecha en que se sellaron.
 
 ---
 
