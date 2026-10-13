@@ -30,6 +30,7 @@ sus límites escritos. Hay una versión para leer en el navegador en
 | [`preinscripciones/`](preinscripciones/) | las **predicciones selladas con huella antes de medir**, incluida la que predice el propio fracaso del autor |
 | [`medidas/`](medidas/) | las medidas con su control negativo: el prior, las dos mitades de la vía de oráculo independiente, y la auditoría de la interfaz de evidencia |
 | [`codigo/`](codigo/) | el puntuador con sus dieciséis autopruebas, el banco de adversarios, el árbol que mide fuga por el arnés, la matriz de observabilidad, y las clases del arnés |
+| [`piloto-agente/`](piloto-agente/) | **el segundo estudio (12-13 oct)**: un agente que, guiado por el veredicto de un verificador determinista, localiza y arregla fallos de circuitos de integración, frente a una búsqueda sin modelo. Funciona (localiza 17 de 18 y arregla la mitad) y aporta frente a la búsqueda solo por acumulación de dos etapas, y no sin las pistas que declara el propio verificador. Diseños, sellos y resultados, sin código |
 
 **Lo que quizá sea lo más útil no es el resultado, son las cuatro versiones del diseño y las
 revisiones que las tumbaron.** Se puede leer cómo un experimento se rompe y se rehace, con las

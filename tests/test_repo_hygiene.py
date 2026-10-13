@@ -40,7 +40,7 @@ EXCEPCIONES_SELLADAS = {
 ORIGENES_PERMITIDOS = set()
 
 RAIZ_ADMITIDA = {"README.md", "INFORME.md", "LICENSE.md", ".gitignore", "pytest.ini", "LICENSES", "diseno",
-                 "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github"}
+                 "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github", "piloto-agente"}
 SUFIJOS_ADMITIDOS = SUFIJOS_TEXTO | {".woff2", ""}
 TAMANO_MAXIMO = 512 * 1024
 
