@@ -1,0 +1,37 @@
+[
+ {
+  "id": "cap3-08-A01",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|ADT1|MCM|LABADT|MCM|198808181126|SECURITY|ADT^A01^ADT_A01|MSG00001-"
+ },
+ {
+  "id": "cap3-10-A04",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|REGADT|MCM|IFENG||199112311501||ADT^A04^ADT_A01|000001|P|2.5|||\rEVN|A04|200301101500|200301101400|01||200301101410"
+ },
+ {
+  "id": "cap3-12-A02",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|REGADT|MCM|IFENG||200301110500||ADT^A02^ADT_A02|000001|P|2.5|||\rEVN|A02|200301110520||01||200301110500\rPID|||191919^^^GENHOS^MR~371-66-"
+ },
+ {
+  "id": "cap3-14-A02",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|REGADT|MCM|IFENG||200301110603||ADT^A02^ADT_A02|000001|P|2.5|||\rEVN|A02|200301110603||01||200301110500\rPID|||191919^^^GENHOS^MR^FAC1~371-"
+ },
+ {
+  "id": "cap3-15-A03",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|REGADT|MCM|IFENG||200301121005||ADT^A03^ADT_A03|000001|P|2.5|||\rEVN|A03|200301121005||01||200301121000\rPID|||191919^^^GENHOS^MR~371-66-"
+ },
+ {
+  "id": "cap3-36-A04",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&||UC Davis VMTH|||199902171830||ADT^A04\rPID|1||A83245^^^VMTH^MR^UCD||Jones^Fluffy^^^^^^D||19901001|S|||1634 J St^Apt"
+ },
+ {
+  "id": "cap3-37-A04",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&||Foothill Veterinary Clinic||UC Davis VMTH|199902171830||ADT^A04\rPID|1||N324256^^^^^Foothill Vet"
+ }
+]

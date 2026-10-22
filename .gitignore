@@ -51,3 +51,6 @@ __pycache__/
 *.jar
 venv/
 .venv/
+# lo que regenera verificador/bases_oru.py antes de las pruebas
+verificador/bases_oru/
+verificador/bases_oru.jsonl

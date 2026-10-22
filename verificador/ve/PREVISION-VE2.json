@@ -1,0 +1,10 @@
+{
+ "_nota": "Previsión de VE2 (ve/PREVISION-VE2.md), sellada en git antes de juzgar. Por grupo y nivel, el mecanismo admitido y su cota: un entero es un máximo; {\"exacto\": n} es el número exacto; \"sin cota\" admite cualquier número con esa firma. Lo que no está, no se admite.",
+ "A1:lab": {"N1": {"M19": "sin cota"}},
+ "A1:sitio": {"N1": {"M19": "sin cota"}},
+ "real:lab": {"N1": {"M19": "sin cota"}},
+ "real:sitio": {"N3": {"MS9": 39}, "N2": {"MS9": 39}, "N1": {"MS9": 39, "M19": "sin cota"}},
+ "agentes": {"N1": {"M19": 1}},
+ "MMI-12": {"N3": {"M12": {"exacto": 136}}, "N2": {"M12": {"exacto": 136}}, "N1": {"M19": "sin cota"}},
+ "MMI-19": {"N3": {"M19": {"exacto": 13}}, "N2": {"M19": {"exacto": 13}}, "N1": {"M19": "sin cota"}}
+}

@@ -36,11 +36,31 @@ EXCEPCIONES_SELLADAS = {
     ("codigo/arnes/Lab.Fase12.AgenteB.cls", "docker inspect iris-ai"),
 }
 
+# El verificador (22-oct-2026) se publica tal como se preparó, con la huella de cada fichero en su MANIFIESTO.txt; varios entran
+# en la huella del juez y no se pueden tocar. Estos hallazgos son valores de prueba o genéricos, no la red ni el correo del autor.
+# Como en las selladas, la excepción solo vale mientras el fichero siga coincidiendo con su línea del manifiesto.
+MANIFIESTO = REPO / "verificador" / "MANIFIESTO.txt"
+EXCEPCIONES_MANIFIESTO = {
+    ("verificador/mcp_verificador.py", "100.64.0.0"),               # el rango CGNAT (RFC 6598) que admite su servidor HTTP
+    ("verificador/prueba_mcp_verificador.py", "100.64.0.0"),
+    ("verificador/prueba_mcp_verificador.py", "192.168.1.10"),      # una dirección de LAN que P74 espera ver rechazada
+    ("verificador/prueba_verificador.py", "172.19.0.1"),            # una línea de registro de IRIS, la misma que el arnés
+    ("verificador/prueba_verificador.py", "7@EnsLib.HL7.Message"),  # una referencia a objeto de IRIS, no un correo
+    ("verificador/mapeador_adt.py", "a@b.es"),                      # el correo sintético de sus autopruebas
+    ("verificador/a1/bases_a1.json", "ana@hosp.es"),                # el de la paciente ficticia de las bases A1
+    ("piloto-agente/bucle/diseno-bucle-fable.md", "ssh caído"),     # prosa, no una orden
+}
+# La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
+JSON_ADMITIDOS = {"verificador/estructuras_25.json", "verificador/a1/ejemplos_cap3.json", "verificador/a1/bases_a1.json",
+                  "verificador/bases_adt/bases_e2.json", "verificador/ve/PREVISION-VE2.json",
+                  "verificador/ve/ADJUDICACION-VE2.json", "verificador/ve/TABLA-VE2.json"}
+
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
 
 RAIZ_ADMITIDA = {"README.md", "INFORME.md", "LICENSE.md", ".gitignore", "pytest.ini", "LICENSES", "diseno",
-                 "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github", "piloto-agente"}
+                 "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github", "piloto-agente",
+                 "verificador"}
 SUFIJOS_ADMITIDOS = SUFIJOS_TEXTO | {".woff2", ""}
 TAMANO_MAXIMO = 512 * 1024
 
@@ -60,7 +80,7 @@ def ficheros_texto():
         ruta = REPO / rel
         if ruta.resolve() == AQUI:          # el fichero cita lo que prohíbe: se suspendería a sí mismo
             continue
-        if (ruta.suffix in SUFIJOS_TEXTO or ruta.name == ".gitignore") and ruta.is_file():
+        if (ruta.suffix in SUFIJOS_TEXTO or ruta.name == ".gitignore" or rel in JSON_ADMITIDOS) and ruta.is_file():
             yield rel
 
 
@@ -97,15 +117,26 @@ def sellados_que_verifican():
     return {ruta_publica(n) for n, h in filas.items() if ruta_publica(n) and sha256(ruta_publica(n)) == h}
 
 
+def del_manifiesto():
+    """Las rutas que hoy coinciden con su línea de verificador/MANIFIESTO.txt («huella  ruta»; «#» abre un comentario)."""
+    if not MANIFIESTO.is_file():
+        return set()
+    filas = dict(reversed(l.split()) for l in MANIFIESTO.read_text(encoding="utf-8").splitlines()
+                 if len(l.split()) == 2 and not l.startswith("#"))
+    return {r for r, h in filas.items() if (REPO / r).is_file() and sha256(r) == h}
+
+
 def coincidencias(patron, flags=0, quitar_urls=False):
     rx = re.compile(patron, flags)
-    buenos = sellados_que_verifican()
+    buenos, manifiesto = sellados_que_verifican(), del_manifiesto()
     fallos = []
     for rel in ficheros_texto():
         for n, linea in enumerate(leer(rel).splitlines(), 1):
             texto = re.sub(r"https?://\S+", " ", linea) if quitar_urls else linea
             for m in rx.finditer(texto):
                 if rel in buenos and any(rel == f and e in linea for f, e in EXCEPCIONES_SELLADAS):
+                    continue
+                if rel in manifiesto and any(rel == f and e in linea for f, e in EXCEPCIONES_MANIFIESTO):
                     continue
                 fallos.append("%s:%d: %s" % (rel, n, m.group(0)))
     return fallos
@@ -347,7 +378,8 @@ def test_solo_entra_lo_que_la_seleccion_admite():
         ruta = Path(rel)
         if ruta.parts[0] not in RAIZ_ADMITIDA:
             fuera.append(rel + " (lugar)")
-        elif ruta.suffix not in SUFIJOS_ADMITIDOS or (ruta.suffix == "" and ruta.name not in (".gitignore",)):
+        elif (ruta.suffix not in SUFIJOS_ADMITIDOS and rel not in JSON_ADMITIDOS) \
+                or (ruta.suffix == "" and ruta.name not in (".gitignore",)):
             fuera.append(rel + " (tipo)")
         elif (REPO / rel).stat().st_size > TAMANO_MAXIMO:
             fuera.append(rel + " (tamaño)")

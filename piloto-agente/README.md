@@ -65,10 +65,44 @@ Los resultados completos, con sus límites: [`RESULTADO-AG2-AG3.md`](RESULTADO-A
 | [`RESULTADO-AG2-AG3.md`](RESULTADO-AG2-AG3.md), [`OPCIONES-TRAS-PILOTO.md`](OPCIONES-TRAS-PILOTO.md), [`RESULTADO-AMP.md`](RESULTADO-AMP.md) | Los resultados del piloto, las opciones medidas tras él y el resultado de la ampliación |
 | [`agente/`](agente/) y [`agente/amp/`](agente/amp/) | Las decisiones de diseño delegadas en Jev, un modelo de decisión calibrada del panel: el estado neutral que se le escribió, sin la recomendación de nadie, y lo que contestó con su probabilidad |
 
+## El tercer estudio: el agente con bucle de prueba (BU, 13-14 y 22-oct-2026)
+
+El piloto y la ampliación dejaron localizar casi resuelto y arreglar a medias: los parches que no se aceptaban solían arreglar
+el mensaje que el agente veía y no los demás que fallaban por la misma causa. BU cambia un solo factor. Le da al agente de hoy
+una herramienta más, `probar_parche`, que aplica su parche en la caja y le devuelve el veredicto del verificador mensaje a
+mensaje antes de entregarlo. Y lo compara con el agente de hoy, remedido, en los mismos 18 casos.
+
+> **Con el bucle de prueba, el agente arregla sin colateral 14,5 de 18** (IC95 0,58-0,93) **frente a 8,5 de 18** sin él:
+> **aporta** (Δ +0,33, IC 0,14-0,53; 6 casos a favor y 0 en contra, p = 0,016 a una cola). La regla, sellada antes de la
+> primera tirada, pedía p ≤ 0,05 y Δ ≥ 0,20.
+
+- **Supera la previsión.** El diseño preveía «indeterminado», con un techo realista de unos 6 casos, y el bucle convierte
+  exactamente 6. Ninguno va al revés.
+- **La ganancia es del bucle, no del modelo.** El agente de hoy, remedido, da 8,5 de 18, lo mismo que en el piloto y la
+  ampliación.
+- **No contenta a lo que ve ni daña.** Hay sobreajuste en 2 tiradas (el umbral era 3) y el colateral medio es 0. De 7 parches
+  aceptados que leyó Jev, 7 arreglan la causa.
+- **A diferencia de la ampliación, no depende de las deudas por decisión:** sin ellas sigue «aporta».
+- **Coste:** 53 045 tokens por tirada y 65 849 por arreglo aceptado.
+
+El resultado completo, con sus sensibilidades preinscritas y el detalle por caso: [`bucle/RESULTADO-BU.md`](bucle/RESULTADO-BU.md).
+
+| Ruta | Qué es |
+|---|---|
+| [`bucle/ANTES-AGENTE-BUCLE.md`](bucle/ANTES-AGENTE-BUCLE.md), [`bucle/RESULTADO-BU-PRE.md`](bucle/RESULTADO-BU-PRE.md) | La pregunta, el alcance, «hecho cuando» y topes, y el eslabón débil medido antes: la latencia de `probar_parche` |
+| [`bucle/diseno-bucle-fable.md`](bucle/diseno-bucle-fable.md) | El diseño, escrito a ciegas por un modelo distinto del que implementa |
+| [`bucle/decisiones-qbu.md`](bucle/decisiones-qbu.md), [`bucle/decision-jev-qbu.md`](bucle/decision-jev-qbu.md), [`bucle/decision-jev-qbu9.md`](bucle/decision-jev-qbu9.md) | Las preguntas de diseño y lo que decidieron el responsable y Jev |
+| [`bucle/SELLO-BU.md`](bucle/SELLO-BU.md) | El sello, commiteado antes de la primera tirada (con la huella de la clave, no la clave) |
+| [`bucle/RESULTADO-BU.md`](bucle/RESULTADO-BU.md) | El resultado |
+| [`bucle/decision-jev-bu3-lectura.md`](bucle/decision-jev-bu3-lectura.md), [`bucle/decision-jev-bu3-lectura-control.md`](bucle/decision-jev-bu3-lectura-control.md) | La lectura que hizo Jev de los parches aceptados, y su control |
+
+**De BU no está:** la clave, las transcripciones, `pruebas.jsonl` ni los estados que se le escribieron a Jev para la lectura,
+porque llevan el texto de los parches.
+
 ## Lo que no está, y por qué
 
-- **El código del arnés, del verificador y de los circuitos.** Este paquete no es reproducible por sí solo, como el resto del
-  repositorio.
+- **El código del arnés y de los circuitos.** Este paquete no es reproducible por sí solo, como el resto del repositorio. El
+  del verificador sí está, desde el 22-oct, en [`../verificador/`](../verificador/).
 - **La clave de los casos.** Lleva qué arreglo real corresponde a cada caso histórico y la zona de cada defecto vivo.
 - **Las transcripciones de las tiradas.**
 - **Los mensajes.** Toda la evidencia que vio el agente era sintética, pero no se publica.

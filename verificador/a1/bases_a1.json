@@ -1,0 +1,242 @@
+[
+ {
+  "id": "A1-A01-00",
+  "familia": "clases",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A01^ADT_A01|A1-A01-clases|P|2.5\rEVN|A01|20260315103000\rPID|1||EXT0^^^OTRO^PI~MR000^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|A\rPV1|1|E|PLANTA2^201^B^HOSP||||||||||||||||VN000^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A01-01",
+  "familia": "pv1_2_vacio",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A01^ADT_A01|A1-A01-pv12vacio|P|2.5\rEVN|A01|20260315103000\rPID|1||MR000^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN000^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200"
+ },
+ {
+  "id": "A1-A01-02",
+  "familia": "contactos",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A01^ADT_A01|A1-A01-contactos|P|2.5\rEVN|A01|20260315103000\rPID|1||MR000^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||A\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN000^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A01-03",
+  "familia": "visita",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A01^ADT_A01|A1-A01-visita|P|2.5\rEVN|A01|20260315103000\rPID|1||MR000^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M||||||||||||||||||||||Y\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN000^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A01-04",
+  "familia": "escapes_251",
+  "evento": "A01",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A01^ADT_A01|A1-A01-escapes|P|2.5.1\rEVN|A01|20260315103000\rPID|1||MR000^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN000^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A02-05",
+  "familia": "clases",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A02^ADT_A02|A1-A02-clases|P|2.5\rEVN|A02|20260315103000\rPID|1||EXT1^^^OTRO^PI~MR001^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|O\rPV1|1|P|PLANTA2^201^B^HOSP||||||||||||||||VN001^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A02-06",
+  "familia": "pv1_2_vacio",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A02^ADT_A02|A1-A02-pv12vacio|P|2.5\rEVN|A02|20260315103000\rPID|1||MR001^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN001^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200"
+ },
+ {
+  "id": "A1-A02-07",
+  "familia": "contactos",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A02^ADT_A02|A1-A02-contactos|P|2.5\rEVN|A02|20260315103000\rPID|1||MR001^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||D\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN001^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A02-08",
+  "familia": "visita",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A02^ADT_A02|A1-A02-visita|P|2.5\rEVN|A02|20260315103000\rPID|1||MR001^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M|||||||||||||||||||||202603150930\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN001^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A02-09",
+  "familia": "escapes_251",
+  "evento": "A02",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A02^ADT_A02|A1-A02-escapes|P|2.5.1\rEVN|A02|20260315103000\rPID|1||MR001^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN001^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A03-10",
+  "familia": "clases",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A03^ADT_A03|A1-A03-clases|P|2.5\rEVN|A03|20260315103000\rPID|1||EXT2^^^OTRO^PI~MR002^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|U\rPV1|1|R|PLANTA2^201^B^HOSP||||||||||||||||VN002^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A03-11",
+  "familia": "pv1_2_vacio",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A03^ADT_A03|A1-A03-pv12vacio|P|2.5\rEVN|A03|20260315103000\rPID|1||MR002^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN002^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200|202603151200"
+ },
+ {
+  "id": "A1-A03-12",
+  "familia": "contactos",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A03^ADT_A03|A1-A03-contactos|P|2.5\rEVN|A03|20260315103000\rPID|1||MR002^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||M\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN002^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A03-13",
+  "familia": "visita",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A03^ADT_A03|A1-A03-visita|P|2.5\rEVN|A03|20260315103000\rPID|1||MR002^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M||||||||||||||||||||||N\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN002^^^HOSP^VN|||||||||||||||||01||||||||202603100800|202603151000"
+ },
+ {
+  "id": "A1-A03-14",
+  "familia": "escapes_251",
+  "evento": "A03",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A03^ADT_A03|A1-A03-escapes|P|2.5.1\rEVN|A03|20260315103000\rPID|1||MR002^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN002^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A04-15",
+  "familia": "clases",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A04^ADT_A01|A1-A04-clases|P|2.5\rEVN|A04|20260315103000\rPID|1||EXT3^^^OTRO^PI~MR003^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|N\rPV1|1|B|PLANTA2^201^B^HOSP||||||||||||||||VN003^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A04-16",
+  "familia": "pv1_2_vacio",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A04^ADT_A01|A1-A04-pv12vacio|P|2.5\rEVN|A04|20260315103000\rPID|1||MR003^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN003^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200"
+ },
+ {
+  "id": "A1-A04-17",
+  "familia": "contactos",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A04^ADT_A01|A1-A04-contactos|P|2.5\rEVN|A04|20260315103000\rPID|1||MR003^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||S\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN003^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A04-18",
+  "familia": "visita",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A04^ADT_A01|A1-A04-visita|P|2.5\rEVN|A04|20260315103000\rPID|1||MR003^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M|||||||||||||||||||||202603150930\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN003^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A04-19",
+  "familia": "escapes_251",
+  "evento": "A04",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A04^ADT_A01|A1-A04-escapes|P|2.5.1\rEVN|A04|20260315103000\rPID|1||MR003^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN003^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A08-20",
+  "familia": "clases",
+  "evento": "A08",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A08^ADT_A01|A1-A08-clases|P|2.5\rEVN|A08|20260315103000\rPID|1||EXT4^^^OTRO^PI~MR004^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|f\rPV1|1|C|PLANTA2^201^B^HOSP||||||||||||||||VN004^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A08-21",
+  "familia": "pv1_2_vacio",
+  "evento": "A08",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A08^ADT_A01|A1-A08-pv12vacio|P|2.5\rEVN|A08|20260315103000\rPID|1||MR004^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN004^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200|202603151200"
+ },
+ {
+  "id": "A1-A08-22",
+  "familia": "contactos",
+  "evento": "A08",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A08^ADT_A01|A1-A08-contactos|P|2.5\rEVN|A08|20260315103000\rPID|1||MR004^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||W\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN004^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A08-23",
+  "familia": "visita",
+  "evento": "A08",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A08^ADT_A01|A1-A08-visita|P|2.5\rEVN|A08|20260315103000\rPID|1||MR004^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M||||||||||||||||||||||Y\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN004^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A08-24",
+  "familia": "escapes_251",
+  "evento": "A08",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A08^ADT_A01|A1-A08-escapes|P|2.5.1\rEVN|A08|20260315103000\rPID|1||MR004^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN004^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A11-25",
+  "familia": "clases",
+  "evento": "A11",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A11^ADT_A09|A1-A11-clases|P|2.5\rEVN|A11|20260315103000\rPID|1||EXT5^^^OTRO^PI~MR005^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|X\rPV1|1|U|PLANTA2^201^B^HOSP||||||||||||||||VN005^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A11-26",
+  "familia": "pv1_2_vacio",
+  "evento": "A11",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A11^ADT_A09|A1-A11-pv12vacio|P|2.5\rEVN|A11|20260315103000\rPID|1||MR005^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN005^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200|202603151200"
+ },
+ {
+  "id": "A1-A11-27",
+  "familia": "contactos",
+  "evento": "A11",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A11^ADT_A09|A1-A11-contactos|P|2.5\rEVN|A11|20260315103000\rPID|1||MR005^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||U\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN005^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A11-28",
+  "familia": "visita",
+  "evento": "A11",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A11^ADT_A09|A1-A11-visita|P|2.5\rEVN|A11|20260315103000\rPID|1||MR005^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M|||||||||||||||||||||202603150930\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN005^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A11-29",
+  "familia": "escapes_251",
+  "evento": "A11",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A11^ADT_A09|A1-A11-escapes|P|2.5.1\rEVN|A11|20260315103000\rPID|1||MR005^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN005^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A13-30",
+  "familia": "clases",
+  "evento": "A13",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A13^ADT_A01|A1-A13-clases|P|2.5\rEVN|A13|20260315103000\rPID|1||EXT6^^^OTRO^PI~MR006^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|M\rPV1|1|o|PLANTA2^201^B^HOSP||||||||||||||||VN006^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A13-31",
+  "familia": "pv1_2_vacio",
+  "evento": "A13",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A13^ADT_A01|A1-A13-pv12vacio|P|2.5\rEVN|A13|20260315103000\rPID|1||MR006^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN006^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200|202603151200"
+ },
+ {
+  "id": "A1-A13-32",
+  "familia": "contactos",
+  "evento": "A13",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A13^ADT_A01|A1-A13-contactos|P|2.5\rEVN|A13|20260315103000\rPID|1||MR006^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||T\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN006^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A13-33",
+  "familia": "visita",
+  "evento": "A13",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A13^ADT_A01|A1-A13-visita|P|2.5\rEVN|A13|20260315103000\rPID|1||MR006^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M||||||||||||||||||||||N\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN006^^^HOSP^VN|||||||||||||||||01||||||||202603100800|202603151000"
+ },
+ {
+  "id": "A1-A13-34",
+  "familia": "escapes_251",
+  "evento": "A13",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A13^ADT_A01|A1-A13-escapes|P|2.5.1\rEVN|A13|20260315103000\rPID|1||MR006^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|Z|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN006^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A31-35",
+  "familia": "clases",
+  "evento": "A31",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A31^ADT_A05|A1-A31-clases|P|2.5\rEVN|A31|20260315103000\rPID|1||EXT7^^^OTRO^PI~MR007^^^HOSP^MR||Ruiz^Eva^^^^^L||198002|F\rPV1|1|X|PLANTA2^201^B^HOSP||||||||||||||||VN007^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A31-36",
+  "familia": "pv1_2_vacio",
+  "evento": "A31",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A31^ADT_A05|A1-A31-pv12vacio|P|2.5\rEVN|A31|20260315103000\rPID|1||MR007^^^HOSP^MR||Sanz^Luis Miguel^^^^^L||197512312359|M\rPV1|1||URG^1^A||||||||||||||||VN007^^^HOSP^VN|||||||||||||||||||||||||202603140800+0200"
+ },
+ {
+  "id": "A1-A31-37",
+  "familia": "contactos",
+  "evento": "A31",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A31^ADT_A05|A1-A31-contactos|P|2.5\rEVN|A31|20260315103000\rPID|1||MR007^^^HOSP^MR||de&la&Fuente^Ana^María^^Dra^^L~Anita^^^^^^N||19900110|F|||C/ Real 5&Piso 3&Puerta B^Esc 2^Toledo^TO^45001^ESP^B~Apdo 9^^Toledo^^45080^^M||^NET^Internet^ana@hosp.es~^PRN^PH^^^^^^^^^925000111|925999888^WPN^FX||G\rPV1|1|I|PLANTA1^101^A||||||||||||||||VN007^^^HOSP^VN"
+ },
+ {
+  "id": "A1-A31-38",
+  "familia": "visita",
+  "evento": "A31",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A31^ADT_A05|A1-A31-visita|P|2.5\rEVN|A31|20260315103000\rPID|1||MR007^^^HOSP^MR||Gil^Pedro^^^^^L||19400505|M|||||||||||||||||||||202603150930\rPV1|1|I|UCI^3^1^HOSP^^^^^Box 3|R||URG^1^A|^DOCTORA^ELENA^^^Dra|D20^Ramos^Juan~D21^Otro^Ana||CAR|QUIROF^1|||7|||D30^Vega^Luz^^^Dr||VN007^^^HOSP^VN|||||||||||||||||01||||||||202603100800|"
+ },
+ {
+  "id": "A1-A31-39",
+  "familia": "escapes_251",
+  "evento": "A31",
+  "mensaje": "MSH|^~\\&|HISA1|HOSP|LAB|LAB|20260315103000||ADT^A31^ADT_A05|A1-A31-escapes|P|2.5.1\rEVN|A31|20260315103000\rPID|1||MR007^^^HOSP^MR||O\\S\\Neil\\T\\Co^Mary\\F\\Ann^^^^^L||19851224|Z\rPV1|1|I|PLANTA\\T\\4^401^A^^^^^^Sala \\S\\ norte||||||||||||||||VN007^^^HOSP^VN"
+ }
+]

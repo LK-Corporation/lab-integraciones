@@ -30,7 +30,8 @@ sus límites escritos. Hay una versión para leer en el navegador en
 | [`preinscripciones/`](preinscripciones/) | las **predicciones selladas con huella antes de medir**, incluida la que predice el propio fracaso del autor |
 | [`medidas/`](medidas/) | las medidas con su control negativo: el prior, las dos mitades de la vía de oráculo independiente, y la auditoría de la interfaz de evidencia |
 | [`codigo/`](codigo/) | el puntuador con sus dieciséis autopruebas, el banco de adversarios, el árbol que mide fuga por el arnés, la matriz de observabilidad, y las clases del arnés |
-| [`piloto-agente/`](piloto-agente/) | **el segundo estudio (12-13 oct)**: un agente que, guiado por el veredicto de un verificador determinista, localiza y arregla fallos de circuitos de integración, frente a una búsqueda sin modelo. Funciona (localiza 17 de 18 y arregla la mitad) y aporta frente a la búsqueda solo por acumulación de dos etapas, y no sin las pistas que declara el propio verificador. Diseños, sellos y resultados, sin código |
+| [`piloto-agente/`](piloto-agente/) | **el segundo estudio (12-13 oct)**: un agente que, guiado por el veredicto de un verificador determinista, localiza y arregla fallos de circuitos de integración, frente a una búsqueda sin modelo. Funciona (localiza 17 de 18 y arregla la mitad) y aporta frente a la búsqueda solo por acumulación de dos etapas, y no sin las pistas que declara el propio verificador. Y **el tercero (13-22 oct)**, en [`piloto-agente/bucle/`](piloto-agente/bucle/): con una herramienta para probar sus parches contra el verificador antes de entregarlos, el mismo agente arregla 14,5 de 18 frente a 8,5 sin ella. Diseños, sellos y resultados, sin código |
+| [`verificador/`](verificador/) | **el verificador determinista, con su código (22-oct)**: el juez que usan los dos estudios del agente. Dado el mensaje HL7 v2.5 enviado, el acuse y lo que el circuito registró y escribió en FHIR, da un veredicto con los hallazgos que lo sostienen, cada uno con su cita al estándar. Con la documentación de su última etapa, que cierra los huecos medidos del juez. **Es lo único de aquí que se puede correr:** sus pruebas pasan solas, sin el laboratorio |
 
 **Lo que quizá sea lo más útil no es el resultado, son las cuatro versiones del diseño y las
 revisiones que las tumbaron.** Se puede leer cómo un experimento se rompe y se rehace, con las
@@ -55,7 +56,8 @@ Quedan fuera, deliberadamente:
 **Consecuencia honesta: este repositorio no es reproducible.** Puedes leer el método, los
 instrumentos y los resultados, y puedes auditar el razonamiento; no puedes volver a correr las
 medidas. Esa ausencia es el precio de que el banco siga limpio, y se prefiere declararla a
-disimularla.
+disimularla. La excepción, desde el 22-oct, es el [verificador](verificador/): no lleva nada del
+banco, y sus pruebas corren solas.
 
 ### Dos cosas más sobre la criba
 

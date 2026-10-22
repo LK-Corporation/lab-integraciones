@@ -1,0 +1,10 @@
+{
+ "_razones": {
+  "MMI-12 N1 M12": "Las notas y tolerancias del mapeador (S78, S89, L-ADT-1, D-ADT-8...) salen ahora porque, con S-VE-1, el mapeador corre aunque falte el canónico y calcula el esperado (diseño §1.2: «revisar sigue calculando el esperado del mensaje»). La previsión sellada solo admitía M19 en N1 de MMI-12. Es el comportamiento diseñado, no un defecto: se adjudica a la previsión.",
+  "real:sitio N1 MS9 40": "La cota de 39 salió de E-VE1-4, que contó solo los mensajes con acuse AA tolerados por S22. Además hay 2 mensajes (MSH-12 vacío) que se rechazan con AE 100 por otra causa y que pierden la alternativa S26 al dejar de aplicarse S22: solo N1, con la firma de MS9. Los N3 y N2 (38) están dentro de la cota: los 39 de E-VE1-4 menos un mensaje repetido en dos partes de la muestra, contado una vez en este corpus.",
+  "A1:sitio N1 MS9 1": "El mismo caso en A1: un rechazo AE 100 con MSH-12 vacío pierde la alternativa S26. Solo N1."
+ },
+ "MMI-12": {"N1": {"M12": "sin cota"}},
+ "real:sitio": {"N1": {"MS9": 40}},
+ "A1:sitio": {"N1": {"MS9": 1}}
+}

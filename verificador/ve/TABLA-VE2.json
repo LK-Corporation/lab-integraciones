@@ -1,0 +1,41 @@
+{
+ "A1:lab": {
+  "casos": 263,
+  "N1 M19": 210
+ },
+ "A1:sitio": {
+  "casos": 263,
+  "N1 M19": 201,
+  "N1 MS9": 1
+ },
+ "MMI-12": {
+  "casos": 136,
+  "N3 M12": 136,
+  "N3 correcto -> fallo_silencioso": 136,
+  "N2 M12": 136,
+  "N1 M12": 128,
+  "N1 M19": 85
+ },
+ "MMI-19": {
+  "casos": 13,
+  "N3 M19": 13,
+  "N3 correcto -> fallo_silencioso": 13,
+  "N2 M19": 13
+ },
+ "agentes": {
+  "casos": 35,
+  "N1 M19": 1
+ },
+ "real:lab": {
+  "casos": 4697,
+  "N1 M19": 4039
+ },
+ "real:sitio": {
+  "casos": 11961,
+  "N1 M19": 6286,
+  "N3 MS9": 38,
+  "N3 fallo_silencioso -> correcto": 38,
+  "N2 MS9": 38,
+  "N1 MS9": 40
+ }
+}

@@ -7,6 +7,7 @@ Este repositorio lleva **dos licencias**, porque tiene dos clases de contenido.
 | **El código** | **MIT** | `codigo/`, y cualquier `.py` o `.cls` en cualquier carpeta | 
 | **Los documentos** | **CC BY 4.0** | `INFORME.md`, `README.md`, `diseno/`, `encargos-y-revisiones/`, `preinscripciones/`, `medidas/`, la página `docs/index.html`, y cualquier `.md`, `.txt`, `.html` o `.sha256` |
 | **La configuración y las pruebas** | **MIT** | `tests/`, `.github/`, `pytest.ini`, `.gitignore`, y cualquier `.yml` o `.ini` |
+| **Los datos del verificador** | **CC BY 4.0** | los `.json` de `verificador/`: las bases sintéticas de sus pruebas y las tablas de su rejuicio, salvo lo que es de HL7 (abajo) |
 | **Las fuentes tipográficas** | **SIL OFL 1.1**, de sus autores | [`docs/fonts/`](docs/fonts/): Newsreader, Public Sans y JetBrains Mono, con su licencia al lado (`OFL-*.txt`) |
 
 Los textos completos están en [`LICENSES/MIT.txt`](LICENSES/MIT.txt) y
@@ -36,6 +37,24 @@ que lo citado es lo que contestaron.
 
 Se incluyen como parte del registro del método, no como obra propia. El autor licencia bajo CC BY
 4.0 **su parte**: los encargos, la selección, la organización y todo lo que escribió alrededor.
+
+---
+
+## Sobre el material de HL7
+
+El verificador juzga contra HL7 v2.5 y necesita algunos de sus datos para correr. **No son obra del autor y estas licencias no
+los cubren:**
+
+- [`verificador/medida/encargo_medida.md`](verificador/medida/encargo_medida.md): las filas de las tablas 0003, 0004 y 0211,
+  tal cual. En el laboratorio, ese fichero lleva el capítulo 2 del estándar entero, que no se publica;
+- [`verificador/estructuras_25.json`](verificador/estructuras_25.json): las estructuras de mensaje y los atributos de los
+  segmentos de v2.5;
+- [`verificador/a1/ejemplos_cap3.json`](verificador/a1/ejemplos_cap3.json): el principio de algunos mensajes de ejemplo del
+  capítulo 3;
+- los códigos de tabla y las citas breves del estándar que el código del verificador lleva con su referencia.
+
+El texto completo del estándar se obtiene de HL7 International, con su licencia. HL7® y FHIR® son marcas registradas de
+Health Level Seven International.
 
 ---
 

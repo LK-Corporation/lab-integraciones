@@ -1,0 +1,7792 @@
+{
+ "campos": {
+  "AIS": {
+   "atributos": {
+    "AIS-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-10": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0278"
+    },
+    "AIS-11": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0411"
+    },
+    "AIS-12": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0411"
+    },
+    "AIS-2": {
+     "dt": "ID",
+     "len": 3,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0206"
+    },
+    "AIS-3": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-4": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-5": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-6": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-7": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-8": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "AIS-9": {
+     "dt": "IS",
+     "len": 10,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0279"
+    }
+   },
+   "fuente": "ch10.md:1382",
+   "sha256": "f2f71e39124578b6f370692f0a7764d40fe103f392ad5ddc75117ede1c1c0fca"
+  },
+  "ARQ": {
+   "atributos": {
+    "ARQ-1": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-10": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-11": {
+     "dt": "DR",
+     "len": 53,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-12": {
+     "dt": "ST",
+     "len": 5,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-13": {
+     "dt": "RI",
+     "len": 100,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-14": {
+     "dt": "ST",
+     "len": 5,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-15": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-16": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-17": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-18": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-19": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-2": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-20": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-21": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-22": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-23": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-24": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-25": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "ARQ-3": {
+     "dt": "NM",
+     "len": 5,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-4": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-5": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-6": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ARQ-7": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0276"
+    },
+    "ARQ-8": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0277"
+    },
+    "ARQ-9": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch10.md:788",
+   "sha256": "c560ab44fc49c01c08f906d3209900f842c185e6ffea344a0780c1da63dead75"
+  },
+  "EVN": {
+   "atributos": {
+    "EVN-1": {
+     "dt": "ID",
+     "len": 3,
+     "opt": "B",
+     "rep": false,
+     "tabla": "0003"
+    },
+    "EVN-2": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "EVN-3": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "EVN-4": {
+     "dt": "IS",
+     "len": 3,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0062"
+    },
+    "EVN-5": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0188"
+    },
+    "EVN-6": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "EVN-7": {
+     "dt": "HD",
+     "len": 241,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch03.md:2779",
+   "sha256": "881320425c5e870a5a344ff02ac6a6a7532e4ccc7ae8f4c52d83ff2c12ccd1d9"
+  },
+  "MRG": {
+   "atributos": {
+    "MRG-1": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "MRG-2": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    },
+    "MRG-3": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MRG-4": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "MRG-5": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MRG-6": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MRG-7": {
+     "dt": "XPN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    }
+   },
+   "fuente": "ch03.md:5030",
+   "sha256": "c31712df85b3d54ced5c4dec6ee56eeb7db1740dea9c5cb7fdf1e1ff759fbabb"
+  },
+  "MSH": {
+   "atributos": {
+    "MSH-1": {
+     "dt": "ST",
+     "len": 1,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-10": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-11": {
+     "dt": "PT",
+     "len": 3,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-12": {
+     "dt": "VID",
+     "len": 60,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-13": {
+     "dt": "NM",
+     "len": 15,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-14": {
+     "dt": "ST",
+     "len": 180,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-15": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0155"
+    },
+    "MSH-16": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0155"
+    },
+    "MSH-17": {
+     "dt": "ID",
+     "len": 3,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0399"
+    },
+    "MSH-18": {
+     "dt": "ID",
+     "len": 16,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0211"
+    },
+    "MSH-19": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-2": {
+     "dt": "ST",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-20": {
+     "dt": "ID",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0356"
+    },
+    "MSH-21": {
+     "dt": "EI",
+     "len": 427,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "MSH-3": {
+     "dt": "HD",
+     "len": 227,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0361"
+    },
+    "MSH-4": {
+     "dt": "HD",
+     "len": 227,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0362"
+    },
+    "MSH-5": {
+     "dt": "HD",
+     "len": 227,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0361"
+    },
+    "MSH-6": {
+     "dt": "HD",
+     "len": 227,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0362"
+    },
+    "MSH-7": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-8": {
+     "dt": "ST",
+     "len": 40,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "MSH-9": {
+     "dt": "MSG",
+     "len": 15,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch02.md:2488",
+   "sha256": "a5d3dbba1b37f321d560c5d3a4f4bab84323f53cad286976639ab96ed50ff96d"
+  },
+  "OBR": {
+   "atributos": {
+    "OBR-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-10": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-11": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0065"
+    },
+    "OBR-12": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-13": {
+     "dt": "ST",
+     "len": 300,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-14": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-15": {
+     "dt": "SPS",
+     "len": 300,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-16": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-17": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-18": {
+     "dt": "ST",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-19": {
+     "dt": "ST",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-2": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-20": {
+     "dt": "ST",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-21": {
+     "dt": "ST",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-22": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-23": {
+     "dt": "MOC",
+     "len": 40,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-24": {
+     "dt": "ID",
+     "len": 10,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0074"
+    },
+    "OBR-25": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0123"
+    },
+    "OBR-26": {
+     "dt": "PRL",
+     "len": 400,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-27": {
+     "dt": "TQ",
+     "len": 200,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-28": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-29": {
+     "dt": "EIP",
+     "len": 200,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-3": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-30": {
+     "dt": "ID",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0124"
+    },
+    "OBR-31": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-32": {
+     "dt": "NDL",
+     "len": 200,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-33": {
+     "dt": "NDL",
+     "len": 200,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-34": {
+     "dt": "NDL",
+     "len": 200,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-35": {
+     "dt": "NDL",
+     "len": 200,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-36": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-37": {
+     "dt": "NM",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-38": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-39": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-4": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-40": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-41": {
+     "dt": "ID",
+     "len": 30,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0224"
+    },
+    "OBR-42": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0225"
+    },
+    "OBR-43": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBR-44": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0088"
+    },
+    "OBR-45": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0340"
+    },
+    "OBR-46": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0411"
+    },
+    "OBR-47": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0411"
+    },
+    "OBR-48": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0476"
+    },
+    "OBR-49": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0507"
+    },
+    "OBR-5": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-50": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-6": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-7": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-8": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBR-9": {
+     "dt": "CQ",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch04.md:2283",
+   "sha256": "ce9261f29adfd2ddd8ed9a6fd4184c527ecf8ed5e381df7f53d1114a00808d2c"
+  },
+  "OBX": {
+   "atributos": {
+    "OBX-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-10": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0080"
+    },
+    "OBX-11": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0085"
+    },
+    "OBX-12": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-13": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-14": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-15": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-16": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-17": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-18": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-19": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-2": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0125"
+    },
+    "OBX-20": {
+     "dt": "",
+     "len": null,
+     "opt": "",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-21": {
+     "dt": "",
+     "len": null,
+     "opt": "",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-22": {
+     "dt": "",
+     "len": null,
+     "opt": "",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-23": {
+     "dt": "XON",
+     "len": 567,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-24": {
+     "dt": "XAD",
+     "len": 631,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-25": {
+     "dt": "XCN",
+     "len": 3002,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-3": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-4": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-5": {
+     "dt": "varies",
+     "len": 99999,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "OBX-6": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-7": {
+     "dt": "ST",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "OBX-8": {
+     "dt": "IS",
+     "len": 5,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0078"
+    },
+    "OBX-9": {
+     "dt": "NM",
+     "len": 5,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch07.md:1825",
+   "sha256": "184a68947b2b58f98dd40248147e3f7e0a2a992a28230a73d6ea931506812c15"
+  },
+  "ORC": {
+   "atributos": {
+    "ORC-1": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0119"
+    },
+    "ORC-10": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-11": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-12": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-13": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-14": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-15": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-16": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-17": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-18": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-19": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-2": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-20": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0339"
+    },
+    "ORC-21": {
+     "dt": "XON",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-22": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-23": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-24": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-25": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-26": {
+     "dt": "CWE",
+     "len": 60,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0552"
+    },
+    "ORC-27": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-28": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0177"
+    },
+    "ORC-29": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0482"
+    },
+    "ORC-3": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-30": {
+     "dt": "CNE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0483"
+    },
+    "ORC-31": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-4": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-5": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0038"
+    },
+    "ORC-6": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0121"
+    },
+    "ORC-7": {
+     "dt": "TQ",
+     "len": 200,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    },
+    "ORC-8": {
+     "dt": "EIP",
+     "len": 200,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "ORC-9": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch04.md:1455",
+   "sha256": "bcb47bb3c54a67f2cf095d15a2b8c7b6a2154b1d6f5e4263a1dc634d87e7a8cd"
+  },
+  "PID": {
+   "atributos": {
+    "PID-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-10": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0005"
+    },
+    "PID-11": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-12": {
+     "dt": "IS",
+     "len": 4,
+     "opt": "B",
+     "rep": false,
+     "tabla": "0289"
+    },
+    "PID-13": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-14": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-15": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0296"
+    },
+    "PID-16": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0002"
+    },
+    "PID-17": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0006"
+    },
+    "PID-18": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-19": {
+     "dt": "ST",
+     "len": 16,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-2": {
+     "dt": "CX",
+     "len": 20,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-20": {
+     "dt": "DLN",
+     "len": 25,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-21": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-22": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0189"
+    },
+    "PID-23": {
+     "dt": "ST",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-24": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0136"
+    },
+    "PID-25": {
+     "dt": "NM",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-26": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0171"
+    },
+    "PID-27": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0172"
+    },
+    "PID-28": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "B",
+     "rep": false,
+     "tabla": "0212"
+    },
+    "PID-29": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-3": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-30": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0136"
+    },
+    "PID-31": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0136"
+    },
+    "PID-32": {
+     "dt": "IS",
+     "len": 20,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0445"
+    },
+    "PID-33": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-34": {
+     "dt": "HD",
+     "len": 241,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-35": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0446"
+    },
+    "PID-36": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0447"
+    },
+    "PID-37": {
+     "dt": "ST",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-38": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0429"
+    },
+    "PID-39": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0171"
+    },
+    "PID-4": {
+     "dt": "CX",
+     "len": 20,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-5": {
+     "dt": "XPN",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-6": {
+     "dt": "XPN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PID-7": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PID-8": {
+     "dt": "IS",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0001"
+    },
+    "PID-9": {
+     "dt": "XPN",
+     "len": 250,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    }
+   },
+   "fuente": "ch03.md:2871",
+   "sha256": "55f90201508585645e98d10030292d807fcbb81124395d86e9ce086fd47f1864"
+  },
+  "PV1": {
+   "atributos": {
+    "PV1-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-10": {
+     "dt": "IS",
+     "len": 3,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0069"
+    },
+    "PV1-11": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-12": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0087"
+    },
+    "PV1-13": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0092"
+    },
+    "PV1-14": {
+     "dt": "IS",
+     "len": 6,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0023"
+    },
+    "PV1-15": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0009"
+    },
+    "PV1-16": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0099"
+    },
+    "PV1-17": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0010"
+    },
+    "PV1-18": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0018"
+    },
+    "PV1-19": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-2": {
+     "dt": "IS",
+     "len": 1,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0004"
+    },
+    "PV1-20": {
+     "dt": "FC",
+     "len": 50,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0064"
+    },
+    "PV1-21": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0032"
+    },
+    "PV1-22": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0045"
+    },
+    "PV1-23": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0046"
+    },
+    "PV1-24": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0044"
+    },
+    "PV1-25": {
+     "dt": "DT",
+     "len": 8,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PV1-26": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PV1-27": {
+     "dt": "NM",
+     "len": 3,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PV1-28": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0073"
+    },
+    "PV1-29": {
+     "dt": "IS",
+     "len": 4,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0110"
+    },
+    "PV1-3": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-30": {
+     "dt": "DT",
+     "len": 8,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-31": {
+     "dt": "IS",
+     "len": 10,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0021"
+    },
+    "PV1-32": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-33": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-34": {
+     "dt": "IS",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0111"
+    },
+    "PV1-35": {
+     "dt": "DT",
+     "len": 8,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-36": {
+     "dt": "IS",
+     "len": 3,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0112"
+    },
+    "PV1-37": {
+     "dt": "DLD",
+     "len": 47,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0113"
+    },
+    "PV1-38": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0114"
+    },
+    "PV1-39": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0115"
+    },
+    "PV1-4": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0007"
+    },
+    "PV1-40": {
+     "dt": "IS",
+     "len": 1,
+     "opt": "B",
+     "rep": false,
+     "tabla": "0116"
+    },
+    "PV1-41": {
+     "dt": "IS",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0117"
+    },
+    "PV1-42": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-43": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-44": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-45": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "PV1-46": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-47": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-48": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-49": {
+     "dt": "NM",
+     "len": 12,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-5": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-50": {
+     "dt": "CX",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0203"
+    },
+    "PV1-51": {
+     "dt": "IS",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0326"
+    },
+    "PV1-52": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "B",
+     "rep": true,
+     "tabla": "0010"
+    },
+    "PV1-6": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "PV1-7": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0010"
+    },
+    "PV1-8": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0010"
+    },
+    "PV1-9": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "B",
+     "rep": true,
+     "tabla": "0010"
+    }
+   },
+   "fuente": "ch03.md:3426",
+   "sha256": "902d64d50b8a9f7132b73bbbdd4a450484ad5e33c5e8d375cfdc51da41fdf6e7"
+  },
+  "RGS": {
+   "atributos": {
+    "RGS-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RGS-2": {
+     "dt": "ID",
+     "len": 3,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0206"
+    },
+    "RGS-3": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch10.md:1362",
+   "sha256": "3754c6be52387036e2df337c89d345dbfb72049bb14bb503ba6c4dcddbd464d6"
+  },
+  "RXA": {
+   "atributos": {
+    "RXA-1": {
+     "dt": "NM",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-10": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXA-11": {
+     "dt": "LA2",
+     "len": 200,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-12": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-13": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-14": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-15": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXA-16": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXA-17": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": "0227"
+    },
+    "RXA-18": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXA-19": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXA-2": {
+     "dt": "NM",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-20": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0322"
+    },
+    "RXA-21": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0323"
+    },
+    "RXA-22": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-23": {
+     "dt": "NM",
+     "len": 5,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-24": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-25": {
+     "dt": "CWE",
+     "len": 60,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-26": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0480"
+    },
+    "RXA-3": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-4": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-5": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0292"
+    },
+    "RXA-6": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-7": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-8": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXA-9": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    }
+   },
+   "fuente": "ch04.md:6427",
+   "sha256": "677dff5b269b2dea545c84d224d4c18ea0b23e155ed7d1cb41a383c773014317"
+  },
+  "RXO": {
+   "atributos": {
+    "RXO-1": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-10": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-11": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-12": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-13": {
+     "dt": "NM",
+     "len": 3,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-14": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-15": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-16": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0136"
+    },
+    "RXO-17": {
+     "dt": "ST",
+     "len": 20,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-18": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-19": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-2": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-20": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-21": {
+     "dt": "ST",
+     "len": 6,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-22": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-23": {
+     "dt": "CQ",
+     "len": 10,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-24": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-25": {
+     "dt": "NM",
+     "len": 5,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-26": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-27": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0480"
+    },
+    "RXO-28": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-3": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-4": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-5": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-6": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-7": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "RXO-8": {
+     "dt": "LA1",
+     "len": 200,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXO-9": {
+     "dt": "ID",
+     "len": 1,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0161"
+    }
+   },
+   "fuente": "ch04.md:5192",
+   "sha256": "ffbeac93f1674fc6c21d48450bb918cf72d673104a4d48f8985d70a0540ac18a"
+  },
+  "RXR": {
+   "atributos": {
+    "RXR-1": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0162"
+    },
+    "RXR-2": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0163"
+    },
+    "RXR-3": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0164"
+    },
+    "RXR-4": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0165"
+    },
+    "RXR-5": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "RXR-6": {
+     "dt": "CWE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0495"
+    }
+   },
+   "fuente": "ch04.md:5446",
+   "sha256": "01b3c564a29ca762544aeedfcda413b043909c91cd31a652c7fa7f3b38c24eee"
+  },
+  "SCH": {
+   "atributos": {
+    "SCH-1": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-10": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-11": {
+     "dt": "TQ",
+     "len": 200,
+     "opt": "B",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-12": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-13": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-14": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-15": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-16": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-17": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-18": {
+     "dt": "XAD",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-19": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-2": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-20": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "R",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-21": {
+     "dt": "XTN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-22": {
+     "dt": "PL",
+     "len": 80,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-23": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-24": {
+     "dt": "EI",
+     "len": 75,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-25": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0278"
+    },
+    "SCH-26": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-27": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "SCH-3": {
+     "dt": "NM",
+     "len": 5,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-4": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-5": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-6": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "SCH-7": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0276"
+    },
+    "SCH-8": {
+     "dt": "CE",
+     "len": 250,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0277"
+    },
+    "SCH-9": {
+     "dt": "NM",
+     "len": 20,
+     "opt": "B",
+     "rep": false,
+     "tabla": null
+    }
+   },
+   "fuente": "ch10.md:1058",
+   "sha256": "f7204fd1c4b1e079a3467c541fdd4bda5e0dd9febfde085e3fd1761ec1c6cbae"
+  },
+  "TXA": {
+   "atributos": {
+    "TXA-1": {
+     "dt": "SI",
+     "len": 4,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-10": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-11": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-12": {
+     "dt": "EI",
+     "len": 30,
+     "opt": "R",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-13": {
+     "dt": "EI",
+     "len": 30,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-14": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-15": {
+     "dt": "EI",
+     "len": 22,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-16": {
+     "dt": "ST",
+     "len": 30,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-17": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0271"
+    },
+    "TXA-18": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0272"
+    },
+    "TXA-19": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0273"
+    },
+    "TXA-2": {
+     "dt": "IS",
+     "len": 30,
+     "opt": "R",
+     "rep": false,
+     "tabla": "0270"
+    },
+    "TXA-20": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "O",
+     "rep": false,
+     "tabla": "0275"
+    },
+    "TXA-21": {
+     "dt": "ST",
+     "len": 30,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-22": {
+     "dt": "PPN",
+     "len": 250,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-23": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-3": {
+     "dt": "ID",
+     "len": 2,
+     "opt": "C",
+     "rep": false,
+     "tabla": "0191"
+    },
+    "TXA-4": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-5": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "C",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-6": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-7": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "C",
+     "rep": false,
+     "tabla": null
+    },
+    "TXA-8": {
+     "dt": "TS",
+     "len": 26,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    },
+    "TXA-9": {
+     "dt": "XCN",
+     "len": 250,
+     "opt": "O",
+     "rep": true,
+     "tabla": null
+    }
+   },
+   "fuente": "ch09.md:617",
+   "sha256": "860439127344f9e929383c0dbb1d3eee9d44144db75f1606af58c0b380c79637"
+  }
+ },
+ "estructuras": {
+  "ADT_A01": {
+   "cabecera": "ADT^A01^ADT_A01",
+   "fuente": "ch03.md:523",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NK1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "AL1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "PROCEDURE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PR1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "GT1",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "INSURANCE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "IN1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "IN2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "IN3",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "ACC",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PDA",
+     true,
+     false
+    ]
+   ],
+   "sha256": "78158b88a67883c340f66a543434dcaf24558c3e60985d7c12b02a1df5e41018"
+  },
+  "ADT_A02": {
+   "cabecera": "ADT^A02^ADT_A02",
+   "fuente": "ch03.md:575",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PDA",
+     true,
+     false
+    ]
+   ],
+   "sha256": "4de7da06915d50a677b82f0e3c6c984f5cf967ce1d6c8e299de4c363762b55a9"
+  },
+  "ADT_A03": {
+   "cabecera": "ADT^A03^ADT_A03",
+   "fuente": "ch03.md:611",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NK1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "AL1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "PROCEDURE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PR1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "GT1",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "INSURANCE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "IN1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "IN2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "IN3",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "ACC",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PDA",
+     true,
+     false
+    ]
+   ],
+   "sha256": "f3e09e3a1e311279bdf809777798f01483940cde22daf65ab7b8334b564e219b"
+  },
+  "ADT_A05": {
+   "cabecera": "ADT^A05^ADT_A05",
+   "fuente": "ch03.md:701",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NK1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "AL1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "PROCEDURE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PR1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "GT1",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "INSURANCE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "IN1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "IN2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "IN3",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "ACC",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB2",
+     true,
+     false
+    ]
+   ],
+   "sha256": "6874b408c01dc2f59f9fcbd2360c927a5bb77c8d8811ab1bb8219a30de775828"
+  },
+  "ADT_A06": {
+   "cabecera": "ADT^A06^ADT_A06",
+   "fuente": "ch03.md:750",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "MRG",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "NK1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "AL1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "PROCEDURE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PR1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "GT1",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "INSURANCE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "IN1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "IN2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "IN3",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "ACC",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "UB2",
+     true,
+     false
+    ]
+   ],
+   "sha256": "3a6a2dabde3a167dff6e9aea7b12d0ea2b069cb0d09741be24d3ce765c6ac640"
+  },
+  "ADT_A09": {
+   "cabecera": "ADT^A09^ADT_A09",
+   "fuente": "ch03.md:900",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ]
+   ],
+   "sha256": "83cc5d2bb917df8ac859d6b73d0891713d4aa918214035b6ab132812c17a2798"
+  },
+  "ADT_A12": {
+   "cabecera": "ADT^A12^ADT_A12",
+   "fuente": "ch03.md:990",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     false
+    ]
+   ],
+   "sha256": "5bb7bd6b3fc756690f3b9e846608ffe6fff108cdf3b867e79af74e2948abc26b"
+  },
+  "ADT_A15": {
+   "cabecera": "ADT^A15^ADT_A15",
+   "fuente": "ch03.md:1113",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ]
+   ],
+   "sha256": "992c6825e0e1f9f2ff684869451ffaeebb1eca6868a4b83d99fabd0d732d1605"
+  },
+  "ADT_A16": {
+   "cabecera": "ADT^A16^ADT_A16",
+   "fuente": "ch03.md:1143",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NK1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "AL1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "PROCEDURE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PR1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "GT1",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "INSURANCE",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "IN1",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "IN2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "IN3",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "ROL",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "ACC",
+     true,
+     false
+    ]
+   ],
+   "sha256": "0bc7a525db01bfdc7703e985ea126270ed49a84c16c3a0a9965653881a53ba15"
+  },
+  "ADT_A17": {
+   "cabecera": "ADT^A17^ADT_A17",
+   "fuente": "ch03.md:1184",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ]
+   ],
+   "sha256": "2001c67dc755f7b9f085d7356ee019f91327b8ee4af3d358876286756eee94bb"
+  },
+  "ADT_A18": {
+   "cabecera": "ADT^A18^ADT_A18",
+   "fuente": "ch03.md:1217",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "MRG",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ]
+   ],
+   "sha256": "c285732b6e9a09ba1fa6faefe32786ae7b79fa7dc0ef0ee238fbb46d7d2dfcc5"
+  },
+  "ADT_A20": {
+   "cabecera": "ADT^A20^ADT_A20",
+   "fuente": "ch03.md:1313",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "NPU",
+     false,
+     false
+    ]
+   ],
+   "sha256": "74ec0a8b679490e508ae50636cb03a59797612b765908290b220a0d242768f17"
+  },
+  "ADT_A21": {
+   "cabecera": "ADT^A21^ADT_A21",
+   "fuente": "ch03.md:1335",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ]
+   ],
+   "sha256": "0ccf4a0a96af5929418a674c75f18fd22628074765642da06721e986847b2c29"
+  },
+  "ADT_A24": {
+   "cabecera": "ADT^A24^ADT_A24",
+   "fuente": "ch03.md:1412",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ]
+   ],
+   "sha256": "739ee61c2623737540930096ba0e9614e19f744bba7a63a26cb47bc8f8a9b5d2"
+  },
+  "ADT_A30": {
+   "cabecera": "ADT^A30^ADT_A30",
+   "fuente": "ch03.md:1600",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "MRG",
+     false,
+     false
+    ]
+   ],
+   "sha256": "157bb50b5d163d1ad44fc895a1b4f4c186a65645bdaa4af06c29b04e83baa64b"
+  },
+  "ADT_A37": {
+   "cabecera": "ADT^A37^ADT_A37",
+   "fuente": "ch03.md:1785",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ]
+   ],
+   "sha256": "ab60b6f3c07c65f3a0b2a15ad0e1c7ebd1e5c104370c0df1512746523fe2e69f"
+  },
+  "ADT_A38": {
+   "cabecera": "ADT^A38^ADT_A38",
+   "fuente": "ch03.md:1812",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "DB1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "OBX",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DG1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "DRG",
+     true,
+     false
+    ]
+   ],
+   "sha256": "e5ac1f95f130716e7ea272c96350421ebfa642bb8d95e1529dd5beed366eafb3"
+  },
+  "ADT_A39": {
+   "cabecera": "ADT^A39^ADT_A39",
+   "fuente": "ch03.md:1849",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "MRG",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PV1",
+       true,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "74c5073caef47c5dcd8091d3c51ca104be69020ffe76a3f176e92f4fece92592"
+  },
+  "ADT_A43": {
+   "cabecera": "ADT^A43^ADT_A43",
+   "fuente": "ch03.md:1981",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "MRG",
+       false,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "9295ea2428cfdf990628626995f3be643c72424a4a511a635b5a08dc4e30b9ab"
+  },
+  "ADT_A45": {
+   "cabecera": "ADT^A45^ADT_A45",
+   "fuente": "ch03.md:2047",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "GRUPO",
+     "MERGE_INFO",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "MRG",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PV1",
+       false,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "4477a2a898656a0e3c5c095669a13a82557d4f91cd1028b1b7c98a3404933930"
+  },
+  "ADT_A50": {
+   "cabecera": "ADT^A50^ADT_A50",
+   "fuente": "ch03.md:2204",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "MRG",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ]
+   ],
+   "sha256": "c285732b6e9a09ba1fa6faefe32786ae7b79fa7dc0ef0ee238fbb46d7d2dfcc5"
+  },
+  "ADT_A52": {
+   "cabecera": "ADT^A52^ADT_A52",
+   "fuente": "ch03.md:2258",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ]
+   ],
+   "sha256": "5ec55989a3d588c6b154911e8be328ed0420aae32e06afb8f36fe75c9af13396"
+  },
+  "ADT_A54": {
+   "cabecera": "ADT^A54^ADT_A54",
+   "fuente": "ch03.md:2314",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ]
+   ],
+   "sha256": "33f2684948501ea24c0d1d1ef2d0c11d3bb7703c7d2998bd9e7ad0cd256c5279"
+  },
+  "ADT_A60": {
+   "cabecera": "ADT^A60^ADT_A60",
+   "fuente": "ch03.md:2700",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "IAM",
+     true,
+     true
+    ]
+   ],
+   "sha256": "b43664867d7f5c8ea6921c16ff07f752a9472b869b1fe77380cdc4b4f838f122"
+  },
+  "ADT_A61": {
+   "cabecera": "ADT^A61^ADT_A61",
+   "fuente": "ch03.md:2733",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PD1",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "ROL",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "PV2",
+     true,
+     false
+    ]
+   ],
+   "sha256": "45b104e31c4c0d5652507d47f4179d1f43678c8ff0a3aba9d583a86729346b01"
+  },
+  "MDM_T01": {
+   "cabecera": "MDM^T01^MDM_T01",
+   "fuente": "ch09.md:245",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "GRUPO",
+     "COMMON_ORDER",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "TIMING",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "TQ1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "TQ2",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "OBR",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "TXA",
+     false,
+     false
+    ]
+   ],
+   "sha256": "529f7809b255bdb70d797066683e22b29cb8b58de1d8b0ad255ae64c593ed458"
+  },
+  "MDM_T02": {
+   "cabecera": "MDM^T02^MDM_T02",
+   "fuente": "ch09.md:278",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "EVN",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PID",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "PV1",
+     false,
+     false
+    ],
+    [
+     "GRUPO",
+     "COMMON_ORDER",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "TIMING",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "TQ1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "TQ2",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "OBR",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "TXA",
+     false,
+     false
+    ],
+    [
+     "GRUPO",
+     "(OBX)",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "OBX",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ]
+     ]
+    ]
+   ],
+   "sha256": "957b1bfa6e25f7471bc7e91ba60f7f6863ef20d112b4d34293b4ef5729f1a539"
+  },
+  "OMG_O19": {
+   "cabecera": "OMG^O19^OMG_O19",
+   "fuente": "ch04.md:889",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     false,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "NK1",
+       true,
+       true
+      ],
+      [
+       "GRUPO",
+       "PATIENT_VISIT",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "PV1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "PV2",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "INSURANCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "IN1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "IN2",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "IN3",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "GT1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "AL1",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "ORDER",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "TIMING",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "TQ1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "TQ2",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "OBR",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "CTD",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "DG1",
+       true,
+       true
+      ],
+      [
+       "GRUPO",
+       "OBSERVATION",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "OBX",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "SPECIMEN",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "SPM",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "OBX",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "CONTAINER",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "SAC",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "OBX",
+           true,
+           true
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "PRIOR_RESULT",
+       true,
+       true,
+       [
+        [
+         "GRUPO",
+         "PATIENT_PRIOR",
+         true,
+         false,
+         [
+          [
+           "SEG",
+           "PID",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "PD1",
+           true,
+           false
+          ]
+         ]
+        ],
+        [
+         "GRUPO",
+         "PATIENT_VISIT_PRIOR",
+         true,
+         false,
+         [
+          [
+           "SEG",
+           "PV1",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "PV2",
+           true,
+           false
+          ]
+         ]
+        ],
+        [
+         "SEG",
+         "AL1",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "ORDER_PRIOR",
+         false,
+         true,
+         [
+          [
+           "SEG",
+           "ORC",
+           true,
+           false
+          ],
+          [
+           "SEG",
+           "OBR",
+           false,
+           false
+          ],
+          [
+           "GRUPO",
+           "TIMING_PRIOR",
+           true,
+           true,
+           [
+            [
+             "SEG",
+             "TQ1",
+             false,
+             false
+            ],
+            [
+             "SEG",
+             "TQ2",
+             true,
+             true
+            ]
+           ]
+          ],
+          [
+           "SEG",
+           "NTE",
+           true,
+           true
+          ],
+          [
+           "SEG",
+           "CTD",
+           true,
+           false
+          ],
+          [
+           "GRUPO",
+           "OBSERVATION_PRIOR",
+           false,
+           true,
+           [
+            [
+             "SEG",
+             "OBX",
+             false,
+             false
+            ],
+            [
+             "SEG",
+             "NTE",
+             true,
+             true
+            ]
+           ]
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "FT1",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "CTI",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "BLG",
+       true,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "2d1e8f7e16972f532cdb1181b5c0f4d29f578b6c3aeed0b181df05031089227f"
+  },
+  "OMP_O09": {
+   "cabecera": "OMP^O09^OMP_O09",
+   "fuente": "ch04.md:4258",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     false,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "GRUPO",
+       "PATIENT_VISIT",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "PV1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "PV2",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "INSURANCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "IN1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "IN2",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "IN3",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "GT1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "AL1",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "ORDER",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "TIMING",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "TQ1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "TQ2",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "RXO",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "RXR",
+       false,
+       true
+      ],
+      [
+       "GRUPO",
+       "COMPONENT",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "RXC",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "OBSERVATION",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "OBX",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "FT1",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "BLG",
+       true,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "3cd15905782262e0bf09bb27044f087aa7f82d7b71fdd3850a5d5672f80e69f3"
+  },
+  "ORM_O01": {
+   "cabecera": "ORM^O01^ORM_O01",
+   "fuente": "ch04.md:733",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     false,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "GRUPO",
+       "PATIENT_VISIT",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "PV1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "PV2",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "INSURANCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "IN1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "IN2",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "IN3",
+         true,
+         false
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "GT1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "AL1",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "ORDER",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "ORDER_DETAIL",
+       true,
+       false,
+       [
+        [
+         "ELIGE",
+         [
+          "OBR",
+          "RQD",
+          "RQ1",
+          "RXO",
+          "ODS",
+          "ODT"
+         ]
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ],
+        [
+         "SEG",
+         "CTD",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "DG1",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "OBSERVATION",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "OBX",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "NTE",
+           true,
+           true
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "FT1",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "CTI",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "BLG",
+       true,
+       false
+      ]
+     ]
+    ]
+   ],
+   "sha256": "1253e8440126060c041f4e55e1ab43d11fd1137ab5a2ca6f7e8a81dac176777c"
+  },
+  "ORU_R01": {
+   "cabecera": "ORU^R01^ORU_R01",
+   "fuente": "ch07.md:712",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT_RESULT",
+     false,
+     true,
+     [
+      [
+       "GRUPO",
+       "PATIENT",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "PID",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "PD1",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ],
+        [
+         "SEG",
+         "NK1",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "VISIT",
+         true,
+         false,
+         [
+          [
+           "SEG",
+           "PV1",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "PV2",
+           true,
+           false
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "ORDER_OBSERVATION",
+       false,
+       true,
+       [
+        [
+         "SEG",
+         "ORC",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "OBR",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "TIMING_QTY",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "TQ1",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "TQ2",
+           true,
+           true
+          ]
+         ]
+        ],
+        [
+         "SEG",
+         "CTD",
+         true,
+         false
+        ],
+        [
+         "GRUPO",
+         "OBSERVATION",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "OBX",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "NTE",
+           true,
+           true
+          ]
+         ]
+        ],
+        [
+         "SEG",
+         "FT1",
+         true,
+         true
+        ],
+        [
+         "SEG",
+         "CTI",
+         true,
+         true
+        ],
+        [
+         "GRUPO",
+         "SPECIMEN",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "SPM",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "OBX",
+           true,
+           true
+          ]
+         ]
+        ]
+       ]
+      ]
+     ]
+    ],
+    [
+     "SEG",
+     "DSC",
+     true,
+     false
+    ]
+   ],
+   "sha256": "26a98e76dc225e9a05097a40fd90fe430d8c8788d1a498aef4973c7b67e222d0"
+  },
+  "RAS_O17": {
+   "cabecera": "RAS^O17^RAS_O17",
+   "fuente": "ch04.md:4677",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SFT",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     false,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "NTE",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "AL1",
+       true,
+       true
+      ],
+      [
+       "GRUPO",
+       "PATIENT_VISIT",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "PV1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "PV2",
+         true,
+         false
+        ]
+       ]
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "ORDER",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "ORC",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "TIMING",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "TQ1",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "TQ2",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "ORDER_DETAIL",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "RXO",
+         false,
+         false
+        ],
+        [
+         "GRUPO",
+         "ORDER_DETAIL_SUPPLEMENT",
+         true,
+         false,
+         [
+          [
+           "SEG",
+           "NTE",
+           false,
+           true
+          ],
+          [
+           "SEG",
+           "RXR",
+           false,
+           true
+          ],
+          [
+           "GRUPO",
+           "COMPONENTS",
+           true,
+           true,
+           [
+            [
+             "SEG",
+             "RXC",
+             false,
+             false
+            ],
+            [
+             "SEG",
+             "NTE",
+             true,
+             true
+            ]
+           ]
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "ENCODING",
+       true,
+       false,
+       [
+        [
+         "SEG",
+         "RXE",
+         false,
+         false
+        ],
+        [
+         "GRUPO",
+         "TIMING_ENCODED",
+         false,
+         true,
+         [
+          [
+           "SEG",
+           "TQ1",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "TQ2",
+           true,
+           true
+          ]
+         ]
+        ],
+        [
+         "SEG",
+         "RXR",
+         false,
+         true
+        ],
+        [
+         "SEG",
+         "RXC",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "ADMINISTRATION",
+       false,
+       true,
+       [
+        [
+         "SEG",
+         "RXA",
+         false,
+         true
+        ],
+        [
+         "SEG",
+         "RXR",
+         false,
+         false
+        ],
+        [
+         "GRUPO",
+         "OBSERVATION",
+         true,
+         true,
+         [
+          [
+           "SEG",
+           "OBX",
+           false,
+           false
+          ],
+          [
+           "SEG",
+           "NTE",
+           true,
+           true
+          ]
+         ]
+        ]
+       ]
+      ],
+      [
+       "SEG",
+       "CTI",
+       true,
+       true
+      ]
+     ]
+    ]
+   ],
+   "sha256": "e9de7066d3c43e1e122fc3444b9b266604770dd0361035ca7b710d98efd9be3a"
+  },
+  "SIU_S12": {
+   "cabecera": "SIU^S12-S24, S26^SIU_S12",
+   "fuente": "ch10.md:594",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "SCH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "TQ1",
+     true,
+     true
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PD1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "PV1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "PV2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "OBX",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "DG1",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "RESOURCES",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "RGS",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "SERVICE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIS",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "GENERAL_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIG",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "LOCATION_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIL",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "PERSONNEL_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIP",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ]
+     ]
+    ]
+   ],
+   "sha256": "365df1c739da09b30ce2f40eae1f71b20c05fc2846d36df63a2a4afed6d128ca"
+  },
+  "SRM_S01": {
+   "cabecera": "SRM^S01-S11^SRM_S01",
+   "fuente": "ch10.md:475",
+   "gramatica": [
+    [
+     "SEG",
+     "MSH",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "ARQ",
+     false,
+     false
+    ],
+    [
+     "SEG",
+     "APR",
+     true,
+     false
+    ],
+    [
+     "SEG",
+     "NTE",
+     true,
+     true
+    ],
+    [
+     "GRUPO",
+     "PATIENT",
+     true,
+     true,
+     [
+      [
+       "SEG",
+       "PID",
+       false,
+       false
+      ],
+      [
+       "SEG",
+       "PV1",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "PV2",
+       true,
+       false
+      ],
+      [
+       "SEG",
+       "OBX",
+       true,
+       true
+      ],
+      [
+       "SEG",
+       "DG1",
+       true,
+       true
+      ]
+     ]
+    ],
+    [
+     "GRUPO",
+     "RESOURCES",
+     false,
+     true,
+     [
+      [
+       "SEG",
+       "RGS",
+       false,
+       false
+      ],
+      [
+       "GRUPO",
+       "SERVICE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIS",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "APR",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "GENERAL_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIG",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "APR",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "LOCATION_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIL",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "APR",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ],
+      [
+       "GRUPO",
+       "PERSONNEL_RESOURCE",
+       true,
+       true,
+       [
+        [
+         "SEG",
+         "AIP",
+         false,
+         false
+        ],
+        [
+         "SEG",
+         "APR",
+         true,
+         false
+        ],
+        [
+         "SEG",
+         "NTE",
+         true,
+         true
+        ]
+       ]
+      ]
+     ]
+    ]
+   ],
+   "sha256": "80cd85a214556dd142eaab0171cdee8f99523550dd5a1639cd774018433a8a77"
+  }
+ },
+ "origen": "HL7 v2.5.1, texto en estandar/*.md (markdown); extraído por extraer_estructuras.py (DV2)",
+ "t0354": {
+  "erratas": [
+   "MFD_MFA: evento 'MFA' no está en la tabla 0003",
+   "MFR_M05: evento 'Mo5' no casa [A-Z][A-Z0-9]{2}",
+   "OMN_O07: evento '007' no casa [A-Z][A-Z0-9]{2}",
+   "ORL_O22: evento '022' no casa [A-Z][A-Z0-9]{2}",
+   "RAR_RAR: evento 'RAR' no está en la tabla 0003",
+   "RDR_RDR: evento 'RDR' no está en la tabla 0003",
+   "RER_RER: evento 'RER' no está en la tabla 0003",
+   "RGR_RGR: evento 'RGR' no está en la tabla 0003",
+   "RSP_K31: evento 'K31' no está en la tabla 0003"
+  ],
+  "eventos": {
+   "ADR_A19": [
+    "A19"
+   ],
+   "ADT_A01": [
+    "A01",
+    "A04",
+    "A08",
+    "A13"
+   ],
+   "ADT_A02": [
+    "A02"
+   ],
+   "ADT_A03": [
+    "A03"
+   ],
+   "ADT_A05": [
+    "A05",
+    "A14",
+    "A28",
+    "A31"
+   ],
+   "ADT_A06": [
+    "A06",
+    "A07"
+   ],
+   "ADT_A09": [
+    "A09",
+    "A10",
+    "A11"
+   ],
+   "ADT_A12": [
+    "A12"
+   ],
+   "ADT_A15": [
+    "A15"
+   ],
+   "ADT_A16": [
+    "A16"
+   ],
+   "ADT_A17": [
+    "A17"
+   ],
+   "ADT_A18": [
+    "A18"
+   ],
+   "ADT_A20": [
+    "A20"
+   ],
+   "ADT_A21": [
+    "A21",
+    "A22",
+    "A23",
+    "A25",
+    "A26",
+    "A27",
+    "A29",
+    "A32",
+    "A33"
+   ],
+   "ADT_A24": [
+    "A24"
+   ],
+   "ADT_A30": [
+    "A30",
+    "A34",
+    "A35",
+    "A36",
+    "A46",
+    "A47",
+    "A48",
+    "A49"
+   ],
+   "ADT_A37": [
+    "A37"
+   ],
+   "ADT_A38": [
+    "A38"
+   ],
+   "ADT_A39": [
+    "A39",
+    "A40",
+    "A41",
+    "A42"
+   ],
+   "ADT_A43": [
+    "A43",
+    "A44"
+   ],
+   "ADT_A45": [
+    "A45"
+   ],
+   "ADT_A50": [
+    "A50",
+    "A51"
+   ],
+   "ADT_A52": [
+    "A52",
+    "A53",
+    "A55"
+   ],
+   "ADT_A54": [
+    "A54"
+   ],
+   "ADT_A60": [
+    "A60"
+   ],
+   "ADT_A61": [
+    "A61",
+    "A62"
+   ],
+   "BAR_P01": [
+    "P01"
+   ],
+   "BAR_P02": [
+    "P02"
+   ],
+   "BAR_P05": [
+    "P05"
+   ],
+   "BAR_P06": [
+    "P06"
+   ],
+   "BAR_P10": [
+    "P10"
+   ],
+   "BAR_P12": [
+    "P12"
+   ],
+   "BPS_O29": [
+    "O29"
+   ],
+   "BRP_O30": [
+    "O30"
+   ],
+   "BRT_O32": [
+    "O32"
+   ],
+   "BTS_O31": [
+    "O31"
+   ],
+   "CRM_C01": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08"
+   ],
+   "CSU_C09": [
+    "C09",
+    "C10",
+    "C11",
+    "C12"
+   ],
+   "DFT_P03": [
+    "P03"
+   ],
+   "DFT_P11": [
+    "P11"
+   ],
+   "DOC_T12": [
+    "T12"
+   ],
+   "DSR_P04": [
+    "P04"
+   ],
+   "DSR_Q01": [
+    "Q01"
+   ],
+   "DSR_Q03": [
+    "Q03"
+   ],
+   "EAC_U07": [
+    "U07"
+   ],
+   "EAN_U09": [
+    "U09"
+   ],
+   "EAR_U08": [
+    "U08"
+   ],
+   "EDR_R07": [
+    "R07"
+   ],
+   "EQQ_Q04": [
+    "Q04"
+   ],
+   "ERP_R09": [
+    "R09"
+   ],
+   "ESR_U02": [
+    "U02"
+   ],
+   "ESU_U01": [
+    "U01"
+   ],
+   "INR_U06": [
+    "U06"
+   ],
+   "INU_U05": [
+    "U05"
+   ],
+   "LSU_U12": [
+    "U12",
+    "U13"
+   ],
+   "MDM_T01": [
+    "T01",
+    "T03",
+    "T05",
+    "T07",
+    "T09",
+    "T11"
+   ],
+   "MDM_T02": [
+    "T02",
+    "T04",
+    "T06",
+    "T08",
+    "T10"
+   ],
+   "MFD_MFA": [],
+   "MFK_M01": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10",
+    "M11"
+   ],
+   "MFN_M01": [
+    "M01"
+   ],
+   "MFN_M02": [
+    "M02"
+   ],
+   "MFN_M03": [
+    "M03"
+   ],
+   "MFN_M04": [
+    "M04"
+   ],
+   "MFN_M05": [
+    "M05"
+   ],
+   "MFN_M06": [
+    "M06"
+   ],
+   "MFN_M07": [
+    "M07"
+   ],
+   "MFN_M08": [
+    "M08"
+   ],
+   "MFN_M09": [
+    "M09"
+   ],
+   "MFN_M10": [
+    "M10"
+   ],
+   "MFN_M11": [
+    "M11"
+   ],
+   "MFN_M12": [
+    "M12"
+   ],
+   "MFN_M13": [
+    "M13"
+   ],
+   "MFN_M15": [
+    "M15"
+   ],
+   "MFQ_M01": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06"
+   ],
+   "MFR_M01": [
+    "M01",
+    "M02",
+    "M03"
+   ],
+   "MFR_M04": [
+    "M04"
+   ],
+   "MFR_M05": [],
+   "MFR_M06": [
+    "M06"
+   ],
+   "MFR_M07": [
+    "M07"
+   ],
+   "NMD_N02": [
+    "N02"
+   ],
+   "NMQ_N01": [
+    "N01"
+   ],
+   "NMR_N01": [
+    "N01"
+   ],
+   "OMB_O27": [
+    "O27"
+   ],
+   "OMD_O03": [
+    "O03"
+   ],
+   "OMG_O19": [
+    "O19"
+   ],
+   "OMI_O23": [
+    "O23"
+   ],
+   "OML_O21": [
+    "O21"
+   ],
+   "OML_O33": [
+    "O33"
+   ],
+   "OML_O35": [
+    "O35"
+   ],
+   "OMN_O07": [],
+   "OMP_O09": [
+    "O09"
+   ],
+   "OMS_O05": [
+    "O05"
+   ],
+   "ORB_O28": [
+    "O28"
+   ],
+   "ORD_O04": [
+    "O04"
+   ],
+   "ORF_R04": [
+    "R04"
+   ],
+   "ORG_O20": [
+    "O20"
+   ],
+   "ORI_O24": [
+    "O24"
+   ],
+   "ORL_O22": [],
+   "ORL_O34": [
+    "O34"
+   ],
+   "ORL_O36": [
+    "O36"
+   ],
+   "ORM_O01": [
+    "O01"
+   ],
+   "ORN_O08": [
+    "O08"
+   ],
+   "ORP_O10": [
+    "O10"
+   ],
+   "ORR_O02": [
+    "O02"
+   ],
+   "ORS_O06": [
+    "O06"
+   ],
+   "ORU_R01": [
+    "R01"
+   ],
+   "ORU_R30": [
+    "R30",
+    "R31",
+    "R32"
+   ],
+   "ORU_W01": [
+    "W01"
+   ],
+   "OSQ_Q06": [
+    "Q06"
+   ],
+   "OSR_Q06": [
+    "Q06"
+   ],
+   "OUL_R21": [
+    "R21"
+   ],
+   "OUL_R22": [
+    "R22"
+   ],
+   "OUL_R23": [
+    "R23"
+   ],
+   "OUL_R24": [
+    "R24"
+   ],
+   "PEX_P07": [
+    "P07",
+    "P08"
+   ],
+   "PGL_PC6": [
+    "PC6",
+    "PC7",
+    "PC8"
+   ],
+   "PMU_B01": [
+    "B01",
+    "B02"
+   ],
+   "PMU_B03": [
+    "B03"
+   ],
+   "PMU_B04": [
+    "B04",
+    "B05",
+    "B06"
+   ],
+   "PMU_B07": [
+    "B07"
+   ],
+   "PMU_B08": [
+    "B08"
+   ],
+   "PPG_PCG": [
+    "PCC",
+    "PCG",
+    "PCH",
+    "PCJ"
+   ],
+   "PPP_PCB": [
+    "PCB",
+    "PCD"
+   ],
+   "PPR_PC1": [
+    "PC1",
+    "PC2",
+    "PC3"
+   ],
+   "PPT_PCL": [
+    "PCL"
+   ],
+   "PPV_PCA": [
+    "PCA"
+   ],
+   "PRR_PC5": [
+    "PC5"
+   ],
+   "PTR_PCF": [
+    "PCF"
+   ],
+   "QBP_Q11": [
+    "Q11"
+   ],
+   "QBP_Q13": [
+    "Q13"
+   ],
+   "QBP_Q15": [
+    "Q15"
+   ],
+   "QBP_Q21": [
+    "Q21",
+    "Q22",
+    "Q23",
+    "Q24",
+    "Q25"
+   ],
+   "QCK_Q02": [
+    "Q02"
+   ],
+   "QCN_J01": [
+    "J01",
+    "J02"
+   ],
+   "QRF_W02": [
+    "W02"
+   ],
+   "QRY_A19": [
+    "A19"
+   ],
+   "QRY_P04": [
+    "P04"
+   ],
+   "QRY_PC4": [
+    "PC4",
+    "PC9",
+    "PCE",
+    "PCK"
+   ],
+   "QRY_Q01": [
+    "Q01",
+    "Q26",
+    "Q27",
+    "Q28",
+    "Q29",
+    "Q30"
+   ],
+   "QRY_Q02": [
+    "Q02"
+   ],
+   "QRY_R02": [
+    "R02"
+   ],
+   "QRY_T12": [
+    "T12"
+   ],
+   "QSB_Q16": [
+    "Q16"
+   ],
+   "QVR_Q17": [
+    "Q17"
+   ],
+   "RAR_RAR": [],
+   "RAS_O17": [
+    "O17"
+   ],
+   "RCI_I05": [
+    "I05"
+   ],
+   "RCL_I06": [
+    "I06"
+   ],
+   "RDE_O11": [
+    "O11",
+    "O25"
+   ],
+   "RDR_RDR": [],
+   "RDS_O13": [
+    "O13"
+   ],
+   "RDY_K15": [
+    "K15"
+   ],
+   "REF_I12": [
+    "I12",
+    "I13",
+    "I14",
+    "I15"
+   ],
+   "RER_RER": [],
+   "RGR_RGR": [],
+   "RGV_O15": [
+    "O15"
+   ],
+   "ROR_ROR": [
+    "ROR"
+   ],
+   "RPA_I08": [
+    "I08",
+    "I09",
+    "I10",
+    "I11"
+   ],
+   "RPI_I01": [
+    "I01"
+   ],
+   "RPI_I04": [
+    "I04"
+   ],
+   "RPL_I02": [
+    "I02"
+   ],
+   "RPR_I03": [
+    "I03"
+   ],
+   "RQA_I08": [
+    "I08",
+    "I09",
+    "I10",
+    "I11"
+   ],
+   "RQC_I05": [
+    "I05",
+    "I06"
+   ],
+   "RQI_I01": [
+    "I01",
+    "I02",
+    "I03",
+    "I07"
+   ],
+   "RQP_I04": [
+    "I04"
+   ],
+   "RQQ_Q09": [
+    "Q09"
+   ],
+   "RRA_O18": [
+    "O18"
+   ],
+   "RRD_O14": [
+    "O14"
+   ],
+   "RRE_O12": [
+    "O12",
+    "O26"
+   ],
+   "RRG_O16": [
+    "O16"
+   ],
+   "RRI_I12": [
+    "I12",
+    "I13",
+    "I14",
+    "I15"
+   ],
+   "RSP_K11": [
+    "K11"
+   ],
+   "RSP_K21": [
+    "K21"
+   ],
+   "RSP_K22": [
+    "K22"
+   ],
+   "RSP_K23": [
+    "K23",
+    "K24"
+   ],
+   "RSP_K25": [
+    "K25"
+   ],
+   "RSP_K31": [],
+   "RSP_Q11": [
+    "Q11"
+   ],
+   "RTB_K13": [
+    "K13"
+   ],
+   "SIU_S12": [
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20",
+    "S21",
+    "S22",
+    "S23",
+    "S24",
+    "S26"
+   ],
+   "SPQ_Q08": [
+    "Q08"
+   ],
+   "SQM_S25": [
+    "S25"
+   ],
+   "SQR_S25": [
+    "S25"
+   ],
+   "SRM_S01": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11"
+   ],
+   "SRR_S01": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11"
+   ],
+   "SSR_U04": [
+    "U04"
+   ],
+   "SSU_U03": [
+    "U03"
+   ],
+   "SUR_P09": [
+    "P09"
+   ],
+   "TBR_R08": [
+    "R08"
+   ],
+   "TBR_R09": [
+    "R09"
+   ],
+   "TCU_U10": [
+    "U10",
+    "U11"
+   ],
+   "UDM_Q05": [
+    "Q05"
+   ],
+   "VQQ_Q07": [
+    "Q07"
+   ],
+   "VXQ_V01": [
+    "V01"
+   ],
+   "VXR_V03": [
+    "V03"
+   ],
+   "VXU_V04": [
+    "V04"
+   ],
+   "VXX_V02": [
+    "V02"
+   ]
+  },
+  "fuente": "ch02.md:3449",
+  "sha256": "527e4268e8e41ab426969c91179ef0341fefa5619c453b89d613efe0749083f6"
+ },
+ "tablas": {
+  "0003": {
+   "codigos": {
+    "A01": "ADT/ACK - Admit/visit notification",
+    "A02": "ADT/ACK - Transfer a patient",
+    "A03": "ADT/ACK - Discharge/end visit",
+    "A04": "ADT/ACK - Register a patient",
+    "A05": "ADT/ACK - Pre-admit a patient",
+    "A06": "ADT/ACK - Change an outpatient to an inpatient",
+    "A07": "ADT/ACK - Change an inpatient to an outpatient",
+    "A08": "ADT/ACK - Update patient information",
+    "A09": "ADT/ACK - Patient departing - tracking",
+    "A10": "ADT/ACK - Patient arriving - tracking",
+    "A11": "ADT/ACK - Cancel admit/visit notification",
+    "A12": "ADT/ACK - Cancel transfer",
+    "A13": "ADT/ACK - Cancel discharge/end visit",
+    "A14": "ADT/ACK - Pending admit",
+    "A15": "ADT/ACK - Pending transfer",
+    "A16": "ADT/ACK - Pending discharge",
+    "A17": "ADT/ACK - Swap patients",
+    "A18": "ADT/ACK - Merge patient information (for backward compatibility only)",
+    "A19": "QRY/ADR - Patient query",
+    "A20": "ADT/ACK - Bed status update",
+    "A21": "ADT/ACK - Patient goes on a â??leave of absenceâ?ť",
+    "A22": "ADT/ACK - Patient returns from a â??leave of absenceâ?ť",
+    "A23": "ADT/ACK - Delete a patient record",
+    "A24": "ADT/ACK - Link patient information",
+    "A25": "ADT/ACK - Cancel pending discharge",
+    "A26": "ADT/ACK - Cancel pending transfer",
+    "A27": "ADT/ACK - Cancel pending admit",
+    "A28": "ADT/ACK - Add person information",
+    "A29": "ADT/ACK - Delete person information",
+    "A30": "ADT/ACK - Merge person information (for backward compatibility only)",
+    "A31": "ADT/ACK - Update person information",
+    "A32": "ADT/ACK - Cancel patient arriving - tracking",
+    "A33": "ADT/ACK - Cancel patient departing - tracking",
+    "A34": "ADT/ACK - Merge patient information - patient ID only (for backward compatibility only)",
+    "A35": "ADT/ACK - Merge patient information - account number only (for backward compatibility only)",
+    "A36": "ADT/ACK - Merge patient information - patient ID and account number (for backward compatibility only)",
+    "A37": "ADT/ACK - Unlink patient information",
+    "A38": "ADT/ACK - Cancel pre-admit",
+    "A39": "ADT/ACK - Merge person - patient ID (for backward compatibility only)",
+    "A40": "ADT/ACK - Merge patient - patient identifier list",
+    "A41": "ADT/ACK - Merge account - patient account number",
+    "A42": "ADT/ACK - Merge visit - visit number",
+    "A43": "ADT/ACK - Move patient information - patient identifier list",
+    "A44": "ADT/ACK - Move account information - patient account number",
+    "A45": "ADT/ACK - Move visit information - visit number",
+    "A46": "ADT/ACK - Change patient ID (for backward compatibility only)",
+    "A47": "ADT/ACK - Change patient identifier list",
+    "A48": "ADT/ACK - Change alternate patient ID (for backward compatibility only)",
+    "A49": "ADT/ACK - Change patient account number",
+    "A50": "ADT/ACK - Change visit number",
+    "A51": "ADT/ACK - Change alternate visit ID",
+    "A52": "ADT/ACK - Cancel leave of absence for a patient",
+    "A53": "ADT/ACK - Cancel patient returns from a leave of absence",
+    "A54": "ADT/ACK - Change attending doctor",
+    "A55": "ADT/ACK - Cancel change attending doctor",
+    "A60": "ADT/ACK - Update allergy information",
+    "A61": "ADT/ACK - Change consulting doctor",
+    "A62": "ADT/ACK - Cancel change consulting doctor",
+    "B01": "PMU/ACK - Add personnel record",
+    "B02": "PMU/ACK - Update personnel record",
+    "B03": "PMU/ACK - Delete personnel re cord",
+    "B04": "PMU/ACK - Active practicing person",
+    "B05": "PMU/ACK - Deactivate practicing person",
+    "B06": "PMU/ACK - Terminate practicing person",
+    "B07": "PMU/ACK - Grant Certificate/Permission",
+    "B08": "PMU/ACK - Revoke Certificate/Permission",
+    "C01": "CRM - Register a patient on a clinical trial",
+    "C02": "CRM - Cancel a patient registration on clinical trial (for clerical mistakes only)",
+    "C03": "CRM - Correct/update registration information",
+    "C04": "CRM - Patient has gone off a clinical trial",
+    "C05": "CRM - Patient enters phase of clinical trial",
+    "C06": "CRM - Cancel patient entering a phase (clerical mistake)",
+    "C07": "CRM - Correct/update phase information",
+    "C08": "CRM - Patient has gone off phase of clinical trial",
+    "C09": "CSU - Automated time intervals for reporting, like monthly",
+    "C10": "CSU - Patient completes the clinical trial",
+    "C11": "CSU - Patient completes a phase of the clinical trial",
+    "C12": "CSU - Update/correction of patient order/result information",
+    "CNQ": "Cancel Query",
+    "I01": "RQI/RPI - Request for insurance information",
+    "I02": "RQI/RPL - Request/receipt of patient selection display list",
+    "I03": "RQI/RPR - Request/receipt of patient selection list",
+    "I04": "RQD/RPI - Request for patient demographic data",
+    "I05": "RQC/RCI - Request for patient clinical information",
+    "I06": "RQC/RCL - Request/receipt of clinical data listing",
+    "I07": "PIN/ACK - Unsolicited insurance information",
+    "I08": "RQA/RPA - Request for treatment authorization information",
+    "I09": "RQA/RPA - Request for modification to an authorization",
+    "I10": "RQA/RPA - Request for resubmission of an authorization",
+    "I11": "RQA/RPA - Request for cancellation of an authorization",
+    "I12": "REF/RRI - Patient referral",
+    "I13": "REF/RRI - Modify patient referral",
+    "I14": "REF/RRI - Cancel patient referral",
+    "I15": "REF/RRI - Request patient referral status",
+    "J01": "QCN/ACK - Cancel query/acknowledge message",
+    "J02": "QSX/ACK - Cancel subscription/acknowledge message",
+    "K11": "RSP - Segment pattern response in response to QBP^Q11",
+    "K13": "RTB - Tabular response in response to QBP^Q13",
+    "K15": "RDY - Display response in response to QBP^Q15",
+    "K21": "RSP - Get person demographics response",
+    "K22": "RSP - Find candidates response",
+    "K23": "RSP - Get corresponding identifiers response",
+    "K24": "RSP - Allocate identifiers response",
+    "K25": "RSP - Personnel Information by Segment Response",
+    "M01": "MFN/MFK - Master file not otherwise specified (for backward compatibility only)",
+    "M02": "MFN/MFK - Master file - staff practitioner",
+    "M03": "MFN/MFK - Master file - test/observation (for backward compatibility only)",
+    "M04": "MFN/MFK - Master files charge description",
+    "M05": "MFN/MFK - Patient location master file",
+    "M06": "MFN/MFK - Clinical study with phases and schedules master file",
+    "M07": "MFN/MFK - Clinical study without phases but with schedules master file",
+    "M08": "MFN/MFK - Test/observation (numeric) master file",
+    "M09": "MFN/MFK - Test/observation (categorical) master file",
+    "M10": "MFN/MFK - Test /observation batteries master file",
+    "M11": "MFN/MFK - Test/calculated observations master file",
+    "M12": "MFN/MFK - Master file notification message",
+    "M13": "MFN/MFK - Master file notification - general",
+    "M14": "MFN/MFK - Master file notification - site defined",
+    "M15": "MFN/MFK - Inventory item master file notification",
+    "N01": "NMQ/NMR - Application management query message",
+    "N02": "NMD/ACK - Application management data message (unsolicited)",
+    "O01": "ORM - Order message (also RDE, RDS, RGV, RAS)",
+    "O02": "ORR - Order response (also RRE, RRD, RRG, RRA)",
+    "O03": "OMD - Diet order",
+    "O04": "ORD - Diet order acknowledgment",
+    "O05": "OMS - Stock requisition order",
+    "O06": "ORS - Stock requisition acknowledgment",
+    "O07": "OMN - Non-stock requisition order",
+    "O08": "ORN - Non-stock requisition acknowledgment",
+    "O09": "OMP - Pharmacy/treatment order",
+    "O10": "ORP - Pharmacy/treatment order acknowledgment",
+    "O11": "RDE - Pharmacy/treatment encoded order",
+    "O12": "RRE - Pharmacy/treatment encoded order acknowledgment",
+    "O13": "RDS - Pharmacy/treatment dispense",
+    "O14": "RRD - Pharmacy/treatment dispense acknowledgment",
+    "O15": "RGV - Pharmacy/treatment give",
+    "O16": "RRG - Pharmacy/treatment give acknowledgment",
+    "O17": "RAS - Pharmacy/treatment administration",
+    "O18": "RRA - Pharmacy/treatment administration acknowledgment",
+    "O19": "OMG - General clinical order",
+    "O20": "ORG/ORL - General clinical order response",
+    "O21": "OML - Laboratory order",
+    "O22": "ORL - General laboratory order response message to any OML",
+    "O23": "OMI - Imaging order",
+    "O24": "ORI - Imaging order response message to any OMI",
+    "O25": "RDE - Pharmacy/treatment refill authorization request",
+    "O26": "RRE - Pharmacy/Treatment Refill Authorization Acknowledgement",
+    "O27": "OMB - Blood product order",
+    "O28": "ORB - Blood product order acknowledgment",
+    "O29": "BPS - Blood product dispense status",
+    "O30": "BRP - Blood product dispense status acknowledgment",
+    "O31": "BTS - Blood product transfusion/disposition",
+    "O32": "BRT - Blood product transfusion/disposition acknowledgment",
+    "O33": "OML - Laboratory order for multiple orders related to a single specimen",
+    "O34": "ORL - Laboratory order response message to a multiple order related to single specimen OML",
+    "O35": "OML - Laboratory order for multiple orders related to a single container of a specimen",
+    "O36": "ORL - Laboratory order response message to a single container of a specimen OML",
+    "P01": "BAR/ACK - Add patient accounts",
+    "P02": "BAR/ACK - Purge patient accounts",
+    "P03": "DFT/ACK - Post detail financial transaction",
+    "P04": "QRY/DSP - Generate bill and A/R statements",
+    "P05": "BAR/ACK - Update account",
+    "P06": "BAR/ACK - End account",
+    "P07": "PEX - Unsolicited initial individual product experience report",
+    "P08": "PEX - Unsolicited update individual product experience report",
+    "P09": "SUR - Summary product experience report",
+    "P10": "BAR/ACK -Transmit Ambulatory Payment Classification(APC)",
+    "P11": "DFT/ACK - Post Detail Financial Transactions - New",
+    "P12": "BAR/ACK - Update Diagnosis/Procedure",
+    "PC1": "PPR - PC/ problem add",
+    "PC2": "PPR - PC/ problem update",
+    "PC3": "PPR - PC/ problem delete",
+    "PC4": "QRY - PC/ problem query",
+    "PC5": "PRR - PC/ problem response",
+    "PC6": "PGL - PC/ goal add",
+    "PC7": "PGL - PC/ goal update",
+    "PC8": "PGL - PC/ goal delete",
+    "PC9": "QRY - PC/ goal query",
+    "PCA": "PPV - PC/ goal response",
+    "PCB": "PPP - PC/ pathway (problem-oriented) add",
+    "PCC": "PPP - PC/ pathway (problem-oriented) update",
+    "PCD": "PPP - PC/ pathway (problem-oriented) delete",
+    "PCE": "QRY - PC/ pathway (problem-oriented) query",
+    "PCF": "PTR - PC/ pathway (problem-oriented) query response",
+    "PCG": "PPG - PC/ pathway (goal-oriented) add",
+    "PCH": "PPG - PC/ pathway (goal-oriented) update",
+    "PCJ": "PPG - PC/ pathway (goal-oriented) delete",
+    "PCK": "QRY - PC/ pathway (goal-oriented) query",
+    "PCL": "PPT - PC/ pathway (goal-oriented) query response",
+    "Q01": "QRY/DSR - Query sent for immediate response",
+    "Q02": "QRY/QCK - Query sent for deferred response",
+    "Q03": "DSR/ACK - Deferred response to a query",
+    "Q04": "EQQ - Embedded query language query",
+    "Q05": "UDM/ACK - Unsolicited display update message",
+    "Q06": "OSQ/OSR - Query for order status",
+    "Q07": "VQQ - Virtual table query",
+    "Q08": "SPQ - Stored procedure request",
+    "Q09": "RQQ - event replay query",
+    "Q11": "QBP - Query by parameter requesting an RSP segment pattern response",
+    "Q13": "QBP - Query by parameter requesting an RTB - tabular response",
+    "Q15": "QBP - Query by parameter requesting an RDY display response",
+    "Q16": "QSB - Create subscription",
+    "Q17": "QVR - Query for previous events",
+    "Q21": "QBP - Get person demographics",
+    "Q22": "QBP - Find candidates",
+    "Q23": "QBP - Get corresponding identifiers",
+    "Q24": "QBP - Allocate identifiers",
+    "Q25": "QBP - Personnel Information by Segment Query",
+    "Q26": "ROR - Pharmacy/treatment order response",
+    "Q27": "RAR - Pharmacy/treatment administration information",
+    "Q28": "RDR - Pharmacy/treatment dispense information",
+    "Q29": "RER - Pharmacy/treatment encoded order information",
+    "Q30": "RGR - Pharmacy/treatment dose information",
+    "R01": "ORU/ACK - Unsolicited transmission of an observation message",
+    "R02": "QRY - Query for results of observation",
+    "R03": "QRY/DSR Display-oriented results, query/unsol. update (for backward compatibility only) (Replaced by Q05)",
+    "R04": "ORF - Response to query; transmission of requested observation",
+    "R07": "EDR - Enhanced Display Response",
+    "R08": "TBR - Tabular Data Response",
+    "R09": "ERP - Event Replay Response",
+    "R21": "OUL - Unsolicited laboratory observation",
+    "R22": "OUL - Unsolicited Specimen Oriented Observation Message",
+    "R23": "OUL - Unsolicited Specimen Container Oriented Observation Message",
+    "R24": "OUL - Unsolicited Order Oriented Observation Message",
+    "R30": "ORU - Unsolicited Point-Of-Care Observation Message Without Existing Order - Place An Order",
+    "R31": "ORU - Unsolicited New Point-Of-Care Observation Message - Search For An Order",
+    "R32": "ORU - Unsolicited Pre-Ordered Point-Of-Care Observation",
+    "ROR": "ROR - Pharmacy prescription order query response",
+    "S01": "SRM/SRR - Request new appointment booking",
+    "S02": "SRM/SRR - Request appointment rescheduling",
+    "S03": "SRM/SRR - Request appointment modification",
+    "S04": "SRM/SRR - Request appointment cancellation",
+    "S05": "SRM/SRR - Request appointment discontinuation",
+    "S06": "SRM/SRR - Request appointment deletion",
+    "S07": "SRM/SRR - Request addition of service/resource on appointment",
+    "S08": "SRM/SRR - Request modification of service/resource on appointment",
+    "S09": "SRM/SRR - Request cancellation of service/resource on appointment",
+    "S10": "SRM/SRR - Request discontinuation of service/resource on appointment",
+    "S11": "SRM/SRR - Request deletion of service/resource on appointment",
+    "S12": "SIU/ACK - Notification of new appointment booking",
+    "S13": "SIU/ACK - Notification of appointment rescheduling",
+    "S14": "SIU/ACK - Notification of appointment modification",
+    "S15": "SIU/ACK - Notification of appointment cancellation",
+    "S16": "SIU/ACK - Notification of appointment discontinuation",
+    "S17": "SIU/ACK - Notification of appointment deletion",
+    "S18": "SIU/ACK - Notification of addition of service/resource on appointment",
+    "S19": "SIU/ACK - Notification of modification of service/resource on appointment",
+    "S20": "SIU/ACK - Notification of cancellation of service/resource on appointment",
+    "S21": "SIU/ACK - Notification of discontinuation of service/resource on appointment",
+    "S22": "SIU/ACK - Notification of deletion of service/resource on appointment",
+    "S23": "SIU/ACK - Notification of blocked schedule time slot(s)",
+    "S24": "SIU/ACK - Notification of opened (â??unblockedâ?ť) schedule time slot(s)",
+    "S25": "SQM/SQR - Schedule query message and response",
+    "S26": "SIU/ACK Notification that patient did not show up for schedule appointment",
+    "T01": "MDM/ACK - Original document notification",
+    "T02": "MDM/ACK - Original document notification and content",
+    "T03": "MDM/ACK - Document status change notification",
+    "T04": "MDM/ACK - Document status change notification and content",
+    "T05": "MDM/ACK - Document addendum notification",
+    "T06": "MDM/ACK - Document addendum notification and content",
+    "T07": "MDM/ACK - Document edit notification",
+    "T08": "MDM/ACK - Document edit notification and content",
+    "T09": "MDM/ACK - Document replacement notification",
+    "T10": "MDM/ACK - Document replacement notification and content",
+    "T11": "MDM/ACK - Document cancel notification",
+    "T12": "QRY/DOC - Document query",
+    "U01": "ESU/ACK - Automated equipment status update",
+    "U02": "ESR/ACK - Automated equipment status request",
+    "U03": "SSU/ACK - Specimen status update",
+    "U04": "SSR/ACK - specimen status request",
+    "U05": "INU/ACK - Automated equipment inventory update",
+    "U06": "INR/ACK - Automated equipment inventory request",
+    "U07": "EAC/ACK - Automated equipment command",
+    "U08": "EAR/ACK - Automated equipment response",
+    "U09": "EAN/ACK - Automated equipment notification",
+    "U10": "TCU/ACK - Automated equipment test code settings update",
+    "U11": "TCR/ACK - Automated equipment test code settings request",
+    "U12": "LSU/ACK - Automated equipment log/service update",
+    "U13": "LSR/ACK - Automated equipment log/service request",
+    "V01": "VXQ - Query for vaccination record",
+    "V02": "VXX - Response to vaccination query returning multiple PID matches",
+    "V03": "VXR - Vaccination record response",
+    "V04": "VXU - Unsolicited vaccination record update",
+    "Varies": "MFQ/MFR - Master files query (use event same as asking for e.g., M05 - location)",
+    "W01": "ORU - Waveform result, unsolicited transmission of requested information",
+    "W02": "QRF - Waveform result, response to query"
+   },
+   "fuente": "ch02.md:3156",
+   "sha256": "4f5aed402a38fc2e54f4990ae94d5de69f5dfef0a28073c6ddc02d99f418c13d"
+  },
+  "0085": {
+   "codigos": {
+    "C": "Record coming over is a correction and thus replaces a final result",
+    "D": "Deletes the OBX record",
+    "F": "Final results; Can only be changed with a corrected result.",
+    "I": "Specimen in lab; results pending",
+    "N": "Not asked; used to affirmatively document that the observation identified in the OBX was not sought when the universal service ID in OBR-4 implies that it would be sought.",
+    "O": "Order detail description only (no result)",
+    "P": "Preliminary results",
+    "R": "Results entered -- not verified",
+    "S": "Partial results",
+    "U": "Results status change to final without retransmitting results already sent as â??preliminary.' E.g., radiology changes status from preliminary to final",
+    "W": "Post original as wrong, e.g., transmitted for wrong patient",
+    "X": "Results cannot be obtained for this observation"
+   },
+   "fuente": "ch07.md:2231",
+   "sha256": "97b97b5a457bd03c4a442e1c7bc87848602d8b363c3df2e4a499372f50ff87a7"
+  },
+  "0119": {
+   "codigos": {
+    "AF": "Order/service refill request approval",
+    "CA": "Cancel order/service request",
+    "CH": "Child order/service",
+    "CN": "Combined result",
+    "CR": "Canceled as requested",
+    "DC": "Discontinue order/service request",
+    "DE": "Data errors",
+    "DF": "Order/service refill request denied",
+    "DR": "Discontinued as requested",
+    "FU": "Order/service refilled, unsolicited",
+    "HD": "Hold order request",
+    "HR": "On hold as requested",
+    "LI": "Link order/service to patient care problem or goal",
+    "NA": "Number assigned",
+    "NW": "New order/service",
+    "OC": "Order/service canceled",
+    "OD": "Order/service discontinued",
+    "OE": "Order/service released",
+    "OF": "Order/service refilled as requested",
+    "OH": "Order/service held",
+    "OK": "Order/service accepted & OK",
+    "OP": "Notification of order for outside dispense",
+    "OR": "Released as requested",
+    "PA": "Parent order/service",
+    "PR": "Previous Results with new order/service",
+    "PY": "Notification of replacement order for outside dispense",
+    "RE": "Observations/Performed Service to follow",
+    "RF": "Refill order/service request",
+    "RL": "Release previous hold",
+    "RO": "Replacement order",
+    "RP": "Order/service replace request",
+    "RQ": "Replaced as requested",
+    "RR": "Request received",
+    "RU": "Replaced unsolicited",
+    "SC": "Status changed",
+    "SN": "Send order/service number",
+    "SR": "Response to send order/service status request",
+    "SS": "Send order/service status request",
+    "UA": "Unable to accept order/service",
+    "UC": "Unable to cancel",
+    "UD": "Unable to discontinue",
+    "UF": "Unable to refill",
+    "UH": "Unable to put on hold",
+    "UM": "Unable to replace",
+    "UN": "Unlink order/service from patient care problem or goal",
+    "UR": "Unable to release",
+    "UX": "Unable to change",
+    "XO": "Change order/service request",
+    "XR": "Changed as requested",
+    "XX": "Order/service changed, unsol."
+   },
+   "fuente": "ch04.md:8267",
+   "sha256": "9bce1bb0c8bbb778aa5baa8fb6a7db19033bb84a80797ce870f6438bab3a21e1"
+  },
+  "0125": {
+   "codigos": {
+    "AD": "Address",
+    "CE": "Coded Entry",
+    "CF": "Coded Element With Formatted Values",
+    "CK": "Composite ID With Check Digit",
+    "CN": "Composite ID And Name",
+    "CP": "Composite Price",
+    "CX": "Extended Composite ID With Check Digit",
+    "DT": "Date",
+    "ED": "Encapsulated Data",
+    "FT": "Formatted Text (Display)",
+    "MO": "Money",
+    "NM": "Numeric",
+    "PN": "Person Name",
+    "RP": "Reference Pointer",
+    "SN": "Structured Numeric",
+    "ST": "String Data.",
+    "TM": "Time",
+    "TN": "Telephone Number",
+    "TS": "Time Stamp (Date & Time)",
+    "TX": "Text Data (Display)",
+    "XAD": "Extended Address",
+    "XCN": "Extended Composite Name And Number For Persons",
+    "XON": "Extended Composite Name And Number For Organizations",
+    "XPN": "Extended Person Name",
+    "XTN": "Extended Telecommunications Number"
+   },
+   "fuente": "ch07.md:1867",
+   "sha256": "9334841cfc0eb0021f337f1ae3aec072e969ca58cf1ae98efc92f1980f3dd5b0"
+  },
+  "0271": {
+   "codigos": {
+    "AU": "Authenticated",
+    "DI": "Dictated",
+    "DO": "Documented",
+    "IN": "Incomplete",
+    "IP": "In Progress",
+    "LA": "Legally authenticated",
+    "PA": "Pre-authenticated"
+   },
+   "fuente": "ch09.md:947",
+   "sha256": "908132645440d0d5c29ccaecfb2ed37bd793ec20bd3b15e10ab2fb57caa09a8a"
+  }
+ }
+}
