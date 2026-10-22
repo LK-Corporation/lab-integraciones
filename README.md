@@ -1,22 +1,35 @@
-# ¿Puede un modelo local de 30B triar fallos de integración HL7?
+# Laboratorio de integraciones HL7 v2 → FHIR R4: un verificador y tres estudios de agentes
 
-Un laboratorio personal de integraciones sanitarias: un circuito real
-**`ADT^A01` por MLLP → FHIR `Patient`** sobre InterSystems IRIS for Health, un banco de fallos, y
-una medida de si un agente de IA local tría esos fallos mejor que una lectura mecánica de la misma
-evidencia.
+Un laboratorio personal de integraciones sanitarias sobre InterSystems IRIS for Health. Tiene tres piezas:
+- **circuitos reales por MLLP:** ADT de ocho eventos → FHIR `Patient` y `Encounter`, y ORU → `DiagnosticReport` y
+  `Observation`, con el circuito ADT repetido en Mirth Connect;
+- **un verificador determinista**, que dice si cada circuito hizo lo que manda el estándar;
+- **tres estudios** de si un agente de IA ayuda a triar los fallos de esos circuitos y a arreglarlos.
 
-**El resultado son dos frases y no se separan. El agente funciona** —detecta 10 de 18 operadores de
-fallo silencioso sin una sola falsa alarma en 22 casos limpios, sobre un conjunto reservado con las
-hipótesis selladas antes de abrirlo— **y aun así no hace falta**, porque un script de expresiones
-regulares sin modelo lo bate **+0,873 contra +0,629**.
+**Los tres estudios, en pocas líneas cada uno:**
 
-**Pero lo que se lleva el trabajo no es del modelo, es del método:** un banco construido con
-operadores de mutación declarativos **no puede contestar** si el modelo aporta, porque por
-construcción cada operador deja una firma mecánica.
+1. **¿Puede un modelo local de 30B triar fallos de integración?** (septiembre)
+   - **Funciona y no hace falta.** Detecta 10 de 18 operadores de fallo silencioso sin una sola falsa alarma en 22 casos
+     limpios, sobre un conjunto reservado con las hipótesis selladas antes de abrirlo. Pero un script de expresiones
+     regulares sin modelo lo bate **+0,873 contra +0,629**.
+   - **Y lo que se lleva el trabajo es del método:** un banco construido con operadores de mutación declarativos **no puede
+     contestar** si el modelo aporta, porque por construcción cada operador deja una firma mecánica.
+2. **¿Localiza y arregla un agente los fallos de un circuito, guiado por el veredicto del verificador?** (12-13 oct)
+   - Localiza 17 de 18 y arregla sin romper nada 8,5.
+   - Frente a una búsqueda sin modelo aporta solo por acumulación de dos etapas, y no sin las pistas que declara el propio
+     verificador.
+3. **¿Arregla más si prueba sus parches contra el verificador antes de entregarlos?** (13-22 oct)
+   - **Sí:** 14,5 de 18 frente a 8,5 (Δ +0,33, p = 0,016), sin colateral.
 
-👉 **Empieza por [`INFORME.md`](INFORME.md).** Es autocontenido y cuenta el laboratorio entero, con
-sus límites escritos. Hay una versión para leer en el navegador en
-[lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
+**El verificador** se publicó con su código el 22-oct. Es lo único de aquí que se puede correr: sus pruebas pasan solas, sin
+el laboratorio.
+
+👉 **Por dónde empezar:**
+- **El primer estudio y el método:** [`INFORME.md`](INFORME.md). Es autocontenido y lleva sus límites escritos, y tiene una
+  versión para leer en el navegador en
+  [lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
+- **Los otros dos estudios:** [`piloto-agente/README.md`](piloto-agente/README.md).
+- **El verificador:** [`verificador/README.md`](verificador/README.md).
 
 ---
 
@@ -94,13 +107,20 @@ FHIR, los códigos de acuse— van en su forma original.
 ## Licencias
 
 **El código va bajo MIT** y **los documentos bajo CC BY 4.0** —puedes compartirlos y adaptarlos,
-también comercialmente, citando la fuente—. El detalle, con qué cubre cada una y qué pasa con las
-respuestas de los modelos externos, está en [`LICENSE.md`](LICENSE.md).
+también comercialmente, citando la fuente—.
+
+**Lo que es de HL7 no lo cubre ninguna de las dos:** las tres tablas, las estructuras de v2.5 y el
+principio de unos mensajes de ejemplo que el verificador necesita para correr. No es obra del autor.
+
+El detalle está en [`LICENSE.md`](LICENSE.md): qué cubre cada licencia, qué pasa con las respuestas de
+los modelos externos y con el material de HL7.
 
 ---
 
 ## Aviso
 
-Todos los datos clínicos utilizados son **sintéticos**. Ni un dato de ningún paciente real.
+**En este repositorio no hay datos de ningún paciente.** Los mensajes que hay aquí son sintéticos o
+ejemplos del propio estándar. El verificador se juzgó también contra una muestra privada de un sitio,
+y de ella solo se publican recuentos agregados, sin un solo mensaje.
 
-Septiembre de 2026.
+Septiembre-octubre de 2026.
