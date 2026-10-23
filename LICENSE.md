@@ -1,6 +1,7 @@
 # Licencias
 
-Este repositorio lleva **dos licencias**, porque tiene dos clases de contenido.
+Lo que es obra del autor lleva **dos licencias**, porque tiene dos clases de contenido: el código y los documentos. Lo que
+no es suyo va con la licencia de sus autores (las fuentes tipográficas) o no lo cubre ninguna (el material de HL7, abajo).
 
 | qué | licencia | dónde |
 |---|---|---|
