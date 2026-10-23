@@ -12,7 +12,7 @@ siempre la misma respuesta a la misma evidencia.
 **Lo que devuelve**, en tres niveles:
 - **N3, el veredicto:** `correcto`, `fallo_silencioso`, `acuse_incorrecto`, `ambos`, `fallo_entorno`, `indeterminado` o
   `sin_intercambio`.
-- **N2, los hallazgos que lo sostienen:** cada uno con su cita al estándar o a una decisión del sitio declarada (`S-n`).
+- **N2, los hallazgos que lo sostienen:** cada uno con su cita al estándar o a una decisión declarada (`S-n`).
 - **N1, las notas:** lo que no cambia el veredicto pero conviene leer, con sus límites declarados (`L-n`).
 
 **Los puntos de entrada:**
@@ -20,7 +20,7 @@ siempre la misma respuesta a la misma evidencia.
 - cinco de solo acuse: `adt`, `oru`, `siu`, `ord` y `mdm`.
 
 **Se sirve por MCP** (`mcp_verificador.py`, servidor 1.1) con seis herramientas: `verificar_caso`, `ficha_experto`,
-`acuse_esperado`, `comparar_canonico`, `consultar_tabla` e `info_verificador`. La última lleva las decisiones del sitio, los
+`acuse_esperado`, `comparar_canonico`, `consultar_tabla` e `info_verificador`. La última lleva las decisiones declaradas, los
 supuestos, los límites, las desviaciones y las preguntas que siguen abiertas.
 
 ## Correrlo
@@ -31,8 +31,8 @@ Hace falta Python 3 (se probó con 3.12) y nada más. Desde esta carpeta:
 python3 bases_oru.py
 ```
 
-Escribe las 40 bases ORU sintéticas que usa `prueba_oru.py` (`bases_oru/` y `bases_oru.jsonl`, que no se publican porque se
-regeneran iguales). Después, cada una de estas debe terminar en verde:
+Escribe las 40 bases ORU sintéticas que usa `prueba_oru.py`, en `bases_oru/` y `bases_oru.jsonl`. Después, cada una de estas
+debe terminar en verde:
 
 | Orden | Termina con |
 |---|---|
@@ -47,8 +47,8 @@ regeneran iguales). Después, cada una de estas debe terminar en verde:
 | `python3 contratos/generar_contrato.py --comprobar` | `contrato_canonico_adt.md: IGUAL a la generación` |
 | `python3 ve/prueba_ve.py` | `PRUEBAS VE (despues): TODO BIEN (21 pruebas, 7 controles)` |
 
-Sin el perfil del sitio (abajo), `prueba_adt.py` salta la prueba que depende de él (S95), y la P58 del MCP espera 3 casos en
-vez de 6, porque el corpus de la fase 13 tampoco viaja.
+Sin los perfiles privados (abajo), `prueba_adt.py` salta la prueba que depende de ellos (S95). Y la P58 del MCP espera 3
+casos en vez de 6, porque el corpus de la fase 13 tampoco está aquí.
 
 ## La última etapa (14k, 22-oct-2026): cerrar los huecos medidos del juez
 
@@ -89,15 +89,14 @@ publica.
   huella son idénticos.
 - **`adjudicacion.py` es un extracto.** Solo lleva `cable()`, la única función que usa el juez. El módulo entero es de la fase
   13 y lleva material de la clave del banco. No entra en la huella.
-- **Siete documentos de la etapa llevan una redacción:** seis `.md`, marcados en su primera línea, y
-  `ve/ADJUDICACION-VE2.json`. La muestra privada del sitio va sin su procedencia ni su desglose por origen; los totales y el
-  mecanismo son los del original.
+- **Siete documentos de la etapa llevan una parte redactada:** seis `.md`, marcados en su primera línea, y
+  `ve/ADJUDICACION-VE2.json`. Los totales y el mecanismo son los del original.
 - **Las bases ORU no viajan.** Las regenera `bases_oru.py`; se comprobó que salen iguales byte a byte.
 
-## Lo que no está, y por qué
+## Lo que no está
 
-- **El perfil del sitio.** Es la configuración de un sitio real. El código lo busca en `../privado/perfiles` (o donde diga
-  `LAB_PERFILES`), y sin él juzga con el perfil del laboratorio.
+- **Los perfiles privados.** El código los busca en `../privado/perfiles` (o donde diga `LAB_PERFILES`); sin ellos juzga
+  con el perfil del laboratorio.
 - **Los circuitos y sus lectores:** las clases de IRIS, los canales de Mirth y los programas que sacan la evidencia de cada
   motor.
 - **Los corpus de los rejuicios y la evidencia guardada.** De VE2 están las tablas agregadas, no los casos.
