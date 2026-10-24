@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CV1 (E-CV-3): solo para bajar el jar publicado de LinuxForHealth y sus dependencias (dependency:copy-dependencies).
+     No se construye nada desde el código fuente del proyecto. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>lab.cv</groupId>
+  <artifactId>arnes-lfh</artifactId>
+  <version>1</version>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.linuxforhealth</groupId>
+      <artifactId>hl7v2-fhir-converter</artifactId>
+      <!-- DV-CV-3: la etiqueta v1.1.1 de GitHub no está en Maven Central; la última publicada es «v1.1.0» (con la v) -->
+      <version>v1.1.0</version>
+    </dependency>
+  </dependencies>
+</project>

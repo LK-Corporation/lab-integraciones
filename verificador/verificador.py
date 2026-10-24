@@ -60,6 +60,7 @@ import unicodedata
 import acuse_referencia as AR
 import almacen_adt as AA2
 import almacen_oru as AO
+import conversion as CV
 import hechos_normativos as H
 import lectura_evidencia as LE
 import mapeador_adt as MA
@@ -259,6 +260,8 @@ def _campo(k, z, ms, esp, lec, ampliado):
 
 def verificar(e, pe=None):
     pe = PE.resolver(pe, e)                                                             # §1.3
+    if pe.get("solo_transformacion"):                                                   # etapa 14l: conversor (cv/)
+        return CV.verificar(e, pe)
     ms = MR.mensajes(e.get("mensaje"))
     m10s = [m.campo(m.segs[0], 10) for m in ms]
     lec = LE.leer(e, m10s, pe["nombre"])

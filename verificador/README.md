@@ -1,7 +1,8 @@
 # El verificador: un juez determinista para circuitos de integración HL7 v2.5 → FHIR R4
 
 Es el juez que usan los dos estudios del agente ([`../piloto-agente/`](../piloto-agente/)), publicado con su código el
-22-oct-2026. Recibe la evidencia de un caso:
+22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR (abajo).
+Recibe la evidencia de un caso:
 - el mensaje HL7 v2.5 que se envió;
 - el acuse que devolvió el circuito;
 - lo que el circuito dejó: su registro, el canónico y lo que escribió en FHIR.
@@ -17,9 +18,11 @@ siempre la misma respuesta a la misma evidencia.
 
 **Los puntos de entrada:**
 - tres con mapeador: `adt_a01`, `adt_fhir` y `oru_fhir`, donde se compara también lo escrito;
-- cinco de solo acuse: `adt`, `oru`, `siu`, `ord` y `mdm`.
+- cinco de solo acuse: `adt`, `oru`, `siu`, `ord` y `mdm`;
+- dos de solo transformación, `adt_conv` y `oru_conv`: juzgan el Bundle que devuelve un conversor contra el perfil
+  «guía» de [`conversion.py`](conversion.py).
 
-**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.1) con seis herramientas: `verificar_caso`, `ficha_experto`,
+**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.2) con seis herramientas: `verificar_caso`, `ficha_experto`,
 `acuse_esperado`, `comparar_canonico`, `consultar_tabla` e `info_verificador`. La última lleva las decisiones declaradas, los
 supuestos, los límites, las desviaciones y las preguntas que siguen abiertas.
 
@@ -46,11 +49,64 @@ debe terminar en verde:
 | `python3 acuse_referencia.py --autoprueba` | `AUTOPRUEBA DE acuse_referencia: TODO BIEN` |
 | `python3 contratos/generar_contrato.py --comprobar` | `contrato_canonico_adt.md: IGUAL a la generación` |
 | `python3 ve/prueba_ve.py` | `PRUEBAS VE (despues): TODO BIEN (21 pruebas, 7 controles)` |
+| `python3 prueba_conversion.py` | `PRUEBAS CONVERSIÓN: TODO BIEN (116 comprobaciones, 28 pruebas)` |
+| `python3 conversion.py --autoprueba` | `AUTOPRUEBA DE conversion: TODO BIEN` |
 
 Sin los perfiles privados (abajo), `prueba_adt.py` salta la prueba que depende de ellos (S95). Y la P58 del MCP espera 3
 casos en vez de 6, porque el corpus de la fase 13 tampoco está aquí.
 
-## La última etapa (14k, 22-oct-2026): cerrar los huecos medidos del juez
+## El estudio de conversores (14l, 23-24 oct-2026)
+
+> El verificador encuentra **15 discrepancias nuevas y confirmadas en 2 de 2 conversores, sobre 368 mensajes públicos**;
+> además ve **31 de las ya declaradas**, y **16 diferencias son convención**.
+
+**Los conversores:** Microsoft FHIR-Converter v7.0, construido desde su código, y LinuxForHealth hl7v2-fhir-converter
+v1.1.0, el jar que publica en Maven Central. La rama principal de los dos se construyó después desde su código (15a). Todos
+corren en una caja sin red, de solo lectura y sin privilegios.
+
+**Lo que no es:** una certificación. Es lo que ve un juez con sus decisiones declaradas, en ADT y ORU^R01 y en esas
+versiones.
+
+**Lo esperado** sale de la guía oficial HL7 v2-to-FHIR: sus mapas, que el juez lleva generados del paquete, y sus hojas
+CSV, que se citan por fila.
+
+**Una discrepancia cuenta como nueva y confirmada** si cumple cuatro condiciones:
+- tiene su cita;
+- cambia el significado del dato;
+- no aparece en ninguna salida esperada, prueba, documentación ni issue del proyecto;
+- se reproduce con un par de mensajes mínimos: el caso y su control.
+
+Una revisión adversaria tumbó 10 de las 25 candidatas antes de contarlas. En la rama principal de cada proyecto siguen
+14 de las 15; la otra la corrigió LinuxForHealth después de la versión juzgada.
+
+| Fase | Documento |
+|---|---|
+| La pregunta, «hecho cuando», el tope y la regla de portfolio, escritos antes | [`ANTES-ETAPA-CONVERSORES.md`](ANTES-ETAPA-CONVERSORES.md) |
+| CV-pre: ¿coinciden los elementos del juez con la guía?, y las muestras de los proyectos | [`RESULTADO-CV-PRE.md`](RESULTADO-CV-PRE.md) |
+| CV0: el diseño a ciegas, por un modelo distinto del que implementa, y las decisiones | [`cv/ENCARGO-CV0.md`](cv/ENCARGO-CV0.md), [`cv/diseno-conversores-fable.md`](cv/diseno-conversores-fable.md), [`cv/decisiones-qcv.md`](cv/decisiones-qcv.md), [`cv/decision-jev-qcv.md`](cv/decision-jev-qcv.md) |
+| CV1: los conversores aislados, las pruebas en rojo y el código | [`cv/CV1.md`](cv/CV1.md) |
+| CV2: la previsión sellada y el juicio | [`cv/PREVISION-CV2.md`](cv/PREVISION-CV2.md), [`cv/SELLO-CV2.txt`](cv/SELLO-CV2.txt), [`cv/RESULTADO-CV2.md`](cv/RESULTADO-CV2.md) |
+| CV3: cada discrepancia frente a lo que declara el proyecto, los pares mínimos y la revisión adversaria | [`cv/RESULTADO-CV3.md`](cv/RESULTADO-CV3.md), [`cv/decision-jev-qcv-cv3.md`](cv/decision-jev-qcv-cv3.md) |
+| 15a: las 15 en la rama principal de cada conversor | [`cv/RESULTADO-15A.md`](cv/RESULTADO-15A.md) |
+| El resultado, con la frase | [`RESULTADO-CONVERSORES.md`](RESULTADO-CONVERSORES.md) |
+
+Los scripts y los agregados (`.json`) están en [`cv/`](cv/).
+
+**Para reproducirlo hacen falta cuatro cosas de fuera:**
+- **Docker,** para la caja.
+- **Los dos conversores:** Microsoft, construido desde su código; LinuxForHealth, su jar de Maven Central
+  (`cv/lfh/pom.xml`); y sus ramas principales, desde su código. Cómo se hace está en `cv/CV1.md` y `cv/RESULTADO-15A.md`.
+- **Las muestras públicas de los proyectos,** de sus repositorios.
+- **El paquete `hl7.fhir.uv.v2mappings` 1.0.0,** para regenerar los mapas con `cv/extraer_mapas.py`.
+
+**Lo que ya está aquí:**
+- el corpus del laboratorio: las bases A1 y E2, y las ORU que regenera `bases_oru.py`;
+- los 68 mensajes mínimos, que salen de `python3 cv/cv3_minimos.py escribir <carpeta>`.
+
+**El arnés:** `cv/correr_conversor.py` corre un conversor sobre una carpeta, `cv/juzgar_cv2.py` juzga y `cv/cv3_clases.py`
+clasifica.
+
+## La etapa del verificador (14k, 22-oct-2026): cerrar los huecos medidos del juez
 
 La etapa de Mirth había dejado medidos dos puntos ciegos del juez. Con fallos sembrados en el circuito, uno mordía 128 veces
 sin que el juez cazara ninguna, y el otro 14. Quedaban además una contradicción con la versión de HL7 y un contrato del canónico
@@ -84,14 +140,18 @@ publica.
 - **`medida/encargo_medida.md` es un extracto.** En el laboratorio, ese fichero es un encargo de la fase 13 que lleva el
   capítulo 2 de HL7 v2.5 entero, y su texto no se puede redistribuir. Aquí solo quedan las filas de las tres tablas que el juez
   lee de él (0003, 0004 y 0211). Se comprobó que el juez lee del extracto exactamente las mismas: 285, 9 y 21 valores.
-- **Por eso la huella del juez publicado es otra.** El fichero entra en la huella, así que la del juez publicado es `a2ee87fd…`
-  y la del laboratorio `b9788fab…`. Las dos están en el manifiesto, con la huella del original. Los otros 13 ficheros de la
+- **Por eso la huella del juez publicado es otra.** El fichero entra en la huella, así que la del juez publicado es `0dd3ae5c…`
+  y la del laboratorio `40bbc3ef…`. Las dos están en el manifiesto, con la huella del original. Los otros 14 ficheros de la
   huella son idénticos.
 - **`adjudicacion.py` es un extracto.** Solo lleva `cable()`, la única función que usa el juez. El módulo entero es de la fase
   13 y lleva material de la clave del banco. No entra en la huella.
 - **Siete documentos de la etapa llevan una parte redactada:** seis `.md`, marcados en su primera línea, y
   `ve/ADJUDICACION-VE2.json`. Los totales y el mecanismo son los del original.
+- **Cuatro documentos del estudio de conversores llevan una parte redactada,** marcados en su primera línea: se quitaron
+  las alusiones al trabajo del autor y la cola de lo que solo él decide.
 - **Las bases ORU no viajan.** Las regenera `bases_oru.py`; se comprobó que salen iguales byte a byte.
+- **Los mensajes mínimos de conversores tampoco.** Los regenera `cv/cv3_minimos.py escribir <carpeta>`; se comprobó que
+  salen iguales byte a byte.
 
 ## Lo que no está
 
@@ -100,6 +160,15 @@ publica.
 - **Los circuitos y sus lectores:** las clases de IRIS, los canales de Mirth y los programas que sacan la evidencia de cada
   motor.
 - **Los corpus de los rejuicios y la evidencia guardada.** De VE2 están las tablas agregadas, no los casos.
+- **De conversores:**
+  - los conversores: se obtienen como dicen `cv/CV1.md` y `cv/RESULTADO-15A.md`;
+  - los resultados intermedios y los scripts de una sola fase que los documentos citan: `cv/CV-PRE-E1.json`,
+    `cv/CV-PRE-E2.json`, `cv/RESULTADO-CV2-pasada0.json`, `cv/RESULTADO-CV3-rejuicio1.json` y `-rejuicio2.json`,
+    `cv/RESULTADO-CV4-rejuicio.json`, `cv/RESULTADO-15A-minimos-fijada.json`, `cv/preguntas_qcv.json`, `cv/parche_cv1.py`,
+    `cv/cv1d.py`, `ve/comprobar.sh`, `prueba_multitipo.py` y la guarda de publicación que importa `cv/caja_cv0.py`;
+  - lo que devolvieron y el detalle por caso: están los agregados de `cv/`;
+  - las hojas CSV de la guía, que están en `HL7/v2-to-fhir`, commit `873b331`;
+  - las muestras de los proyectos, que están en sus repositorios.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

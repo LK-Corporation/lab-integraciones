@@ -42,6 +42,7 @@ try:
         import acuse_referencia as AR
         import almacen_adt as AA2
         import almacen_oru as AO
+        import conversion as CV
         import estructuras_hl7 as EH
         import hechos_normativos as H
         import lectura_evidencia as LE
@@ -54,8 +55,9 @@ except Exception as _ex:                          # AP-3
     sys.stderr.write("mcp_verificador: no se pudieron cargar las piezas (%s)\n" % type(_ex).__name__)
     sys.exit(2)
 
-SERVIDOR = "1.1"                                   # 1.1: etapa del verificador (14k); la identidad sigue siendo la huella
-REVISION = "etapa del verificador (14k): S104-S107 (S-VE-1..4), L-VE-1..8, DV-VE-1..14"
+SERVIDOR = "1.2"                                   # 1.2: etapa de conversores (14l); la identidad sigue siendo la huella
+REVISION = ("etapa de conversores (14l): adt_conv/oru_conv y perfil «guía» (S-CV-1..6), L-CV-1..16, AMB-CV-1..10, "
+            "Q-CV-D-1..14 (abiertas Q-CV-D-15/16), DV-CV-1..18; antes, 14k: S104-S107, L-VE-1..8, DV-VE-1..14")
 HEREDADAS = ("2025-06-18", "2025-11-25")
 MODERNA = "2026-07-28"
 META_V = "io.modelcontextprotocol/protocolVersion"
@@ -63,7 +65,7 @@ META_S = "io.modelcontextprotocol/serverInfo"
 FICHEROS = ["verificador.py", "acuse_referencia.py", "mapeador_referencia.py", "lectura_evidencia.py",
             "hechos_normativos.py", "medida/encargo_medida.md", "mcp_verificador.py",
             "puntos_entrada.py", "estructuras_hl7.py", "estructuras_25.json", "mapeador_oru.py", "almacen_oru.py",
-            "mapeador_adt.py", "almacen_adt.py"]
+            "mapeador_adt.py", "almacen_adt.py", "conversion.py"]
 OPC = {"silencio": "--silencio" in sys.argv, "sin_ficha": "--sin-ficha" in sys.argv,
        "ocultar": "--ocultar-por-defecto" in sys.argv, "compacto": "--esquema-compacto" in sys.argv}
 
@@ -1084,12 +1086,29 @@ E_PROPS = {
                 "description": "Hechos del entorno con el vocabulario del laboratorio."},
     "conexion": {"type": ["array", "null"], "maxItems": 100, "items": {"type": "string", "maxLength": 1024},
                  "description": "Lo que vio el emisor en TCP (p. ej. «conexión establecida», «ACK recibido a los 0.05 s del envío»)."},
+    "conversion": {"type": ["object", "null"], "maxProperties": 8,                  # etapa 14l (cv/diseno-conversores-fable.md §1.1)
+                   "properties": {"conversor": {"type": "object", "maxProperties": 8, "properties": {
+                                      "nombre": {"type": "string", "maxLength": 128}, "version": {"type": "string", "maxLength": 64},
+                                      "huella": {"type": "string", "maxLength": 128}, "plantilla": {"type": ["string", "null"], "maxLength": 128},
+                                      "invocacion": {"type": ["string", "null"], "maxLength": 1024}}},
+                                  "salida": {"type": "object", "required": ["estado"], "properties": {
+                                      "estado": {"type": "string", "enum": ["bundle", "error", "vacio", "sin_respuesta"]},
+                                      "bundle": {"type": ["string", "null"], "maxLength": 4000000},       # DV-CV-5
+                                      "error": {"type": ["object", "null"], "properties": {"codigo": {"type": ["string", "null"], "maxLength": 64},
+                                                                                          "texto": {"type": ["string", "null"], "maxLength": 4000}}},
+                                      "duracion_ms": {"type": ["integer", "null"]}}},
+                                  "perfil_valor": {"type": "string", "enum": ["guia"]}},
+                   "description": "Solo con punto_entrada adt_conv u oru_conv (etapa 14l): lo que devolvió un conversor HL7 v2 -> FHIR de "
+                                  "terceros: {conversor: {nombre, version, huella}, salida: {estado: bundle|error|vacio|sin_respuesta, bundle: "
+                                  "<JSON del Bundle como texto>, error: {codigo, texto}}}. Se juzga contra el perfil «guía» (ConceptMap de "
+                                  "v2-to-FHIR 1.0.0); sin acuse, log ni canónico."},
     "punto_entrada": {"type": "string", "enum": list(PE.NOMBRES), "default": PE.POR_OMISION,
                       "description": "Punto de entrada (contrato del receptor) con el que se juzga: adt_a01 (hoy, 2575, solo ADT^A01), "
                                      "adt (2580), oru (2581), siu (2582), ord (2583), mdm (2584) [S51], oru_fhir (2585, ORU^R01 -> Observation/DiagnosticReport, "
                                      "con mapeador sobre canonico_oru [S57]), adt_fhir (2586, ADT de 8 eventos -> Patient/Encounter, con mapeador "
                                      "sobre canonico_adt y almacen_adt). Precedencia: este parámetro > el campo punto_entrada del bundle > adt_a01. "
-                                     "Con uno distinto de adt_a01 y oru_fhir solo se juzga el acuse (L-MT1)."},
+                                     "Con uno distinto de adt_a01 y oru_fhir solo se juzga el acuse (L-MT1). adt_conv y oru_conv (etapa 14l, sin puerto) juzgan la salida de un "
+                                     "conversor de terceros (`conversion`) contra el perfil «guía», sin acuse."},
 }
 NIVEL = {"type": "string", "enum": ["consumido", "estricto"], "default": "consumido",
          "description": "consumido (defecto, [S6]) | estricto (diagnóstico: cuenta también los campos R que el contrato no consume)"}
@@ -1177,6 +1196,8 @@ def _bundle(a):
          "entorno": a.get("entorno") or [], "conexion": a.get("conexion") or [], "_dado_entorno": "entorno" in a}
     if a.get("punto_entrada"):                                               # §1.3: el parámetro manda sobre el bundle
         e["punto_entrada"] = a["punto_entrada"]
+    if a.get("conversion") is not None:                                       # etapa 14l (adt_conv, oru_conv)
+        e["conversion"] = a["conversion"]
     ign = [k for k in a if k not in E_PROPS and k not in ("nivel", "caso", "leyenda", "incluir_ficha", "ocultar_datos_personales")]
     return e, ign
 
@@ -1432,6 +1453,11 @@ def _ocultar(obj, e):
 def t_verificar(a):
     e, ign = _bundle(a)
     nivel = a.get("nivel", AR.NIVEL)
+    if PE.resolver(None, e).get("solo_transformacion"):                     # etapa 14l: conversor de terceros (cv/)
+        out = _proyectar_conversion(a.get("caso") or "(sin id)", V.verificar(e), e, nivel, ign)
+        if a.get("ocultar_datos_personales", OPC["ocultar"]):
+            out = _ocultar(out, e)
+        return out, None
     with _nivel(nivel):
         r = V.verificar(e)
         out = _proyectar(a.get("caso") or "(sin id)", r, e, nivel, ign, bool(a.get("leyenda")))
@@ -1440,6 +1466,24 @@ def t_verificar(a):
     if a.get("ocultar_datos_personales", OPC["ocultar"]):
         out = _ocultar(out, e)
     return out, None
+
+
+def _proyectar_conversion(caso, r, e, nivel, ignorado):
+    """Etapa 14l: la salida de verificar_caso para adt_conv/oru_conv (cv/diseno-conversores-fable.md §1.4)."""
+    ve = r["veredicto"]
+    hs = [{"clase": h["clase"], "subtipo": h["subtipo"], "hecho": h["hecho"], "que": h["que"], "cuenta": h["cuenta"],
+           "certeza": h["certeza"], "citas": [{"etiqueta": c, "texto": None} for c in h.get("citas") or []],
+           "clase_cv": h.get("clase_cv")} for h in r["hallazgos"]]
+    cuentan = [h for h in hs if h["cuenta"]]
+    return {"caso": caso, "version": _version_con(nivel),
+            "entrada": {"punto_entrada": r["punto_entrada"], "base_de_evidencia": "conversion", "ignorado": ignorado,
+                        "no_evaluado": ["conversión: sin acuse ni canónico, solo se juzga el Bundle devuelto contra el perfil «guía» "
+                                        "(v2-to-FHIR 1.0.0); las S-n del laboratorio no cuentan (L-CV-12)"]},
+            "veredicto": {"categoria": ve["categoria"], "subtipo": ve.get("subtipo"), "certeza": ve.get("certeza") or "literal",
+                          "alternativa": ve.get("alternativa"), "provisional": False},
+            "hallazgos": hs, "conversion": r["conversion"],
+            "resumen_mecanico": {"cuentan": len(cuentan), "notas": len(hs) - len(cuentan),
+                                 "por_subtipo": dict(collections.Counter(s for h in cuentan for s in h["subtipo"].split("+")))}}
 
 
 def t_ficha(a):
@@ -1801,6 +1845,11 @@ def t_estructura(nombre):
             "leyenda": "ítem [\"SEG\", nombre, opcional, repite] | [\"GRUPO\", nombre, opcional, repite, hijos] | [\"ELIGE\", [nombres]]",
             "puntos_entrada": sorted(p["nombre"] for p in PE.PUNTOS.values() if nombre in {e for t in p["tipos"].values() for e in t.values()})}, None
 
+TABLAS["perfil_guia_adt"] = (lambda: [dict(f, codigo=f["elemento"]) for f in CV.PERFIL_GUIA_ADT],
+                             "perfil «guía» de adt_conv (cv/diseno-conversores-fable.md §3.1-§3.2; ConceptMap de v2-to-FHIR 1.0.0)")
+TABLAS["perfil_guia_oru"] = (lambda: [dict(f, codigo=f["elemento"]) for f in CV.PERFIL_GUIA_ORU],
+                             "perfil «guía» de oru_conv (cv/diseno-conversores-fable.md §3.3-§3.4; ConceptMap de v2-to-FHIR 1.0.0)")
+
 
 def t_tabla(a):
     t = a["tabla"]
@@ -1841,6 +1890,7 @@ def t_info(a):
             "estructuras_extraidas": sorted(EH.GRAMATICAS), "desviaciones_oru": DESVIACIONES_ORU, "declarados_oru11": DECLARADOS_ORU11,
             "desviaciones_adt": DESVIACIONES_ADT, "declarados_adt": DECLARADOS_ADT, "deudas_circuito_adt": CIRCUITO_ADT,
             "desviaciones_ms": DESVIACIONES_MS, "deudas_circuito_ms": CIRCUITO_MS, "desviaciones_ve": DESVIACIONES_VE,
+            "conversores": CV.INFO,
             "mapeo_oru": {"sistemas_codificacion": dict(MO.URIS, **{"HL7nnnn": "http://terminology.hl7.org/CodeSystem/v2-nnnn", "<otro>": MO.URI_OTRO + "<valor>"}),
                           "0085_sitio": MO.MAPEO_0085_SITIO, "0123_sitio": MO.MAPEO_0123_SITIO, "zona_emisor_por_omision": MO.ZONA_POR_OMISION,
                           "tipos_obx2_v1": list(MO.TIPOS_V1), "tipos_obx2_s22": list(MO.TIPOS_S22), "tope_obx5": MO.TOPE_OBX5}}, None

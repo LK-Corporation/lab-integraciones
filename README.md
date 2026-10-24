@@ -1,13 +1,30 @@
-# Laboratorio de integraciones HL7 v2 → FHIR R4: un verificador y tres estudios sobre agentes de IA
+# Laboratorio de integraciones HL7 v2 → FHIR R4: un verificador, dos conversores de código abierto juzgados con él y tres estudios sobre agentes de IA
 
-Un laboratorio personal de integraciones sanitarias sobre InterSystems IRIS for Health. Tiene tres piezas:
+Un laboratorio personal de integraciones sanitarias sobre InterSystems IRIS for Health. Tiene cuatro piezas:
 - **circuitos reales por MLLP:** el del primer estudio, `ADT^A01` → FHIR `Patient`, congelado con huella; y después ADT
   de ocho eventos → `Patient` y `Encounter`, y ORU → `DiagnosticReport` y `Observation`. El circuito ADT está repetido
   en Mirth Connect, que en el segundo estudio solo sirvió de control y en el tercero no entró;
 - **un verificador determinista**, que dice si cada circuito hizo lo que manda el estándar;
+- **un estudio de dos conversores HL7 v2 → FHIR de código abierto**, juzgados con ese verificador contra la guía oficial
+  HL7 v2-to-FHIR;
 - **tres estudios** de si un agente de IA ayuda a triar los fallos de esos circuitos y a arreglarlos.
 
-**Los tres estudios, en pocas líneas cada uno:**
+**El estudio de conversores, en pocas líneas** (23-24 oct):
+- **¿Encuentra el verificador algo que importe fuera del laboratorio?** Sí. En Microsoft FHIR-Converter (v7.0) y
+  LinuxForHealth hl7v2-fhir-converter (v1.1.0), sobre 368 mensajes ADT y ORU^R01 públicos, encuentra **15 discrepancias
+  nuevas y confirmadas** con la guía.
+  - Cada una tiene su cita, cambia el significado del dato, no está declarada por el proyecto y se reproduce con un par
+    de mensajes mínimos.
+  - Siete son fuertes: un valor que se multiplica por diez, resultados que desaparecen, un estado civil «separado» que
+    pasa a «anulado», un rango que pasa a ser un número.
+  - Ve además 31 que los proyectos ya tenían declaradas, y 16 diferencias son convención.
+  - En las ramas principales siguen 14; la otra la corrigió el propio proyecto después de la versión juzgada.
+- **El método es el de los estudios:** la previsión sellada antes de correr nada, el diseño a ciegas, una revisión
+  adversaria que tumbó 10 de 25 candidatas, y los conversores aislados en una caja sin red.
+- **Lo que no es:** una certificación. Es lo que ve un juez determinista con sus decisiones declaradas, en esas versiones y
+  en esos dos tipos de mensaje.
+
+**Los tres estudios sobre agentes, en pocas líneas cada uno:**
 
 1. **¿Puede un modelo local de 30B triar fallos de integración?** (septiembre)
    - **Funciona y no hace falta.** Detecta 10 de 18 operadores de fallo silencioso sin una sola falsa alarma en 22 casos
@@ -24,7 +41,8 @@ Un laboratorio personal de integraciones sanitarias sobre InterSystems IRIS for 
    - **Sí, en los mismos 18 casos:** 14,5 de 18 frente a 8,5 (Δ +0,33, p = 0,016 a una cola), sin romper nada, y sin
      depender esta vez de los fallos a propósito. Quien puntúa el arreglo es el mismo juez que el agente consulta.
 
-**El verificador** se publicó con su código el 22-oct. Es lo único de aquí que se puede correr: sus pruebas pasan sin el
+**El verificador** se publicó con su código el 22-oct, y con el juez de conversores el 24-oct. Es lo único de aquí que se
+puede correr: sus pruebas pasan sin el
 laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; su README lo dice).
 
 👉 **Por dónde empezar:**
@@ -32,6 +50,7 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
   versión para leer en el navegador en
   [lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
 - **Los otros dos estudios:** [`piloto-agente/README.md`](piloto-agente/README.md).
+- **El estudio de conversores:** [`verificador/RESULTADO-CONVERSORES.md`](verificador/RESULTADO-CONVERSORES.md).
 - **El verificador:** [`verificador/README.md`](verificador/README.md).
 
 ---
@@ -47,7 +66,7 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 | [`medidas/`](medidas/) | las medidas con su control negativo: el prior, las dos mitades de la vía de oráculo independiente, y la auditoría de la interfaz de evidencia |
 | [`codigo/`](codigo/) | el puntuador con sus dieciséis autopruebas, el banco de adversarios, el árbol que mide fuga por el arnés, la matriz de observabilidad, y las clases del arnés |
 | [`piloto-agente/`](piloto-agente/) | **el segundo estudio (12-13 oct)** y, en [`piloto-agente/bucle/`](piloto-agente/bucle/), **el tercero (13-14 y 22 oct)**: la pregunta y los topes escritos antes, los diseños a ciegas, los sellos, las decisiones delegadas y los resultados con sus sensibilidades. Sin código, sin la clave de los casos y sin transcripciones |
-| [`verificador/`](verificador/) | **el verificador determinista, con su código (22-oct)**: el juez de los dos estudios del agente. Dado el mensaje HL7 v2.5 enviado, el acuse y lo que el circuito registró y escribió en FHIR, da un veredicto con los hallazgos que lo sostienen, cada uno con su cita al estándar. Con la documentación de su última etapa, que cierra los huecos medidos del juez. **Es lo único de aquí que se puede correr** |
+| [`verificador/`](verificador/) | **el verificador determinista, con su código (22-oct)**: el juez de los dos estudios del agente. Dado el mensaje HL7 v2.5 enviado, el acuse y lo que el circuito registró y escribió en FHIR, da un veredicto con los hallazgos que lo sostienen, cada uno con su cita al estándar. Con la documentación de sus dos últimas etapas: la que cierra los huecos medidos del juez (22-oct) y **el estudio de conversores (23-24 oct)**, que juzga dos conversores de código abierto contra la guía HL7 v2-to-FHIR. **Es lo único de aquí que se puede correr** |
 
 **Lo que quizá sea lo más útil no es el resultado, son las cuatro versiones del diseño y las
 revisiones que las tumbaron.** Se puede leer cómo un experimento se rompe y se rehace, con las
@@ -67,7 +86,10 @@ Esto es una selección del repositorio de trabajo, que es privado. No están:
 - **de los estudios del agente:** la clave de los casos, las transcripciones de las tiradas, los mensajes y el código del
   arnés y de los circuitos;
 - **del verificador:** los circuitos y sus lectores, los corpus de los rejuicios, la evidencia guardada y los perfiles
-  privados.
+  privados;
+- **del estudio de conversores:** los conversores (Microsoft se construye desde su código; LinuxForHealth es su jar de
+  Maven Central), sus salidas y el detalle por caso;
+  están los agregados, los scripts y el generador de los mensajes mínimos.
 
 **Con lo que hay, las medidas no se pueden volver a correr.** Se pueden leer el método, los instrumentos y los resultados.
 Lo único que corre es el [verificador](verificador/), con sus pruebas.
@@ -107,8 +129,9 @@ original.
 también comercialmente, citando la fuente—. Las fuentes tipográficas de la página van con la suya (SIL OFL).
 
 **Lo que es de HL7 no lo cubre ninguna de ellas:** las filas de tres tablas de códigos (0003, 0004 y 0211), las
-estructuras de mensaje de v2.5, el principio de unos mensajes de ejemplo del estándar, y las citas breves que el
-código del verificador lleva con su referencia. No es obra del autor; el texto completo del estándar se obtiene de
+estructuras de mensaje de v2.5, el principio de unos mensajes de ejemplo del estándar, las citas breves que el
+código del verificador lleva con su referencia, y los mapas de la guía v2-to-FHIR que lleva el juez de conversores
+(que HL7 publica bajo CC0). No es obra del autor; el texto completo del estándar se obtiene de
 HL7 International, con su licencia.
 
 El detalle está en [`LICENSE.md`](LICENSE.md): qué cubre cada licencia, qué pasa con las respuestas de

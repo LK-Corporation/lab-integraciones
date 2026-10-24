@@ -1,0 +1,57 @@
+{
+ "adt": {
+  "mensajes": 263,
+  "por_evento": {
+   "A01": 33,
+   "A02": 34,
+   "A03": 33,
+   "A04": 35,
+   "A08": 32,
+   "A11": 32,
+   "A13": 32,
+   "A31": 32
+  },
+  "oportunidad_por_mecanismo": {
+   "MC-ADT-1": 208,
+   "MC-ADT-10": 32,
+   "MC-ADT-11": 32,
+   "MC-ADT-12": 36,
+   "MC-ADT-13 (Q-CV-D-6)": 27,
+   "MC-ADT-14 (Q-CV-D-9)": 8,
+   "MC-ADT-2": 4,
+   "MC-ADT-3": 256,
+   "MC-ADT-4": 8,
+   "MC-ADT-5": 24,
+   "MC-ADT-6": 32,
+   "MC-ADT-7": 32,
+   "MC-ADT-8": 8,
+   "MC-ADT-9": 65
+  },
+  "otros": {
+   "con valor imposible (PID-8)": 11,
+   "sin PID+PV1": 2,
+   "sin PV1": 5
+  }
+ },
+ "oru": {
+  "mensajes": 40,
+  "por_evento": {
+   "R01": 40
+  },
+  "oportunidad_por_mecanismo": {
+   "MC-ORU-1": 2,
+   "MC-ORU-10": 1,
+   "MC-ORU-2": 4,
+   "MC-ORU-3": 26,
+   "MC-ORU-4": 31,
+   "MC-ORU-5": 1,
+   "MC-ORU-6": 2,
+   "MC-ORU-7": 2,
+   "OBX fuera de OBR (L-CV-7)": 1
+  },
+  "otros": {
+   "con valor imposible (OBX-5)": 1,
+   "sin PID": 1
+  }
+ }
+}

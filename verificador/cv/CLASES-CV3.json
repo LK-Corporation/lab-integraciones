@@ -1,0 +1,1338 @@
+{
+ "juez": "54a90cd9e08d15c08b84bb2e231db116d91f962daf0785be170d672648f88f7e",
+ "clases": [
+  {
+   "id": "M-1",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "Encounter.location apunta al componente menos granular de PV1-3; el resto de PL no queda en su cadena",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json (y 51 más); microsoft/FHIR-Converter#624 (abierto)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 184,
+    "muestras": 20
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-001",
+     "A01-002",
+     "A01-003"
+    ],
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-3",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "Encounter.location sin status (1..1 en la guía para PV1-3)",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A11/ADT-A11-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 29,
+    "muestras": 2
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A11-25",
+     "A1-A11-26",
+     "A1-A11-27"
+    ],
+    "muestras": [
+     "ms-ADT-A11-01",
+     "ms-ADT-A11-02"
+    ]
+   }
+  },
+  {
+   "id": "M-2",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "Encounter.location.status distinto del de la guía (PV1-11 «planned»; PV1-2 = P «active»)",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 33,
+    "muestras": 15
+   },
+   "ejemplos": {
+    "adt": [
+     "A02-004",
+     "A02-005",
+     "A02-006"
+    ],
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-4",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "PL.9 va dentro de una descripción que concatena todo el PL («UCI--3--1--HOSP--Box 3»), no sola",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json (descripción concatenada en 114 salidas esperadas); data/Templates/Hl7v2/Resource/_PLLocation.liquid:62-63; Q-CV-D-14 (Jev: cuenta)",
+   "par_minimo": "M10-pl9-descripcion",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 16
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-03",
+     "A1-A01-04",
+     "A1-A02-08"
+    ]
+   }
+  },
+  {
+   "id": "M-5",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "PV1-10 a serviceType sin system ni el mapa de la guía",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 14,
+    "muestras": 17
+   },
+   "ejemplos": {
+    "adt": [
+     "A02-004",
+     "A02-005",
+     "A02-006"
+    ],
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-6",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "Encounter.status «in-progress» donde la guía da «finished» o «planned»",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A04/ADT-A04-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 16,
+    "muestras": 2
+   },
+   "ejemplos": {
+    "adt": [
+     "A04-019",
+     "A04-020",
+     "A04-021"
+    ],
+    "muestras": [
+     "ms-ADT-A04-01",
+     "ms-ADT-A04-02"
+    ]
+   }
+  },
+  {
+   "id": "M-7",
+   "conversor": "microsoft",
+   "clase": "nueva",
+   "que": "solo la primera repetición de PV1-8 llega a participant",
+   "referencia": "—",
+   "par_minimo": "M04-pv1-8-repetido",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 8
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-03",
+     "A1-A02-08",
+     "A1-A03-13"
+    ]
+   }
+  },
+  {
+   "id": "M-8",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "PV1-45 valorado sin period.end",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A13/ADT-A13-02-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 5,
+    "muestras": 1
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A13-31",
+     "A1-A13-33",
+     "A13-019"
+    ],
+    "muestras": [
+     "ms-ADT-A13-02"
+    ]
+   }
+  },
+  {
+   "id": "M-9",
+   "conversor": "microsoft",
+   "clase": "no_cambia",
+   "que": "PV1-2 «B» (obstetricia) a Encounter.class v3-ActCode «OBS»; la guía no tiene equivalente v3 y deja v2-0004 «B»",
+   "referencia": "v3-ActCode «OBS» = «Obstetrics», el mismo concepto que v2-0004 «B»; revisión",
+   "par_minimo": "M05-clase-b",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 2
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A04-15",
+     "A1-A08-20"
+    ]
+   }
+  },
+  {
+   "id": "M-10",
+   "conversor": "microsoft",
+   "clase": "nueva",
+   "que": "PID-16 «T» (no declarado) sin maritalStatus; la guía da NullFlavor NAVU",
+   "referencia": "—",
+   "par_minimo": "M08-estado-civil-t",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 1
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A13-32"
+    ]
+   }
+  },
+  {
+   "id": "M-11",
+   "conversor": "microsoft",
+   "clase": "fuera_corpus",
+   "que": "rechazo de un mensaje con un DT imposible en GT1-2.7",
+   "referencia": "E2 «comp»/«opci»: GT1-2 lleva un XPN, CX.7 (DT) = «L»",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "adt": 30
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-004",
+     "A01-005",
+     "A01-006"
+    ]
+   }
+  },
+  {
+   "id": "M-12",
+   "conversor": "microsoft",
+   "clase": "nueva_rechazo",
+   "que": "rechaza el nulo «\"\"» en un DTM (ACC-1); CH02.txt:392",
+   "referencia": "—",
+   "par_minimo": "R01-nulo-en-dtm",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 18
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-016",
+     "A01-017",
+     "A01-018"
+    ]
+   }
+  },
+  {
+   "id": "M-13",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "rechaza caracteres de codificación distintos de «\\»",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.UnitTests/Validators/Hl7v2DataValidatorTests.cs:51",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 24
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-013",
+     "A01-014",
+     "A01-015"
+    ]
+   }
+  },
+  {
+   "id": "M-14",
+   "conversor": "microsoft",
+   "clase": "fuera_muestra_invalida",
+   "que": "rechazo de una muestra con MSH-2 mal escrito",
+   "referencia": "lfh-sample_unix: MSH-2 «^~\\\\&» (dos barras)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "lfh-sample_unix"
+    ]
+   }
+  },
+  {
+   "id": "M-15",
+   "conversor": "microsoft",
+   "clase": "nueva_rechazo",
+   "que": "NM «01.20»: escribe «\"value\":01.20» (JSON inválido) y falla; CH02A.txt:2979",
+   "referencia": "—",
+   "par_minimo": "R02-nm-cero-inicial",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B27"
+    ]
+   }
+  },
+  {
+   "id": "M-16",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "copia a Patient.gender un PID-8 fuera de la 0001 o en minúscula: FHIR inválido",
+   "referencia": "microsoft/FHIR-Converter#187 (cerrado: «origin data … directly passed to results if there is no mapping»); revisión",
+   "par_minimo": "M02-genero-fuera-de-tabla",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "adt": 11
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-04",
+     "A1-A02-09",
+     "A1-A03-14"
+    ]
+   }
+  },
+  {
+   "id": "M-17",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "PID-12 en una Address aparte (matiz: comentario de PID_Patient.csv:18)",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT01-23-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 6,
+    "muestras": 6
+   },
+   "ejemplos": {
+    "adt": [
+     "A02-004",
+     "A02-005",
+     "A02-006"
+    ],
+    "muestras": [
+     "ms-ADT01-23",
+     "ms-ADT01-28",
+     "ms-ADT04-23"
+    ]
+   }
+  },
+  {
+   "id": "M-18",
+   "conversor": "microsoft",
+   "clase": "nueva",
+   "que": "en A02, un PDA sin datos de muerte (PDA|\"\") da deceasedBoolean true, sin PID-29 ni PID-30 (la guía no mapea PDA)",
+   "referencia": "—",
+   "par_minimo": "M03-pda-sin-muerte",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "adt": 5
+   },
+   "ejemplos": {
+    "adt": [
+     "A02-016",
+     "A02-017",
+     "A02-018"
+    ]
+   }
+  },
+  {
+   "id": "M-19",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "dos OBX con el mismo código dan una Observation (se pierde la primera) con comparator «<>»",
+   "referencia": "docs/HL7v2-ImportantPoints.md punto 5 (mismo id: se sobrescriben); microsoft/FHIR-Converter#504 (comparator «<>»)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B09"
+    ]
+   }
+  },
+  {
+   "id": "M-20",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "el mismo choque de id: falta la Observation del primer OBX",
+   "referencia": "docs/HL7v2-ImportantPoints.md punto 5",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B09"
+    ]
+   }
+  },
+  {
+   "id": "M-21",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "una NTE tras un OBX hace perder el OBX siguiente (no con la NTE al final)",
+   "referencia": "microsoft/FHIR-Converter#325 (cerrado; comentarios: get_related_segment_list solo da segmentos consecutivos); revisión",
+   "par_minimo": "M06-obx-tras-nte",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B23"
+    ]
+   }
+  },
+  {
+   "id": "M-22",
+   "conversor": "microsoft",
+   "clase": "fuera_ambiguedad",
+   "que": "sufijo «&IMP» de OBX-3: según la lectura, acierta un conversor u otro",
+   "referencia": "AMB-CV-10 (CH07.txt:368-372)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B14"
+    ]
+   }
+  },
+  {
+   "id": "M-23",
+   "conversor": "microsoft",
+   "clase": "nueva",
+   "que": "ORU sin PID: subject a «Patient/364bf61f…», que no está en el Bundle; el mismo id en ORU-B30 y en el mínimo M07",
+   "referencia": "—",
+   "par_minimo": "M07-oru-sin-pid",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B30"
+    ]
+   }
+  },
+  {
+   "id": "M-24",
+   "conversor": "microsoft",
+   "clase": "nueva",
+   "que": "NM «.5» se escribe 5: el valor se multiplica por diez",
+   "referencia": "—",
+   "par_minimo": "M01-nm-punto-inicial",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B29"
+    ]
+   }
+  },
+  {
+   "id": "M-25",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "FT «\\.br\\» se escribe como los dos caracteres «\\n» en el texto, no como salto de línea",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.UnitTests/InputProcessors/Hl7v2EscapeSequenceProcessorTests.cs:32 (la secuencia .br pasa a los dos caracteres barra y n); revisión",
+   "par_minimo": "M09-ft-br",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B11"
+    ]
+   }
+  },
+  {
+   "id": "M-26",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "ContactPoint.use «home» donde la guía da «mobile» (XTN.3 CP)",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 16
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-27",
+   "conversor": "microsoft",
+   "clase": "dudosa",
+   "que": "número de XTN escrito con otro formato: el juez busca los componentes literales",
+   "referencia": "Q-CV-D-15",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 3
+   },
+   "ejemplos": {
+    "muestras": [
+     "lfh-ORU-multiline-short",
+     "lfh-ORU-multiline-short-mixed",
+     "ms-ADT04-23"
+    ]
+   }
+  },
+  {
+   "id": "M-28",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "Observation de PDA (certificado de defunción, autopsia…) que la guía no mapea",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "muestras": 7
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A02-01",
+     "ms-ADT-A03-01"
+    ]
+   }
+  },
+  {
+   "id": "M-29",
+   "conversor": "microsoft",
+   "clase": "fuera_muestra_invalida",
+   "que": "muestra con OBX-3 vacío",
+   "referencia": "lfh-ORU-multiline-short(-mixed): OBX-3 vacío (obligatorio): los OBX chocan de id",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 2
+   },
+   "ejemplos": {
+    "muestras": [
+     "lfh-ORU-multiline-short",
+     "lfh-ORU-multiline-short-mixed"
+    ]
+   }
+  },
+  {
+   "id": "M-30",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "DiagnosticReport de un OBX RP/ED",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ORU_R01/ORU-R01-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ORU-R01-01"
+    ]
+   }
+  },
+  {
+   "id": "M-31",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "period.end sin PV1-45",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A04/ADT-A04-01-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "muestras": 2
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A04-01",
+     "ms-ADT-A11-01"
+    ]
+   }
+  },
+  {
+   "id": "M-32",
+   "conversor": "microsoft",
+   "clase": "fuera_version",
+   "que": "muestra 2.8: XAD.9 «&W» lleva texto; el juez lo lee como IS 2.5 vacío",
+   "referencia": "L-CV-16: XAD.9 es CWE desde 2.7",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 16
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-33",
+   "conversor": "microsoft",
+   "clase": "fuera_version",
+   "que": "muestra 2.8: Microsoft acierta con XAD.19",
+   "referencia": "L-CV-16: XAD.19 (2.7+) va a line[5] en la guía (CM datatype-xad-to-address)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 16
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-34",
+   "conversor": "microsoft",
+   "clase": "fuera_version",
+   "que": "muestra 2.8: depende de XPN.15",
+   "referencia": "L-CV-16: XPN.15 (2.7+) va a name[2].given en la guía",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 16
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A02-01"
+    ]
+   }
+  },
+  {
+   "id": "M-35",
+   "conversor": "microsoft",
+   "clase": "ya_declarada",
+   "que": "PID-30 «NO» (fuera de la 0136) a deceasedBoolean false",
+   "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ORU_R01/LAB-ORU-1-expected.json",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 2
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LAB-ORU-1",
+     "ms-LAB-ORU-2"
+    ]
+   }
+  },
+  {
+   "id": "M-36",
+   "conversor": "microsoft",
+   "clase": "fuera_juez",
+   "que": "CX.4 con solo el nombre del espacio, sin system ni assigner",
+   "referencia": "falso positivo: system «…/Identifier/NIST-MPI» lleva CX.4; el juez busca «NIST MPI» literal (para CV4)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LRI_2.0-NG_CBC_Typ_Message"
+    ]
+   }
+  },
+  {
+   "id": "L-1",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "no hay Encounter.location: Encounter.yml no la mapea",
+   "referencia": "—",
+   "par_minimo": "L01-sin-location",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 160,
+    "muestras": 15
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-001",
+     "A01-002",
+     "A01-003"
+    ],
+    "muestras": [
+     "lfh-sample_unix",
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02"
+    ]
+   }
+  },
+  {
+   "id": "L-2",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "period.start de EVN-6 o EVN-2 sin PV1-44",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7EncounterFHIRConversionTest.java (testEncounterPeriod: «we fall back to either EVN.6 or EVN.2»)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 120,
+    "muestras": 1
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-001",
+     "A01-002",
+     "A01-003"
+    ],
+    "muestras": [
+     "ms-ADT01-28"
+    ]
+   }
+  },
+  {
+   "id": "L-3",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "Encounter.status por fechas, no por evento ni PV1-2",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/data/Hl7RelatedGeneralUtilsTest.java:76-100 (UNKNOWN sin fechas, ARRIVED con PV1-44)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 108,
+    "muestras": 10
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-001",
+     "A01-002",
+     "A01-003"
+    ],
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A04-01"
+    ]
+   }
+  },
+  {
+   "id": "L-4",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "rechaza ADT_A02, A11 y A13 (Q-CV-D-13 decide si es rechazo aceptable)",
+   "referencia": "README.md:7-26 (tipos soportados: sin A02, A11 ni A13)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "adt": 92,
+    "muestras": 3
+   },
+   "ejemplos": {
+    "adt": [
+     "A02-001",
+     "A02-002",
+     "A02-003"
+    ],
+    "muestras": [
+     "ms-ADT-A02-02",
+     "ms-ADT-A11-02",
+     "ms-ADT-A13-02"
+    ]
+   }
+  },
+  {
+   "id": "L-5",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "PV1-2 sin mapa a class: el código sin system",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7EncounterFHIRConversionTest.java (test_encounter_class: «Should return hl7Code if not a mapped value»)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 30
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A03-10",
+     "A1-A04-15",
+     "A1-A08-20"
+    ]
+   }
+  },
+  {
+   "id": "L-6",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "PV1-10 a serviceType en v2-0069, sin el mapa de la guía",
+   "referencia": "TEMPLATING.md:519-525 (salida de ejemplo: serviceType v2-0069 MED); revisión",
+   "par_minimo": "L03-pv1-10-med",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 15,
+    "muestras": 1
+   },
+   "ejemplos": {
+    "adt": [
+     "A01-004",
+     "A01-005",
+     "A01-006"
+    ],
+    "muestras": [
+     "lfh-sample_unix"
+    ]
+   }
+  },
+  {
+   "id": "L-7",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "ContactPoint.system no sale de XTN.3 (FX, TDD → phone)",
+   "referencia": "LinuxForHealth/hl7v2-fhir-converter#524 (abierto)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "media",
+   "casos": {
+    "adt": 5,
+    "muestras": 10
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-02",
+     "A1-A03-12",
+     "A1-A04-17"
+    ],
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A03-01"
+    ]
+   }
+  },
+  {
+   "id": "L-8",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "ContactPoint.use no sale de XTN.2 (NET)",
+   "referencia": "LinuxForHealth/hl7v2-fhir-converter#524 (abierto)",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "adt": 5
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-02",
+     "A1-A03-12",
+     "A1-A04-17"
+    ]
+   }
+  },
+  {
+   "id": "L-9",
+   "conversor": "linuxforhealth",
+   "clase": "dudosa",
+   "que": "número de XTN escrito con otro formato («404 2808»): el juez busca los componentes literales",
+   "referencia": "Q-CV-D-15",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": null,
+   "casos": {
+    "muestras": 13
+   },
+   "ejemplos": {
+    "muestras": [
+     "lfh-ORU-multiline-short",
+     "lfh-ORU-multiline-short-mixed",
+     "ms-ADT-A01-01"
+    ]
+   }
+  },
+  {
+   "id": "L-10",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "PID-16 «A» (separado) a v3-MaritalStatus «A», que en v3 es anulado; la guía da «L»",
+   "referencia": "—",
+   "par_minimo": "L02-estado-civil-a",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "adt": 2
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-02",
+     "A1-A31-37"
+    ]
+   }
+  },
+  {
+   "id": "L-11",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "SAD.2 y SAD.3 de XAD.1 no llegan a address.line (CM datatype-sad-to-address)",
+   "referencia": "—",
+   "par_minimo": "L04-sad-2-3",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 5,
+    "muestras": 12
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A01-02",
+     "A1-A03-12",
+     "A1-A04-17"
+    ],
+    "muestras": [
+     "lfh-ORU-multiline-short",
+     "lfh-ORU-multiline-short-mixed",
+     "ms-ADT-A01-01"
+    ]
+   }
+  },
+  {
+   "id": "L-12",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "PID-8 «N» a «unknown»; el mapa de la guía da «other»",
+   "referencia": "—",
+   "par_minimo": "L05-genero-n",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "adt": 1
+   },
+   "ejemplos": {
+    "adt": [
+     "A1-A04-15"
+    ]
+   }
+  },
+  {
+   "id": "L-13",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "OBX-8 en v2-0078, sin el mapa a v3-ObservationInterpretation",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7ObservationFHIRConversionTest.java:161-163",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 5,
+    "oru": 30
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LAB-ORU-1",
+     "ms-LAB-ORU-2",
+     "ms-LRI_2.0-NG_CBC_Typ_Message"
+    ],
+    "oru": [
+     "ORU-B01",
+     "ORU-B02",
+     "ORU-B03"
+    ]
+   }
+  },
+  {
+   "id": "L-14",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "OBX TX sin Observation: el texto va a presentedForm, y con OBX mezclados se pierde",
+   "referencia": "hl7/resource/DiagnosticReport.yml:139-141 y Observation.yml (comentarios); LinuxForHealth/hl7v2-fhir-converter#306",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "fuerte",
+   "casos": {
+    "muestras": 3,
+    "oru": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "lfh-ORU-multiline-short",
+     "lfh-ORU-multiline-short-mixed",
+     "ms-LRI_2.0-NG_CBC_Typ_Message"
+    ],
+    "oru": [
+     "ORU-B10"
+    ]
+   }
+  },
+  {
+   "id": "L-15",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "un OBX sin OBX-2 (pendiente, no obtenible) no da Observation, contra la guía y contra el comentario de su plantilla",
+   "referencia": "—",
+   "par_minimo": "L06-obx-sin-tipo",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 2
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B18",
+     "ORU-B22"
+    ]
+   }
+  },
+  {
+   "id": "L-16",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "OBX FT y TM sin valor: valueString solo para ST, y no hay valueTime",
+   "referencia": "—",
+   "par_minimo": "L07-ft / L08-tm",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 2
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B11",
+     "ORU-B13"
+    ]
+   }
+  },
+  {
+   "id": "L-17",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "CodeableConcept.text de CWE.2 antes que de CWE.9",
+   "referencia": "LinuxForHealth/hl7v2-fhir-converter#139 (cerrado: «CWE.2 should be put in CodeableConcept.text»); hl7/datatype/CodeableConcept.yml",
+   "par_minimo": null,
+   "confirmada_con_par": null,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 2,
+    "oru": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LRI_2.0-NG_CBC_Typ_Message",
+     "ms-ORU-R01-01"
+    ],
+    "oru": [
+     "ORU-B15"
+    ]
+   }
+  },
+  {
+   "id": "L-18",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "OBX-11 «D» a «cancelled»; el mapa de la guía da «entered-in-error»",
+   "referencia": "—",
+   "par_minimo": "L09-obx-11-d",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B20"
+    ]
+   }
+  },
+  {
+   "id": "L-19",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "OBR-25 «I» a «unknown»; el mapa de la guía da «registered»",
+   "referencia": "—",
+   "par_minimo": "L10-obr-25-i",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "oru": 2
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B22",
+     "ORU-B31"
+    ]
+   }
+  },
+  {
+   "id": "L-20",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "SN «^1^-^5» (rango) a valueQuantity 1",
+   "referencia": "—",
+   "par_minimo": "L11-sn-rango",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B07"
+    ]
+   }
+  },
+  {
+   "id": "L-21",
+   "conversor": "linuxforhealth",
+   "clase": "dudosa",
+   "que": "SN «<>^5» (distinto de 5) a valueQuantity 5, sin comparador",
+   "referencia": "Q-CV-D-16: hl7/datatype/Quantity.yml:13 declara que quita los comparadores que FHIR no admite (lo prueba con «=»)",
+   "par_minimo": "L12-sn-distinto",
+   "confirmada_con_par": true,
+   "fuerza": "fuerte",
+   "casos": {
+    "oru": 1
+   },
+   "ejemplos": {
+    "oru": [
+     "ORU-B09"
+    ]
+   }
+  },
+  {
+   "id": "L-22",
+   "conversor": "linuxforhealth",
+   "clase": "nueva",
+   "que": "PV1-52 no llega a participant",
+   "referencia": "—",
+   "par_minimo": "L13-pv1-52",
+   "confirmada_con_par": true,
+   "fuerza": "media",
+   "casos": {
+    "muestras": 10
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A03-01"
+    ]
+   }
+  },
+  {
+   "id": "L-23",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "XPN.6 (título) no llega a suffix",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7ObservationFHIRConversionTest.java:622 («currently not putting degree ... in suffix», misma HumanName.yml)",
+   "par_minimo": "L14-xpn-6-titulo",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 10
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-ADT-A01-01",
+     "ms-ADT-A01-02",
+     "ms-ADT-A03-01"
+    ]
+   }
+  },
+  {
+   "id": "L-24",
+   "conversor": "linuxforhealth",
+   "clase": "fuera_juez",
+   "que": "CX.4 con solo el nombre del espacio, sin system ni assigner",
+   "referencia": "falso positivo: system «urn:id:NIST_MPI» lleva CX.4; el juez busca «NIST MPI» literal (para CV4)",
+   "par_minimo": "L16-cx-4-solo-nombre",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 2
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LRI_2.0-NG_CBC_Typ_Message",
+     "ms-ORU-R01-01"
+    ]
+   }
+  },
+  {
+   "id": "L-25",
+   "conversor": "linuxforhealth",
+   "clase": "no_cambia",
+   "que": "PID-30 «NO» (fuera de la 0136) a deceasedBoolean false: el sentido se conserva",
+   "referencia": "«NO» y false dicen lo mismo (ConceptMap table-hl70136-to-special-values: N → false)",
+   "par_minimo": "L17-pid-30-no",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 2
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LAB-ORU-1",
+     "ms-LAB-ORU-2"
+    ]
+   }
+  },
+  {
+   "id": "L-26",
+   "conversor": "linuxforhealth",
+   "clase": "ya_declarada",
+   "que": "Quantity.unit con el código de OBX-6 y no con su texto (CWE.2)",
+   "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7ObservationFHIRConversionTest.java:141 («unit units to OBX.6.1»)",
+   "par_minimo": "L18-unidad-cwe-2",
+   "confirmada_con_par": true,
+   "fuerza": "débil",
+   "casos": {
+    "muestras": 1
+   },
+   "ejemplos": {
+    "muestras": [
+     "ms-LRI_2.0-NG_CBC_Typ_Message"
+    ]
+   }
+  }
+ ],
+ "sin_clase": {},
+ "convenciones": {
+  "linuxforhealth | OBR(2)-25 | DiagnosticReport.status: <v> para <v> (sin destino en el ConceptMap)": 2,
+  "linuxforhealth | OBR-25 | DiagnosticReport.status: <v> para <v> (sin destino en el ConceptMap)": 2,
+  "linuxforhealth | OBX(3)-11 | Observation.status: <v> para <v> (sin destino en el ConceptMap)": 1,
+  "linuxforhealth | OBX-11 | Observation.status: <v> para <v> (sin destino en el ConceptMap)": 3,
+  "linuxforhealth | OBX-5 | OBX-<n> repetido (<n>): forma admitida por la guía (MSG_ORU_R01.csv:<n>-<n>)": 1,
+  "linuxforhealth | OBX-8 | Observation.interpretation <v> para <v>, fuera del ConceptMap": 1,
+  "linuxforhealth | PID-16 | Patient.maritalStatus: <v> para <v>, fuera del ConceptMap": 2,
+  "linuxforhealth | PID-8 | Patient.gender: <v> mapeado desde <v> en minúscula (AMB-CV-<n>)": 1,
+  "microsoft | OBR(2)-25 | DiagnosticReport.status: <v> para <v> (sin destino en el ConceptMap)": 2,
+  "microsoft | OBR-25 | DiagnosticReport.status: <v> para <v> (sin destino en el ConceptMap)": 2,
+  "microsoft | OBX(3)-11 | Observation.status: <v> para <v> (sin destino en el ConceptMap)": 1,
+  "microsoft | OBX-11 | Observation.status: <v> para <v> (sin destino en el ConceptMap)": 4,
+  "microsoft | OBX-5 | OBX-<n> repetido (<n>): forma admitida por la guía (MSG_ORU_R01.csv:<n>-<n>)": 2,
+  "microsoft | OBX-8 | Observation.interpretation <v> para <v>, fuera del ConceptMap": 1
+ },
+ "frase": {
+  "N_nuevas_confirmadas": 15,
+  "N_por_conversor": {
+   "microsoft": 5,
+   "linuxforhealth": 10
+  },
+  "N_fuertes": 7,
+  "K_conversores": 2,
+  "D_ya_declaradas": 31,
+  "D_por_conversor": {
+   "microsoft": 19,
+   "linuxforhealth": 12
+  },
+  "C_convenciones": 16,
+  "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+  "rechazos_nuevos": 2,
+  "dudosas": 3,
+  "M_mensajes": 368
+ },
+ "muestras_aceptadas": {
+  "linuxforhealth": {
+   "ya_declarada": 36,
+   "nueva": 23,
+   "dudosa": 4,
+   "no_cambia": 2
+  },
+  "microsoft": {
+   "fuera_version": 18,
+   "ya_declarada": 75
+  }
+ }
+}

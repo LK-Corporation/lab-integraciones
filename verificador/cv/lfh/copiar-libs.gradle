@@ -1,0 +1,10 @@
+allprojects {
+    afterEvaluate { p ->
+        if (p.configurations.findByName("runtimeClasspath") != null) {
+            p.tasks.register("copiarLibs", Copy) {
+                from p.configurations.runtimeClasspath
+                into "/salida/lib"
+            }
+        }
+    }
+}

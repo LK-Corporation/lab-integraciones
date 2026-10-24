@@ -139,6 +139,16 @@ PUNTOS["adt_fhir"] = _pe(
      ("PV1", 44, "ts", "consumido"), ("PV1", 45, "ts", "consumido")],
     "ADT A01/A02/A03/A04/A08/A11/A13/A31 con destino FHIR (Patient por PID, Encounter por PV1; namespace LABADT); mapeador adt.",
     mapeador="adt", zona_emisor="+01:00")
+# cv/diseno-conversores-fable.md §1.5 [S-CV-1]: solo transformación (conversores de terceros, etapa 14l). Sin puerto ni
+# acuse: el juez despacha a conversion.py antes de leer acuse, log o canónico. Mismo contrato de familia que adt_fhir/oru_fhir.
+PUNTOS["adt_conv"] = _pe(
+    "adt_conv", 0, PUNTOS["adt_fhir"]["tipos"], PUNTOS["adt_fhir"]["consumidos"], PUNTOS["adt_fhir"]["p4"], PUNTOS["adt_fhir"]["p5"],
+    "ADT de los 8 eventos convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» (S-CV-1..6).",
+    solo_transformacion=True, familia="adt")
+PUNTOS["oru_conv"] = _pe(
+    "oru_conv", 0, PUNTOS["oru_fhir"]["tipos"], PUNTOS["oru_fhir"]["consumidos"], PUNTOS["oru_fhir"]["p4"], PUNTOS["oru_fhir"]["p5"],
+    "ORU^R01 convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» (S-CV-1..6).",
+    solo_transformacion=True, familia="oru")
 POR_OMISION = "adt_a01"
 NOMBRES = list(PUNTOS)
 
@@ -170,7 +180,7 @@ def contrato(pe):
             "p4": ["%s-%s %s" % (s, "/".join("%s-%d" % (s, k) for k in n) if isinstance(n, tuple) else n, nv) for s, n, nv in pe["p4"]],
             "p5": ["%s-%d %s %s" % (s, n, j, nv) for s, n, j, nv in pe["p5"]],
             "longitudes": {"%s-%d" % c: v for c, v in sorted(pe["longitudes"].items())},
-            **{k: (sorted(pe[k]) if isinstance(pe[k], set) else pe[k]) for k in ("mapeador", "todas_las_ocurrencias", "zona_emisor") if k in pe}}
+            **{k: (sorted(pe[k]) if isinstance(pe[k], set) else pe[k]) for k in ("mapeador", "todas_las_ocurrencias", "zona_emisor", "solo_transformacion", "familia") if k in pe}}
 
 
 # ---------------------------------------------------------------------------- afirmaciones §3.1 sobre ADT_A01

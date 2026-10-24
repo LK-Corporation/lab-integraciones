@@ -22,7 +22,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 AQUI = Path(__file__).resolve()
 
-SUFIJOS_TEXTO = {".py", ".md", ".txt", ".cls", ".html", ".css", ".yml", ".yaml", ".ini", ".sha256"}
+SUFIJOS_TEXTO = {".py", ".md", ".txt", ".cls", ".html", ".css", ".yml", ".yaml", ".ini", ".sha256",
+                 ".java", ".gradle", ".xml"}                    # 24-oct-2026: el arnés de LinuxForHealth del estudio de conversores
 SELLO = REPO / "preinscripciones" / "SELLO-RESERVADO.txt"
 HUELLAS = REPO / "preinscripciones" / "HUELLAS.sha256"
 
@@ -49,11 +50,17 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/mapeador_adt.py", "a@b.es"),                      # el correo sintético de sus autopruebas
     ("verificador/a1/bases_a1.json", "ana@hosp.es"),                # el de la paciente ficticia de las bases A1
     ("piloto-agente/bucle/diseno-bucle-fable.md", "ssh caído"),     # prosa, no una orden
+    ("verificador/cv/correr_conversor.py", "/app/Microsoft"),       # rutas de dentro del contenedor del arnés
+    ("verificador/cv/lfh/copiar-libs.gradle", "/salida/lib"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/estructuras_25.json", "verificador/a1/ejemplos_cap3.json", "verificador/a1/bases_a1.json",
                   "verificador/bases_adt/bases_e2.json", "verificador/ve/PREVISION-VE2.json",
-                  "verificador/ve/ADJUDICACION-VE2.json", "verificador/ve/TABLA-VE2.json"}
+                  "verificador/ve/ADJUDICACION-VE2.json", "verificador/ve/TABLA-VE2.json",
+                  # 24-oct-2026, el estudio de conversores: la previsión sellada y los agregados
+                  "verificador/cv/PREVISION-CV2.json", "verificador/cv/CUENTAS-CV2.json", "verificador/cv/RESULTADO-CV2.json",
+                  "verificador/cv/ADJUDICACION-CV2.json", "verificador/cv/CLASES-CV3.json",
+                  "verificador/cv/RESULTADO-CV3-minimos.json", "verificador/cv/RESULTADO-15A-minimos-main.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

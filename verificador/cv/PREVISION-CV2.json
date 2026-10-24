@@ -1,0 +1,66 @@
+{
+ "que": "Previsión sellada de CV2 (etapa 14l): la de Fable a ciegas (cv/diseno-conversores-fable.md §7), completada con las cuentas del corpus (cv/CUENTAS-CV2.json), corregida por DV-CV-7 y por las decisiones de Jev. Se sella antes de correr ningún conversor sobre el corpus.",
+ "identidad": {
+  "juez": "63d40cd0190e5c1adce398527caeaed6e51d9395673333cca08638795802659a",
+  "servidor": "1.1",
+  "conversores": {
+   "microsoft": {"version": "v7.0 (253307f)", "huella": "766f8938d0c12c382bec2edceeca4d3be4fd19900d0bd131ba880ac615fadf3e"},
+   "linuxforhealth": {"version": "v1.1.0 (Maven Central; DV-CV-3)", "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2"}
+  },
+  "corpus": "aa83359aa283082f632d30ea4a8a0bb1e0887084e9eefb774f9d07713bffbee1",
+  "decisiones": {"Q-CV-D-3": "dato_inventado", "Q-CV-D-5": "nota", "Q-CV-D-6": "recurso_ausente", "Q-CV-D-7": "aceptable", "Q-CV-D-8": "codigo_mal_mapeado", "Q-CV-D-9": "solo_fn1", "Q-CV-D-10": "cuenta", "Q-CV-D-11": "las_dos", "Q-CV-D-12": "juzgar_con_marca"},
+  "sensibilidad": {"Q-CV-D-3": "convencion", "Q-CV-D-5": "dato_inventado_si_no_esta", "Q-CV-D-9": "las_dos"}
+ },
+ "visto_antes_de_sellar": "Solo los recuentos del lector de CV1-d sobre 4 Bundles (un A01 y un ORU por conversor): emparejamiento, sobrantes y otros_tipos; ningún hallazgo del perfil. La previsión de Fable no se ha movido por ello.",
+ "corpus": {
+  "adt": {"mensajes": 263, "nota": "DV-CV-7: Fable contaba 479 (A1 263 + E2 216); A1 ya incluye las 216 de E2"},
+  "oru": {"mensajes": 40},
+  "muestras": {"mensajes": 65, "nota": "corpus secundario; fuera de alcance lo que no es de los 8 eventos ni ORU^R01"}
+ },
+ "categorias_por_conversor_y_familia": {
+  "microsoft": {
+   "adt": {"correcto": [0.35, 0.65], "fallo_silencioso": [0.30, 0.60], "rechazo_incorrecto": [0.0, 0.05], "indeterminado": [0.0, 0.02]},
+   "oru": {"correcto": [0.20, 0.50], "fallo_silencioso": [0.45, 0.80], "rechazo_incorrecto": [0.0, 0.05], "indeterminado": [0.0, 0.02]}
+  },
+  "linuxforhealth": {
+   "adt": {"correcto": [0.30, 0.60], "fallo_silencioso": [0.35, 0.65], "rechazo_incorrecto": [0.0, 0.10], "indeterminado": [0.0, 0.02]},
+   "oru": {"correcto": [0.20, 0.50], "fallo_silencioso": [0.45, 0.80], "rechazo_incorrecto": [0.0, 0.10], "indeterminado": [0.0, 0.02]}
+  }
+ },
+ "mecanismos_distintos_que_cuentan": {"adt": [3, 6], "oru": [2, 5]},
+ "mecanismos": {
+  "MC-ADT-1": {"que": "PV1-2 -> class literal v2-0004 o sin system v3-ActCode", "rutas": ["Encounter.class"], "subtipos": ["codigo_mal_mapeado", "dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 208},
+  "MC-ADT-2": {"que": "PID-8 vacío -> gender unknown (Q-CV-D-3)", "rutas": ["Patient.gender"], "subtipos": ["dato_inventado"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 4},
+  "MC-ADT-3": {"que": "PL -> una sola Location o solo PL.1", "rutas": ["Encounter.location"], "subtipos": ["dato_perdido"], "prob": {"microsoft": "M-A", "linuxforhealth": "M"}, "oportunidad": 256},
+  "MC-ADT-4": {"que": "PID-16 -> v2-0002 literal en vez de v3-MaritalStatus/NullFlavor", "rutas": ["Patient.maritalStatus"], "subtipos": ["codigo_mal_mapeado", "dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 8},
+  "MC-ADT-5": {"que": "PV1-10 MED/URO -> v2-0069 literal", "rutas": ["Encounter.serviceType"], "subtipos": ["codigo_mal_mapeado", "dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 24},
+  "MC-ADT-6": {"que": "PID-7 con precisión reducida -> fecha completada", "rutas": ["Patient.birthDate"], "subtipos": ["dato_inventado"], "prob": {"microsoft": "B-M", "linuxforhealth": "B-M"}, "oportunidad": 32},
+  "MC-ADT-7": {"que": "XPN.7 unmatched -> use inventado", "rutas": ["Patient.name.use"], "subtipos": ["codigo_mal_mapeado", "dato_inventado"], "prob": {"microsoft": "M", "linuxforhealth": "B"}, "oportunidad": 32},
+  "MC-ADT-8": {"que": "telecom: XTN.1 preferido a XTN.12; XTN.4 sin system email", "rutas": ["Patient.telecom"], "subtipos": ["valor_distinto", "codigo_mal_mapeado", "dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 8},
+  "MC-ADT-9": {"que": "Encounter.status fuera del conjunto (A11 no cancelado; status fijo)", "rutas": ["Encounter.status"], "subtipos": ["valor_distinto", "dato_inventado", "fhir_invalido"], "prob": {"microsoft": "B", "linuxforhealth": "B-M"}, "oportunidad": 65},
+  "MC-ADT-10": {"que": "participantes: solo PV1-7, o individual solo con display", "rutas": ["Encounter.participant", "Practitioner.name"], "subtipos": ["dato_perdido", "valor_distinto", "codigo_mal_mapeado"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 32},
+  "MC-ADT-11": {"que": "rechazo de mensajes con segmentos fuera de sitio o Z", "rutas": ["*rechazo"], "subtipos": ["incorrecto"], "prob": {"microsoft": "B", "linuxforhealth": "B-M"}, "oportunidad": 32},
+  "MC-ADT-12": {"que": "DTM sin zona -> dateTime sin zona o reducido a fecha", "rutas": ["Encounter.period", "Patient.deceasedDateTime"], "subtipos": ["fhir_invalido", "dato_perdido"], "prob": {"microsoft": "B", "linuxforhealth": "B-M"}, "oportunidad": 36},
+  "MC-ADT-13": {"que": "PV1-2 = N sin Encounter (Q-CV-D-6; añadido al sellar: Fable lo dejaba en convención)", "rutas": ["*recurso PV1"], "subtipos": ["recurso_ausente"], "prob": {"microsoft": "B", "linuxforhealth": "B"}, "oportunidad": 27},
+  "MC-ADT-14": {"que": "FN con subcomponentes unidos en family (Q-CV-D-9; añadido al sellar)", "rutas": ["Patient.name.family"], "subtipos": ["valor_distinto"], "prob": {"microsoft": "B-M", "linuxforhealth": "B-M"}, "oportunidad": 8},
+  "MC-ORU-1": {"que": "NM/SN reserializado: 1.20 -> 1.2", "rutas": ["Observation.valueQuantity.value"], "subtipos": ["valor_distinto"], "prob": {"microsoft": "A", "linuxforhealth": "A"}, "oportunidad": 2},
+  "MC-ORU-2": {"que": "SN: valueString en vez de ratio/range/quantity, o comparador perdido", "rutas": ["Observation.value[x]|SN", "Observation.valueQuantity.comparator", "Observation.valueRatio", "Observation.valueRange", "Observation.valueString|SN"], "subtipos": ["valor_distinto", "dato_perdido"], "prob": {"microsoft": "M-A", "linuxforhealth": "M"}, "oportunidad": 4},
+  "MC-ORU-3": {"que": "OBX-6: unit de CWE.1 en vez de CWE.2; code sin system; UCUM no canónico", "rutas": ["Observation.valueQuantity.unit", "Observation.valueQuantity.code", "Observation.valueQuantity.system"], "subtipos": ["valor_distinto", "dato_perdido", "codigo_mal_mapeado", "dato_inventado"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 26},
+  "MC-ORU-4": {"que": "OBX-8 -> system v2-0078", "rutas": ["Observation.interpretation"], "subtipos": ["codigo_mal_mapeado", "dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 31},
+  "MC-ORU-5": {"que": "OBR-8 valorado -> effectiveDateTime solo", "rutas": ["DiagnosticReport.effectivePeriod"], "subtipos": ["dato_perdido"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 1},
+  "MC-ORU-6": {"que": "TX/FT: escapes sin resolver o repeticiones perdidas", "rutas": ["Observation.valueString"], "subtipos": ["valor_distinto"], "prob": {"microsoft": "M", "linuxforhealth": "M"}, "oportunidad": 2},
+  "MC-ORU-7": {"que": "result[] cruzados entre dos OBR u Observation sin referencia", "rutas": ["DiagnosticReport.result", "*recurso OBX"], "subtipos": ["referencia_rota", "recurso_inventado"], "prob": {"microsoft": "B", "linuxforhealth": "B-M"}, "oportunidad": 2}
+ },
+ "no_previsto_y_seria_senal": ["recurso_inventado", "referencia_rota en subject", "fhir_invalido masivo"],
+ "fuera_de_previsto": [
+  "un mecanismo que cuenta y no casa con ninguno de la lista (regla de asignación de abajo)",
+  "un porcentaje de categoría fuera de su rango para un conversor y familia",
+  "indeterminado > 2 % en un conversor y familia (el lector)",
+  "un conversor que rechaza > 10 % del corpus 2.5",
+  "más mecanismos distintos que cuentan que el máximo del rango, o menos que el mínimo"
+ ],
+ "regla_de_asignacion": "Cada frase «que» de un hallazgo que cuenta se asigna al primer MC, en el orden de la lista, que case por ruta y por subtipo. La ruta del hallazgo es la primera palabra de su «que» (antes del primer espacio o «:»). Una ruta R del MC casa si la del hallazgo empieza por R; «R|S» exige además que S aparezca en el «que». Las rutas con «*» casan por clase: «*rechazo» con la clase rechazo; «*recurso PV1» con recurso_ausente de hecho PV1; «*recurso OBX» con recurso_inventado de hecho OBX. El subtipo casa si alguno de los subtipos del hallazgo está en los del MC. Un mecanismo distinto es un MC o, fuera de la lista, el par (ruta, subtipo).",
+ "muestras": {"aceptadas_ya_declarada": ">= 70 % de lo que cuente en las muestras aceptadas será ya_declarada en CV3", "v28": "0 hallazgos de tabla o estructura que cuenten en las 52 de 2.8 (marca L18)"},
+ "frase_prevista": {"N": ">= 2", "K": "1 o 2", "D": ">= 3", "C": ">= 10", "una_nueva_confirmada_en_alguno": 0.8},
+ "repeticiones_maximas_de_cv2": 2
+}

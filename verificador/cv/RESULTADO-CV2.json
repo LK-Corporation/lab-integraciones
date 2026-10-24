@@ -1,0 +1,294 @@
+{
+ "juez": "be73697f3d79c848427664de31f80ee00e843ad0b29b7e0a25cae5e7e139f78b",
+ "prevision_sellada": "63d40cd0190e5c1adce398527caeaed6e51d9395673333cca08638795802659a",
+ "por_conversor": {
+  "microsoft": {
+   "adt": {
+    "n": 263,
+    "estado": {
+     "bundle": 191,
+     "error": 72
+    },
+    "categorias": {
+     "fallo_silencioso": 185,
+     "rechazo_incorrecto": 72,
+     "correcto": 6
+    },
+    "mecanismos": {
+     "MC-ADT-1": 2,
+     "MC-ADT-10": 8,
+     "MC-ADT-11": 72,
+     "MC-ADT-12": 5,
+     "MC-ADT-3": 184,
+     "MC-ADT-4": 1,
+     "MC-ADT-5": 14,
+     "MC-ADT-9": 16,
+     "fuera:Patient.address.district|dato_perdido": 6,
+     "fuera:Patient.deceasedBoolean|dato_inventado": 5,
+     "fuera:Patient.gender|fhir_invalido": 9,
+     "fuera:Patient.gender|fhir_invalido+valor_imposible_convertido": 2
+    },
+    "mecanismos_distintos": 12,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 185,
+      "con_decision_de_jev": 185
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 185,
+      "con_decision_de_jev": 185
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 185,
+      "con_decision_de_jev": 185
+     }
+    }
+   },
+   "oru": {
+    "n": 40,
+    "estado": {
+     "bundle": 39,
+     "error": 1
+    },
+    "categorias": {
+     "correcto": 33,
+     "fallo_silencioso": 6,
+     "rechazo_incorrecto": 1
+    },
+    "mecanismos": {
+     "MC-ADT-11": 1,
+     "MC-ORU-1": 1,
+     "MC-ORU-2": 1,
+     "MC-ORU-6": 1,
+     "MC-ORU-7": 1,
+     "fuera:DiagnosticReport.subject|referencia_rota": 1,
+     "fuera:Observation.subject|referencia_rota": 1,
+     "fuera:falta|recurso_ausente": 3
+    },
+    "mecanismos_distintos": 8,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 6,
+      "con_decision_de_jev": 6
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 6,
+      "con_decision_de_jev": 6
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 6,
+      "con_decision_de_jev": 6
+     }
+    }
+   },
+   "muestras": {
+    "n": 65,
+    "estado": {
+     "bundle": 64,
+     "error": 1
+    },
+    "categorias": {
+     "fallo_silencioso": 26,
+     "rechazo_incorrecto": 1,
+     "fuera_de_alcance": 36,
+     "correcto": 2
+    },
+    "mecanismos": {
+     "MC-ADT-11": 1,
+     "MC-ADT-12": 1,
+     "MC-ADT-3": 20,
+     "MC-ADT-5": 17,
+     "MC-ADT-8": 19,
+     "MC-ADT-9": 2,
+     "MC-ORU-7": 9,
+     "fuera:DiagnosticReport|recurso_inventado": 1,
+     "fuera:Encounter.identifier|valor_distinto": 16,
+     "fuera:Encounter.location|valor_distinto": 8,
+     "fuera:Encounter.period.end|dato_inventado": 2,
+     "fuera:Patient.address.district|dato_perdido": 6,
+     "fuera:Patient.address.district|valor_distinto": 16,
+     "fuera:Patient.address.line|valor_distinto": 16,
+     "fuera:Patient.deceasedBoolean|valor_imposible_convertido": 2,
+     "fuera:Patient.identifier|dato_perdido": 1,
+     "fuera:Patient.name.given|valor_distinto": 16,
+     "fuera:falta|recurso_ausente": 2
+    },
+    "mecanismos_distintos": 18,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 26,
+      "con_decision_de_jev": 26
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 26,
+      "con_decision_de_jev": 26
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 26,
+      "con_decision_de_jev": 26
+     }
+    }
+   }
+  },
+  "linuxforhealth": {
+   "adt": {
+    "n": 263,
+    "estado": {
+     "bundle": 162,
+     "error": 101
+    },
+    "categorias": {
+     "fallo_silencioso": 160,
+     "rechazo_incorrecto": 92,
+     "correcto": 11
+    },
+    "mecanismos": {
+     "MC-ADT-1": 30,
+     "MC-ADT-11": 92,
+     "MC-ADT-3": 160,
+     "MC-ADT-4": 2,
+     "MC-ADT-5": 15,
+     "MC-ADT-8": 5,
+     "MC-ADT-9": 108,
+     "fuera:Encounter.period.start|dato_inventado": 120,
+     "fuera:Patient.address.line|valor_distinto": 5,
+     "fuera:Patient.gender|valor_distinto": 1
+    },
+    "mecanismos_distintos": 10,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 160,
+      "con_decision_de_jev": 160
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 160,
+      "con_decision_de_jev": 160
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 160,
+      "con_decision_de_jev": 160
+     }
+    }
+   },
+   "oru": {
+    "n": 40,
+    "estado": {
+     "bundle": 40
+    },
+    "categorias": {
+     "fallo_silencioso": 36,
+     "correcto": 4
+    },
+    "mecanismos": {
+     "MC-ORU-1": 1,
+     "MC-ORU-2": 2,
+     "MC-ORU-4": 30,
+     "fuera:DiagnosticReport.status|codigo_mal_mapeado": 2,
+     "fuera:Observation.status|codigo_mal_mapeado": 1,
+     "fuera:Observation.valueCodeableConcept.text|valor_distinto": 1,
+     "fuera:Observation.valueString|dato_perdido": 1,
+     "fuera:Observation.valueTime|dato_perdido": 1,
+     "fuera:falta|recurso_ausente": 3
+    },
+    "mecanismos_distintos": 9,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 36,
+      "con_decision_de_jev": 36
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 36,
+      "con_decision_de_jev": 36
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 36,
+      "con_decision_de_jev": 36
+     }
+    }
+   },
+   "muestras": {
+    "n": 65,
+    "estado": {
+     "bundle": 27,
+     "error": 38
+    },
+    "categorias": {
+     "fallo_silencioso": 23,
+     "correcto": 3,
+     "rechazo_incorrecto": 3,
+     "fuera_de_alcance": 36
+    },
+    "mecanismos": {
+     "MC-ADT-10": 10,
+     "MC-ADT-11": 3,
+     "MC-ADT-3": 15,
+     "MC-ADT-5": 1,
+     "MC-ADT-8": 13,
+     "MC-ADT-9": 10,
+     "MC-ORU-3": 1,
+     "MC-ORU-4": 5,
+     "fuera:DiagnosticReport.code.text|valor_distinto": 1,
+     "fuera:Encounter.identifier|valor_distinto": 10,
+     "fuera:Encounter.period.start|dato_inventado": 1,
+     "fuera:Observation.code.text|valor_distinto": 1,
+     "fuera:Observation.valueCodeableConcept.text|valor_distinto": 2,
+     "fuera:Patient.address.line|valor_distinto": 10,
+     "fuera:Patient.address|dato_perdido": 2,
+     "fuera:Patient.deceasedBoolean|valor_imposible_convertido": 2,
+     "fuera:Patient.identifier|dato_perdido": 2,
+     "fuera:Patient.name.suffix|dato_perdido": 10,
+     "fuera:falta|recurso_ausente": 3
+    },
+    "mecanismos_distintos": 19,
+    "sensibilidad": {
+     "Q-CV-D-3": {
+      "fallo_silencioso": 23,
+      "con_decision_de_jev": 23
+     },
+     "Q-CV-D-5": {
+      "fallo_silencioso": 23,
+      "con_decision_de_jev": 23
+     },
+     "Q-CV-D-9": {
+      "fallo_silencioso": 23,
+      "con_decision_de_jev": 23
+     }
+    }
+   }
+  }
+ },
+ "fuera_de_previsto": [
+  "el juez no es el de la previsión sellada: be73697f3d79c848427664de31f80ee00e843ad0b29b7e0a25cae5e7e139f78b",
+  "microsoft adt: correcto 2.3 % fuera de [35, 65] %",
+  "microsoft adt: fallo_silencioso 70.3 % fuera de [30, 60] %",
+  "microsoft adt: rechazo_incorrecto 27.4 % fuera de [0, 5] %",
+  "microsoft adt: rechaza 72 de 263 (27.4 %) del corpus 2.5",
+  "microsoft adt: 12 mecanismos distintos que cuentan, fuera de [3, 6]",
+  "microsoft adt: mecanismo no previsto Patient.address.district|dato_perdido (6 casos)",
+  "microsoft adt: mecanismo no previsto Patient.deceasedBoolean|dato_inventado (5 casos)",
+  "microsoft adt: mecanismo no previsto Patient.gender|fhir_invalido (9 casos)",
+  "microsoft adt: mecanismo no previsto Patient.gender|fhir_invalido+valor_imposible_convertido (2 casos)",
+  "microsoft oru: correcto 82.5 % fuera de [20, 50] %",
+  "microsoft oru: fallo_silencioso 15.0 % fuera de [45, 80] %",
+  "microsoft oru: 8 mecanismos distintos que cuentan, fuera de [2, 5]",
+  "microsoft oru: mecanismo no previsto falta|recurso_ausente (3 casos)",
+  "microsoft oru: mecanismo no previsto DiagnosticReport.subject|referencia_rota (1 casos)",
+  "microsoft oru: mecanismo no previsto Observation.subject|referencia_rota (1 casos)",
+  "linuxforhealth adt: correcto 4.2 % fuera de [30, 60] %",
+  "linuxforhealth adt: rechazo_incorrecto 35.0 % fuera de [0, 10] %",
+  "linuxforhealth adt: rechaza 92 de 263 (35.0 %) del corpus 2.5",
+  "linuxforhealth adt: 10 mecanismos distintos que cuentan, fuera de [3, 6]",
+  "linuxforhealth adt: mecanismo no previsto Encounter.period.start|dato_inventado (120 casos)",
+  "linuxforhealth adt: mecanismo no previsto Patient.address.line|valor_distinto (5 casos)",
+  "linuxforhealth adt: mecanismo no previsto Patient.gender|valor_distinto (1 casos)",
+  "linuxforhealth oru: correcto 10.0 % fuera de [20, 50] %",
+  "linuxforhealth oru: fallo_silencioso 90.0 % fuera de [45, 80] %",
+  "linuxforhealth oru: 9 mecanismos distintos que cuentan, fuera de [2, 5]",
+  "linuxforhealth oru: mecanismo no previsto falta|recurso_ausente (3 casos)",
+  "linuxforhealth oru: mecanismo no previsto Observation.valueString|dato_perdido (1 casos)",
+  "linuxforhealth oru: mecanismo no previsto Observation.valueTime|dato_perdido (1 casos)",
+  "linuxforhealth oru: mecanismo no previsto Observation.valueCodeableConcept.text|valor_distinto (1 casos)",
+  "linuxforhealth oru: mecanismo no previsto Observation.status|codigo_mal_mapeado (1 casos)",
+  "linuxforhealth oru: mecanismo no previsto DiagnosticReport.status|codigo_mal_mapeado (2 casos)"
+ ]
+}
