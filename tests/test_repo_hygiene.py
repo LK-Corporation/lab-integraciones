@@ -65,7 +65,7 @@ JSON_ADMITIDOS = {"verificador/estructuras_25.json", "verificador/a1/ejemplos_ca
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
 
-RAIZ_ADMITIDA = {"README.md", "INFORME.md", "LICENSE.md", ".gitignore", "pytest.ini", "LICENSES", "diseno",
+RAIZ_ADMITIDA = {"README.md", "INFORME.md", "ARTICULO.md", "LICENSE.md", ".gitignore", "pytest.ini", "LICENSES", "diseno",
                  "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github", "piloto-agente",
                  "verificador"}
 SUFIJOS_ADMITIDOS = SUFIJOS_TEXTO | {".woff2", ""}

@@ -46,6 +46,8 @@ puede correr: sus pruebas pasan sin el
 laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; su README lo dice).
 
 👉 **Por dónde empezar:**
+- **El estudio de conversores, contado de corrido:** [`ARTICULO.md`](ARTICULO.md). Qué encontró el verificador en dos
+  conversores de código abierto, cómo se buscó sin fiarse de ellos y qué no dice.
 - **El primer estudio y el método:** [`INFORME.md`](INFORME.md). Es autocontenido y lleva sus límites escritos. Hay una
   versión para leer en el navegador en
   [lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
@@ -59,7 +61,8 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 
 | carpeta | qué contiene |
 |---|---|
-| [`INFORME.md`](INFORME.md) | el informe. Si solo vas a leer una cosa, es esta |
+| [`ARTICULO.md`](ARTICULO.md) | **el estudio de conversores en un artículo**: el problema, el juez, el método, lo que encontró con sus mensajes mínimos y sus límites |
+| [`INFORME.md`](INFORME.md) | el informe del primer estudio. Si solo vas a leer una cosa del método, es esta |
 | [`diseno/`](diseno/) | **cuatro versiones del diseño de la fase que habría seguido al primer estudio** (un banco de fallos sin firma mecánica), v1 → v4, cada una rota por el panel y reescrita; esa fase no se hizo, y el informe dice por qué. Más la especificación del agente de triaje y una nota sobre un modelo de decisión estructurada |
 | [`encargos-y-revisiones/`](encargos-y-revisiones/) | los tres encargos al panel externo y **sus dieciséis revisiones** (de un cuarto encargo está solo su revisión, que lo dice en la cabecera). Cada ronda pedía explícitamente *rompedlo*, y lo rompieron |
 | [`preinscripciones/`](preinscripciones/) | las **predicciones selladas con huella antes de medir**, incluida la que predice el propio fracaso del autor |
