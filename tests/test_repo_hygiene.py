@@ -51,10 +51,22 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/a1/bases_a1.json", "ana@hosp.es"),                # el de la paciente ficticia de las bases A1
     ("piloto-agente/bucle/diseno-bucle-fable.md", "ssh caído"),     # prosa, no una orden
     ("verificador/cv/correr_conversor.py", "/app/Microsoft"),       # rutas de dentro del contenedor del arnés
+    ("verificador/cv/adaptadores/microsoft.json", "/app/Microsoft"),   # rutas de dentro del contenedor
+    ("verificador/cv/prueba_vc.py", "/app/Microsoft"),
+    ("verificador/cv/prueba_vc.py", "/in/a.hl7"),
+    ("verificador/cv/vc/juguete-docker.json", "/juguete/conversor_juguete.py"),
+    ("verificador/cv/vc/diseno-vc-fable.md", "/app/Microsoft"),
+    ("verificador/cv/vc/diseno-vc-fable.md", "/juguete/conversor_juguete.py"),
+    ("verificador/cv/vc/ejemplos/INFORME-linuxforhealth.json", "ana@hosp.es"),  # la paciente ficticia de A1
+    ("verificador/cv/vc/ejemplos/INFORME-linuxforhealth.md", "ana@hosp.es"),
     ("verificador/cv/lfh/copiar-libs.gradle", "/salida/lib"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
-JSON_ADMITIDOS = {"verificador/estructuras_25.json", "verificador/a1/ejemplos_cap3.json", "verificador/a1/bases_a1.json",
+JSON_ADMITIDOS = {"verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
+                  "verificador/cv/adaptadores/juguete.json", "verificador/cv/vc/juguete-docker.json",
+                  "verificador/cv/vc/preguntas_qvc.json", "verificador/cv/vc/ejemplos/INFORME-microsoft.json",
+                  "verificador/cv/vc/ejemplos/INFORME-linuxforhealth.json",
+                  "verificador/estructuras_25.json", "verificador/a1/ejemplos_cap3.json", "verificador/a1/bases_a1.json",
                   "verificador/bases_adt/bases_e2.json", "verificador/ve/PREVISION-VE2.json",
                   "verificador/ve/ADJUDICACION-VE2.json", "verificador/ve/TABLA-VE2.json",
                   # 24-oct-2026, el estudio de conversores: la previsión sellada y los agregados

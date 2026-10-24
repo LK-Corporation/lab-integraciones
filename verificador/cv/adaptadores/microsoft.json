@@ -1,0 +1,39 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "microsoft",
+ "_que": "Microsoft FHIR-Converter v7.0 (commit 253307f), construido desde su código como dice cv/CV1.md; corre en el runtime de .NET 6, sin red. Reproduce cv/correr_conversor.py: un contenedor por plantilla con un bucle dentro, fichero a fichero (DV-CV-11), plantilla por MSH-9 (DV-CV-12).",
+ "_rutas": "Las rutas de los montajes son relativas a --artefactos: la carpeta con ms/out (la herramienta compilada) y ms/src/data/Templates/Hl7v2 (las plantillas).",
+ "conversor": {
+  "nombre": "microsoft-fhir-converter",
+  "version": "v7.0 (253307f)",
+  "huella": {"partes": [{"carpeta": "codigo"}, {"carpeta": "plantillas"}]},
+  "_huella_esperada": "766f8938d0c12c382bec2edceeca4d3be4fd19900d0bd131ba880ac615fadf3e (cv/PREVISION-CV2.json)"
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "mcr.microsoft.com/dotnet/runtime:6.0",
+  "imagen_digest": null,
+  "_imagen_digest": "el estudio corrió con la imagen 75752d6e7d17 (cv/CV1.md); la herramienta registra el digest de la máquina",
+  "montajes": {
+   "codigo": {"origen": "ms/out", "destino": "/app"},
+   "plantillas": {"origen": "ms/src/data/Templates/Hl7v2", "destino": "/tpl"}
+  },
+  "entorno": {"DOTNET_CLI_TELEMETRY_OPTOUT": "1"},
+  "limites": {"segundos_por_mensaje": 60, "segundos_por_contenedor": 3600, "pids": 1024, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "mensaje",
+  "contenedor": "por_grupo",
+  "orden": ["dotnet", "/app/Microsoft.Health.Fhir.Liquid.Converter.Tool.dll", "convert",
+            "-d", "/tpl", "-r", "{plantilla}", "-n", "{entrada_fichero}", "-f", "{salida_fichero}"],
+  "plantilla": {"regla": "msh9_tipo_evento", "comprobar_fichero": {"montaje": "plantillas", "patron": "{plantilla}.liquid"}},
+  "duracion_stdout": null
+ },
+ "salida": {
+  "fichero": "{base}.json",
+  "fichero_error": null,
+  "forma": "envuelto",
+  "envoltura": {"ruta_bundle": ["FhirResource"], "ruta_estado": ["Status"], "estado_ok": "OK"},
+  "codificacion": "utf-8"
+ }
+}

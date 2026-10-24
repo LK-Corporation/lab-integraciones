@@ -1,0 +1,39 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "linuxforhealth",
+ "_que": "LinuxForHealth hl7v2-fhir-converter v1.1.0: el jar de Maven Central y sus dependencias (cv/lfh/pom.xml, DV-CV-3), con el arnés cv/lfh/Arnes.java compilado; corre en la imagen de Maven con Temurin 11, sin red. Reproduce cv/correr_conversor.py: un contenedor para toda la carpeta.",
+ "_rutas": "Las rutas son relativas a --artefactos: la carpeta con lfh/lib (los jar), lfh/clases (Arnes compilado) y lfh/Arnes.java.",
+ "conversor": {
+  "nombre": "linuxforhealth-hl7v2-fhir-converter",
+  "version": "v1.1.0 (Maven Central; DV-CV-3)",
+  "huella": {"partes": [{"carpeta": "lib"}, {"fichero": "lfh/Arnes.java"}]},
+  "_huella_esperada": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2 (cv/PREVISION-CV2.json)",
+  "declara": {"no_soporta": ["ADT^A02", "ADT^A11", "ADT^A13"]},
+  "_declara": "lo que su README no lista como soportado (L-4 de cv/CLASES-CV3.json); el juez los sigue contando como rechazo incorrecto (Q-CV-D-13) y el informe los separa (Q-VC-D-8)"
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "maven:3.9-eclipse-temurin-11",
+  "imagen_digest": null,
+  "_imagen_digest": "el estudio corrió con la imagen 7bb84a451705 (cv/CV1.md)",
+  "montajes": {
+   "lib": {"origen": "lfh/lib", "destino": "/lib2"},
+   "clases": {"origen": "lfh/clases", "destino": "/clases"}
+  },
+  "entorno": {},
+  "limites": {"segundos_por_mensaje": 60, "segundos_por_contenedor": 3600, "pids": 1024, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "lote",
+  "orden": ["java", "-cp", "/clases:/lib2/*", "Arnes", "{entrada_dir}", "{salida_dir}"],
+  "plantilla": null,
+  "duracion_stdout": "^(?P<nombre>\\S+) (?P<ms>\\d+) ms$"
+ },
+ "salida": {
+  "fichero": "{nombre}.json",
+  "fichero_error": "{nombre}.error",
+  "forma": "bundle",
+  "envoltura": null,
+  "codificacion": "utf-8"
+ }
+}

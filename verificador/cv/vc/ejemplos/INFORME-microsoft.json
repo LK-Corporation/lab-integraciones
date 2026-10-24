@@ -1,0 +1,1470 @@
+{
+ "herramienta": {
+  "nombre": "verificar_conversor",
+  "version": "1.0",
+  "huella": "1ea91cf28e2a2e83172726141075b457e65ac162ce9eca70c10a93a8c3dff559"
+ },
+ "juez": {
+  "huella": "40bbc3ef439a5f2aa95b6450b998644859f4a2f213e04ae2227437e2db5f77e1",
+  "servidor": "1.2",
+  "revision": "etapa de conversores (14l): adt_conv/oru_conv y perfil «guía» (S-CV-1..6), L-CV-1..16, AMB-CV-1..10, Q-CV-D-1..14 (abiertas Q-CV-D-15/16), DV-CV-1..18; antes, 14k: S104-S107, L-VE-1..8, DV-VE-1..14"
+ },
+ "conversor": {
+  "id": "microsoft",
+  "nombre": "microsoft-fhir-converter",
+  "version": "v7.0 (253307f)",
+  "huella": "766f8938d0c12c382bec2edceeca4d3be4fd19900d0bd131ba880ac615fadf3e",
+  "huella_con_nombres": "1118ff9a574e49e438ed616b7d09e77f7c791d3ef7ec4439b6c092c7a6d29172",
+  "imagen": "mcr.microsoft.com/dotnet/runtime:6.0",
+  "imagen_digest": "sha256:75752d6e7d17246d939d8f0717a2daf14ca276e1fd6921caa489a70e24498881"
+ },
+ "corpus": {
+  "huella": "27d179bcb6408dcd2eec584e178dd2fb6dde9f9e151f62a310239afa2c5a889c",
+  "huella_adt_oru_muestras": "f2321d41fe7ee19204023ece85e826bb595dab9885211e857a97bf3a179dde66",
+  "por_corpus": {
+   "adt": "7b4e7cfba0411d29fcc8a57575c6104aa6c7cabbb6718a13515c8bc6b57f6242",
+   "oru": "b5be5675b2047bf4429741d808e1c5d24d473f31d9aae9bc9f2a5e4f0ba90891",
+   "minimos": "53a33c15a5f16833cd4afd608e9288c04d837e61eae9ddc20722cc0be08150e1"
+  },
+  "n": {
+   "adt": 263,
+   "oru": 40,
+   "muestras": 0,
+   "minimos": 68,
+   "propio": 0
+  }
+ },
+ "caja": {
+  "tipo": "docker",
+  "restricciones": [
+   "--network none",
+   "--read-only",
+   "--tmpfs /tmp",
+   "--cap-drop ALL",
+   "--security-opt no-new-privileges",
+   "--user 65534:65534",
+   "--pids-limit 1024"
+  ],
+  "limites": {
+   "segundos_por_mensaje": 60,
+   "segundos_por_contenedor": 3600,
+   "pids": 1024,
+   "memoria_mb": null
+  }
+ },
+ "totales": {
+  "n": 303,
+  "juzgados": 303,
+  "no_juzgados": 0
+ },
+ "por_corpus": {
+  "adt": {
+   "n": 263,
+   "estados": {
+    "bundle": 191,
+    "error": 72
+   },
+   "categorias": {
+    "correcto": 6,
+    "fallo_silencioso": 185,
+    "rechazo_incorrecto": 72
+   },
+   "porcentajes": {
+    "correcto": 2.3,
+    "fallo_silencioso": 70.3,
+    "rechazo_incorrecto": 27.4
+   }
+  },
+  "oru": {
+   "n": 40,
+   "estados": {
+    "bundle": 39,
+    "error": 1
+   },
+   "categorias": {
+    "correcto": 33,
+    "fallo_silencioso": 6,
+    "rechazo_incorrecto": 1
+   },
+   "porcentajes": {
+    "correcto": 82.5,
+    "fallo_silencioso": 15.0,
+    "rechazo_incorrecto": 2.5
+   }
+  }
+ },
+ "mecanismos": {
+  "valor_distinto": [
+   {
+    "hecho": "PV1-3",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 57,
+    "corpus": {
+     "adt": 57
+    },
+    "ejemplo": {
+     "caso": "adt/A03-001",
+     "que": "Encounter.location '^^MED^001^HOSPITAL^A^B^1^': la cadena de Location no conserva ['001', 'B', '1']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-2",
+    "ruta": "Encounter.status",
+    "firma": "Encounter.status: esperado uno de <v>, observado <v>",
+    "n": 16,
+    "corpus": {
+     "adt": 16
+    },
+    "ejemplo": {
+     "caso": "adt/A04-019",
+     "que": "Encounter.status: esperado uno de ['finished', 'planned'], observado 'in-progress'"
+    },
+    "citas": [
+     "[CM table-hl70004-to-encounter-status]",
+     "[CM table-hl70004-to-v3-actcode]",
+     "[G PV1_Encounter.csv:5-6]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-11",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 12,
+    "corpus": {
+     "adt": 12
+    },
+    "ejemplo": {
+     "caso": "adt/A02-004",
+     "que": "Encounter.location '^^PRE^000^HOSPITAL^A^B^1^': la cadena de Location no conserva ['000', 'B', '1']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "OBX-5",
+    "ruta": "Observation.valueQuantity.comparator",
+    "firma": "Observation.valueQuantity.comparator: esperado <v>, observado <v>",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B09",
+     "que": "Observation.valueQuantity.comparator: esperado '<', observado '<>'"
+    },
+    "citas": [
+     "[CM segment-obx-to-observation OBX-5]",
+     "[G OBX_Observation.csv:8-26]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "OBX-5",
+    "ruta": "Observation.valueQuantity.value",
+    "firma": "Observation.valueQuantity.value: esperado <v>, observado <v> (la precisión cuenta: Q-CV-D-<n>)",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B29",
+     "que": "Observation.valueQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)"
+    },
+    "citas": [
+     "[CM segment-obx-to-observation OBX-5]",
+     "[G OBX_Observation.csv:8-26]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "OBX-5",
+    "ruta": "Observation.valueString",
+    "firma": "Observation.valueString: esperado <v>, observado <v>",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B11",
+     "que": "Observation.valueString: esperado ['Primera linea\\\\.br\\\\Segunda linea'], observado 'Primera linea\\\\nSegunda linea'"
+    },
+    "citas": [
+     "[CM segment-obx-to-observation OBX-5]",
+     "[G OBX_Observation.csv:8-26]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-6",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 1,
+    "corpus": {
+     "adt": 1
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A11-28",
+     "que": "Encounter.location 'URG^1^A': la cadena de Location no conserva ['1', 'A']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "dato_perdido": [
+   {
+    "hecho": "PV1-3",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 184,
+    "corpus": {
+     "adt": 184
+    },
+    "ejemplo": {
+     "caso": "adt/A01-001",
+     "que": "Encounter.location '^^ICU^001^HOSPITAL^A^B^1^': la cadena de Location no conserva ['001', 'B', '1']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-11",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 14,
+    "corpus": {
+     "adt": 14
+    },
+    "ejemplo": {
+     "caso": "adt/A02-004",
+     "que": "Encounter.location '^^PRE^000^HOSPITAL^A^B^1^': la cadena de Location no conserva ['000', 'B', '1']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-6",
+    "ruta": "Encounter.location",
+    "firma": "Encounter.location <v>: la cadena de Location no conserva <v>",
+    "n": 11,
+    "corpus": {
+     "adt": 11
+    },
+    "ejemplo": {
+     "caso": "adt/A02-004",
+     "que": "Encounter.location '^^OLD^002^HOSPITAL^A^B^1^': la cadena de Location no conserva ['002', 'B', '1']"
+    },
+    "citas": [
+     "[CM datatype-pl-to-location]",
+     "[G PV1_Encounter.csv:7-9,12-13,27-31,68-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-8",
+    "ruta": "Encounter.participant",
+    "firma": "Encounter.participant REF: falta <v>",
+    "n": 8,
+    "corpus": {
+     "adt": 8
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A01-03",
+     "que": "Encounter.participant REF: falta 'D21^Otro^Ana'"
+    },
+    "citas": [
+     "[G MSG_ADT_A01.csv:36] PV1 → Encounter[1]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PID-12",
+    "ruta": "Patient.address.district",
+    "firma": "Patient.address.district: falta <v>",
+    "n": 6,
+    "corpus": {
+     "adt": 6
+    },
+    "ejemplo": {
+     "caso": "adt/A02-004",
+     "que": "Patient.address.district: falta '03'"
+    },
+    "citas": [
+     "[G MSG_ADT_A01.csv:15] PID → Patient[1]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-45",
+    "ruta": "Encounter.period.end",
+    "firma": "Encounter.period.end: falta (PV1-<n> = <v>)",
+    "n": 5,
+    "corpus": {
+     "adt": 5
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A13-31",
+     "que": "Encounter.period.end: falta (PV1-45 = '202603151200')"
+    },
+    "citas": [
+     "[G PV1_Encounter.csv:72-73]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PID-16",
+    "ruta": "Patient.maritalStatus",
+    "firma": "Patient.maritalStatus: falta (<v>, <v>)",
+    "n": 1,
+    "corpus": {
+     "adt": 1
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A13-32",
+     "que": "Patient.maritalStatus: falta ('http://terminology.hl7.org/CodeSystem/v3-NullFlavor', 'NAVU')"
+    },
+    "citas": [
+     "[CM table-hl70002-to-v3-maritalstatus]",
+     "[G PID_Patient.csv:27]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "dato_inventado": [
+   {
+    "hecho": "PID-30",
+    "ruta": "Patient.deceasedBoolean",
+    "firma": "Patient.deceasedBoolean: True sin PID-<n>",
+    "n": 5,
+    "corpus": {
+     "adt": 5
+    },
+    "ejemplo": {
+     "caso": "adt/A02-016",
+     "que": "Patient.deceasedBoolean: True sin PID-30"
+    },
+    "citas": [
+     "[CM table-hl70136-to-special-values]",
+     "[G PID_Patient.csv:51]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "codigo_mal_mapeado": [
+   {
+    "hecho": "PV1-10",
+    "ruta": "Encounter.serviceType",
+    "firma": "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>",
+    "n": 14,
+    "corpus": {
+     "adt": 14
+    },
+    "ejemplo": {
+     "caso": "adt/A02-004",
+     "que": "Encounter.serviceType: esperado ('http://terminology.hl7.org/CodeSystem/service-type', '382') (de 'MED'), observado [(None, 'MED')]"
+    },
+    "citas": [
+     "[CM table-hl70069-to-service-type]",
+     "[G PV1_Encounter.csv:26]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PV1-2",
+    "ruta": "Encounter.class",
+    "firma": "Encounter.class: esperado (<v>, <v>) (de <v>), observado <v>",
+    "n": 2,
+    "corpus": {
+     "adt": 2
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A04-15",
+     "que": "Encounter.class: esperado ('http://terminology.hl7.org/CodeSystem/v2-0004', 'B') (de 'B'), observado [('http://terminology.hl7.org/CodeSystem/v3-ActCode', 'OBS')]"
+    },
+    "citas": [
+     "[CM table-hl70004-to-encounter-status]",
+     "[CM table-hl70004-to-v3-actcode]",
+     "[G PV1_Encounter.csv:5-6]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "valor_imposible_convertido": [
+   {
+    "hecho": "PID-8",
+    "ruta": "Patient.gender",
+    "firma": "Patient.gender: <v> convertido desde <v>, fuera de la <n>",
+    "n": 2,
+    "corpus": {
+     "adt": 2
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A11-25",
+     "que": "Patient.gender: 'X' convertido desde 'X', fuera de la 0001"
+    },
+    "citas": [
+     "[CM table-hl70001-to-administrative-gender]",
+     "[F Patient.gender required]",
+     "[G PID_Patient.csv:14]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "recurso": [
+   {
+    "hecho": "OBX-3",
+    "ruta": "falta",
+    "firma": "falta la Observation del OBX <n>",
+    "n": 3,
+    "corpus": {
+     "oru": 3
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B09",
+     "que": "falta la Observation del OBX 1.2"
+    },
+    "citas": [
+     "[G MSG_ORU_R01.csv:67-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "OBX",
+    "ruta": "Observation",
+    "firma": "Observation <id> sin origen propio en el mensaje",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B14",
+     "que": "Observation urn:uuid:e7f80a26-e33e-cc27-eaa8-1377fc8fa1b5 sin origen propio en el mensaje"
+    },
+    "citas": [
+     "[G MSG_ORU_R01.csv:67-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "referencia_rota": [
+   {
+    "hecho": "OBR",
+    "ruta": "DiagnosticReport.result",
+    "firma": "DiagnosticReport.result <ref>: no es una Observation de su OBR",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B14",
+     "que": "DiagnosticReport.result {'reference': 'Observation/e7f80a26-e33e-cc27-eaa8-1377fc8fa1b5'}: no es una Observation de su OBR"
+    },
+    "citas": [
+     "[G MSG_ORU_R01.csv:67-69]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PID",
+    "ruta": "Observation.subject",
+    "firma": "Observation.subject: <ref> apunta a un Patient que no está en el Bundle, y el mensaje no trae PID",
+    "n": 1,
+    "corpus": {
+     "oru": 1
+    },
+    "ejemplo": {
+     "caso": "oru/ORU-B30",
+     "que": "Observation.subject: {'reference': 'Patient/364bf61f-d0ac-3b9a-d91c-dbc2d9d9f46f'} apunta a un Patient que no está en el Bundle, y el mensaje no trae PID"
+    },
+    "citas": [
+     "[F Bundle «Resolving references in Bundles»]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ],
+  "fhir_invalido": [
+   {
+    "hecho": "PID-8",
+    "ruta": "Patient.gender",
+    "firma": "Patient.gender: <v> fuera de administrative-gender (required)",
+    "n": 8,
+    "corpus": {
+     "adt": 8
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A01-04",
+     "que": "Patient.gender: 'Z' fuera de administrative-gender (required)"
+    },
+    "citas": [
+     "[CM table-hl70001-to-administrative-gender]",
+     "[F Patient.gender required]",
+     "[G PID_Patient.csv:14]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PID-8",
+    "ruta": "Patient.gender",
+    "firma": "Patient.gender: <v> convertido desde <v>, fuera de la <n>",
+    "n": 2,
+    "corpus": {
+     "adt": 2
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A11-25",
+     "que": "Patient.gender: 'X' convertido desde 'X', fuera de la 0001"
+    },
+    "citas": [
+     "[CM table-hl70001-to-administrative-gender]",
+     "[F Patient.gender required]",
+     "[G PID_Patient.csv:14]"
+    ],
+    "clase_cv": "sin_contraste"
+   },
+   {
+    "hecho": "PID-8",
+    "ruta": "Patient.gender",
+    "firma": "Patient.gender: <v> para <v>",
+    "n": 1,
+    "corpus": {
+     "adt": 1
+    },
+    "ejemplo": {
+     "caso": "adt/A1-A08-20",
+     "que": "Patient.gender: 'f' para 'f'"
+    },
+    "citas": [
+     "[CM table-hl70001-to-administrative-gender]",
+     "[F Patient.gender required]",
+     "[G PID_Patient.csv:14]"
+    ],
+    "clase_cv": "sin_contraste"
+   }
+  ]
+ },
+ "rechazos": {
+  "incorrectos": [
+   {
+    "firma_texto": "el conversor devolvió error <v> con un mensaje que la guía convierte",
+    "n": 73,
+    "ejemplo": {
+     "caso": "adt/A01-004",
+     "texto": "el conversor devolvió error 'Process failed: The format of Date or DateTime is invalid: L.\\n' con un mensaje que la guía convierte"
+    },
+    "declarado_por_adaptador": false
+   }
+  ],
+  "aceptables": {
+   "n": 0,
+   "por_motivo": {}
+  }
+ },
+ "convenciones": {
+  "n": 7,
+  "detalle": [
+   {
+    "hecho": "OBX-11",
+    "firma": "Observation.status: <v> para <v> (sin destino en el ConceptMap)",
+    "n": 3
+   },
+   {
+    "hecho": "OBX-5",
+    "firma": "OBX-<n> repetido (<n>): forma admitida por la guía (MSG_ORU_R01.csv:<n>-<n>)",
+    "n": 2
+   },
+   {
+    "hecho": "OBR-25",
+    "firma": "DiagnosticReport.status: <v> para <v> (sin destino en el ConceptMap)",
+    "n": 1
+   },
+   {
+    "hecho": "OBX-8",
+    "firma": "Observation.interpretation <v> para <v>, fuera del ConceptMap",
+    "n": 1
+   }
+  ]
+ },
+ "pares_minimos": {
+  "aplica": true,
+  "n": 34,
+  "reproducidos": 18,
+  "detalle": [
+   {
+    "id": "M01-nm-punto-inicial",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "valor_distinto",
+     "texto": "valueQuantity.value"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Observation.valueQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M02-genero-fuera-de-tabla",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PID-8",
+     "subtipo": "fhir_invalido",
+     "texto": "gender"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Patient.gender: 'Z' convertido desde 'Z', fuera de la 0001",
+      "Patient.gender: 'Z' fuera de administrative-gender (required)"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M03-pda-sin-muerte",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PID-30",
+     "subtipo": "dato_inventado",
+     "texto": "deceasedBoolean"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Patient.deceasedBoolean: True sin PID-30"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M03b-pda-en-a01",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PID-30",
+     "subtipo": "dato_inventado",
+     "texto": "deceasedBoolean"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "M04-pv1-8-repetido",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PV1-8",
+     "subtipo": "dato_perdido",
+     "texto": "participant"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Encounter.participant REF: falta 'D22^Dos^Eva'"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M05-clase-b",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PV1-2",
+     "subtipo": "codigo_mal_mapeado",
+     "texto": "class"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Encounter.class: esperado ('http://terminology.hl7.org/CodeSystem/v2-0004', 'B') (de 'B'), observado [('http://terminology.hl7.org/CodeSystem/v3-ActCode', 'OBS')]"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M06-obx-tras-nte",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX(2)-3",
+     "subtipo": "recurso_ausente",
+     "texto": "Observation"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "falta la Observation del OBX 1.2"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M06b-dos-nte",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX(2)-3",
+     "subtipo": "recurso_ausente",
+     "texto": "Observation"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "falta la Observation del OBX 1.2"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M06c-nte-al-final",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX(2)-3",
+     "subtipo": "recurso_ausente",
+     "texto": "Observation"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "M06d-tres-obx",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX(2)-3",
+     "subtipo": "recurso_ausente",
+     "texto": "Observation"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "falta la Observation del OBX 1.2"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M07-oru-sin-pid",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": [
+      "PID-3",
+      "PID"
+     ],
+     "subtipo": "referencia_rota",
+     "texto": "subject"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Observation.subject: {'reference': 'Patient/364bf61f-d0ac-3b9a-d91c-dbc2d9d9f46f'} apunta a un Patient que no está en el Bundle, y el mensaje no trae PID",
+      "DiagnosticReport.subject: {'reference': 'Patient/364bf61f-d0ac-3b9a-d91c-dbc2d9d9f46f'} apunta a un Patient que no está en el Bundle, y el mensaje no trae PID"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M08-estado-civil-t",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PID-16",
+     "subtipo": "dato_perdido",
+     "texto": "maritalStatus"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Patient.maritalStatus: falta ('http://terminology.hl7.org/CodeSystem/v3-NullFlavor', 'NAVU')"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M10-pl9-descripcion",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "PV1-3",
+     "subtipo": "dato_perdido",
+     "texto": "PL.9"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Encounter.location 'UCI^3^1^HOSP^^^^^Box 3': la cadena de Location no conserva ['3', '1', 'HOSP']",
+      "Encounter.location 'UCI^3^1^HOSP^^^^^Box 3': la descripción 'UCI--3--1--HOSP--Box 3' contiene PL.9 'Box 3' sin ser PL.9"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "M09-ft-br",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "valor_distinto",
+     "texto": "valueString"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Observation.valueString: esperado ['Primera linea\\\\.br\\\\Segunda linea'], observado 'Primera linea\\\\nSegunda linea'"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "L01-sin-location",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PV1-3",
+     "subtipo": "dato_perdido",
+     "texto": "location"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Encounter.location 'UCI^3^1^HOSP': la cadena de Location no conserva ['3', '1', 'HOSP']"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "L02-estado-civil-a",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-16",
+     "subtipo": "codigo_mal_mapeado",
+     "texto": "maritalStatus"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L03-pv1-10-med",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PV1-10",
+     "subtipo": "codigo_mal_mapeado",
+     "texto": "serviceType"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Encounter.serviceType: esperado ('http://terminology.hl7.org/CodeSystem/service-type', '382') (de 'MED'), observado [(None, 'MED')]"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "L04-sad-2-3",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-11",
+     "subtipo": "valor_distinto",
+     "texto": "address.line"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L05-genero-n",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-8",
+     "subtipo": "valor_distinto",
+     "texto": "gender"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L06-obx-sin-tipo",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-3",
+     "subtipo": "recurso_ausente",
+     "texto": "Observation"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L07-ft",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "dato_perdido",
+     "texto": "valueString"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L08-tm",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "dato_perdido",
+     "texto": "valueTime"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L09-obx-11-d",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-11",
+     "subtipo": "codigo_mal_mapeado",
+     "texto": "status"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L10-obr-25-i",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBR-25",
+     "subtipo": "codigo_mal_mapeado",
+     "texto": "status"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L11-sn-rango",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "valor_distinto",
+     "texto": "SN"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L12-sn-distinto",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-5",
+     "subtipo": "valor_distinto",
+     "texto": "SN"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Observation.value[x] SN '<>^5': esperado valueString, observado ['valueQuantity']"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "L13-pv1-52",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PV1-52",
+     "subtipo": "dato_perdido",
+     "texto": "participant"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L14-xpn-6-titulo",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-5",
+     "subtipo": "dato_perdido",
+     "texto": "suffix"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L15-xtn-12",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-13",
+     "subtipo": "dato_perdido",
+     "texto": "telecom"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L16-cx-4-solo-nombre",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-3",
+     "subtipo": "dato_perdido",
+     "texto": "CX.4"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": false
+   },
+   {
+    "id": "L17-pid-30-no",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "PID-30",
+     "subtipo": "valor_imposible_convertido",
+     "texto": "deceased"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Patient.deceasedBoolean: False desde 'NO', fuera de la 0136"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "L18-unidad-cwe-2",
+    "para_conversor": "linuxforhealth",
+    "objetivo": {
+     "hecho": "OBX-6",
+     "subtipo": "valor_distinto",
+     "texto": "unit"
+    },
+    "caso": {
+     "estado": "bundle",
+     "categoria": "correcto",
+     "sale": false,
+     "que": []
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": true,
+     "que": [
+      "Observation.valueQuantity.unit: esperado 'mg/dL', observado None"
+     ]
+    },
+    "reproduce": false
+   },
+   {
+    "id": "R01-nulo-en-dtm",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "MSH-9",
+     "subtipo": "error",
+     "texto": ""
+    },
+    "caso": {
+     "estado": "error",
+     "categoria": "rechazo_incorrecto",
+     "sale": true,
+     "que": [
+      "el conversor devolvió error 'Process failed: The format of Date or DateTime is invalid: \\\\\"\\\\\".\\n' con un mensaje que la guía convierte"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   },
+   {
+    "id": "R02-nm-cero-inicial",
+    "para_conversor": "microsoft",
+    "objetivo": {
+     "hecho": "MSH-9",
+     "subtipo": "error",
+     "texto": ""
+    },
+    "caso": {
+     "estado": "error",
+     "categoria": "rechazo_incorrecto",
+     "sale": true,
+     "que": [
+      "el conversor devolvió error 'f02afd-9198-d898-e8be-dbae6c8edde0\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\\\"http://www.w3.org/1999/xhtml\\\\\"><p><span>Resource bundle generated on 2026-10-24T22:43:12.723Z using Microsoft FHIR ' con un mensaje que la guía convierte"
+     ]
+    },
+    "control": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "sale": false,
+     "que": []
+    },
+    "reproduce": true
+   }
+  ]
+ },
+ "no_juzgado": {
+  "fuera_de_alcance": [],
+  "indeterminado": {
+   "sin_salida": [],
+   "lectura": [],
+   "emparejamiento": []
+  },
+  "sin_evidencia": [],
+  "sin_msh": [],
+  "muestras": "no disponibles"
+ },
+ "sensibilidad": {
+  "Q-CV-D-3": {
+   "fallo_silencioso_con_jev": 191,
+   "con_alternativa": 191
+  },
+  "Q-CV-D-5": {
+   "fallo_silencioso_con_jev": 191,
+   "con_alternativa": 191
+  },
+  "Q-CV-D-9": {
+   "fallo_silencioso_con_jev": 191,
+   "con_alternativa": 191
+  }
+ },
+ "contraste_con_el_proyecto": {
+  "hecho": false,
+  "texto": "Este informe dice qué hallazgos ve el juez y con qué cita. **No dice si el proyecto del conversor ya los tiene declarados** (salidas esperadas, pruebas, documentación o issues): ese contraste lo hace una persona, como en `cv/RESULTADO-CV3.md`, y hasta entonces ningún mecanismo de aquí es «nuevo» ni «confirmado». De las cuatro condiciones del estudio, la herramienta comprueba tres (cita, clase, par mínimo) y deja la cuarta sin hacer."
+ },
+ "limites": {
+  "L-CV": [
+   "L-CV-1",
+   "L-CV-2",
+   "L-CV-3",
+   "L-CV-4",
+   "L-CV-5",
+   "L-CV-6",
+   "L-CV-7",
+   "L-CV-8",
+   "L-CV-9",
+   "L-CV-10",
+   "L-CV-11",
+   "L-CV-12",
+   "L-CV-13",
+   "L-CV-14",
+   "L-CV-15",
+   "L-CV-16"
+  ],
+  "L-VC": {
+   "L-VC-1": "La herramienta no sabe si una discrepancia la tiene declarada el proyecto: no lee salidas esperadas, pruebas, documentación ni issues. Aquí todo es «sin_contraste».",
+   "L-VC-2": "Solo juzga lo que juzgan adt_conv y oru_conv: ADT de los ocho eventos y ORU^R01. Otro tipo de mensaje entra en el corpus y el juez lo aparta como fuera de alcance.",
+   "L-VC-3": "Solo conversores que corran como programa de línea de órdenes dentro de un contenedor Docker, leyendo y escribiendo ficheros. Un servicio HTTP, una biblioteca o un conversor que necesite red no caben en el adaptador.",
+   "L-VC-4": "La imagen debe estar ya en la máquina: la herramienta no descarga nada y no comprueba de dónde salió; registra su digest.",
+   "L-VC-5": "La huella del conversor con la fórmula del estudio no ve nombres ni rutas: renombrar ficheros no la cambia. Por eso va también la huella con nombres (Q-VC-D-1).",
+   "L-VC-6": "«vacio» y «sin_respuesta» no distinguen la caja del conversor (L-CV-8). Tras un tiempo vencido, los mensajes sin salida se reintentan una vez, uno a uno (Q-VC-D-9).",
+   "L-VC-7": "Las muestras de los proyectos no viajan con el repositorio: sin --muestras, el corpus son las bases A1/E2, las ORU y, con los dos conversores del estudio, los 68 mínimos; todo sintético y en v2.5.",
+   "L-VC-8": "El control caso por caso exige el detalle del estudio, que no es público; desde la copia pública se comprueban las identidades, los agregados por categoría y los pares mínimos.",
+   "L-VC-9": "Las restricciones de la caja se comprueban en la orden construida, no en el núcleo: un Docker sin raíz, con --userns-remap o con otro runtime puede comportarse distinto.",
+   "L-VC-10": "duracion_ms es aproximado cuando varios mensajes comparten contenedor; la herramienta no mide rendimiento.",
+   "L-VC-11": "No se comprueba que el conversor sea determinista; una corrida es una corrida.",
+   "L-VC-12": "Un Bundle de más de 4.000.000 de caracteres no se juzga (error demasiado_grande, DV-CV-5).",
+   "L-VC-13": "Un mensaje sin plantilla disponible (comprobar_fichero) se marca error sin_plantilla sin entrar en la caja.",
+   "L-VC-14": "La herramienta hereda las decisiones, límites y ambigüedades del juez (Q-CV-D-n, L-CV-n, AMB-CV-n); no los cambia.",
+   "L-VC-15": "Los 68 mínimos son sondas escritas para dos conversores concretos: que se reproduzca uno no dice que sea una discrepancia del conversor contrastada con su proyecto."
+  }
+ }
+}

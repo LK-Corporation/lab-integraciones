@@ -1,0 +1,12 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "juguete-docker",
+ "_que": "El juguete dentro de la caja de Docker (paso 0 del control, cv/vc/diseno-vc-fable.md §6): sus veredictos deben ser los de proceso_local. --artefactos apunta a cv/.",
+ "conversor": {"nombre": "juguete-laboratorio", "version": "1", "huella": {"partes": [{"fichero": "conversor_juguete.py"}]}},
+ "caja": {"tipo": "docker", "imagen": "python:3.12-slim", "imagen_digest": null,
+          "montajes": {"juguete": {"origen": ".", "destino": "/juguete"}}, "entorno": {},
+          "limites": {"segundos_por_mensaje": 30, "segundos_por_contenedor": 600, "pids": 256, "memoria_mb": null}},
+ "invocacion": {"modo": "lote", "orden": ["python3", "/juguete/conversor_juguete.py", "{entrada_dir}", "{salida_dir}"], "plantilla": null,
+                "duracion_stdout": "^(?P<nombre>\\S+) (?P<ms>\\d+) ms$"},
+ "salida": {"fichero": "{base}.json", "fichero_error": "{base}.error", "forma": "bundle", "envoltura": null, "codificacion": "utf-8"}
+}

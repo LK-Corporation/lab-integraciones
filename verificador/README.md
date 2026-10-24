@@ -1,7 +1,8 @@
 # El verificador: un juez determinista para circuitos de integración HL7 v2.5 → FHIR R4
 
 Es el juez que usan los dos estudios del agente ([`../piloto-agente/`](../piloto-agente/)), publicado con su código el
-22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR (abajo).
+22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR, y
+cualquiera puede pasar el suyo con un adaptador y una orden (abajo).
 Recibe la evidencia de un caso:
 - el mensaje HL7 v2.5 que se envió;
 - el acuse que devolvió el circuito;
@@ -51,9 +52,47 @@ debe terminar en verde:
 | `python3 ve/prueba_ve.py` | `PRUEBAS VE (despues): TODO BIEN (21 pruebas, 7 controles)` |
 | `python3 prueba_conversion.py` | `PRUEBAS CONVERSIÓN: TODO BIEN (116 comprobaciones, 28 pruebas)` |
 | `python3 conversion.py --autoprueba` | `AUTOPRUEBA DE conversion: TODO BIEN` |
+| `python3 cv/prueba_vc.py` | `PRUEBAS VC: TODO BIEN (152 comprobaciones, 26 pruebas)` |
 
 Sin los perfiles privados (abajo), `prueba_adt.py` salta la prueba que depende de ellos (S95). Y la P58 del MCP espera 3
 casos en vez de 6, porque el corpus de la fase 13 tampoco está aquí.
+
+## Verifica tu conversor en un comando (etapa 18, 24-oct-2026)
+
+**Cualquiera puede pasar su conversor HL7 v2 → FHIR R4 por el verificador** con un fichero de adaptador JSON y una orden, sin
+escribir código:
+
+```bash
+python3 cv/verificar_conversor.py <adaptador.json> <carpeta de salida> --artefactos <carpeta con el conversor>
+```
+
+La herramienta hace cinco cosas:
+1. corre el conversor en una caja de Docker sin red, de solo lectura, sin privilegios ni capacidades;
+2. escribe una evidencia por mensaje sobre el corpus público y la juzga con el mismo juez, sin tocarlo;
+3. agrega por las ocho clases que cambian el significado del dato;
+4. evalúa los pares mínimos del estudio;
+5. escribe `INFORME.md` e `INFORME.json`.
+
+**Lo que no puede saber va antes de los resultados:** si el proyecto del conversor ya tenía declarada cada discrepancia. Ese
+contraste lo hace una persona; hasta entonces, cada mecanismo sale como «sin_contraste».
+
+**El control:** con los adaptadores de Microsoft y LinuxForHealth
+([`cv/adaptadores/`](cv/adaptadores/)), da los mismos veredictos que el estudio en los 368 casos de cada conversor, caso por caso y con el juez final del
+estudio, el de CV4: 0 diferencias. Los pares mínimos también coinciden. La comparación caso por caso se hizo en la
+máquina del laboratorio, con un detalle que no es público; lo que se puede repetir desde aquí está en
+[`cv/vc/CONTROL-VC.md`](cv/vc/CONTROL-VC.md).
+
+- **Lo que se publica de la etapa:**
+  - el resultado, en [`cv/VC.md`](cv/VC.md), y el control, en [`cv/vc/CONTROL-VC.md`](cv/vc/CONTROL-VC.md);
+  - el diseño a ciegas, en [`cv/vc/diseno-vc-fable.md`](cv/vc/diseno-vc-fable.md);
+  - las nueve decisiones de Jev, en [`cv/vc/decision-jev-qvc.md`](cv/vc/decision-jev-qvc.md);
+  - la pregunta y sus condiciones, en [`ANTES-ETAPA-VERIFICA-CONVERSOR.md`](ANTES-ETAPA-VERIFICA-CONVERSOR.md);
+  - dos informes de ejemplo, en [`cv/vc/ejemplos/`](cv/vc/ejemplos/).
+- **Las pruebas** ([`cv/prueba_vc.py`](cv/prueba_vc.py)) corren sin Docker, con un conversor de juguete.
+- **Lo que no hace:**
+  - no descarga nada;
+  - solo admite programas de línea de órdenes que lean y escriban ficheros;
+  - solo juzga ADT de los ocho eventos y ORU^R01.
 
 ## El estudio de conversores (14l, 23-24 oct-2026)
 

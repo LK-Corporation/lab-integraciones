@@ -1,0 +1,11 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "juguete",
+ "_que": "El conversor de juguete del laboratorio (cv/conversor_juguete.py), el de las pruebas. Es lo único que la herramienta corre fuera de Docker (S-VC-4); --artefactos apunta a la carpeta cv/.",
+ "conversor": {"nombre": "juguete-laboratorio", "version": "1", "huella": {"partes": [{"fichero": "conversor_juguete.py"}]}},
+ "caja": {"tipo": "proceso_local", "montajes": {}, "entorno": {},
+          "limites": {"segundos_por_mensaje": 5, "segundos_por_contenedor": 60, "pids": 64, "memoria_mb": null}},
+ "invocacion": {"modo": "lote", "orden": ["python3", "conversor_juguete.py", "{entrada_dir}", "{salida_dir}"], "plantilla": null,
+                "duracion_stdout": null},
+ "salida": {"fichero": "{base}.json", "fichero_error": "{base}.error", "forma": "bundle", "envoltura": null, "codificacion": "utf-8"}
+}

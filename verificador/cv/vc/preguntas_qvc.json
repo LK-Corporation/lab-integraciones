@@ -1,0 +1,81 @@
+{
+ "q1_huella": {
+  "type": "choice",
+  "instructions": "Pregunta 1: ¿qué fórmula lleva la huella del conversor?",
+  "criteria": {
+   "estudio": "La del estudio, sin nombres de fichero, comparable con las huellas publicadas.",
+   "con_nombres": "Con rutas y nombres de fichero: más fuerte, no comparable con el estudio.",
+   "las_dos": "La del estudio en la evidencia y, además, la de nombres en el registro de la corrida y en el informe."
+  }
+ },
+ "q2_vacio": {
+  "type": "choice",
+  "instructions": "Pregunta 2: un conversor termina con código 0 sin escribir salida ni error. ¿Qué estado registra la herramienta?",
+  "criteria": {
+   "vacio": "Vacío: el juez dirá indeterminado.",
+   "error_0": "Error con código «0», como habría hecho el arnés del estudio."
+  }
+ },
+ "q3_minimos": {
+  "type": "choice",
+  "instructions": "Pregunta 3: ¿se juzgan los 68 mínimos con un conversor que no es ninguno de los dos del estudio?",
+  "criteria": {
+   "siempre": "Siempre, en una sección aparte que dice para qué conversor se escribió cada par.",
+   "opcion": "Solo si se pide con una opción.",
+   "solo_estudio": "Solo con los dos conversores del estudio."
+  }
+ },
+ "q4_imagen": {
+  "type": "choice",
+  "instructions": "Pregunta 4: ¿imagen del contenedor por etiqueta o por digest?",
+  "criteria": {
+   "exigir_digest": "Exigir siempre el digest en el adaptador.",
+   "resolver_y_registrar": "Admitir la etiqueta, resolver el digest local y registrarlo; exigir igualdad solo si el adaptador da el digest.",
+   "solo_avisar": "Admitir la etiqueta y solo avisar."
+  }
+ },
+ "q5_envuelto": {
+  "type": "choice",
+  "instructions": "Pregunta 5: ¿cómo se saca el Bundle de una salida envuelta?",
+  "criteria": {
+   "recorte": "Recortando el texto original por posiciones, sin reescribir (conserva 1.20).",
+   "loads_dumps": "json.loads + json.dumps, como el arnés del estudio (pierde los ceros finales).",
+   "cadenas": "json.loads con números como cadenas y luego dumps (los números salen escritos como cadenas)."
+  }
+ },
+ "q6_memoria": {
+  "type": "choice",
+  "instructions": "Pregunta 6: ¿límite de memoria por omisión del contenedor?",
+  "criteria": {
+   "ninguno": "Ninguno, como el estudio, siempre con límite de procesos.",
+   "2048": "2048 MB.",
+   "obligatorio": "Obligatorio declararlo en el adaptador."
+  }
+ },
+ "q7_mismo": {
+  "type": "choice",
+  "instructions": "Pregunta 7: ¿qué es «el mismo veredicto» en el control?",
+  "criteria": {
+   "categoria_subtipo": "Categoría y subtipo.",
+   "mas_hallazgos": "Además, el conjunto de hallazgos que cuentan como (campo, clase, subtipo).",
+   "mas_textos": "Además, el texto de cada hallazgo."
+  }
+ },
+ "q8_no_soporta": {
+  "type": "choice",
+  "instructions": "Pregunta 8: el adaptador declara tipos que el proyecto dice no convertir. ¿Cómo se trata?",
+  "criteria": {
+   "separar": "El juez no cambia; el informe separa esos rechazos de los demás.",
+   "no_admitir": "No se admite esa clave en el adaptador.",
+   "excluir": "Esos mensajes se quitan del corpus antes de correr."
+  }
+ },
+ "q9_timeout": {
+  "type": "choice",
+  "instructions": "Pregunta 9: varios mensajes en un contenedor y vence su tiempo. ¿Qué pasa con los que no tenían salida?",
+  "criteria": {
+   "sin_respuesta": "Todos quedan sin respuesta y se declara como límite.",
+   "reintentar": "Se reintentan una vez, uno a uno, cada uno con su propio límite de tiempo."
+  }
+ }
+}

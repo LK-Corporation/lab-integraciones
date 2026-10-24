@@ -19,6 +19,9 @@ Un laboratorio personal de integraciones sanitarias sobre InterSystems IRIS for 
     pasa a «anulado», un rango que pasa a ser un número.
   - Ve además 31 que los proyectos ya tenían declaradas, y 16 diferencias son convención.
   - En las ramas principales siguen 14; la otra la corrigió el propio proyecto después de la versión juzgada.
+- **Cualquiera puede pasar su conversor por el mismo juez** con un adaptador JSON y una orden, sin escribir código. Con
+  los dos conversores del estudio, la herramienta da los mismos veredictos que el estudio, con su juez final, en los
+  368 casos.
 - **El método es el de los estudios:** la previsión sellada antes de correr nada, el diseño a ciegas, una revisión
   adversaria que tumbó 10 de 25 candidatas, y los conversores aislados en una caja sin red.
 - **Lo que no es:** una certificación. Es lo que ve un juez determinista con sus decisiones declaradas, en esas versiones y
@@ -54,6 +57,7 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 - **Los otros dos estudios:** [`piloto-agente/README.md`](piloto-agente/README.md).
 - **El estudio de conversores:** [`verificador/RESULTADO-CONVERSORES.md`](verificador/RESULTADO-CONVERSORES.md).
 - **El verificador:** [`verificador/README.md`](verificador/README.md).
+- **Pasar tu propio conversor por él:** [`verificador/cv/VC.md`](verificador/cv/VC.md).
 
 ---
 
