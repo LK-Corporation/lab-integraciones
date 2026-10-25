@@ -1,0 +1,96 @@
+{
+ "etapa": "23, el verificador en la integración continua de un conversor: previsión sellada antes del primer push, es decir, antes de cualquier corrida en GitHub Actions",
+ "base_de_la_prevision": "Todo lo del laboratorio, nada del runner. Las 14 pruebas P-CI pasan; las bases del juguete (343 casos) y de LinuxForHealth en lote y mensaje a mensaje (411) salen iguales byte a byte en dos corridas desde la copia pública, con el juez publicado; el positivo sembrado falla en 303 de 343 casos y solo por PID-7; LinuxForHealth v1.1.0 traído de cero desde Maven Central con preparar_lfh.sh da la huella del estudio (ac41f71b, y 7ad4d546 con nombres); el digest de la imagen se resolvió en Docker Hub el 25-oct. Después de un primer borrador de esta previsión, un ensayo local (ensayo_flujo.py) corrió en la máquina del laboratorio los pasos de shell de los dos YAML con sus expresiones evaluadas: pruebas, negativo, positivo, positivo-comprobado, real y real-comprobado salieron en verde, el real trayendo el conversor por la red. Lo no probado es lo que solo hace el runner: la evaluación de verdad de las expresiones y el paso de salidas de un flujo reutilizable, el Docker del runner con su usuario, su imagen de Ubuntu y su red hacia Maven Central y Docker Hub.",
+ "probabilidad_pruebas_verdes_a_la_primera": 0.85,
+ "probabilidad_negativo_a_la_primera": 0.8,
+ "probabilidad_positivo_a_la_primera": 0.75,
+ "probabilidad_real_a_la_primera": 0.6,
+ "probabilidad_los_tres_en_el_primer_push": 0.5,
+ "probabilidad_real_mismos_veredictos": 0.92,
+ "probabilidad_real_huella_cuadra": 0.95,
+ "probabilidad_los_tres_verdes_en_una_sesion": 0.85,
+ "pushes_previstos": [
+  1,
+  3
+ ],
+ "pushes_mas_probable": 1,
+ "minutos_por_corrida_previstos": [
+  5,
+  15
+ ],
+ "positivo_n_casos_previsto": [
+  303,
+  303
+ ],
+ "causas_de_fallo_previstas": [
+  "la mecánica del flujo reutilizable: entradas, expresiones o salidas que GitHub no resuelve como el ensayo",
+  "la carpeta de salida o los montajes de la caja con el Docker y el usuario del runner",
+  "la red del runner hacia Maven Central o Docker Hub",
+  "--pids-limit u otra bandera de la caja con el Docker del runner",
+  "PyYAML o el entorno de Python en el job de pruebas"
+ ],
+ "diferencias_que_se_explicarian": [
+  "un reintento por tiempo vencido de la JVM",
+  "otro orden del lote",
+  "fechas con otro desplazamiento horario"
+ ],
+ "regla_de_parada": "si el resultado del runner no es determinista o no cuadra con el del laboratorio, y la diferencia no se explica, se declara y se publica solo la demostración con el juguete",
+ "antes_del_ensayo": {
+  "_que": "el primer borrador de esta previsión, escrito antes del ensayo local y sin sellar; se cambió al ver el ensayo",
+  "probabilidad_pruebas_verdes_a_la_primera": 0.8,
+  "probabilidad_negativo_a_la_primera": 0.65,
+  "probabilidad_positivo_a_la_primera": 0.6,
+  "probabilidad_real_a_la_primera": 0.45,
+  "probabilidad_real_mismos_veredictos": 0.9,
+  "probabilidad_real_huella_cuadra": 0.95,
+  "probabilidad_los_tres_verdes_en_una_sesion": 0.75,
+  "pushes_previstos": [
+   1,
+   4
+  ],
+  "pushes_mas_probable": 2
+ },
+ "jev": {
+  "_que": "la previsión de Jev con un estado neutro, dos veces: antes del ensayo local (estado_prevision_ci.md → decision-jev-prevision-ci.md) y después (estado_prevision_ci_2.md → decision-jev-prevision-ci-2.md); las preguntas son las mismas (preguntas_prevision_ci.json); las dos se sellan al lado de la del programador, que no se cambió al verlas",
+  "antes_del_ensayo": {
+   "los_tres_en_el_primer_push": 0.18,
+   "pushes": {
+    "uno": 0.03,
+    "dos": 0.01,
+    "tres_o_cuatro": 0.16,
+    "mas": 0.8
+   },
+   "real_mismos_veredictos": 0.61
+  },
+  "despues_del_ensayo": {
+   "los_tres_en_el_primer_push": 0.46,
+   "pushes": {
+    "uno": 0.18,
+    "dos": 0.02,
+    "tres_o_cuatro": 0.13,
+    "mas": 0.67
+   },
+   "real_mismos_veredictos": 0.84
+  }
+ },
+ "fecha": "2026-10-25T17:38:25+01:00",
+ "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
+ "conversor": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+ "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+ "herramienta": {
+  "linea_base.py": "92cf2f7db8ad335eb5d65ab81728ae00bd5bcf10ad75e160d30f9b6dd62d97a2",
+  "sembrar_juguete.py": "b1d55765ccb4c7341587b3d65d6f7bff1b5a2fc5d0b7fd64d6d022fb4e34a6c8",
+  "preparar_lfh.sh": "09ab2652a3aed5e0ac21097f0b557a51c486b811e169e2728c4b536879499ed8",
+  "prueba_ci.py": "46bd4201601c689fb26b92c3d6940c91842bee7a5116eba8b5f341208b749272",
+  "POSITIVO-CI.json": "f2c51e1c117200a832314ec3b4a5e69f1dc11500d7e757926793da9a22ae53d1",
+  "github/verificador-conversor.yml": "f1c03e95c1d67ee05c1a7fb44a69c42e3543bb572bf9d8f3bcc89b086f04a70f",
+  "github/demo-ci.yml": "ce3b0afcb4289ba64d7e194444219e66651aeaa322105372862ebb69fa4848b6",
+  "LINEA-BASE-juguete.json": "abc945017a45b7e5ca3f923ec3294f9dadf66c197185db72b7269231da443c7c",
+  "LINEA-BASE-linuxforhealth.json": "8cd10f5a89103997356a1c6cc206b1ee3412ba22ffab79c8e5d89061c45ab27d",
+  "LINEA-BASE-linuxforhealth-mensaje.json": "183b30786d37aea4f663b5a4278962d8efeb7ad532b908b1e6a8020f66da6f42",
+  "ensayo_flujo.py": "c1c853551232b3af3728973354bb79bed8063f77564156a351e982b4004a1f8b",
+  "decision-jev-prevision-ci.md": "3bcb1f1e6522161bb515ee7dda6df99be7bba1a3a327ed3f3e921fdb199519b5",
+  "decision-jev-prevision-ci-2.md": "88e1b19fa54ff4cb4532ccef8cf40047b3ccc4b35f12ce372b1a3859068fadb1",
+  "verificar_conversor.py": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd"
+ }
+}

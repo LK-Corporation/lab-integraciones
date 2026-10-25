@@ -27,7 +27,8 @@ REPO = Path(__file__).resolve().parent.parent
 AQUI = Path(__file__).resolve()
 
 SUFIJOS_TEXTO = {".py", ".md", ".txt", ".cls", ".html", ".css", ".yml", ".yaml", ".ini", ".sha256",
-                 ".java", ".gradle", ".xml"}                    # 24-oct-2026: el arnés de LinuxForHealth del estudio de conversores
+                 ".java", ".gradle", ".xml",                    # 24-oct-2026: el arnés de LinuxForHealth del estudio de conversores
+                 ".sh"}                                         # 25-oct-2026: el guion que trae LinuxForHealth en la integración continua
 SELLO = REPO / "preinscripciones" / "SELLO-RESERVADO.txt"
 HUELLAS = REPO / "preinscripciones" / "HUELLAS.sha256"
 
@@ -76,6 +77,16 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/vx/rv/diseno-rv-fable.md", "-o /src/out"),
     ("verificador/vx/rv/diseno-rv-fable.md", "<W>/ms/out"),
     ("verificador/vx/rv/diseno-rv-fable.md", "/salida/lib"),
+    ("verificador/cv/ci/preparar_lfh.sh", "/w/pom.xml"),            # etapa 23: rutas de dentro del contenedor
+    ("verificador/cv/ci/preparar_lfh.sh", "javac --release 11 -d /w/lfh/clases"),
+    ("verificador/cv/ci/preparar_lfh.sh", "<artefactos>/lfh/"),     # y rutas bajo un marcador
+    ("verificador/cv/ci/diseno-ci-fable.md", "/w/pom.xml"),
+    ("verificador/cv/ci/diseno-ci-fable.md", "javac --release 11 -d /w/lfh/clases"),
+    ("verificador/cv/ci/diseno-ci-fable.md", "<artefactos>/lfh/"),
+    ("verificador/cv/ci/diseno-ci-fable.md", "cmp <S>/lfh-1/INFORME.json"),
+    ("verificador/cv/ci/diseno-ci-fable.md", "<tu repo>/ci/LINEA-BASE.json"),
+    ("verificador/cv/ci/diseno-ci-fable.md", "ni `docker inspect X`, ni `ssh x`"),   # describe la regla de la higiene
+    ("verificador/cv/ci/CI.md", "<tu repo>/ci/LINEA-BASE.json"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
@@ -108,7 +119,12 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/vx/rv/RAMAS-RV.json", "verificador/vx/rv/RESULTADO-RV-minimos-fijada-lote.json",
                   "verificador/vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json", "verificador/vx/rv/RESULTADO-RV-minimos-main.json",
                   "verificador/vx/rv/SECUENCIA-RV.json", "verificador/vx/rv/ESTADO-RV.json", "verificador/vx/rv/CONTRASTE-RV.json",
-                  "verificador/vx/rv/CORRIDAS-RV.json"}
+                  "verificador/vx/rv/CORRIDAS-RV.json",
+                  # 25-oct-2026, la integración continua: las líneas base, el positivo, las preguntas y la previsión
+                  "verificador/cv/ci/LINEA-BASE-juguete.json", "verificador/cv/ci/LINEA-BASE-linuxforhealth.json",
+                  "verificador/cv/ci/LINEA-BASE-linuxforhealth-mensaje.json", "verificador/cv/ci/POSITIVO-CI.json",
+                  "verificador/cv/ci/preguntas_qci.json", "verificador/cv/ci/preguntas_prevision_ci.json",
+                  "verificador/cv/ci/prevision-cuerpo-ci.json", "verificador/cv/ci/PREVISION-CI.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

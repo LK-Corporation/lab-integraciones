@@ -176,3 +176,8 @@ Los límites L-VC-1..15 están en `verificar_conversor.py` y en cada informe. Lo
 - **No descarga nada:** la imagen tiene que estar ya en la máquina (L-VC-4).
 - **Solo ADT de los ocho eventos y ORU^R01**; lo demás sale como fuera de alcance (L-VC-2).
 - **Las muestras de los proyectos no viajan con el repositorio** (L-VC-7).
+
+## En cada cambio, en GitHub Actions
+
+Para correr esta herramienta en cada cambio de un proyecto, con una línea base que separa lo que el proyecto ya conoce de lo
+que acaba de aparecer, está el flujo reutilizable de la etapa 23: [`ci/CI.md`](ci/CI.md).

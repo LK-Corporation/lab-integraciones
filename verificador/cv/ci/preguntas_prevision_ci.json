@@ -1,0 +1,8 @@
+{
+ "q1_primer_push": {"type": "choice", "instructions": "Pregunta 1: si los tres controles salen en verde en el primer push.",
+  "criteria": {"los_tres": "Los tres en verde.", "alguno_falla": "Alguno falla."}},
+ "q2_pushes": {"type": "choice", "instructions": "Pregunta 2: cuántos pushes harán falta hasta los tres en verde.",
+  "criteria": {"uno": "Uno.", "dos": "Dos.", "tres_o_cuatro": "Tres o cuatro.", "mas": "Más de cuatro, o no se consigue."}},
+ "q3_mismos": {"type": "choice", "instructions": "Pregunta 3: si el control real, cuando llegue a comparar, da los mismos veredictos que en el laboratorio.",
+  "criteria": {"mismos": "Los mismos.", "distintos": "Distintos."}}
+}

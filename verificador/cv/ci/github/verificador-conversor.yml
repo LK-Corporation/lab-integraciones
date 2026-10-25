@@ -1,0 +1,188 @@
+# Flujo reutilizable (etapa 23, verificador/cv/ci/CI.md): pasa un conversor HL7 v2 -> FHIR R4 por el verificador del laboratorio
+# y falla solo si aparece un hallazgo que no esta en la linea base del proyecto. Sin secretos, solo lectura, sin escribir en
+# ningun repositorio ni comentar en ningun PR.
+name: verificador-conversor
+
+on:
+  workflow_call:
+    inputs:
+      adaptador:          {type: string, required: true}
+      artefactos:         {type: string, required: false, default: artefactos}
+      preparar:           {type: string, required: false, default: ''}
+      linea_base:         {type: string, required: true}
+      imagen:             {type: string, required: false, default: ''}
+      corpus:             {type: string, required: false, default: ''}
+      sin_corpus_lab:     {type: boolean, required: false, default: false}
+      opciones:           {type: string, required: false, default: '--sin-sensibilidad'}
+      esperar:            {type: string, required: false, default: pasa}
+      hallazgo_esperado:  {type: string, required: false, default: '[]'}
+      huella_esperada:    {type: string, required: false, default: ''}
+      laboratorio:        {type: string, required: false, default: LK-Corporation/lab-integraciones}
+      laboratorio_ref:    {type: string, required: false, default: main}
+      sembrar:            {type: string, required: false, default: ''}
+      artefacto_completo: {type: boolean, required: false, default: false}
+      nombre:             {type: string, required: false, default: verificador}
+    outputs:
+      resultado:        {value: "${{ jobs.verificar.outputs.resultado }}"}
+      nuevos:           {value: "${{ jobs.verificar.outputs.nuevos }}"}
+      nuevos_distintos: {value: "${{ jobs.verificar.outputs.nuevos_distintos }}"}
+      arreglos:         {value: "${{ jobs.verificar.outputs.arreglos }}"}
+      huella:           {value: "${{ jobs.verificar.outputs.huella }}"}
+      imagen_digest:    {value: "${{ jobs.verificar.outputs.imagen_digest }}"}
+      juez:             {value: "${{ jobs.verificar.outputs.juez }}"}
+
+permissions:
+  contents: read
+
+env:
+  TZ: UTC
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONHASHSEED: "0"
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    outputs:
+      resultado:        ${{ steps.veredicto.outputs.resultado }}
+      nuevos:           ${{ steps.veredicto.outputs.nuevos }}
+      nuevos_distintos: ${{ steps.veredicto.outputs.nuevos_distintos }}
+      arreglos:         ${{ steps.veredicto.outputs.arreglos }}
+      huella:           ${{ steps.veredicto.outputs.huella }}
+      imagen_digest:    ${{ steps.veredicto.outputs.imagen_digest }}
+      juez:             ${{ steps.veredicto.outputs.juez }}
+    steps:
+      - name: El proyecto (el repositorio que llama)
+        uses: actions/checkout@v4
+        with:
+          path: proyecto
+          persist-credentials: false
+
+      - name: El laboratorio, en la version fijada
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.laboratorio }}
+          ref: ${{ inputs.laboratorio_ref }}
+          path: lab
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Entradas
+        id: entradas
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "${{ inputs.adaptador }}" || { echo "no existe el adaptador ${{ inputs.adaptador }}"; exit 2; }
+          test -f "${{ inputs.linea_base }}" || { echo "no existe la linea base ${{ inputs.linea_base }}"; exit 2; }
+          case "${{ inputs.esperar }}" in pasa|igual|falla) ;; *) echo "esperar: pasa, igual o falla"; exit 2;; esac
+          tipo=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["caja"]["tipo"])' "${{ inputs.adaptador }}")
+          echo "tipo=$tipo" >> "$GITHUB_OUTPUT"
+          if [ "$tipo" = docker ] && ! [[ "${{ inputs.imagen }}" =~ ^[a-z0-9][a-z0-9._/:-]*@sha256:[0-9a-f]{64}$ ]]; then
+            echo "con una caja de Docker hace falta la entrada imagen con digest: repo[:etiqueta]@sha256:<64 hex>"; exit 2
+          fi
+          mkdir -p "${{ inputs.artefactos }}" trabajo
+
+      - name: Preparar el conversor (con red)
+        if: inputs.preparar != ''
+        shell: bash
+        env:
+          LAB: ${{ github.workspace }}/lab
+          PROYECTO: ${{ github.workspace }}/proyecto
+          ARTEFACTOS: ${{ github.workspace }}/${{ inputs.artefactos }}
+          IMAGEN: ${{ inputs.imagen }}
+        run: |
+          set -euo pipefail
+          ${{ inputs.preparar }}
+
+      - name: La imagen, por su digest
+        if: steps.entradas.outputs.tipo == 'docker'
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker version --format '{{.Server.Version}}'
+          docker pull "${{ inputs.imagen }}"
+          python3 lab/verificador/cv/ci/linea_base.py fijar-imagen "${{ inputs.adaptador }}" "${{ inputs.imagen }}" \
+            -o trabajo/adaptador.json --etiquetar > trabajo/etiquetar.sh || { cat trabajo/etiquetar.sh; exit 2; }
+          bash -euo pipefail trabajo/etiquetar.sh
+          docker image inspect --format '{{index .RepoDigests 0}}' -- "$(python3 -c 'import json; print(json.load(open("trabajo/adaptador.json"))["caja"]["imagen"])')"
+
+      - name: El adaptador que corre (proceso local)
+        if: steps.entradas.outputs.tipo != 'docker'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 lab/verificador/cv/ci/linea_base.py fijar-imagen "${{ inputs.adaptador }}" "" -o trabajo/adaptador.json
+
+      - name: Sembrar (solo el control positivo de la demostracion)
+        if: inputs.sembrar == 'juguete'
+        shell: bash
+        run: python3 lab/verificador/cv/ci/sembrar_juguete.py lab/verificador/cv/conversor_juguete.py
+
+      - name: Identidades, antes de la caja
+        id: identidades
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd lab/verificador
+          python3 cv/verificar_conversor.py "$GITHUB_WORKSPACE/trabajo/adaptador.json" "$GITHUB_WORKSPACE/trabajo/orden" \
+            --artefactos "$GITHUB_WORKSPACE/${{ inputs.artefactos }}" --solo-orden | tee "$GITHUB_WORKSPACE/trabajo/solo-orden.txt"
+          huella=$(sed -n 's/^\[3\/9\] huella del conversor: \([0-9a-f]\{64\}\)$/\1/p' "$GITHUB_WORKSPACE/trabajo/solo-orden.txt")
+          test -n "$huella"
+          echo "huella=$huella" >> "$GITHUB_OUTPUT"
+          if [ -n "${{ inputs.huella_esperada }}" ] && [ "$huella" != "${{ inputs.huella_esperada }}" ]; then
+            echo "la huella del conversor es $huella y se esperaba ${{ inputs.huella_esperada }}"; exit 11
+          fi
+
+      - name: Verificar (la caja de la herramienta, sin red, solo lectura, sin privilegios)
+        id: verificar
+        shell: bash
+        run: |
+          set +e                    # GitHub corre «bash -eo pipefail»: aquí el código se recoge, no corta el paso
+          set -uo pipefail
+          cd lab/verificador
+          args=()
+          for c in ${{ inputs.corpus }}; do args+=(--corpus "$GITHUB_WORKSPACE/$c"); done
+          if [ "${{ inputs.sin_corpus_lab }}" = "true" ]; then args+=(--sin-corpus-lab); fi
+          python3 cv/verificar_conversor.py "$GITHUB_WORKSPACE/trabajo/adaptador.json" "$GITHUB_WORKSPACE/trabajo/corrida" \
+            --artefactos "$GITHUB_WORKSPACE/${{ inputs.artefactos }}" "${args[@]}" ${{ inputs.opciones }}
+          rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          echo "verificar_conversor salio con $rc"
+          case $rc in 0|4) exit 0;; *) exit $rc;; esac
+
+      - name: Veredicto frente a la linea base
+        id: veredicto
+        shell: bash
+        run: |
+          set +e                    # GitHub corre «bash -eo pipefail»: aquí el código se recoge, no corta el paso
+          set -uo pipefail
+          python3 lab/verificador/cv/ci/linea_base.py comparar trabajo/corrida "${{ inputs.linea_base }}" \
+            --esperar "${{ inputs.esperar }}" --hallazgo-esperado '${{ inputs.hallazgo_esperado }}' \
+            --rc-herramienta "${{ steps.verificar.outputs.rc }}" --github-output "$GITHUB_OUTPUT" -o trabajo/corrida
+          rc=$?
+          cat trabajo/corrida/VEREDICTO-CI.md >> "$GITHUB_STEP_SUMMARY"
+          exit $rc
+
+      - name: El informe, como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.nombre }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            trabajo/corrida/INFORME.md
+            trabajo/corrida/INFORME.json
+            trabajo/corrida/juicio.jsonl
+            trabajo/corrida/CORRIDA.json
+            trabajo/corrida/ADAPTADOR.json
+            trabajo/corrida/VEREDICTO-CI.json
+            trabajo/corrida/VEREDICTO-CI.md
+            trabajo/corrida/LINEA-BASE-propuesta.json
+            trabajo/corrida/cajas/
+            trabajo/solo-orden.txt
+            ${{ inputs.artefacto_completo && 'trabajo/corrida/evidencias/' || '' }}
+            ${{ inputs.artefacto_completo && 'trabajo/corrida/corpus/' || '' }}

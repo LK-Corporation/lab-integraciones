@@ -188,6 +188,40 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## El verificador en la integración continua (23, 25-oct-2026)
+
+> **Un flujo reutilizable de GitHub Actions pasa un conversor por el verificador en cada cambio y falla solo ante un hallazgo
+> que no está en la línea base del proyecto.** La guía para usarlo en otro proyecto es [`cv/ci/CI.md`](cv/ci/CI.md).
+
+**Lo que hay.**
+- **El flujo:** [`../.github/workflows/verificador-conversor.yml`](../.github/workflows/verificador-conversor.yml). Corre la
+  herramienta de la etapa 18 en su caja, sin secretos y con permisos de solo lectura, y compara con la línea base con
+  [`cv/ci/linea_base.py`](cv/ci/linea_base.py).
+- **La demostración, en este repositorio:** [`../.github/workflows/demo-ci.yml`](../.github/workflows/demo-ci.yml), con tres
+  controles:
+  - **negativo:** el conversor de juguete contra su propia base;
+  - **positivo:** el juguete con un defecto sembrado, que pierde la fecha de nacimiento; el flujo tiene que fallar, y solo por
+    ese hallazgo;
+  - **real:** LinuxForHealth v1.1.0, traído en el runner desde Maven Central y con su huella comprobada, contra una base
+    sacada en el laboratorio.
+- **Las tres líneas base:** la del juguete y las de LinuxForHealth en lote y mensaje a mensaje. Se sacaron en el laboratorio
+  desde esta copia, con el juez publicado, y cada una con dos corridas que dan el mismo informe byte a byte.
+- **Un ensayo local antes del primer push:** [`cv/ci/ensayo_flujo.py`](cv/ci/ensayo_flujo.py) corre en una máquina los pasos
+  de shell de los dos YAML, con sus expresiones evaluadas. No es el runner, y su cabecera dice lo que no prueba.
+- **La previsión se selló antes del primer push.** `cv/ci/github/` guarda los dos flujos tal como se sellaron; los que corren
+  son los de `../.github/workflows/`.
+- **El método, el de siempre:** el diseño a ciegas, las decisiones de Jev, las pruebas en rojo antes del código y la
+  previsión sellada antes de correr.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-CI.md`](ANTES-ETAPA-CI.md) |
+| El diseño a ciegas y las decisiones | [`cv/ci/ENCARGO-CI0.md`](cv/ci/ENCARGO-CI0.md), [`cv/ci/diseno-ci-fable.md`](cv/ci/diseno-ci-fable.md), [`cv/ci/decisiones-qci.md`](cv/ci/decisiones-qci.md), [`cv/ci/estado_qci.md`](cv/ci/estado_qci.md), [`cv/ci/preguntas_qci.json`](cv/ci/preguntas_qci.json), [`cv/ci/decision-jev-qci.md`](cv/ci/decision-jev-qci.md) |
+| El código, con las pruebas en rojo antes | [`cv/ci/prueba_ci.py`](cv/ci/prueba_ci.py), [`cv/ci/linea_base.py`](cv/ci/linea_base.py), [`cv/ci/sembrar_juguete.py`](cv/ci/sembrar_juguete.py), [`cv/ci/POSITIVO-CI.json`](cv/ci/POSITIVO-CI.json), [`cv/ci/preparar_lfh.sh`](cv/ci/preparar_lfh.sh), [`cv/ci/hacer_bases.py`](cv/ci/hacer_bases.py), [`cv/ci/ensayo_flujo.py`](cv/ci/ensayo_flujo.py), [`cv/ci/github/verificador-conversor.yml`](cv/ci/github/verificador-conversor.yml), [`cv/ci/github/demo-ci.yml`](cv/ci/github/demo-ci.yml) |
+| Las líneas base | [`cv/ci/LINEA-BASE-juguete.json`](cv/ci/LINEA-BASE-juguete.json), [`cv/ci/LINEA-BASE-linuxforhealth.json`](cv/ci/LINEA-BASE-linuxforhealth.json), [`cv/ci/LINEA-BASE-linuxforhealth-mensaje.json`](cv/ci/LINEA-BASE-linuxforhealth-mensaje.json) |
+| La previsión sellada | [`cv/ci/PREVISION-CI.md`](cv/ci/PREVISION-CI.md), [`cv/ci/PREVISION-CI.json`](cv/ci/PREVISION-CI.json), [`cv/ci/SELLO-CI.txt`](cv/ci/SELLO-CI.txt), [`cv/ci/estado_prevision_ci.md`](cv/ci/estado_prevision_ci.md), [`cv/ci/estado_prevision_ci_2.md`](cv/ci/estado_prevision_ci_2.md), [`cv/ci/preguntas_prevision_ci.json`](cv/ci/preguntas_prevision_ci.json), [`cv/ci/decision-jev-prevision-ci.md`](cv/ci/decision-jev-prevision-ci.md), [`cv/ci/decision-jev-prevision-ci-2.md`](cv/ci/decision-jev-prevision-ci-2.md), [`cv/ci/prevision-cuerpo-ci.json`](cv/ci/prevision-cuerpo-ci.json), [`cv/ci/sellar_prevision_ci.py`](cv/ci/sellar_prevision_ci.py) |
+| La guía | [`cv/ci/CI.md`](cv/ci/CI.md) |
+
 ## El estudio de conversores (14l, 23-24 oct-2026)
 
 > El verificador encuentra **15 discrepancias nuevas y confirmadas en 2 de 2 conversores, sobre 368 mensajes públicos**;
@@ -289,6 +323,8 @@ publica.
   de los artefactos ni el commit del sello, como dice su `_nota`.
 - **Tres documentos de la etapa de las ramas llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-RAMAS-VXU.md`, `vx/rv/ENCARGO-RV0.md` y `vx/rv/diseno-rv-fable.md`.
+- **Tres documentos de la etapa de la integración continua llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-CI.md`, `cv/ci/ENCARGO-CI0.md` y `cv/ci/diseno-ci-fable.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
@@ -329,6 +365,9 @@ publica.
   - el volcado de issues y comentarios de los proyectos, que está en sus repositorios;
   - los artefactos de las ramas, las evidencias y los juicios por caso: están los agregados de `vx/rv/`;
   - el script que trajo los resultados.
+- **De la integración continua:** las corridas del laboratorio de las que salieron las líneas base (los juicios, las
+  evidencias y los registros de las cajas) y el guion de una sola vez que lanzó la segunda corrida de la base mensaje a
+  mensaje; las demás las lanzó `cv/ci/hacer_bases.py`.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

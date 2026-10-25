@@ -1,0 +1,8 @@
+{
+ "formato": "positivo-ci/1",
+ "fichero": "cv/conversor_juguete.py",
+ "de": "    if fecha(m.campo(\"PID\", 7)):\n        p[\"birthDate\"] = fecha(m.campo(\"PID\", 7))\n",
+ "a": "    if False and fecha(m.campo(\"PID\", 7)):                      # SEMBRADO (etapa 23): pierde PID-7 a proposito\n        p[\"birthDate\"] = fecha(m.campo(\"PID\", 7))\n",
+ "hallazgo_esperado": [["PID-7", "fidelidad", "dato_perdido"]],
+ "_que": "El juguete deja de escribir Patient.birthDate en su Bundle genérico; el juez da dato_perdido en PID-7 en cada caso del corpus con PID-7 válido, y ningún otro triple cambia. Los nominales (JUGUETE-NOMINAL…) no se tocan."
+}

@@ -1,0 +1,20 @@
+{
+ "q_ci_d_1_caso_nuevo": {"type": "choice", "instructions": "Pregunta 1: un caso que está en la corrida y no en la base, con hallazgos que cuentan.",
+  "criteria": {"falla": "(a) Falla: cada hallazgo suyo es nuevo.", "lista": "(b) No falla: se lista como caso nuevo y entra en la base propuesta.",
+               "solo_propios": "(c) Falla solo si el caso es de los mensajes propios del proyecto."}},
+ "q_ci_d_2_caso_ausente": {"type": "choice", "instructions": "Pregunta 2: un caso de la base que no está en la corrida.",
+  "criteria": {"falla": "(a) Falla.", "aviso": "(b) Aviso, y la base propuesta lo quita.",
+               "mismo_corpus": "(c) Falla solo si el corpus es el mismo que el de la base."}},
+ "q_ci_d_3_modo_real": {"type": "choice", "instructions": "Pregunta 3: el modo del control real con el conversor que arrastra estado.",
+  "criteria": {"lote": "(a) En lote, el modo de referencia del estudio.", "mensaje": "(b) Mensaje a mensaje, sin arrastre.",
+               "lote_y_mensaje_a_mano": "(c) En lote en cada cambio, y mensaje a mensaje solo a mano."}},
+ "q_ci_d_4_juez": {"type": "choice", "instructions": "Pregunta 4: la huella del juez es distinta de la de la base, en el modo normal.",
+  "criteria": {"aviso": "(a) Aviso: la comparación sigue, y lo que salga nuevo falla.", "falla": "(b) Falla siempre.",
+               "aviso_marcado": "(c) Aviso, y la base propuesta se marca «juez cambiado»."}},
+ "q_ci_d_5_artefacto": {"type": "choice", "instructions": "Pregunta 5: qué lleva el artefacto por omisión.",
+  "criteria": {"sin_evidencias": "(a) Informe, juicio, veredicto, base propuesta y registros de las cajas, sin evidencias ni corpus.",
+               "con_evidencias": "(b) Además las evidencias y el corpus.", "minimo": "(c) Solo el informe y el veredicto."}},
+ "q_ci_d_6_cuando": {"type": "choice", "instructions": "Pregunta 6: cuándo corre la demostración en el repositorio del laboratorio.",
+  "criteria": {"rutas": "(a) En push a la rama principal y en PR, solo si cambian el verificador, los flujos o las pruebas; y a mano.",
+               "siempre": "(b) En todo push.", "manual_semanal": "(c) Solo a mano y una vez por semana."}}
+}
