@@ -1,0 +1,15 @@
+{
+ "q1_titulo": {"type": "choice", "instructions": "Pregunta 1: el título de la página.",
+  "criteria": {"no_se_fia": "«Un juez que no se fía del conversor».", "lo_que_vio": "«Lo que vio un juez en dos conversores».",
+               "quince": "«Quince discrepancias con cita», con la cifra con su fuente dentro del título."}},
+ "q2_listas": {"type": "choice", "instructions": "Pregunta 2: las 31 ya declaradas y las 10 que cayeron.",
+  "criteria": {"completas": "Sus listas completas, en desplegables.", "cifras": "Solo las cifras, cinco ejemplos y un enlace."}},
+ "q3_veredictos": {"type": "choice", "instructions": "Pregunta 3: en cada par mínimo, ¿los veredictos de qué conversores?",
+  "criteria": {"los_dos": "Los de los dos conversores.", "objetivo": "Solo el del conversor para el que se escribió."}},
+ "q4_figura": {"type": "choice", "instructions": "Pregunta 4: la comparación con lo previsto.",
+  "criteria": {"figura": "Una figura de barras apiladas con las celdas literales como etiquetas.", "tabla": "Solo la tabla."}},
+ "q5_enlace": {"type": "choice", "instructions": "Pregunta 5: el enlace desde la página del primer estudio.",
+  "criteria": {"final": "Solo en su párrafo final.", "cabecera": "También una línea bajo su cabecera."}},
+ "q6_filtro": {"type": "choice", "instructions": "Pregunta 6: el filtro por conversor sobre las 15 tarjetas.",
+  "criteria": {"ninguno": "Ninguno.", "radios": "Un filtro con botones de opción y CSS."}}
+}

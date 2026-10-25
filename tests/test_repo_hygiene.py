@@ -13,10 +13,14 @@ vive en una guarda del repositorio privado que se corre antes de cada publicaci�
 """
 
 import hashlib
+import html.parser
+import importlib.util
+import json
 import os
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -62,7 +66,7 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/lfh/copiar-libs.gradle", "/salida/lib"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
-JSON_ADMITIDOS = {"verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
+JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
                   "verificador/cv/adaptadores/juguete.json", "verificador/cv/vc/juguete-docker.json",
                   "verificador/cv/vc/preguntas_qvc.json", "verificador/cv/vc/ejemplos/INFORME-microsoft.json",
                   "verificador/cv/vc/ejemplos/INFORME-linuxforhealth.json",
@@ -288,7 +292,8 @@ def test_los_enlaces_relativos_resuelven():
     for rel in ficheros_texto():
         if not rel.endswith((".md", ".html")):
             continue
-        for a, b in re.findall(r"\]\(([^)\s]+)\)|(?:href|src)=\"([^\"]+)\"", leer(rel)):
+        texto = re.sub(r"(?ms)^```.*?^```", "", leer(rel)) if rel.endswith(".md") else leer(rel)   # etapa 19: un bloque
+        for a, b in re.findall(r"\]\(([^)\s]+)\)|(?:href|src)=\"([^\"]+)\"", texto):          # de código no enlaza
             destino = (a or b).split("#")[0]
             if not destino or re.match(r"[a-z]+:", destino):
                 continue
@@ -374,6 +379,8 @@ def test_la_pagina_no_carga_nada_externo():
         texto = leer(rel)
         if "<script" in texto.lower():
             fallos.append("%s: <script>" % rel)
+        if re.search(r"<[^>]*\son\w+\s*=", texto) or re.search(r"href=\"\s*javascript:", texto, re.I):
+            fallos.append("%s: un atributo on…= o un enlace javascript:" % rel)   # etapa 19
         cargas = [u for tipo, u in re.findall(r"<link\b[^>]*?rel=\"([^\"]+)\"[^>]*?href=\"(https?://[^\"]+)\"", texto)
                   if re.search(r"stylesheet|preload|prefetch|preconnect|icon|manifest", tipo)]   # canonical no carga
         cargas += re.findall(r"<(?:img|iframe|source|video|audio|embed)\b[^>]*?src=\"(https?://[^\"]+)\"", texto)
@@ -405,6 +412,339 @@ def test_solo_entra_lo_que_la_seleccion_admite():
         elif ruta.suffix == ".woff2" and not rel.startswith("docs/fonts/"):
             fuera.append(rel + " (fuente fuera de docs/fonts/)")
     assert not fuera, fuera
+
+
+# --- la página del estudio de conversores (etapa 19, pg/diseno-pg-fable.md §4-§5) ----------------------------------------
+# La página la escribe un guion desde los ficheros publicados, y cada cifra, texto del juez, cita o mensaje mínimo lleva su
+# fuente en `data-fuente`. Estas guardas la resuelven con su propio código, sin importar el guion, y cada una lleva su control
+# negativo: una guarda que no ve un cambio hecho a propósito no vale.
+
+PAGINA_CV = "docs/conversores/index.html"
+GUION_CV = "codigo/hacer_pagina_conversores.py"
+PALABRAS_NUMERO = re.compile(r"\b(tres|cuatro|cinco|seis|siete|ocho|nueve|diez|once|doce|trece|catorce|quince|diecis[eé]is|"
+                             r"diecisiete|dieciocho|diecinueve|veinte|treinta|cuarenta|cincuenta|sesenta|setenta|ochenta|"
+                             r"noventa|cien|ciento|mil)\b", re.I)
+IDENTIFICADORES = [re.compile(p) for p in (
+    r"\bHL7\b", r"\bv2(\.\d)?\b", r"\bR4\b", r"\bv2-to-FHIR\b", r"\bv3-[A-Za-z]+\b", r"\bv2-0\d{3}\b", r"\bhl70\d{3}\b",
+    r"\b[A-Z][A-Z0-9]{1,2}(\(\d+\))?-\d{1,2}(\.\d{1,2})?\b", r"\b[A-Z]{2,3}\.\d{1,2}\b",
+    r"\b(ADT|ORU|SIU|MDM|VXU|ORM|OML)(\^|_)[A-Z]\d{2}\b", r"\bA\d{2}\b", r"\bR01\b", r"\b0\d{3}\b",
+    r"\b(Q|L|S|DV|P|MC|AMB|E)-[A-Z]{1,3}(-[A-Z]{1,3})?-\d{1,3}\b", r"\b[ML]-\d{1,2}\b", r"\b[MLR]\d{2}[a-z]?\b",
+    r"#\d+\b", r"\b(?=[0-9a-f]*[a-f])[0-9a-f]{7,64}\b", r"\bCC BY 4\.0\b",
+    r"\b[A-Z]{2}\d\b",                                               # nombres de segmento: PV1, GT1, NK1
+    r"\bhl7v2-fhir-converter\b")]                                     # el nombre de un proyecto
+
+
+class _Pagina(html.parser.HTMLParser):
+    """Recorre la página: los elementos con fuente (con su texto), los `<pre class="hl7">`, el texto que queda fuera de ellos
+    (sin <style>), el título, la descripción, y lo que mira la guarda de accesibilidad."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.con_fuente, self.abiertos, self.fuera, self.titulo, self.desc = [], [], [], [], ""
+        self.pila, self.en_style, self.en_title = [], 0, False
+        self.etiquetas = []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        self.etiquetas.append((tag, a))
+        if tag in ("meta",) and a.get("name") == "description":
+            self.desc = a.get("content") or ""
+        if tag in ("meta", "link", "br", "hr", "img", "input", "source", "wbr"):
+            return
+        if tag == "style":
+            self.en_style += 1
+        if tag == "title":
+            self.en_title = True
+        captura = "data-fuente" in a or (tag == "pre" and "hl7" in (a.get("class") or "").split())
+        if captura:
+            r = {"tag": tag, "attrs": a, "texto": []}
+            self.con_fuente.append(r)
+            self.abiertos.append(r)
+        self.pila.append((tag, captura))
+
+    def handle_endtag(self, tag):
+        while self.pila:
+            t, captura = self.pila.pop()
+            if captura:
+                self.abiertos.pop()
+            if t == "style":
+                self.en_style -= 1
+            if t == "title":
+                self.en_title = False
+            if t == tag:
+                break
+
+    def handle_data(self, data):
+        if self.en_style:
+            return
+        if self.en_title:
+            self.titulo.append(data)
+        for r in self.abiertos:
+            r["texto"].append(data)
+        if not self.abiertos and not self.en_title:
+            self.fuera.append(data)
+
+
+def _leer_pagina(texto):
+    p = _Pagina()
+    p.feed(texto)
+    p.close()
+    return p
+
+
+def _norm(s):
+    s = re.sub(r"\*\*|`", "", s or "").replace(" ", " ").replace(" ", " ").replace(" ", " ")
+    for a, b in ((">=", "≥"), ("<=", "≤"), ("->", "→")):
+        s = s.replace(a, b)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _tabla(rel, linea, fila, columna):
+    lineas = leer(rel).splitlines()
+    i = next(k for k, l in enumerate(lineas) if linea in l)
+    while not lineas[i].startswith("|"):
+        i += 1
+    celdas = lambda l: [_norm(c.replace("\\|", "|")) for c in re.split(r"(?<!\\)\|", l.strip()[1:-1])]  # noqa: E731
+    cab = celdas(lineas[i])
+    k = i + 2
+    while k < len(lineas) and lineas[k].startswith("|"):
+        c = celdas(lineas[k])
+        if c[0] == _norm(fila):
+            return c[cab.index(_norm(columna))]
+        k += 1
+    raise KeyError("no hay fila %r" % fila)
+
+
+def _par_minimo(par, cual):
+    spec = importlib.util.spec_from_file_location("cv3_minimos_guarda", REPO / "verificador" / "cv" / "cv3_minimos.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    for pid, _, (caso, control), _ in mod.PARES:
+        if pid == par:
+            return (caso if cual == "caso" else control).replace("\r", "\n").strip("\n")
+    raise KeyError("no hay par %r" % par)
+
+
+def _json(rel, puntero):
+    v = json.loads(leer(rel))
+    for paso in puntero.split("."):
+        m = re.match(r"^(\w+)\[(\w+)=([^\]]+)\]$", paso)
+        if m:
+            v = [x for x in v[m.group(1)] if str(x.get(m.group(2))) == m.group(3)]
+            if len(v) != 1:
+                raise KeyError("%s: %d elementos" % (paso, len(v)))
+            v = v[0]
+        elif isinstance(v, list):
+            v = v[int(paso)]
+        else:
+            v = v[paso]
+    return v
+
+
+def resolver_fuente(a):
+    """-> el texto que la fuente dice (normalizado); KeyError/StopIteration/ValueError si no resuelve."""
+    fuente, patron, grupo = a["data-fuente"], a.get("data-patron"), int(a.get("data-grupo") or 1)
+    tipo, _, resto = fuente.partition(":")
+    rel = resto.split("#", 1)[0]
+    if tipo in ("json", "md", "tabla") and rel not in set(rastreados()):
+        raise KeyError("%s no es un fichero rastreado" % rel)
+    if tipo == "json":
+        v = _json(rel, resto.split("#", 1)[1])
+        v = ("sí" if v else "no") if isinstance(v, bool) else str(v)
+    elif tipo == "md":
+        if not patron:
+            raise KeyError("md sin data-patron")
+        v = leer(rel)
+    elif tipo == "tabla":
+        linea, fila, columna = resto.split("#", 1)[1].split("|")
+        v = _tabla(rel, linea, fila, columna)
+    elif tipo == "hl7":
+        par, cual = resto.split("#")
+        return _par_minimo(par, cual)
+    else:
+        raise KeyError("tipo de fuente desconocido: %s" % tipo)
+    if patron:
+        ms = list(re.finditer(patron, v, re.M))
+        if len(ms) != 1:
+            raise ValueError("el patrón casa %d veces (ambiguo o roto)" % len(ms))
+        v = ms[0].group(grupo)
+    return _norm(v)
+
+
+def fallos_fuentes(texto):
+    fallos = []
+    for r in _leer_pagina(texto).con_fuente:
+        a, visto = r["attrs"], "".join(r["texto"])
+        if r["tag"] == "pre" and "hl7" in (a.get("class") or "").split() and not (a.get("data-fuente") or "").startswith("hl7:"):
+            fallos.append("pre hl7 sin fuente hl7: %s" % visto[:60])
+            continue
+        try:
+            dice = resolver_fuente(a)
+        except (KeyError, ValueError, StopIteration, IndexError, TypeError) as e:
+            fallos.append("%s no resuelve: %s" % (a["data-fuente"], e))
+            continue
+        if a["data-fuente"].startswith("hl7:"):
+            ok = visto.strip("\n") == dice
+        elif "**" in visto or "`" in visto:                        # _norm los quita de los dos lados: aquí se verían crudos
+            fallos.append("%s: Markdown sin convertir en %r" % (a["data-fuente"], visto[:80]))
+            continue
+        else:
+            ok = _norm(visto) == dice or _norm(visto).replace(",", ".") == dice
+        if "value" in a and a["value"] != dice:
+            ok = False
+        if not ok:
+            fallos.append("%s: la página dice %r y la fuente %r" % (a["data-fuente"], _norm(visto)[:80], dice[:80]))
+    return fallos
+
+
+def fallos_cifras(texto):
+    p = _leer_pagina(texto)
+    fallos = []
+    for donde, t in (("texto", " ".join(p.fuera)), ("title", " ".join(p.titulo)), ("description", p.desc)):
+        t = re.sub(r"\s+", " ", t)
+        buenos = [m.span() for rx in IDENTIFICADORES for m in rx.finditer(t)]
+        for m in list(re.finditer(r"\d+", t)) + list(PALABRAS_NUMERO.finditer(t)):
+            if not any(a <= m.start() and m.end() <= b for a, b in buenos):
+                fallos.append("%s: %r en «%s»" % (donde, m.group(0), t[max(0, m.start() - 20):m.end() + 20]))
+    return fallos
+
+
+def fallos_tarjetas(texto):
+    """Una tarjeta por cada nueva de CLASES-CV3.json, en el orden de la tabla de RESULTADO-CV3.md, y ninguna más; y la celda
+    «Rama principal» de 15A dice «sigue» si y solo si el par se confirma en la rama principal."""
+    p = _leer_pagina(texto)
+    vistas = [a.get("id") for t, a in p.etiquetas if t == "article" and "disc" in (a.get("class") or "").split()]
+    nuevas = [c["id"] for c in json.loads(leer("verificador/cv/CLASES-CV3.json"))["clases"] if c["clase"] == "nueva"]
+    lineas = leer("verificador/cv/RESULTADO-CV3.md").splitlines()
+    i = next(k for k, l in enumerate(lineas) if l.startswith("## Las 15 nuevas"))
+    orden = []
+    for l in lineas[i:]:
+        m = re.match(r"^\| ([ML]-\d+) \|", l)
+        if m:
+            orden.append(m.group(1))
+        elif orden and not l.startswith("|"):
+            break
+    fallos = ["falta la tarjeta %s" % x for x in nuevas if x not in vistas]
+    fallos += ["tarjeta de más: %s" % x for x in vistas if x not in nuevas or vistas.count(x) > 1]
+    if not fallos and vistas != orden:
+        fallos.append("orden: %s frente a %s" % (vistas, orden))
+    main = {x["id"]: x["confirmada"] for x in json.loads(leer("verificador/cv/RESULTADO-15A-minimos-main.json"))["pares"]}
+    clases = {c["id"]: c for c in json.loads(leer("verificador/cv/CLASES-CV3.json"))["clases"]}
+    for x in nuevas:
+        rama = _tabla("verificador/cv/RESULTADO-15A.md", "## Cada nueva, en la versión fijada", x, "Rama principal")
+        pares = [y.strip() for y in clases[x]["par_minimo"].split("/")]
+        sigue = all(main.get(y) for y in pares if y in main)
+        if rama.startswith("sigue") != sigue:
+            fallos.append("%s: 15A dice %r y el par en la rama principal %s" % (x, rama, sigue))
+    return fallos
+
+
+def fallos_accesibles(rel, texto):
+    p = _leer_pagina(texto)
+    f = []
+    if not re.search(r'<html lang="es"', texto):
+        f.append('%s: sin <html lang="es">' % rel)
+    if 'name="viewport"' not in texto or "color-scheme" not in texto:
+        f.append("%s: sin viewport o color-scheme" % rel)
+    if sum(1 for t, _ in p.etiquetas if t == "h1") != 1:
+        f.append("%s: no hay un solo <h1>" % rel)
+    if len(re.findall(r"<details\b", texto)) != len(re.findall(r"<details\b[^>]*>\s*<summary\b", texto)):
+        f.append("%s: un <details> sin <summary> al principio" % rel)
+    for t, a in p.etiquetas:
+        if t == "svg" and (a.get("role") != "img" or not a.get("aria-label")):
+            f.append("%s: <svg> sin role=img o aria-label" % rel)
+        if re.match(r"^[1-9]", a.get("tabindex") or ""):
+            f.append("%s: tabindex positivo" % rel)
+        if t == "input" and a.get("id") and not re.search(r'<label\b[^>]*for="%s"' % re.escape(a["id"]), texto):
+            f.append("%s: el control %s no tiene etiqueta" % (rel, a["id"]))
+    return f
+
+
+def _pagina_cv():
+    assert (REPO / PAGINA_CV).is_file(), "no existe %s" % PAGINA_CV
+    return leer(PAGINA_CV)
+
+
+def test_la_pagina_de_conversores_es_la_que_genera_su_guion():
+    r = subprocess.run([sys.executable, GUION_CV, "--comprobar"], cwd=REPO, capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0 and "IGUAL" in r.stdout, (r.returncode, r.stdout[-400:], r.stderr[-400:])
+
+
+def test_la_guarda_de_regeneracion_ve_un_cambio():
+    t = _pagina_cv()
+    m = re.search(r'(<span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_nuevas_confirmadas">)15<', t)
+    assert m, "no está el 15 de la frase"
+    with tempfile.TemporaryDirectory() as d:
+        otra = os.path.join(d, "index.html")
+        open(otra, "w", encoding="utf-8").write(t[:m.end(1)] + "16" + t[m.end(1) + 2:])
+        r = subprocess.run([sys.executable, GUION_CV, "--comprobar", otra], cwd=REPO, capture_output=True, text=True, timeout=300)
+    assert r.returncode == 1 and "DISTINTA" in r.stdout, (r.returncode, r.stdout[-300:])
+
+
+def test_toda_cifra_de_la_pagina_de_conversores_tiene_fuente_y_coincide():
+    t = _pagina_cv()
+    n = len(_leer_pagina(t).con_fuente)
+    fallos = fallos_fuentes(t)
+    assert n > 150 and not fallos, (n, fallos[:10])
+
+
+def test_la_guarda_de_fuentes_ve_un_cambio():
+    t = _pagina_cv()
+    m = re.search(r'(<span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_nuevas_confirmadas">)15<', t)
+    assert m, "no está la cifra de la frase"
+    cambio = t[:m.end(1)] + "16" + t[m.end(1) + 2:]
+    assert any("frase.N_nuevas_confirmadas" in f for f in fallos_fuentes(cambio))
+    crudo = t[:m.end(1)] + "**15**" + t[m.end(1) + 2:]
+    assert any("Markdown sin convertir" in f for f in fallos_fuentes(crudo))
+    roto = t.replace("frase.N_nuevas_confirmadas", "frase.N_inventada", 1)
+    assert any("no resuelve" in f for f in fallos_fuentes(roto))
+    i = t.index('<pre class="hl7"')
+    j = t.index("MSH", i)
+    assert any("hl7:" in f for f in fallos_fuentes(t[:j] + "XSH" + t[j + 3:]))
+    k = t.index('data-patron="')
+    ambiguo = t[:k] + 'data-patron="(\\d+)"' + t[t.index('"', k + len('data-patron="')) + 1:]
+    assert any("casa" in f for f in fallos_fuentes(ambiguo))
+
+
+def test_la_pagina_de_conversores_no_lleva_cifras_sueltas():
+    fallos = fallos_cifras(_pagina_cv())
+    assert not fallos, fallos[:10]
+
+
+def test_la_guarda_de_cifras_ve_una_cifra_suelta():
+    t = _pagina_cv()
+    f = fallos_cifras(t.replace("</main>", "<p>Se juzgaron 42 casos.</p></main>"))
+    assert len(f) == 1 and "42" in f[0], f
+    f = fallos_cifras(t.replace("</main>", "<p>Cuatro condiciones.</p></main>"))
+    assert len(f) == 1 and "Cuatro" in f[0], f
+    f = fallos_cifras(re.sub(r'(<meta name="description" content=")', r"\g<1>15 discrepancias. ", t, 1))
+    assert len(f) == 1 and "15" in f[0], f
+    assert not fallos_cifras(t.replace("</main>", "<p>PV1-3, ORU^R01, A02, #624 y 40bbc3ef</p></main>"))
+
+
+def test_las_tarjetas_de_la_pagina_de_conversores_estan_completas():
+    fallos = fallos_tarjetas(_pagina_cv())
+    assert not fallos, fallos
+
+
+def test_la_guarda_de_tarjetas_ve_un_cambio():
+    t = _pagina_cv()
+    a = [m.start() for m in re.finditer(r'<article class="disc"', t)]
+    assert len(a) > 2
+    fin = lambda i: t.index("</article>", i) + len("</article>")  # noqa: E731
+    sin = t[:a[0]] + t[fin(a[0]):]
+    assert any(f.startswith("falta la tarjeta") for f in fallos_tarjetas(sin))
+    doble = t[:fin(a[0])] + t[a[0]:fin(a[0])] + t[fin(a[0]):]
+    assert any(f.startswith("tarjeta de más") for f in fallos_tarjetas(doble))
+    cambiado = t[:a[0]] + t[a[1]:fin(a[1])] + t[fin(a[0]):a[1]] + t[a[0]:fin(a[0])] + t[fin(a[1]):]
+    assert any(f.startswith("orden") for f in fallos_tarjetas(cambiado))
+
+
+def test_las_paginas_son_accesibles_sin_javascript():
+    fallos = []
+    for rel in rastreados():
+        if rel.startswith("docs/") and rel.endswith(".html"):
+            fallos += fallos_accesibles(rel, leer(rel))
+    assert not fallos, fallos
 
 
 if __name__ == "__main__":

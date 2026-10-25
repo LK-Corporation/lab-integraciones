@@ -94,6 +94,16 @@ máquina del laboratorio, con un detalle que no es público; lo que se puede rep
   - solo admite programas de línea de órdenes que lean y escriban ficheros;
   - solo juzga ADT de los ocho eventos y ORU^R01.
 
+## La página del estudio (etapa 19, 25-oct-2026)
+
+El estudio de conversores y la herramienta tienen su página web, para leerlo en el navegador:
+[lk-corporation.github.io/lab-integraciones/conversores](https://lk-corporation.github.io/lab-integraciones/conversores/).
+- **Qué lleva:** cada discrepancia con su registro, su cita y su par de mensajes mínimos, con el disparador marcado.
+- **Cómo se comprueba:** no lleva ninguna cifra escrita a mano. La escribe `codigo/hacer_pagina_conversores.py` desde los
+  ficheros de esta carpeta, y cada cifra declara su fuente en un atributo. La prueba de higiene resuelve cada fuente, busca
+  cifras sueltas y comprueba que la página es la que genera el guion.
+- **Dónde está el resto:** cómo se hizo y qué no hace, en [`cv/pg/PG.md`](cv/pg/PG.md).
+
 ## El estudio de conversores (14l, 23-24 oct-2026)
 
 > El verificador encuentra **15 discrepancias nuevas y confirmadas en 2 de 2 conversores, sobre 368 mensajes públicos**;

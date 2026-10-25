@@ -55,6 +55,8 @@ PIE = """
    font-size:.8125rem;color:var(--ink-faint)">
   El c&oacute;digo, el dise&ntilde;o, las revisiones externas y las predicciones selladas est&aacute;n en
   <a href="%s" style="color:var(--accent)">github.com/LK-Corporation/lab-integraciones</a>.
+  Hay una segunda p&aacute;gina, del estudio de conversores:
+  <a href="conversores/" style="color:var(--accent)">lo que vio un juez en dos conversores</a>.
 </p>
 </body>
 </html>

@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Lo que vio un juez determinista en dos conversores HL7 v2 a FHIR de código abierto: cada discrepancia con su cita, su par de mensajes mínimos y lo que no dice, y cómo pasar tu propio conversor por el mismo juez.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://lk-corporation.github.io/lab-integraciones/conversores/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lo que vio un juez en dos conversores">
+<meta property="og:description" content="Lo que vio un juez determinista en dos conversores HL7 v2 a FHIR de código abierto: cada discrepancia con su cita, su par de mensajes mínimos y lo que no dice, y cómo pasar tu propio conversor por el mismo juez.">
+<meta property="og:url" content="https://lk-corporation.github.io/lab-integraciones/conversores/">
+<meta name="twitter:card" content="summary">
+<title>Lo que vio un juez en dos conversores</title>
+<link rel="stylesheet" href="../fonts/fuentes.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { color-scheme: light dark; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  [hidden] { display: none !important; }
+
+  :root {
+    --ground:   #F6F7F8;
+    --surface:  #FFFFFF;
+    --ink:      #14181C;
+    --ink-soft: #596470;
+    --ink-faint:#8B97A3;
+    --rule:     #DCE2E7;
+    --rule-firm:#B9C3CB;
+    --accent:   #16706B;
+    --accent-w: #E3F0EF;
+    --warn:     #9E5A17;
+    --warn-w:   #F6ECE0;
+    --good:     #2C6642;
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans:  "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:   #101418;
+      --surface:  #171C21;
+      --ink:      #E7ECF0;
+      --ink-soft: #9CA8B4;
+      --ink-faint:#6B7885;
+      --rule:     #262E35;
+      --rule-firm:#3A444D;
+      --accent:   #4FB3AB;
+      --accent-w: #12292A;
+      --warn:     #D9924A;
+      --warn-w:   #2A2015;
+      --good:     #5FB37F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:   #101418;
+    --surface:  #171C21;
+    --ink:      #E7ECF0;
+    --ink-soft: #9CA8B4;
+    --ink-faint:#6B7885;
+    --rule:     #262E35;
+    --rule-firm:#3A444D;
+    --accent:   #4FB3AB;
+    --accent-w: #12292A;
+    --warn:     #D9924A;
+    --warn-w:   #2A2015;
+    --good:     #5FB37F;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 3.5rem 5rem;
+  }
+  p { margin: 0 0 1.05em; max-width: 40em; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  a { color: var(--accent); }
+
+  /* ---- cabecera ---- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: .6875rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 1.1rem;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.022em;
+    text-wrap: balance;
+    margin: 0 0 .7rem;
+    max-width: 16em;
+  }
+  .standfirst {
+    font-size: 1.22rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 34em;
+    margin: 0 0 2.2rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.75rem;
+    padding-block: 1rem;
+    border-block: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: .75rem;
+    color: var(--ink-soft);
+    margin-bottom: 3.2rem;
+  }
+  .meta b {
+    color: var(--ink);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- secciones ---- */
+  section { margin-bottom: 3.4rem; }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.38rem;
+    line-height: 1.24;
+    letter-spacing: -.012em;
+    text-wrap: balance;
+    margin: 0 0 1.1rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--ink);
+    max-width: 24em;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: .8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    margin-bottom: .45rem;
+    letter-spacing: .06em;
+  }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: -.004em;
+    margin: 2rem 0 .7rem;
+    color: var(--ink);
+  }
+
+  /* ---- la tesis: las dos frases ---- */
+  .tesis {
+    background: var(--surface);
+    border: 1px solid var(--rule-firm);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem 1.6rem;
+    margin: 0 0 1.6rem;
+    font-size: 1.1rem;
+  }
+  .tesis p { margin: 0; max-width: none; }
+  .tesis .une {
+    display: block;
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: .9rem 0 .8rem;
+  }
+  .tesis .une::before { content: "└─ y a la vez ─"; }
+
+  /* ---- datos ---- */
+  .cifra { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+  table { border-collapse: collapse; width: 100%; font-size: .9375rem; }
+  .tabla-caja { overflow-x: auto; margin: 0 0 1.4rem; }
+  th, td {
+    text-align: left;
+    padding: .5rem .85rem .5rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: baseline;
+  }
+  th {
+    font-family: var(--sans);
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom-color: var(--rule-firm);
+  }
+  td.n, th.n {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    padding-right: 0;
+    white-space: nowrap;
+  }
+  tr.destaca td { background: var(--accent-w); font-weight: 600; }
+
+  /* ---- la escalera ---- */
+  figure { margin: 0 0 1.5rem; }
+  figcaption {
+    font-family: var(--sans);
+    font-size: .8125rem;
+    color: var(--ink-soft);
+    margin-top: .8rem;
+    max-width: 34em;
+  }
+  .escalera { width: 100%; height: auto; display: block; }
+  .escalera .barra    { fill: var(--rule-firm); }
+  .escalera .barra-a  { fill: var(--accent); }
+  .escalera .barra-w  { fill: var(--warn); }
+  .escalera .etiq     { fill: var(--ink); font-family: var(--sans); font-size: 11px; }
+  .escalera .etiq-s   { fill: var(--ink-soft); font-family: var(--sans); font-size: 11px; }
+  .escalera .val      { fill: var(--ink); font-family: var(--mono); font-size: 11px; font-weight: 500; }
+  .escalera .eje      { stroke: var(--rule); stroke-width: 1; }
+  .escalera .eje-t    { fill: var(--ink-faint); font-family: var(--mono); font-size: 9px; }
+
+  /* ---- bloques ---- */
+  .principio {
+    border-left: 3px solid var(--warn);
+    background: var(--warn-w);
+    padding: 1.1rem 1.3rem;
+    margin: 0 0 1.4rem;
+    font-size: 1.03rem;
+  }
+  .principio p { margin: 0; max-width: none; }
+  .principio .rot {
+    display: block;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--warn);
+    margin-bottom: .55rem;
+  }
+
+  pre {
+    font-family: var(--mono);
+    font-size: .8125rem;
+    line-height: 1.65;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    margin: 0 0 1.4rem;
+    color: var(--ink);
+  }
+  code { font-family: var(--mono); font-size: .88em; }
+
+  .limites { list-style: none; padding: 0; margin: 0; }
+  .limites li {
+    padding: .7rem 0 .7rem 1.7rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    max-width: 42em;
+  }
+  .limites li::before {
+    content: "no";
+    position: absolute;
+    left: 0;
+    top: .78rem;
+    font-family: var(--mono);
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--warn);
+    letter-spacing: .04em;
+  }
+
+  .reglas { margin: 0; }
+  .reglas dt {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.4rem;
+    max-width: 38em;
+  }
+  .reglas dd {
+    margin: .3rem 0 0;
+    color: var(--ink-soft);
+    font-size: .96rem;
+    max-width: 40em;
+  }
+  .reglas dd::before {
+    content: "← ";
+    color: var(--ink-faint);
+    font-family: var(--mono);
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: .8125rem;
+    color: var(--ink-faint);
+    max-width: 40em;
+  }
+
+  @media (max-width: 560px) {
+    .wrap { padding-block: 2.4rem 3.5rem; }
+    .meta { gap: .3rem 1.1rem; }
+  }
+
+
+  main { counter-reset: seccion; }
+  .numerada { counter-increment: seccion; }
+  .numerada h2 .num::before { content: counter(seccion, decimal-leading-zero); }
+  .salto { position: absolute; left: -999px; top: .5rem; background: var(--surface); padding: .4rem .8rem; font-family: var(--sans); }
+  .salto:focus { left: .5rem; }
+  .volver { display: inline-block; margin-bottom: 1.4rem; font-family: var(--sans); font-size: .8125rem; }
+  .indice ol { columns: 2; list-style: none; font-family: var(--sans); font-size: .875rem; margin: 0 0 3rem; padding-left: 0; }
+  #f-ms:checked ~ .lista .cuenta, #f-lfh:checked ~ .lista .cuenta { display: none; }
+  .limites .versiones { list-style: disc; padding-left: 1.2rem; margin: .4rem 0 0; }
+  .limites .versiones li { border: 0; padding: .2rem 0; }
+  .limites .versiones li::before { content: none; }
+  .indice li { margin-bottom: .2rem; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .pasos li { margin-bottom: .45rem; }
+  .filtro-in { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .filtro { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.2rem; font-family: var(--sans); font-size: .875rem; }
+  .filtro label { border: 1px solid var(--rule-firm); padding: .3rem .75rem; cursor: pointer; background: var(--surface); }
+  #f-todos:checked ~ .filtro label[for="f-todos"], #f-ms:checked ~ .filtro label[for="f-ms"],
+  #f-lfh:checked ~ .filtro label[for="f-lfh"] { background: var(--accent-w); border-color: var(--accent); color: var(--ink); }
+  #f-todos:focus-visible ~ .filtro label[for="f-todos"], #f-ms:focus-visible ~ .filtro label[for="f-ms"],
+  #f-lfh:focus-visible ~ .filtro label[for="f-lfh"] { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #f-ms:checked ~ .lista .disc:not([data-conv="microsoft"]),
+  #f-lfh:checked ~ .lista .disc:not([data-conv="linuxforhealth"]) { display: none; }
+  .disc { border-top: 1px solid var(--rule); padding-block: 1.1rem; scroll-margin-top: 1rem; }
+  .disc:target { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .disc h4 { font-family: var(--sans); font-size: 1.05rem; margin: .3rem 0 .6rem; }
+  .disc-cab { font-family: var(--mono); font-size: .75rem; color: var(--ink-soft); margin: 0; }
+  .fuerza { text-transform: uppercase; letter-spacing: .06em; }
+  .fuerza-fuerte { color: var(--warn); } .fuerza-media { color: var(--accent); } .fuerza-debil { color: var(--ink-faint); }
+  details summary { cursor: pointer; font-family: var(--sans); font-size: .875rem; color: var(--accent); }
+  details[open] summary { margin-bottom: .8rem; }
+  .registro dt { font-family: var(--sans); font-weight: 600; font-size: .85rem; margin-top: .6rem; }
+  .registro dd { margin: .15rem 0 0; font-size: .95rem; }
+  .rot { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
+         margin: 1rem 0 .3rem; }
+  .par { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .8rem; }
+  .par > div { min-width: 0; }
+  .par pre { font-size: .72rem; white-space: pre; overflow-x: auto; margin: 0; }
+  mark { background: var(--warn-w); color: var(--ink); box-shadow: inset 0 -2px var(--warn); }
+  .ver, .juez { font-size: .92rem; margin: .5rem 0 0; }
+  .juez q { font-family: var(--mono); font-size: .8rem; }
+  caption { text-align: left; font-family: var(--sans); font-size: .8125rem; color: var(--ink-soft); padding-bottom: .5rem; }
+  .caja { font-size: .9rem; }
+  .pie-repo { font-family: var(--sans); font-size: .8125rem; color: var(--ink-faint); max-width: 40em; margin: 1rem auto 0; padding-inline: 20px; }
+  @media (max-width: 720px) { .par { grid-template-columns: minmax(0, 1fr); } .indice ol { columns: 1; } }
+  @media print { .salto, .indice, .filtro, .filtro-in { display: none; } }
+</style>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<div class="wrap">
+<a class="volver" href="../">← La primera página: el agente que no hacía falta</a>
+<p class="eyebrow">Laboratorio de integraciones · <span data-fuente="md:ARTICULO.md" data-patron="^\*Laboratorio de integraciones, (octubre de 2026)\.\*$">octubre de 2026</span></p>
+<h1>Lo que vio un juez en dos conversores</h1>
+<p class="standfirst">Un mensaje con una proteína C reactiva de <strong data-fuente="md:ARTICULO.md" data-patron="proteína C reactiva de \*\*(\.5 mg/L)\*\*">.5 mg/L</strong> entra en un conversor de código abierto y sale como <strong data-fuente="md:ARTICULO.md" data-patron="un recurso\nFHIR con \*\*(5 mg/L)\*\*">5 mg/L</strong>. Nada avisa. Un juez determinista, que lee la guía HL7 v2-to-FHIR y cita cada cosa que afirma, pasó por dos conversores <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.M_mensajes">368</span> mensajes públicos.</p>
+<div class="meta">
+<span>Microsoft FHIR-Converter <b><span data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="\*\*Microsoft FHIR-Converter:\*\* (v7\.0) \(">v7.0</span></b></span>
+<span>LinuxForHealth hl7v2-fhir-converter <b><span data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="\*\*LinuxForHealth hl7v2-fhir-converter:\*\* (v1\.1\.0) de">v1.1.0</span></b></span>
+<span>Referencia: <span data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="^\| Referencia \| (.+?) \|$">Guía HL7 v2-to-FHIR 1.0.0 (hojas CSV de <code>873b331</code>, ConceptMap del paquete), HL7 v2.5 y FHIR R4</span></span>
+<span>Corpus: <b><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.M_mensajes">368</span></b> mensajes (ADT <span class="cifra" data-fuente="json:verificador/cv/RESULTADO-CV2.json#por_conversor.microsoft.adt.n">263</span>, ORU <span class="cifra" data-fuente="json:verificador/cv/RESULTADO-CV2.json#por_conversor.microsoft.oru.n">40</span> y <span class="cifra" data-fuente="json:verificador/cv/RESULTADO-CV2.json#por_conversor.microsoft.muestras.n">65</span> muestras)</span>
+<span>Juez de los resultados sellados <b><span data-fuente="json:verificador/cv/CLASES-CV3.json#juez" data-patron="^(.{8})">54a90cd9</span></b>, del cierre y la rama principal <b><span data-fuente="json:verificador/cv/RESULTADO-15A-minimos-main.json#juez" data-patron="^(.{8})">40bbc3ef</span></b>, publicado como <b><span data-fuente="md:verificador/MANIFIESTO.txt" data-patron="huella del juez publicado:\s+([0-9a-f]{8})">0dd3ae5c</span></b> (se diferencia en un extracto que el juez cita, no en su lógica)</span>
+<span>Fechas: <span data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="^\| Fechas \| (23 y 24 de octubre),">23 y 24 de octubre</span></span>
+</div>
+<nav class="indice" aria-label="Secciones"><ol><li><a href="#resumen">Resumen</a></li><li><a href="#s01">El problema</a></li><li><a href="#s02">El juez</a></li><li><a href="#s03">El método</a></li><li><a href="#s04">Lo que encontró</a></li><li><a href="#s05">En la rama principal</a></li><li><a href="#s06">Lo que ya sabían</a></li><li><a href="#s07">Lo que no cuenta</a></li><li><a href="#s08">Lo que el juez se equivocó</a></li><li><a href="#s09">La previsión</a></li><li><a href="#s10">Pasa tu conversor</a></li><li><a href="#s11">Lo que esto no dice</a></li><li><a href="#s12">Cómo reproducirlo</a></li></ol></nav>
+<main id="contenido">
+<section id="resumen">
+<div class="tesis"><p>El verificador encuentra <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_nuevas_confirmadas">15</span> discrepancias nuevas y confirmadas en <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.K_conversores">2</span> de <span class="cifra" data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="confirmadas en 2 de (2) conversores">2</span> conversores, sobre <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.M_mensajes">368</span> mensajes públicos; además ve <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.D_ya_declaradas">31</span> de las ya declaradas, y <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.C_convenciones">16</span> diferencias son convención.</p><span class="une" aria-hidden="true"></span><p><strong>No es una certificación.</strong> Es lo que ve un juez determinista con sus decisiones declaradas, en esas versiones y en esos dos tipos de mensaje.</p></div>
+<p>De las <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_nuevas_confirmadas">15</span>, <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_por_conversor.microsoft">5</span> son de Microsoft y <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_por_conversor.linuxforhealth">10</span> de LinuxForHealth, y <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_fuertes">7</span> son fuertes.</p>
+<dl class="reglas"><dt>Qué es «confirmada»</dt><dd>Cada una cumple <span class="cifra" data-fuente="md:verificador/RESULTADO-CONVERSORES.md" data-patron="Cada una cumple (cuatro) condiciones">cuatro</span> condiciones: tiene su cita en la guía; cae en una de las <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="una de \*\*(ocho) clases que cambian">ocho</span> clases que cambian el significado del dato; el proyecto no la tenía declarada en sus salidas esperadas, sus pruebas, su documentación, los comentarios de sus plantillas ni sus issues; y se reproduce con un par de mensajes mínimos, en una caja sin red.</dd></dl>
+</section>
+<section id="s01" class="numerada">
+<h2><span class="num"></span>El problema: un conversor se prueba con sus propias respuestas</h2>
+<p>Un proyecto de conversión publica sus salidas esperadas y las usa en sus pruebas. Esas salidas dicen qué hace el conversor, no si lo que hace es lo que dice la guía. Si la plantilla se equivoca, la salida esperada se equivoca con ella y la prueba pasa.</p>
+<p>En este estudio se comprobó con Microsoft: sus salidas esperadas, <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="Son (62) muestras">62</span> muestras, juzgadas con el mismo juez dan los mismos hallazgos que su conversión real. Por eso hace falta un juez que no se fíe del conversor: que lea la guía, que cite cada cosa que afirma y que diga lo que no sabe.</p>
+</section>
+<section id="s02" class="numerada">
+<h2><span class="num"></span>El juez</h2>
+<p>El verificador nació para juzgar circuitos propios: un motor de integración que recibe HL7 v2, contesta con un acuse y escribe FHIR. Es un programa en Python, sin dependencias y sin ningún modelo de lenguaje: a la misma evidencia, el mismo veredicto. Para juzgar conversores ajenos se le añadió un perfil «guía», que toma lo esperado de los mapas de la guía v2-to-FHIR y de sus hojas, citadas por fichero y fila.</p>
+<p>Una discrepancia cuenta si cae en una de estas clases, que cambian el significado del dato:</p>
+<div class="tabla-caja"><table><thead><tr><th>Clase</th><th>Ejemplo</th></tr></thead><tbody><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|valor distinto|Clase">valor distinto</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|valor distinto|Ejemplo">un número que no es el del mensaje</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|dato perdido|Clase">dato perdido</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|dato perdido|Ejemplo">un campo valorado que no llega</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|dato inventado|Clase">dato inventado</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|dato inventado|Ejemplo">algo que el mensaje no dice</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|código mal mapeado|Clase">código mal mapeado</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|código mal mapeado|Ejemplo">un código traducido a otro concepto</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|valor imposible convertido|Clase">valor imposible convertido</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|valor imposible convertido|Ejemplo">un código fuera de su tabla, convertido como si valiera</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|recurso ausente, duplicado o inventado|Clase">recurso ausente, duplicado o inventado</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|recurso ausente, duplicado o inventado|Ejemplo">un resultado que desaparece o se repite</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|referencia rota|Clase">referencia rota</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|referencia rota|Ejemplo">un sujeto que no existe</span></td></tr><tr><td><span data-fuente="tabla:ARTICULO.md### El juez|FHIR inválido|Clase">FHIR inválido</span></td><td><span data-fuente="tabla:ARTICULO.md### El juez|FHIR inválido|Ejemplo">un código fuera de un valor obligatorio de FHIR</span></td></tr></tbody></table></div>
+<div class="principio"><p>Lo demás es forma y no cuenta: el orden, los identificadores, cómo se escribe una referencia. Cuando la guía admite dos lecturas, o no decide, el juez lo declara como convención y no lo cuenta.</p></div>
+</section>
+<section id="s03" class="numerada">
+<h2><span class="num"></span>El método: escribirlo todo antes de mirar</h2>
+<p>Un juez que busca fallos ajenos corre un riesgo evidente: encontrar lo que quiere encontrar. Por eso el estudio se hizo con las mismas reglas que el resto del laboratorio:</p>
+<ol class="pasos"><li><strong data-fuente="md:ARTICULO.md" data-patron="^1\. \*\*(La pregunta, la regla de éxito y la de fracaso, escritas antes de empezar)\*\*">La pregunta, la regla de éxito y la de fracaso, escritas antes de empezar</strong> Si no salía al menos una discrepancia nueva y confirmada, se dejaba de invertir en el verificador. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/ANTES-ETAPA-CONVERSORES.md">el ANTES</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^2\. \*\*(El diseño, a ciegas\.)\*\*">El diseño, a ciegas.</strong> El perfil «guía» lo diseñó un modelo distinto del que lo programó, sin ver lo que devuelven los conversores. Lo que ni la guía ni el estándar deciden lo decidió un modelo de decisión, sobre un estado escrito sin recomendación. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/diseno-conversores-fable.md">el diseño</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^3\. \*\*(La previsión sellada antes de correr nada)\*\*">La previsión sellada antes de correr nada</strong> Con la huella del juez: qué proporción de casos saldría bien en cada conversor y qué mecanismos se esperaban. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/PREVISION-CV2.md">la previsión</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^4\. \*\*(Los conversores, aislados\.)\*\*">Los conversores, aislados.</strong> Docker sin red, de solo lectura, sin privilegios, con la versión fijada por su huella. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/CV1.md">la construcción</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^5\. \*\*(El contraste con lo que el proyecto ya sabe\.)\*\*">El contraste con lo que el proyecto ya sabe.</strong> Sus salidas esperadas, sus pruebas, su documentación, los comentarios de sus plantillas, sus issues y los comentarios de esos issues. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/RESULTADO-CV3.md">el contraste</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^6\. \*\*(Un par de mensajes mínimos por cada nueva\.)\*\*">Un par de mensajes mínimos por cada nueva.</strong> El caso trae solo el disparador y el control es el mismo mensaje sin él; cuenta solo si el fallo sale en el caso y no en el control. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/cv3_minimos.py">el generador de los pares</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^7\. \*\*(Una revisión adversaria\.)\*\*">Una revisión adversaria.</strong> Agentes de modelo de lenguaje, uno por conversor, recibieron las candidatas con el encargo de romperlas, en sesiones aparte. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/RESULTADO-CV3.md">lo que cayó</a>)</li><li><strong data-fuente="md:ARTICULO.md" data-patron="^8\. \*\*(La rama principal\.)\*\*">La rama principal.</strong> Las que quedaron se volvieron a probar en la rama principal de cada proyecto, construida desde su código. (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/RESULTADO-15A.md">las ramas principales</a>)</li></ol>
+<p>La revisión adversaria intentó romper las <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="romper las (25) candidatas y tumbó (10)">25</span> candidatas y tumbó <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="romper las (25) candidatas y tumbó (10)" data-grupo="2">10</span>. En la rama principal de cada proyecto, de las <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="de las (15) nuevas, (14) siguen en la rama principal">15</span> siguen <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="de las (15) nuevas, (14) siguen en la rama principal" data-grupo="2">14</span>.</p>
+</section>
+<section id="s04" class="numerada">
+<h2><span class="num"></span>Lo que encontró</h2>
+<p>Están ordenadas por fuerza, como en el estudio. Los mensajes son los pares mínimos, sintéticos y en v2.5: el caso trae solo el disparador, marcado, y el control es el mismo mensaje sin él. Lo que dijo el juez se muestra tal cual, sin reescribirlo. Los Bundles que devolvieron los conversores no se publican.</p>
+<p>Lo que confirma una discrepancia es que el hallazgo buscado salga en el caso y no en el control. La categoría del control puede ser también fallo silencioso, por otros mecanismos que ya se cuentan aparte.</p>
+<input type="radio" name="conv" id="f-todos" class="filtro-in" checked>
+<input type="radio" name="conv" id="f-ms" class="filtro-in">
+<input type="radio" name="conv" id="f-lfh" class="filtro-in">
+<div class="filtro" role="group" aria-label="Filtrar las discrepancias por conversor"><label for="f-todos">Los dos</label><label for="f-ms">Microsoft (<span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_por_conversor.microsoft">5</span>)</label><label for="f-lfh">LinuxForHealth (<span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_por_conversor.linuxforhealth">10</span>)</label></div>
+<div class="lista">
+<h3>Las <span class="cuenta" data-fuente="md:ARTICULO.md" data-patron="^### Las (siete) que más pesan$">siete</span> que más pesan</h3>
+<article class="disc" id="M-24" data-conv="microsoft">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-24].id">M-24</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-24|Conversor">Microsoft</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-24].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Un valor que se multiplica por diez)\*\* \(Microsoft\)">Un valor que se multiplica por diez</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-24|Discrepancia">NM «.5» se escribe <strong>5</strong>: el valor se multiplica por diez. La plantilla emite <code>"value":.5</code>, y el postproceso del JSON lo recupera como 5</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-24|Guía"><code>CH02A.txt:2958</code> (NM admite «.5»); <code>OBX_Observation.csv</code> (NM → valueQuantity)</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-24|Casos">ORU-B29</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|M-24|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].id">M01-nm-punto-inicial</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:M01-nm-punto-inicial#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|M01c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2345-7^Glucosa^LN||.5|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:M01-nm-punto-inicial#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|M01k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2345-7^Glucosa^LN||0.5|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].objetivo.texto">valueQuantity.value</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].objetivo.hecho">OBX-5</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].microsoft.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].microsoft.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M01-nm-punto-inicial].microsoft.caso.que.0">Observation.valueQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)</q></p>
+</details>
+</article>
+<article class="disc" id="M-23" data-conv="microsoft">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-23].id">M-23</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-23|Conversor">Microsoft</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-23].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Resultados colgados de un paciente que no existe)\*\* \(Microsoft\)">Resultados colgados de un paciente que no existe</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-23|Discrepancia">ORU sin PID: <code>subject</code> apunta a «Patient/364bf61f…», que no está en el Bundle. Es el mismo id en ORU-B30 y en el mínimo: todos los mensajes sin PID quedan colgados del mismo paciente inexistente</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-23|Guía"><code>MSG_ORU_R01.csv:14,67-69</code> (Patient[1] solo desde PID)</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-23|Casos">ORU-B30</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|M-23|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].id">M07-oru-sin-pid</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:M07-oru-sin-pid#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|M07c|P|2.5
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:M07-oru-sin-pid#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|M07k|P|2.5
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F</mark>
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].objetivo.texto">subject</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].objetivo.hecho">PID-3</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.caso.que.0">Observation.subject: {'reference': 'Patient/364bf61f-d0ac-3b9a-d91c-dbc2d9d9f46f'} no resuelve al Patient del PID</q></p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M07-oru-sin-pid].microsoft.caso.que.1">DiagnosticReport.subject: {'reference': 'Patient/364bf61f-d0ac-3b9a-d91c-dbc2d9d9f46f'} no resuelve al Patient del PID</q></p>
+</details>
+</article>
+<article class="disc" id="M-18" data-conv="microsoft">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-18].id">M-18</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-18|Conversor">Microsoft</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-18].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Un paciente al que se da por muerto)\*\* \(Microsoft\)">Un paciente al que se da por muerto</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-18|Discrepancia">En ADT^A02, un PDA sin datos (<code>PDA|""</code>) da <code>deceasedBoolean: true</code>, sin PID-29 ni PID-30. En A01 no pasa</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-18|Guía"><code>PID_Patient.csv:50-51</code>; PDA sin destino (<code>MSG_ADT_A01.csv:81</code>)</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-18|Casos">5 (A02 «nulos»)</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|M-18|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*M-18:\*\* (.+)$">vale para un PDA sin datos de muerte. Con un PDA relleno, inferir la muerte es razonable.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].id">M03-pda-sin-muerte</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:M03-pda-sin-muerte#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A02^ADT_A02|M03c|P|2.5
+EVN|A02|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+PV1|1|I|UCI^3^1^HOSP
+<mark>PDA|""</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:M03-pda-sin-muerte#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A02^ADT_A02|M03k|P|2.5
+EVN|A02|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].objetivo.texto">deceasedBoolean</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].objetivo.hecho">PID-30</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].microsoft.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].microsoft.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M03-pda-sin-muerte].microsoft.caso.que.0">Patient.deceasedBoolean: True sin PID-30</q></p>
+</details>
+</article>
+<article class="disc" id="L-10" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-10].id">L-10</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-10|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-10].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(«Separado» que pasa a «anulado»)\*\* \(LinuxForHealth\)">«Separado» que pasa a «anulado»</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-10|Discrepancia">PID-16 «A» (separado) se escribe en v3-MaritalStatus como «A», que allí es <strong>anulado</strong>; la guía da «L»</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-10|Guía">CM <code>table-hl70002-to-v3-maritalstatus</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-10|Casos">2</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-10|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].id">L02-estado-civil-a</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L02-estado-civil-a#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L02c|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F||||||||A</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L02-estado-civil-a#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L02k|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F||||||||M</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].objetivo.texto">maritalStatus</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].objetivo.hecho">PID-16</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L02-estado-civil-a].linuxforhealth.caso.que.0">Patient.maritalStatus: esperado ('http://terminology.hl7.org/CodeSystem/v3-MaritalStatus', 'L') (de 'A'), observado [('http://terminology.hl7.org/CodeSystem/v3-MaritalStatus', 'A')]</q></p>
+</details>
+</article>
+<article class="disc" id="L-15" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-15].id">L-15</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-15].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Resultados que desaparecen)\*\* \(LinuxForHealth\)">Resultados que desaparecen</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Discrepancia">Un OBX sin OBX-2 y sin valor (resultado no obtenible «X», o pendiente «I») no da Observation. Va contra la guía y contra el comentario de su propia plantilla («OBX.2 is null/empty … CREATE»)</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Guía"><code>MSG_ORU_R01.csv:67</code>; <code>CH07.txt:2574</code> (OBX-2 es condicional)</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Casos">ORU-B18, B22</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-15|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].id">L06-obx-sin-tipo</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L06-obx-sin-tipo#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L06c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1||2345-7^Glucosa^LN||||||||X|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L06-obx-sin-tipo#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L06k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2345-7^Glucosa^LN||||||||X|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].objetivo.texto">Observation</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].objetivo.hecho">OBX-3</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].linuxforhealth.caso.que.0">falta la Observation del OBX 1.1</q></p>
+</details>
+</article>
+<article class="disc" id="L-16" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-16].id">L-16</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-16|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-16].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Texto con formato y horas que se pierden)\*\* \(LinuxForHealth\)">Texto con formato y horas que se pierden</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-16|Discrepancia">Los valores FT y TM se pierden: valueString solo existe para ST, y no hay valueTime</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-16|Guía"><code>OBX_Observation.csv:9,19</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-16|Casos">ORU-B11, B13</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-16|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].id">L07-ft</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L07-ft#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L07c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|FT|8251-1^Comentario^LN||Texto con formato||||||F|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L07-ft#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L07k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|ST|8251-1^Comentario^LN||Texto con formato||||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].objetivo.texto">valueString</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].objetivo.hecho">OBX-5</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].linuxforhealth.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L07-ft].linuxforhealth.caso.que.0">Observation.valueString: falta (OBX-5 'Texto con formato')</q></p>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].id">L08-tm</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L08-tm#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L08c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|TM|8302-2^Hora^LN||0715||||||F|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L08-tm#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L08k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|ST|8302-2^Hora^LN||0715||||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].objetivo.texto">valueTime</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].objetivo.hecho">OBX-5</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].linuxforhealth.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L08-tm].linuxforhealth.caso.que.0">Observation.valueTime: falta (OBX-5 '0715')</q></p>
+</details>
+</article>
+<article class="disc" id="L-20" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-20].id">L-20</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-20|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-fuerte" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-20].fuerza">fuerte</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\*\*(Un rango que pasa a ser un número)\*\* \(LinuxForHealth\)">Un rango que pasa a ser un número</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-20|Discrepancia">SN «^1^-^5» (rango) se escribe como valueQuantity <strong>1</strong></span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-20|Guía"><code>OBX_Observation.csv:22</code> (SN con «-» → valueRange); CM <code>datatype-sn-to-range</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-20|Casos">ORU-B07</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-20|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].id">L11-sn-rango</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L11-sn-rango#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L11c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|SN|2345-7^Glucosa^LN||^1^-^5|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L11-sn-rango#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L11k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|SN|2345-7^Glucosa^LN||&lt;^5|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].objetivo.texto">SN</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].objetivo.hecho">OBX-5</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].linuxforhealth.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L11-sn-rango].linuxforhealth.caso.que.0">Observation.value[x] SN '^1^-^5': esperado valueRange, observado ['valueQuantity']</q></p>
+</details>
+</article>
+<h3>Las otras <span class="cuenta" data-fuente="md:ARTICULO.md" data-patron="^### Las otras (ocho)$">ocho</span></h3>
+<article class="disc" id="M-7" data-conv="microsoft">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-7].id">M-7</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-7|Conversor">Microsoft</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-7].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| Microsoft \| (De un médico remitente repetido \(PV1-8\), solo llega el primero) \|$">De un médico remitente repetido (PV1-8), solo llega el primero</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-7|Discrepancia">De PV1-8 repetido, solo la primera repetición llega a participant</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-7|Guía"><code>PV1_Encounter.csv:18-21</code> (PV1-8, 0..*)</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-7|Casos">8</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|M-7|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].id">M04-pv1-8-repetido</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:M04-pv1-8-repetido#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|M04c|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I|UCI^3^1^HOSP|||||D21^Uno^Ana~D22^Dos^Eva</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:M04-pv1-8-repetido#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|M04k|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I|UCI^3^1^HOSP|||||D21^Uno^Ana</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].objetivo.texto">participant</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].objetivo.hecho">PV1-8</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].microsoft.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].microsoft.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M04-pv1-8-repetido].microsoft.caso.que.0">Encounter.participant REF: falta 'D22^Dos^Eva'</q></p>
+</details>
+</article>
+<article class="disc" id="L-1" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-1].id">L-1</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-1|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-1].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (No hay Encounter\.location: la ubicación del paciente \(PV1-3\) no se convierte) \|$">No hay Encounter.location: la ubicación del paciente (PV1-3) no se convierte</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-1|Discrepancia">No hay Encounter.location: <code>Encounter.yml</code> no la mapea, y de PV1-3 solo queda PL.4 como Organization</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-1|Guía"><code>PV1_Encounter.csv:7-9</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-1|Casos">160 + 15 muestras</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-1|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*L-1:\*\* (.+)$">el ejemplo de salida de <code>TEMPLATING.md</code> trae un Encounter sin location, pero no publica la entrada: no declara nada.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].id">L01-sin-location</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L01-sin-location#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L01c|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I|UCI^3^1^HOSP</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L01-sin-location#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L01k|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].objetivo.texto">location</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].objetivo.hecho">PV1-3</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L01-sin-location].linuxforhealth.caso.que.0">Encounter.location: falta 'UCI^3^1^HOSP'</q></p>
+</details>
+</article>
+<article class="disc" id="L-11" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-11].id">L-11</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-11|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-11].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (Las partes 2 y 3 de la calle \(SAD\.2 y SAD\.3\) no llegan a la dirección) \|$">Las partes 2 y 3 de la calle (SAD.2 y SAD.3) no llegan a la dirección</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-11|Discrepancia">SAD.2 y SAD.3 de XAD.1 no llegan a address.line</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-11|Guía">CM <code>datatype-sad-to-address</code> (SAD.1-3 → line[1-3])</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-11|Casos">5 + 12 muestras</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-11|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*L-11:\*\* (.+)$">el mínimo pone texto artificial en SAD.2 y SAD.3. La pérdida es la de la guía, pero su peso depende de lo que traigan.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].id">L04-sad-2-3</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L04-sad-2-3#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L04c|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F|||C/ Real 5&amp;Piso 3&amp;Puerta B^Esc 2^MADRID^^28001</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L04-sad-2-3#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L04k|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F|||C/ Real 5^Esc 2^MADRID^^28001</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].objetivo.texto">address.line</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].objetivo.hecho">PID-11</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L04-sad-2-3].linuxforhealth.caso.que.0">Patient.address.line: esperado ['C/ Real 5', 'Piso 3', 'Puerta B', 'Esc 2'], observado ['C/ Real 5', 'Esc 2']</q></p>
+</details>
+</article>
+<article class="disc" id="L-12" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-12].id">L-12</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-12|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-12].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (Un sexo «no aplicable» \(N\) pasa a «desconocido»; la guía da «otro») \|$">Un sexo «no aplicable» (N) pasa a «desconocido»; la guía da «otro»</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-12|Discrepancia">PID-8 «N» se escribe «unknown»; la guía da «other»</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-12|Guía">CM <code>table-hl70001-to-administrative-gender</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-12|Casos">1</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-12|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*L-12 y L-19:\*\* (.+\n  .+)$">se apoyan en elecciones de la propia guía. Para «no aplicable», tanto «other» como «unknown» pierden algo. L-19 usa el mapa de la 0123 de consultas.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].id">L05-genero-n</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L05-genero-n#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L05c|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|N</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L05-genero-n#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L05k|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].objetivo.texto">gender</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].objetivo.hecho">PID-8</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L05-genero-n].linuxforhealth.caso.que.0">Patient.gender: esperado 'other', observado 'unknown'</q></p>
+</details>
+</article>
+<article class="disc" id="L-18" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-18].id">L-18</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-18|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-18].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (Un resultado borrado \(OBX-11 «D»\) pasa a «cancelado»; la guía da «introducido por error») \|$">Un resultado borrado (OBX-11 «D») pasa a «cancelado»; la guía da «introducido por error»</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-18|Discrepancia">OBX-11 «D» se escribe «cancelled»; la guía da «entered-in-error»</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-18|Guía">CM <code>table-hl70085-to-observation-status</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-18|Casos">ORU-B20</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-18|Rama principal"><strong>corregida</strong> (<code>master</code> da «entered-in-error»)</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].id">L09-obx-11-d</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L09-obx-11-d#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L09c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||D|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L09-obx-11-d#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L09k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].objetivo.texto">status</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].objetivo.hecho">OBX-11</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].linuxforhealth.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L09-obx-11-d].linuxforhealth.caso.que.0">Observation.status: esperado 'entered-in-error' (de 'D'), observado 'cancelled'</q></p>
+</details>
+</article>
+<article class="disc" id="L-19" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-19].id">L-19</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-19].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (Un informe con la muestra recibida \(OBR-25 «I»\) pasa a «desconocido»; la guía da «registrado») \|$">Un informe con la muestra recibida (OBR-25 «I») pasa a «desconocido»; la guía da «registrado»</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Discrepancia">OBR-25 «I» se escribe «unknown»; la guía da «registered»</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Guía"><code>OBR_DiagnosticReport.csv:33</code>; CM <code>table-hl70123</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Casos">ORU-B22, B31</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-19|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*L-12 y L-19:\*\* (.+\n  .+)$">se apoyan en elecciones de la propia guía. Para «no aplicable», tanto «other» como «unknown» pierden algo. L-19 usa el mapa de la 0123 de consultas.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].id">L10-obr-25-i</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L10-obr-25-i#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L10c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||I</mark>
+OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L10-obr-25-i#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|L10k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F</mark>
+OBX|1|NM|2345-7^Glucosa^LN||95|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].objetivo.texto">status</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].objetivo.hecho">OBR-25</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].linuxforhealth.control.categoria">correcto</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L10-obr-25-i].linuxforhealth.caso.que.0">DiagnosticReport.status: esperado 'registered' (de 'I'), observado 'unknown'</q></p>
+</details>
+</article>
+<article class="disc" id="L-22" data-conv="linuxforhealth">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-22].id">L-22</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-22|Conversor">LinuxForHealth</span> · <span class="fuerza fuerza-media" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-22].fuerza">media</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| LinuxForHealth \| (El «otro profesional» de la visita \(PV1-52\) se pierde) \|$">El «otro profesional» de la visita (PV1-52) se pierde</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-22|Discrepancia">PV1-52 no llega a participant (PART)</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-22|Guía"><code>PV1_Encounter.csv:80-83</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-22|Casos">10 muestras</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-22|Rama principal"><strong>sigue</strong></span></dd>
+<dt>Matiz de la revisión</dt><dd><span data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^- \*\*L-22:\*\* (.+)$">PV1-52 está marcado «B» en v2.5, pero sigue siendo válido.</span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].id">L13-pv1-52</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:L13-pv1-52#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L13c|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I|UCI^3^1^HOSP|||||||||||||||||||||||||||||||||||||||||||||||||D52^Otro^Eva</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:L13-pv1-52#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|L13k|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+<mark>PV1|1|I|UCI^3^1^HOSP</mark></pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].objetivo.texto">participant</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].objetivo.hecho">PV1-52</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].linuxforhealth.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].linuxforhealth.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].linuxforhealth.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].linuxforhealth.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L13-pv1-52].linuxforhealth.caso.que.0">Encounter.participant PART: falta 'D52^Otro^Eva'</q></p>
+</details>
+</article>
+<article class="disc" id="M-10" data-conv="microsoft">
+<p class="disc-cab"><span class="disc-id" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-10].id">M-10</span> · <span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-10|Conversor">Microsoft</span> · <span class="fuerza fuerza-debil" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-10].fuerza">débil</span></p>
+<h4><span data-fuente="md:ARTICULO.md" data-patron="^\| Microsoft \| (Un estado civil «no declarado» \(T\) se pierde; la guía da un nullFlavor) \|$">Un estado civil «no declarado» (T) se pierde; la guía da un nullFlavor</span></h4>
+<details>
+<summary>El registro del estudio, la cita y el par mínimo</summary>
+<dl class="registro">
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-10|Discrepancia">PID-16 «T» (no declarado) no da maritalStatus; la guía da NullFlavor NAVU</span></dd>
+<dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-10|Guía">CM <code>table-hl70002-to-v3-maritalstatus</code></span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|M-10|Casos">1</span></dd>
+<dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|M-10|Rama principal"><strong>sigue</strong></span></dd>
+</dl>
+<p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].id">M08-estado-civil-t</code></p>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:M08-estado-civil-t#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|M08c|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F||||||||T</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:M08-estado-civil-t#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|M08k|P|2.5
+EVN|A01|20260101080000+0100
+<mark>PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F||||||||M</mark>
+PV1|1|I|UCI^3^1^HOSP</pre></div>
+</div>
+<p class="ver">El hallazgo buscado (<code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].objetivo.texto">maritalStatus</code>, en <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].objetivo.hecho">PID-16</code>) sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].microsoft.caso.categoria">fallo_silencioso</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].microsoft.control.categoria">fallo_silencioso</code>.</p>
+<p class="juez">El juez, en el caso: <q data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=M08-estado-civil-t].microsoft.caso.que.0">Patient.maritalStatus: falta ('http://terminology.hl7.org/CodeSystem/v3-NullFlavor', 'NAVU')</q></p>
+</details>
+</article>
+</div>
+<p><span data-fuente="md:ARTICULO.md" data-patron="^- \*\*Los dos conversores son proyectos serios y útiles\.\*\* (Las discrepancias son con una guía concreta, en una versión concreta\.)$">Las discrepancias son con una guía concreta, en una versión concreta.</span></p>
+</section>
+<section id="s05" class="numerada">
+<h2><span class="num"></span>En la rama principal</h2>
+<p>De las <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="de las (15) nuevas, (14) siguen en la rama principal y (una) está corregida">15</span> nuevas, <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="de las (15) nuevas, (14) siguen en la rama principal y (una) está corregida" data-grupo="2">14</span> siguen en la rama principal y <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="de las (15) nuevas, (14) siguen en la rama principal y (una) está corregida" data-grupo="3">una</span> está corregida allí: la de OBX-11 «D», que pasaba a «cancelado». LinuxForHealth cambió ese mapeo por su cuenta, sin saber de este laboratorio, después de la versión juzgada, y todavía no ha publicado una versión que lo lleve.</p>
+<div class="tabla-caja"><table><thead><tr><th></th><th>Microsoft</th><th>LinuxForHealth</th></tr></thead><tbody><tr><th scope="row">Rama y commit</th><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Rama y commit|Microsoft"><code>main</code>, <code>70fd328</code> (3-jun-2026)</span></td><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Rama y commit|LinuxForHealth"><code>master</code>, <code>2cb72c2</code> (11-feb-2026)</span></td></tr><tr><th scope="row">Cómo se construye</th><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Cómo se construye|Microsoft"><code>dotnet publish</code> de la herramienta en <code>mcr.microsoft.com/dotnet/sdk:8.0</code> (<code>sha256:738f72af…</code>); <code>main</code> usa .NET 8, la v7.0 usaba .NET 6</span></td><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Cómo se construye|LinuxForHealth"><code>./gradlew jar</code> en <code>maven:3.9-eclipse-temurin-11</code>, con un script de inicio (<code>copiar-libs.gradle</code>) que copia las 77 dependencias sin tocar el repositorio</span></td></tr><tr><th scope="row">Cómo corre</th><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Cómo corre|Microsoft"><code>mcr.microsoft.com/dotnet/runtime:8.0</code> (<code>sha256:1b2f288e…</code>), en la caja</span></td><td><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md#Las dos ramas se construyeron desde su código|Cómo corre|LinuxForHealth">El mismo arnés (<code>cv/lfh/Arnes.java</code>), compilado contra <code>master</code></span></td></tr></tbody></table></div>
+<p>En los <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-15A.md" data-patron="^\*\*En los (68) mensajes, las dos ramas se diferencian solo en dos">68</span> mensajes mínimos, las dos ramas se diferencian solo en dos.</p>
+</section>
+<section id="s06" class="numerada">
+<h2><span class="num"></span>Lo que los proyectos ya sabían</h2>
+<p>El juez vio también <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.D_ya_declaradas">31</span> discrepancias que los proyectos ya tenían declaradas: <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.D_por_conversor.microsoft">19</span> de Microsoft y <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.D_por_conversor.linuxforhealth">12</span> de LinuxForHealth. Son el control positivo: si el juez no viera lo que los autores ya saben, nada de lo demás valdría. Entre ellas:</p>
+<ul><li>Microsoft: <span data-fuente="md:ARTICULO.md" data-patron="^  - (apunta Encounter\.location al componente menos granular de la ubicación \(un issue abierto\));$">apunta Encounter.location al componente menos granular de la ubicación (un issue abierto)</span></li><li>Microsoft: <span data-fuente="md:ARTICULO.md" data-patron="^  - (cuando dos resultados tienen el mismo código, se queda con uno \(su documentación lo explica\));$">cuando dos resultados tienen el mismo código, se queda con uno (su documentación lo explica)</span></li><li>Microsoft: <span data-fuente="md:ARTICULO.md" data-patron="^  - (pierde el resultado que sigue a una nota \(un issue, en sus comentarios\))\.$">pierde el resultado que sigue a una nota (un issue, en sus comentarios)</span></li><li>LinuxForHealth: <span data-fuente="md:ARTICULO.md" data-patron="^  - (toma la fecha de inicio de la visita del evento cuando falta la de admisión \(una prueba lo afirma\));$">toma la fecha de inicio de la visita del evento cuando falta la de admisión (una prueba lo afirma)</span></li><li>LinuxForHealth: <span data-fuente="md:ARTICULO.md" data-patron="^  - (no soporta tres de los eventos ADT probados \(su README lo dice\))\.$">no soporta tres de los eventos ADT probados (su README lo dice)</span></li></ul>
+<p>Cada una, con dónde la declara el proyecto, está en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/RESULTADO-CV3.md">el registro del estudio</a>.</p>
+</section>
+<section id="s07" class="numerada">
+<h2><span class="num"></span>Lo que no cuenta</h2>
+<p><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.C_convenciones">16</span> diferencias son convención: formas que la guía admite, o sobre las que no decide. Son <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^\*\*Son (14) mecanismos de nota">14</span> mecanismos de nota del juez final, repartidos entre los dos conversores, más el tipo «VN» de PV1-19 en los dos. Se cuentan aparte y no entran en lo que se encontró.</p>
+<p>Hay además <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.rechazos_nuevos">2</span> rechazos nuevos de Microsoft, que no entran en la frase porque un rechazo falla a la vista:</p>
+<ul><li><span data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-12].id">M-12</span>: <span data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-12].que">rechaza el nulo «""» en un DTM (ACC-1); CH02.txt:392</span><details><summary>El par mínimo</summary>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:R01-nulo-en-dtm#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|R01c|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+PV1|1|I|UCI^3^1^HOSP
+<mark>ACC|""</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:R01-nulo-en-dtm#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ADT^A01^ADT_A01|R01k|P|2.5
+EVN|A01|20260101080000+0100
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+PV1|1|I|UCI^3^1^HOSP
+<mark>ACC|20260101070000+0100</mark></pre></div>
+</div>
+<p class="ver">El rechazo buscado sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R01-nulo-en-dtm].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R01-nulo-en-dtm].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R01-nulo-en-dtm].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R01-nulo-en-dtm].microsoft.caso.categoria">rechazo_incorrecto</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R01-nulo-en-dtm].microsoft.control.categoria">fallo_silencioso</code>.</p>
+</details></li><li><span data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-15].id">M-15</span>: <span data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-15].que">NM «01.20»: escribe «"value":01.20» (JSON inválido) y falla; CH02A.txt:2979</span><details><summary>El par mínimo</summary>
+<div class="par">
+<div><p class="rot">Caso</p>
+<pre class="hl7" data-fuente="hl7:R02-nm-cero-inicial#caso">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|R02c|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2160-0^Creatinina^LN||01.20|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+<div><p class="rot">Control</p>
+<pre class="hl7" data-fuente="hl7:R02-nm-cero-inicial#control">MSH|^~\&amp;|LAB|HOSP|DEST|HIS|20260101080000+0100||ORU^R01^ORU_R01|R02k|P|2.5
+PID|1||P0001^^^HOSP^MR||PRUEBA^ANA||19800101|F
+OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||20260101090000+0100|||F
+<mark>OBX|1|NM|2160-0^Creatinina^LN||1.20|mg/dL^mg/dL^UCUM|||||F|||20260101080000+0100</mark></pre></div>
+</div>
+<p class="ver">El rechazo buscado sale en el caso: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R02-nm-cero-inicial].microsoft.caso.sale">sí</strong>; en el control: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R02-nm-cero-inicial].microsoft.control.sale">no</strong>. Se confirma: <strong data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R02-nm-cero-inicial].confirmada">sí</strong>.</p>
+<p class="ver">Con el conversor para el que se escribió, el caso sale <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R02-nm-cero-inicial].microsoft.caso.categoria">rechazo_incorrecto</code> y el control, <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=R02-nm-cero-inicial].microsoft.control.categoria">fallo_silencioso</code>.</p>
+</details></li></ul>
+<p><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.dudosas">3</span> más son dudosas y no cuentan: las preguntas Q-CV-D-15 y Q-CV-D-16 siguen abiertas. Y la revisión adversaria tumbó <span class="cifra" data-fuente="md:verificador/cv/RESULTADO-CV3.md" data-patron="^## Las (10) que cayeron en la revisión">10</span> candidatas, cada una con su motivo y su cita en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/RESULTADO-CV3.md">el registro del estudio</a>.</p>
+</section>
+<section id="s08" class="numerada">
+<h2><span class="num"></span>Lo que el juez se equivocó, y se corrigió</h2>
+<p>Un juez que juzga a otros tiene que mirarse primero. Durante el estudio se le encontraron <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="se le encontraron \*\*(once) defectos\*\*">once</span> defectos, cada uno arreglado con su prueba en rojo antes del código: <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="^- \*\*(4), al revisar el primer juicio\.\*\*">4</span> al revisar el primer juicio, <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="^- \*\*(4) en los que la guía admitía lo observado\.\*\*">4</span> en los que la guía admitía lo observado y <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="^- \*\*(3) que dejó el contraste\.\*\*">3</span> que dejó el contraste. El más claro, un falso positivo: los dos conversores ponen el nombre de la autoridad que asigna el identificador transformado, y el juez buscaba el texto literal.</p>
+<div class="tabla-caja"><table><thead><tr><th>Fase</th><th>Huella</th><th>Qué</th></tr></thead><tbody><tr><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV1|Fase">CV1</span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV1|Huella"><code>63d40cd0</code></span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV1|Qué"><code>conversion.py</code> (lector, emparejamiento por papel, perfil «guía», ocho clases) y los puntos de entrada <code>adt_conv</code> y <code>oru_conv</code>. El juez de siempre, idéntico</span></td></tr><tr><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV2, repetición 1|Fase">CV2, repetición 1</span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV2, repetición 1|Huella"><code>be73697f</code></span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV2, repetición 1|Qué">J1 (PID-12 a district), J2 (el género en minúscula), J3 (status 1..1) y J5 (OBX-5 repetido)</span></td></tr><tr><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV3, rejuicios 1 y 2|Fase">CV3, rejuicios 1 y 2</span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV3, rejuicios 1 y 2|Huella"><code>198cebdd</code>, <code>54a90cd9</code></span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV3, rejuicios 1 y 2|Qué">DV-CV-13 (NM «5.»), DV-CV-14 (FT <code>\.br\</code>), DV-CV-15 (PV1-19 «VN») y DV-CV-16 (PL «^^»)</span></td></tr><tr><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV4|Fase">CV4</span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV4|Huella"><strong><code>40bbc3ef</code></strong>, servidor 1.2</span></td><td><span data-fuente="tabla:verificador/RESULTADO-CONVERSORES.md### Qué cambió en el juez durante la etapa|CV4|Qué"><strong>CX.4 en system</strong> se compara sin espacios ni signos: eran falsos positivos en los dos conversores. <strong>Q-CV-D-14:</strong> la descripción que contiene PL.9 sin ser PL.9 es <code>valor_distinto</code>. <strong>Una referencia rota sin PID</strong> lleva el hecho «PID». Se declaran L-CV-14..16, AMB-CV-10 y las preguntas abiertas. Pruebas P-CV-26..28</span></td></tr></tbody></table></div>
+<div class="principio"><p>Lo que no se hizo fue mover la previsión.</p></div>
+</section>
+<section id="s09" class="numerada">
+<h2><span class="num"></span>La previsión sellada, frente a lo que salió</h2>
+<p>La previsión se selló con la huella del juez antes de correr nada. Falló por mucho, y eso queda escrito, no corregido.</p>
+<div class="tabla-caja"><table><caption>Categorías por conversor y familia. Entre corchetes, el rango sellado.</caption><thead><tr><th>Conversor · familia</th><th class="n">n</th><th class="n">correcto</th><th class="n">fallo silencioso</th><th class="n">rechazo incorrecto</th></tr></thead><tbody><tr><td><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ADT|Conversor · familia">Microsoft · ADT</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ADT|n">263</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ADT|correcto">6 (2,3 %) [35-65]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ADT|fallo_silencioso">185 (70,3 %) [30-60]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ADT|rechazo_incorrecto">72 (27,4 %) [0-5]</span></td></tr><tr><td><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ORU|Conversor · familia">Microsoft · ORU</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ORU|n">40</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ORU|correcto">33 (82,5 %) [20-50]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ORU|fallo_silencioso">6 (15,0 %) [45-80]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|Microsoft · ORU|rechazo_incorrecto">1 (2,5 %) [0-5]</span></td></tr><tr><td><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ADT|Conversor · familia">LinuxForHealth · ADT</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ADT|n">263</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ADT|correcto">11 (4,2 %) [30-60]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ADT|fallo_silencioso">160 (60,8 %) [35-65]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ADT|rechazo_incorrecto">92 (35,0 %) [0-10]</span></td></tr><tr><td><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ORU|Conversor · familia">LinuxForHealth · ORU</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ORU|n">40</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ORU|correcto">4 (10,0 %) [20-50]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ORU|fallo_silencioso">36 (90,0 %) [45-80]</span></td><td class="n"><span data-fuente="tabla:verificador/cv/RESULTADO-CV2.md### Lo que salió, frente a lo previsto|LinuxForHealth · ORU|rechazo_incorrecto">0</span></td></tr></tbody></table></div>
+<div class="tabla-caja"><table><caption>La frase prevista y la que salió</caption><thead><tr><th></th><th class="n">Prevista</th><th class="n">Salió</th></tr></thead><tbody><tr><td>discrepancias nuevas y confirmadas</td><td class="n"><span data-fuente="json:verificador/cv/PREVISION-CV2.json#frase_prevista.N">≥ 2</span></td><td class="n"><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.N_nuevas_confirmadas">15</span></td></tr><tr><td>conversores con alguna</td><td class="n"><span data-fuente="json:verificador/cv/PREVISION-CV2.json#frase_prevista.K">1 o 2</span></td><td class="n"><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.K_conversores">2</span></td></tr><tr><td>ya declaradas que el juez ve</td><td class="n"><span data-fuente="json:verificador/cv/PREVISION-CV2.json#frase_prevista.D">≥ 3</span></td><td class="n"><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.D_ya_declaradas">31</span></td></tr><tr><td>convenciones</td><td class="n"><span data-fuente="json:verificador/cv/PREVISION-CV2.json#frase_prevista.C">≥ 10</span></td><td class="n"><span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#frase.C_convenciones">16</span></td></tr></tbody></table></div>
+<p>De los rechazos de Microsoft, <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=M-11].casos.adt">30</span> eran un mensaje mal hecho del propio corpus del laboratorio: un segmento GT1 desplazado un campo. Los <span class="cifra" data-fuente="json:verificador/cv/CLASES-CV3.json#clases[id=L-4].casos.adt">92</span> de LinuxForHealth en ADT eran eventos que esa versión no soporta.</p>
+</section>
+<section id="s10" class="numerada">
+<h2><span class="num"></span>Pasa tu conversor por el mismo juez</h2>
+<p>Cualquiera puede pasar su conversor HL7 v2 → FHIR R4 por el verificador con un fichero de adaptador JSON y una orden, sin escribir código:</p>
+<pre data-fuente="md:verificador/cv/VC.md" data-patron="^(python3 cv/verificar_conversor\.py .+)$">python3 cv/verificar_conversor.py &lt;adaptador.json&gt; &lt;carpeta de salida&gt; --artefactos &lt;carpeta con el conversor&gt;</pre>
+<p>La herramienta:</p><ol><li><span data-fuente="md:verificador/README.md" data-patron="^1\. (.+?)[;.]$">corre el conversor en una caja de Docker sin red, de solo lectura, sin privilegios ni capacidades</span></li><li><span data-fuente="md:verificador/README.md" data-patron="^2\. (.+?)[;.]$">escribe una evidencia por mensaje sobre el corpus público y la juzga con el mismo juez, sin tocarlo</span></li><li><span data-fuente="md:verificador/README.md" data-patron="^3\. (.+?)[;.]$">agrega por las ocho clases que cambian el significado del dato</span></li><li><span data-fuente="md:verificador/README.md" data-patron="^4\. (.+?)[;.]$">evalúa los pares mínimos del estudio</span></li><li><span data-fuente="md:verificador/README.md" data-patron="^5\. (.+?)[;.]$">escribe <code>INFORME.md</code> e <code>INFORME.json</code></span></li></ol>
+<div class="principio"><p class="rot">Lo que no puede saber</p><p><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#contraste_con_el_proyecto.texto">Este informe dice qué hallazgos ve el juez y con qué cita. <strong>No dice si el proyecto del conversor ya los tiene declarados</strong> (salidas esperadas, pruebas, documentación o issues): ese contraste lo hace una persona, como en <code>cv/RESULTADO-CV3.md</code>, y hasta entonces ningún mecanismo de aquí es «nuevo» ni «confirmado». De las cuatro condiciones del estudio, la herramienta comprueba tres (cita, clase, par mínimo) y deja la cuarta sin hacer.</span></p></div>
+<p>El adaptador es un JSON declarativo con <span class="cifra" data-fuente="md:verificador/cv/VC.md" data-patron="Es un JSON declarativo con (cinco) bloques">cinco</span> bloques: el conversor, la caja, la invocación, la salida y los límites. Se copia uno de los de ejemplo y se cambian los datos: el nombre, la versión y las partes de la huella; la imagen y los montajes, siempre de solo lectura; la orden con sus marcadores; y cómo se lee la salida. Los de ejemplo están en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/adaptadores">la carpeta de adaptadores</a>, y cómo se usa, en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/VC.md">su documento</a>.</p>
+<p>El conversor corre en una caja que el adaptador no puede relajar:</p><ul class="caja"><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.0">--network none</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.1">--read-only</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.2">--tmpfs /tmp</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.3">--cap-drop ALL</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.4">--security-opt no-new-privileges</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.5">--user 65534:65534</code></li><li><code data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#caja.restricciones.6">--pids-limit 1024</code></li></ul>
+<div class="tabla-caja"><table><caption>El control: con los adaptadores de los dos conversores del estudio, frente al juicio del estudio con su juez final</caption><thead><tr><th></th><th class="n">Microsoft</th><th class="n">LinuxForHealth</th></tr></thead><tbody><tr><td>Casos comparados</td><td class="n"><span data-fuente="tabla:verificador/cv/vc/CONTROL-VC.md# VC3:|Casos comparados|Microsoft">368</span></td><td class="n"><span data-fuente="tabla:verificador/cv/vc/CONTROL-VC.md# VC3:|Casos comparados|LinuxForHealth">368</span></td></tr><tr><td>Diferencias</td><td class="n"><span data-fuente="tabla:verificador/cv/vc/CONTROL-VC.md# VC3:|Diferencias|Microsoft">0</span></td><td class="n"><span data-fuente="tabla:verificador/cv/vc/CONTROL-VC.md# VC3:|Diferencias|LinuxForHealth">0</span></td></tr></tbody></table></div>
+<p>Los pares mínimos coinciden los <span class="cifra" data-fuente="md:verificador/cv/VC.md" data-patron="coinciden los (34)\.">34</span>. La comparación caso por caso se hizo con un detalle del estudio que no es público; lo que se puede repetir desde el repositorio lo dice <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/vc/CONTROL-VC.md">el documento del control</a>.</p>
+<div class="tabla-caja"><table><caption>Los códigos de salida</caption><thead><tr><th class="n">Código</th><th>Qué quiere decir</th></tr></thead><tbody><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|0|Código">0</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|0|Qué quiere decir">todo juzgado</span></td></tr><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|2|Código">2</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|2|Qué quiere decir">el adaptador no es válido, o la carpeta de salida no está vacía y no es de una corrida anterior</span></td></tr><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|3|Código">3</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|3|Qué quiere decir">Docker o la imagen no están</span></td></tr><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|4|Código">4</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|4|Qué quiere decir">la caja falló en algún grupo; hay informe, con lo no juzgado</span></td></tr><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|5|Código">5</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|5|Qué quiere decir"><code>--comparar</code> encontró diferencias</span></td></tr><tr><td class="n"><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|1|Código">1</span></td><td><span data-fuente="tabla:verificador/cv/VC.md#**Los códigos de salida:**|1|Qué quiere decir">error interno</span></td></tr></tbody></table></div>
+<p>Lo que no hace:</p><ul class="limites"><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-1">La herramienta no sabe si una discrepancia la tiene declarada el proyecto: no lee salidas esperadas, pruebas, documentación ni issues. Aquí todo es «sin_contraste».</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-2">Solo juzga lo que juzgan adt_conv y oru_conv: ADT de los ocho eventos y ORU^R01. Otro tipo de mensaje entra en el corpus y el juez lo aparta como fuera de alcance.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-3">Solo conversores que corran como programa de línea de órdenes dentro de un contenedor Docker, leyendo y escribiendo ficheros. Un servicio HTTP, una biblioteca o un conversor que necesite red no caben en el adaptador.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-4">La imagen debe estar ya en la máquina: la herramienta no descarga nada y no comprueba de dónde salió; registra su digest.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-7">Las muestras de los proyectos no viajan con el repositorio: sin --muestras, el corpus son las bases A1/E2, las ORU y, con los dos conversores del estudio, los 68 mínimos; todo sintético y en v2.5.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-9">Las restricciones de la caja se comprueban en la orden construida, no en el núcleo: un Docker sin raíz, con --userns-remap o con otro runtime puede comportarse distinto.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-14">La herramienta hereda las decisiones, límites y ambigüedades del juez (Q-CV-D-n, L-CV-n, AMB-CV-n); no los cambia.</span></li><li><span data-fuente="json:verificador/cv/vc/ejemplos/INFORME-microsoft.json#limites.L-VC.L-VC-15">Los 68 mínimos son sondas escritas para dos conversores concretos: que se reproduzca uno no dice que sea una discrepancia del conversor contrastada con su proyecto.</span></li></ul>
+</section>
+<section id="s11" class="numerada">
+<h2><span class="num"></span>Lo que esto no dice</h2>
+<ul class="limites"><li><strong>No es una certificación de conformidad.</strong> <span data-fuente="md:ARTICULO.md" data-patron="^- \*\*No es una certificación de conformidad\.\*\* (Es lo que un juez con sus decisiones declaradas ve en estos mensajes y en estas\n  versiones):$">Es lo que un juez con sus decisiones declaradas ve en estos mensajes y en estas versiones</span>:<ul class="versiones"><li><span data-fuente="md:ARTICULO.md" data-patron="^  - (\*\*Microsoft FHIR-Converter v7\.0\.\*\*)$"><strong>Microsoft FHIR-Converter v7.0.</strong></span></li><li><span data-fuente="md:ARTICULO.md" data-patron="^  - (\*\*LinuxForHealth hl7v2-fhir-converter v1\.1\.0,\*\* la última publicada en Maven Central\. En GitHub hay una etiqueta v1\.1\.1 y una\n    rama principal que soportan más eventos\. La v1\.1\.0 rechaza tres de los ocho eventos ADT probados, y eso se contó como\n    rechazo, no como discrepancia\.)$"><strong>LinuxForHealth hl7v2-fhir-converter v1.1.0,</strong> la última publicada en Maven Central. En GitHub hay una etiqueta v1.1.1 y una rama principal que soportan más eventos. La v1.1.0 rechaza tres de los ocho eventos ADT probados, y eso se contó como rechazo, no como discrepancia.</span></li><li><span data-fuente="md:ARTICULO.md" data-patron="^  - (\*\*Las ramas principales de los dos,\*\* tal como estaban en octubre de 2026\.)$"><strong>Las ramas principales de los dos,</strong> tal como estaban en octubre de 2026.</span></li></ul></li><li><span data-fuente="md:ARTICULO.md" data-patron="^- (\*\*Cubre ocho eventos ADT y ORU\^R01\.\*\* No cubre programación de citas \(SIU\), documentos \(MDM\), vacunas \(VXU\) ni los demás tipos\.)$"><strong>Cubre ocho eventos ADT y ORU^R01.</strong> No cubre programación de citas (SIU), documentos (MDM), vacunas (VXU) ni los demás tipos.</span></li><li><span data-fuente="md:ARTICULO.md" data-patron="^- (\*\*Los mensajes son sintéticos o públicos\.\*\* No hay datos de ningún paciente\.)$"><strong>Los mensajes son sintéticos o públicos.</strong> No hay datos de ningún paciente.</span></li><li><span data-fuente="md:ARTICULO.md" data-patron="^- (\*\*El juez lee los tipos de datos de v2\.5\.\*\* Las muestras de los proyectos son casi todas de v2\.8, y lo que dependía de\n  componentes posteriores se apartó\.)$"><strong>El juez lee los tipos de datos de v2.5.</strong> Las muestras de los proyectos son casi todas de v2.8, y lo que dependía de componentes posteriores se apartó.</span></li><li><span data-fuente="md:ARTICULO.md" data-patron="^- (\*\*Los dos conversores son proyectos serios y útiles\.\*\* Las discrepancias son con una guía concreta, en una versión concreta\.\n  Parte de lo que encontró el juez ya estaba en su documentación, y una la ha cambiado el propio proyecto\.)$"><strong>Los dos conversores son proyectos serios y útiles.</strong> Las discrepancias son con una guía concreta, en una versión concreta. Parte de lo que encontró el juez ya estaba en su documentación, y una la ha cambiado el propio proyecto.</span></li></ul>
+</section>
+<section id="s12" class="numerada">
+<h2><span class="num"></span>Cómo reproducirlo</h2>
+<p>El verificador corre con Python y nada más. Sus pruebas, incluidas las <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="incluidas las (116) comprobaciones">116</span> comprobaciones del perfil «guía», pasan sin el laboratorio (<a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/README.md">su documento</a>). Para repetir el estudio hacen falta además Docker, para la caja; los dos conversores, construidos como dice <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/cv/CV1.md">el registro de la construcción</a>; y las muestras públicas de cada proyecto.</p>
+<p>Los <span class="cifra" data-fuente="md:ARTICULO.md" data-patron="^Los (68) mensajes mínimos salen de">68</span> mensajes mínimos salen de <code data-fuente="md:ARTICULO.md" data-patron="^Los 68 mensajes mínimos salen de `(python3 verificador/cv/cv3_minimos\.py escribir &lt;carpeta&gt;)`\.$">python3 verificador/cv/cv3_minimos.py escribir &lt;carpeta&gt;</code>.</p>
+<p>El estudio entero, contado de corrido, está en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/ARTICULO.md">el artículo</a>, y el cierre, en <a href="https://github.com/LK-Corporation/lab-integraciones/blob/main/verificador/RESULTADO-CONVERSORES.md">su resultado</a>.</p>
+</section>
+</main>
+<footer>En este repositorio no hay datos de ningún paciente: los mensajes son sintéticos o ejemplos del propio estándar. El
+verificador no es una herramienta de conformidad certificada. El código va bajo MIT y los documentos bajo CC BY 4.0. HL7® y
+FHIR® son marcas registradas de Health Level Seven International. Este laboratorio no tiene relación con los proyectos
+juzgados.</footer>
+</div>
+<p class="pie-repo">El código del juez, los documentos del estudio, el guion que escribe esta página y las guardas que la
+comprueban están en <a href="https://github.com/LK-Corporation/lab-integraciones">github.com/LK-Corporation/lab-integraciones</a>.</p>
+</body>
+</html>

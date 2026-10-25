@@ -50,7 +50,9 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 
 👉 **Por dónde empezar:**
 - **El estudio de conversores, contado de corrido:** [`ARTICULO.md`](ARTICULO.md). Qué encontró el verificador en dos
-  conversores de código abierto, cómo se buscó sin fiarse de ellos y qué no dice.
+  conversores de código abierto, cómo se buscó sin fiarse de ellos y qué no dice. Hay una versión para leer en el
+  navegador, con el par de mensajes mínimos de cada discrepancia, en
+  [lk-corporation.github.io/lab-integraciones/conversores](https://lk-corporation.github.io/lab-integraciones/conversores/).
 - **El primer estudio y el método:** [`INFORME.md`](INFORME.md). Es autocontenido y lleva sus límites escritos. Hay una
   versión para leer en el navegador en
   [lk-corporation.github.io/lab-integraciones](https://lk-corporation.github.io/lab-integraciones/).
