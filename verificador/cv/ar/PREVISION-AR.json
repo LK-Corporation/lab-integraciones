@@ -1,0 +1,99 @@
+{
+ "etapa": "21, el arrastre de estado de LinuxForHealth en el estudio publicado: previsión sellada antes de cualquier corrida con Docker (diseno-ar-fable.md §10.3; más estricto que el diseño, que la ponía tras el humo)",
+ "base_de_la_prevision": "Sin haber corrido nada mensaje a mensaje ni en lote en esta etapa. Lo que se sabe: el arrastre de F7 (vx/VX2.md) va por la referencia a Organization de RXA-17 con solo texto; el código de LinuxForHealth (rama principal, leído sin ejecutar) comparte las plantillas y sus expresiones entre llamadas a convert, y su Organization.yml habla de evitar que un IN1 «sangre» en otro dentro de un mensaje; no se aisló el mecanismo. En ADT y ORU LinuxForHealth crea Organization desde PD1-3, IN1, OBX-23 y PL.4, y Practitioner desde los XCN de PV1, OBR, ORC y OBX; el juez solo mira parte de eso (los Practitioner de PV1 y los recursos de su perfil). Las bases sintéticas llevan pocos de esos campos con solo texto; las muestras de los proyectos, más. En el control de la etapa 18, la herramienta en lote dio los mismos veredictos que la corrida del estudio, también en lote, en los 368 casos.",
+ "probabilidad_al_menos_una_diferencia_por_arrastre": {
+  "veredicto": 0.3,
+  "bundle_sin_veredicto": null,
+  "_bundle_sin_veredicto": "no se mide (Q-AR-D-4, Jev: no_medir)"
+ },
+ "probabilidad_alguna_diferencia_de_veredicto_por_cualquier_causa": 0.35,
+ "probabilidad_alguna_cifra_publicada_cambia": 0.22,
+ "probabilidad_algun_mecanismo_publicado_aparece_desaparece_o_cambia_de_clase": 0.08,
+ "probabilidad_algun_par_minimo_publicado_cambia": 0.05,
+ "probabilidad_fuga_entre_pacientes": {
+  "valor": 0.07,
+  "que": "un dato de un mensaje que aparece en otro solo en lote (dato_inventado o valor_distinto que desaparece mensaje a mensaje)"
+ },
+ "por_corpus_si_hay_arrastre": {
+  "muestras": 0.6,
+  "adt": 0.25,
+  "oru": 0.1,
+  "minimos": 0.05
+ },
+ "K_previsto": [
+  0,
+  15
+ ],
+ "K_mas_probable": 0,
+ "direccion": "menos hallazgos mensaje a mensaje: si hay arrastre, el lote añade dato_perdido tras el disparador y no al revés",
+ "mecanismos_que_podrian_cambiar": [
+  "L-22",
+  "L-14",
+  "L-9",
+  "L-7",
+  "L-11",
+  "L-17"
+ ],
+ "mecanismos_que_no_deberian_cambiar": [
+  "L-1",
+  "L-4",
+  "L-10",
+  "L-12",
+  "L-15",
+  "L-16",
+  "L-18",
+  "L-19",
+  "L-20",
+  "L-21"
+ ],
+ "pares_que_podrian_cambiar": [
+  "L13-pv1-52",
+  "L14-xpn-6-titulo",
+  "L03-pv1-10-med"
+ ],
+ "cifras_que_podrian_cambiar": [
+  "clases.L-22.casos.muestras",
+  "por_corpus.muestras.fallo_silencioso",
+  "por_corpus.muestras.correcto",
+  "clases.L-14.casos.muestras"
+ ],
+ "ruido_previsto": {
+  "veredicto": 0,
+  "errores": 0,
+  "bundle": [
+   "Provenance (fecha de la conversión)",
+   "meta.lastUpdated si lo escribe",
+   "Bundle.timestamp si lo escribe"
+  ]
+ },
+ "probabilidad_control_negativo_pasa": 0.9,
+ "probabilidad_positivo_vl11_sale": 0.95,
+ "probabilidad_positivo_vxu_da_los_23": 0.9,
+ "probabilidad_la_etapa_para_por_una_regla": 0.12,
+ "umbral_q_ar_d_1": 0.0,
+ "jev": {
+  "_que": "la previsión de Jev con un estado neutro (estado_prevision_ar.md, preguntas_prevision_ar.json, decision-jev-prevision-ar.md), sellada al lado de la del programador, que no se cambió al verla",
+  "casos_por_arrastre": {
+   "ninguno": 0.21,
+   "de_uno_a_cinco": 0.36,
+   "de_seis_a_cuarenta": 0.35,
+   "mas_de_cuarenta": 0.08
+  },
+  "corpus_si_cambia": {
+   "muestras": 0.89,
+   "minimos": 0.11,
+   "adt": 0.0,
+   "oru": 0.0
+  },
+  "alguna_cifra_publicada_cambia": 0.85
+ },
+ "fecha": "2026-10-25T09:47:29+01:00",
+ "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+ "conversor": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+ "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+ "herramienta": {
+  "verificar_conversor": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+  "arrastre": "8b8aa7e3f2cae26ca3a19f95cd1c07c2b3fd490afbeda30b4b08b12927f49f7f",
+  "control_ar": "89b0202584a99b07822f7c16c1d425c9f23e17191bbe517127cfa644d97a5ab1"
+ }
+}

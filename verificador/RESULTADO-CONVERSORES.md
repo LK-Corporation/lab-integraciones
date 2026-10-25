@@ -165,3 +165,10 @@ Ninguna discrepancia nueva aparece ni desaparece: M-36 y L-24 ya estaban apartad
 - el `serverInfo.title` del MCP sigue diciendo «Verificador ADT^A01 → FHIR Patient»: es anterior a los puntos de entrada nuevos;
 - dos muestras de LinuxForHealth están mal formadas (MSH-2 con dos barras, OBX-3 vacío);
 - el `inspeccionar_cv2.py` y los scripts de CV3 son de la etapa y no forman parte del juez.
+
+## Después: mensaje a mensaje (etapa 21, 25-oct)
+
+Este estudio corrió LinuxForHealth en lote, un proceso por carpeta, y en la etapa de VXU se vio que ese conversor arrastra
+estado entre mensajes del mismo proceso. Convertidos mensaje a mensaje, con el mismo juez, **los 436 casos del estudio (los 368
+mensajes y los 68 mínimos) dan los mismos veredictos que en lote**: ninguna cifra de este documento cambia. Está en
+[`RESULTADO-ARRASTRE.md`](RESULTADO-ARRASTRE.md).

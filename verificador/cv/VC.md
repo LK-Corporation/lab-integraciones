@@ -27,7 +27,7 @@ La pregunta y sus condiciones están en [`../ANTES-ETAPA-VERIFICA-CONVERSOR.md`]
 Microsoft, `ms/out` (la herramienta compilada) y `ms/src/data/Templates/Hl7v2`; para LinuxForHealth, `lfh/lib`, `lfh/clases` y
 `lfh/Arnes.java`. Cómo se construyeron está en [`CV1.md`](CV1.md). La imagen de Docker tiene que estar ya en la máquina.
 
-**Con el tuyo:** copia uno de los tres adaptadores de [`adaptadores/`](adaptadores/) y cambia los datos:
+**Con el tuyo:** copia uno de los cuatro adaptadores de [`adaptadores/`](adaptadores/) y cambia los datos:
 - el nombre, la versión y las partes de la huella;
 - la imagen y los montajes, siempre de solo lectura y con rutas relativas a `--artefactos`;
 - la orden, con sus marcadores (`{entrada_dir}`, `{salida_dir}`, `{entrada_fichero}`, `{salida_fichero}`, `{base}`,
@@ -90,7 +90,10 @@ Antes de correr nada, `--solo-orden` valida el adaptador, calcula la huella e im
    [`RESULTADO-CV3.md`](RESULTADO-CV3.md); hasta entonces, cada mecanismo es «sin_contraste» (L-VC-1).
 
 Los adaptadores de los dos conversores del estudio están en [`adaptadores/`](adaptadores/): reproducen, opción por opción, la
-invocación de `correr_conversor.py`. El del conversor de juguete es el de las pruebas.
+invocación de `correr_conversor.py`. El del conversor de juguete es el de las pruebas. LinuxForHealth tiene además un
+adaptador mensaje a mensaje, [`adaptadores/linuxforhealth-mensaje.json`](adaptadores/linuxforhealth-mensaje.json): el mismo
+conversor, un proceso por mensaje (etapa 21). Con él, los 436 casos del estudio dan los mismos veredictos que en lote
+([`../RESULTADO-ARRASTRE.md`](../RESULTADO-ARRASTRE.md)).
 
 ## Cómo se hizo
 

@@ -64,6 +64,10 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/vc/ejemplos/INFORME-linuxforhealth.json", "ana@hosp.es"),  # la paciente ficticia de A1
     ("verificador/cv/vc/ejemplos/INFORME-linuxforhealth.md", "ana@hosp.es"),
     ("verificador/cv/lfh/copiar-libs.gradle", "/salida/lib"),
+    ("verificador/cv/ar/CONTROL-AR.json", "Arnes /in /salida /in/A01-001.hl7"),   # la orden de la caja: rutas de dentro
+    ("verificador/cv/ar/control_ar.py", "Arnes /in /salida /in/A01-001.hl7"),
+    ("verificador/cv/ar/decisiones-qar.md", "Arnes /in /salida /in/A01-001.hl7"),
+    ("verificador/cv/ar/diseno-ar-fable.md", '"/in/a.hl7"'),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
@@ -79,7 +83,15 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/RESULTADO-CV3-minimos.json", "verificador/cv/RESULTADO-15A-minimos-main.json",
                   # 25-oct-2026, la etapa de VXU: las preguntas a Jev, la previsión sellada, las clases y los pares
                   "verificador/vx/preguntas_qvx.json", "verificador/vx/prevision-vxu.json", "verificador/vx/CLASES-VX3.json",
-                  "verificador/vx/RESULTADO-VX3-minimos.json"}
+                  "verificador/vx/RESULTADO-VX3-minimos.json",
+                  # 25-oct-2026, el arrastre de estado: el adaptador mensaje, las preguntas a Jev, la previsión y los resultados
+                  "verificador/cv/adaptadores/linuxforhealth-mensaje.json", "verificador/cv/ar/preguntas_qar.json",
+                  "verificador/cv/ar/preguntas_prevision_ar.json", "verificador/cv/ar/PREVISION-AR.json",
+                  "verificador/cv/ar/POSITIVO-AR.json", "verificador/cv/ar/RUIDO-AR.json", "verificador/cv/ar/COMPARACION-AR.json",
+                  "verificador/cv/ar/ADJUDICACION-AR.json", "verificador/cv/ar/CIFRAS-AR.json", "verificador/cv/ar/CONTROL-AR.json",
+                  "verificador/cv/ar/CLASES-AR-lote.json", "verificador/cv/ar/CLASES-AR-mensaje.json",
+                  "verificador/cv/ar/minimos-AR-lote.json", "verificador/cv/ar/minimos-AR-mensaje.json",
+                  "verificador/cv/ar/prevision-cuerpo.json", "verificador/cv/ar/COMPARACION-AR-primer-paso9.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

@@ -1,0 +1,623 @@
+{
+ "identidades": {
+  "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+  "lote": {
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa"
+  },
+  "mensaje": {
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa"
+  },
+  "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+  "manifiesto": {
+   "lineas_estudio": 368,
+   "iguales": 368
+  },
+  "n": {
+   "adt": 263,
+   "oru": 40,
+   "vxu": 40,
+   "muestras": 65,
+   "minimos": 68,
+   "propio": 0
+  },
+  "orden_mensaje": [
+   "docker run --rm --network none --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges --user 65534:65534 -e HOME=/tmp --pids-limit 1024 --name vc-linuxforhealth-1 -v <artefactos>/lfh/lib:/lib2:ro -v <artefactos>/lfh/clases:/clases:ro -v '<tin>:/in:ro' -v '<tout>:/salida' -- maven:3.9-eclipse-temurin-11 java -cp '/clases:/lib2/*' Arnes /in /salida /in/A01-001.hl7"
+  ],
+  "cuadra": true
+ },
+ "humo": {
+  "rc": 0,
+  "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+  "estados": [
+   "bundle",
+   "bundle",
+   "bundle",
+   "bundle"
+  ],
+  "cuadra": true
+ },
+ "positivo_vl11": true,
+ "fin": {
+  "rc": 0,
+  "paso": 13,
+  "motivo": "hecho"
+ },
+ "sello": {
+  "verifica": true,
+  "en_commit": true
+ },
+ "corridas": {
+  "L1": {
+   "rc": 0,
+   "sin_evidencia": [],
+   "reintentos": [],
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "corpus": {
+    "adt": 263,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 65,
+    "minimos": 68,
+    "propio": 0
+   },
+   "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "segundos": 20.8
+  },
+  "L2": {
+   "rc": 0,
+   "sin_evidencia": [],
+   "reintentos": [],
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "corpus": {
+    "adt": 263,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 65,
+    "minimos": 68,
+    "propio": 0
+   },
+   "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "segundos": 20.7
+  },
+  "M1": {
+   "rc": 0,
+   "sin_evidencia": [],
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "corpus": {
+    "adt": 263,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 65,
+    "minimos": 68,
+    "propio": 0
+   },
+   "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "segundos": 1762.1
+  },
+  "M2": {
+   "rc": 0,
+   "sin_evidencia": [],
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "corpus": {
+    "adt": 263,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 65,
+    "minimos": 68,
+    "propio": 0
+   },
+   "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "segundos": 1760.3
+  }
+ },
+ "ruido_lote": {
+  "comparados": 476,
+  "veredicto": [],
+  "faltan": [],
+  "bundle": {
+   "casos": 332,
+   "mascara": [
+    [
+     "AllergyIntolerance",
+     "meta.extension[].valueDateTime",
+     47
+    ],
+    [
+     "AllergyIntolerance",
+     "patient.reference",
+     47
+    ],
+    [
+     "Condition",
+     "asserter.reference",
+     6
+    ],
+    [
+     "Condition",
+     "encounter.reference",
+     51
+    ],
+    [
+     "Condition",
+     "meta.extension[].valueDateTime",
+     51
+    ],
+    [
+     "Condition",
+     "subject.reference",
+     51
+    ],
+    [
+     "Coverage",
+     "beneficiary.reference",
+     46
+    ],
+    [
+     "Coverage",
+     "meta.extension[].valueDateTime",
+     46
+    ],
+    [
+     "Coverage",
+     "subscriber.reference",
+     2
+    ],
+    [
+     "Device",
+     "meta.extension[].valueDateTime",
+     7
+    ],
+    [
+     "DiagnosticReport",
+     "basedOn[].reference",
+     79
+    ],
+    [
+     "DiagnosticReport",
+     "encounter.reference",
+     4
+    ],
+    [
+     "DiagnosticReport",
+     "meta.extension[].valueDateTime",
+     79
+    ],
+    [
+     "DiagnosticReport",
+     "result[].reference",
+     74
+    ],
+    [
+     "DiagnosticReport",
+     "resultsInterpreter[].reference",
+     1
+    ],
+    [
+     "DiagnosticReport",
+     "specimen[].reference",
+     5
+    ],
+    [
+     "DiagnosticReport",
+     "subject.reference",
+     77
+    ],
+    [
+     "Encounter",
+     "diagnosis[].condition.reference",
+     51
+    ],
+    [
+     "Encounter",
+     "meta.extension[].valueDateTime",
+     217
+    ],
+    [
+     "Encounter",
+     "participant[].individual.reference",
+     58
+    ],
+    [
+     "Encounter",
+     "reasonReference[].reference",
+     51
+    ],
+    [
+     "Encounter",
+     "subject.reference",
+     217
+    ],
+    [
+     "Immunization",
+     "encounter.reference",
+     1
+    ],
+    [
+     "Immunization",
+     "manufacturer.reference",
+     15
+    ],
+    [
+     "Immunization",
+     "meta.extension[].valueDateTime",
+     40
+    ],
+    [
+     "Immunization",
+     "patient.reference",
+     40
+    ],
+    [
+     "Immunization",
+     "performer[].actor.reference",
+     38
+    ],
+    [
+     "MessageHeader",
+     "meta.extension[].valueDateTime",
+     15
+    ],
+    [
+     "Observation",
+     "device.reference",
+     7
+    ],
+    [
+     "Observation",
+     "encounter.reference",
+     39
+    ],
+    [
+     "Observation",
+     "meta.extension[].valueDateTime",
+     110
+    ],
+    [
+     "Observation",
+     "note[].authorReference.reference",
+     1
+    ],
+    [
+     "Observation",
+     "performer[].reference",
+     8
+    ],
+    [
+     "Observation",
+     "subject.reference",
+     108
+    ],
+    [
+     "Organization",
+     "meta.extension[].valueDateTime",
+     212
+    ],
+    [
+     "Patient",
+     "generalPractitioner[].reference",
+     53
+    ],
+    [
+     "Patient",
+     "meta.extension[].valueDateTime",
+     330
+    ],
+    [
+     "Practitioner",
+     "meta.extension[].valueDateTime",
+     115
+    ],
+    [
+     "Procedure",
+     "meta.extension[].valueDateTime",
+     42
+    ],
+    [
+     "Procedure",
+     "subject.reference",
+     42
+    ],
+    [
+     "RelatedPerson",
+     "meta.extension[].valueDateTime",
+     2
+    ],
+    [
+     "RelatedPerson",
+     "patient.reference",
+     2
+    ],
+    [
+     "ServiceRequest",
+     "meta.extension[].valueDateTime",
+     79
+    ],
+    [
+     "ServiceRequest",
+     "note[].authorReference.reference",
+     1
+    ],
+    [
+     "ServiceRequest",
+     "requester.reference",
+     6
+    ],
+    [
+     "ServiceRequest",
+     "subject.reference",
+     77
+    ],
+    [
+     "Specimen",
+     "meta.extension[].valueDateTime",
+     5
+    ]
+   ]
+  },
+  "errores": []
+ },
+ "ruido_mensaje": {
+  "comparados": 476,
+  "veredicto": [],
+  "faltan": [],
+  "bundle": {
+   "casos": 332,
+   "mascara": [
+    [
+     "AllergyIntolerance",
+     "meta.extension[].valueDateTime",
+     37
+    ],
+    [
+     "AllergyIntolerance",
+     "patient.reference",
+     47
+    ],
+    [
+     "Condition",
+     "asserter.reference",
+     6
+    ],
+    [
+     "Condition",
+     "encounter.reference",
+     51
+    ],
+    [
+     "Condition",
+     "meta.extension[].valueDateTime",
+     39
+    ],
+    [
+     "Condition",
+     "subject.reference",
+     51
+    ],
+    [
+     "Coverage",
+     "beneficiary.reference",
+     46
+    ],
+    [
+     "Coverage",
+     "meta.extension[].valueDateTime",
+     36
+    ],
+    [
+     "Coverage",
+     "subscriber.reference",
+     2
+    ],
+    [
+     "Device",
+     "meta.extension[].valueDateTime",
+     7
+    ],
+    [
+     "DiagnosticReport",
+     "basedOn[].reference",
+     79
+    ],
+    [
+     "DiagnosticReport",
+     "encounter.reference",
+     4
+    ],
+    [
+     "DiagnosticReport",
+     "meta.extension[].valueDateTime",
+     79
+    ],
+    [
+     "DiagnosticReport",
+     "result[].reference",
+     74
+    ],
+    [
+     "DiagnosticReport",
+     "resultsInterpreter[].reference",
+     1
+    ],
+    [
+     "DiagnosticReport",
+     "specimen[].reference",
+     5
+    ],
+    [
+     "DiagnosticReport",
+     "subject.reference",
+     77
+    ],
+    [
+     "Encounter",
+     "diagnosis[].condition.reference",
+     51
+    ],
+    [
+     "Encounter",
+     "meta.extension[].valueDateTime",
+     183
+    ],
+    [
+     "Encounter",
+     "participant[].individual.reference",
+     58
+    ],
+    [
+     "Encounter",
+     "reasonReference[].reference",
+     51
+    ],
+    [
+     "Encounter",
+     "subject.reference",
+     217
+    ],
+    [
+     "Immunization",
+     "encounter.reference",
+     1
+    ],
+    [
+     "Immunization",
+     "manufacturer.reference",
+     38
+    ],
+    [
+     "Immunization",
+     "meta.extension[].valueDateTime",
+     40
+    ],
+    [
+     "Immunization",
+     "patient.reference",
+     40
+    ],
+    [
+     "Immunization",
+     "performer[].actor.reference",
+     38
+    ],
+    [
+     "MessageHeader",
+     "meta.extension[].valueDateTime",
+     15
+    ],
+    [
+     "Observation",
+     "device.reference",
+     7
+    ],
+    [
+     "Observation",
+     "encounter.reference",
+     39
+    ],
+    [
+     "Observation",
+     "meta.extension[].valueDateTime",
+     105
+    ],
+    [
+     "Observation",
+     "note[].authorReference.reference",
+     1
+    ],
+    [
+     "Observation",
+     "performer[].reference",
+     8
+    ],
+    [
+     "Observation",
+     "subject.reference",
+     108
+    ],
+    [
+     "Organization",
+     "meta.extension[].valueDateTime",
+     199
+    ],
+    [
+     "Patient",
+     "generalPractitioner[].reference",
+     53
+    ],
+    [
+     "Patient",
+     "meta.extension[].valueDateTime",
+     296
+    ],
+    [
+     "Practitioner",
+     "meta.extension[].valueDateTime",
+     102
+    ],
+    [
+     "Procedure",
+     "meta.extension[].valueDateTime",
+     32
+    ],
+    [
+     "Procedure",
+     "subject.reference",
+     42
+    ],
+    [
+     "RelatedPerson",
+     "meta.extension[].valueDateTime",
+     2
+    ],
+    [
+     "RelatedPerson",
+     "patient.reference",
+     2
+    ],
+    [
+     "ServiceRequest",
+     "meta.extension[].valueDateTime",
+     79
+    ],
+    [
+     "ServiceRequest",
+     "note[].authorReference.reference",
+     1
+    ],
+    [
+     "ServiceRequest",
+     "requester.reference",
+     6
+    ],
+    [
+     "ServiceRequest",
+     "subject.reference",
+     77
+    ],
+    [
+     "Specimen",
+     "meta.extension[].valueDateTime",
+     5
+    ]
+   ]
+  },
+  "errores": []
+ },
+ "comparacion": {
+  "comparados": 436,
+  "iguales": 436,
+  "diferentes": 0,
+  "no_deterministas": 0,
+  "sin_par": 0,
+  "caja": 0
+ },
+ "adjudicacion": {},
+ "cifras": 0,
+ "deriva_del_juez": 8,
+ "_nota": "Copia publicada: la ruta de --artefactos va como <artefactos> y el sello no lleva el commit, que es del repositorio de trabajo. Lo demás es lo que escribe control_ar.py."
+}

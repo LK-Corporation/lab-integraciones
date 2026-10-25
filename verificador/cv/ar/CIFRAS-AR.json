@@ -1,0 +1,88 @@
+{
+ "juez": [
+  "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0"
+ ],
+ "cifras": [],
+ "deriva_del_juez": [
+  {
+   "cifra": "clases.L-24.casos.muestras",
+   "publicado": 2,
+   "con_el_juez_actual": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.L-24.confirmada_con_par",
+   "publicado": true,
+   "con_el_juez_actual": false,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-36.casos.muestras",
+   "publicado": 1,
+   "con_el_juez_actual": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-4.casos.adt",
+   "publicado": 16,
+   "con_el_juez_actual": 8,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.confirmada",
+   "publicado": true,
+   "con_el_juez_actual": false,
+   "donde_se_publica": [
+    "verificador/cv/RESULTADO-CV3-minimos.json",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.linuxforhealth.caso.sale",
+   "publicado": true,
+   "con_el_juez_actual": false,
+   "donde_se_publica": [
+    "verificador/cv/RESULTADO-CV3-minimos.json",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "minimos.confirmadas",
+   "publicado": 31,
+   "con_el_juez_actual": 30,
+   "donde_se_publica": [
+    "verificador/cv/RESULTADO-CV3-minimos.json",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "sin_clase.microsoft | MC-ADT-3 | Encounter.location <v>: la descripción <v> contiene PL.<n> <v> sin ser PL.<n>",
+   "publicado": null,
+   "con_el_juez_actual": 8,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json"
+   ]
+  }
+ ],
+ "_deriva_del_juez": "lo publicado (juez de CV3) frente a LinuxForHealth en lote con el juez actual; no se corrige aquí",
+ "juez_publicado": {
+  "clases": "54a90cd9e08d15c08b84bb2e231db116d91f962daf0785be170d672648f88f7e",
+  "minimos": "54a90cd9e08d15c08b84bb2e231db116d91f962daf0785be170d672648f88f7e"
+ }
+}

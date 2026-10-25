@@ -132,6 +132,35 @@ El estudio de conversores y la herramienta tienen su página web, para leerlo en
 | VX3: contraste, clase, pares mínimos y revisión adversaria | [`vx/VX3.md`](vx/VX3.md), [`vx/CLASES-VX3.json`](vx/CLASES-VX3.json), [`vx/RESULTADO-VX3-minimos.json`](vx/RESULTADO-VX3-minimos.json), [`cv/cv3_minimos_vxu.py`](cv/cv3_minimos_vxu.py) |
 | El resultado, con la frase | [`RESULTADO-VXU.md`](RESULTADO-VXU.md) |
 
+## El arrastre de estado (21, 25-oct-2026)
+
+> **Convertidos mensaje a mensaje, los 436 casos del estudio dan los mismos veredictos que en lote.** Lo publicado del estudio
+> de conversores no cambia.
+
+**Por qué se comprobó.** En la etapa de VXU, LinuxForHealth arrastró estado entre mensajes del mismo proceso: tras un fabricante
+sin código, los mensajes siguientes salieron sin fabricante (F7 en [`vx/VX2.md`](vx/VX2.md)). El estudio de conversores lo había
+corrido en lote, un proceso por carpeta.
+- **El aparato:** un segundo adaptador,
+  [`cv/adaptadores/linuxforhealth-mensaje.json`](cv/adaptadores/linuxforhealth-mensaje.json), con el mismo conversor y la
+  misma huella y un proceso por mensaje; dos corridas de cada modo y el mismo juez.
+- **Los controles, antes de mirar el resultado:** la secuencia VL11 y las 23 diferencias de F7 en el corpus VXU salen; dos
+  corridas del mismo modo dan los mismos veredictos (0 diferencias en lote y 0 mensaje a mensaje).
+- **El método, el de siempre:** el diseño a ciegas, las decisiones de Jev, las pruebas en rojo antes del código y la previsión
+  sellada antes de correr.
+- **Lo que no ve:** lo que el juez no mira (se comparan veredictos; el Bundle crudo solo sirvió para medir el ruido), un
+  arrastre que coincida con un defecto propio del mensaje, otro orden del lote, un servicio de larga vida o un disparador que
+  no esté en el corpus.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-ARRASTRE.md`](ANTES-ETAPA-ARRASTRE.md) |
+| El diseño a ciegas y las decisiones | [`cv/ar/ENCARGO-AR0.md`](cv/ar/ENCARGO-AR0.md), [`cv/ar/diseno-ar-fable.md`](cv/ar/diseno-ar-fable.md), [`cv/ar/decisiones-qar.md`](cv/ar/decisiones-qar.md), [`cv/ar/estado_qar.md`](cv/ar/estado_qar.md), [`cv/ar/decision-jev-qar.md`](cv/ar/decision-jev-qar.md) |
+| El código, con las pruebas en rojo antes | [`cv/ar/prueba_ar.py`](cv/ar/prueba_ar.py), [`cv/ar/arrastre.py`](cv/ar/arrastre.py), [`cv/ar/control_ar.py`](cv/ar/control_ar.py) |
+| La previsión sellada | [`cv/ar/PREVISION-AR.md`](cv/ar/PREVISION-AR.md), [`cv/ar/PREVISION-AR.json`](cv/ar/PREVISION-AR.json), [`cv/ar/SELLO-AR.txt`](cv/ar/SELLO-AR.txt), [`cv/ar/estado_prevision_ar.md`](cv/ar/estado_prevision_ar.md), [`cv/ar/decision-jev-prevision-ar.md`](cv/ar/decision-jev-prevision-ar.md), [`cv/ar/prevision-cuerpo.json`](cv/ar/prevision-cuerpo.json), [`cv/ar/sellar_prevision.py`](cv/ar/sellar_prevision.py) |
+| Los controles y la comparación | [`cv/ar/POSITIVO-AR.json`](cv/ar/POSITIVO-AR.json), [`cv/ar/RUIDO-AR.json`](cv/ar/RUIDO-AR.json), [`cv/ar/COMPARACION-AR.json`](cv/ar/COMPARACION-AR.json), [`cv/ar/COMPARACION-AR-primer-paso9.json`](cv/ar/COMPARACION-AR-primer-paso9.json), [`cv/ar/ADJUDICACION-AR.json`](cv/ar/ADJUDICACION-AR.json), [`cv/ar/CONTROL-AR.json`](cv/ar/CONTROL-AR.json) |
+| Las cifras, con un solo juez | [`cv/ar/CIFRAS-AR.json`](cv/ar/CIFRAS-AR.json), [`cv/ar/CLASES-AR-lote.json`](cv/ar/CLASES-AR-lote.json), [`cv/ar/CLASES-AR-mensaje.json`](cv/ar/CLASES-AR-mensaje.json), [`cv/ar/minimos-AR-lote.json`](cv/ar/minimos-AR-lote.json), [`cv/ar/minimos-AR-mensaje.json`](cv/ar/minimos-AR-mensaje.json) |
+| El resultado, con la frase | [`RESULTADO-ARRASTRE.md`](RESULTADO-ARRASTRE.md) |
+
 ## El estudio de conversores (14l, 23-24 oct-2026)
 
 > El verificador encuentra **15 discrepancias nuevas y confirmadas en 2 de 2 conversores, sobre 368 mensajes públicos**;
@@ -228,6 +257,9 @@ publica.
   las alusiones al trabajo del autor y la cola de lo que solo él decide.
 - **Dos documentos de la etapa de VXU llevan una parte redactada,** marcados en su primera línea: `ANTES-ETAPA-VXU.md` y
   `RESULTADO-VXU.md`.
+- **Tres documentos de la etapa del arrastre llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-ARRASTRE.md`, `cv/ar/ENCARGO-AR0.md` y `cv/ar/diseno-ar-fable.md`. Y `cv/ar/CONTROL-AR.json` va sin la ruta
+  de los artefactos ni el commit del sello, como dice su `_nota`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
@@ -260,6 +292,9 @@ publica.
   - las hojas CSV de la guía que trae `vx/traer_guia_vxu.py`;
   - los parches con que se aplicó cada cambio en el laboratorio;
   - `prueba_multitipo.py`.
+- **Del arrastre:**
+  - los juicios, las evidencias y los Bundles de las cuatro corridas: están los agregados de `cv/ar/`;
+  - los scripts de una sola vez: el parche del conversor de juguete y el que trajo los resultados.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

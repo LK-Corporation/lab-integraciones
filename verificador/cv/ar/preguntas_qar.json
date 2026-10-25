@@ -1,0 +1,38 @@
+{
+ "q_ar_d_1_umbral": {
+  "type": "choice",
+  "instructions": "Pregunta 1: el umbral de ruido de veredicto (casos distintos entre dos corridas del mismo modo) que para la etapa.",
+  "criteria": {
+   "cero": "(a) Cero: cualquier caso con veredicto distinto entre dos corridas del mismo modo para la etapa.",
+   "dos_pct": "(b) Hasta el 2 % de los comparados (8 de 436), declarados como no deterministas y restados; por encima, para.",
+   "cinco_pct": "(c) Hasta el 5 % (21 de 436), como (b)."
+  }
+ },
+ "q_ar_d_2_correcciones": {
+  "type": "choice",
+  "instructions": "Pregunta 2: cómo entran las correcciones en lo publicado si cambia algún caso.",
+  "criteria": {
+   "en_sitio": "(a) En sitio con fe de erratas: se corrigen las filas de los ficheros de resultados publicados, con marca de erratum y el valor original; la página se regenera.",
+   "nuevos_y_pagina": "(b) Ficheros nuevos y la página apunta a ellos; los resultados sellados quedan intactos salvo una cabecera; la fe de erratas va en los documentos.",
+   "nuevos_sin_pagina": "(c) Ficheros nuevos y la página no cambia sus cifras, con un aviso de erratum que enlaza el resultado."
+  }
+ },
+ "q_ar_d_3_adaptador": {
+  "type": "choice",
+  "instructions": "Pregunta 3: qué adaptador de LinuxForHealth queda de referencia en la herramienta pública después de la etapa.",
+  "criteria": {
+   "lote": "(a) Sigue el de lote; el de mensaje se publica al lado y se explica.",
+   "mensaje": "(b) Pasa a serlo el de mensaje (el de lote se renombra) y el informe de ejemplo se regenera mensaje a mensaje.",
+   "segun_resultado": "(c) El de lote si no cambia ningún caso; el de mensaje si cambia alguno."
+  }
+ },
+ "q_ar_d_4_bundle": {
+  "type": "choice",
+  "instructions": "Pregunta 4: qué se hace con las diferencias de Bundle que no cambian el veredicto.",
+  "criteria": {
+   "aislar_acotado": "(a) Se aíslan, acotado: secuencia mínima solo para el primer caso de cada campo afectado; los demás prueban ese culpable.",
+   "contar": "(b) Solo se cuentan y se listan, sin aislar.",
+   "no_medir": "(c) No se miden, salvo para medir el ruido."
+  }
+ }
+}

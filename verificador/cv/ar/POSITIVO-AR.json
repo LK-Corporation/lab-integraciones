@@ -1,0 +1,156 @@
+{
+ "repeticiones": [
+  {
+   "sale": true,
+   "motivos": [],
+   "lote_2_L11b": {
+    "estado": "bundle",
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "hallazgos": [
+     [
+      "ORC-3",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXR-1",
+      "fidelidad",
+      "codigo_mal_mapeado"
+     ]
+    ]
+   },
+   "mensaje_2_L11b": {
+    "estado": "bundle",
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "hallazgos": [
+     [
+      "ORC-3",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXR-1",
+      "fidelidad",
+      "codigo_mal_mapeado"
+     ]
+    ]
+   }
+  },
+  {
+   "sale": true,
+   "motivos": [],
+   "lote_2_L11b": {
+    "estado": "bundle",
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "hallazgos": [
+     [
+      "ORC-3",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXR-1",
+      "fidelidad",
+      "codigo_mal_mapeado"
+     ]
+    ]
+   },
+   "mensaje_2_L11b": {
+    "estado": "bundle",
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "hallazgos": [
+     [
+      "ORC-3",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXR-1",
+      "fidelidad",
+      "codigo_mal_mapeado"
+     ]
+    ]
+   }
+  }
+ ],
+ "bundle_2_L11b": [
+  [
+   "Immunization",
+   "manufacturer.reference",
+   null,
+   "Organization/1792918086266214000.<uuid>"
+  ],
+  [
+   "Immunization",
+   "meta.extension[].valueDateTime",
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:47:59+08:00"
+   ],
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:48:06+08:00"
+   ]
+  ],
+  [
+   "Immunization",
+   "patient.reference",
+   "Patient/1792918079704118000.<uuid>",
+   "Patient/1792918086249742000.<uuid>"
+  ],
+  [
+   "Immunization",
+   "performer[].actor.reference",
+   "Practitioner/1792918079707592000.<uuid>",
+   "Practitioner/1792918086261192000.<uuid>"
+  ],
+  [
+   "Organization",
+   "<recurso>",
+   "ausente",
+   "presente"
+  ],
+  [
+   "Patient",
+   "meta.extension[].valueDateTime",
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:47:59+08:00"
+   ],
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:48:06+08:00"
+   ]
+  ],
+  [
+   "Practitioner",
+   "meta.extension[].valueDateTime",
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:47:59+08:00"
+   ],
+   [
+    "2024-03-01T09:00:00+08:00",
+    "2026-10-25T08:48:06+08:00"
+   ]
+  ]
+ ],
+ "b_ve_manufacturer": true,
+ "pasa_vl11": true,
+ "pasa": true,
+ "pasa_vxu": true
+}

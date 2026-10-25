@@ -1,0 +1,42 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "linuxforhealth",
+ "_que": "Etapa 21 (arrastre, cv/ar/): LinuxForHealth hl7v2-fhir-converter v1.1.0, el mismo jar, el mismo arnés compilado y la misma imagen que linuxforhealth.json, pero un contenedor y un solo proceso Java por mensaje (S-AR-1). Es la forma de medir si el estudio, que corrió un proceso por carpeta, arrastró estado entre mensajes (issue #348 del proyecto; vx/VX2.md F7).",
+ "_id": "El id es el mismo que en lote a propósito: los 68 mínimos solo entran con los identificadores del estudio (Q-VC-D-3) y la clave de --comparar es (conversor, corpus, caso) (S-AR-3).",
+ "_orden": "Arnes lee la carpeta /in, que en por_mensaje contiene un solo fichero. El tercer argumento, {entrada_fichero}, lo exige la validación del modo mensaje (mensaje_sin_fichero) y Arnes lo ignora: usa args[0] y args[1] (S-AR-2).",
+ "_rutas": "Las rutas son relativas a --artefactos, la misma carpeta que para linuxforhealth.json: lfh/lib, lfh/clases y lfh/Arnes.java.",
+ "conversor": {
+  "nombre": "linuxforhealth-hl7v2-fhir-converter",
+  "version": "v1.1.0 (Maven Central; DV-CV-3)",
+  "huella": {"partes": [{"carpeta": "lib"}, {"fichero": "lfh/Arnes.java"}]},
+  "_huella_esperada": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2, la misma que en lote: las partes no cambian (cv/PREVISION-CV2.json)",
+  "declara": {"no_soporta": ["ADT^A02", "ADT^A11", "ADT^A13"]},
+  "_declara": "como en linuxforhealth.json (L-4 de cv/CLASES-CV3.json)"
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "maven:3.9-eclipse-temurin-11",
+  "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+  "_imagen_digest": "el del estudio (cv/CV1.md, cv/vc/CONTROL-VC.md); con otro digest la herramienta sale con 3 (Q-VC-D-4), y es lo que se quiere (S-AR-4)",
+  "montajes": {
+   "lib": {"origen": "lfh/lib", "destino": "/lib2"},
+   "clases": {"origen": "lfh/clases", "destino": "/clases"}
+  },
+  "entorno": {},
+  "limites": {"segundos_por_mensaje": 60, "segundos_por_contenedor": 3600, "pids": 1024, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "mensaje",
+  "contenedor": "por_mensaje",
+  "orden": ["java", "-cp", "/clases:/lib2/*", "Arnes", "{entrada_dir}", "{salida_dir}", "{entrada_fichero}"],
+  "plantilla": null,
+  "duracion_stdout": "^(?P<nombre>\\S+) (?P<ms>\\d+) ms$"
+ },
+ "salida": {
+  "fichero": "{nombre}.json",
+  "fichero_error": "{nombre}.error",
+  "forma": "bundle",
+  "envoltura": null,
+  "codificacion": "utf-8"
+ }
+}

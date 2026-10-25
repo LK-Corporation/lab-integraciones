@@ -1,0 +1,30 @@
+{
+ "q1_cuantos": {
+  "type": "choice",
+  "instructions": "Pregunta 1: cuántos casos de los 436 cambiarán de veredicto por arrastre de estado.",
+  "criteria": {
+   "ninguno": "Ninguno.",
+   "de_uno_a_cinco": "Entre 1 y 5.",
+   "de_seis_a_cuarenta": "Entre 6 y 40.",
+   "mas_de_cuarenta": "Más de 40."
+  }
+ },
+ "q2_corpus": {
+  "type": "choice",
+  "instructions": "Pregunta 2: si alguno cambia, en qué corpus estará la mayoría.",
+  "criteria": {
+   "muestras": "Las 65 muestras de los proyectos.",
+   "adt": "Los 263 ADT sintéticos.",
+   "oru": "Los 40 ORU sintéticos.",
+   "minimos": "Los 68 mensajes mínimos."
+  }
+ },
+ "q3_cifra": {
+  "type": "choice",
+  "instructions": "Pregunta 3: si cambiará alguna cifra publicada del estudio.",
+  "criteria": {
+   "cambia": "Cambia al menos una cifra publicada.",
+   "no_cambia": "No cambia ninguna."
+  }
+ }
+}

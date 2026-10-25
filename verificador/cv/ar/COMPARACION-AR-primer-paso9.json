@@ -1,0 +1,1796 @@
+{
+ "n": {
+  "comparados": 436,
+  "iguales": 436,
+  "diferentes": 0,
+  "no_deterministas": 0,
+  "sin_par": 0,
+  "caja": 0
+ },
+ "por_corpus": {
+  "adt": {
+   "comparados": 263,
+   "iguales": 263,
+   "diferentes": 0,
+   "no_deterministas": 0,
+   "sin_par": 0,
+   "caja": 0,
+   "n": 263
+  },
+  "minimos": {
+   "comparados": 68,
+   "iguales": 68,
+   "diferentes": 0,
+   "no_deterministas": 0,
+   "sin_par": 0,
+   "caja": 0,
+   "n": 68
+  },
+  "muestras": {
+   "comparados": 65,
+   "iguales": 65,
+   "diferentes": 0,
+   "no_deterministas": 0,
+   "sin_par": 0,
+   "caja": 0,
+   "n": 65
+  },
+  "oru": {
+   "comparados": 40,
+   "iguales": 40,
+   "diferentes": 0,
+   "no_deterministas": 0,
+   "sin_par": 0,
+   "caja": 0,
+   "n": 40
+  }
+ },
+ "diferencias": [],
+ "no_deterministas": [],
+ "sin_par": [],
+ "caja": [],
+ "control_vxu": {
+  "diferentes": [
+   "VXU-B18",
+   "VXU-B19",
+   "VXU-B20",
+   "VXU-B21",
+   "VXU-B22",
+   "VXU-B23",
+   "VXU-B24",
+   "VXU-B25",
+   "VXU-B26",
+   "VXU-B27",
+   "VXU-B28",
+   "VXU-B29",
+   "VXU-B30",
+   "VXU-B31",
+   "VXU-B32",
+   "VXU-B33",
+   "VXU-B34",
+   "VXU-B35",
+   "VXU-B36",
+   "VXU-B37",
+   "VXU-B38",
+   "VXU-B39",
+   "VXU-B40"
+  ],
+  "no_deterministas": [],
+  "sin_par": [],
+  "detalle": [
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B18",
+    "posicion_en_lote": 18,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck^MVX^MERCK^Merck S.A.^L')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-18' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-18' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B19",
+    "posicion_en_lote": 19,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-19' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-19' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B20",
+    "posicion_en_lote": 20,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-20' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-20' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B21",
+    "posicion_en_lote": 21,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-10",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-10",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.performer AP: falta 'PR02^Muestra^Jorge'",
+      "Immunization.identifier: falta 'VX-21' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.performer AP: falta 'PR02^Muestra^Jorge'",
+      "Immunization.identifier: falta 'VX-21' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B22",
+    "posicion_en_lote": 22,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-22' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-22' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B23",
+    "posicion_en_lote": 23,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'NOV^Novartis^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-23' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-23' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B24",
+    "posicion_en_lote": 24,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-2",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-2",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'PL-24' (PLAC)",
+      "Immunization.identifier: falta 'VX-24' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'PL-24' (PLAC)",
+      "Immunization.identifier: falta 'VX-24' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B25",
+    "posicion_en_lote": 25,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-25' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-25' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B26",
+    "posicion_en_lote": 26,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-26' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-26' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B27",
+    "posicion_en_lote": 27,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-27' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-27' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B28",
+    "posicion_en_lote": 28,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-28' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-28' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B29",
+    "posicion_en_lote": 29,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'WAL^Wyeth^MVX')",
+      "Immunization.identifier: falta 'VX-29' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.identifier: falta 'VX-29' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B30",
+    "posicion_en_lote": 30,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX(2)-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX(2)-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-30' (FILL)",
+      "falta la Observation del OBX 1.1 (su valor está en la Immunization: Q-VX-D-4)",
+      "falta la Observation del OBX 1.2 (su valor está en la Immunization: Q-VX-D-4)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-30' (FILL)",
+      "falta la Observation del OBX 1.1 (su valor está en la Immunization: Q-VX-D-4)",
+      "falta la Observation del OBX 1.2 (su valor está en la Immunization: Q-VX-D-4)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B31",
+    "posicion_en_lote": 31,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX(2)-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX(2)-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-31' (FILL)",
+      "falta la Observation del OBX 1.1 (su valor está en la Immunization: Q-VX-D-4)",
+      "falta la Observation del OBX 1.2 (su valor está en la Immunization: Q-VX-D-4)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-31' (FILL)",
+      "falta la Observation del OBX 1.1 (su valor está en la Immunization: Q-VX-D-4)",
+      "falta la Observation del OBX 1.2 (su valor está en la Immunization: Q-VX-D-4)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B32",
+    "posicion_en_lote": 32,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "OBX-3",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-32' (FILL)",
+      "falta la Observation del OBX 1.1"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-32' (FILL)",
+      "falta la Observation del OBX 1.1"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B33",
+    "posicion_en_lote": 33,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC(2)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA(2)-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC(2)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA(2)-17",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-33' (FILL)",
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-33B' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-33' (FILL)",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-33B' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B34",
+    "posicion_en_lote": 34,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC(2)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC(3)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA(2)-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA(3)-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR(3)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC(2)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC(3)-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR(3)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA(2)-17",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXA(3)-17",
+      "fidelidad",
+      "dato_perdido"
+     ],
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-34A' (FILL)",
+      "Immunization.manufacturer: falta (RXA-17 'PMC^sanofi pasteur^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-34B' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-34A' (FILL)",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-34B' (FILL)",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-34C' (FILL)"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B35",
+    "posicion_en_lote": 35,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "RXA(2)-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "RXR(2)-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA(2)-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B36",
+    "posicion_en_lote": 36,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-36' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-36' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B37",
+    "posicion_en_lote": 37,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1(2)-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1(2)-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'MSD^Merck \\\\T\\\\ Co., Inc.^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-37' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 2"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'SQ') (de 'SC'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'SC')]",
+      "Immunization.identifier: falta 'VX-37' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 2"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B38",
+    "posicion_en_lote": 38,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto+codigo_mal_mapeado"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto+codigo_mal_mapeado"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'SKB^GlaxoSmithKline^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-38' (FILL)",
+      "Encounter.status: esperado uno de ['in-progress'], observado 'unknown'",
+      "Encounter.class: esperado ('http://terminology.hl7.org/CodeSystem/v2-0004', 'R') (de 'R'), observado [(None, 'R')]"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.identifier: falta 'VX-38' (FILL)",
+      "Encounter.status: esperado uno de ['in-progress'], observado 'unknown'",
+      "Encounter.class: esperado ('http://terminology.hl7.org/CodeSystem/v2-0004', 'R') (de 'R'), observado [(None, 'R')]"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B39",
+    "posicion_en_lote": 39,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-7",
+       "fidelidad",
+       "valor_distinto"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "NK1-2",
+       "fidelidad",
+       "recurso_ausente"
+      ],
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-7",
+       "fidelidad",
+       "valor_distinto"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'OTH^Otro fabricante^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'PO') (de 'PO'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'PO')]",
+      "Immunization.doseQuantity.unit: esperado 'gota', observado '[drp]'",
+      "Immunization.identifier: falta 'VX-39' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'PO') (de 'PO'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'PO')]",
+      "Immunization.doseQuantity.unit: esperado 'gota', observado '[drp]'",
+      "Immunization.identifier: falta 'VX-39' (FILL)",
+      "falta el RelatedPerson (o el Patient.contact) del NK1 1"
+     ]
+    }
+   },
+   {
+    "corpus": "vxu",
+    "caso": "VXU-B40",
+    "posicion_en_lote": 40,
+    "lote": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-19",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-19",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "solo_en_lote": [
+     [
+      "RXA-17",
+      "fidelidad",
+      "dato_perdido"
+     ]
+    ],
+    "solo_en_mensaje": [],
+    "que": {
+     "lote": [
+      "Immunization.manufacturer: falta (RXA-17 'NOV^Novartis \\\\S\\\\ Vacunas^MVX')",
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.reasonCode: falta 'ASM'",
+      "Immunization.identifier: falta 'VX-40' (FILL)"
+     ],
+     "mensaje": [
+      "Immunization.route: esperado ('http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration', 'IM') (de 'IM'), observado [('http://terminology.hl7.org/CodeSystem/v2-0162', 'IM')]",
+      "Immunization.reasonCode: falta 'ASM'",
+      "Immunization.identifier: falta 'VX-40' (FILL)"
+     ]
+    }
+   }
+  ]
+ },
+ "controles": {
+  "positivo_vl11": true,
+  "negativo": true,
+  "positivo_vxu": false
+ },
+ "corridas": {
+  "lote": [
+   "L1",
+   "L2"
+  ],
+  "mensaje": [
+   "M1",
+   "M2"
+  ]
+ },
+ "_nota": "El primer paso 9, guardado antes de DV-AR-11: controles.positivo_vxu salió false con el criterio del diseño; el resto de la comparación es igual al de COMPARACION-AR.json."
+}

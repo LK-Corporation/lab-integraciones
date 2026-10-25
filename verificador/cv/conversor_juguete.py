@@ -22,6 +22,9 @@ el segundo componente es su parámetro. Sin directiva, un Bundle genérico con u
   JUGUETE-ENVUELTO-FALLO {"Status": "Fail", "Error": "sin plantilla para X"}
   JUGUETE-GRANDE^<n>     el nominal ADT relleno hasta <n> caracteres exactos (4000001 por omisión)
   JUGUETE-ILEGIBLE       un <base>.json que no es JSON
+  JUGUETE-ARRASTRE^<n>   etapa 21 (S-AR-14): el mensaje sale como el nominal, y cuando el proceso ha visto <n> mensajes con
+                         esta directiva (1 por omisión), todos los siguientes del mismo proceso salen sin Patient.gender.
+                         Con --fichero el proceso es nuevo en cada mensaje y nunca afecta a otro
 Imprime «<nombre> <ms> ms» por mensaje."""
 import json
 import os
@@ -36,6 +39,7 @@ S = {"0203": "http://terminology.hl7.org/CodeSystem/v2-0203", "act": "http://ter
      "int": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"}
 GENERO = {"F": "female", "M": "male", "O": "other", "U": "unknown", "A": "other", "N": "other"}       # tabla 0001, a mano
 CLASE = {"E": "EMER", "I": "IMP", "O": "AMB", "P": "PRENC"}
+ESTADO = {"vistos": 0, "envenenado": False}                                                  # JUGUETE-ARRASTRE, por proceso
 
 
 def cc(sistema, codigo):
@@ -200,9 +204,25 @@ def nominal(m):
 
 
 def convertir(t):
-    """-> (accion, contenido): accion en bundle | error | nada | rc3."""
+    """-> (accion, contenido): accion en bundle | error | nada | rc3. Con el proceso envenenado por JUGUETE-ARRASTRE, el Bundle
+    sale sin gender (sin reserializar: conserva «1.20»)."""
+    envenenado = ESTADO["envenenado"]
+    accion, contenido = _convertir(t)
+    if envenenado and accion == "bundle":
+        contenido = re.sub(r',\s*"gender":\s*"[^"]*"', "", contenido)
+    m = Msg(t)
+    if m.campo("MSH", 8, 1).upper() == "JUGUETE-ARRASTRE":
+        ESTADO["vistos"] += 1
+        if ESTADO["vistos"] >= int(m.campo("MSH", 8, 2) or 1):
+            ESTADO["envenenado"] = True
+    return accion, contenido
+
+
+def _convertir(t):
     m = Msg(t)
     d, param = m.campo("MSH", 8, 1).upper(), m.campo("MSH", 8, 2)
+    if d == "JUGUETE-ARRASTRE":
+        return "bundle", texto(nominal(m))
     if d == "JUGUETE-NOMINAL":
         return "bundle", texto(nominal(m))
     if d == "JUGUETE-RUTA":
