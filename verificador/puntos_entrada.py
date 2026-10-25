@@ -149,6 +149,26 @@ PUNTOS["oru_conv"] = _pe(
     "oru_conv", 0, PUNTOS["oru_fhir"]["tipos"], PUNTOS["oru_fhir"]["consumidos"], PUNTOS["oru_fhir"]["p4"], PUNTOS["oru_fhir"]["p5"],
     "ORU^R01 convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» (S-CV-1..6).",
     solo_transformacion=True, familia="oru")
+# vx/diseno-vx-fable.md §2.1 [S-VX-1]: VXU^V04 de un tercero, solo transformación (etapa 20). p4/p5 por coherencia con contrato();
+# en un PE de solo transformación no hay acuse. La gramática VXU_V04 está en estructuras_25.json (VX1-a).
+PUNTOS["vxu_conv"] = _pe(
+    "vxu_conv", 0, {"VXU": {"V04": "VXU_V04"}},
+    MSH_CONSUMIDOS | {("PID", 3), ("PID", 5), ("PID", 7), ("PID", 8), ("PID", 11), ("PID", 13), ("PID", 14), ("PID", 16), ("PID", 29), ("PID", 30),
+                      ("ORC", 2), ("ORC", 3), ("ORC", 9), ("ORC", 12),
+                      ("RXA", 3), ("RXA", 5), ("RXA", 6), ("RXA", 7), ("RXA", 10), ("RXA", 15), ("RXA", 16), ("RXA", 17), ("RXA", 18), ("RXA", 19),
+                      ("RXA", 20), ("RXA", 21), ("RXA", 22), ("RXR", 1), ("RXR", 2),
+                      ("OBX", 2), ("OBX", 3), ("OBX", 5), ("OBX", 6), ("OBX", 7), ("OBX", 8), ("OBX", 11), ("OBX", 14),
+                      ("NK1", 2), ("NK1", 3), ("NK1", 4), ("NK1", 5), ("NK1", 6), ("NK1", 7), ("NK1", 8), ("NK1", 9), ("NK1", 15), ("NK1", 16)},
+    [("MSH", 10, "consumido"), ("PID", 3, "consumido"), ("PID", 5, "consumido"), ("RXA", 3, "consumido"), ("RXA", 5, "consumido"),
+     ("MSH", 7, "estricto"), ("ORC", 1, "estricto"), ("ORC", 3, "nota"), ("RXA", 4, "estricto"), ("RXA", 6, "estricto")],
+    [("MSH", 7, "ts", "estricto"), ("MSH", 18, "0211", "estricto"), ("PID", 7, "ts", "consumido"), ("PID", 8, "0001", "consumido"),
+     ("PID", 29, "ts", "consumido"), ("PID", 30, "0136", "consumido"), ("ORC", 1, "0119", "estricto"), ("ORC", 9, "ts", "consumido"),
+     ("RXA", 1, "nm", "estricto"), ("RXA", 2, "nm", "estricto"), ("RXA", 3, "ts", "consumido"), ("RXA", 4, "ts", "estricto"),
+     ("RXA", 6, "nm", "consumido"), ("RXA", 16, "ts", "consumido"), ("RXA", 20, "0322", "consumido"), ("RXA", 21, "0323", "consumido"),
+     ("RXA", 22, "ts", "consumido"), ("RXR", 1, "0162", "consumido"), ("OBX", 2, "0125", "consumido"), ("OBX", 11, "0085", "consumido"),
+     ("OBX", 14, "ts", "consumido"), ("NK1", 15, "0001", "consumido"), ("NK1", 16, "ts", "consumido")],
+    "VXU^V04 convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» de Immunization (S-VX-1..14).",
+    solo_transformacion=True, familia="vxu")
 POR_OMISION = "adt_a01"
 NOMBRES = list(PUNTOS)
 

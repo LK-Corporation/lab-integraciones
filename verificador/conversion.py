@@ -7,6 +7,7 @@ S-n del laboratorio no cuentan contra un tercero. verificador.verificar despacha
 
 Piezas: leer_bundle (§2.1) -> emparejar (§2.2, por papel) -> juzgar cada recurso con el perfil (§3) -> clases (§4.1) ->
 categoría (§1.4). Un hallazgo por campo (fusión por hecho); un recurso ausente absorbe sus datos perdidos.
+Etapa 20: `vxu_conv` (VXU^V04) vive en conversion_vxu.py; aquí solo hay cinco ganchos por familia (vx/diseno-vx-fable.md §2.6).
   python3 conversion.py --autoprueba      -> los mapas contra el paquete de la guía (si está) y un caso nominal"""
 import datetime
 import json
@@ -188,14 +189,14 @@ def _t(m, rep, i, k=1):
 
 
 # ---------------------------------------------------------------------------- lectura del Bundle (§2.1)
-def leer_bundle(texto):
+def leer_bundle(texto, tipos=TIPOS_PROY):
     """-> (entries, notas) o (None, [motivo]). Entry: {i, fullUrl, tipo, id, r, padre}; contained -> fullUrl «#id», padre = i."""
     d, motivo = AO.parsear(texto)
     if d is None:
         return None, [motivo]
     notas = []
     if d.get("resourceType") != "Bundle":
-        if d.get("resourceType") in TIPOS_PROY:
+        if d.get("resourceType") in tipos:
             d, notas = {"resourceType": "Bundle", "entry": [{"resource": d}]}, ["recurso_suelto"]
         else:
             return None, ["ni Bundle ni recurso proyectado (resourceType %r)" % d.get("resourceType")]
@@ -269,7 +270,7 @@ def _grupos_oru(m):
 
 
 def leer_y_emparejar(m, texto, familia):
-    entries, notas = leer_bundle(texto)
+    entries, notas = leer_bundle(texto, CVX.TIPOS if familia == "vxu" else TIPOS_PROY)          # gancho 3 (etapa 20)
     if entries is None:
         return {"recursos": [], "sobrantes": [], "otros_tipos": {}, "referencias_rotas": [], "fallos": notas, "ambiguo": [],
                 "entries": None}
@@ -316,7 +317,9 @@ def emparejar(m, entries, familia, notas=()):
         x, _ = resolver(entries, e["r"].get("subject"), e, "Patient")
         return pat is not None and x is pat
 
-    if familia == "adt":
+    if familia == "vxu":                                            # gancho 4 (etapa 20): Immunization, Observation, NK1, PV1
+        CVX.emparejar(m, entries, top, out, pat, rol, usados)
+    elif familia == "adt":
         pv1 = _seg(m, "PV1")
         encs = [e for e in top if e["tipo"] == "Encounter"]
         en = None
@@ -409,7 +412,7 @@ def emparejar(m, entries, familia, notas=()):
     out["_usados"] = usados
     alcanzadas = _alcanzadas(entries, [x["entry"] for x in out["recursos"] if x["entry"]])
     for e in top:                                    # L-CV-5: fuera de la proyección y sin referencia desde ella -> solo recuento
-        if e["i"] not in usados and e["i"] not in alcanzadas and e["tipo"] not in TIPOS_PROY:
+        if e["i"] not in usados and e["i"] not in alcanzadas and e["tipo"] not in (CVX.TIPOS if familia == "vxu" else TIPOS_PROY):
             out["otros_tipos"][e["tipo"]] = out["otros_tipos"].get(e["tipo"], 0) + 1
     return out
 
@@ -1386,7 +1389,7 @@ def _veredicto(cat, sub=None, cert="literal"):
 
 def verificar(e, pe, dec=None):
     dec = dict(DECISIONES, **(dec or {}))
-    familia = "oru" if pe["nombre"] == "oru_conv" else "adt"
+    familia = pe.get("familia") or ("oru" if pe["nombre"] == "oru_conv" else "adt")          # gancho 1 (etapa 20)
     conv = e.get("conversion") or {}
     salida = conv.get("salida") or {}
     estado = salida.get("estado")
@@ -1422,8 +1425,9 @@ def verificar(e, pe, dec=None):
     if estado == "error":
         err = salida.get("error") or {}
         txt = str(err.get("texto") or "")
-        imp = _imposibles(m, familia)
-        faltan = [s for s in (("PID", "PV1") if familia == "adt" else ("PID", "OBR")) if not m.segmentos(s)]
+        imp = CVX.imposibles(m) if familia == "vxu" else _imposibles(m, familia)                     # gancho 2 (etapa 20)
+        faltan = [s for s in (CVX.FALTAN if familia == "vxu" else ("PID", "PV1") if familia == "adt" else ("PID", "OBR"))
+                  if not m.segmentos(s)]
         if imp or faltan or (ver not in ("2.5", "") and re.search(r"versi", txt, re.I)):
             J.nota("aceptable", (imp + faltan + ["MSH-12"])[0], "el conversor rechazó un mensaje con %r: rechazo aceptable (Q-CV-D-7)" % (imp + faltan))
             for h in J.hs:
@@ -1447,7 +1451,10 @@ def verificar(e, pe, dec=None):
     J.entries = lec["entries"]
     out["conversion"]["emparejamiento"] = [{k: x[k] for k in ("rol", "origen", "fullUrl", "emparejado_por", "candidatos")}
                                            for x in lec["recursos"]]
-    out["conversion"]["recuentos"] = {t: n for t in TIPOS_PROY for n in [sum(1 for x in lec["entries"] if x["padre"] is None and x["tipo"] == t)] if n}
+    out["conversion"]["recuentos"] = {t: n for t in (CVX.TIPOS if familia == "vxu" else TIPOS_PROY)
+                                       for n in [sum(1 for x in lec["entries"] if x["padre"] is None and x["tipo"] == t)] if n}
+    if familia == "vxu":                                            # §2.4: los recuentos propios de VXU
+        out["conversion"]["recuentos"].update(CVX.recuentos(m))
     if lec["ambiguo"]:
         J.nota("emparejamiento", "MSH", "emparejamiento ambiguo: %r" % lec["ambiguo"])
         out["hallazgos"], out["veredicto"] = _fusionar(J.hs), _veredicto("indeterminado", "emparejamiento")
@@ -1491,6 +1498,8 @@ def _juzgar(J, m, lec, familia):
                     J.cuenta("recurso_ausente", "PV1", "falta el Encounter del PV1" + (" (PV1-2 = N: Q-CV-D-6)" if c2 == "N" else ""))
             else:
                 _encounter(J, m, pv1, en["entry"]["r"], lec["entries"], pat_entry, en["entry"])
+    elif familia == "vxu":                                          # gancho 5 (etapa 20)
+        CVX.juzgar(J, m, lec, pat_entry)
     else:
         grupos, _ = _grupos_oru(m)
         for i, (obr, obxs) in enumerate(grupos, 1):
@@ -1607,6 +1616,9 @@ INFO = {"guia": GUIA, "decisiones": S_CV, "decisiones_jev": DECISIONES, "alterna
 def con_alternativas(*qs):
     """Las decisiones con la alternativa de las Q indicadas (sensibilidad preinscrita de cv/decisiones-qcv.md)."""
     return {q: ALTERNATIVA[q] for q in qs}
+
+
+import conversion_vxu as CVX  # noqa: E402  (al final: conversion_vxu importa este módulo y registra sus citas e INFO, DV-VX-2)
 
 
 # ---------------------------------------------------------------------------- autoprueba

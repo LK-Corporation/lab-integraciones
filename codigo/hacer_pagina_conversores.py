@@ -336,7 +336,7 @@ def cabecera():
         "<span>Juez de los resultados sellados <b>%s</b>, del cierre y la rama principal <b>%s</b>, publicado como <b>%s</b> (se "
         "diferencia en un extracto que el juez cita, no en su lógica)</span>" % (
             texto(j("juez"), r"^(.{8})"), texto(j("juez", CV + "RESULTADO-15A-minimos-main.json"), r"^(.{8})"),
-            texto("md:verificador/MANIFIESTO.txt", r"huella del juez publicado:\s+([0-9a-f]{8})")),
+            texto("md:verificador/MANIFIESTO.txt", r"huella del juez publicado con el estudio de conversores \(24-oct\):\s+([0-9a-f]{8})")),
         "<span>Fechas: %s</span>" % texto("md:" + rc, r"^\| Fechas \| (23 y 24 de octubre),"),
         "</div>"])
 

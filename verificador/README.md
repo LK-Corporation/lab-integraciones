@@ -1,8 +1,8 @@
 # El verificador: un juez determinista para circuitos de integración HL7 v2.5 → FHIR R4
 
 Es el juez que usan los dos estudios del agente ([`../piloto-agente/`](../piloto-agente/)), publicado con su código el
-22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR, y
-cualquiera puede pasar el suyo con un adaptador y una orden (abajo).
+22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR (desde el 25-oct, también
+los mensajes de vacunación VXU^V04), y cualquiera puede pasar el suyo con un adaptador y una orden (abajo).
 Recibe la evidencia de un caso:
 - el mensaje HL7 v2.5 que se envió;
 - el acuse que devolvió el circuito;
@@ -20,10 +20,10 @@ siempre la misma respuesta a la misma evidencia.
 **Los puntos de entrada:**
 - tres con mapeador: `adt_a01`, `adt_fhir` y `oru_fhir`, donde se compara también lo escrito;
 - cinco de solo acuse: `adt`, `oru`, `siu`, `ord` y `mdm`;
-- dos de solo transformación, `adt_conv` y `oru_conv`: juzgan el Bundle que devuelve un conversor contra el perfil
-  «guía» de [`conversion.py`](conversion.py).
+- tres de solo transformación, `adt_conv`, `oru_conv` y `vxu_conv`: juzgan el Bundle que devuelve un conversor contra el
+  perfil «guía» de [`conversion.py`](conversion.py) y, en VXU, de [`conversion_vxu.py`](conversion_vxu.py).
 
-**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.2) con seis herramientas: `verificar_caso`, `ficha_experto`,
+**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.3) con seis herramientas: `verificar_caso`, `ficha_experto`,
 `acuse_esperado`, `comparar_canonico`, `consultar_tabla` e `info_verificador`. La última lleva las decisiones declaradas, los
 supuestos, los límites, las desviaciones y las preguntas que siguen abiertas.
 
@@ -103,6 +103,34 @@ El estudio de conversores y la herramienta tienen su página web, para leerlo en
   ficheros de esta carpeta, y cada cifra declara su fuente en un atributo. La prueba de higiene resuelve cada fuente, busca
   cifras sueltas y comprueba que la página es la que genera el guion.
 - **Dónde está el resto:** cómo se hizo y qué no hace, en [`cv/pg/PG.md`](cv/pg/PG.md).
+
+## La etapa de VXU (20, 25-oct-2026)
+
+> El verificador encuentra **9 discrepancias nuevas y confirmadas en VXU_V04 en 2 de 2 conversores, sobre 125 mensajes
+> públicos**; además ve **26 de las ya declaradas**, y **5 diferencias son convención**.
+
+**Lo mismo, en vacunación.**
+- **Los conversores y la caja:** los mismos del estudio de conversores.
+- **El punto de entrada:** `vxu_conv`, con el perfil «guía» de Immunization en [`conversion_vxu.py`](conversion_vxu.py).
+- **El corpus:** 40 bases sintéticas válidas en v2.5 ([`bases_vxu.py`](bases_vxu.py), con su huella fijada) y 85 muestras de
+  los proyectos.
+- **El método, el mismo:**
+  - el diseño a ciegas y las decisiones de Jev;
+  - las pruebas en rojo antes del código;
+  - la previsión sellada antes de juzgar;
+  - el contraste con lo que declara cada proyecto;
+  - una revisión adversaria que tumbó 1 de 23 hallazgos y corrigió el perfil;
+  - un par de mensajes mínimos por discrepancia.
+- **ADT y ORU no cambian:** el rejuicio de las 1.008 evidencias del estudio de conversores da 0 diferencias.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-VXU.md`](ANTES-ETAPA-VXU.md), [`vx/VX-PRE.md`](vx/VX-PRE.md) |
+| VX0: el diseño a ciegas y las decisiones | [`vx/ENCARGO-VX0.md`](vx/ENCARGO-VX0.md), [`vx/diseno-vx-fable.md`](vx/diseno-vx-fable.md), [`vx/decisiones-qvx.md`](vx/decisiones-qvx.md), [`vx/decision-jev-qvx.md`](vx/decision-jev-qvx.md) |
+| VX1: el juez, con las pruebas en rojo antes | [`vx/VX1.md`](vx/VX1.md), [`prueba_conversion_vxu.py`](prueba_conversion_vxu.py) |
+| VX2: el corpus, la previsión sellada y las corridas | [`vx/prevision-vxu.json`](vx/prevision-vxu.json), [`vx/VX2.md`](vx/VX2.md) |
+| VX3: contraste, clase, pares mínimos y revisión adversaria | [`vx/VX3.md`](vx/VX3.md), [`vx/CLASES-VX3.json`](vx/CLASES-VX3.json), [`vx/RESULTADO-VX3-minimos.json`](vx/RESULTADO-VX3-minimos.json), [`cv/cv3_minimos_vxu.py`](cv/cv3_minimos_vxu.py) |
+| El resultado, con la frase | [`RESULTADO-VXU.md`](RESULTADO-VXU.md) |
 
 ## El estudio de conversores (14l, 23-24 oct-2026)
 
@@ -198,9 +226,17 @@ publica.
   `ve/ADJUDICACION-VE2.json`. Los totales y el mecanismo son los del original.
 - **Cuatro documentos del estudio de conversores llevan una parte redactada,** marcados en su primera línea: se quitaron
   las alusiones al trabajo del autor y la cola de lo que solo él decide.
+- **Dos documentos de la etapa de VXU llevan una parte redactada,** marcados en su primera línea: `ANTES-ETAPA-VXU.md` y
+  `RESULTADO-VXU.md`.
+- **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
+  decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
+  publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
 - **Las bases ORU no viajan.** Las regenera `bases_oru.py`; se comprobó que salen iguales byte a byte.
 - **Los mensajes mínimos de conversores tampoco.** Los regenera `cv/cv3_minimos.py escribir <carpeta>`; se comprobó que
   salen iguales byte a byte.
+- **Las bases y los pares mínimos de VXU tampoco.**
+  - Las bases las escribe `bases_vxu.py`, y su autoprueba comprueba la huella del conjunto.
+  - Los pares, `cv/cv3_minimos_vxu.py escribir <carpeta>`, y su secuencia, `secuencias <carpeta>`.
 
 ## Lo que no está
 
@@ -218,6 +254,12 @@ publica.
   - lo que devolvieron y el detalle por caso: están los agregados de `cv/`;
   - las hojas CSV de la guía, que están en `HL7/v2-to-fhir`, commit `873b331`;
   - las muestras de los proyectos, que están en sus repositorios.
+- **De VXU:**
+  - las evidencias y los juicios por caso: están los agregados de `vx/`;
+  - las muestras de los proyectos, en sus repositorios. Las de LinuxForHealth son literales de sus pruebas Java;
+  - las hojas CSV de la guía que trae `vx/traer_guia_vxu.py`;
+  - los parches con que se aplicó cada cambio en el laboratorio;
+  - `prueba_multitipo.py`.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

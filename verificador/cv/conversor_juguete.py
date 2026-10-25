@@ -10,7 +10,9 @@ no se confirma a sí mismo).
 
 La directiva va en MSH-8 (Seguridad), que el juez no lee (DV-VC-2: el diseño la ponía en MSH-3, que adt_conv consume);
 el segundo componente es su parámetro. Sin directiva, un Bundle genérico con unos pocos campos del mensaje.
-  JUGUETE-NOMINAL        el Bundle nominal escrito a mano (ADT u ORU por MSH-9.1), copiado de prueba_conversion.py
+  JUGUETE-NOMINAL        el Bundle nominal escrito a mano (ADT, ORU o VXU por MSH-9.1), copiado de prueba_conversion.py y
+                         de prueba_conversion_vxu.py
+  JUGUETE-RUTA           el nominal VXU con route {v2-0162, IM} (etapa 20: control positivo, RXR-1 mal mapeado)
   JUGUETE-GENERO         el nominal ADT con gender «male»
   JUGUETE-ERROR          una traza de tres líneas en <base>.error (o en --error), nada más
   JUGUETE-NADA           no escribe nada y sigue (código 0)
@@ -101,6 +103,27 @@ def oru_nominal():
     return {"resourceType": "Bundle", "type": "collection", "entry": [{"fullUrl": "urn:uuid:" + r["id"], "resource": r} for r in (p, d, o1, o2)]}
 
 
+def vxu_nominal(ruta_v2=False):
+    """Etapa 20: el Bundle nominal de VXU, copia de prueba_conversion_vxu.py (pac, inm, prac, org); ruta_v2 es JUGUETE-RUTA."""
+    v2 = "http://terminology.hl7.org/CodeSystem/v2-%s"
+    p = {"resourceType": "Patient", "id": "p1",
+         "identifier": [{"value": "VAC0001", "type": cc("0203", "MR"), "assigner": {"display": "CSSYN"}}],
+         "name": [{"family": "Prueba", "given": ["Mateo"], "use": "official"}], "birthDate": "2023-05-12", "gender": "male"}
+    i = {"resourceType": "Immunization", "id": "i1",
+         "identifier": [{"value": "VX-01", "type": cc("0203", "FILL")}], "status": "completed",
+         "vaccineCode": {"coding": [{"system": "http://hl7.org/fhir/sid/cvx", "code": "03", "display": "MMR"}]},
+         "patient": {"reference": "urn:uuid:p1"}, "occurrenceDateTime": "2024-01-15T10:30:00+01:00", "recorded": "2024-01-15T10:45:00+01:00",
+         "lotNumber": "LOT-01", "expirationDate": "2025-11", "manufacturer": {"reference": "urn:uuid:o1"},
+         "route": {"coding": [{"system": v2 % "0162" if ruta_v2 else "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration", "code": "IM"}]},
+         "site": {"coding": [{"system": v2 % "0163", "code": "LD"}]},
+         "doseQuantity": {"value": "@NUM:0.5@", "unit": "mL", "system": S["ucum"], "code": "mL"},
+         "performer": [{"function": {"coding": [{"system": v2 % "0443", "code": "AP"}]}, "actor": {"reference": "urn:uuid:pr1"}}]}
+    pr = {"resourceType": "Practitioner", "id": "pr1", "identifier": [{"value": "1234"}], "name": [{"family": "Goldstein", "given": ["Harold"]}]}
+    o = {"resourceType": "Organization", "id": "o1", "identifier": [{"system": "http://terminology.hl7.org/CodeSystem/MVX", "value": "MSD"}],
+         "name": "Merck & Co., Inc."}
+    return {"resourceType": "Bundle", "type": "collection", "entry": [{"fullUrl": "urn:uuid:" + r["id"], "resource": r} for r in (p, i, pr, o)]}
+
+
 def texto(b):
     """JSON del Bundle; «@NUM:1.20@» queda como el número 1.20 tal cual."""
     return re.sub(r'"@NUM:([^@]*)@"', r"\1", json.dumps(b, ensure_ascii=False))
@@ -172,7 +195,8 @@ def generico(m):
 
 
 def nominal(m):
-    return oru_nominal() if m.campo("MSH", 9, 1).upper() == "ORU" else adt_nominal()
+    t = m.campo("MSH", 9, 1).upper()
+    return oru_nominal() if t == "ORU" else vxu_nominal() if t == "VXU" else adt_nominal()
 
 
 def convertir(t):
@@ -181,6 +205,8 @@ def convertir(t):
     d, param = m.campo("MSH", 8, 1).upper(), m.campo("MSH", 8, 2)
     if d == "JUGUETE-NOMINAL":
         return "bundle", texto(nominal(m))
+    if d == "JUGUETE-RUTA":
+        return "bundle", texto(vxu_nominal(ruta_v2=True))
     if d == "JUGUETE-GENERO":
         return "bundle", texto(adt_nominal("male"))
     if d == "JUGUETE-ERROR":

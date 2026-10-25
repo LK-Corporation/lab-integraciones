@@ -76,7 +76,10 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   # 24-oct-2026, el estudio de conversores: la previsión sellada y los agregados
                   "verificador/cv/PREVISION-CV2.json", "verificador/cv/CUENTAS-CV2.json", "verificador/cv/RESULTADO-CV2.json",
                   "verificador/cv/ADJUDICACION-CV2.json", "verificador/cv/CLASES-CV3.json",
-                  "verificador/cv/RESULTADO-CV3-minimos.json", "verificador/cv/RESULTADO-15A-minimos-main.json"}
+                  "verificador/cv/RESULTADO-CV3-minimos.json", "verificador/cv/RESULTADO-15A-minimos-main.json",
+                  # 25-oct-2026, la etapa de VXU: las preguntas a Jev, la previsión sellada, las clases y los pares
+                  "verificador/vx/preguntas_qvx.json", "verificador/vx/prevision-vxu.json", "verificador/vx/CLASES-VX3.json",
+                  "verificador/vx/RESULTADO-VX3-minimos.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
@@ -293,6 +296,8 @@ def test_los_enlaces_relativos_resuelven():
         if not rel.endswith((".md", ".html")):
             continue
         texto = re.sub(r"(?ms)^```.*?^```", "", leer(rel)) if rel.endswith(".md") else leer(rel)   # etapa 19: un bloque
+        if rel.endswith(".md"):                                                               # etapa 20: ni el código
+            texto = re.sub(r"`[^`\n]*`", "", texto)                                          # en línea
         for a, b in re.findall(r"\]\(([^)\s]+)\)|(?:href|src)=\"([^\"]+)\"", texto):          # de código no enlaza
             destino = (a or b).split("#")[0]
             if not destino or re.match(r"[a-z]+:", destino):

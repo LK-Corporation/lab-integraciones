@@ -1,0 +1,57 @@
+{
+ "etapa": "20 (VXU_V04), VX2-b: previsión sellada antes de juzgar las 40 bases (vx/diseno-vx-fable.md §5, R-VX-8)",
+ "fecha": "2026-10-25",
+ "juez": {"huella": "ba53dcccbaf54f4ace8c018589283031306b8944678efdfa6a9ffc440151a490", "commit": "ec37fa7", "servidor": "1.3"},
+ "corpus": {"vxu": "3bcb0eefe4ddf14f4c89e0a8ef0f413c0b36833772bd1f5c60b47db11a82bea3", "bases_vxu_huella": "5734cc3b9d6df918bb94b19393d199cdb5af09f80ecd8e949f29f50f068d0605",
+            "adt": "7b4e7cfba0411d29fcc8a57575c6104aa6c7cabbb6718a13515c8bc6b57f6242", "oru": "b5be5675b2047bf4429741d808e1c5d24d473f31d9aae9bc9f2a5e4f0ba90891", "n_vxu": 40},
+ "decisiones": {"Q-VX-D-1": "fijar", "Q-VX-D-2": "las_dos", "Q-VX-D-3": "rxa22", "Q-VX-D-4": "recurso_ausente", "Q-VX-D-5": "nk1",
+                "Q-VX-D-6": "si_dos", "Q-VX-D-7": "inventado", "Q-VX-D-8": "convencion", "Q-VX-D-9": "convencion", "Q-VX-D-10": "todas"},
+ "sensibilidad": "VX2-c da también la N con la alternativa de cada una de las siete de ALTERNATIVA_VX (Q-VX-D-2, 3, 4, 5, 6, 8, 9), una a una.",
+ "base_de_la_prevision": "La tabla de §5.2 del diseño (a ciegas), corregida solo con lo visto en E-VX-3 y VX1-e: las salidas de los dos conversores sobre las cuatro muestras VXU públicas de Microsoft (privado/vx/vxpre/), nunca sobre las 40 bases. Cambios respecto a §5.2: MC-VX-13 y MC-VX-18 suben para Microsoft (systems propios de example.com vistos) y bajan para LinuxForHealth (system canónico visto); MC-VX-11, MC-VX-3 y MC-VX-14 suben para LinuxForHealth (ORC-3 perdido, unit de CE.1, NK1 sin RelatedPerson vistos); MC-VX-1 baja (IM bien en los dos); MC-VX-17 sube en los dos (primarySource en todas las salidas vistas), y por eso `correcto` baja a casi cero.",
+ "conversores": {
+  "microsoft": {
+   "corre_en_caja": 0.97,
+   "categorias_pct": {"correcto": [0, 5], "fallo_silencioso": [90, 100], "rechazo_incorrecto": [0, 5], "indeterminado": [0, 2]},
+   "mecanismos_distintos_que_cuentan": [6, 11],
+   "p_al_menos_una_nueva_confirmada": 0.45
+  },
+  "linuxforhealth": {
+   "corre_en_caja": 0.95,
+   "categorias_pct": {"correcto": [0, 5], "fallo_silencioso": [85, 100], "rechazo_incorrecto": [0, 10], "indeterminado": [0, 2]},
+   "mecanismos_distintos_que_cuentan": [6, 11],
+   "p_al_menos_una_nueva_confirmada": 0.6
+  }
+ },
+ "p_al_menos_una_nueva_confirmada_en_alguno": 0.8,
+ "mecanismos": [
+  {"id": "MC-VX-1", "hecho": "RXR-1", "subtipo": "codigo_mal_mapeado", "ruta": "Immunization.route", "que": "SC/ID/PO con system v2-0162 o sin system, en vez de v3-RouteOfAdministration (SQ, IDINJ, PO)", "p": {"microsoft": 0.35, "linuxforhealth": 0.35}, "bases": "las de RXR-1 SC, ID o PO: B02, B05, B06, B11, B13, B18, B19, B25, B26, B30, B32, B37, B39"},
+  {"id": "MC-VX-2", "hecho": "RXA-6", "subtipo": "valor_distinto", "ruta": "Immunization.doseQuantity.value", "que": "RXA-6 reserializado (0.25, 0.1)", "p": {"microsoft": 0.1, "linuxforhealth": 0.1}, "bases": "B06, B08"},
+  {"id": "MC-VX-3", "hecho": "RXA-7", "subtipo": "valor_distinto/dato_perdido/codigo_mal_mapeado", "ruta": "Immunization.doseQuantity.unit/code/system", "que": "unit de CE.1 en vez de CE.2; code sin system; ISO+ no canónico", "p": {"microsoft": 0.3, "linuxforhealth": 0.85}, "bases": "B02, B04, B05, B39"},
+  {"id": "MC-VX-4", "hecho": "RXA-17", "subtipo": "dato_perdido", "ruta": "Immunization.manufacturer", "que": "MVX perdido: Organization solo con name, o solo display", "p": {"microsoft": 0.15, "linuxforhealth": 0.3}, "bases": "todas con RXA-17 codificado (37)"},
+  {"id": "MC-VX-5", "hecho": "RXA-10/ORC-12", "subtipo": "dato_perdido/codigo_mal_mapeado", "ruta": "Immunization.performer.function", "que": "performer sin function con dos profesionales, o el mismo código para AP y OP", "p": {"microsoft": 0.3, "linuxforhealth": 0.3}, "bases": "B04, B21, B23 y las de RXA-10"},
+  {"id": "MC-VX-6", "hecho": "RXA-16", "subtipo": "dato_inventado/dato_perdido", "ruta": "Immunization.expirationDate", "que": "YYYYMM completado a día, o perdido", "p": {"microsoft": 0.35, "linuxforhealth": 0.35}, "bases": "las de caducidad YYYYMM (todas con lote salvo B03 y B16)"},
+  {"id": "MC-VX-7", "hecho": "RXA-3", "subtipo": "dato_inventado", "ruta": "Immunization.occurrenceDateTime", "que": "fecha sola → T00:00; minutos → segundos añadidos", "p": {"microsoft": 0.3, "linuxforhealth": 0.4}, "bases": "B03, B15, B34"},
+  {"id": "MC-VX-8", "hecho": "RXA-20", "subtipo": "valor_distinto/codigo_mal_mapeado", "ruta": "Immunization.status", "que": "RXA-20 vacío no completed; PA → not-done; RE/NA → completed", "p": {"microsoft": 0.35, "linuxforhealth": 0.35}, "bases": "B07, B08, B09, B10, B35"},
+  {"id": "MC-VX-9", "hecho": "RXA-21", "subtipo": "valor_distinto", "ruta": "Immunization.status", "que": "RXA-21 D ignorado", "p": {"microsoft": 0.4, "linuxforhealth": 0.5}, "bases": "B11"},
+  {"id": "MC-VX-10", "hecho": "ORC-9/RXA-22", "subtipo": "valor_distinto/dato_perdido", "ruta": "Immunization.recorded", "que": "con Q-VX-D-3 (rxa22): ORC-9 donde manda RXA-22 (B13), RXA-22 con U donde manda ORC-9 (B12), o recorded perdido", "p": {"microsoft": 0.5, "linuxforhealth": 0.5}, "bases": "B01, B12, B13"},
+  {"id": "MC-VX-11", "hecho": "ORC-2/ORC-3", "subtipo": "dato_perdido/codigo_mal_mapeado", "ruta": "Immunization.identifier", "que": "ORC-3 (o ORC-2) perdido, sin type o con el type cambiado", "p": {"microsoft": 0.15, "linuxforhealth": 0.9}, "bases": "todas con ORC-3 (39)"},
+  {"id": "MC-VX-12", "hecho": "OBX-3", "subtipo": "recurso_ausente/dato_perdido", "ruta": "Observation (existencia, partOf)", "que": "OBX de ORDER sin Observation (absorbido o perdido: recurso_ausente por Q-VX-D-4) o sin partOf", "p": {"microsoft": 0.9, "linuxforhealth": 0.9}, "bases": "B30, B31, B32"},
+  {"id": "MC-VX-13", "hecho": "RXA-5/RXA-17", "subtipo": "codigo_mal_mapeado", "ruta": "Immunization.vaccineCode.coding.system, Organization.identifier.system", "que": "system no canónico para CVX o MVX (Q-VX-D-1: fijar)", "p": {"microsoft": 0.95, "linuxforhealth": 0.15}, "bases": "todas con CVX (39) o MVX (37)"},
+  {"id": "MC-VX-14", "hecho": "NK1-2/NK1-3", "subtipo": "recurso_ausente/codigo_mal_mapeado", "ruta": "RelatedPerson / Patient.contact", "que": "NK1 sin RelatedPerson ni contact, o MTH con system v2-0063", "p": {"microsoft": 0.3, "linuxforhealth": 0.85}, "bases": "B36, B37, B39"},
+  {"id": "MC-VX-15", "hecho": "RXA(n)-5/OBX", "subtipo": "recurso_ausente/referencia_rota", "ruta": "Immunization (varias), Observation.partOf", "que": "varias RXA en una sola Immunization, u Observation colgada de otro grupo", "p": {"microsoft": 0.15, "linuxforhealth": 0.2}, "bases": "B33, B34, B35"},
+  {"id": "MC-VX-16", "hecho": "RXA-18/RXA-19", "subtipo": "dato_perdido", "ruta": "Immunization.statusReason, reasonCode", "que": "statusReason ausente con RE/NA; reasonCode parcial", "p": {"microsoft": 0.35, "linuxforhealth": 0.4}, "bases": "B09, B10, B35, B40"},
+  {"id": "MC-VX-17", "hecho": "RXA", "subtipo": "dato_inventado", "ruta": "Immunization.primarySource", "que": "primarySource por omisión (Q-VX-D-7)", "p": {"microsoft": 0.95, "linuxforhealth": 0.95}, "bases": "todas"},
+  {"id": "MC-VX-18", "hecho": "RXR-2", "subtipo": "codigo_mal_mapeado", "ruta": "Immunization.site", "que": "sitio con system no v2-0163/v2-0550 (o LD en la 0550)", "p": {"microsoft": 0.9, "linuxforhealth": 0.15}, "bases": "todas con sitio de la 0163 (34)"},
+  {"id": "MC-VX-19", "hecho": "MSH-9", "subtipo": "rechazo_incorrecto", "ruta": "—", "que": "error ante VXU válidos por plantilla o por segmentos sin mapa (SFT, GT1, IN1, PV2)", "p": {"microsoft": 0.1, "linuxforhealth": 0.15}, "bases": "B38, B39"},
+  {"id": "MC-VX-20", "hecho": "RXA-3", "subtipo": "valor_distinto", "ruta": "Immunization.occurrence[x]", "que": "occurrenceString en vez de occurrenceDateTime", "p": {"microsoft": 0.03, "linuxforhealth": 0.03}, "bases": "todas"},
+  {"id": "MC-VX-21", "hecho": "NK1-5/NK1-6", "subtipo": "dato_perdido/codigo_mal_mapeado", "ruta": "RelatedPerson.telecom", "que": "teléfono del NK1 perdido o con use distinto (visto en una muestra de Microsoft)", "p": {"microsoft": 0.3, "linuxforhealth": 0.2}, "bases": "B36, B37, B39"}
+ ],
+ "fuera_de_previsto": [
+  "un mecanismo que cuente y no esté en esta lista",
+  "un porcentaje de categoría fuera de su rango",
+  "indeterminado > 2 % (lector o emparejador)",
+  "un conversor que rechace más del 10 % del corpus 2.5",
+  "lo que no preveo: un recurso_inventado (Immunization sin RXA), una referencia_rota en Immunization.patient, o fhir_invalido masivo en status"
+ ],
+ "regla": "Cada «fuera de previsto» se adjudica (juez / perfil / corpus / caja) con cita antes de VX3. Un defecto del juez se arregla con su prueba y VX2-c se repite entero; dos repeticiones como máximo; luego el mecanismo pasa a L-VX y se declara."
+}
