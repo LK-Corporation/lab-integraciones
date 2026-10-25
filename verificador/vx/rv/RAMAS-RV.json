@@ -1,0 +1,40 @@
+{
+ "microsoft": {
+  "avanzo": false,
+  "ahead_by": 0,
+  "reconstruir": false,
+  "ficheros_vxu": [],
+  "incompleto": false,
+  "commits": [],
+  "repositorio": "microsoft/FHIR-Converter",
+  "commit_15A": "70fd328e05019142f616a660cf65c6034baaa3c9",
+  "commit_hoy": "70fd328e05019142f616a660cf65c6034baaa3c9",
+  "fecha_commit_hoy": "2026-06-03T14:01:46Z",
+  "reconstruida": false,
+  "construccion": "la de 15A (24-oct): la rama no avanzó",
+  "version": "main (70fd328, 2026-06-03)",
+  "huella": "38c6d32bb6620d23ce38fa2fa2693ea4baf003ead11a7a48864548484065922d",
+  "huella_con_nombres": "0a6cbac8275759202fed71472adff89a09f66461edc832fe1b820e4e45a455fc",
+  "imagen_ejecucion": "mcr.microsoft.com/dotnet/runtime:8.0",
+  "imagen_digest": "sha256:1b2f288e3a87cd251322f304e176327b6c00ec3bc1847f38b69a58cb7251e994"
+ },
+ "linuxforhealth": {
+  "avanzo": false,
+  "ahead_by": 0,
+  "reconstruir": false,
+  "ficheros_vxu": [],
+  "incompleto": false,
+  "commits": [],
+  "repositorio": "LinuxForHealth/hl7v2-fhir-converter",
+  "commit_15A": "2cb72c2144182a1a6127d56f955600e34e42db7b",
+  "commit_hoy": "2cb72c2144182a1a6127d56f955600e34e42db7b",
+  "fecha_commit_hoy": "2026-02-11T04:31:13Z",
+  "reconstruida": false,
+  "construccion": "la de 15A (24-oct): la rama no avanzó",
+  "version": "master (2cb72c2, 2026-02-11)",
+  "huella": "28c1606701d958bd7bcc0ee523cca9c0355a5f25fb16eb10bb0769f91fb01cf1",
+  "huella_con_nombres": "330c1de02a028467bc78715274a37e75b319927588278adfb9daf3c013497f9a",
+  "imagen_ejecucion": "maven:3.9-eclipse-temurin-11",
+  "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64"
+ }
+}

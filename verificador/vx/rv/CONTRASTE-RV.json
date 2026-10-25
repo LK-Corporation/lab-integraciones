@@ -1,0 +1,268 @@
+{
+ "fecha_lectura": "2026-10-25T14:13:34+01:00",
+ "totales": {
+  "ms": {
+   "issues_y_pr": 587,
+   "comentarios": 565
+  },
+  "lfh": {
+   "issues_y_pr": 533,
+   "comentarios": 314
+  }
+ },
+ "discrepancias": {
+  "VX-M7": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato"
+  },
+  "VX-M8": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato"
+  },
+  "VX-M10": {
+   "estado": "sigue",
+   "candidatos": [
+    {
+     "numero": 516,
+     "tipo": "issue",
+     "estado": "open",
+     "titulo": "No agent field in Provenance for ADT_A01 => R4",
+     "url": "https://github.com/microsoft/FHIR-Converter/issues/516",
+     "terminos": [
+      "relatedperson",
+      "relationship",
+      "v3-rolecode"
+     ],
+     "cerrado": null
+    }
+   ],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "#516 trata del agente de Provenance en ADT_A01; la relación solo sale en un JSON de ejemplo"
+  },
+  "VX-M12": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato"
+  },
+  "VX-M14": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato; la misma causa que MS-1 de la cola del estudio (Q-RV-D-2)"
+  },
+  "VX-M15": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato"
+  },
+  "VX-L6": {
+   "estado": "sigue",
+   "candidatos": [
+    {
+     "numero": 75,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "Converted HL7 VXU-V04 sample message reported “severity” : “error” messages on Immunization.occurrence and Immunization.status",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/75",
+     "terminos": [
+      "d ",
+      "immunization.status"
+     ],
+     "cerrado": "2021-04-28T08:57:08Z"
+    },
+    {
+     "numero": 341,
+     "tipo": "pr",
+     "estado": "closed",
+     "titulo": " Immunization.statusReason not being converted from RXA.18",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/341",
+     "terminos": [
+      "d ",
+      "immunization.status"
+     ],
+     "cerrado": "2021-12-09T17:01:21Z"
+    },
+    {
+     "numero": 343,
+     "tipo": "pr",
+     "estado": "closed",
+     "titulo": "add ORC.5 to status",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/343",
+     "terminos": [
+      "completed",
+      "d ",
+      "entered-in-error",
+      "immunization.status"
+     ],
+     "cerrado": "2021-11-18T18:23:31Z"
+    },
+    {
+     "numero": 359,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "Add support for segment RXA - Pharmacy/Treatment Administration",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/359",
+     "terminos": [
+      "d ",
+      "immunization.status"
+     ],
+     "cerrado": "2021-12-10T14:19:15Z"
+    },
+    {
+     "numero": 400,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "add mappings to Immunization from OBX",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/400",
+     "terminos": [
+      "d ",
+      "immunization.status"
+     ],
+     "cerrado": "2022-01-27T22:17:52Z"
+    }
+   ],
+   "decision": "relacionada",
+   "numero": 343,
+   "cita": "Add ORC-5 as a backup to RXA-20 ... ER=entered-in-error",
+   "nota": "PR fusionado el 18-nov-2021 (leído a mano en GitHub el 25-oct), antes de v1.1.0 (23-oct-2023): Immunization.status desde ORC-5, no desde RXA-21 = D; #75, #341, #359 y #400 hablan de otra cosa",
+   "nota_ingles": "merged in 2021: it adds ORC-5 as a backup for Immunization.status; it does not map RXA-21 = D"
+  },
+  "VX-L8": {
+   "estado": "sigue",
+   "candidatos": [],
+   "decision": "no_reportada",
+   "numero": null,
+   "cita": null,
+   "nota": "ningún candidato"
+  },
+  "VX-L9": {
+   "estado": "sigue",
+   "candidatos": [
+    {
+     "numero": 244,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "Extend support for ORC and OBR records",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/244",
+     "terminos": [
+      "reasoncode",
+      "repeat",
+      "repetition"
+     ],
+     "cerrado": "2021-10-26T14:13:09Z"
+    },
+    {
+     "numero": 280,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "Additional mappings from RXO/RXE to MedicationRequest (mostly dosage)",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/280",
+     "terminos": [
+      "reasoncode",
+      "repeat"
+     ],
+     "cerrado": "2022-01-14T16:46:13Z"
+    },
+    {
+     "numero": 363,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "Should CWE's structure to a single array of codings?",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/363",
+     "terminos": [
+      "multiple",
+      "reasoncode",
+      "repeat",
+      "second"
+     ],
+     "cerrado": "2022-03-07T22:25:31Z"
+    },
+    {
+     "numero": 380,
+     "tipo": "pr",
+     "estado": "closed",
+     "titulo": "medicationCC and dispenseRequest.numberOfRepeatsAllowed + fix reason code precedence",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/380",
+     "terminos": [
+      "multiple",
+      "reasoncode",
+      "repeat",
+      "rxa-19"
+     ],
+     "cerrado": "2022-01-05T14:31:46Z"
+    },
+    {
+     "numero": 400,
+     "tipo": "issue",
+     "estado": "closed",
+     "titulo": "add mappings to Immunization from OBX",
+     "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/400",
+     "terminos": [
+      "indication",
+      "multiple"
+     ],
+     "cerrado": "2022-01-27T22:17:52Z"
+    }
+   ],
+   "decision": "relacionada",
+   "numero": 380,
+   "cita": "reasonCode is an array, but we want to pick just one",
+   "nota": "PR fusionado el 5-ene-2022 (leído a mano en GitHub el 25-oct), antes de v1.1.0: la elección de un solo reasonCode es para MedicationRequest, entre segmentos. En master (2cb72c2, src/main/resources/hl7/resource/Immunization.yml, entrada reasonCode), la plantilla de Immunization lee reasonCode de RXA.19 sin generateList, que da lo mismo, pero el proyecto no lo declara para Immunization. Es la más débil de las nueve como «no reportada»; #244, #280, #363 y #400 hablan de otra cosa",
+   "nota_ingles": "merged in 2022: it picks a single reasonCode for MedicationRequest; the Immunization template does the same with RXA-19, which this report shows loses data"
+  }
+ },
+ "arrastre": {
+  "candidatos": [
+   {
+    "numero": 100,
+    "tipo": "issue",
+    "estado": "closed",
+    "titulo": "Convert patient address information",
+    "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/100",
+    "terminos": [
+     "organization",
+     "state"
+    ],
+    "cerrado": "2021-06-28T18:45:09Z"
+   },
+   {
+    "numero": 348,
+    "tipo": "issue",
+    "estado": "open",
+    "titulo": "Repeating messages do not completely reset internal variables.",
+    "url": "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/348",
+    "terminos": [
+     "internal variable",
+     "manufacturer",
+     "organization",
+     "repeating messages",
+     "reset"
+    ],
+    "cerrado": null
+   }
+  ],
+  "decision": "reportada_abierta",
+  "numero": 348,
+  "cita": "Repeating messages do not completely reset internal variables.",
+  "nota": "abierto; su cuerpo trata de grupos ORC/RXA repetidos dentro de un mensaje y del arreglo provisional condition: rxa17 NOT_NULL; lo de aquí es entre mensajes y con un RXA-17 de solo texto; #100 habla de otra cosa"
+ },
+ "fecha": "2026-10-25"
+}

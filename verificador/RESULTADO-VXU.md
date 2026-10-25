@@ -140,6 +140,9 @@ L-VX-1..14 y AMB-VX-1..13. Ningún veredicto puede cambiar por eso. Sus huellas 
 **Los issues en los proyectos.** Las nueve nuevas y el matiz del #348 de LinuxForHealth. Antes, hay que reproducirlos en la
 rama principal de cada proyecto.
 
+**Reproducidas el 25-oct en la rama principal de cada proyecto** (etapa 22): siguen las nueve y el arrastre, y ninguna estaba
+reportada. Está en [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md). Los borradores esperan en la cola del autor.
+
 ## Desviaciones y documentos de la etapa
 
 | Fase | Documento | Desviaciones |

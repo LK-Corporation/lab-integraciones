@@ -1,0 +1,115 @@
+{
+ "etapa": "22, las nueve de VXU en las ramas principales: previsión sellada antes de cualquier corrida con Docker de la etapa y antes de consultar GitHub (S-RV-12)",
+ "base_de_la_prevision": "Sin haber corrido nada con Docker en esta etapa ni haber mirado las ramas hoy. Lo que se sabe: las ramas se construyeron el 24-oct (15A), con huellas que hoy cuadran (38c6d32b y 28c16067). De v7.0 a main, 30 commits que no tocan las plantillas HL7 v2 ni el analizador; de v1.1.0 a master, 15 que cambian la tabla de estados de Observation, el ContactPoint y los estados de cita y de alergia, no Immunization. En 15A siguieron 14 de 15, y la corregida lo estaba en esa tabla. El contraste de VX3, del 25-oct, no encontró ninguna de las nueve en los proyectos, y el #348 sigue abierto. Ha pasado un día desde 15A.",
+ "ramas_15A": {
+  "microsoft": "70fd328",
+  "linuxforhealth": "2cb72c2"
+ },
+ "p_control_reproduce": 0.88,
+ "p_lote_igual_mensaje_fijada": 0.93,
+ "p_rama_avanzo": {
+  "microsoft": 0.05,
+  "linuxforhealth": 0.02
+ },
+ "p_toca_vxu_si_avanzo": {
+  "microsoft": 0.3,
+  "linuxforhealth": 0.5
+ },
+ "p_construccion_dentro_del_tope": {
+  "microsoft": 0.95,
+  "linuxforhealth": 0.95
+ },
+ "p_sigue": {
+  "VX-M7": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-M8": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-M10": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-M12": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-M14": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-M15": {
+   "si_no_toca_vxu": 0.98,
+   "si_toca_vxu": 0.85
+  },
+  "VX-L6": {
+   "si_no_toca_vxu": 0.9,
+   "si_toca_vxu": 0.7
+  },
+  "VX-L8": {
+   "si_no_toca_vxu": 0.96,
+   "si_toca_vxu": 0.8
+  },
+  "VX-L9": {
+   "si_no_toca_vxu": 0.96,
+   "si_toca_vxu": 0.8
+  }
+ },
+ "K_previsto": [
+  8,
+  9
+ ],
+ "k_mas_probable": {
+  "microsoft": 6,
+  "linuxforhealth": 3
+ },
+ "p_k_nueve": 0.73,
+ "_p_k_nueve": "el producto de p_sigue sin cambios en las ramas: 0,98^6 × 0,9 × 0,96^2",
+ "p_arrastre_sigue_master": {
+  "sigue": 0.9,
+  "no_sigue": 0.07,
+  "otra_cosa": 0.03
+ },
+ "p_ya_reportada": {
+  "VX-M7": 0.02,
+  "VX-M8": 0.02,
+  "VX-M10": 0.02,
+  "VX-M12": 0.02,
+  "VX-M14": 0.03,
+  "VX-M15": 0.04,
+  "VX-L6": 0.02,
+  "VX-L8": 0.02,
+  "VX-L9": 0.02
+ },
+ "p_alguna_cambiada_o_par_roto": 0.08,
+ "la_mas_expuesta": "VX-L6: master cambió estados en su tabla de v2 a FHIR, aunque no los de Immunization",
+ "tolerancia_control": "solo el juez; el texto del hallazgo se lista y no bloquea (Q-RV-D-4, Jev: no_cuenta)",
+ "jev": {
+  "_que": "la previsión de Jev con un estado neutro (estado_prevision_rv.md, preguntas_prevision_rv.json, decision-jev-prevision-rv.md), sellada al lado de la del programador, que no se cambió al verla",
+  "cuantas_siguen": {
+   "siete_u_ocho": 0.59,
+   "nueve": 0.41,
+   "cuatro_a_seis": 0.0,
+   "tres_o_menos": 0.0
+  },
+  "arrastre": {
+   "sigue": 1.0,
+   "no_sigue": 0.0,
+   "otra_cosa": 0.0
+  },
+  "alguna_ya_reportada": 0.02
+ },
+ "fecha": "2026-10-25T14:04:46+01:00",
+ "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+ "herramienta": {
+  "ramas_vxu.py": "cf34e7d946962c325686670de4cace4bebcf73ba03c5f429743c9a950dffb90c",
+  "prueba_rv.py": "804923dba571d81129f332f7e7182d4f64ede1e3bda5647e4f216759b1731db4",
+  "microsoft-main.json": "c36aa3f2fd40e09a4bf7b06b566d564dd7f15f32f0ab972f75db337c1e15ad19",
+  "linuxforhealth-main.json": "66d83ce8f167c6cb776c9ffa8cc9856f11e565e6c2c480431ab27f79b8624abb",
+  "linuxforhealth-main-mensaje.json": "bc51b435cb5ddcd3475ee52a29adc017b2a328252dadc3d96cd59bf2243bcc69",
+  "cv3_minimos_vxu.py": "c908c6f4b15cda1421a7373b11a206882f20e0b8cf317dbf45bc66e4936a4939",
+  "verificar_conversor.py": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd"
+ }
+}

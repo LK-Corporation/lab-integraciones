@@ -1,0 +1,496 @@
+{
+ "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+ "nueve": [
+  {
+   "id_vx": "VX-M7",
+   "par": "VM07-lote-repetido",
+   "conversor": "microsoft",
+   "fuerza": "fuerte",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.lotNumber: esperado 'LOT-M07c', observado 'LOT-M07c+DIL-M07c'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.lotNumber: esperado 'LOT-M07c', observado 'LOT-M07c+DIL-M07c'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.lotNumber: esperado 'LOT-M07c', observado 'LOT-M07c+DIL-M07c'"
+   ]
+  },
+  {
+   "id_vx": "VX-M8",
+   "par": "VM08-fabricante-alterno",
+   "conversor": "microsoft",
+   "fuerza": "débil",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Organization.identifier 'MSD': system esperado 'http://terminology.hl7.org/CodeSystem/MVX' (de 'MVX'), observado ['http://example.com/v2-to-fhir-converter/Identifier/MVX']",
+      "Organization.name: esperado 'Merck', observado 'Merck--Merck S.A.'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Organization.identifier 'MSD': system esperado 'http://terminology.hl7.org/CodeSystem/MVX' (de 'MVX'), observado ['http://example.com/v2-to-fhir-converter/Identifier/MVX']",
+      "Organization.name: esperado 'Merck', observado 'Merck--Merck S.A.'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Organization.identifier 'MSD': system esperado 'http://terminology.hl7.org/CodeSystem/MVX' (de 'MVX'), observado ['http://example.com/v2-to-fhir-converter/Identifier/MVX']",
+    "Organization.name: esperado 'Merck', observado 'Merck--Merck S.A.'"
+   ]
+  },
+  {
+   "id_vx": "VX-M10",
+   "par": "VM10-relacion-grd",
+   "conversor": "microsoft",
+   "fuerza": "fuerte",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "RelatedPerson.relationship: esperado ('http://terminology.hl7.org/CodeSystem/v2-0063', 'GRD') (de 'GRD'), observado [('http://example.com/v2-to-fhir-converter/CodeSystem/HL70063', None)]"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "RelatedPerson.relationship: esperado ('http://terminology.hl7.org/CodeSystem/v2-0063', 'GRD') (de 'GRD'), observado [('http://example.com/v2-to-fhir-converter/CodeSystem/HL70063', None)]"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "RelatedPerson.relationship: esperado ('http://terminology.hl7.org/CodeSystem/v2-0063', 'GRD') (de 'GRD'), observado [('http://example.com/v2-to-fhir-converter/CodeSystem/HL70063', None)]"
+   ]
+  },
+  {
+   "id_vx": "VX-M12",
+   "par": "VM12-dos-indicaciones",
+   "conversor": "microsoft",
+   "fuerza": "débil",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.reasonCode: falta 'ASM'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.reasonCode: falta 'ASM'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.reasonCode: falta 'ASM'"
+   ]
+  },
+  {
+   "id_vx": "VX-M14",
+   "par": "VM14-dosis-punto-inicial",
+   "conversor": "microsoft",
+   "fuerza": "fuerte",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.doseQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.doseQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.doseQuantity.value: esperado '.5', observado '5' (la precisión cuenta: Q-CV-D-10)"
+   ]
+  },
+  {
+   "id_vx": "VX-M15",
+   "par": "VM15-re-sin-rxa18",
+   "conversor": "microsoft",
+   "fuerza": "fuerte",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.status: esperado 'not-done' (RXA-20 'RE', RXA-21 'A'), observado 'completed'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.status: esperado 'not-done' (RXA-20 'RE', RXA-21 'A'), observado 'completed'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.status: esperado 'not-done' (RXA-20 'RE', RXA-21 'A'), observado 'completed'"
+   ]
+  },
+  {
+   "id_vx": "VX-L6",
+   "par": "VL04-rxa21-d",
+   "conversor": "linuxforhealth",
+   "fuerza": "fuerte",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.status: esperado 'entered-in-error' (RXA-20 'CP', RXA-21 'D'), observado 'completed'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.status: esperado 'entered-in-error' (RXA-20 'CP', RXA-21 'D'), observado 'completed'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.status: esperado 'entered-in-error' (RXA-20 'CP', RXA-21 'D'), observado 'completed'"
+   ]
+  },
+  {
+   "id_vx": "VX-L8",
+   "par": "VL06-dos-rxa10",
+   "conversor": "linuxforhealth",
+   "fuerza": "débil",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.performer AP: falta 'PR02^Muestra^Jorge'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.performer AP: falta 'PR02^Muestra^Jorge'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.performer AP: falta 'PR02^Muestra^Jorge'"
+   ]
+  },
+  {
+   "id_vx": "VX-L9",
+   "par": "VL07-dos-indicaciones",
+   "conversor": "linuxforhealth",
+   "fuerza": "débil",
+   "estado": "sigue",
+   "fijada": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.reasonCode: falta 'ASM'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "main": {
+    "caso": {
+     "sale": true,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": [
+      "Immunization.reasonCode: falta 'ASM'"
+     ]
+    },
+    "control": {
+     "sale": false,
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "que": []
+    }
+   },
+   "que_main": [
+    "Immunization.reasonCode: falta 'ASM'"
+   ]
+  }
+ ],
+ "K": 9,
+ "k_por_conversor": {
+  "microsoft": 6,
+  "linuxforhealth": 3
+ },
+ "cambiadas": [],
+ "otros_17": [
+  {
+   "id": "VM01-cvx-system",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM02-mvx-system",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM03-ruta-0162",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM04-sitio-0163",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM05-unidad-sin-ce2",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM06-obx6-sin-ce2",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM09-telefono-xtn7",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM11-obx-sin-partof",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VM13-grupos-sin-orc3",
+   "conversor": "microsoft",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL01-orc3-perdido",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL02-ruta-v2-0162",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL03-unidad-ce1",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL05-recorded-con-u",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL08-pa-subpotente",
+   "conversor": "linuxforhealth",
+   "fijada": false,
+   "main": false
+  },
+  {
+   "id": "VL09-nk1-perdido",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL10-obx-nm-perdido",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  },
+  {
+   "id": "VL11-estado-fabricante",
+   "conversor": "linuxforhealth",
+   "fijada": true,
+   "main": true
+  }
+ ]
+}

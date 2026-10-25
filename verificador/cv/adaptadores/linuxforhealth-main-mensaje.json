@@ -1,0 +1,37 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "linuxforhealth-main",
+ "_que": "Etapa 22 (vx/rv/): LinuxForHealth hl7v2-fhir-converter en su rama principal (master), construida con Gradle como en cv/RESULTADO-15A.md (./gradlew jar + copiar-libs.gradle), con el mismo arnés cv/lfh/Arnes.java compilado contra ella; la misma imagen de Maven con Temurin 11, sin red; un contenedor y un proceso Java por mensaje, como linuxforhealth-mensaje.json (S-AR-1, S-RV-4). Es el modo que decide en la rama.",
+ "_id": "El id no es el del estudio a propósito (Q-VC-D-3).",
+ "_orden": "Arnes lee la carpeta /in, que en por_mensaje contiene un solo fichero. El tercer argumento, {entrada_fichero}, lo exige la validación del modo mensaje y Arnes lo ignora (S-AR-2).",
+ "_rutas": "Relativas a --artefactos: lfh-main/lib (el jar de master y sus dependencias), lfh-main/clases (Arnes compilado) y lfh-main/Arnes.java.",
+ "_version": "La versión lleva el commit corto de master y su fecha; RAMAS-RV.json la anota.",
+ "conversor": {
+  "nombre": "linuxforhealth-hl7v2-fhir-converter",
+  "version": "master (2cb72c2, 2026-02-11)",
+  "huella": {"partes": [{"carpeta": "lib"}, {"fichero": "lfh-main/Arnes.java"}]},
+  "_huella_esperada": "si es la construcción de 15A, empieza por 28c16067 (cv/RESULTADO-15A.md)",
+  "declara": {"no_soporta": []},
+  "_declara": "master soporta más eventos que v1.1.0; aquí solo corre VXU y no importa"
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "maven:3.9-eclipse-temurin-11",
+  "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+  "_imagen_digest": "la imagen del estudio y de 15A; con otro digest la herramienta sale con 3 y es lo que se quiere",
+  "montajes": {
+   "lib": {"origen": "lfh-main/lib", "destino": "/lib2"},
+   "clases": {"origen": "lfh-main/clases", "destino": "/clases"}
+  },
+  "entorno": {},
+  "limites": {"segundos_por_mensaje": 60, "segundos_por_contenedor": 3600, "pids": 1024, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "mensaje",
+  "contenedor": "por_mensaje",
+  "orden": ["java", "-cp", "/clases:/lib2/*", "Arnes", "{entrada_dir}", "{salida_dir}", "{entrada_fichero}"],
+  "plantilla": null,
+  "duracion_stdout": "^(?P<nombre>\\S+) (?P<ms>\\d+) ms$"
+ },
+ "salida": {"fichero": "{nombre}.json", "fichero_error": "{nombre}.error", "forma": "bundle", "envoltura": null, "codificacion": "utf-8"}
+}

@@ -1,0 +1,21 @@
+{
+ "q_rv_d_1_cambiada": {"type": "choice", "instructions": "Pregunta 1: qué se hace con una de las nueve que en la rama sale «cambiada».",
+  "criteria": {"sigue_otro_sintoma": "(a) Cuenta como «sigue, con otro síntoma», y el borrador describe el síntoma nuevo.",
+               "fila_aparte": "(b) No cuenta como «sigue»: fila aparte, «cambiada, pendiente de contraste», sin borrador.",
+               "corregida": "(c) Cuenta como corregida."}},
+ "q_rv_d_2_dosis": {"type": "choice", "instructions": "Pregunta 2: el borrador de la dosis «.5» que se escribe 5, con la misma causa que un borrador anterior.",
+  "criteria": {"propio": "(a) Un borrador propio.",
+               "parrafo": "(b) Solo un párrafo añadido al borrador anterior.",
+               "propio_que_remite": "(c) Un borrador propio que remite al anterior y, si el anterior se abre antes, se pega como comentario allí."}},
+ "q_rv_d_3_cerrada": {"type": "choice", "instructions": "Pregunta 3: una de las nueve ya reportada y cerrada como arreglada, pero cuyo par sigue saliendo en la rama.",
+  "criteria": {"reabrir": "(a) Un borrador de comentario al issue cerrado, pidiendo reabrirlo, con el par.",
+               "nuevo": "(b) Un borrador de issue nuevo que enlaza el cerrado.",
+               "anotar": "(c) Solo anotarlo, sin borrador."}},
+ "q_rv_d_4_texto": {"type": "choice", "instructions": "Pregunta 4: la tolerancia del control cuando solo cambia el texto del hallazgo.",
+  "criteria": {"explicar": "(a) Bloquea hasta que cada diferencia lleve una explicación escrita.",
+               "no_cuenta": "(b) El texto no cuenta y solo se lista.",
+               "valor_observado": "(c) Bloquea solo si el texto cambia el valor observado."}},
+ "q_rv_d_5_lote": {"type": "choice", "instructions": "Pregunta 5: si se corren también en lote, con la rama de LinuxForHealth, los 50 mensajes de los pares.",
+  "criteria": {"si_control": "(a) Sí, como control: se compara con mensaje a mensaje y se declara si difiere.",
+               "no": "(b) No: la secuencia del arrastre basta."}}
+}

@@ -1,0 +1,11 @@
+# Sello de la previsión de la etapa 22 (las nueve de VXU en las ramas), 2026-10-25T14:04:46+01:00, antes de cualquier corrida con Docker y de consultar GitHub
+cc62833d6245f278d86e2ee82a356f47a3fbda9290b786dfb3805834f5d940ec  PREVISION-RV.json
+49f244daf76d28a5b6c072778c26252d959226f521619a8d5b61a160acc81ec1  PREVISION-RV.md
+cf34e7d946962c325686670de4cace4bebcf73ba03c5f429743c9a950dffb90c  ramas_vxu.py
+804923dba571d81129f332f7e7182d4f64ede1e3bda5647e4f216759b1731db4  prueba_rv.py
+c36aa3f2fd40e09a4bf7b06b566d564dd7f15f32f0ab972f75db337c1e15ad19  ../../cv/adaptadores/microsoft-main.json
+66d83ce8f167c6cb776c9ffa8cc9856f11e565e6c2c480431ab27f79b8624abb  ../../cv/adaptadores/linuxforhealth-main.json
+bc51b435cb5ddcd3475ee52a29adc017b2a328252dadc3d96cd59bf2243bcc69  ../../cv/adaptadores/linuxforhealth-main-mensaje.json
+c908c6f4b15cda1421a7373b11a206882f20e0b8cf317dbf45bc66e4936a4939  ../../cv/cv3_minimos_vxu.py
+f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd  ../../cv/verificar_conversor.py
+juez bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0

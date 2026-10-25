@@ -1,0 +1,41 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "microsoft-main",
+ "_que": "Etapa 22 (vx/rv/): Microsoft FHIR-Converter en su rama principal, construida como en cv/RESULTADO-15A.md (dotnet publish de la herramienta en el SDK de .NET 8); corre en el runtime de .NET 8, sin red, con la misma invocación que microsoft.json (un contenedor por plantilla, un proceso por fichero).",
+ "_id": "El id no es el del estudio a propósito: los 68 mínimos de ADT/ORU no entran (Q-VC-D-3) y las corridas de la rama no se confunden con las de v7.0.",
+ "_rutas": "Relativas a --artefactos: ms-main/out y ms-main/src/data/Templates/Hl7v2, la construcción de 15A o la reconstruida en esta etapa (vx/rv/RAMAS-RV.json dice cuál).",
+ "_version": "La versión lleva el commit corto de la rama y su fecha; RAMAS-RV.json la anota.",
+ "conversor": {
+  "nombre": "microsoft-fhir-converter",
+  "version": "main (70fd328, 2026-06-03)",
+  "huella": {"partes": [{"carpeta": "codigo"}, {"carpeta": "plantillas"}]},
+  "_huella_esperada": "si es la construcción de 15A, empieza por 38c6d32b (cv/RESULTADO-15A.md); si se reconstruye, la anota RAMAS-RV.json"
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "mcr.microsoft.com/dotnet/runtime:8.0",
+  "imagen_digest": null,
+  "_imagen_digest": "15A corrió con una imagen cuyo digest empieza por 1b2f288e; la herramienta registra el de la máquina",
+  "montajes": {
+   "codigo": {"origen": "ms-main/out", "destino": "/app"},
+   "plantillas": {"origen": "ms-main/src/data/Templates/Hl7v2", "destino": "/tpl"}
+  },
+  "entorno": {"DOTNET_CLI_TELEMETRY_OPTOUT": "1"},
+  "limites": {"segundos_por_mensaje": 60, "segundos_por_contenedor": 3600, "pids": 1024, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "mensaje",
+  "contenedor": "por_grupo",
+  "orden": ["dotnet", "/app/Microsoft.Health.Fhir.Liquid.Converter.Tool.dll", "convert",
+            "-d", "/tpl", "-r", "{plantilla}", "-n", "{entrada_fichero}", "-f", "{salida_fichero}"],
+  "plantilla": {"regla": "msh9_tipo_evento", "comprobar_fichero": {"montaje": "plantillas", "patron": "{plantilla}.liquid"}},
+  "duracion_stdout": null
+ },
+ "salida": {
+  "fichero": "{base}.json",
+  "fichero_error": null,
+  "forma": "envuelto",
+  "envoltura": {"ruta_bundle": ["FhirResource"], "ruta_estado": ["Status"], "estado_ok": "OK"},
+  "codificacion": "utf-8"
+ }
+}

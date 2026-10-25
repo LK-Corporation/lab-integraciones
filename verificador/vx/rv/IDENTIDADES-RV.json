@@ -1,0 +1,38 @@
+{
+ "juez": "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0",
+ "microsoft": {
+  "huella": "766f8938d0c12c382bec2edceeca4d3be4fd19900d0bd131ba880ac615fadf3e",
+  "huella_con_nombres": "1118ff9a574e49e438ed616b7d09e77f7c791d3ef7ec4439b6c092c7a6d29172",
+  "version": "v7.0 (253307f)"
+ },
+ "lfh_lote": {
+  "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+  "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+  "version": "v1.1.0 (Maven Central; DV-CV-3)"
+ },
+ "lfh_mensaje": {
+  "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+  "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+  "version": "v1.1.0 (Maven Central; DV-CV-3)"
+ },
+ "rama_microsoft": {
+  "huella": "38c6d32bb6620d23ce38fa2fa2693ea4baf003ead11a7a48864548484065922d",
+  "huella_con_nombres": "0a6cbac8275759202fed71472adff89a09f66461edc832fe1b820e4e45a455fc",
+  "version": "main (70fd328, 2026-06-03)"
+ },
+ "rama_lfh_lote": {
+  "huella": "28c1606701d958bd7bcc0ee523cca9c0355a5f25fb16eb10bb0769f91fb01cf1",
+  "huella_con_nombres": "330c1de02a028467bc78715274a37e75b319927588278adfb9daf3c013497f9a",
+  "version": "master (2cb72c2, 2026-02-11)"
+ },
+ "rama_lfh_mensaje": {
+  "huella": "28c1606701d958bd7bcc0ee523cca9c0355a5f25fb16eb10bb0769f91fb01cf1",
+  "huella_con_nombres": "330c1de02a028467bc78715274a37e75b319927588278adfb9daf3c013497f9a",
+  "version": "master (2cb72c2, 2026-02-11)"
+ },
+ "pares": {
+  "n": 50,
+  "vxu_conv": true
+ },
+ "cuadra": true
+}

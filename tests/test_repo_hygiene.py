@@ -68,6 +68,14 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/ar/control_ar.py", "Arnes /in /salida /in/A01-001.hl7"),
     ("verificador/cv/ar/decisiones-qar.md", "Arnes /in /salida /in/A01-001.hl7"),
     ("verificador/cv/ar/diseno-ar-fable.md", '"/in/a.hl7"'),
+    ("verificador/cv/adaptadores/microsoft-main.json", "/app/Microsoft"),   # etapa 22: rutas de dentro del contenedor
+    ("verificador/vx/rv/diseno-rv-fable.md", "/app/Microsoft"),
+    ("verificador/vx/rv/diseno-rv-fable.md", '"/in/a.hl7"'),
+    ("verificador/vx/rv/diseno-rv-fable.md", "evidencias/<id>/propio/2-L11b.json"),
+    ("verificador/vx/rv/diseno-rv-fable.md", "<S>/fijada/"),
+    ("verificador/vx/rv/diseno-rv-fable.md", "-o /src/out"),
+    ("verificador/vx/rv/diseno-rv-fable.md", "<W>/ms/out"),
+    ("verificador/vx/rv/diseno-rv-fable.md", "/salida/lib"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
@@ -91,7 +99,16 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/ar/ADJUDICACION-AR.json", "verificador/cv/ar/CIFRAS-AR.json", "verificador/cv/ar/CONTROL-AR.json",
                   "verificador/cv/ar/CLASES-AR-lote.json", "verificador/cv/ar/CLASES-AR-mensaje.json",
                   "verificador/cv/ar/minimos-AR-lote.json", "verificador/cv/ar/minimos-AR-mensaje.json",
-                  "verificador/cv/ar/prevision-cuerpo.json", "verificador/cv/ar/COMPARACION-AR-primer-paso9.json"}
+                  "verificador/cv/ar/prevision-cuerpo.json", "verificador/cv/ar/COMPARACION-AR-primer-paso9.json",
+                  # 25-oct-2026, las nueve de VXU en las ramas: los adaptadores de rama, las preguntas, la previsión y los resultados
+                  "verificador/cv/adaptadores/microsoft-main.json", "verificador/cv/adaptadores/linuxforhealth-main.json",
+                  "verificador/cv/adaptadores/linuxforhealth-main-mensaje.json", "verificador/vx/rv/preguntas_qrv.json",
+                  "verificador/vx/rv/preguntas_prevision_rv.json", "verificador/vx/rv/prevision-cuerpo-rv.json",
+                  "verificador/vx/rv/PREVISION-RV.json", "verificador/vx/rv/IDENTIDADES-RV.json", "verificador/vx/rv/CONTROL-RV.json",
+                  "verificador/vx/rv/RAMAS-RV.json", "verificador/vx/rv/RESULTADO-RV-minimos-fijada-lote.json",
+                  "verificador/vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json", "verificador/vx/rv/RESULTADO-RV-minimos-main.json",
+                  "verificador/vx/rv/SECUENCIA-RV.json", "verificador/vx/rv/ESTADO-RV.json", "verificador/vx/rv/CONTRASTE-RV.json",
+                  "verificador/vx/rv/CORRIDAS-RV.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

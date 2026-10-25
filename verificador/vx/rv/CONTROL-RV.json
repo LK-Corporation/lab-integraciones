@@ -1,0 +1,186 @@
+{
+ "reproduce": true,
+ "diferencias": [],
+ "jueces": [
+  "11a3754fb8b636978c1b1b04e2077da640365dc47cda118e9dbe4b7ceb379f6d",
+  "bde94016ca58ab2d5acc6e8a0f0db5f09730764185f9cff30dc17b00782c74d0"
+ ],
+ "tolerancia": "solo el juez; el texto se lista (Q-RV-D-4, Jev)",
+ "contaminacion_etapa_20": [],
+ "vl11_fijada": {
+  "repeticiones": [
+   {
+    "sale": true,
+    "motivos": [],
+    "lote_2_L11b": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje_2_L11b": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    }
+   },
+   {
+    "sale": true,
+    "motivos": [],
+    "lote_2_L11b": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXA-17",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    },
+    "mensaje_2_L11b": {
+     "estado": "bundle",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "hallazgos": [
+      [
+       "ORC-3",
+       "fidelidad",
+       "dato_perdido"
+      ],
+      [
+       "RXR-1",
+       "fidelidad",
+       "codigo_mal_mapeado"
+      ]
+     ]
+    }
+   }
+  ],
+  "lote_control_1_L11b": {
+   "estado": "bundle",
+   "categoria": "fallo_silencioso",
+   "subtipo": "convertido",
+   "hallazgos": [
+    [
+     "ORC-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "RXR-1",
+     "fidelidad",
+     "codigo_mal_mapeado"
+    ]
+   ]
+  },
+  "bundle_2_L11b": [
+   [
+    "Immunization",
+    "manufacturer.reference",
+    null,
+    "Organization/1792933706403996000.<uuid>"
+   ],
+   [
+    "Immunization",
+    "meta.extension[].valueDateTime",
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:19+08:00"
+    ],
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:26+08:00"
+    ]
+   ],
+   [
+    "Immunization",
+    "patient.reference",
+    "Patient/1792933699861231000.<uuid>",
+    "Patient/1792933706386588000.<uuid>"
+   ],
+   [
+    "Immunization",
+    "performer[].actor.reference",
+    "Practitioner/1792933699864741000.<uuid>",
+    "Practitioner/1792933706398257000.<uuid>"
+   ],
+   [
+    "Organization",
+    "<recurso>",
+    "ausente",
+    "presente"
+   ],
+   [
+    "Patient",
+    "meta.extension[].valueDateTime",
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:19+08:00"
+    ],
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:26+08:00"
+    ]
+   ],
+   [
+    "Practitioner",
+    "meta.extension[].valueDateTime",
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:19+08:00"
+    ],
+    [
+     "2024-03-01T09:00:00+08:00",
+     "2026-10-25T13:08:26+08:00"
+    ]
+   ]
+  ],
+  "b_ve_manufacturer": true,
+  "veredicto": "sigue",
+  "motivos": [],
+  "carpetas": {
+   "lote_caso": "lote-caso-1",
+   "lote_control": "lote-control-1"
+  }
+ }
+}

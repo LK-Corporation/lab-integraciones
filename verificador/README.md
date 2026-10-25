@@ -161,6 +161,33 @@ corrido en lote, un proceso por carpeta.
 | Las cifras, con un solo juez | [`cv/ar/CIFRAS-AR.json`](cv/ar/CIFRAS-AR.json), [`cv/ar/CLASES-AR-lote.json`](cv/ar/CLASES-AR-lote.json), [`cv/ar/CLASES-AR-mensaje.json`](cv/ar/CLASES-AR-mensaje.json), [`cv/ar/minimos-AR-lote.json`](cv/ar/minimos-AR-lote.json), [`cv/ar/minimos-AR-mensaje.json`](cv/ar/minimos-AR-mensaje.json) |
 | El resultado, con la frase | [`RESULTADO-ARRASTRE.md`](RESULTADO-ARRASTRE.md) |
 
+## Las nueve de VXU en las ramas principales (22, 25-oct-2026)
+
+> **De las 9 nuevas de VXU, siguen 9 en la rama principal de su conversor (Microsoft 6 de 6, LinuxForHealth 3 de 3); el
+> arrastre de estado sigue en `master`.** Ninguna estaba reportada en su proyecto.
+
+**Lo mismo que se hizo con las 15 de ADT y ORU** (`cv/RESULTADO-15A.md`), ahora con las de vacunación.
+- **El aparato:** tres adaptadores de rama ([`cv/adaptadores/microsoft-main.json`](cv/adaptadores/microsoft-main.json),
+  [`cv/adaptadores/linuxforhealth-main.json`](cv/adaptadores/linuxforhealth-main.json) y
+  [`cv/adaptadores/linuxforhealth-main-mensaje.json`](cv/adaptadores/linuxforhealth-main-mensaje.json)), los pares mínimos de
+  la etapa de VXU y el mismo juez. LinuxForHealth se decide mensaje a mensaje.
+- **El control, antes de mirar las ramas:** con las versiones fijadas, los 26 dan exactamente lo de la etapa de VXU, y en lote
+  y mensaje a mensaje lo mismo: los pares de entonces no estaban contaminados por el arrastre.
+- **Las ramas:** ninguna avanzó desde el 24-oct; en los 26, la rama da lo mismo que la versión fijada.
+- **El contraste:** todos los issues y PR de los dos proyectos, con sus comentarios. Dos de las nueve tienen un PR cerrado
+  relacionado.
+- **Los borradores de issues** quedan en la cola del autor y no se publican.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-RAMAS-VXU.md`](ANTES-ETAPA-RAMAS-VXU.md) |
+| El diseño a ciegas y las decisiones | [`vx/rv/ENCARGO-RV0.md`](vx/rv/ENCARGO-RV0.md), [`vx/rv/diseno-rv-fable.md`](vx/rv/diseno-rv-fable.md), [`vx/rv/decisiones-qrv.md`](vx/rv/decisiones-qrv.md), [`vx/rv/estado_qrv.md`](vx/rv/estado_qrv.md), [`vx/rv/decision-jev-qrv.md`](vx/rv/decision-jev-qrv.md) |
+| El código, con las pruebas en rojo antes | [`vx/rv/prueba_rv.py`](vx/rv/prueba_rv.py), [`vx/rv/ramas_vxu.py`](vx/rv/ramas_vxu.py), [`vx/rv/completar_ramas.py`](vx/rv/completar_ramas.py), [`vx/rv/decidir_contraste.py`](vx/rv/decidir_contraste.py) |
+| La previsión sellada | [`vx/rv/PREVISION-RV.md`](vx/rv/PREVISION-RV.md), [`vx/rv/PREVISION-RV.json`](vx/rv/PREVISION-RV.json), [`vx/rv/SELLO-RV.txt`](vx/rv/SELLO-RV.txt), [`vx/rv/estado_prevision_rv.md`](vx/rv/estado_prevision_rv.md), [`vx/rv/decision-jev-prevision-rv.md`](vx/rv/decision-jev-prevision-rv.md), [`vx/rv/prevision-cuerpo-rv.json`](vx/rv/prevision-cuerpo-rv.json), [`vx/rv/sellar_prevision_rv.py`](vx/rv/sellar_prevision_rv.py) |
+| El control, las ramas y las corridas | [`vx/rv/IDENTIDADES-RV.json`](vx/rv/IDENTIDADES-RV.json), [`vx/rv/CONTROL-RV.json`](vx/rv/CONTROL-RV.json), [`vx/rv/RAMAS-RV.json`](vx/rv/RAMAS-RV.json), [`vx/rv/RESULTADO-RV-minimos-fijada-lote.json`](vx/rv/RESULTADO-RV-minimos-fijada-lote.json), [`vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json`](vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json), [`vx/rv/RESULTADO-RV-minimos-main.json`](vx/rv/RESULTADO-RV-minimos-main.json), [`vx/rv/SECUENCIA-RV.json`](vx/rv/SECUENCIA-RV.json), [`vx/rv/CORRIDAS-RV.json`](vx/rv/CORRIDAS-RV.json) |
+| El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
+| El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
+
 ## El estudio de conversores (14l, 23-24 oct-2026)
 
 > El verificador encuentra **15 discrepancias nuevas y confirmadas en 2 de 2 conversores, sobre 368 mensajes públicos**;
@@ -260,6 +287,8 @@ publica.
 - **Tres documentos de la etapa del arrastre llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-ARRASTRE.md`, `cv/ar/ENCARGO-AR0.md` y `cv/ar/diseno-ar-fable.md`. Y `cv/ar/CONTROL-AR.json` va sin la ruta
   de los artefactos ni el commit del sello, como dice su `_nota`.
+- **Tres documentos de la etapa de las ramas llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-RAMAS-VXU.md`, `vx/rv/ENCARGO-RV0.md` y `vx/rv/diseno-rv-fable.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
@@ -295,6 +324,11 @@ publica.
 - **Del arrastre:**
   - los juicios, las evidencias y los Bundles de las cuatro corridas: están los agregados de `cv/ar/`;
   - los scripts de una sola vez: el parche del conversor de juguete y el que trajo los resultados.
+- **De las ramas de VXU:**
+  - los borradores de issues, que son del autor y hablan en su nombre;
+  - el volcado de issues y comentarios de los proyectos, que está en sus repositorios;
+  - los artefactos de las ramas, las evidencias y los juicios por caso: están los agregados de `vx/rv/`;
+  - el script que trajo los resultados.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

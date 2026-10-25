@@ -1,0 +1,8 @@
+{
+ "q1_cuantas": {"type": "choice", "instructions": "Pregunta 1: cuántas de las nueve siguen en la rama principal de su conversor.",
+  "criteria": {"nueve": "Las nueve.", "siete_u_ocho": "Siete u ocho.", "cuatro_a_seis": "Entre cuatro y seis.", "tres_o_menos": "Tres o menos."}},
+ "q2_arrastre": {"type": "choice", "instructions": "Pregunta 2: si el arrastre de estado sigue en la rama de LinuxForHealth.",
+  "criteria": {"sigue": "Sigue.", "no_sigue": "No sigue.", "otra_cosa": "Sale otra cosa."}},
+ "q3_reportada": {"type": "choice", "instructions": "Pregunta 3: si alguna de las nueve estará ya reportada en su proyecto al mirarlo hoy.",
+  "criteria": {"alguna": "Al menos una.", "ninguna": "Ninguna."}}
+}

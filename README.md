@@ -40,6 +40,10 @@ mensajes de un mismo proceso, y el estudio lo había corrido en lote. Convertido
 436 casos del estudio dan los mismos veredictos que en lote**: lo publicado no cambia. Está en
 [`verificador/RESULTADO-ARRASTRE.md`](verificador/RESULTADO-ARRASTRE.md).
 
+**Y las nueve de vacunación, en las ramas principales** (25-oct). Las nueve discrepancias de VXU siguen en la rama principal
+de cada proyecto, y el arrastre de estado también; ninguna estaba reportada en su proyecto. Está en
+[`verificador/RESULTADO-RAMAS-VXU.md`](verificador/RESULTADO-RAMAS-VXU.md).
+
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**
 
 1. **¿Puede un modelo local de 30B triar fallos de integración?** (septiembre)
@@ -73,6 +77,7 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 - **El estudio de conversores:** [`verificador/RESULTADO-CONVERSORES.md`](verificador/RESULTADO-CONVERSORES.md).
 - **La etapa de vacunación (VXU^V04):** [`verificador/RESULTADO-VXU.md`](verificador/RESULTADO-VXU.md).
 - **La comprobación del arrastre de estado:** [`verificador/RESULTADO-ARRASTRE.md`](verificador/RESULTADO-ARRASTRE.md).
+- **Las nueve de VXU en las ramas principales:** [`verificador/RESULTADO-RAMAS-VXU.md`](verificador/RESULTADO-RAMAS-VXU.md).
 - **El verificador:** [`verificador/README.md`](verificador/README.md).
 - **Pasar tu propio conversor por él:** [`verificador/cv/VC.md`](verificador/cv/VC.md).
 
@@ -90,7 +95,7 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 | [`medidas/`](medidas/) | las medidas con su control negativo: el prior, las dos mitades de la vía de oráculo independiente, y la auditoría de la interfaz de evidencia |
 | [`codigo/`](codigo/) | el puntuador con sus dieciséis autopruebas, el banco de adversarios, el árbol que mide fuga por el arnés, la matriz de observabilidad, y las clases del arnés |
 | [`piloto-agente/`](piloto-agente/) | **el segundo estudio (12-13 oct)** y, en [`piloto-agente/bucle/`](piloto-agente/bucle/), **el tercero (13-14 y 22 oct)**: la pregunta y los topes escritos antes, los diseños a ciegas, los sellos, las decisiones delegadas y los resultados con sus sensibilidades. Sin código, sin la clave de los casos y sin transcripciones |
-| [`verificador/`](verificador/) | **el verificador determinista, con su código (22-oct)**: el juez de los dos estudios del agente. Dado el mensaje HL7 v2.5 enviado, el acuse y lo que el circuito registró y escribió en FHIR, da un veredicto con los hallazgos que lo sostienen, cada uno con su cita al estándar. Con la documentación de sus dos últimas etapas: la que cierra los huecos medidos del juez (22-oct) y **el estudio de conversores (23-24 oct)**, que juzga dos conversores de código abierto contra la guía HL7 v2-to-FHIR, su extensión a vacunación (VXU^V04, 25-oct) y la comprobación de que no cambia al convertir mensaje a mensaje (25-oct). **Es lo único de aquí que se puede correr** |
+| [`verificador/`](verificador/) | **el verificador determinista, con su código (22-oct)**: el juez de los dos estudios del agente. Dado el mensaje HL7 v2.5 enviado, el acuse y lo que el circuito registró y escribió en FHIR, da un veredicto con los hallazgos que lo sostienen, cada uno con su cita al estándar. Con la documentación de sus dos últimas etapas: la que cierra los huecos medidos del juez (22-oct) y **el estudio de conversores (23-24 oct)**, que juzga dos conversores de código abierto contra la guía HL7 v2-to-FHIR, su extensión a vacunación (VXU^V04, 25-oct), la comprobación de que no cambia al convertir mensaje a mensaje y la reproducción de las nueve de vacunación en las ramas principales (25-oct). **Es lo único de aquí que se puede correr** |
 
 **Lo que quizá sea lo más útil no es el resultado, son las cuatro versiones del diseño y las
 revisiones que las tumbaron.** Se puede leer cómo un experimento se rompe y se rehace, con las
