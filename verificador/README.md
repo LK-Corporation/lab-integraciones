@@ -190,8 +190,10 @@ corrido en lote, un proceso por carpeta.
 
 ## El verificador en la integración continua (23, 25-oct-2026)
 
-> **Un flujo reutilizable de GitHub Actions pasa un conversor por el verificador en cada cambio y falla solo ante un hallazgo
-> que no está en la línea base del proyecto.** La guía para usarlo en otro proyecto es [`cv/ci/CI.md`](cv/ci/CI.md).
+> **Un proyecto puede pasar su conversor por el verificador en cada cambio con un flujo reutilizable de GitHub Actions; con
+> el conversor de juguete y LinuxForHealth v1.1.0, el flujo falla solo ante un hallazgo que no está en la línea base.** Los
+> tres controles salieron en verde en el primer push, con los informes del runner iguales byte a byte a los del laboratorio.
+> La guía para usarlo en otro proyecto es [`cv/ci/CI.md`](cv/ci/CI.md).
 
 **Lo que hay.**
 - **El flujo:** [`../.github/workflows/verificador-conversor.yml`](../.github/workflows/verificador-conversor.yml). Corre la
@@ -221,6 +223,8 @@ corrido en lote, un proceso por carpeta.
 | Las líneas base | [`cv/ci/LINEA-BASE-juguete.json`](cv/ci/LINEA-BASE-juguete.json), [`cv/ci/LINEA-BASE-linuxforhealth.json`](cv/ci/LINEA-BASE-linuxforhealth.json), [`cv/ci/LINEA-BASE-linuxforhealth-mensaje.json`](cv/ci/LINEA-BASE-linuxforhealth-mensaje.json) |
 | La previsión sellada | [`cv/ci/PREVISION-CI.md`](cv/ci/PREVISION-CI.md), [`cv/ci/PREVISION-CI.json`](cv/ci/PREVISION-CI.json), [`cv/ci/SELLO-CI.txt`](cv/ci/SELLO-CI.txt), [`cv/ci/estado_prevision_ci.md`](cv/ci/estado_prevision_ci.md), [`cv/ci/estado_prevision_ci_2.md`](cv/ci/estado_prevision_ci_2.md), [`cv/ci/preguntas_prevision_ci.json`](cv/ci/preguntas_prevision_ci.json), [`cv/ci/decision-jev-prevision-ci.md`](cv/ci/decision-jev-prevision-ci.md), [`cv/ci/decision-jev-prevision-ci-2.md`](cv/ci/decision-jev-prevision-ci-2.md), [`cv/ci/prevision-cuerpo-ci.json`](cv/ci/prevision-cuerpo-ci.json), [`cv/ci/sellar_prevision_ci.py`](cv/ci/sellar_prevision_ci.py) |
 | La guía | [`cv/ci/CI.md`](cv/ci/CI.md) |
+| Las corridas en GitHub Actions | [`cv/ci/CORRIDA-CI-1.json`](cv/ci/CORRIDA-CI-1.json), [`cv/ci/CORRIDA-CI-2.json`](cv/ci/CORRIDA-CI-2.json), [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py) |
+| El resultado, con la frase | [`RESULTADO-CI.md`](RESULTADO-CI.md) |
 
 ## El estudio de conversores (14l, 23-24 oct-2026)
 

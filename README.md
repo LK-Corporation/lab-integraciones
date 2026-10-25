@@ -47,8 +47,10 @@ de cada proyecto, y el arrastre de estado también; ninguna estaba reportada en 
 **Y el verificador, en la integración continua de un conversor** (25-oct). Un flujo reutilizable de GitHub Actions pasa un
 conversor por el verificador en cada cambio, en la misma caja sin red, y falla solo ante un hallazgo que no está en la línea
 base del proyecto. Su demostración corre en este repositorio con tres controles: el conversor de juguete contra su base, el
-juguete con un defecto sembrado y LinuxForHealth v1.1.0 traído en el runner. La guía está en
-[`verificador/cv/ci/CI.md`](verificador/cv/ci/CI.md).
+juguete con un defecto sembrado y LinuxForHealth v1.1.0 traído en el runner. **Los tres salieron en verde en el primer push,
+con los informes del runner iguales byte a byte a los del laboratorio.** La guía está en
+[`verificador/cv/ci/CI.md`](verificador/cv/ci/CI.md), y el resultado en
+[`verificador/RESULTADO-CI.md`](verificador/RESULTADO-CI.md).
 
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**
 
@@ -86,7 +88,8 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 - **Las nueve de VXU en las ramas principales:** [`verificador/RESULTADO-RAMAS-VXU.md`](verificador/RESULTADO-RAMAS-VXU.md).
 - **El verificador:** [`verificador/README.md`](verificador/README.md).
 - **Pasar tu propio conversor por él:** [`verificador/cv/VC.md`](verificador/cv/VC.md).
-- **Pasarlo en cada cambio, en GitHub Actions:** [`verificador/cv/ci/CI.md`](verificador/cv/ci/CI.md).
+- **Pasarlo en cada cambio, en GitHub Actions:** [`verificador/cv/ci/CI.md`](verificador/cv/ci/CI.md); su resultado,
+  [`verificador/RESULTADO-CI.md`](verificador/RESULTADO-CI.md).
 
 ---
 

@@ -124,7 +124,8 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/ci/LINEA-BASE-juguete.json", "verificador/cv/ci/LINEA-BASE-linuxforhealth.json",
                   "verificador/cv/ci/LINEA-BASE-linuxforhealth-mensaje.json", "verificador/cv/ci/POSITIVO-CI.json",
                   "verificador/cv/ci/preguntas_qci.json", "verificador/cv/ci/preguntas_prevision_ci.json",
-                  "verificador/cv/ci/prevision-cuerpo-ci.json", "verificador/cv/ci/PREVISION-CI.json"}
+                  "verificador/cv/ci/prevision-cuerpo-ci.json", "verificador/cv/ci/PREVISION-CI.json",
+                  "verificador/cv/ci/CORRIDA-CI-1.json", "verificador/cv/ci/CORRIDA-CI-2.json"}   # las corridas en GitHub Actions
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
