@@ -188,6 +188,37 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Lo abierto de la integración continua (24, 26-oct-2026)
+
+> **El flujo de la etapa 23, endurecido, y llamado como lo llamaría un tercero:** por la forma remota fijada a un commit, con
+> el proyecto de ejemplo [`../ejemplo-ci/`](../ejemplo-ci/), en el modo normal; y un run en rojo a propósito.
+
+**Los cuatro endurecimientos** que dejó la revisión a ciegas de la etapa 23:
+- **las entradas llegan a cada orden por variables de entorno,** y ningún `run:` de los flujos que corren ni de las plantillas
+  de la etapa lleva `${{ }}`;
+- **las acciones van fijadas por commit,** las de [`cv/ci/ACCIONES-CI.json`](cv/ci/ACCIONES-CI.json);
+- **`laboratorio_ref` es obligatoria y un commit de 40 hex,** una ruptura de compatibilidad que dice `cv/ci/CI.md`;
+- **la demostración usa `github.repository`,** así que en un fork se llama a sí mismo.
+
+**Lo nuevo:**
+- **El proyecto de ejemplo,** con su conversor en Python, en la imagen oficial `python:3.12-slim` por digest, seis mensajes
+  sintéticos y dos líneas base. Lo llaman `.github/workflows/ejemplo-ci.yml`, con dos llamadas que recorren `corpus`,
+  `sin_corpus_lab`, `opciones` y `artefacto_completo`, y `rojo-ci.yml`, solo a mano. Los dos llegan en un segundo push, con el
+  commit del primero fijado; sus plantillas están en `cv/ci/github-ci2/`.
+- **Los comprobadores de fuera:** [`cv/ci/comprobar_ejemplo.py`](cv/ci/comprobar_ejemplo.py) y [`cv/ci/comprobar_rojo.py`](cv/ci/comprobar_rojo.py).
+- **El ensayo local,** [`cv/ci/ensayo_flujo.py`](cv/ci/ensayo_flujo.py), ahora con la forma remota, los checkouts por commit, el `if:` de
+  job, `download-artifact` y el rojo esperado.
+- **La previsión se selló antes del primer push.** `cv/ci/github-ci2/` guarda los YAML tal como se sellaron.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-CI2.md`](ANTES-ETAPA-CI2.md) |
+| El diseño a ciegas y las decisiones | [`cv/ci/ENCARGO-CI20.md`](cv/ci/ENCARGO-CI20.md), [`cv/ci/diseno-ci2-fable.md`](cv/ci/diseno-ci2-fable.md), [`cv/ci/decisiones-qci2.md`](cv/ci/decisiones-qci2.md), [`cv/ci/estado_qci2.md`](cv/ci/estado_qci2.md), [`cv/ci/preguntas_qci2.json`](cv/ci/preguntas_qci2.json), [`cv/ci/decision-jev-qci2.md`](cv/ci/decision-jev-qci2.md) |
+| El código, con las pruebas en rojo antes | [`cv/ci/prueba_ci.py`](cv/ci/prueba_ci.py), [`cv/ci/comprobar_ejemplo.py`](cv/ci/comprobar_ejemplo.py), [`cv/ci/comprobar_rojo.py`](cv/ci/comprobar_rojo.py), [`cv/ci/ensayo_flujo.py`](cv/ci/ensayo_flujo.py), [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py), [`cv/ci/ACCIONES-CI.json`](cv/ci/ACCIONES-CI.json), [`cv/ci/github-ci2/verificador-conversor.yml`](cv/ci/github-ci2/verificador-conversor.yml), [`cv/ci/github-ci2/demo-ci.yml`](cv/ci/github-ci2/demo-ci.yml), [`cv/ci/github-ci2/higiene.yml`](cv/ci/github-ci2/higiene.yml), [`cv/ci/github-ci2/ejemplo-ci.yml`](cv/ci/github-ci2/ejemplo-ci.yml), [`cv/ci/github-ci2/rojo-ci.yml`](cv/ci/github-ci2/rojo-ci.yml) |
+| El proyecto de ejemplo | [`../ejemplo-ci/`](../ejemplo-ci/) |
+| La previsión sellada | [`cv/ci/PREVISION-CI2.md`](cv/ci/PREVISION-CI2.md), [`cv/ci/PREVISION-CI2.json`](cv/ci/PREVISION-CI2.json), [`cv/ci/SELLO-CI2.txt`](cv/ci/SELLO-CI2.txt), [`cv/ci/estado_prevision_ci2.md`](cv/ci/estado_prevision_ci2.md), [`cv/ci/preguntas_prevision_ci2.json`](cv/ci/preguntas_prevision_ci2.json), [`cv/ci/decision-jev-prevision-ci2.md`](cv/ci/decision-jev-prevision-ci2.md), [`cv/ci/prevision-cuerpo-ci2.json`](cv/ci/prevision-cuerpo-ci2.json), [`cv/ci/sellar_prevision_ci2.py`](cv/ci/sellar_prevision_ci2.py) |
+| La guía | [`cv/ci/CI.md`](cv/ci/CI.md) |
+
 ## El verificador en la integración continua (23, 25-oct-2026)
 
 > **Un proyecto puede pasar su conversor por el verificador en cada cambio con un flujo reutilizable de GitHub Actions; con
@@ -329,6 +360,8 @@ publica.
   `ANTES-ETAPA-RAMAS-VXU.md`, `vx/rv/ENCARGO-RV0.md` y `vx/rv/diseno-rv-fable.md`.
 - **Tres documentos de la etapa de la integración continua llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-CI.md`, `cv/ci/ENCARGO-CI0.md` y `cv/ci/diseno-ci-fable.md`.
+- **Dos documentos de lo abierto de la integración continua llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-CI2.md` y `cv/ci/ENCARGO-CI20.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
@@ -372,6 +405,8 @@ publica.
 - **De la integración continua:** las corridas del laboratorio de las que salieron las líneas base (los juicios, las
   evidencias y los registros de las cajas) y el guion de una sola vez que lanzó la segunda corrida de la base mensaje a
   mensaje; las demás las lanzó `cv/ci/hacer_bases.py`.
+- **De lo abierto de la integración continua:** las corridas del laboratorio del proyecto de ejemplo de las que salieron sus
+  bases (las lanzó `ejemplo-ci/ci/hacer_base.sh`) y los guiones de una sola vez que prepararon la publicación.
 - **Los documentos de las etapas anteriores.** Los de esta etapa los citan (`RESULTADO-A1.md`, `RESULTADO-MIRTH.md`…), como
   citan rutas del repositorio de trabajo (`privado/…`) que no están aquí.
 

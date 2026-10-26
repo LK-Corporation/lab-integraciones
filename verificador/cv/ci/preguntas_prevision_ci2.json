@@ -1,0 +1,12 @@
+{
+ "q1_demo": {"type": "choice", "instructions": "Pregunta 1: si la demostración endurecida sale en verde en el primer push, con los mismos informes.",
+  "criteria": {"si": "Sí.", "no": "No."}},
+ "q2_ejemplo": {"type": "choice", "instructions": "Pregunta 2: si las dos llamadas del ejemplo y su comprobación salen en verde a la primera.",
+  "criteria": {"si": "Sí.", "no": "No."}},
+ "q3_rojo": {"type": "choice", "instructions": "Pregunta 3: si el run en rojo sale como se espera a la primera.",
+  "criteria": {"si": "Sí.", "no": "No."}},
+ "q4_salidas": {"type": "choice", "instructions": "Pregunta 4: si las salidas del job llamado que falla llegan al job siguiente.",
+  "criteria": {"llegan": "Llegan.", "vacias": "Llegan vacías."}},
+ "q5_pushes": {"type": "choice", "instructions": "Pregunta 5: cuántos pushes harán falta hasta cerrar la etapa.",
+  "criteria": {"cuatro_o_menos": "Cuatro o menos.", "cinco_o_seis": "Cinco o seis.", "siete_o_mas": "Siete o más, o no se cierra."}}
+}

@@ -28,7 +28,8 @@ AQUI = Path(__file__).resolve()
 
 SUFIJOS_TEXTO = {".py", ".md", ".txt", ".cls", ".html", ".css", ".yml", ".yaml", ".ini", ".sha256",
                  ".java", ".gradle", ".xml",                    # 24-oct-2026: el arnés de LinuxForHealth del estudio de conversores
-                 ".sh"}                                         # 25-oct-2026: el guion que trae LinuxForHealth en la integración continua
+                 ".sh",                                         # 25-oct-2026: el guion que trae LinuxForHealth en la integración continua
+                 ".hl7"}                                        # 26-oct-2026: el corpus sintético del proyecto de ejemplo
 SELLO = REPO / "preinscripciones" / "SELLO-RESERVADO.txt"
 HUELLAS = REPO / "preinscripciones" / "HUELLAS.sha256"
 
@@ -87,6 +88,7 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/ci/diseno-ci-fable.md", "<tu repo>/ci/LINEA-BASE.json"),
     ("verificador/cv/ci/diseno-ci-fable.md", "ni `docker inspect X`, ni `ssh x`"),   # describe la regla de la higiene
     ("verificador/cv/ci/CI.md", "<tu repo>/ci/LINEA-BASE.json"),
+    ("verificador/cv/ci/ACCIONES-CI.json", "gh api repos/<accion>/git/ref/tags/<etiqueta>"),   # etapa 24: la orden, con marcadores
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
@@ -125,14 +127,19 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/ci/LINEA-BASE-linuxforhealth-mensaje.json", "verificador/cv/ci/POSITIVO-CI.json",
                   "verificador/cv/ci/preguntas_qci.json", "verificador/cv/ci/preguntas_prevision_ci.json",
                   "verificador/cv/ci/prevision-cuerpo-ci.json", "verificador/cv/ci/PREVISION-CI.json",
-                  "verificador/cv/ci/CORRIDA-CI-1.json", "verificador/cv/ci/CORRIDA-CI-2.json"}   # las corridas en GitHub Actions
+                  "verificador/cv/ci/CORRIDA-CI-1.json", "verificador/cv/ci/CORRIDA-CI-2.json",   # las corridas en GitHub Actions
+                  # 26-oct-2026, lo abierto de la integración continua: el proyecto de ejemplo, las acciones, las preguntas y la previsión
+                  "ejemplo-ci/ci/adaptador.json", "ejemplo-ci/ci/LINEA-BASE.json", "ejemplo-ci/ci/LINEA-BASE-propio.json",
+                  "ejemplo-ci/ci/DEFECTO.json", "verificador/cv/ci/ACCIONES-CI.json", "verificador/cv/ci/preguntas_qci2.json",
+                  "verificador/cv/ci/preguntas_prevision_ci2.json", "verificador/cv/ci/prevision-cuerpo-ci2.json",
+                  "verificador/cv/ci/PREVISION-CI2.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
 
 RAIZ_ADMITIDA = {"README.md", "INFORME.md", "ARTICULO.md", "LICENSE.md", ".gitignore", "pytest.ini", "LICENSES", "diseno",
                  "encargos-y-revisiones", "preinscripciones", "medidas", "codigo", "docs", "tests", ".github", "piloto-agente",
-                 "verificador"}
+                 "verificador", "ejemplo-ci"}
 SUFIJOS_ADMITIDOS = SUFIJOS_TEXTO | {".woff2", ""}
 TAMANO_MAXIMO = 512 * 1024
 

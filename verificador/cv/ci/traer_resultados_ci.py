@@ -4,7 +4,11 @@
 un JSON sin rutas ni fechas de máquina: los jobs con su conclusión y sus minutos, y de cada artefacto `verificador-*` su
 VEREDICTO-CI.json (resultado, cuentas, identidades), y si su INFORME.json es igual byte a byte al de la corrida del laboratorio
 de la que salió la base (con --laboratorio, la carpeta de trabajo de hacer_bases.py; solo se anota el sí o el no).
-  python3 cv/ci/traer_resultados_ci.py <run_id> <carpeta de trabajo vacía> -o cv/ci/CORRIDA-CI-<n>.json [--laboratorio <dir>] [--mensaje]"""
+Etapa 24 (cv/ci/diseno-ci2-fable.md §7): con --igual-a <CORRIDA-CI-1.json>, cada artefacto `verificador-<control>-<n>` lleva
+`igual_a_la_corrida_1` (su INFORME.json frente al de la etapa 23, por control) y la orden sale con 1 si alguno es falso; los
+artefactos de los jobs de comprobación llevan su COMPROBACION-*.json.
+  python3 cv/ci/traer_resultados_ci.py <run_id> <carpeta de trabajo vacía> -o cv/ci/CORRIDA-CI-<n>.json [--laboratorio <dir>] [--mensaje]
+          [--igual-a cv/ci/CORRIDA-CI-1.json]"""
 import datetime
 import hashlib
 import json
@@ -30,7 +34,7 @@ def minutos(a, b):
 LABORATORIO = {"negativo": "juguete-1", "positivo": "juguete-sembrado", "real": "linuxforhealth-1"}   # las corridas de hacer_bases.py
 
 
-def main(run_id, trabajo, salida, laboratorio=None):
+def main(run_id, trabajo, salida, laboratorio=None, igual_a=None):
     os.makedirs(trabajo, exist_ok=False)
     run = json.loads(gh("run", "view", run_id, "--json", "databaseId,number,headSha,event,status,conclusion,createdAt,startedAt,updatedAt,jobs,url"))
     r = {"formato": "corrida-ci/1", "run_id": run["databaseId"], "numero": run["number"], "url": run["url"],
@@ -44,6 +48,9 @@ def main(run_id, trabajo, salida, laboratorio=None):
         v = os.path.join(trabajo, nombre, "corrida", "VEREDICTO-CI.json")     # upload-artifact quita el prefijo común, «trabajo/»
         if not os.path.exists(v):
             r["artefactos"][nombre] = {"sin_veredicto": True, "ficheros": sorted(os.listdir(os.path.join(trabajo, nombre)))}
+            for f in r["artefactos"][nombre]["ficheros"]:
+                if f.startswith("COMPROBACION-") and f.endswith(".json"):
+                    r["artefactos"][nombre][f[:-5]] = json.load(open(os.path.join(trabajo, nombre, f), encoding="utf-8"))
             continue
         d = json.load(open(v, encoding="utf-8"))
         r["artefactos"][nombre] = {k: d.get(k) for k in ("esperado", "resultado", "pasa", "motivos", "nuevos_distintos", "identidades", "n", "avisos")}
@@ -59,14 +66,28 @@ def main(run_id, trabajo, salida, laboratorio=None):
             if control in LABORATORIO and laboratorio:
                 lab = os.path.join(laboratorio, LABORATORIO[control], "INFORME.json")
                 r["artefactos"][nombre]["igual_byte_a_byte_al_laboratorio"] = open(inf, "rb").read() == open(lab, "rb").read()
+    distintos = []
+    if igual_a:
+        c1 = json.load(open(igual_a, encoding="utf-8"))["artefactos"]
+        for nombre, x in r["artefactos"].items():
+            if nombre.startswith("verificador-") and "informe_sha256" in x:
+                control = nombre.rsplit("-", 1)[0]
+                x["igual_a_la_corrida_1"] = x["informe_sha256"] == (c1.get(control + "-1") or {}).get("informe_sha256")
+                if not x["igual_a_la_corrida_1"]:
+                    distintos.append(nombre)
     json.dump(r, open(salida, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({"conclusion": r["conclusion"], "jobs": {k: (v["conclusion"], v["minutos"]) for k, v in r["jobs"].items()},
-                      "artefactos": {k: (v.get("resultado"), v.get("nuevos"), v.get("arreglos")) for k, v in r["artefactos"].items()}},
-                     ensure_ascii=False, indent=1))
+                      "artefactos": {k: (v.get("resultado"), v.get("nuevos"), v.get("arreglos"), v.get("igual_a_la_corrida_1"))
+                                     for k, v in r["artefactos"].items()}}, ensure_ascii=False, indent=1))
+    if distintos:
+        print("traer_resultados_ci: distintos de la corrida 1: %s" % ", ".join(distintos))
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
     a = sys.argv[1:]
     if "--mensaje" in a:                                    # la corrida a mano con modo_real=mensaje
         LABORATORIO["real"] = "linuxforhealth-mensaje-1"
-    main(a[0], a[1], a[a.index("-o") + 1], a[a.index("--laboratorio") + 1] if "--laboratorio" in a else None)
+    sys.exit(main(a[0], a[1], a[a.index("-o") + 1], a[a.index("--laboratorio") + 1] if "--laboratorio" in a else None,
+                  a[a.index("--igual-a") + 1] if "--igual-a" in a else None))

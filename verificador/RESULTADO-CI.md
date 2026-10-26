@@ -82,7 +82,8 @@ esperaba de 5 a 15 minutos por corrida y salió por debajo. Mensaje a mensaje, a
 ## La previsión, frente a lo que salió
 
 La previsión se selló antes del primer push: [`cv/ci/PREVISION-CI.md`](cv/ci/PREVISION-CI.md) y
-[`cv/ci/SELLO-CI.txt`](cv/ci/SELLO-CI.txt).
+[`cv/ci/SELLO-CI.txt`](cv/ci/SELLO-CI.txt). Desde la etapa 24, `cv/ci/prueba_ci.py` y `cv/ci/ensayo_flujo.py` son otros:
+el sello verifica sus versiones del commit `0f85437`.
 
 | | Programador | Jev, antes del ensayo | Jev, después del ensayo | Salió |
 |---|---|---|---|---|

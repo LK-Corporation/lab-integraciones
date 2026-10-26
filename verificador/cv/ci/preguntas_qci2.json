@@ -1,0 +1,21 @@
+{
+ "q_ci2_d_1_pull_request": {"type": "choice", "instructions": "Pregunta 1: cómo se recorre el evento pull_request, sin forks ni repositorios nuevos.",
+  "criteria": {"rama_avance_rapido": "Un PR desde una rama del propio repositorio que lleva el commit del resultado, integrado en la principal por avance rápido, sin commit de fusión.",
+               "trivial_cerrado": "Un PR con un cambio trivial, cerrado sin fusionar y con la rama borrada.",
+               "no_se_recorre": "No se recorre en esta etapa: se declara."}},
+ "q_ci2_d_2_donde": {"type": "choice", "instructions": "Pregunta 2: dónde vive el proyecto de ejemplo.",
+  "criteria": {"raiz": "En una carpeta propia en la raíz del repositorio, que un tercero copia tal cual.",
+               "verificador": "Dentro de la carpeta del verificador, junto a la etapa, sin tocar la raíz."}},
+ "q_ci2_d_3_defecto": {"type": "choice", "instructions": "Pregunta 3: qué defecto siembra el run en rojo.",
+  "criteria": {"valor_distinto": "El sexo F sale como masculino: un valor distinto, tipo nuevo para el runner.",
+               "dato_perdido": "Se pierde la fecha de nacimiento: el mismo tipo que la etapa anterior.",
+               "los_dos": "Los dos, en dos runs a mano."}},
+ "q_ci2_d_4_decide": {"type": "choice", "instructions": "Pregunta 4: qué decide en la comprobación del rojo.",
+  "criteria": {"artefacto": "El artefacto descargado; las salidas del job se anotan y no deciden.",
+               "salidas": "Solo las salidas del job; si llegan vacías, el control falla.",
+               "las_dos": "Las dos cosas, y tienen que cuadrar."}},
+ "q_ci2_d_5_entradas": {"type": "choice", "instructions": "Pregunta 5: cómo se recorren las entradas que no se usaron (sustituir el corpus del laboratorio, opciones y artefacto completo).",
+  "criteria": {"segunda_llamada": "Una segunda llamada con su propia base.",
+               "una_llamada": "En la única llamada, dejando sin recorrer la de sustituir el corpus del laboratorio.",
+               "solo_rojo": "Solo en el run en rojo."}}
+}

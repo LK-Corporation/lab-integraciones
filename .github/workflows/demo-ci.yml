@@ -1,4 +1,5 @@
-# Demostracion de la etapa 23 (verificador/cv/ci/CI.md): los tres controles del ANTES, en el sitio donde el flujo va a vivir.
+# Demostracion de la etapa 23, endurecida en la 24 (verificador/cv/ci/CI.md): los tres controles del ANTES, en el sitio donde el
+# flujo va a vivir. En un fork, el laboratorio es el fork mismo (github.repository).
 name: demo-ci
 
 on:
@@ -24,14 +25,14 @@ concurrency:
 
 jobs:
   pruebas:
-    # P-CI-1..14 sin Docker ni red: valida los dos YAML y los guiones antes de gastar un minuto de caja
+    # P-CI-1..27 sin Docker ni red: valida los dos YAML y los guiones antes de gastar un minuto de caja
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
           python-version: "3.12"
       - run: python3 -m pip install --quiet pyyaml
@@ -50,6 +51,7 @@ jobs:
       adaptador: lab/verificador/cv/adaptadores/juguete.json
       artefactos: lab/verificador/cv
       linea_base: lab/verificador/cv/ci/LINEA-BASE-juguete.json
+      laboratorio: ${{ github.repository }}
       laboratorio_ref: ${{ github.sha }}
       esperar: igual
       nombre: verificador-negativo
@@ -64,6 +66,7 @@ jobs:
       adaptador: lab/verificador/cv/adaptadores/juguete.json
       artefactos: lab/verificador/cv
       linea_base: lab/verificador/cv/ci/LINEA-BASE-juguete.json
+      laboratorio: ${{ github.repository }}
       laboratorio_ref: ${{ github.sha }}
       sembrar: juguete
       esperar: falla
@@ -76,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
           persist-credentials: false
       - shell: bash
@@ -109,6 +112,7 @@ jobs:
       imagen: maven:3.9-eclipse-temurin-11@sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64
       huella_esperada: ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2
       linea_base: ${{ inputs.modo_real == 'mensaje' && 'lab/verificador/cv/ci/LINEA-BASE-linuxforhealth-mensaje.json' || 'lab/verificador/cv/ci/LINEA-BASE-linuxforhealth.json' }}
+      laboratorio: ${{ github.repository }}
       laboratorio_ref: ${{ github.sha }}
       esperar: igual
       nombre: verificador-real

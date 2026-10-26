@@ -1,0 +1,81 @@
+{
+ "etapa": "24, lo abierto de la integración continua: previsión sellada antes del primer push",
+ "base_de_la_prevision": "Todo lo del laboratorio, nada del runner. Las 26 pruebas P-CI pasan. Las dos bases del ejemplo salen iguales byte a byte en dos corridas (349 y 6 casos), con el juez publicado; el defecto sembrado da [PID-8, fidelidad, valor_distinto] en 164 casos, y con «pasa» la comparación sale con 10 solo por hallazgo_nuevo. El ensayo local (ensayo_flujo.py, ampliado con la forma remota, los checkouts por commit, el if: de job y download-artifact) da la demo endurecida en verde con los tres informes iguales byte a byte a los de la corrida 1 de la etapa 23; ejemplo, ejemplo-propio y ejemplo-comprobado en verde; y rojo en rojo solo por «Veredicto», con rojo-comprobado en verde. El ensayo se arregló antes de sellar porque no aplicaba el «success() &&» implícito de los if: sin función de estado. Lo no probado: la resolución remota de GitHub, si las salidas de un job llamado que falla llegan, los permisos de download-artifact, el checkout del commit de fusión de un PR, y el Docker y la red del runner con la imagen de Python.",
+ "probabilidad_demo_verde_en_c1_a_la_primera": 0.85,
+ "probabilidad_demo_informes_iguales": 0.97,
+ "probabilidad_ejemplo_verde_a_la_primera": 0.6,
+ "probabilidad_rojo_a_la_primera": 0.6,
+ "probabilidad_salidas_de_job_fallido_llegan": 0.6,
+ "probabilidad_pull_request_verde_a_la_primera": 0.55,
+ "probabilidad_todo_en_una_sesion": 0.65,
+ "pushes_previstos": [
+  4,
+  7
+ ],
+ "pushes_mas_probable": 5,
+ "minutos_por_corrida_previstos": [
+  1,
+  4
+ ],
+ "rojo_n_casos_previsto": 164,
+ "causas_de_fallo_previstas": [
+  "la resolución del uses: remoto o el checkout del laboratorio en C1 con repository y ref",
+  "download-artifact no ve el artefacto del job llamado o pide actions: read",
+  "las salidas del job llamado fallido llegan vacías (no decide, se anota)",
+  "needs.ejemplo-propio con guion en una expresión",
+  "el docker tag de la imagen oficial de Python por digest",
+  "el checkout del laboratorio en el commit de fusión del PR (laboratorio_ref: github.sha)",
+  "la higiene con los .hl7 o los JSON nuevos"
+ ],
+ "diferencias_que_se_explicarian": [
+  "ninguna prevista: el conversor es determinista y Python puro; una diferencia es un fallo del aparato"
+ ],
+ "regla_de_parada": "la forma remota no funciona, o el run en rojo no deja lo que tiene que dejar, y no se explica: se declara y se publican solo los endurecimientos",
+ "jev": {
+  "_que": "la previsión de Jev con un estado neutro (estado_prevision_ci2.md, preguntas_prevision_ci2.json, decision-jev-prevision-ci2.md), sellada al lado de la del programador; las cifras del programador se fijaron antes de leer la respuesta de Jev y no se cambiaron",
+  "demo_verde_en_c1": 0.88,
+  "ejemplo_verde_a_la_primera": 0.87,
+  "rojo_a_la_primera": 0.88,
+  "salidas_de_job_fallido_llegan": 0.7,
+  "pushes": {
+   "cuatro_o_menos": 0.87,
+   "cinco_o_seis": 0.08,
+   "siete_o_mas": 0.05
+  }
+ },
+ "fecha": "2026-10-26T09:18:28+01:00",
+ "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
+ "conversor": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+ "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+ "herramienta": {
+  "github-ci2/verificador-conversor.yml": "f4a697856be4ececffaec1d8a1b81cd155f3cbb6159b263a83b428ad98ac3bdf",
+  "github-ci2/demo-ci.yml": "8bab10ef61e0d73b8726d93a3215a230f5ab5b874338c3731ffa8325edda4278",
+  "github-ci2/higiene.yml": "241fa30db6bee12262c01d8c002b6f2cdbccfe0961dd421b1200aeaf06ae6ce0",
+  "github-ci2/ejemplo-ci.yml": "89124a569cac0dcf035a27b94f05dbb91d00684013209255421a79077cb1731a",
+  "github-ci2/rojo-ci.yml": "82802e88d679de0804c9639402b39adc5473f1de93b1bd2fefef3787cebbcfe4",
+  "ACCIONES-CI.json": "c5645b73879adaccc34bb41267f87cf2c6dc95920056abae9fde51eb6be6044a",
+  "prueba_ci.py": "43877dca91af41a8082422b062c4735a1f63f7ec631fd864f052f5a7f186a42a",
+  "ensayo_flujo.py": "3c60b7f3a7aef242a5270693fe21cc707d7242d0cf72cef1a696bf542c4b81c7",
+  "comprobar_ejemplo.py": "809e68b0ba30d6e81e3e9b0512c2f976a2225572472249ea74dfd61b8171a625",
+  "comprobar_rojo.py": "a39b7e6a3c3ced236b6011693b5e6e3e7fd5ab0e20b676ffe6223356fb19db31",
+  "traer_resultados_ci.py": "af41f25407f84b3f410ff8c040c7a7b54ecac615a046d848c4657be389606e8d",
+  "sellar_prevision_ci2.py": "b838afa1a2054d18084e1fecad155a6318a8ec5ac10cc3316779c542e0eddf24",
+  "decision-jev-prevision-ci2.md": "79abf81b5572844fe44a42353c5e9de36932dac0684bec34db6e82c4f0712383",
+  "@ejemplo-ci/conversor.py": "7e162f231e733765f7db8af9fa9c8673eeee6174cd072d2546bf91ec3b794147",
+  "@ejemplo-ci/preparar.sh": "51b19bf9c4a649837ace7949e71a94ecbcc373180b26277815d9b55fbfffc680",
+  "@ejemplo-ci/README.md": "ffb17e9cdd3b9367b6d2dc22605a98a79fbee36342da451fe2f9be3189d5369f",
+  "@ejemplo-ci/ci/adaptador.json": "ff001e46b8bf6c9982a0f3027677ded1482ade61fa00a715306946292053494d",
+  "@ejemplo-ci/ci/DEFECTO.json": "60793e08e8befe4f3d54cca0435d91de38d9c041e9bb4824aaaa405eecb7256b",
+  "@ejemplo-ci/ci/sembrar.py": "8e8bd5be7c052f0e911b62714eaa4d582df688451dc6872873345d58080bdac5",
+  "@ejemplo-ci/ci/hacer_base.sh": "c1086193f70e6f839d1ab0c082d02ee37bd61bd9a199300dab4ae0d3800c975e",
+  "@ejemplo-ci/ci/LINEA-BASE.json": "58181807c63d3ad7040d90b75a165f6decefa39ef59fb28042b9d7ee58b08ad8",
+  "@ejemplo-ci/ci/LINEA-BASE-propio.json": "81d2ef08dcd27cac7fb668071cfa5d216c2878098c80a8adbaa90f24816419e9",
+  "@ejemplo-ci/corpus/EJ-ADT-A01.hl7": "ebb2ce65567992dcc659b56b144902761fcbac69809a6fe19249a17365e8f2bb",
+  "@ejemplo-ci/corpus/EJ-ADT-A03.hl7": "e9fd5e8d2aa890ddc8affe9d09b4051361aed3a745ce24ff90d06ebe8268bde5",
+  "@ejemplo-ci/corpus/EJ-ADT-A08.hl7": "ec65eec56f60a4e660bcec541f1c78184eb51564bcd92f045660154d585b0853",
+  "@ejemplo-ci/corpus/EJ-ORU-R01.hl7": "3eaa911eb1ef3e0a840c5e8550803149449de676d445769ac9de15df9657fc40",
+  "@ejemplo-ci/corpus/EJ-ORU-R01-dos.hl7": "eec024ab24012c06e2ab99c30baaaeea7912a1adcdc95db01461cb9ad78ebdbf",
+  "@ejemplo-ci/corpus/EJ-VXU-V04.hl7": "59d82db2d0214ffe5b210e43dfb7f4585f4e4c62be92d43b15ee7eef33a29887",
+  "verificar_conversor.py": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd"
+ }
+}

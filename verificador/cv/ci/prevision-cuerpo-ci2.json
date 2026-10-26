@@ -1,0 +1,29 @@
+{
+ "etapa": "24, lo abierto de la integración continua: previsión sellada antes del primer push",
+ "base_de_la_prevision": "Todo lo del laboratorio, nada del runner. Las 26 pruebas P-CI pasan. Las dos bases del ejemplo salen iguales byte a byte en dos corridas (349 y 6 casos), con el juez publicado; el defecto sembrado da [PID-8, fidelidad, valor_distinto] en 164 casos, y con «pasa» la comparación sale con 10 solo por hallazgo_nuevo. El ensayo local (ensayo_flujo.py, ampliado con la forma remota, los checkouts por commit, el if: de job y download-artifact) da la demo endurecida en verde con los tres informes iguales byte a byte a los de la corrida 1 de la etapa 23; ejemplo, ejemplo-propio y ejemplo-comprobado en verde; y rojo en rojo solo por «Veredicto», con rojo-comprobado en verde. El ensayo se arregló antes de sellar porque no aplicaba el «success() &&» implícito de los if: sin función de estado. Lo no probado: la resolución remota de GitHub, si las salidas de un job llamado que falla llegan, los permisos de download-artifact, el checkout del commit de fusión de un PR, y el Docker y la red del runner con la imagen de Python.",
+ "probabilidad_demo_verde_en_c1_a_la_primera": 0.85,
+ "probabilidad_demo_informes_iguales": 0.97,
+ "probabilidad_ejemplo_verde_a_la_primera": 0.6,
+ "probabilidad_rojo_a_la_primera": 0.6,
+ "probabilidad_salidas_de_job_fallido_llegan": 0.6,
+ "probabilidad_pull_request_verde_a_la_primera": 0.55,
+ "probabilidad_todo_en_una_sesion": 0.65,
+ "pushes_previstos": [4, 7],
+ "pushes_mas_probable": 5,
+ "minutos_por_corrida_previstos": [1, 4],
+ "rojo_n_casos_previsto": 164,
+ "causas_de_fallo_previstas": [
+  "la resolución del uses: remoto o el checkout del laboratorio en C1 con repository y ref",
+  "download-artifact no ve el artefacto del job llamado o pide actions: read",
+  "las salidas del job llamado fallido llegan vacías (no decide, se anota)",
+  "needs.ejemplo-propio con guion en una expresión",
+  "el docker tag de la imagen oficial de Python por digest",
+  "el checkout del laboratorio en el commit de fusión del PR (laboratorio_ref: github.sha)",
+  "la higiene con los .hl7 o los JSON nuevos"
+ ],
+ "diferencias_que_se_explicarian": ["ninguna prevista: el conversor es determinista y Python puro; una diferencia es un fallo del aparato"],
+ "regla_de_parada": "la forma remota no funciona, o el run en rojo no deja lo que tiene que dejar, y no se explica: se declara y se publican solo los endurecimientos",
+ "jev": {"_que": "la previsión de Jev con un estado neutro (estado_prevision_ci2.md, preguntas_prevision_ci2.json, decision-jev-prevision-ci2.md), sellada al lado de la del programador; las cifras del programador se fijaron antes de leer la respuesta de Jev y no se cambiaron",
+         "demo_verde_en_c1": 0.88, "ejemplo_verde_a_la_primera": 0.87, "rojo_a_la_primera": 0.88, "salidas_de_job_fallido_llegan": 0.7,
+         "pushes": {"cuatro_o_menos": 0.87, "cinco_o_seis": 0.08, "siete_o_mas": 0.05}}
+}

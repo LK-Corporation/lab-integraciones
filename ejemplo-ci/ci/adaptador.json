@@ -1,0 +1,27 @@
+{
+ "formato": "adaptador-vc/1",
+ "id": "ejemplo",
+ "_que": "El proyecto de ejemplo de la integracion continua (etapa 24): un conversor en Python que corre en la imagen oficial de Python, sin red, un proceso para toda la carpeta. Las rutas son relativas a --artefactos, que preparar.sh rellena.",
+ "conversor": {
+  "nombre": "ejemplo-ci",
+  "version": "1",
+  "huella": {"partes": [{"carpeta": "conversor"}]},
+  "declara": {"no_soporta": []}
+ },
+ "caja": {
+  "tipo": "docker",
+  "imagen": "python:3.12-slim",
+  "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+  "_imagen_digest": "el mismo que pasan ejemplo-ci.yml y rojo-ci.yml en la entrada imagen; con otro, la herramienta sale con 3",
+  "montajes": {"conversor": {"origen": "conv", "destino": "/opt/conversor"}},
+  "entorno": {"PYTHONDONTWRITEBYTECODE": "1"},
+  "limites": {"segundos_por_mensaje": 5, "segundos_por_contenedor": 300, "pids": 64, "memoria_mb": null}
+ },
+ "invocacion": {
+  "modo": "lote",
+  "orden": ["python3", "/opt/conversor/conversor.py", "{entrada_dir}", "{salida_dir}"],
+  "plantilla": null,
+  "duracion_stdout": "^(?P<nombre>\\S+) (?P<ms>\\d+) ms$"
+ },
+ "salida": {"fichero": "{base}.json", "fichero_error": "{base}.error", "forma": "bundle", "envoltura": null, "codificacion": "utf-8"}
+}

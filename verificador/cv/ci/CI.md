@@ -22,6 +22,7 @@ base, para separar lo que ya conoces de lo que acaba de aparecer.
 
    ```bash
    git clone https://github.com/LK-Corporation/lab-integraciones && cd lab-integraciones/verificador
+   git checkout <el commit de 40 hex que vas a fijar en uses:>
    python3 cv/verificar_conversor.py <tu adaptador> <salida> --artefactos <tus artefactos> --sin-sensibilidad
    python3 cv/ci/linea_base.py crear <salida> -o <tu repo>/ci/LINEA-BASE.json
    ```
@@ -41,7 +42,7 @@ base, para separar lo que ya conoces de lo que acaba de aparecer.
      contents: read
    jobs:
      verificar:
-       uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@<commit del laboratorio>
+       uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@<commit de 40 hex del laboratorio>
        permissions:
          contents: read
        with:
@@ -49,13 +50,27 @@ base, para separar lo que ya conoces de lo que acaba de aparecer.
          linea_base: proyecto/ci/LINEA-BASE.json
          preparar: cd "$PROYECTO" && ./gradlew -q jar && mkdir -p "$ARTEFACTOS/lib" && cp build/libs/*.jar "$ARTEFACTOS/lib/"
          imagen: eclipse-temurin:11-jre@sha256:<64 hex>
-         laboratorio_ref: <el mismo commit del laboratorio>
+         laboratorio_ref: <el mismo commit de 40 hex>
    ```
 
    En el workspace del runner, `proyecto/` es tu repositorio y `lab/` el laboratorio.
-   - **Fija el laboratorio a un commit,** en `uses: …@<commit>` y en `laboratorio_ref`. El juez, la herramienta y el corpus son
-     los de ese commit, y tu base se hizo con ellos.
+   - **`laboratorio_ref` es obligatoria y tiene que ser el mismo commit entero (40 hex) que en `uses:`.** Una rama o una
+     etiqueta se rechazan con el código 2. El juez, la herramienta y el corpus son los de ese commit, y tu base se hizo con ellos.
    - **Cuando subas de commit, regenera la base.** Un juez distinto se avisa y la base propuesta lo marca (`juez_cambiado`).
+
+## Lo que cambia desde la etapa 24 (para quien ya lo usaba)
+
+- **`laboratorio_ref` es obligatoria y un commit de 40 hex.** Quien la omitía corría `main` sin saberlo: ahora GitHub no arranca
+  la llamada. Quien daba una rama o una etiqueta recibe el código 2.
+- **`preparar` corre con `bash --noprofile --norc -euo pipefail -c`,** con las mismas variables (`LAB`, `PROYECTO`, `ARTEFACTOS`,
+  `IMAGEN`) y en el mismo directorio.
+- **Las entradas llegan a las órdenes por variables de entorno.** Ninguna se escribe ya dentro de un `run:`.
+- **Las acciones van fijadas por commit,** las de [`ACCIONES-CI.json`](ACCIONES-CI.json): el mismo código que corría por
+  etiqueta.
+- **`corpus` y `opciones` se parten por espacios con `read -ra`,** sin interpretar comillas ni comodines. Una opción con espacios
+  dentro, o entre comillas, ya no se parte como antes.
+
+El flujo y sus salidas no cambian en nada más.
 
 ## Lo que hace fallar el cambio
 
@@ -101,8 +116,8 @@ conocido.
 - **El veredicto es un conjunto de hallazgos, sin texto.** Un cambio de valor dentro del mismo subtipo no se ve (L-CI-1).
 - **Corre en `ubuntu-latest`, con su Docker** (L-CI-2).
 - **Una corrida es una corrida:** un conversor no determinista dará hallazgos y arreglos intermitentes (L-CI-5).
-- **Las entradas se escriben tal cual en las órdenes del flujo.** No pases en ellas texto que controle otro, como
-  `github.head_ref` o el título de un PR.
+- **Las entradas llegan a las órdenes por variables de entorno,** pero `preparar` es una orden tuya que se ejecuta tal cual. No
+  pongas en ella texto que controle otro, como `github.head_ref` o el título de un PR.
 - **Microsoft FHIR-Converter** se puede preparar con `dotnet publish` en `preparar` (ver [`../CV1.md`](../CV1.md)), pero no es un
   control de la etapa.
 
@@ -115,6 +130,46 @@ controles:
 - **real:** LinuxForHealth v1.1.0, traído en el runner desde Maven Central con
   [`preparar_lfh.sh`](preparar_lfh.sh), con la imagen por digest, la huella del estudio en `huella_esperada` y
   `esperar: igual`. A mano (`workflow_dispatch`) se puede correr mensaje a mensaje.
+
+Las dos llamadas del proyecto de ejemplo son `.github/workflows/ejemplo-ci.yml` y `.github/workflows/rojo-ci.yml`.
+- **Cuándo llegan:** en el segundo push de la etapa 24, con el commit del primero fijado en `uses:`.
+- **Sus plantillas,** con el commit por poner: [`github-ci2/ejemplo-ci.yml`](github-ci2/ejemplo-ci.yml) y
+  [`github-ci2/rojo-ci.yml`](github-ci2/rojo-ci.yml).
+
+## Un proyecto de ejemplo para copiar
+
+[`../../../ejemplo-ci/`](../../../ejemplo-ci/) es un proyecto de conversor como lo tendría un tercero:
+- **lo que tiene:** su conversor (Python, en la imagen oficial `python:3.12-slim` por digest), su `preparar.sh`, su adaptador,
+  seis mensajes sintéticos propios y dos líneas base;
+- **su llamada:** `.github/workflows/ejemplo-ci.yml`, por la forma remota y fijada a un commit del laboratorio, con dos llamadas.
+  La primera usa el corpus del laboratorio más el propio. La segunda, solo el propio (`sin_corpus_lab`), con `--json-solo` en
+  `opciones` y `artefacto_completo`;
+- **su comprobación:** un job de fuera descarga los dos artefactos y comprueba que cada entrada hizo lo que debe, y nada más
+  ([`comprobar_ejemplo.py`](comprobar_ejemplo.py)).
+
+Para copiarlo:
+1. copia la carpeta;
+2. cambia el conversor, `preparar.sh`, la imagen del adaptador con su digest y el corpus;
+3. rehaz las bases con `ci/hacer_base.sh`. Corre desde un clon del laboratorio, con la carpeta copiada en su raíz, y para si algo
+   no cuadra. Antes hay que cambiar en el guion cuatro cosas:
+   - el digest (`DIGEST`) y el nombre de la imagen que etiqueta;
+   - la comprobación de entrada, que exige `ejemplo-ci/conversor.py`;
+   - los casos que espera de cada base: 349 y 6 en el ejemplo;
+   - el defecto de `DEFECTO.json`, o quitar los pasos 8 a 11: siembran el defecto, lo deshacen y leen su veredicto.
+
+El commit fijado en el ejemplo se queda donde está hasta que se suba a mano, en dos pasos: un commit nuevo del laboratorio y
+otro que suba el pin. Es lo que le pasa a cualquier proyecto.
+
+## El run en rojo, para verlo fallar
+
+`.github/workflows/rojo-ci.yml`, que llega en el segundo push, corre solo a mano. Siembra en la copia del conversor del ejemplo
+un defecto
+([`../../../ejemplo-ci/ci/DEFECTO.json`](../../../ejemplo-ci/ci/DEFECTO.json): `F` sale como `male`) y llama al flujo en el modo
+normal, `pasa`. El job `rojo` falla por ese hallazgo, con su resumen y su artefacto. `rojo-comprobado` lo comprueba desde fuera
+([`comprobar_rojo.py`](comprobar_rojo.py)). La corrida queda en rojo: un job que llama a un flujo reutilizable no admite
+`continue-on-error`.
+
+En una máquina se repite con los pasos 8 a 10 de `ejemplo-ci/ci/hacer_base.sh`.
 
 ## Cómo repetirlo en tu máquina
 

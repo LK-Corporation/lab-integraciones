@@ -1,0 +1,253 @@
+{
+ "casos": {
+  "propio/EJ-ADT-A01": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PID-11",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-10",
+     "fidelidad",
+     "codigo_mal_mapeado"
+    ],
+    [
+     "PV1-14",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-36",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-4",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-7",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "propio/EJ-ADT-A03": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PID-11",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-10",
+     "fidelidad",
+     "codigo_mal_mapeado"
+    ],
+    [
+     "PV1-14",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-36",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-4",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-7",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "propio/EJ-ADT-A08": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PID-11",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-10",
+     "fidelidad",
+     "codigo_mal_mapeado"
+    ],
+    [
+     "PV1-14",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-4",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-7",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "propio/EJ-ORU-R01": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBR-8",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "propio/EJ-ORU-R01-dos": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBR-8",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "propio/EJ-VXU-V04": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "ORC-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PID-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "RXA-10",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "RXA-17",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "RXA-22",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "RXA-3",
+     "fidelidad",
+     "fhir_invalido"
+    ],
+    [
+     "RXR-1",
+     "fidelidad",
+     "codigo_mal_mapeado"
+    ]
+   ],
+   "subtipo": "convertido"
+  }
+ },
+ "conversor": {
+  "contenedor": null,
+  "huella": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+  "huella_con_nombres": "deacb4159fafaa1906efde5abdaf76fed34418c73101e4521237baf99899c422",
+  "id": "ejemplo",
+  "imagen": "python:3.12-slim",
+  "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+  "modo": "lote",
+  "nombre": "ejemplo-ci",
+  "version": "1"
+ },
+ "corpus": {
+  "huella": "1c2574718502bc5bfb32526aba29fdf04761037ff0cc5edc8dbdcabc70626831",
+  "n": {
+   "adt": 0,
+   "minimos": 0,
+   "muestras": 0,
+   "oru": 0,
+   "propio": 6,
+   "vxu": 0
+  },
+  "por_corpus": {
+   "propio": "1c2574718502bc5bfb32526aba29fdf04761037ff0cc5edc8dbdcabc70626831"
+  }
+ },
+ "creada_de": {
+  "herramienta": {
+   "huella": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+   "version": "1.0"
+  },
+  "juez": {
+   "huella": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
+   "servidor": "1.3"
+  }
+ },
+ "formato": "linea-base-ci/1",
+ "n_casos": 6
+}
