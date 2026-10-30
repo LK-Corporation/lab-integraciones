@@ -118,6 +118,10 @@ conocido.
 - **Una corrida es una corrida:** un conversor no determinista dará hallazgos y arreglos intermitentes (L-CI-5).
 - **Las entradas llegan a las órdenes por variables de entorno,** pero `preparar` es una orden tuya que se ejecuta tal cual. No
   pongas en ella texto que controle otro, como `github.head_ref` o el título de un PR.
+- **Las acciones van fijadas por commit y no se actualizan solas.** En octubre de 2026 GitHub ya avisa de que corren en Node.js
+  20 y las fuerza a Node.js 24, y `ubuntu-latest` pasa a Ubuntu 26. Subirlas es un commit con `ACCIONES-CI.json` al día.
+- **Si un job de comprobación descarga el artefacto del flujo, relanza todos los jobs, no solo el que falló.** El relanzado
+  busca el artefacto de su intento, y el job que lo sube no se relanzó.
 - **Microsoft FHIR-Converter** se puede preparar con `dotnet publish` en `preparar` (ver [`../CV1.md`](../CV1.md)), pero no es un
   control de la etapa.
 

@@ -55,8 +55,9 @@ con los informes del runner iguales byte a byte a los del laboratorio.** La guí
 **Y lo abierto de la integración continua** (26-oct). El flujo, endurecido: las entradas llegan a las órdenes por variables
 de entorno, las acciones van fijadas por commit y el laboratorio se fija a un commit obligatorio. Con un proyecto de
 conversor de ejemplo, [`ejemplo-ci/`](ejemplo-ci/). Sus llamadas al flujo por la forma remota, como las haría un tercero, y
-un run en rojo a propósito llegan en un segundo push. Está en la sección de la etapa 24 de
-[`verificador/README.md`](verificador/README.md).
+un run en rojo a propósito. **En GitHub Actions, a la primera:** las dos llamadas del ejemplo pasaron, el run en rojo falló solo
+por el hallazgo sembrado, comprobado desde fuera, y la demostración siguió con los mismos informes. Está en
+[`verificador/RESULTADO-CI2.md`](verificador/RESULTADO-CI2.md).
 
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**
 
@@ -96,7 +97,8 @@ laboratorio (sin los perfiles privados, una se salta y otra espera menos casos; 
 - **Pasar tu propio conversor por él:** [`verificador/cv/VC.md`](verificador/cv/VC.md).
 - **Pasarlo en cada cambio, en GitHub Actions:** [`verificador/cv/ci/CI.md`](verificador/cv/ci/CI.md); su resultado,
   [`verificador/RESULTADO-CI.md`](verificador/RESULTADO-CI.md).
-- **Un proyecto de conversor de ejemplo para copiar, con su integración continua:** [`ejemplo-ci/`](ejemplo-ci/).
+- **Un proyecto de conversor de ejemplo para copiar, con su integración continua:** [`ejemplo-ci/`](ejemplo-ci/); su resultado,
+  [`verificador/RESULTADO-CI2.md`](verificador/RESULTADO-CI2.md).
 
 ---
 

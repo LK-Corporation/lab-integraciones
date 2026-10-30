@@ -62,3 +62,22 @@ recomendación del diseñador.
   `SELLO-CI2.txt` deja entonces de verificar `prueba_ci.py`; la versión sellada es la del primer push.
 - **DV-CI2-11, el comentario del job `pruebas` en `demo-ci.yml`** dice «P-CI-1..27» desde el primer push, en el que hay 26. Va
   sellado y se deja.
+- **DV-CI2-12, la revisión del segundo push.** Aprobó con tres hallazgos sin bloqueo:
+  - **el control de P-CI-27 no la ejercitaba:** su lógica pasó a `comprobar_vivos()`, con cuatro controles sobre copias
+    temporales, antes del push;
+  - **relanzar solo `ejemplo-comprobado` buscaría el artefacto del intento nuevo:** se declara en `CI.md` y en el resultado;
+  - **`rojo-comprobado` corre también si la corrida se cancela:** se declara. `!cancelled()` habría exigido volver a sellar la
+    plantilla.
+- **DV-CI2-13, el resumen en la página no se vio.** El diseño pedía mirarlo a mano. GitHub no enseña los resúmenes de los jobs a
+  un visitante sin sesión, y la sesión es del autor: no se inició. Lo comprobado es el fichero que se vuelca y la mecánica que lo
+  copia.
+- **DV-CI2-14, la corrida de `demo-ci` en `C2`** va aparte, en `CORRIDA-CI2-2-demo.json`, porque el diseño numeraba una corrida
+  por push y en `C2` corrieron dos flujos.
+- **DV-CI2-15, sin un quinto commit.** El diseño traía las corridas de `main` en el commit publicado a un `CORRIDA-CI2-5.json`, en un
+  push más. Ese commit es el último de la rama del PR, que ya corrió en el PR. Las corridas de `main` quedan en la pestaña Actions
+  y en el laboratorio, sin otro ciclo de publicación.
+- **DV-CI2-16, la higiene admite `CORRIDA-CI2-4.json` un commit antes de que exista:** lo trae el commit del PR.
+- **DV-CI2-17, la revisión del commit del resultado** aprobó, con matices arreglados antes de empujar la rama:
+  - las filas del PR y de los pushes en la tabla de la previsión, como pendientes;
+  - dos límites que faltaban, L-CI2-4 y L-CI2-11;
+  - cuatro frases.

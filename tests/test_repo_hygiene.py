@@ -132,7 +132,8 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "ejemplo-ci/ci/adaptador.json", "ejemplo-ci/ci/LINEA-BASE.json", "ejemplo-ci/ci/LINEA-BASE-propio.json",
                   "ejemplo-ci/ci/DEFECTO.json", "verificador/cv/ci/ACCIONES-CI.json", "verificador/cv/ci/preguntas_qci2.json",
                   "verificador/cv/ci/preguntas_prevision_ci2.json", "verificador/cv/ci/prevision-cuerpo-ci2.json",
-                  "verificador/cv/ci/PREVISION-CI2.json"}
+                  "verificador/cv/ci/PREVISION-CI2.json", "verificador/cv/ci/CORRIDA-CI2-1.json", "verificador/cv/ci/CORRIDA-CI2-2.json",
+                  "verificador/cv/ci/CORRIDA-CI2-2-demo.json", "verificador/cv/ci/CORRIDA-CI2-3.json", "verificador/cv/ci/CORRIDA-CI2-4.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

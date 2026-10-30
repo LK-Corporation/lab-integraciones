@@ -190,8 +190,9 @@ corrido en lote, un proceso por carpeta.
 
 ## Lo abierto de la integración continua (24, 26-oct-2026)
 
-> **El flujo de la etapa 23, endurecido, y llamado como lo llamaría un tercero:** por la forma remota fijada a un commit, con
-> el proyecto de ejemplo [`../ejemplo-ci/`](../ejemplo-ci/), en el modo normal; y un run en rojo a propósito.
+> **Llamado como lo llamaría un tercero, por referencia remota fijada a un commit y con su adaptador, su base y su corpus, el
+> flujo pasa cuando no hay nada nuevo y pone el cambio en rojo, con su resumen, cuando aparece un hallazgo nuevo.** El proyecto
+> de ejemplo, el run en rojo y la demostración endurecida salieron en GitHub Actions a la primera.
 
 **Los cuatro endurecimientos** que dejó la revisión a ciegas de la etapa 23:
 - **las entradas llegan a cada orden por variables de entorno,** y ningún `run:` de los flujos que corren ni de las plantillas
@@ -218,6 +219,8 @@ corrido en lote, un proceso por carpeta.
 | El proyecto de ejemplo | [`../ejemplo-ci/`](../ejemplo-ci/) |
 | La previsión sellada | [`cv/ci/PREVISION-CI2.md`](cv/ci/PREVISION-CI2.md), [`cv/ci/PREVISION-CI2.json`](cv/ci/PREVISION-CI2.json), [`cv/ci/SELLO-CI2.txt`](cv/ci/SELLO-CI2.txt), [`cv/ci/estado_prevision_ci2.md`](cv/ci/estado_prevision_ci2.md), [`cv/ci/preguntas_prevision_ci2.json`](cv/ci/preguntas_prevision_ci2.json), [`cv/ci/decision-jev-prevision-ci2.md`](cv/ci/decision-jev-prevision-ci2.md), [`cv/ci/prevision-cuerpo-ci2.json`](cv/ci/prevision-cuerpo-ci2.json), [`cv/ci/sellar_prevision_ci2.py`](cv/ci/sellar_prevision_ci2.py) |
 | La guía | [`cv/ci/CI.md`](cv/ci/CI.md) |
+| Las corridas en GitHub Actions | [`cv/ci/CORRIDA-CI2-1.json`](cv/ci/CORRIDA-CI2-1.json), [`cv/ci/CORRIDA-CI2-2.json`](cv/ci/CORRIDA-CI2-2.json), [`cv/ci/CORRIDA-CI2-2-demo.json`](cv/ci/CORRIDA-CI2-2-demo.json), [`cv/ci/CORRIDA-CI2-3.json`](cv/ci/CORRIDA-CI2-3.json) |
+| El resultado, con la frase | [`RESULTADO-CI2.md`](RESULTADO-CI2.md) |
 
 ## El verificador en la integración continua (23, 25-oct-2026)
 
