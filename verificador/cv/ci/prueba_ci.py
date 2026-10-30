@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Etapa 23 (cv/ci/diseno-ci-fable.md §9; decisiones de Jev en cv/ci/decision-jev-qci.md): P-CI-1..15, la línea base, la siembra
 del positivo y los dos flujos de GitHub Actions. Etapa 24 (cv/ci/diseno-ci2-fable.md §8; cv/ci/decision-jev-qci2.md): P-CI-16..26,
-los endurecimientos, el proyecto de ejemplo, la forma remota y el run en rojo. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
+los endurecimientos, el proyecto de ejemplo, la forma remota y el run en rojo; P-CI-27, en el segundo push. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
 con PyYAML (la única dependencia, solo de pruebas).
 
 Antes del código fallan todas: linea_base.py, sembrar_juguete.py, POSITIVO-CI.json y los YAML no existen.
@@ -1005,8 +1005,70 @@ def p26():
             mira("%s, el sellado" % f, open(os.path.join(vivos, f), "rb").read() == open(os.path.join(plantillas_dir(), f), "rb").read(), True)
 
 
+C0 = "0f8543718e0ce004fb477bbd7da06cb7c44486ee"                              # el commit publicado del que partió la etapa 24
+
+
+def comprobar_vivos(vivos):
+    """-> (problemas, commits): los dos YAML del ejemplo en `vivos`, frente a sus plantillas con COMMIT_C1 cambiado."""
+    p, commits = [], set()
+    for f in ("ejemplo-ci.yml", "rojo-ci.yml"):
+        vivo, plantilla = os.path.join(vivos, f), open(os.path.join(plantillas_dir(), f), encoding="utf-8").read()
+        if not os.path.exists(vivo):
+            p.append("%s no existe" % f)
+            continue
+        t = open(vivo, encoding="utf-8").read()
+        m = re.search(r"verificador-conversor\.yml@([0-9a-f]{40})", t)
+        if not m:
+            p.append("%s sin forma remota de 40 hex" % f)
+            continue
+        commits.add(m.group(1))
+        if t != plantilla.replace("COMMIT_C1", m.group(1)):
+            p.append("%s no es su plantilla" % f)
+    if len(commits) != 1:
+        p.append("commits distintos")
+    if C0 in commits:
+        p.append("C0")
+    return p, commits
+
+
+def p27():
+    """Los dos YAML del ejemplo que corren son sus plantillas con COMMIT_C1 cambiado por un mismo commit, que no es C0 (§4.1)."""
+    vivos = os.path.join(os.path.dirname(FASE), ".github", "workflows")
+    if not os.path.exists(os.path.join(vivos, "verificador-conversor.yml")):
+        mira("en el laboratorio no hay .github/workflows/: P-CI-27 se comprueba en el repositorio público", True, True)
+        return
+    mira("los dos YAML del ejemplo, sus plantillas con un mismo commit", comprobar_vivos(vivos)[0], [])
+
+    def copia(cambio):
+        d = tmp("vivos")
+        for f in ("ejemplo-ci.yml", "rojo-ci.yml"):
+            if os.path.exists(os.path.join(vivos, f)):
+                shutil.copyfile(os.path.join(vivos, f), os.path.join(d, f))
+        cambio(d)
+        return d
+
+    def cambiar(f, viejo, nuevo):
+        def h(d):
+            r = os.path.join(d, f)
+            texto = open(r, encoding="utf-8").read()
+            open(r, "w", encoding="utf-8").write(texto.replace(viejo, nuevo, 1))
+        return h
+    mira("control: un espacio cambiado", "ejemplo-ci.yml no es su plantilla" in comprobar_vivos(copia(cambiar("ejemplo-ci.yml", "  ejemplo:", " ejemplo:")))[0], True)
+    plantilla = open(os.path.join(plantillas_dir(), "rojo-ci.yml"), encoding="utf-8").read()
+
+    def otro_commit(d):
+        open(os.path.join(d, "rojo-ci.yml"), "w", encoding="utf-8").write(plantilla.replace("COMMIT_C1", "b" * 40))
+    mira("control: dos commits distintos", "commits distintos" in comprobar_vivos(copia(otro_commit))[0], True)
+
+    def con_c0(d):
+        for f in ("ejemplo-ci.yml", "rojo-ci.yml"):
+            open(os.path.join(d, f), "w", encoding="utf-8").write(open(os.path.join(plantillas_dir(), f), encoding="utf-8").read().replace("COMMIT_C1", C0))
+    mira("control: los dos con C0", "C0" in comprobar_vivos(copia(con_c0))[0], True)
+    mira("control: sin rojo-ci.yml", "rojo-ci.yml no existe" in comprobar_vivos(copia(lambda d: os.remove(os.path.join(d, "rojo-ci.yml"))))[0], True)
+
+
 PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24,
-           p25, p26]
+           p25, p26, p27]
 
 
 def main():
