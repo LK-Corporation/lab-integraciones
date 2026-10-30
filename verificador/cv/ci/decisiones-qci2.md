@@ -76,8 +76,18 @@ recomendación del diseñador.
 - **DV-CI2-15, sin un quinto commit.** El diseño traía las corridas de `main` en el commit publicado a un `CORRIDA-CI2-5.json`, en un
   push más. Ese commit es el último de la rama del PR, que ya corrió en el PR. Las corridas de `main` quedan en la pestaña Actions
   y en el laboratorio, sin otro ciclo de publicación.
-- **DV-CI2-16, la higiene admite `CORRIDA-CI2-4.json` un commit antes de que exista:** lo trae el commit del PR.
+- **DV-CI2-16, la higiene admite `CORRIDA-CI2-4.json` un commit antes de que exista:** lo trae el commit del PR, con
+  `CORRIDA-CI2-4-demo.json` (la corrida de la demo en el PR, aparte, como en DV-CI2-14).
 - **DV-CI2-17, la revisión del commit del resultado** aprobó, con matices arreglados antes de empujar la rama:
   - las filas del PR y de los pushes en la tabla de la previsión, como pendientes;
   - dos límites que faltaban, L-CI2-4 y L-CI2-11;
   - cuatro frases.
+- **DV-CI2-18, la prueba de correos ante el primer PR.** En el PR, `test_ningun_correo` falló por el committer del commit de fusión
+  sintético, el correo genérico «noreply» de GitHub. Ese commit no entra en `main`.
+  - **El arreglo:** se exime ese committer, y solo ese, cuando HEAD es el commit de fusión del PR: `GITHUB_SHA`, con la cabeza
+    del PR del evento (`GITHUB_EVENT_PATH`) como segundo padre. El autor de la fusión, el de la cuenta, se sigue mirando.
+  - **La revisión** pidió el endurecimiento: la primera versión eximía al autor y al committer de cualquier fusión con ese
+    committer en un `pull_request`.
+  - **Probado antes de publicarlo** con una fusión hecha como la de GitHub. La fusión pasa, y fallan los cinco controles: la misma
+    fusión en un `push`, otro `GITHUB_SHA`, un autor real en la fusión, un correo real dentro de la rama y el texto sin el arreglo.
+  - **Lo que no se previó:** no estaba entre las causas de fallo. Ninguna etapa anterior había recorrido un PR.

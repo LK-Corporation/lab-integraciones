@@ -133,7 +133,8 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "ejemplo-ci/ci/DEFECTO.json", "verificador/cv/ci/ACCIONES-CI.json", "verificador/cv/ci/preguntas_qci2.json",
                   "verificador/cv/ci/preguntas_prevision_ci2.json", "verificador/cv/ci/prevision-cuerpo-ci2.json",
                   "verificador/cv/ci/PREVISION-CI2.json", "verificador/cv/ci/CORRIDA-CI2-1.json", "verificador/cv/ci/CORRIDA-CI2-2.json",
-                  "verificador/cv/ci/CORRIDA-CI2-2-demo.json", "verificador/cv/ci/CORRIDA-CI2-3.json", "verificador/cv/ci/CORRIDA-CI2-4.json"}
+                  "verificador/cv/ci/CORRIDA-CI2-2-demo.json", "verificador/cv/ci/CORRIDA-CI2-3.json", "verificador/cv/ci/CORRIDA-CI2-4.json",
+                  "verificador/cv/ci/CORRIDA-CI2-4-demo.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()
@@ -250,11 +251,30 @@ def test_ningun_host_ni_ip_de_la_red_propia():
     assert not coincidencias(patron), coincidencias(patron)
 
 
+def correos_publicados():
+    """Los correos de autor y committer de lo que se publica. En un pull_request, GitHub hace checkout de un commit de fusión
+    sintético que no entra en main y cuyo committer es su correo genérico «noreply». Se exime ese committer y solo ese: su autor
+    se sigue mirando, y solo si HEAD es el commit de fusión de ese PR (GITHUB_SHA, con la cabeza del PR del evento como
+    segundo padre). Medido el 30-oct-2026, en el primer PR."""
+    correos = {c for c in git("log", "--format=%ae%n%ce").split() if c}
+    if os.environ.get("GITHUB_EVENT_NAME") != "pull_request" or not os.environ.get("GITHUB_EVENT_PATH"):
+        return correos
+    try:
+        cabeza = json.load(open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8"))["pull_request"]["head"]["sha"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return correos
+    padres = git("log", "-1", "--format=%P").split()
+    if git("rev-parse", "HEAD").strip() == os.environ.get("GITHUB_SHA") and padres[1:] == [cabeza] \
+            and git("log", "-1", "--format=%ce").strip() == "noreply@github.com":
+        correos = {c for c in git("log", "--format=%ae%n%ce", *padres).split() if c} | {git("log", "-1", "--format=%ae").strip()}
+    return correos
+
+
 def test_ningun_correo():
     """Hoy protege la configuración de GitHub, no el repositorio: un commit desde otra máquina con el user.email real
     la rompe sin aviso."""
     fallos = coincidencias(r"[\w.+-]+@[\w-]+(\.[\w-]+)*\.[a-z]{2,}\b", re.I)
-    correos = {c for c in git("log", "--format=%ae%n%ce").split() if c}
+    correos = correos_publicados()
     fallos += sorted(c for c in correos if not c.endswith("@users.noreply.github.com"))
     assert not fallos, fallos
 

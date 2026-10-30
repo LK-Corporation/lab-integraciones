@@ -71,8 +71,30 @@ A mano, sobre `C2`: [`rojo-ci` n.º 1](https://github.com/LK-Corporation/lab-int
 
 ## `pull_request`
 
-El PR que lleva este documento, desde una rama del propio repositorio, es el que recorre el evento `pull_request` en `demo-ci` y
-`ejemplo-ci`. Su resultado se añade en el commit siguiente de la misma rama.
+El PR que trajo este documento, [LK-Corporation/lab-integraciones#1](https://github.com/LK-Corporation/lab-integraciones/pull/1),
+recorrió el evento desde una rama del propio repositorio. Se integra en `main` por avance rápido, sin commit de fusión.
+- **`demo-ci` y `ejemplo-ci` salieron en verde a la primera** con el evento `pull_request`:
+  [`demo-ci`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41141069854) y
+  [`ejemplo-ci`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41141069947), en
+  [`cv/ci/CORRIDA-CI2-4-demo.json`](cv/ci/CORRIDA-CI2-4-demo.json) y [`cv/ci/CORRIDA-CI2-4.json`](cv/ci/CORRIDA-CI2-4.json).
+  - En un PR, `github.sha` es el commit de fusión que crea GitHub, y la demo lo pasa como `laboratorio_ref`. El checkout del
+    laboratorio en ese commit funcionó.
+  - Los tres `INFORME.json` de la demo salieron iguales a los de la etapa 23.
+- **La higiene falló,** y por algo que nunca se había recorrido: el repositorio no había tenido ningún PR.
+  - En un `pull_request`, el checkout es ese commit de fusión sintético. Su committer es el correo genérico «noreply» de GitHub,
+    y la prueba de correos solo admite los `@users.noreply.github.com`.
+  - No había fuga. El commit siguiente de la rama arregló la prueba. Exime ese committer, y solo ese, solo cuando HEAD es el
+    commit de fusión del PR: `GITHUB_SHA`, con la cabeza del PR del evento como segundo padre. El autor de la fusión se sigue
+    mirando.
+  - El arreglo se probó en el laboratorio con una fusión hecha como la de GitHub. La fusión pasa, y fallan los cinco controles:
+    - la misma fusión fuera de un PR;
+    - otro `GITHUB_SHA`;
+    - un autor real en la fusión;
+    - un correo real dentro de la rama;
+    - el texto sin el arreglo.
+  - La corrida de ese commit quedó en el PR.
+  - En los dos JSON, `commit` es la cabeza del PR (`6a2199b`), que es lo que da GitHub. El checkout fue el commit de fusión,
+    `2c881db`.
 
 ## Lo que no se rompe
 
@@ -81,13 +103,16 @@ tres salió igual byte a byte al de la corrida 1 de la etapa 23 (`igual_a_la_cor
 - en `C1`: [`demo-ci` en `5183b4e`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/40321059680),
   [`cv/ci/CORRIDA-CI2-1.json`](cv/ci/CORRIDA-CI2-1.json);
 - en `C2`: [`demo-ci` en `7a44e27`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41136715185),
-  [`cv/ci/CORRIDA-CI2-2-demo.json`](cv/ci/CORRIDA-CI2-2-demo.json).
+  [`cv/ci/CORRIDA-CI2-2-demo.json`](cv/ci/CORRIDA-CI2-2-demo.json);
+- en el PR: [`demo-ci` en el commit de fusión](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41141069854),
+  [`cv/ci/CORRIDA-CI2-4-demo.json`](cv/ci/CORRIDA-CI2-4-demo.json).
 
 ## Lo que cuesta
 
 | Corrida | Minutos de reloj |
 |---|---|
-| `demo-ci` en `C1` / en `C2` | 1,5 / 1,3 |
+| `demo-ci` en `C1` / en `C2` / en el PR | 1,5 / 1,3 / 1,5 |
+| `ejemplo-ci` en el PR | 0,5 |
 | `ejemplo-ci` | 0,4 |
 | `rojo-ci` | 0,5 |
 
@@ -106,11 +131,12 @@ La previsión se selló antes del primer push: [`cv/ci/PREVISION-CI2.md`](cv/ci/
 | Casos con el hallazgo sembrado | 164 | — | **164** |
 | Minutos por corrida del ejemplo y del rojo | 1 a 4 | — | **0,4 y 0,5**, por debajo |
 | Todo en una sesión | 0,65 | — | **no**: dos paradas ajenas a la etapa la partieron en tres sesiones |
-| El PR en verde a la primera | 0,55 | — | pendiente: lo dice el commit siguiente de la rama |
-| Pushes hasta cerrar la etapa | 4 a 7; lo más probable, 5 | cuatro o menos, 0,87 | pendiente |
+| El PR en verde a la primera (`demo-ci` y `ejemplo-ci`) | 0,55 | — | **sí**; la higiene, no |
+| Pushes hasta cerrar la etapa | 4 a 7; lo más probable, 5 | cuatro o menos, 0,87 | **5** al repositorio; **4** contando la rama y el avance rápido como uno, la regla de la tabla de la previsión del diseño (§10 de [`cv/ci/diseno-ci2-fable.md`](cv/ci/diseno-ci2-fable.md)). Sin el quinto commit del diseño (DV-CI2-15): con él, habrían sido 5 |
 
-En las cuatro filas que ya se saben, Jev acertó más que el programador. De las causas de fallo previstas, ninguna de las que ya se
-recorrieron apareció. La del commit de fusión del PR está por ver.
+Jev acertó más que el programador en todas las filas que los dos previeron. De las siete causas de fallo previstas no apareció
+ninguna, tampoco la del commit de fusión del PR. Lo que falló no estaba en la lista: la prueba de correos de la higiene ante el
+commit de fusión sintético.
 
 ## Antes del primer push
 
