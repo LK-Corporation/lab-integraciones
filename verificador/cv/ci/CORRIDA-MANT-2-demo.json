@@ -1,0 +1,281 @@
+{
+ "formato": "corrida-ci/1",
+ "run_id": 41157546381,
+ "numero": 10,
+ "url": "https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157546381",
+ "commit": "aa0b7fa8c6604fcf8aaa6cdff59b049aae4d37cb",
+ "evento": "push",
+ "estado": "completed",
+ "conclusion": "success",
+ "minutos_de_la_corrida": 1.5,
+ "jobs": {
+  "pruebas": {
+   "conclusion": "success",
+   "minutos": 0.2,
+   "pasos_fallidos": []
+  },
+  "positivo / verificar": {
+   "conclusion": "success",
+   "minutos": 0.1,
+   "pasos_fallidos": []
+  },
+  "negativo / verificar": {
+   "conclusion": "success",
+   "minutos": 0.2,
+   "pasos_fallidos": []
+  },
+  "real / verificar": {
+   "conclusion": "success",
+   "minutos": 1.1,
+   "pasos_fallidos": []
+  },
+  "positivo-comprobado": {
+   "conclusion": "success",
+   "minutos": 0.1,
+   "pasos_fallidos": []
+  },
+  "real-comprobado": {
+   "conclusion": "success",
+   "minutos": 0.1,
+   "pasos_fallidos": []
+  }
+ },
+ "artefactos": {
+  "verificador-negativo-1": {
+   "esperado": "igual",
+   "resultado": "pasa",
+   "pasa": true,
+   "motivos": [],
+   "nuevos_distintos": [],
+   "identidades": {
+    "corpus": "d333f3d601cbb0afe90f9c169b9ccc8f215ec1dabf9b7347a60868d9a61f83f3",
+    "herramienta": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+    "huella": "ae5ca43694ac44b12ed452aeca7e3e69f30e3a8478fbd55693b4cd2d9fdd1f6d",
+    "huella_con_nombres": "85ce34651a55e1d0514190582681173dffb8ce27a4ebc0e7b460cc67237baac2",
+    "imagen_digest": null,
+    "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958"
+   },
+   "n": {
+    "base": 343,
+    "comparados": 343,
+    "corrida": 343
+   },
+   "avisos": {},
+   "nuevos": 0,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 0,
+   "por_corpus": {
+    "adt": {
+     "n": 263,
+     "estados": {
+      "bundle": 263
+     },
+     "categorias": {
+      "correcto": 3,
+      "fallo_silencioso": 260
+     },
+     "porcentajes": {
+      "correcto": 1.1,
+      "fallo_silencioso": 98.9
+     }
+    },
+    "oru": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 39,
+      "indeterminado": 1
+     },
+     "porcentajes": {
+      "fallo_silencioso": 97.5,
+      "indeterminado": 2.5
+     }
+    },
+    "vxu": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    }
+   },
+   "informe_sha256": "e7c2e65d06c6ea7bab35e94d408aed26e9f8952c631c1cbe9f0c17d4b9b76cbd",
+   "igual_a_la_referencia": true
+  },
+  "verificador-positivo-1": {
+   "esperado": "falla",
+   "resultado": "falla",
+   "pasa": false,
+   "motivos": [
+    "hallazgo_nuevo"
+   ],
+   "nuevos_distintos": [
+    [
+     "PID-7",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "identidades": {
+    "corpus": "d333f3d601cbb0afe90f9c169b9ccc8f215ec1dabf9b7347a60868d9a61f83f3",
+    "herramienta": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+    "huella": "3eb99e0d2a4168a697a574e48659c6887e4a4f43979c91d02a7b59c4c93207ec",
+    "huella_con_nombres": "eab8a9c81095dd7d3c3ad835ada83d702b54073392fb098ade6dbbf095e1ff75",
+    "imagen_digest": null,
+    "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958"
+   },
+   "n": {
+    "base": 343,
+    "comparados": 343,
+    "corrida": 343
+   },
+   "avisos": {
+    "huella_distinta": {
+     "base": "ae5ca43694ac44b12ed452aeca7e3e69f30e3a8478fbd55693b4cd2d9fdd1f6d",
+     "corrida": "3eb99e0d2a4168a697a574e48659c6887e4a4f43979c91d02a7b59c4c93207ec"
+    }
+   },
+   "nuevos": 303,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 303,
+   "por_corpus": {
+    "adt": {
+     "n": 263,
+     "estados": {
+      "bundle": 263
+     },
+     "categorias": {
+      "correcto": 3,
+      "fallo_silencioso": 260
+     },
+     "porcentajes": {
+      "correcto": 1.1,
+      "fallo_silencioso": 98.9
+     }
+    },
+    "oru": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 39,
+      "indeterminado": 1
+     },
+     "porcentajes": {
+      "fallo_silencioso": 97.5,
+      "indeterminado": 2.5
+     }
+    },
+    "vxu": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    }
+   },
+   "informe_sha256": "2f89fa134a8c86b5a737c15f3bd08a764a19a6bcd4af9adfc80cf91b4be3c59e",
+   "igual_a_la_referencia": true
+  },
+  "verificador-real-1": {
+   "esperado": "igual",
+   "resultado": "pasa",
+   "pasa": true,
+   "motivos": [],
+   "nuevos_distintos": [],
+   "identidades": {
+    "corpus": "39240ada8f8cbf8ef940be61b5bd38843526b21e872faa14379b64884f8d5dad",
+    "herramienta": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+    "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+    "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+    "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+    "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958"
+   },
+   "n": {
+    "base": 411,
+    "comparados": 411,
+    "corrida": 411
+   },
+   "avisos": {},
+   "nuevos": 0,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 0,
+   "por_corpus": {
+    "adt": {
+     "n": 263,
+     "estados": {
+      "bundle": 162,
+      "error": 101
+     },
+     "categorias": {
+      "correcto": 11,
+      "fallo_silencioso": 160,
+      "rechazo_incorrecto": 92
+     },
+     "porcentajes": {
+      "correcto": 4.2,
+      "fallo_silencioso": 60.8,
+      "rechazo_incorrecto": 35.0
+     }
+    },
+    "oru": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "correcto": 4,
+      "fallo_silencioso": 36
+     },
+     "porcentajes": {
+      "correcto": 10.0,
+      "fallo_silencioso": 90.0
+     }
+    },
+    "vxu": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    }
+   },
+   "informe_sha256": "488ee6435c111ae26c995a49cd5639b750e75ecf1165409922e459133236c2fa",
+   "igual_a_la_referencia": true
+  }
+ },
+ "referencia": "CORRIDA-CI-1.json"
+}

@@ -1,0 +1,164 @@
+{
+ "formato": "corrida-ci/1",
+ "run_id": 41157678311,
+ "numero": 2,
+ "url": "https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157678311",
+ "commit": "aa0b7fa8c6604fcf8aaa6cdff59b049aae4d37cb",
+ "evento": "workflow_dispatch",
+ "estado": "completed",
+ "conclusion": "failure",
+ "minutos_de_la_corrida": 0.6,
+ "jobs": {
+  "rojo / verificar": {
+   "conclusion": "failure",
+   "minutos": 0.4,
+   "pasos_fallidos": [
+    "Veredicto frente a la linea base"
+   ]
+  },
+  "rojo-comprobado": {
+   "conclusion": "success",
+   "minutos": 0.1,
+   "pasos_fallidos": []
+  }
+ },
+ "artefactos": {
+  "rojo-1": {
+   "esperado": "pasa",
+   "resultado": "falla",
+   "pasa": false,
+   "motivos": [
+    "hallazgo_nuevo"
+   ],
+   "nuevos_distintos": [
+    [
+     "PID-8",
+     "fidelidad",
+     "valor_distinto"
+    ]
+   ],
+   "identidades": {
+    "corpus": "84b90894ba4a98a0ceb3c9b8428912c1e7669ca59e9cda5e918a9c15bddaf6e5",
+    "herramienta": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+    "huella": "c9897cf8b443e2013200b9908c99e0cd69ce81ec57a0556df3dcb30970a76a07",
+    "huella_con_nombres": "54fba43213742ca2b98631eb88231d875c93caf007f9208470d4c5985fc607b3",
+    "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+    "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958"
+   },
+   "n": {
+    "base": 349,
+    "comparados": 349,
+    "corrida": 349
+   },
+   "avisos": {
+    "huella_distinta": {
+     "base": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+     "corrida": "c9897cf8b443e2013200b9908c99e0cd69ce81ec57a0556df3dcb30970a76a07"
+    }
+   },
+   "nuevos": 164,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 164,
+   "por_corpus": {
+    "adt": {
+     "n": 263,
+     "estados": {
+      "bundle": 239,
+      "error": 24
+     },
+     "categorias": {
+      "correcto": 3,
+      "fallo_silencioso": 236,
+      "rechazo_incorrecto": 24
+     },
+     "porcentajes": {
+      "correcto": 1.1,
+      "fallo_silencioso": 89.7,
+      "rechazo_incorrecto": 9.1
+     }
+    },
+    "oru": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    },
+    "vxu": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    },
+    "propio": {
+     "n": 6,
+     "estados": {
+      "bundle": 6
+     },
+     "categorias": {
+      "fallo_silencioso": 6
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    }
+   },
+   "informe_sha256": "30ddf4a7f660da81dd82f9b4342f537b91c9f9671377a02be2ce71c4e5021885",
+   "igual_a_la_referencia": true
+  },
+  "rojo-comprobado-1": {
+   "sin_veredicto": true,
+   "ficheros": [
+    "COMPROBACION-ROJO.json"
+   ],
+   "COMPROBACION-ROJO": {
+    "formato": "comprobacion-rojo/1",
+    "resultado_job": "failure",
+    "comprobaciones": {
+     "job_fallido": true,
+     "veredicto_en_el_artefacto": true,
+     "esperaba_pasa": true,
+     "fallo": true,
+     "solo_hallazgo_nuevo": true,
+     "el_hallazgo_esperado": true,
+     "en_casos_de_la_base": true,
+     "conversor_cambiado": true,
+     "resumen": true,
+     "informe_y_propuesta": true,
+     "salidas_cuadran": true
+    },
+    "salidas_del_job": {
+     "resultado": "falla",
+     "nuevos": "164",
+     "nuevos_distintos": [
+      [
+       "PID-8",
+       "fidelidad",
+       "valor_distinto"
+      ]
+     ]
+    },
+    "n_casos_con_el_hallazgo": 164,
+    "todo_bien": true
+   },
+   "igual_a_la_referencia": true
+  }
+ },
+ "referencia": "CORRIDA-CI2-3.json"
+}

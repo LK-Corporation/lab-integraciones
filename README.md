@@ -60,7 +60,9 @@ por el hallazgo sembrado, comprobado desde fuera, y la demostración siguió con
 [`verificador/RESULTADO-CI2.md`](verificador/RESULTADO-CI2.md).
 
 **Y su mantenimiento** (31-oct). Las acciones de los flujos, subidas a versiones con Node.js 24 y fijadas por commit, y el
-pin del ejemplo, en un segundo push. Está en la sección de la etapa 25 de [`verificador/README.md`](verificador/README.md).
+pin del ejemplo, en un segundo push. **En GitHub Actions, a la primera:** la demostración y el ejemplo dieron lo mismo, con los
+mismos informes byte a byte, el run en rojo falló igual, y el aviso de Node.js 20 desapareció. Está en
+[`verificador/RESULTADO-MANT.md`](verificador/RESULTADO-MANT.md).
 
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**
 

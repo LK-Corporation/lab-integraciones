@@ -190,8 +190,9 @@ corrido en lote, un proceso por carpeta.
 
 ## El mantenimiento de la integración continua (25, 31-oct-2026)
 
-> **Las cuatro acciones de los flujos, subidas a la mayor mínima con Node.js 24 y fijadas por commit.** GitHub avisaba de
-> que las de antes corrían en Node.js 20. La pregunta es si los controles de las etapas 23 y 24 siguen dando lo mismo.
+> **Con las acciones en Node.js 24 y el ejemplo fijado a su nuevo commit, los controles de las etapas 23 y 24 dan lo mismo, con
+> los mismos informes byte a byte, y sin el aviso de Node.js 20.** Las cuatro acciones subieron a la mayor mínima con Node.js 24,
+> fijadas por commit, y los dos pushes salieron en GitHub Actions a la primera.
 
 - **Las versiones:** checkout v5.1.0, setup-python v6.3.0, upload-artifact v6.0.0 y download-artifact v7.0.0, cruzadas con la
   API, en [`cv/ci/ACCIONES-CI.json`](cv/ci/ACCIONES-CI.json), con la anterior al lado.
@@ -200,7 +201,7 @@ corrido en lote, un proceso por carpeta.
   corrida de la 24 como control.
 - **«Nada cambia»** se mide por huella frente a las corridas de las 23 y 24, con
   [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py).
-- **El pin del ejemplo** sube en un segundo push. El resultado irá, como en la 24, por una rama con su PR.
+- **El pin del ejemplo** subió en un segundo push. El resultado llega, como en la 24, por una rama con su PR.
 
 | Fase | Documentos |
 |---|---|
@@ -208,6 +209,8 @@ corrido en lote, un proceso por carpeta.
 | El diseño a ciegas y las decisiones | [`cv/ci/ENCARGO-MANT0.md`](cv/ci/ENCARGO-MANT0.md), [`cv/ci/MAYORES-MANT.txt`](cv/ci/MAYORES-MANT.txt), [`cv/ci/diseno-mant-fable.md`](cv/ci/diseno-mant-fable.md), [`cv/ci/decisiones-qmant.md`](cv/ci/decisiones-qmant.md), [`cv/ci/estado_qmant.md`](cv/ci/estado_qmant.md), [`cv/ci/preguntas_qmant.json`](cv/ci/preguntas_qmant.json), [`cv/ci/decision-jev-qmant.md`](cv/ci/decision-jev-qmant.md) |
 | El código, con las pruebas en rojo antes | [`cv/ci/prueba_ci.py`](cv/ci/prueba_ci.py), [`cv/ci/anotaciones_ci.py`](cv/ci/anotaciones_ci.py), [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py), [`cv/ci/github-mant/verificador-conversor.yml`](cv/ci/github-mant/verificador-conversor.yml), [`cv/ci/github-mant/demo-ci.yml`](cv/ci/github-mant/demo-ci.yml), [`cv/ci/github-mant/higiene.yml`](cv/ci/github-mant/higiene.yml), [`cv/ci/github-mant/ejemplo-ci.yml`](cv/ci/github-mant/ejemplo-ci.yml), [`cv/ci/github-mant/rojo-ci.yml`](cv/ci/github-mant/rojo-ci.yml) |
 | La previsión sellada | [`cv/ci/PREVISION-MANT.md`](cv/ci/PREVISION-MANT.md), [`cv/ci/PREVISION-MANT.json`](cv/ci/PREVISION-MANT.json), [`cv/ci/SELLO-MANT.txt`](cv/ci/SELLO-MANT.txt), [`cv/ci/estado_prevision_mant.md`](cv/ci/estado_prevision_mant.md), [`cv/ci/preguntas_prevision_mant.json`](cv/ci/preguntas_prevision_mant.json), [`cv/ci/decision-jev-prevision-mant.md`](cv/ci/decision-jev-prevision-mant.md), [`cv/ci/prevision-cuerpo-mant.json`](cv/ci/prevision-cuerpo-mant.json), [`cv/ci/sellar_prevision_mant.py`](cv/ci/sellar_prevision_mant.py) |
+| Las corridas en GitHub Actions y el aviso | [`cv/ci/CORRIDA-MANT-1.json`](cv/ci/CORRIDA-MANT-1.json), [`cv/ci/CORRIDA-MANT-1-ejemplo.json`](cv/ci/CORRIDA-MANT-1-ejemplo.json), [`cv/ci/CORRIDA-MANT-2-demo.json`](cv/ci/CORRIDA-MANT-2-demo.json), [`cv/ci/CORRIDA-MANT-2.json`](cv/ci/CORRIDA-MANT-2.json), [`cv/ci/CORRIDA-MANT-3.json`](cv/ci/CORRIDA-MANT-3.json), [`cv/ci/AVISOS-MANT.json`](cv/ci/AVISOS-MANT.json) |
+| El resultado, con la frase | [`RESULTADO-MANT.md`](RESULTADO-MANT.md) |
 
 ## Lo abierto de la integración continua (24, 26-oct-2026)
 
