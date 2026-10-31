@@ -1,0 +1,5 @@
+{
+ "q1_ms_t04_t08": {"type": "choice", "instructions": "Pregunta 1: si Microsoft correrá T04 y T08.", "criteria": {"no": "No: sin plantilla.", "si": "Sí."}},
+ "q2_igual": {"type": "choice", "instructions": "Pregunta 2: en los eventos que cada conversor corre, si tratará el documento igual que en T02 en todas las bases.", "criteria": {"igual": "Igual en todas.", "distinto": "Distinto en alguna."}},
+ "q3_nueva": {"type": "choice", "instructions": "Pregunta 3: si habrá al menos una discrepancia nueva y confirmada.", "criteria": {"si": "Sí.", "no": "No."}}
+}

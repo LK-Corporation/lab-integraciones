@@ -190,6 +190,17 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Los otros eventos de MDM (28, 31-oct-2026)
+
+> **En T04, T06, T08 y T10, los conversores tratan el documento como en T02 en todos los eventos que convierten: 0
+> diferencias en 120 pares.** Microsoft no convierte T04 ni T08 (sin plantilla) y LinuxForHealth no convierte T04, T08 ni
+> T10, como declara su README. No hay discrepancias nuevas.
+
+- **El corpus:** las 40 bases de MDM_T02 en los cinco eventos, como pares mínimos de su T02. Se regenera con
+  [`mev/bases_mdmev.py`](mev/bases_mdmev.py) y se juzga con [`mev/juzgar_mdmev.py`](mev/juzgar_mdmev.py), con el punto de
+  los cinco eventos que el juez ya traía. **El juez no cambia.**
+- **El resultado:** [`RESULTADO-MDMEV.md`](RESULTADO-MDMEV.md); la pregunta, en [`ANTES-ETAPA-MDMEV.md`](ANTES-ETAPA-MDMEV.md).
+
 ## Subir el pin del proyecto de ejemplo (27, 31-oct-2026)
 
 > **El proyecto de ejemplo sube su pin al commit con MDM (`c9d49d9`) como lo haría un tercero:** cambia el pin y rehace su
@@ -208,8 +219,9 @@ corrido en lote, un proceso por carpeta.
 
 ## La etapa de MDM (26, 31-oct-2026)
 
-> El verificador encuentra **5 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78 mensajes
-> públicos**; además ve **10 de las ya declaradas**, y **3 diferencias son convención**.
+> El verificador encuentra **3 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78 mensajes
+> públicos**; además ve **9 de las ya declaradas**, y **3 diferencias son convención**. Corregido el 31-oct (etapa 28): se
+> retiraron dos nuevas y una ya declarada que se apoyaban en estados que v2.5 no da para T02.
 
 **Lo mismo, en documentos clínicos.**
 - **Los conversores y la caja:** los mismos del estudio de conversores; al final, también sus ramas principales.

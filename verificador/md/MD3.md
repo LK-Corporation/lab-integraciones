@@ -1,5 +1,9 @@
 # MD3: contraste, clase, pares mínimos y revisión adversaria (etapa 26)
 
+> **Corregido el 31-oct (etapa 28, DV-MD-15):** MD-M8, MD-L7 y MD-M7 se retiraron, porque se apoyaban en T02 con TXA-19 «OB»
+> o «UN», estados que la figura 9-2 de v2.5 no da para T02. La cuenta es 3 nuevas y 9 ya declaradas
+> (`md/CLASES-MD3.json`). Lo de abajo es el documento de antes de la corrección.
+
 **La regla.** Es la del estudio de conversores y la de VX3 (`cv/diseno-conversores-fable.md` §4.3, R-CV-9), escrita antes de medir:
 - **`ya_declarada`.** La misma diferencia aparece en una salida esperada publicada, en una prueba que la afirma, en la
   documentación o en un issue. El código de las plantillas no cuenta.

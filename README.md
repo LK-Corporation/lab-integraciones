@@ -65,11 +65,11 @@ mismos informes byte a byte, el run en rojo falló igual, y el aviso de Node.js 
 [`verificador/RESULTADO-MANT.md`](verificador/RESULTADO-MANT.md).
 
 **Y un cuarto tipo de mensaje: documentos clínicos** (MDM^T02, 31-oct). Con el juez ampliado otra vez y los mismos dos
-conversores, **el verificador encuentra 5 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78
-mensajes públicos; además ve 10 de las ya declaradas, y 3 diferencias son convención.**
-- Cuatro son fuertes: un documento válido que se rechaza entero, un documento obsoleto que sale como un error, el texto
-  clínico que se pierde detrás de un OBX codificado y un documento de disponibilidad desconocida que sale como vigente.
-- Las cinco siguen en la rama principal de cada proyecto.
+conversores, **el verificador encuentra 3 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78
+mensajes públicos; además ve 9 de las ya declaradas, y 3 diferencias son convención.**
+- Dos son fuertes: un documento válido que se rechaza entero y el texto clínico que se pierde detrás de un OBX codificado.
+- Las tres siguen en la rama principal de cada proyecto.
+- **Corregido el 31-oct:** se retiraron dos de las cinco publicadas, que se apoyaban en estados que v2.5 no da para T02.
 - Está en [`verificador/RESULTADO-MDM.md`](verificador/RESULTADO-MDM.md).
 
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**

@@ -98,3 +98,9 @@ prueba, en rojo antes (`b2a8f15`).
   componentes antes de llamar a `CV._codigo`, que no cambia para las demás familias. Desde 2.6 (CWE), sigue como antes; que OBR-4
   es CWE desde 2.6 es la lectura de la propia hoja de la guía, que sigue una versión posterior. MSH-12 vacío se juzga como 2.5.
 - **H15 no cambia** (TXA-6 en `attachment.creation`): la guía lleva TXA-6 a `date`. Queda como dudoso.
+
+- **DV-MD-15, la corrección (etapa 28).** La revisión a ciegas de la etapa 28 vio que la figura 9-2 de v2.5 (tabla de transiciones
+  de TXA-19) solo da «Available» para T02, y la 9-1 solo IP, IN, PA, AU o LA en TXA-17. Seis bases (B08 a B12 y B40) llevan otro
+  estado. MD-M8 (OB), MD-L7 (UN) y MD-M7 (UN) se apoyaban en ellas y se retiran (Jev, «retirar», 0,61). El resultado pasa a 3
+  nuevas y 9 ya declaradas. El juez no cambia: no comprueba las tablas de transiciones (L-MD nuevo, en el RESULTADO). La tabla
+  0273 define UN como «Unavailable for patient care»; la etapa lo había llamado «desconocida».

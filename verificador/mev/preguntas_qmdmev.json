@@ -1,0 +1,4 @@
+{
+ "q1_diseno": {"type": "choice", "instructions": "Pregunta 1: quién diseña la etapa de los otros eventos de MDM.", "criteria": {"programador": "(a) El programador, sobre lo ya diseñado y programado; se declara.", "a_ciegas": "(b) Un diseño a ciegas nuevo por otro modelo."}},
+ "q2_corpus": {"type": "choice", "instructions": "Pregunta 2: qué corpus.", "criteria": {"derivado": "(a) Los 40 de T02 repetidos en los cuatro eventos (160), más las secundarias y las muestras.", "secundarias": "(b) Solo las cuatro secundarias y las muestras públicas."}}
+}

@@ -1,0 +1,62 @@
+{
+ "microsoft": {
+  "categorias_del_rejuicio": {
+   "T02": {
+    "fallo_silencioso": 39,
+    "rechazo_incorrecto": 1
+   },
+   "T04": {
+    "rechazo_incorrecto": 40
+   },
+   "T06": {
+    "fallo_silencioso": 39,
+    "rechazo_incorrecto": 1
+   },
+   "T08": {
+    "rechazo_incorrecto": 40
+   },
+   "T10": {
+    "fallo_silencioso": 39,
+    "rechazo_incorrecto": 1
+   }
+  },
+  "bases_distintas_de_T02": {
+   "T04": 39,
+   "T08": 39
+  },
+  "muestras": {
+   "T06 correcto": 2,
+   "T06 fallo_silencioso": 29,
+   "T10 fallo_silencioso": 2
+  }
+ },
+ "linuxforhealth": {
+  "categorias_del_rejuicio": {
+   "T02": {
+    "fallo_silencioso": 40
+   },
+   "T04": {
+    "rechazo_incorrecto": 40
+   },
+   "T06": {
+    "fallo_silencioso": 40
+   },
+   "T08": {
+    "rechazo_incorrecto": 40
+   },
+   "T10": {
+    "rechazo_incorrecto": 40
+   }
+  },
+  "bases_distintas_de_T02": {
+   "T04": 40,
+   "T08": 40,
+   "T10": 40
+  },
+  "muestras": {
+   "T06 fallo_silencioso": 31,
+   "T10 rechazo_incorrecto": 2
+  }
+ },
+ "_que": "Resumen de privado/mdm/mev/JUICIO-MDMEV.json (mev/juzgar_mdmev.py). Las bases distintas de T02 son las de los eventos que el conversor no corre: Microsoft T04 y T08 (sin plantilla) y LinuxForHealth T04, T08 y T10 (Message type not yet supported); el rejuicio las cuenta como rechazo porque se juzgan con el punto de los cinco eventos, y la etapa las clasifica como no corre el evento (ANTES, condición 3). En T06 y T10 (Microsoft) y T06 (LinuxForHealth), 0 bases distintas."
+}

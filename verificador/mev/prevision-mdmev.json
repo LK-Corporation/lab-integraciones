@@ -1,0 +1,9 @@
+{
+ "etapa": "28, los otros eventos de MDM: previsión del programador, fijada antes de correr los conversores sobre el corpus derivado y antes de leer a Jev",
+ "corpus": {"mensajes": 200, "huella_manifiesto": "293873a0ad7b", "generador": "mev/bases_mdmev.py"},
+ "base_de_la_prevision": "Lo medido en MD-pre de la etapa 26 sobre las muestras públicas (Microsoft trae plantillas de T06 y T10 pero no de T04 ni T08; LinuxForHealth trae las cuatro; los T06 de LinuxForHealth en las muestras dieron Bundle) y el resultado de T02. Nada del corpus derivado.",
+ "microsoft": {"p_sin_plantilla_en_T04_y_T08": 0.85, "p_T06_y_T10_iguales_que_T02_en_todas_las_bases": 0.6},
+ "linuxforhealth": {"p_los_cuatro_iguales_que_T02_en_todas_las_bases": 0.65},
+ "p_al_menos_una_nueva_confirmada": 0.3,
+ "regla": "Una diferencia frente a T02 se clasifica con la regla de la etapa 26 (contraste, revisión adversaria; el par es su T02). sin_plantilla no es discrepancia (L-VC-13)."
+}
