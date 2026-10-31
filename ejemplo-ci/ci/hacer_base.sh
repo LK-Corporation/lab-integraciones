@@ -34,6 +34,11 @@ corrida() {   # <salida> [opciones mas]
 n_casos() {
   python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["n_casos"])' "$1"
 }
+esperado() {   # <lab|propio>: los casos que junta la herramienta en este commit; el numero no va a mano (etapa 27)
+  python3 -c 'import os, sys, tempfile; sys.path.insert(0, "cv"); import verificar_conversor as V
+co = V.generar_corpus(os.path.join(tempfile.mkdtemp(), "c"), lab=sys.argv[1] == "lab", minimos=False, propios=[sys.argv[2]])
+print(len(co["casos"]))' "$1" "$EJ/corpus"
+}
 base() {   # <nombre> <fichero de la base> <n esperado> [opciones mas]
   local n=$1 b=$2 esperado=$3
   shift 3
@@ -42,12 +47,12 @@ base() {   # <nombre> <fichero de la base> <n esperado> [opciones mas]
   corrida "$TRABAJO/$n-2" "$@"
   cmp "$TRABAJO/$n-1/INFORME.json" "$TRABAJO/$n-2/INFORME.json" || para "$n: INFORME.json distinto entre dos corridas"
   python3 cv/ci/linea_base.py crear "$TRABAJO/$n-1" -o "$b"
-  [ "$(n_casos "$b")" = "$esperado" ] || para "$n: $(n_casos "$b") casos y se esperaban $esperado"
+  [ "$(n_casos "$b")" = "$esperado" ] || para "$n: $(n_casos "$b") casos y la herramienta junta $esperado en este commit"
   python3 cv/ci/linea_base.py comparar "$TRABAJO/$n-2" "$b" --esperar igual -o "$TRABAJO/$n-igual" || para "$n: la segunda corrida no da lo mismo que la base"
 }
 
-base ejemplo "$EJ/ci/LINEA-BASE.json" 349
-base propio "$EJ/ci/LINEA-BASE-propio.json" 6 --json-solo --sin-corpus-lab
+base ejemplo "$EJ/ci/LINEA-BASE.json" "$(esperado lab)"
+base propio "$EJ/ci/LINEA-BASE-propio.json" "$(esperado propio)" --json-solo --sin-corpus-lab
 
 echo "== 8. el defecto, sembrado en la copia de los artefactos"
 python3 "$EJ/ci/sembrar.py" "$ART/conv/conversor.py" "$EJ/ci/DEFECTO.json"

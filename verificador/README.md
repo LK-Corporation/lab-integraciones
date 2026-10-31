@@ -190,6 +190,20 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Subir el pin del proyecto de ejemplo (27, 31-oct-2026)
+
+> **El proyecto de ejemplo sube su pin al commit con MDM (`c9d49d9`) como lo haría un tercero:** cambia el pin y rehace su
+> base con la receta. El juez y el corpus cambian, y el ejemplo pasa de 349 a 389 casos.
+
+- **Sin rehacer la base, el flujo sigue en verde** en el modo `pasa`. Los 40 casos nuevos solo se anotan, y el juez y el
+  corpus distintos son avisos. La comprobación de fuera (`ejemplo-comprobado`) sí cae. Lo dice ahora la guía,
+  [`cv/ci/CI.md`](cv/ci/CI.md).
+- **La receta llevaba el número de casos a mano y se paraba.** Ahora lo cuenta con la herramienta en el commit fijado
+  ([`pin/estado_qpin.md`](pin/estado_qpin.md), Jev).
+- **La pregunta y la previsión,** fijadas antes de medir: [`ANTES-ETAPA-PIN.md`](ANTES-ETAPA-PIN.md) y
+  [`pin/prevision-pin.json`](pin/prevision-pin.json), con la de Jev en
+  [`pin/decision-jev-prevision-pin.md`](pin/decision-jev-prevision-pin.md).
+
 ## La etapa de MDM (26, 31-oct-2026)
 
 > El verificador encuentra **5 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78 mensajes

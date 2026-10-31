@@ -228,6 +228,7 @@
   "huella": "1c2574718502bc5bfb32526aba29fdf04761037ff0cc5edc8dbdcabc70626831",
   "n": {
    "adt": 0,
+   "mdm": 0,
    "minimos": 0,
    "muestras": 0,
    "oru": 0,
@@ -240,12 +241,12 @@
  },
  "creada_de": {
   "herramienta": {
-   "huella": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+   "huella": "e0a7517a5ab41150aabf81a14adee55704a2f23a1aa97853effe585c17458b6f",
    "version": "1.0"
   },
   "juez": {
-   "huella": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
-   "servidor": "1.3"
+   "huella": "cb1338ca647af63dd58a583a7296a44cc0ab5dec21eea9e6d7fd75d465d15890",
+   "servidor": "1.4"
   }
  },
  "formato": "linea-base-ci/1",

@@ -22,7 +22,7 @@ concurrency:
 jobs:
   ejemplo:
     # el corpus del laboratorio mas el propio, contra ci/LINEA-BASE.json; esperar vale «pasa» por omision, como en un proyecto
-    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@e704b97b560a252cfac2cdeae68ed1530cc78be7
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@c9d49d9566d14121cef9fc7a21dbaf1ee906d494
     permissions:
       contents: read
     with:
@@ -32,12 +32,12 @@ jobs:
       imagen: python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
       corpus: proyecto/ejemplo-ci/corpus
       laboratorio: LK-Corporation/lab-integraciones
-      laboratorio_ref: e704b97b560a252cfac2cdeae68ed1530cc78be7
+      laboratorio_ref: c9d49d9566d14121cef9fc7a21dbaf1ee906d494
       nombre: ejemplo
 
   ejemplo-propio:
     # solo el corpus propio, sin INFORME.md y con evidencias y corpus en el artefacto, contra ci/LINEA-BASE-propio.json
-    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@e704b97b560a252cfac2cdeae68ed1530cc78be7
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@c9d49d9566d14121cef9fc7a21dbaf1ee906d494
     permissions:
       contents: read
     with:
@@ -50,7 +50,7 @@ jobs:
       opciones: '--sin-sensibilidad --json-solo'
       artefacto_completo: true
       laboratorio: LK-Corporation/lab-integraciones
-      laboratorio_ref: e704b97b560a252cfac2cdeae68ed1530cc78be7
+      laboratorio_ref: c9d49d9566d14121cef9fc7a21dbaf1ee906d494
       nombre: ejemplo-propio
 
   ejemplo-comprobado:

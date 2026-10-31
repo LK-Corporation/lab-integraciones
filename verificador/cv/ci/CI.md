@@ -57,6 +57,12 @@ base, para separar lo que ya conoces de lo que acaba de aparecer.
    - **`laboratorio_ref` es obligatoria y tiene que ser el mismo commit entero (40 hex) que en `uses:`.** Una rama o una
      etiqueta se rechazan con el código 2. El juez, la herramienta y el corpus son los de ese commit, y tu base se hizo con ellos.
    - **Cuando subas de commit y cambie el juez o el corpus, regenera la base.** Un juez distinto se avisa y la base propuesta lo marca (`juez_cambiado`).
+     Sin rehacerla, el flujo sigue en verde en el modo `pasa` mientras el juez nuevo no cambie los casos que ya estaban: los
+     casos que no estaban en la base solo se anotan (`casos_nuevos`) y el juez y el corpus distintos son avisos. Se midió al
+     subir el pin del ejemplo al commit con MDM: los casos de antes no cambiaron y aparecieron 40 nuevos, sin juzgar frente a
+     nada. Mira los avisos o compruébalos desde fuera, como `ejemplo-comprobado`.
+     La receta del ejemplo (`ejemplo-ci/ci/hacer_base.sh`) cuenta los casos que junta la herramienta en el commit fijado:
+     el número cambia con el corpus y no hay que tocarlo a mano.
 
 ## Lo que cambia desde la etapa 24 (para quien ya lo usaba)
 

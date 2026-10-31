@@ -1,0 +1,19 @@
+{
+ "etapa": "27, subir el pin del proyecto de ejemplo: previsión del programador, fijada antes de medir y antes de leer a Jev",
+ "pin_nuevo": "c9d49d9566d14121cef9fc7a21dbaf1ee906d494",
+ "base_de_la_prevision": "La lectura de cv/ci/linea_base.py (un caso que no está en la base va a casos_nuevos y no es motivo de fallo; juez_distinto y corpus_distinto son avisos en modo pasa), de cv/ci/comprobar_ejemplo.py (nada_nuevo exige casos_nuevos vacío) y de ejemplo-ci/conversor.py (rechaza lo que no es ADT, ORU ni VXU). Nada medido aún.",
+ "sin_rehacer_la_base": {
+  "ejemplo_verificar": {"prevision": "pasa, con avisos juez_distinto y corpus_distinto y 40 casos_nuevos (los MDM, rechazados por el conversor)", "p": 0.8},
+  "ejemplo_propio_verificar": {"prevision": "pasa, con el aviso juez_distinto", "p": 0.8},
+  "ejemplo_comprobado": {"prevision": "falla: la comprobación de fuera exige nada nuevo", "p": 0.85}
+ },
+ "con_la_base_rehecha": {
+  "n_casos_ejemplo": 389,
+  "rojo_n_casos_con_el_hallazgo": 164,
+  "p_ejemplo_verde_a_la_primera": 0.85,
+  "p_rojo_como_se_espera_a_la_primera": 0.85,
+  "p_la_receta_basta_sin_tocar_la_guia": 0.75
+ },
+ "pushes_previstos": [1, 3],
+ "pushes_mas_probable": 2
+}

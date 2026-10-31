@@ -1,0 +1,6 @@
+{
+ "q1_sin_base": {"type": "choice", "instructions": "Pregunta 1: sin rehacer la base, qué hará la llamada principal.", "criteria": {"pasa": "Pasa, con avisos.", "falla": "Falla."}},
+ "q2_comprobado": {"type": "choice", "instructions": "Pregunta 2: sin rehacer la base, qué hará la comprobación de fuera.", "criteria": {"pasa": "Pasa.", "falla": "Falla."}},
+ "q3_verde": {"type": "choice", "instructions": "Pregunta 3: con la base rehecha, si saldrá todo en verde a la primera en GitHub.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q4_rojo": {"type": "choice", "instructions": "Pregunta 4: cuántos casos tendrá el run en rojo con la base rehecha.", "criteria": {"igual": "Los mismos 164.", "mas": "Más de 164.", "menos": "Menos de 164."}}
+}

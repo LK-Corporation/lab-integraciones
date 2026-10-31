@@ -5,5 +5,5 @@
  "a": "GENERO = {\"F\": \"male\", ",
  "hallazgo_esperado": [["PID-8", "fidelidad", "valor_distinto"]],
  "_que": "El run en rojo (etapa 24): la tabla de genero del conversor del ejemplo pasa a dar «male» para F. En cada caso con PID-8 = F y Patient en la salida, el juez ve PID-8 con otro valor; ningun otro triple cambia. Es el defecto de JUGUETE-GENERO (P-CI-3), sembrado en un conversor que no es el juguete.",
- "_confirmado": "26-oct-2026, hacer_base.sh paso 9 con el juez publicado: comparar --esperar falla da 0, con nuevos_distintos [[PID-8, fidelidad, valor_distinto]] en 164 de los 349 casos; --esperar pasa da 10, con motivos [hallazgo_nuevo] y solo el aviso huella_distinta"
+ "_confirmado": "31-oct-2026 (etapa 27, pin c9d49d9, juez cb1338ca), hacer_base.sh paso 9: comparar --esperar falla da 0, con nuevos_distintos [[PID-8, fidelidad, valor_distinto]] en 164 de los 389 casos (los 40 MDM los rechaza el conversor, sin el defecto); --esperar pasa da 10, con motivos [hallazgo_nuevo] y solo el aviso huella_distinta"
 }
