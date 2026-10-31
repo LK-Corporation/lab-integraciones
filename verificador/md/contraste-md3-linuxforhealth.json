@@ -1,0 +1,90 @@
+[
+  {
+    "id": "H1",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:265-270",
+    "cita": "assertThat(description).isEqualTo(\"This segment is for description\"); // TXA.16",
+    "nota": "doc_ref_description_test pone un texto en TXA-16 y afirma que acaba en DocumentReference.description, no en identifier (es la muestra L259). En las 39 bases pasa lo mismo: description = TXA-16 desescapado y ningún identifier lo lleva."
+  },
+  {
+    "id": "H2",
+    "declarada": "si",
+    "donde": "documentacion",
+    "referencia": "hl7v2-fhir-converter-v1.1.0.jar!/hl7/resource/DocumentReference.yml:229-230",
+    "cita": "If OBX is any other type, (not TX) the content is put in an Observation",
+    "nota": "El comentario de la plantilla declara que un OBX no TX no va a DocumentReference.content (se crea un content mínimo vacío); lo repiten Hl7DocumentReferenceFHIRConversionTest.java:146 y el PR #302 (https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/302). Cubre 15 de las 16 bases (FT, ED, RP), aunque la Observation que promete sale sin valor; no cubre B25, donde se pierde el texto de dos OBX TX porque el primer OBX es CE, contra el propio comentario de la línea 214 («If OBX is TX type, create an attachment»)."
+  },
+  {
+    "id": "H3",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/message/Hl7MDMMessageTest.java:304-356",
+    "cita": "Light check that Observation contains NTE for OBX",
+    "nota": "test_mdm_ORDER_with_OBXnotTX (muestra L305) afirma que las NTE de un OBX no TX van a Observation.note, no al documento; igual en B27 y en ms-MDM-T02-01. No cubre B26: tras un OBX TX no se crea Observation (Observation.yml:49-50) y la NTE se pierde del todo, cosa que nada declara."
+  },
+  {
+    "id": "H4",
+    "declarada": "no",
+    "donde": null,
+    "referencia": "hl7v2-fhir-converter-v1.1.0.jar!/hl7/resource/DocumentReference.yml:221",
+    "cita": "TODO: in future, if other than plain text, create a mapping for content type",
+    "nota": "Solo se declara que contentType es siempre text/plain (este TODO y Hl7DocumentReferenceFHIRConversionTest.java:125), no que el FT llegue con sus órdenes de formato crudas; ninguna prueba de src/test usa FT ni escapes, y nada en README/TEMPLATING ni en los 28 issues/PR. Además, en B24 el FT entra en el attachment porque el primer OBX es TX, contra el comentario de DocumentReference.yml:229."
+  },
+  {
+    "id": "H5",
+    "declarada": "dudoso",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:79-103",
+    "cita": "Value passed to Authenticator is used as Identifier value in practitioner",
+    "nota": "La prueba afirma que el authenticator sale de TXA-22 (con TXA-10 vacío), que es el mecanismo de B37 (TXA-22 PR02 gana a TXA-10 PR03). Pero ninguna prueba tiene TXA-10 y TXA-22 valorados a la vez; la precedencia «TXA.22 | TXA.10» solo está en el código de DocumentReference.yml:209, sin comentario."
+  },
+  {
+    "id": "H6",
+    "declarada": "no",
+    "donde": null,
+    "referencia": "hl7v2-fhir-converter-v1.1.0.jar!/hl7/codesystem/v2ToFhirMapping.yml:131-135",
+    "cita": "UN: current",
+    "nota": "La única pista es esa fila de la tabla bajo la etiqueta «#TXA.19», que es código sin comentario que explique la decisión. doc_ref_status_test (Hl7DocumentReferenceFHIRConversionTest.java:380-425) solo prueba OB, el respaldo de OBR-25 y el valor por defecto; nada en Hl7MDMMessageTest, en los issues/PR (#264, #285) ni en la documentación."
+  },
+  {
+    "id": "H7",
+    "declarada": "no",
+    "donde": null,
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7OrderRequestFHIRConversionTest.java:165,229-230",
+    "cita": "83036E^HEMOGLOBIN A1C^PACSEAP^^^^^^HEMOGLOBIN A1C",
+    "nota": "Ninguna prueba afirma un CWE con CWE.9 distinto de CWE.2: aquí CWE.9 = CWE.2 y no distingue, CodeableConceptTest no tiene CWE.9, y la precedencia «CWE.2 | CWE.9» solo está en el código de CodeableConcept.yml:79. El issue #184 / PR #185 («Text should contain original text, not coding display text», fuera del inventario MDM) habla del texto dado frente al display buscado, no de CWE.9."
+  },
+  {
+    "id": "H8",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:79,101-103",
+    "cita": "assertThat(documentReference.getAuthenticator().getDisplay()).isEqualTo(\"MD JOHN K DOE\");",
+    "nota": "doc_ref_authenticator_and_author_test deja TXA-10 vacío, pone JOHN DOE en TXA-22 y afirma que es el authenticator (es la muestra L73). Comprobado: en las 18 muestras de H8, TXA-10 está vacío y TXA-22 valorado."
+  },
+  {
+    "id": "H9",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:487-500",
+    "cita": "Test masterIdentifier uses the backup value(12.3) and does not have a system",
+    "nota": "Con TXA-12 = ^SYSTEM^<BACKUPID> afirma masterIdentifier.value '<BACKUPID>' (es la muestra L488). Lo dice también el PR #284 (https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/284, fuera del inventario MDM): «fall back to 12.3 with no system if 12.1 is not available»."
+  },
+  {
+    "id": "H10",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:293-304",
+    "cita": "assertThat(docStatus.toCode()).isEqualTo(\"final\"); // OBX.11",
+    "nota": "«Check OBX.11 as fallback»: con TXA-17 vacío y OBX-11 F afirma docStatus 'final' (es la muestra L294); en las 8 muestras de H10, TXA-17 está vacío y OBX-11 valorado. También el PR #264 (https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/264): «Fix doc status fallback to OBX-11»."
+  },
+  {
+    "id": "H11",
+    "declarada": "si",
+    "donde": "prueba",
+    "referencia": "src/test/java/io/github/linuxforhealth/hl7/segments/Hl7DocumentReferenceFHIRConversionTest.java:396-409",
+    "cita": "TXA.19 value is empty so OBR.25 is used",
+    "nota": "Con TXA-19 vacío y OBR-25 X afirma status 'entered-in-error' (es la muestra L398). También el PR #264 (https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/264): «Fix status fallback to OBR-25 test»."
+  }
+]

@@ -1,0 +1,370 @@
+{
+ "etapa": "26 (MDM_T02), MD2-b: previsión sellada antes de juzgar las 40 bases (md/diseno-md.md §6)",
+ "decisiones": {
+  "Q-MD-D-1": "solo_t02",
+  "Q-MD-D-2": "nota",
+  "Q-MD-D-3": "literal_o_registrado",
+  "Q-MD-D-4": "literal_o_mapa_y_literal_invalido",
+  "Q-MD-D-5": "cualquier_reparto",
+  "Q-MD-D-6": "nota",
+  "Q-MD-D-7": "una_por_orden",
+  "Q-MD-D-8": "nota",
+  "Q-MD-D-9": "extension_y_coherente",
+  "Q-MD-D-10": "basico",
+  "Q-MD-D-11": "cualquiera",
+  "Q-MD-D-12": "nota"
+ },
+ "sensibilidad": "MD2-c da también la N con la alternativa de cada una de las ocho de ALTERNATIVA_MD (Q-MD-D-1, 3, 4, 6, 8, 9, 11 y 12), una a una.",
+ "base_de_la_prevision": "La tabla de §6.2 del diseño (a ciegas), corregida solo con lo visto en E-MD-3 y MD1-a: las salidas de los dos conversores sobre los 38 MDM_T02 públicos (privado/mdm/md1a/), nunca sobre las 40 bases. Cambios respecto a §6.2: MC-MD-9, MC-MD-17 y MC-MD-19 suben mucho para Microsoft (el texto de los OBX va a Observation y no llega al documento; sin content en 26 de 37; nunca context.related) y bajan para LinuxForHealth (todo el texto en un attachment; related en 33); MC-MD-6 sube para Microsoft (nunca date); MC-MD-7 sube para LinuxForHealth (authenticator desde TXA-22); MC-MD-18 sube en los dos (NTE perdidos 3 de 3); MC-MD-13, 14 y 15 suben en los dos (el ED público llega sin data en los dos); MC-MD-21 sube para LinuxForHealth (PV1-2, el mecanismo ya declarado de ADT); MC-MD-11 baja en los dos por Q-MD-D-3 (b): text/plain no cuenta. Con Q-MD-D-4 (b), el literal de TXA-17 cuenta como fhir_invalido.",
+ "conversores": {
+  "microsoft": {
+   "corre_en_caja": "dato de E-MD-3: 38 de 38 Bundles en MDM_T02",
+   "categorias_pct": {
+    "correcto": [
+     0,
+     5
+    ],
+    "fallo_silencioso": [
+     90,
+     100
+    ],
+    "rechazo_incorrecto": [
+     0,
+     5
+    ],
+    "indeterminado": [
+     0,
+     3
+    ]
+   },
+   "mecanismos_distintos_que_cuentan": [
+    7,
+    13
+   ],
+   "p_al_menos_una_nueva_confirmada": 0.8
+  },
+  "linuxforhealth": {
+   "corre_en_caja": "dato de E-MD-3: 38 de 38 Bundles en MDM_T02",
+   "categorias_pct": {
+    "correcto": [
+     0,
+     10
+    ],
+    "fallo_silencioso": [
+     85,
+     100
+    ],
+    "rechazo_incorrecto": [
+     0,
+     10
+    ],
+    "indeterminado": [
+     0,
+     5
+    ]
+   },
+   "mecanismos_distintos_que_cuentan": [
+    6,
+    12
+   ],
+   "p_al_menos_una_nueva_confirmada": 0.7
+  }
+ },
+ "p_al_menos_una_nueva_confirmada_en_alguno": 0.9,
+ "mecanismos": [
+  {
+   "id": "MC-MD-1",
+   "hecho": "TXA-17",
+   "ruta": "DocumentReference.docStatus",
+   "que": "el código de la 0271 tal cual (fhir_invalido) o ausente (dato_perdido)",
+   "p": {
+    "microsoft": 0.6,
+    "linuxforhealth": 0.45
+   },
+   "depende_de": "Q-MD-D-4"
+  },
+  {
+   "id": "MC-MD-2",
+   "hecho": "TXA-19",
+   "ruta": "DocumentReference.status",
+   "que": "CA/OB/UN con status incoherente o sin el código en la extensión",
+   "p": {
+    "microsoft": 0.7,
+    "linuxforhealth": 0.6
+   },
+   "depende_de": "Q-MD-D-9"
+  },
+  {
+   "id": "MC-MD-3",
+   "hecho": "TXA-2",
+   "ruta": "DocumentReference.type",
+   "que": "solo text/display, o código sin el original",
+   "p": {
+    "microsoft": 0.2,
+    "linuxforhealth": 0.2
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-4",
+   "hecho": "TXA-12",
+   "ruta": "DocumentReference.masterIdentifier",
+   "que": "ausente o con el namespace en el value",
+   "p": {
+    "microsoft": 0.35,
+    "linuxforhealth": 0.35
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-5",
+   "hecho": "TXA-16",
+   "ruta": "DocumentReference.identifier",
+   "que": "perdido, truncado o sin desescapar",
+   "p": {
+    "microsoft": 0.3,
+    "linuxforhealth": 0.6
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-6",
+   "hecho": "TXA-6",
+   "ruta": "DocumentReference.date",
+   "que": "ausente con fecha, hora inventada o sin zona",
+   "p": {
+    "microsoft": 0.95,
+    "linuxforhealth": 0.3
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-7",
+   "hecho": "TXA-9/TXA-10",
+   "ruta": "DocumentReference.author/authenticator",
+   "que": "ausentes, intercambiados o desde TXA-22",
+   "p": {
+    "microsoft": 0.3,
+    "linuxforhealth": 0.6
+   },
+   "depende_de": "Q-MD-D-11"
+  },
+  {
+   "id": "MC-MD-8",
+   "hecho": "TXA-18",
+   "ruta": "DocumentReference.securityLabel",
+   "que": "ausente o con el código perdido",
+   "p": {
+    "microsoft": 0.15,
+    "linuxforhealth": 0.15
+   },
+   "depende_de": "AMB-MD-20"
+  },
+  {
+   "id": "MC-MD-9",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content.attachment.data",
+   "que": "TX/FT: el texto no llega entero o sin Base64",
+   "p": {
+    "microsoft": 0.95,
+    "linuxforhealth": 0.2
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-10",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content.attachment.data",
+   "que": "repeticiones de OBX-5 unidas sin salto de línea",
+   "p": {
+    "microsoft": 0.1,
+    "linuxforhealth": 0.35
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-11",
+   "hecho": "OBX-2/TXA-3",
+   "ruta": "DocumentReference.content.attachment.contentType",
+   "que": "TX/FT sin contentType (text/plain no cuenta)",
+   "p": {
+    "microsoft": 0.85,
+    "linuxforhealth": 0.1
+   },
+   "depende_de": "Q-MD-D-3"
+  },
+  {
+   "id": "MC-MD-12",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content.attachment.data",
+   "que": "escapes o formato FT crudos",
+   "p": {
+    "microsoft": 0.1,
+    "linuxforhealth": 0.4
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-13",
+   "hecho": "OBX-2",
+   "ruta": "DocumentReference.content.attachment.contentType",
+   "que": "ED: contentType ausente o que contradice ED.2/ED.3",
+   "p": {
+    "microsoft": 0.75,
+    "linuxforhealth": 0.7
+   },
+   "depende_de": "Q-MD-D-3"
+  },
+  {
+   "id": "MC-MD-14",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content.attachment.data",
+   "que": "ED: datos perdidos, sin convertir o codificados dos veces",
+   "p": {
+    "microsoft": 0.85,
+    "linuxforhealth": 0.75
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-15",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content.attachment.url",
+   "que": "RP: url perdida o con prefijo",
+   "p": {
+    "microsoft": 0.7,
+    "linuxforhealth": 0.7
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-16",
+   "hecho": "TXA-12/OBX-5",
+   "ruta": "DocumentReference",
+   "que": "varios OBX → varias DocumentReference, o un content que mezcla dos",
+   "p": {
+    "microsoft": 0.1,
+    "linuxforhealth": 0.1
+   },
+   "depende_de": "Q-MD-D-5"
+  },
+  {
+   "id": "MC-MD-17",
+   "hecho": "OBX-5",
+   "ruta": "DocumentReference.content",
+   "que": "content ausente (fhir_invalido); el Observation de más es nota",
+   "p": {
+    "microsoft": 0.9,
+    "linuxforhealth": 0.1
+   },
+   "depende_de": "Q-MD-D-8"
+  },
+  {
+   "id": "MC-MD-18",
+   "hecho": "NTE-3",
+   "ruta": "DocumentReference.content",
+   "que": "NTE bajo OBX perdidos",
+   "p": {
+    "microsoft": 0.9,
+    "linuxforhealth": 0.9
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-19",
+   "hecho": "ORC-1",
+   "ruta": "DocumentReference.context.related",
+   "que": "sin referencia a cada ServiceRequest, o ServiceRequest ausente",
+   "p": {
+    "microsoft": 0.95,
+    "linuxforhealth": 0.2
+   },
+   "depende_de": "Q-MD-D-7, Q-MD-D-10"
+  },
+  {
+   "id": "MC-MD-20",
+   "hecho": "ORC-2/ORC-3",
+   "ruta": "ServiceRequest.identifier",
+   "que": "sin PLAC/FILL o con los tipos intercambiados",
+   "p": {
+    "microsoft": 0.3,
+    "linuxforhealth": 0.3
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-21",
+   "hecho": "PV1",
+   "ruta": "Encounter",
+   "que": "los mecanismos de PV1 ya declarados en ADT (clase, ubicación, servicio)",
+   "p": {
+    "microsoft": 0.6,
+    "linuxforhealth": 0.95
+   },
+   "depende_de": null
+  },
+  {
+   "id": "MC-MD-22",
+   "hecho": "MSH",
+   "ruta": "Bundle",
+   "que": "rechazo de un MDM_T02 válido",
+   "p": {
+    "microsoft": 0.05,
+    "linuxforhealth": 0.1
+   },
+   "depende_de": null
+  }
+ ],
+ "fuera_de_previsto": [
+  "un mecanismo que cuente y no esté en esta lista",
+  "un porcentaje de categoría fuera de su rango",
+  "indeterminado > 5 % (lector o emparejador)",
+  "un conversor que rechace más del 10 % del corpus 2.5",
+  "lo que no preveo: un recurso_inventado de DocumentReference, una referencia_rota en subject o fhir_invalido masivo por Base64"
+ ],
+ "regla": "Cada «fuera de previsto» se adjudica (juez / perfil / corpus / caja) con cita antes de MD3. Un defecto del juez se arregla con su prueba y MD2-c se repite entero; dos repeticiones como máximo; luego el mecanismo pasa a L-MD y se declara.",
+ "fecha": "2026-10-31T06:57:43+01:00",
+ "juez": {
+  "huella": "f4fef60400e271415f9d058fcbe407465f445407e12532da4e425543c8f74e03",
+  "commit": "597bd53472d7c59c92214347cf55829fbebd5b6a",
+  "servidor": "1.4"
+ },
+ "corpus": {
+  "bases_mdm_huella": "601bd787aa4bf28b88a9fb6ea00c6d599c7216faac970374ab5c221974099050",
+  "n_mdm": 40,
+  "bases_mdm_jsonl_sha256": "efb9e7c3bd11d14f426fdb813930376d05c06e8d08676ae899d689d82231d8ab"
+ },
+ "programador_cuerpo_sha256": "8bcd52504deb6bfccc44b6d8e3c8ba7eec6260bb819ffcf4d381e73132e09bb3",
+ "jev": {
+  "_que": "previsión de Jev con un estado neutro (md/estado_prevision_mdm.md); el cuerpo del programador se fijó antes de leerla",
+  "respuestas": {
+   "q1_alguna": {
+    "respuesta": "si",
+    "confianza": 0.74,
+    "reparto": {
+     "si": 0.87,
+     "no": 0.13
+    }
+   },
+   "q2_n": {
+    "respuesta": "siete_o_mas",
+    "confianza": 0.61,
+    "reparto": {
+     "siete_o_mas": 0.71,
+     "cero": 0.26,
+     "tres_a_seis": 0.02,
+     "una_o_dos": 0.01
+    }
+   },
+   "q3_k": {
+    "respuesta": "los_dos",
+    "confianza": 0.67,
+    "reparto": {
+     "los_dos": 0.78,
+     "ninguno": 0.18,
+     "uno": 0.04
+    }
+   }
+  }
+ }
+}

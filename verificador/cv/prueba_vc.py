@@ -330,7 +330,7 @@ def p06():
     import cv3_minimos as MIN
     c = os.path.join(tmp("corpus"), "c")
     co = VC.generar_corpus(c, lab=True, minimos=True)
-    mira("n", co["n"], {"adt": 263, "oru": 40, "vxu": 40, "minimos": 68, "muestras": 0, "propio": 0})         # DV-VX-5: vxu
+    mira("n", co["n"], {"adt": 263, "oru": 40, "vxu": 40, "minimos": 68, "muestras": 0, "propio": 0, "mdm": 40})  # DV-VX-5: vxu; etapa 26: mdm
     man = manifiesto_cv2()
     lab = {k: v for k, v in man.items() if k.startswith(("adt/", "oru/"))}
     iguales = sum(1 for k, v in lab.items() if os.path.exists(os.path.join(c, k)) and sha(open(os.path.join(c, k), "rb").read()) == v)
@@ -350,7 +350,7 @@ def p06():
     finally:
         VC.normal = normal
     c3 = os.path.join(tmp("corpus"), "c")
-    mira("sin mínimos", sum(VC.generar_corpus(c3, lab=True, minimos=False)["n"].values()), 343)       # DV-VX-5: 303 + 40 de VXU
+    mira("sin mínimos", sum(VC.generar_corpus(c3, lab=True, minimos=False)["n"].values()), 383)       # DV-VX-5: 303 + 40 de VXU; + 40 de MDM
 
 
 def p07():

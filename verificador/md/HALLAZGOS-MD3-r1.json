@@ -1,0 +1,543 @@
+{
+ "_que": "Etapa 26, MD3: la lista numerada de los hallazgos que cuentan en MDM (H-n), por conversor y mecanismo (hecho sin índice,",
+ "hallazgos": [
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "TXA-16",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B01",
+    "MDM-B02",
+    "MDM-B03",
+    "MDM-B04",
+    "MDM-B05",
+    "MDM-B06",
+    "MDM-B07",
+    "MDM-B08",
+    "MDM-B09",
+    "MDM-B10",
+    "MDM-B11",
+    "MDM-B12",
+    "MDM-B13",
+    "MDM-B14",
+    "MDM-B15",
+    "MDM-B16",
+    "MDM-B17",
+    "MDM-B18",
+    "MDM-B19",
+    "MDM-B20",
+    "MDM-B21",
+    "MDM-B22",
+    "MDM-B23",
+    "MDM-B24",
+    "MDM-B25",
+    "MDM-B26",
+    "MDM-B27",
+    "MDM-B28",
+    "MDM-B29",
+    "MDM-B30",
+    "MDM-B31",
+    "MDM-B32",
+    "MDM-B33",
+    "MDM-B34",
+    "MDM-B35",
+    "MDM-B36",
+    "MDM-B37",
+    "MDM-B38",
+    "MDM-B39"
+   ],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L259__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L42__MDMT02"
+   ],
+   "ejemplos": [
+    "DocumentReference.identifier: falta '/docs/2023/alta0001.txt' (TXA-16)",
+    "DocumentReference.identifier: falta '/docs/2023/hc0002.txt' (TXA-16)",
+    "DocumentReference.identifier: falta '/docs/2023/cons0003.txt' (TXA-16)"
+   ],
+   "id": "H1"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "OBX-5",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B03",
+    "MDM-B05",
+    "MDM-B06",
+    "MDM-B07",
+    "MDM-B13",
+    "MDM-B14",
+    "MDM-B15",
+    "MDM-B16",
+    "MDM-B17",
+    "MDM-B18",
+    "MDM-B19",
+    "MDM-B21",
+    "MDM-B23",
+    "MDM-B24",
+    "MDM-B25",
+    "MDM-B27"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "DocumentReference.content: del OBX-5 FT faltan 13 de 13 palabras, la primera 'se'",
+    "DocumentReference.content: falta el attachment de la repetición 1 de OBX-5 (ED, 16 octetos)",
+    "DocumentReference.content: falta el attachment con url 'ptr-b06-1' (repetición 1 de OBX-5, RP)"
+   ],
+   "id": "H2"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "NTE-3",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B26",
+    "MDM-B27"
+   ],
+   "muestras": [
+    "lfh-Hl7MDMMessageTest__L305__MDMT02",
+    "ms-MDM-T02-01"
+   ],
+   "ejemplos": [
+    "DocumentReference.content: del NTE-3 faltan 5 de 5 palabras, la primera 'sin'",
+    "DocumentReference.content: del NTE-3 faltan 13 de 13 palabras, la primera 'exploracion'",
+    "DocumentReference.content: del NTE-3 faltan 12 de 12 palabras, la primera 'se'"
+   ],
+   "id": "H3"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "OBX-5",
+   "subtipo": "valor_distinto",
+   "bases": [
+    "MDM-B24"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "DocumentReference.content: ['\\\\.br\\\\'] crudos con un contentType que no es text/hl7v2"
+   ],
+   "id": "H4"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "TXA-10",
+   "subtipo": "valor_distinto",
+   "bases": [
+    "MDM-B37"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "DocumentReference.authenticator: ['PR02'] no es la primera de TXA-10 ['PR03^Patron^Irene'] (Q-MD-D-11)"
+   ],
+   "id": "H5"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "TXA-19",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B10"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "DocumentReference.status 'current': TXA-19 'UN' no se conserva (ni status coherente ni status.extension[alternate-codes])"
+   ],
+   "id": "H6"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "TXA-12",
+   "subtipo": "dato_inventado",
+   "bases": [],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L488__MDMT02"
+   ],
+   "ejemplos": [
+    "DocumentReference.masterIdentifier.value '<BACKUPID>' sin TXA-12.1 (EI.1 vacío; el valor es EI.3)"
+   ],
+   "id": "H7"
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "TXA-19",
+   "subtipo": "valor_distinto",
+   "bases": [],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L398__MDMT02"
+   ],
+   "ejemplos": [
+    "DocumentReference.status: esperado 'current' (TXA-19 vacío), observado 'entered-in-error'"
+   ],
+   "id": "H8"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "OBX-5",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B01",
+    "MDM-B02",
+    "MDM-B03",
+    "MDM-B04",
+    "MDM-B05",
+    "MDM-B06",
+    "MDM-B07",
+    "MDM-B08",
+    "MDM-B09",
+    "MDM-B10",
+    "MDM-B11",
+    "MDM-B12",
+    "MDM-B13",
+    "MDM-B14",
+    "MDM-B15",
+    "MDM-B16",
+    "MDM-B17",
+    "MDM-B18",
+    "MDM-B19",
+    "MDM-B20",
+    "MDM-B21",
+    "MDM-B22",
+    "MDM-B23",
+    "MDM-B24",
+    "MDM-B25",
+    "MDM-B26",
+    "MDM-B27",
+    "MDM-B28",
+    "MDM-B29",
+    "MDM-B30",
+    "MDM-B31",
+    "MDM-B32",
+    "MDM-B34",
+    "MDM-B35",
+    "MDM-B36",
+    "MDM-B37",
+    "MDM-B38",
+    "MDM-B39"
+   ],
+   "muestras": [
+    "lfh-Hl7MDMMessageTest__L48__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT06",
+    "ms-MDM-T02-02",
+    "ms-MDM-T02-03"
+   ],
+   "ejemplos": [
+    "DocumentReference.content: del OBX-5 TX faltan 6 de 6 palabras, la primera 'dolor'",
+    "DocumentReference.content: del OBX-5 TX faltan 9 de 9 palabras, la primera 'afebril'",
+    "DocumentReference.content: del OBX-5 TX faltan 7 de 7 palabras, la primera 'movilidad'"
+   ],
+   "id": "H9"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "ORC-1",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B01",
+    "MDM-B02",
+    "MDM-B03",
+    "MDM-B04",
+    "MDM-B05",
+    "MDM-B06",
+    "MDM-B07",
+    "MDM-B09",
+    "MDM-B10",
+    "MDM-B11",
+    "MDM-B12",
+    "MDM-B13",
+    "MDM-B14",
+    "MDM-B15",
+    "MDM-B16",
+    "MDM-B17",
+    "MDM-B18",
+    "MDM-B19",
+    "MDM-B20",
+    "MDM-B21",
+    "MDM-B22",
+    "MDM-B23",
+    "MDM-B24",
+    "MDM-B25",
+    "MDM-B26",
+    "MDM-B27",
+    "MDM-B28",
+    "MDM-B29",
+    "MDM-B30",
+    "MDM-B31",
+    "MDM-B32",
+    "MDM-B34",
+    "MDM-B35",
+    "MDM-B36",
+    "MDM-B37",
+    "MDM-B38",
+    "MDM-B39"
+   ],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L111__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L135__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L154__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L178__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L240__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L259__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L278__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L294__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L310__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L328__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L359__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L383__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L398__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L413__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L42__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L432__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L458__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L473__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L488__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L508__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L73__MDMT02",
+    "lfh-Hl7IdentifierFHIRConversionTest__L844",
+    "lfh-Hl7IdentifierFHIRConversionTest__L905",
+    "lfh-Hl7IdentifierFHIRConversionTest__L966",
+    "lfh-Hl7MDMMessageTest__L273__MDMT02",
+    "lfh-Hl7MDMMessageTest__L305__MDMT02",
+    "lfh-Hl7MDMMessageTest__L370__MDMT02",
+    "lfh-Hl7MDMMessageTest__L407__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT06",
+    "ms-MDM-T02-01",
+    "ms-MDM-T02-02",
+    "ms-MDM-T02-03"
+   ],
+   "ejemplos": [
+    "DocumentReference.context.related: falta la referencia al ServiceRequest del grupo 1",
+    "DocumentReference.context.related: falta la referencia al ServiceRequest del grupo 2",
+    "DocumentReference.context.related: falta la referencia al ServiceRequest del grupo 3"
+   ],
+   "id": "H10"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "TXA-6",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B01",
+    "MDM-B02",
+    "MDM-B03",
+    "MDM-B04",
+    "MDM-B05",
+    "MDM-B06",
+    "MDM-B07",
+    "MDM-B08",
+    "MDM-B09",
+    "MDM-B10",
+    "MDM-B11",
+    "MDM-B12",
+    "MDM-B13",
+    "MDM-B14",
+    "MDM-B15",
+    "MDM-B16",
+    "MDM-B17",
+    "MDM-B18",
+    "MDM-B19",
+    "MDM-B20",
+    "MDM-B21",
+    "MDM-B22",
+    "MDM-B23",
+    "MDM-B24",
+    "MDM-B25",
+    "MDM-B26",
+    "MDM-B27",
+    "MDM-B28",
+    "MDM-B29",
+    "MDM-B30",
+    "MDM-B31",
+    "MDM-B32",
+    "MDM-B35",
+    "MDM-B36",
+    "MDM-B37",
+    "MDM-B38",
+    "MDM-B39"
+   ],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L240__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L278__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L294__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L310__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L328__MDMT02",
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L42__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT06",
+    "ms-MDM-T02-01",
+    "ms-MDM-T02-02",
+    "ms-MDM-T02-03"
+   ],
+   "ejemplos": [
+    "DocumentReference.date: falta (TXA-6 = '20230120090100+0100')",
+    "DocumentReference.date: falta (TXA-6 = '20230131090200+0100')",
+    "DocumentReference.date: falta (TXA-6 = '20230211090300+0100')"
+   ],
+   "id": "H11"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "NTE-3",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B26",
+    "MDM-B27"
+   ],
+   "muestras": [
+    "ms-MDM-T02-01"
+   ],
+   "ejemplos": [
+    "DocumentReference.content: del NTE-3 faltan 5 de 5 palabras, la primera 'sin'",
+    "DocumentReference.content: del NTE-3 faltan 13 de 13 palabras, la primera 'exploracion'",
+    "DocumentReference.content: del NTE-3 faltan 12 de 12 palabras, la primera 'se'"
+   ],
+   "id": "H12"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "MSH-9",
+   "subtipo": "incorrecto",
+   "bases": [
+    "MDM-B33"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "el conversor devolvió error 'Process failed: The format of Date or DateTime is invalid: 20240107123300+0100~20240107133300+0100.\\n' con un mensaje que la guía convierte"
+   ],
+   "id": "H13"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "OBX-5",
+   "subtipo": "fhir_invalido",
+   "bases": [
+    "MDM-B40"
+   ],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L111__MDMT02",
+    "lfh-Hl7MDMMessageTest__L159__MDMT02",
+    "lfh-Hl7MDMMessageTest__L214__MDMT02",
+    "lfh-Hl7MDMMessageTest__L273__MDMT02",
+    "lfh-Hl7MDMMessageTest__L305__MDMT02",
+    "lfh-Hl7MDMMessageTest__L370__MDMT02"
+   ],
+   "ejemplos": [
+    "DocumentReference.content: falta (1..*), con 1 OBX con destino en la guía",
+    "DocumentReference.content: falta (1..*), con 3 OBX con destino en la guía",
+    "DocumentReference.content: falta (1..*), con 0 OBX con destino en la guía"
+   ],
+   "id": "H14"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "TXA-19",
+   "subtipo": "dato_perdido",
+   "bases": [
+    "MDM-B10"
+   ],
+   "muestras": [],
+   "ejemplos": [
+    "DocumentReference.status 'current': TXA-19 'UN' no se conserva (ni status coherente ni status.extension[alternate-codes])"
+   ],
+   "id": "H15"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "TXA-19",
+   "subtipo": "valor_distinto",
+   "bases": [
+    "MDM-B12"
+   ],
+   "muestras": [
+    "lfh-Hl7DocumentReferenceFHIRConversionTest__L383__MDMT02"
+   ],
+   "ejemplos": [
+    "DocumentReference.status: con TXA-19 'OB' se espera 'superseded' (Q-MD-D-9), observado 'entered-in-error'; y el código no se conserva en status.extension[alternate-codes]"
+   ],
+   "id": "H16"
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "TXA-17",
+   "subtipo": "fhir_invalido",
+   "bases": [],
+   "muestras": [
+    "lfh-Hl7MDMMessageTest__L48__MDMT02",
+    "lfh-Hl7MDMMessageTest__L48__MDMT06"
+   ],
+   "ejemplos": [
+    "DocumentReference.docStatus 'P' fuera de composition-status (required)"
+   ],
+   "id": "H17"
+  }
+ ],
+ "fuera_de_mdm": [
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PID-13",
+   "subtipo": "codigo_mal_mapeado",
+   "n": 1
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PID-3",
+   "subtipo": "valor_distinto",
+   "n": 1
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PID-5",
+   "subtipo": "codigo_mal_mapeado",
+   "n": 1
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PV1-10",
+   "subtipo": "codigo_mal_mapeado",
+   "n": 1
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PV1-2",
+   "subtipo": "valor_distinto",
+   "n": 78
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PV1-3",
+   "subtipo": "dato_perdido",
+   "n": 43
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PV1-44",
+   "subtipo": "dato_inventado",
+   "n": 44
+  },
+  {
+   "conversor": "linuxforhealth",
+   "hecho": "PV1-6",
+   "subtipo": "dato_perdido",
+   "n": 2
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "PV1-10",
+   "subtipo": "codigo_mal_mapeado",
+   "n": 1
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "PV1-3",
+   "subtipo": "dato_perdido",
+   "n": 42
+  },
+  {
+   "conversor": "microsoft",
+   "hecho": "PV1-6",
+   "subtipo": "dato_perdido",
+   "n": 2
+  }
+ ]
+}

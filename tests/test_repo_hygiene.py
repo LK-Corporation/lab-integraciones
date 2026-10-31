@@ -91,7 +91,18 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/ci/ACCIONES-CI.json", "gh api repos/<accion>/git/ref/tags/<etiqueta>"),   # etapa 24: la orden, con marcadores
     ("verificador/cv/ci/diseno-mant-fable.md", "gh api repos/actions/<a>/contents/action.yml?ref=<sha>"),   # etapa 25: las órdenes, con marcadores
     ("verificador/cv/ci/diseno-mant-fable.md", "`gh api repos/<accion>/git/ref/tags/<etiqueta>`"),
-}
+    # 31-oct-2026, la etapa de MDM: TXA-16 (el fichero del documento) de las bases sintéticas, con forma de ruta a propósito
+    ("verificador/bases_mdm.py", "TXA-16 /docs/2023/alta0001.txt"),
+    ("verificador/bases_mdm.jsonl", "TXA-16 /docs/2023/alta0001.txt"),
+    ("verificador/prueba_conversion_mdm.py", '"/docs/2023/alta0001.txt"'),
+    ("verificador/cv/conversor_juguete.py", '"/docs/2023/alta0001.txt"'),
+    ("verificador/md/MD2.md", "`/docs/2023/alta0001.txt`"),
+    ("verificador/md/diseno-md.md", "TXA-16 `/docs/2023/alta0001.txt`"),
+    ("verificador/md/HALLAZGOS-MD3.json", "DocumentReference.identifier: falta '/docs/2023/"),
+    ("verificador/md/HALLAZGOS-MD3-r1.json", "DocumentReference.identifier: falta '/docs/2023/"),
+    ("verificador/md/contraste-md3-linuxforhealth.json", "hl7v2-fhir-converter-v1.1.0.jar!/hl7/"),   # rutas de dentro del jar
+} | {("verificador/bases_mdm/B%02d.hl7" % n, "|/docs/202") for n in range(1, 41)} \
+  | {("verificador/bases_mdm_secundario/S%02d.hl7" % n, "|/docs/2023/") for n in range(1, 5)}
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
                   "verificador/cv/adaptadores/juguete.json", "verificador/cv/vc/juguete-docker.json",
@@ -142,7 +153,15 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/ci/prevision-cuerpo-mant.json", "verificador/cv/ci/PREVISION-MANT.json", "verificador/cv/ci/AVISOS-MANT.json",
                   "verificador/cv/ci/CORRIDA-MANT-1.json", "verificador/cv/ci/CORRIDA-MANT-1-ejemplo.json", "verificador/cv/ci/CORRIDA-MANT-2.json",
                   "verificador/cv/ci/CORRIDA-MANT-2-demo.json", "verificador/cv/ci/CORRIDA-MANT-3.json", "verificador/cv/ci/CORRIDA-MANT-4.json",
-                  "verificador/cv/ci/CORRIDA-MANT-4-demo.json"}
+                  "verificador/cv/ci/CORRIDA-MANT-4-demo.json",
+                  # 31-oct-2026, la etapa de MDM: el índice del corpus, las preguntas a Jev, la previsión sellada, los hallazgos,
+                  # el contraste, la revisión adversaria, las clases y los pares
+                  "verificador/bases_mdm.jsonl", "verificador/bases_mdm_secundario.jsonl", "verificador/md/preguntas_md0_modelo.json",
+                  "verificador/md/preguntas_qmd.json", "verificador/md/preguntas_prevision_mdm.json", "verificador/md/prevision-cuerpo-mdm.json",
+                  "verificador/md/prevision-mdm.json", "verificador/md/HALLAZGOS-MD3.json", "verificador/md/HALLAZGOS-MD3-r1.json",
+                  "verificador/md/contraste-md3-microsoft.json", "verificador/md/contraste-md3-linuxforhealth.json",
+                  "verificador/md/revision-adversaria-md3.json", "verificador/md/CLASES-MD3.json", "verificador/md/RESULTADO-MD3-pares.json",
+                  "verificador/md/RESULTADO-MD3-pares-main.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

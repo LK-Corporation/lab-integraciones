@@ -1,0 +1,4 @@
+{"id": "S01", "descripcion": "B01 como MDM^T04", "ejercita": null, "campos": null, "de": "B01", "fichero": "bases_mdm_secundario/S01.hl7", "msh10": "MDM-S01", "segmentos": 8}
+{"id": "S02", "descripcion": "B02 como MDM^T06 con TXA-13", "ejercita": null, "campos": null, "de": "B02", "fichero": "bases_mdm_secundario/S02.hl7", "msh10": "MDM-S02", "segmentos": 11}
+{"id": "S03", "descripcion": "B05 como MDM^T08", "ejercita": null, "campos": null, "de": "B05", "fichero": "bases_mdm_secundario/S03.hl7", "msh10": "MDM-S03", "segmentos": 8}
+{"id": "S04", "descripcion": "B08 como MDM^T10 con TXA-13", "ejercita": null, "campos": null, "de": "B08", "fichero": "bases_mdm_secundario/S04.hl7", "msh10": "MDM-S04", "segmentos": 6}

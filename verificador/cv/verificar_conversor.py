@@ -31,6 +31,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 FASE = os.path.dirname(AQUI)
 sys.path[:0] = [AQUI, FASE]
 _argv, sys.argv = sys.argv, ["x", "--silencio"]
+import bases_mdm as BM  # noqa: E402
 import bases_oru as BO  # noqa: E402
 import bases_vxu as BV  # noqa: E402
 import conversion as CV  # noqa: E402
@@ -47,7 +48,7 @@ JUGUETE = os.path.join(AQUI, "conversor_juguete.py")
 ESTUDIO = ("microsoft", "linuxforhealth")                       # Q-VC-D-3 (Jev: solo_estudio): los 68 mínimos, solo con estos
 CAJA = ["--rm", "--network", "none", "--read-only", "--tmpfs", "/tmp", "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
         "--user", "65534:65534", "-e", "HOME=/tmp"]                # la de cv/correr_conversor.py (E-CV-3); no es configurable
-CORPUS = ("adt", "oru", "vxu", "muestras", "minimos", "propio")
+CORPUS = ("adt", "oru", "vxu", "muestras", "minimos", "propio", "mdm")         # etapa 26: mdm al final (CORPUS.index de los seis, igual)
 MARCADORES = ("entrada_dir", "salida_dir", "entrada_fichero", "salida_fichero", "salida_error", "nombre", "base", "plantilla")
 SOLO_LOTE = ("entrada_dir", "salida_dir")
 CLASES8 = ("valor_distinto", "dato_perdido", "dato_inventado", "codigo_mal_mapeado", "valor_imposible_convertido", "recurso",
@@ -64,8 +65,8 @@ FRASE_FIJA = ("Este informe dice qué hallazgos ve el juez y con qué cita. **No
 L_VC = {
     "L-VC-1": "La herramienta no sabe si una discrepancia la tiene declarada el proyecto: no lee salidas esperadas, pruebas, "
               "documentación ni issues. Aquí todo es «sin_contraste».",
-    "L-VC-2": "Solo juzga lo que juzgan adt_conv, oru_conv y vxu_conv: ADT de los ocho eventos, ORU^R01 y VXU^V04. Otro tipo de "
-              "mensaje entra en el corpus y el juez lo aparta como fuera de alcance.",
+    "L-VC-2": "Solo juzga lo que juzgan adt_conv, oru_conv, vxu_conv y mdm_conv: ADT de los ocho eventos, ORU^R01, VXU^V04 y "
+              "MDM^T02. Otro tipo de mensaje entra en el corpus y el juez lo aparta como fuera de alcance.",
     "L-VC-3": "Solo conversores que corran como programa de línea de órdenes dentro de un contenedor Docker, leyendo y escribiendo "
               "ficheros. Un servicio HTTP, una biblioteca o un conversor que necesite red no caben en el adaptador.",
     "L-VC-4": "La imagen debe estar ya en la máquina: la herramienta no descarga nada y no comprueba de dónde salió; registra su "
@@ -393,11 +394,12 @@ def msh9(t):
 
 
 def punto(t):
-    """S-VC-22 y S-VX-13: solo por MSH-9.1; ORU -> oru_conv, VXU -> vxu_conv, lo demás -> adt_conv."""
+    """S-VC-22, S-VX-13 y S-MD-15: solo por MSH-9.1; ORU -> oru_conv, VXU -> vxu_conv, MDM -> mdm_conv, lo demás -> adt_conv."""
     c = _msh9_partes(t)
     if c is None:
         return None
-    return "oru_conv" if c[0].upper().startswith("ORU") else "vxu_conv" if c[0].upper().startswith("VXU") else "adt_conv"
+    t1 = c[0].upper()
+    return "oru_conv" if t1.startswith("ORU") else "vxu_conv" if t1.startswith("VXU") else "mdm_conv" if t1.startswith("MDM") else "adt_conv"
 
 
 def plantilla(t, regla):
@@ -422,6 +424,7 @@ def generar_corpus(carpeta, lab=True, minimos=True, propios=(), muestras=None, l
         textos["adt"] = [(x["id"] + ".hl7", normal(x["mensaje"])) for x in adt]
         textos["oru"] = [("ORU-%s.hl7" % b["id"], normal(BO.cable(b))) for b in BO.BASES]
         textos["vxu"] = [("VXU-%s.hl7" % b["id"], normal(BV.cable(b))) for b in BV.BASES]     # etapa 20 (S-VX-13)
+        textos["mdm"] = [("MDM-%s.hl7" % b["id"], normal(BM.cable(b))) for b in BM.BASES]     # etapa 26 (S-MD-15)
     if muestras:
         for c in ("ms", "lfh"):
             d = os.path.join(muestras, c)

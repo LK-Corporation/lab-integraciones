@@ -169,6 +169,27 @@ PUNTOS["vxu_conv"] = _pe(
      ("OBX", 14, "ts", "consumido"), ("NK1", 15, "0001", "consumido"), ("NK1", 16, "ts", "consumido")],
     "VXU^V04 convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» de Immunization (S-VX-1..14).",
     solo_transformacion=True, familia="vxu")
+# md/diseno-md.md §2.1 [S-MD-1]: MDM^T02 de un tercero, solo transformación (etapa 26). p4/p5 por coherencia con contrato(); en un
+# PE de solo transformación no hay acuse. MDM_T02 ya está en estructuras_25.json; el punto mdm (2584, acuse) no cambia (P-MD-1).
+# Q-MD-D-1 (Jev: solo T02); su alternativa (T04, T06, T08, T10) es conversion_mdm.PE_ALTERNATIVA_EVENTOS.
+PUNTOS["mdm_conv"] = _pe(
+    "mdm_conv", 0, {"MDM": {"T02": "MDM_T02"}},
+    MSH_CONSUMIDOS | {("PID", 3), ("PID", 5), ("PID", 7), ("PID", 8), ("PID", 11), ("PID", 13), ("PID", 14), ("PID", 16),
+                      ("PID", 29), ("PID", 30),
+                      ("PV1", 2), ("PV1", 3), ("PV1", 4), ("PV1", 6), ("PV1", 7), ("PV1", 8), ("PV1", 10), ("PV1", 11), ("PV1", 14),
+                      ("PV1", 17), ("PV1", 19), ("PV1", 36), ("PV1", 44), ("PV1", 45),
+                      ("ORC", 2), ("ORC", 3), ("OBR", 2), ("OBR", 3), ("OBR", 4),
+                      ("TXA", 2), ("TXA", 3), ("TXA", 6), ("TXA", 9), ("TXA", 10), ("TXA", 12), ("TXA", 16), ("TXA", 17),
+                      ("TXA", 18), ("TXA", 19), ("OBX", 2), ("OBX", 5), ("NTE", 3)},
+    [("MSH", 10, "consumido"), ("PID", 3, "consumido"), ("PID", 5, "consumido"), ("TXA", 2, "consumido"), ("TXA", 12, "consumido"),
+     ("TXA", 17, "consumido"), ("PV1", 2, "consumido"), ("MSH", 7, "estricto"), ("EVN", 2, "estricto"), ("OBX", 3, "estricto")],
+    [("MSH", 7, "ts", "estricto"), ("MSH", 18, "0211", "estricto"), ("EVN", 1, "0003", "estricto"), ("EVN", 2, "ts", "estricto"),
+     ("PID", 7, "ts", "consumido"), ("PID", 8, "0001", "consumido"), ("PID", 29, "ts", "consumido"), ("PID", 30, "0136", "consumido"),
+     ("PV1", 2, "0004", "consumido"), ("PV1", 44, "ts", "consumido"), ("PV1", 45, "ts", "consumido"), ("TXA", 1, "nm", "estricto"),
+     ("TXA", 3, "0191", "consumido"), ("TXA", 6, "ts", "consumido"), ("TXA", 17, "0271", "consumido"), ("TXA", 18, "0272", "consumido"),
+     ("TXA", 19, "0273", "consumido"), ("OBX", 2, "0125", "consumido"), ("OBX", 11, "0085", "estricto")],
+    "MDM^T02 convertido por un tercero (HL7 v2 -> FHIR): solo transformación, sin acuse; perfil «guía» de DocumentReference (S-MD-1..17).",
+    solo_transformacion=True, familia="mdm")
 POR_OMISION = "adt_a01"
 NOMBRES = list(PUNTOS)
 

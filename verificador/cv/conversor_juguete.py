@@ -10,8 +10,10 @@ no se confirma a sí mismo).
 
 La directiva va en MSH-8 (Seguridad), que el juez no lee (DV-VC-2: el diseño la ponía en MSH-3, que adt_conv consume);
 el segundo componente es su parámetro. Sin directiva, un Bundle genérico con unos pocos campos del mensaje.
-  JUGUETE-NOMINAL        el Bundle nominal escrito a mano (ADT, ORU o VXU por MSH-9.1), copiado de prueba_conversion.py y
-                         de prueba_conversion_vxu.py
+  JUGUETE-NOMINAL        el Bundle nominal escrito a mano (ADT, ORU, VXU o MDM por MSH-9.1), copiado de prueba_conversion.py,
+                         de prueba_conversion_vxu.py y de prueba_conversion_mdm.py
+  JUGUETE-DOCSTATUS      el nominal MDM con docStatus = el código de TXA-17 tal cual (etapa 26: control positivo, MC-MD-1)
+  JUGUETE-TEXTO          el nominal MDM con el data del OBX TX truncado a la mitad (etapa 26: control positivo, R-MD-18)
   JUGUETE-RUTA           el nominal VXU con route {v2-0162, IM} (etapa 20: control positivo, RXR-1 mal mapeado)
   JUGUETE-GENERO         el nominal ADT con gender «male»
   JUGUETE-ERROR          una traza de tres líneas en <base>.error (o en --error), nada más
@@ -26,6 +28,7 @@ el segundo componente es su parámetro. Sin directiva, un Bundle genérico con u
                          esta directiva (1 por omisión), todos los siguientes del mismo proceso salen sin Patient.gender.
                          Con --fichero el proceso es nuevo en cada mensaje y nunca afecta a otro
 Imprime «<nombre> <ms> ms» por mensaje."""
+import base64
 import json
 import os
 import re
@@ -128,6 +131,33 @@ def vxu_nominal(ruta_v2=False):
     return {"resourceType": "Bundle", "type": "collection", "entry": [{"fullUrl": "urn:uuid:" + r["id"], "resource": r} for r in (p, i, pr, o)]}
 
 
+def mdm_nominal(docstatus=None, texto_truncado=False):
+    """Etapa 26: el Bundle nominal de MDM, copia de prueba_conversion_mdm.py (pac, enc, doc, sr, prac); docstatus es
+    JUGUETE-DOCSTATUS (el código de TXA-17 tal cual) y texto_truncado es JUGUETE-TEXTO (el data de TX a la mitad)."""
+    v2 = "http://terminology.hl7.org/CodeSystem/v2-%s"
+    t = "Paciente estable al alta Zeta010101"
+    if texto_truncado:
+        t = t[:len(t) // 2]
+    p = {"resourceType": "Patient", "id": "p1",
+         "identifier": [{"value": "PAC0001", "type": cc("0203", "MR"), "assigner": {"display": "CSSYN"}}],
+         "name": [{"family": "Prueba", "given": ["Mateo"], "use": "official"}], "birthDate": "2023-05-12", "gender": "male"}
+    e = {"resourceType": "Encounter", "id": "e1", "identifier": [{"value": "V0001"}], "status": "in-progress",
+         "class": {"system": S["act"], "code": "AMB"}, "subject": {"reference": "urn:uuid:p1"}}
+    d = {"resourceType": "DocumentReference", "id": "d1", "masterIdentifier": {"value": "DOC0001", "assigner": {"display": "CSSYN"}},
+         "identifier": [{"value": "/docs/2023/alta0001.txt"}], "status": "current", "docStatus": docstatus or "final",
+         "type": {"coding": [{"code": "DS"}]}, "subject": {"reference": "urn:uuid:p1"}, "date": "2023-01-09T10:15:00+01:00",
+         "author": [{"reference": "urn:uuid:pr1"}], "authenticator": {"reference": "urn:uuid:pr2"},
+         "securityLabel": [{"coding": [{"system": v2 % "0272", "code": "R"}]}],
+         "content": [{"attachment": {"contentType": "application/text", "data": base64.b64encode(t.encode("utf-8")).decode("ascii")}}],
+         "context": {"encounter": [{"reference": "urn:uuid:e1"}], "related": [{"reference": "urn:uuid:s1"}]}}
+    s = {"resourceType": "ServiceRequest", "id": "s1", "status": "active", "intent": "order", "subject": {"reference": "urn:uuid:p1"},
+         "identifier": [{"value": "PL0001", "type": cc("0203", "PLAC")}, {"value": "FL0001", "type": cc("0203", "FILL")}],
+         "code": {"coding": [{"system": "urn:local", "code": "DOC-DS", "display": "Informe de alta"}]}}
+    pr1 = {"resourceType": "Practitioner", "id": "pr1", "identifier": [{"value": "PR01"}], "name": [{"family": "Ensayo", "given": ["Ana"]}]}
+    pr2 = {"resourceType": "Practitioner", "id": "pr2", "identifier": [{"value": "PR02"}], "name": [{"family": "Muestra", "given": ["Jorge"]}]}
+    return {"resourceType": "Bundle", "type": "collection", "entry": [{"fullUrl": "urn:uuid:" + r["id"], "resource": r} for r in (p, e, d, s, pr1, pr2)]}
+
+
 def texto(b):
     """JSON del Bundle; «@NUM:1.20@» queda como el número 1.20 tal cual."""
     return re.sub(r'"@NUM:([^@]*)@"', r"\1", json.dumps(b, ensure_ascii=False))
@@ -200,7 +230,7 @@ def generico(m):
 
 def nominal(m):
     t = m.campo("MSH", 9, 1).upper()
-    return oru_nominal() if t == "ORU" else vxu_nominal() if t == "VXU" else adt_nominal()
+    return oru_nominal() if t == "ORU" else vxu_nominal() if t == "VXU" else mdm_nominal() if t == "MDM" else adt_nominal()
 
 
 def convertir(t):
@@ -225,6 +255,10 @@ def _convertir(t):
         return "bundle", texto(nominal(m))
     if d == "JUGUETE-NOMINAL":
         return "bundle", texto(nominal(m))
+    if d == "JUGUETE-DOCSTATUS":
+        return "bundle", texto(mdm_nominal(docstatus=m.campo("TXA", 17, 1) or "final"))
+    if d == "JUGUETE-TEXTO":
+        return "bundle", texto(mdm_nominal(texto_truncado=True))
     if d == "JUGUETE-RUTA":
         return "bundle", texto(vxu_nominal(ruta_v2=True))
     if d == "JUGUETE-GENERO":

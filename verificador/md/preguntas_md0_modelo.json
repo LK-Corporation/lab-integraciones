@@ -1,0 +1,11 @@
+{
+ "q1_disenador": {
+  "type": "choice",
+  "instructions": "Quién hace el diseño a ciegas de MDM_T02, ahora que Fable se ha quedado sin cupo.",
+  "criteria": {
+   "esperar_fable": "(a) Esperar a Fable y retomarlo cuando vuelva el cupo.",
+   "mismo_modelo_contexto_nuevo": "(b) El mismo modelo que programa, en un contexto nuevo y con la misma carpeta cerrada, declarado como desviación.",
+   "modelo_pequeno_distinto": "(c) Un modelo más pequeño y distinto, con la misma carpeta, declarado como desviación."
+  }
+ }
+}

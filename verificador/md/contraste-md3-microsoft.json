@@ -1,0 +1,98 @@
+[
+  {
+    "id": "H12",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-02-expected.json:999 (DocumentReference.content en 610-616; entrada data/SampleData/Hl7v2/MDM-T02-02.hl7:13)",
+    "cita": "\"valueString\": \"Toilet cylinder crackers model step-mother visor opening communication\",",
+    "nota": "El OBX-5 TX de la entrada acaba en Observation.valueString, y el content del DocumentReference esperado (610-616) solo lleva attachment.creation; igual en MDM-T02-03-expected.json:843 y 401-407. La documentación dice lo mismo: docs/HL7v2-templates.md:1589-1590 (Observation sale de OBX; DocumentReference, de TXA)."
+  },
+  {
+    "id": "H13",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-01-expected.json:588-594 (entrada data/SampleData/Hl7v2/MDM-T02-01.hl7:9, TXA-3 = TX)",
+    "cita": "\"creation\": \"2008-01-31T19:15:00+05:30\"",
+    "nota": "Con TXA-3 = 'TX', el attachment esperado solo trae creation, sin contentType; pasa lo mismo en MDM-T02-02-expected.json:610-616 y en las MDM_T01/T05/T06/T09/T10."
+  },
+  {
+    "id": "H14",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-01-expected.json:583-587 y 710-714 (entrada MDM-T02-01.hl7:5, ORC|SC)",
+    "cita": "\"reference\": \"DocumentReference/0bd32673-66cf-0e3e-61df-803590588758\"",
+    "nota": "El context del DocumentReference esperado solo tiene period, sin related; el enlace va al revés, de ServiceRequest.reasonReference al DocumentReference. En MDM-T02-02 los dos ServiceRequest hacen lo mismo (732 y 929), y en T02-03 context.related solo apunta a un Practitioner (395-399)."
+  },
+  {
+    "id": "H15",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-03-expected.json:382-415, valor en 404 (entrada MDM-T02-03.hl7:7, TXA-6 = 202108030000+0215)",
+    "cita": "\"creation\": \"2021-08-03T03:15:00+05:30\"",
+    "nota": "Ningún DocumentReference esperado de MDM_* tiene date, aunque todas las entradas traen TXA-6, que va a content.attachment.creation (en T02-01, línea 591). Es la misma muestra (ms-MDM-T02-03) en la que el juez lo señala."
+  },
+  {
+    "id": "H16",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-01-expected.json:911 (DocumentReference.content en 588-594; entrada MDM-T02-01.hl7:12)",
+    "cita": "\"text\": \"Antibodies Detected\",",
+    "nota": "El NTE que va bajo el OBX acaba en Observation.note y no en el content del DocumentReference. Es la muestra ms-MDM-T02-01, en la que el juez señala NTE(2)-3; en las bases (B26) Microsoft hace lo mismo."
+  },
+  {
+    "id": "H17",
+    "declarada": "no",
+    "donde": null,
+    "referencia": null,
+    "cita": null,
+    "nota": "Falla con TXA-8 repetido, que v2.5 permite; en T02-03, TXA-8 llega sin repetir a meta.lastUpdated (409), y ninguna entrada de MDM_* (ni del resto de Hl7v2) lo repite. Busqué en las salidas esperadas MDM_*, en DateFiltersTests.cs:185-201 (solo fechas mal formadas, ninguna con ~), en docs/ (HL7v2-ImportantPoints, HL7v2-templates; troubleshoot.md:75 solo dice que un formato de fecha inválido da error) y en los 4 issues/PR."
+  },
+  {
+    "id": "H18",
+    "declarada": "dudoso",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/VXU_V04/VXU-V04-01-expected.json:4514-4521",
+    "cita": "\"resourceType\": \"DocumentReference\",",
+    "nota": "Ninguna salida esperada de MDM_* tiene un DocumentReference sin content: todas traen TXA-6, y su attachment.creation es lo único que Microsoft pone en content. La de VXU publica uno sin content ni status, pero sale de otro mensaje, sin TXA ni OBX TX; aparte, solo hay avisos genéricos (el validador oficial está apagado en BaseRuleBasedFunctionalTests.cs:36,347, y docs/concepts/validation-and-postprocessing.md:3 pide validar la salida)."
+  },
+  {
+    "id": "H19",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/OUL_R22/OUL-R22-02-expected.json:2110 (DocumentReference 2031-2124; entrada data/SampleData/Hl7v2/OUL-R22-02.hl7:23, TXA-19 = UN)",
+    "cita": "\"status\": \"current\",",
+    "nota": "Es la misma diferencia (TXA-19 'UN' da status 'current' sin extensión), pero la salida esperada es de OUL_R22 (y OUL-R23-02.hl7:24), no de MDM_*; usa la misma plantilla Resource/DocumentReference sobre TXA. Ninguna entrada de MDM_* trae TXA-19."
+  },
+  {
+    "id": "H20",
+    "declarada": "no",
+    "donde": null,
+    "referencia": null,
+    "cita": null,
+    "nota": "Ninguna entrada de muestra trae TXA-19 = OB: en MDM_*, ORU_R01 y OUL_R22/R23/R24 solo aparecen vacío, AV y UN, así que ninguna salida esperada muestra OB → 'entered-in-error'. Tampoco hay nada en docs/ (HL7v2-templates, HL7v2-ImportantPoints, concepts) ni en los 4 issues/PR."
+  },
+  {
+    "id": "H21",
+    "declarada": "si",
+    "donde": "salida_esperada",
+    "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/MDM_T02/MDM-T02-03-expected.json:636-672 (basedOn en 498-500; entrada MDM-T02-03.hl7:6, OBR-29 = PAI-29)",
+    "cita": "\"value\": \"PAI-29\",",
+    "nota": "La salida esperada de la propia muestra ms-MDM-T02-03 publica el mismo ServiceRequest 29acd79b-adef-1dc7-6103-c65783a04bbb, construido desde OBR-29/OBR-50 sin un grupo ORC/OBR propio, y el ServiceRequest del grupo lo enlaza con basedOn."
+  },
+  {
+    "id": "H22",
+    "declarada": "si",
+    "donde": "documentacion",
+    "referencia": "docs/HL7v2-ImportantPoints.md:46-52",
+    "cita": "FHIR converter tool will generate the same id and it will overwrite/ merge the",
+    "nota": "En lfh L370 y L407, los tres grupos ORC/OBR son idénticos (mismos OBR-2 y OBR-3), así que sale el mismo id y se funden en un solo ServiceRequest. La documentación lo declara con un ejemplo de OBR repetido en ORU_R01, y docs/concepts/resource-id-generation.md:13 admite colisiones de id."
+  },
+  {
+    "id": "H23",
+    "declarada": "no",
+    "donde": null,
+    "referencia": null,
+    "cita": null,
+    "nota": "En las muestras, TXA-17 solo vale AU o IP, y todas las salidas esperadas con DocumentReference (MDM_*, ORU, OUL) dan docStatus 'preliminary': no hay ninguna que publique un código crudo. Busqué también en docs/ y en los 4 issues/PR; solo hay avisos genéricos (validation-and-postprocessing.md:3 y el validador oficial apagado en BaseRuleBasedFunctionalTests.cs:347)."
+  }
+]

@@ -1,0 +1,163 @@
+[
+ {
+  "id": "MP1",
+  "conversor_del_candidato": "microsoft",
+  "esperado": [
+   "categoria",
+   "rechazo_incorrecto"
+  ],
+  "que": "TXA-8 (Edit Date/Time, TS repetible en v2.5) con dos repeticiones: el conversor rechaza el mensaje",
+  "microsoft": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "rechazo_incorrecto",
+   "confirma": true
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": false,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": false
+  }
+ },
+ {
+  "id": "MP2",
+  "conversor_del_candidato": "microsoft",
+  "esperado": [
+   "TXA-19",
+   "valor_distinto"
+  ],
+  "que": "TXA-19 OB (obsoleto) da status entered-in-error en vez de superseded",
+  "microsoft": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": false,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": false
+  }
+ },
+ {
+  "id": "MP3",
+  "conversor_del_candidato": "linuxforhealth",
+  "esperado": [
+   "TXA-19",
+   "dato_perdido"
+  ],
+  "que": "TXA-19 UN (desconocido) da status current y el código no se conserva",
+  "microsoft": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  }
+ },
+ {
+  "id": "MP4",
+  "conversor_del_candidato": "linuxforhealth",
+  "esperado": [
+   "OBX-5",
+   "valor_distinto"
+  ],
+  "que": "un FT con la orden de formato \\.br\\ junto a un TX: llega cruda en el adjunto text/plain",
+  "microsoft": {
+   "sin": false,
+   "con": false,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": false
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  }
+ },
+ {
+  "id": "MP5",
+  "conversor_del_candidato": "linuxforhealth",
+  "esperado": [
+   "OBX-5",
+   "dato_perdido"
+  ],
+  "que": "un OBX CE antes del OBX TX: el texto del TX no llega al documento",
+  "microsoft": {
+   "sin": true,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": false
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  }
+ },
+ {
+  "id": "MP6",
+  "conversor_del_candidato": "linuxforhealth",
+  "esperado": [
+   "NTE-3",
+   "dato_perdido"
+  ],
+  "que": "una NTE bajo un OBX TX se pierde entera",
+  "microsoft": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  }
+ },
+ {
+  "id": "MP7",
+  "conversor_del_candidato": "linuxforhealth",
+  "esperado": [
+   "TXA-10",
+   "valor_distinto"
+  ],
+  "que": "TXA-22 con otra persona que TXA-10: el authenticator sale de TXA-22",
+  "microsoft": {
+   "sin": false,
+   "con": false,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": false
+  },
+  "linuxforhealth": {
+   "sin": false,
+   "con": true,
+   "categoria_sin": "fallo_silencioso",
+   "categoria_con": "fallo_silencioso",
+   "confirma": true
+  }
+ }
+]

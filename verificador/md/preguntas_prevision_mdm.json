@@ -1,0 +1,5 @@
+{
+ "q1_alguna": {"type": "choice", "instructions": "Pregunta 1: si habrá al menos una nueva y confirmada en alguno de los dos conversores.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q2_n": {"type": "choice", "instructions": "Pregunta 2: cuántas nuevas y confirmadas en total.", "criteria": {"cero": "Ninguna.", "una_o_dos": "Una o dos.", "tres_a_seis": "De tres a seis.", "siete_o_mas": "Siete o más."}},
+ "q3_k": {"type": "choice", "instructions": "Pregunta 3: en cuántos de los dos conversores habrá alguna nueva y confirmada.", "criteria": {"ninguno": "En ninguno.", "uno": "En uno.", "los_dos": "En los dos."}}
+}

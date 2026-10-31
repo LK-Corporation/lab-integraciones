@@ -84,7 +84,7 @@ def base(nombre, ad, art, n_esperado, extra=(), dos=True):
 
 
 if "juguete" in QUE:
-    s1, d = base("juguete", "cv/adaptadores/juguete.json", "cv", 343)
+    s1, d = base("juguete", "cv/adaptadores/juguete.json", "cv", 383)          # etapa 26: 343 + las 40 de MDM
     jug = os.path.join(PUB, "cv", "conversor_juguete.py")
     original = open(jug, "rb").read()
     try:
@@ -106,9 +106,9 @@ if "juguete" in QUE:
     if open(jug, "rb").read() != original:
         parar("juguete: la copia pública quedó sembrada")
 if "lote" in QUE:
-    base("linuxforhealth", "cv/adaptadores/linuxforhealth.json", ART, 411)
+    base("linuxforhealth", "cv/adaptadores/linuxforhealth.json", ART, 451)                         # etapa 26: 411 + 40
 if "mensaje" in QUE:
-    base("linuxforhealth-mensaje", "cv/adaptadores/linuxforhealth-mensaje.json", ART, 411, dos=False)
+    base("linuxforhealth-mensaje", "cv/adaptadores/linuxforhealth-mensaje.json", ART, 451, dos=False)   # etapa 26: 411 + 40
 json.dump(res, open(os.path.join(TRAB, "BASES-CI.json"), "w"), ensure_ascii=False, indent=1)
 print(json.dumps({k: {x: v.get(x) for x in ("n_casos", "categorias", "positivo") if x in v} for k, v in res.items() if isinstance(v, dict)},
                  ensure_ascii=False, indent=1))

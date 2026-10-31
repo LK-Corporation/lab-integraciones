@@ -8,7 +8,7 @@ no es suyo va con la licencia de sus autores (las fuentes tipográficas) o no lo
 | **El código** | **MIT** | `codigo/`, `ejemplo-ci/` (el proyecto de ejemplo, con sus mensajes sintéticos `.hl7` y sus `.json`, salvo su `README.md`), y cualquier `.py`, `.sh`, `.cls`, `.java`, `.gradle` o `.xml` en cualquier carpeta | 
 | **Los documentos** | **CC BY 4.0** | `INFORME.md`, `ARTICULO.md`, `README.md`, `diseno/`, `encargos-y-revisiones/`, `preinscripciones/`, `medidas/`, las páginas `docs/index.html` y `docs/conversores/index.html`, y cualquier `.md`, `.txt`, `.html` o `.sha256` |
 | **La configuración y las pruebas** | **MIT** | `tests/`, `.github/`, `pytest.ini`, `.gitignore`, y cualquier `.yml` o `.ini` |
-| **Los datos del verificador** | **CC BY 4.0** | los `.json` de `verificador/`: las bases sintéticas de sus pruebas, las tablas de su rejuicio y los agregados del estudio de conversores, salvo lo que es de HL7 (abajo) |
+| **Los datos del verificador** | **CC BY 4.0** | los `.json` de `verificador/`, y las bases de MDM en `.hl7` y `.jsonl`: las bases sintéticas de sus pruebas, las tablas de su rejuicio y los agregados del estudio de conversores, salvo lo que es de HL7 (abajo) |
 | **Las fuentes tipográficas** | **SIL OFL 1.1**, de sus autores | [`docs/fonts/`](docs/fonts/): Newsreader, Public Sans y JetBrains Mono, con su licencia al lado (`OFL-*.txt`) |
 
 Los textos completos están en [`LICENSES/MIT.txt`](LICENSES/MIT.txt) y

@@ -8,6 +8,7 @@ S-n del laboratorio no cuentan contra un tercero. verificador.verificar despacha
 Piezas: leer_bundle (§2.1) -> emparejar (§2.2, por papel) -> juzgar cada recurso con el perfil (§3) -> clases (§4.1) ->
 categoría (§1.4). Un hallazgo por campo (fusión por hecho); un recurso ausente absorbe sus datos perdidos.
 Etapa 20: `vxu_conv` (VXU^V04) vive en conversion_vxu.py; aquí solo hay cinco ganchos por familia (vx/diseno-vx-fable.md §2.6).
+Etapa 26: `mdm_conv` (MDM^T02) vive en conversion_mdm.py; seis ganchos más, una rama «mdm» al lado de cada uno (md/diseno-md.md §3).
   python3 conversion.py --autoprueba      -> los mapas contra el paquete de la guía (si está) y un caso nominal"""
 import datetime
 import json
@@ -270,7 +271,7 @@ def _grupos_oru(m):
 
 
 def leer_y_emparejar(m, texto, familia):
-    entries, notas = leer_bundle(texto, CVX.TIPOS if familia == "vxu" else TIPOS_PROY)          # gancho 3 (etapa 20)
+    entries, notas = leer_bundle(texto, CVX.TIPOS if familia == "vxu" else CVM.TIPOS if familia == "mdm" else TIPOS_PROY)  # gancho 3 (20) y 1 (26)
     if entries is None:
         return {"recursos": [], "sobrantes": [], "otros_tipos": {}, "referencias_rotas": [], "fallos": notas, "ambiguo": [],
                 "entries": None}
@@ -319,6 +320,8 @@ def emparejar(m, entries, familia, notas=()):
 
     if familia == "vxu":                                            # gancho 4 (etapa 20): Immunization, Observation, NK1, PV1
         CVX.emparejar(m, entries, top, out, pat, rol, usados)
+    elif familia == "mdm":                                          # gancho 2 (etapa 26): DocumentReference, ServiceRequest, PV1
+        CVM.emparejar(m, entries, top, out, pat, rol, usados)
     elif familia == "adt":
         pv1 = _seg(m, "PV1")
         encs = [e for e in top if e["tipo"] == "Encounter"]
@@ -412,7 +415,8 @@ def emparejar(m, entries, familia, notas=()):
     out["_usados"] = usados
     alcanzadas = _alcanzadas(entries, [x["entry"] for x in out["recursos"] if x["entry"]])
     for e in top:                                    # L-CV-5: fuera de la proyección y sin referencia desde ella -> solo recuento
-        if e["i"] not in usados and e["i"] not in alcanzadas and e["tipo"] not in (CVX.TIPOS if familia == "vxu" else TIPOS_PROY):
+        if e["i"] not in usados and e["i"] not in alcanzadas and e["tipo"] not in (CVX.TIPOS if familia == "vxu" else CVM.TIPOS if familia == "mdm"
+                                                                                   else TIPOS_PROY):        # gancho 3 (etapa 26)
             out["otros_tipos"][e["tipo"]] = out["otros_tipos"].get(e["tipo"], 0) + 1
     return out
 
@@ -1425,9 +1429,9 @@ def verificar(e, pe, dec=None):
     if estado == "error":
         err = salida.get("error") or {}
         txt = str(err.get("texto") or "")
-        imp = CVX.imposibles(m) if familia == "vxu" else _imposibles(m, familia)                     # gancho 2 (etapa 20)
-        faltan = [s for s in (CVX.FALTAN if familia == "vxu" else ("PID", "PV1") if familia == "adt" else ("PID", "OBR"))
-                  if not m.segmentos(s)]
+        imp = CVX.imposibles(m) if familia == "vxu" else CVM.imposibles(m) if familia == "mdm" else _imposibles(m, familia)  # gancho 2 (20) y 4 (26)
+        faltan = [s for s in (CVX.FALTAN if familia == "vxu" else CVM.FALTAN if familia == "mdm" else ("PID", "PV1") if familia == "adt"
+                              else ("PID", "OBR")) if not m.segmentos(s)]
         if imp or faltan or (ver not in ("2.5", "") and re.search(r"versi", txt, re.I)):
             J.nota("aceptable", (imp + faltan + ["MSH-12"])[0], "el conversor rechazó un mensaje con %r: rechazo aceptable (Q-CV-D-7)" % (imp + faltan))
             for h in J.hs:
@@ -1451,10 +1455,12 @@ def verificar(e, pe, dec=None):
     J.entries = lec["entries"]
     out["conversion"]["emparejamiento"] = [{k: x[k] for k in ("rol", "origen", "fullUrl", "emparejado_por", "candidatos")}
                                            for x in lec["recursos"]]
-    out["conversion"]["recuentos"] = {t: n for t in (CVX.TIPOS if familia == "vxu" else TIPOS_PROY)
+    out["conversion"]["recuentos"] = {t: n for t in (CVX.TIPOS if familia == "vxu" else CVM.TIPOS if familia == "mdm" else TIPOS_PROY)
                                        for n in [sum(1 for x in lec["entries"] if x["padre"] is None and x["tipo"] == t)] if n}
     if familia == "vxu":                                            # §2.4: los recuentos propios de VXU
         out["conversion"]["recuentos"].update(CVX.recuentos(m))
+    elif familia == "mdm":                                          # gancho 5 (etapa 26): los recuentos propios de MDM
+        out["conversion"]["recuentos"].update(CVM.recuentos(m, lec))
     if lec["ambiguo"]:
         J.nota("emparejamiento", "MSH", "emparejamiento ambiguo: %r" % lec["ambiguo"])
         out["hallazgos"], out["veredicto"] = _fusionar(J.hs), _veredicto("indeterminado", "emparejamiento")
@@ -1500,6 +1506,8 @@ def _juzgar(J, m, lec, familia):
                 _encounter(J, m, pv1, en["entry"]["r"], lec["entries"], pat_entry, en["entry"])
     elif familia == "vxu":                                          # gancho 5 (etapa 20)
         CVX.juzgar(J, m, lec, pat_entry)
+    elif familia == "mdm":                                          # gancho 6 (etapa 26)
+        CVM.juzgar(J, m, lec, pat_entry)
     else:
         grupos, _ = _grupos_oru(m)
         for i, (obr, obxs) in enumerate(grupos, 1):
@@ -1619,6 +1627,7 @@ def con_alternativas(*qs):
 
 
 import conversion_vxu as CVX  # noqa: E402  (al final: conversion_vxu importa este módulo y registra sus citas e INFO, DV-VX-2)
+import conversion_mdm as CVM  # noqa: E402  (al final, como CVX: registra su INFO; sus citas no, DV-MD-3)
 
 
 # ---------------------------------------------------------------------------- autoprueba

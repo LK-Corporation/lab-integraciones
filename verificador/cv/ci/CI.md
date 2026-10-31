@@ -111,8 +111,8 @@ conocido.
 
 - **No sabe si tu proyecto ya tenía declarado cada hallazgo** (L-VC-1).
 - **Solo cabe un conversor de línea de órdenes** que lea y escriba ficheros, no un servicio HTTP ni una biblioteca (L-VC-3).
-- **El corpus son las bases sintéticas del laboratorio** (ADT de ocho eventos, ORU^R01 y VXU^V04) y los mensajes que añadas con
-  `corpus`; no las muestras de los proyectos del estudio (L-VC-2, L-VC-7).
+- **El corpus son las bases sintéticas del laboratorio** (ADT de ocho eventos, ORU^R01, VXU^V04 y, desde la etapa 26,
+  MDM^T02) y los mensajes que añadas con `corpus`; no las muestras de los proyectos del estudio (L-VC-2, L-VC-7).
 - **El veredicto es un conjunto de hallazgos, sin texto.** Un cambio de valor dentro del mismo subtipo no se ve (L-CI-1).
 - **Corre en `ubuntu-latest`, con su Docker** (L-CI-2).
 - **Una corrida es una corrida:** un conversor no determinista dará hallazgos y arreglos intermitentes (L-CI-5).

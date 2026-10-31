@@ -2,7 +2,8 @@
 
 Es el juez que usan los dos estudios del agente ([`../piloto-agente/`](../piloto-agente/)), publicado con su código el
 22-oct-2026. Desde el 24-oct juzga también conversores HL7 v2 → FHIR de terceros contra la guía HL7 v2-to-FHIR (desde el 25-oct, también
-los mensajes de vacunación VXU^V04), y cualquiera puede pasar el suyo con un adaptador y una orden (abajo).
+los mensajes de vacunación VXU^V04, y desde el 31-oct, los de documentos clínicos MDM^T02), y cualquiera puede pasar el suyo
+con un adaptador y una orden (abajo).
 Recibe la evidencia de un caso:
 - el mensaje HL7 v2.5 que se envió;
 - el acuse que devolvió el circuito;
@@ -20,10 +21,11 @@ siempre la misma respuesta a la misma evidencia.
 **Los puntos de entrada:**
 - tres con mapeador: `adt_a01`, `adt_fhir` y `oru_fhir`, donde se compara también lo escrito;
 - cinco de solo acuse: `adt`, `oru`, `siu`, `ord` y `mdm`;
-- tres de solo transformación, `adt_conv`, `oru_conv` y `vxu_conv`: juzgan el Bundle que devuelve un conversor contra el
-  perfil «guía» de [`conversion.py`](conversion.py) y, en VXU, de [`conversion_vxu.py`](conversion_vxu.py).
+- cuatro de solo transformación, `adt_conv`, `oru_conv`, `vxu_conv` y `mdm_conv`: juzgan el Bundle que devuelve un conversor
+  contra el perfil «guía» de [`conversion.py`](conversion.py) y, en VXU y MDM, de [`conversion_vxu.py`](conversion_vxu.py) y
+  [`conversion_mdm.py`](conversion_mdm.py).
 
-**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.3) con seis herramientas: `verificar_caso`, `ficha_experto`,
+**Se sirve por MCP** (`mcp_verificador.py`, servidor 1.4) con seis herramientas: `verificar_caso`, `ficha_experto`,
 `acuse_esperado`, `comparar_canonico`, `consultar_tabla` e `info_verificador`. La última lleva las decisiones declaradas, los
 supuestos, los límites, las desviaciones y las preguntas que siguen abiertas.
 
@@ -187,6 +189,43 @@ corrido en lote, un proceso por carpeta.
 | El control, las ramas y las corridas | [`vx/rv/IDENTIDADES-RV.json`](vx/rv/IDENTIDADES-RV.json), [`vx/rv/CONTROL-RV.json`](vx/rv/CONTROL-RV.json), [`vx/rv/RAMAS-RV.json`](vx/rv/RAMAS-RV.json), [`vx/rv/RESULTADO-RV-minimos-fijada-lote.json`](vx/rv/RESULTADO-RV-minimos-fijada-lote.json), [`vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json`](vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json), [`vx/rv/RESULTADO-RV-minimos-main.json`](vx/rv/RESULTADO-RV-minimos-main.json), [`vx/rv/SECUENCIA-RV.json`](vx/rv/SECUENCIA-RV.json), [`vx/rv/CORRIDAS-RV.json`](vx/rv/CORRIDAS-RV.json) |
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
+
+## La etapa de MDM (26, 31-oct-2026)
+
+> El verificador encuentra **5 discrepancias nuevas y confirmadas en MDM_T02 en 2 de 2 conversores, sobre 78 mensajes
+> públicos**; además ve **10 de las ya declaradas**, y **3 diferencias son convención**.
+
+**Lo mismo, en documentos clínicos.**
+- **Los conversores y la caja:** los mismos del estudio de conversores; al final, también sus ramas principales.
+- **El punto de entrada:** `mdm_conv`, con el perfil «guía» de DocumentReference en [`conversion_mdm.py`](conversion_mdm.py).
+- **El corpus:** 40 bases sintéticas válidas en v2.5, en [`bases_mdm/`](bases_mdm/) y su índice
+  [`bases_mdm.jsonl`](bases_mdm.jsonl), que escribe [`bases_mdm.py`](bases_mdm.py) con su huella fijada, y 38 muestras de los
+  proyectos. Las cuatro de [`bases_mdm_secundario/`](bases_mdm_secundario/) (T04, T06, T08 y T10) no cuentan: miden la
+  alternativa de una decisión de Jev (Q-MD-D-1).
+- **El método, el mismo:**
+  - el diseño a ciegas y las decisiones de Jev. Esta vez lo hizo otro modelo, más pequeño, con la misma carpeta cerrada
+    (DV-MD-0);
+  - las pruebas en rojo antes del código;
+  - la previsión sellada antes de juzgar;
+  - el contraste con lo que declara cada proyecto;
+  - una revisión adversaria que tumbó 6 de 23 hallazgos y encontró un defecto del corpus: 33 bases sin TXA-22, que v2.5
+    exige con AU y LA. Se arregló antes de contar;
+  - un par de mensajes mínimos por discrepancia, en la versión fijada y en la rama principal.
+- **ADT, ORU y VXU no cambian:** el rejuicio con el juez final da 0 diferencias en 21.892 evidencias.
+- **La integración continua:** el corpus del laboratorio gana las 40 bases y el juez cambia, así que las tres líneas base de
+  la demostración se rehicieron desde esta copia con [`cv/ci/hacer_bases.py`](cv/ci/hacer_bases.py), cada una con dos
+  corridas que dan el mismo informe byte a byte. El proyecto de ejemplo sigue fijado a su commit.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-MDM.md`](ANTES-ETAPA-MDM.md), [`md/MD-PRE.md`](md/MD-PRE.md) |
+| MD0: el diseño a ciegas y las decisiones | [`md/ENCARGO-MD0.md`](md/ENCARGO-MD0.md), [`md/estado_md0_modelo.md`](md/estado_md0_modelo.md), [`md/preguntas_md0_modelo.json`](md/preguntas_md0_modelo.json), [`md/decision-jev-md0-modelo.md`](md/decision-jev-md0-modelo.md), [`md/diseno-md.md`](md/diseno-md.md), [`md/estado_qmd.md`](md/estado_qmd.md), [`md/preguntas_qmd.json`](md/preguntas_qmd.json), [`md/decision-jev-qmd.md`](md/decision-jev-qmd.md), [`md/decisiones-qmd.md`](md/decisiones-qmd.md) |
+| MD1: el juez, con las pruebas en rojo antes | [`md/MD1.md`](md/MD1.md), [`prueba_conversion_mdm.py`](prueba_conversion_mdm.py), [`conversion_mdm.py`](conversion_mdm.py) |
+| MD2: el corpus, la previsión sellada y las corridas | [`bases_mdm.py`](bases_mdm.py), [`md/prevision-mdm.json`](md/prevision-mdm.json), [`md/estado_prevision_mdm.md`](md/estado_prevision_mdm.md), [`md/preguntas_prevision_mdm.json`](md/preguntas_prevision_mdm.json), [`md/decision-jev-prevision-mdm.md`](md/decision-jev-prevision-mdm.md), [`md/prevision-cuerpo-mdm.json`](md/prevision-cuerpo-mdm.json), [`md/sellar_prevision_mdm.py`](md/sellar_prevision_mdm.py), [`md/MD2.md`](md/MD2.md) |
+| MD3: hallazgos, contraste, revisión adversaria, clases y pares mínimos | [`md/MD3.md`](md/MD3.md), [`md/HALLAZGOS-MD3.json`](md/HALLAZGOS-MD3.json), [`md/HALLAZGOS-MD3-r1.json`](md/HALLAZGOS-MD3-r1.json), [`md/contraste-md3-microsoft.json`](md/contraste-md3-microsoft.json), [`md/contraste-md3-linuxforhealth.json`](md/contraste-md3-linuxforhealth.json), [`md/revision-adversaria-md3.json`](md/revision-adversaria-md3.json), [`md/CLASES-MD3.json`](md/CLASES-MD3.json), [`md/pares_mdm.py`](md/pares_mdm.py), [`md/RESULTADO-MD3-pares.json`](md/RESULTADO-MD3-pares.json), [`md/RESULTADO-MD3-pares-main.json`](md/RESULTADO-MD3-pares-main.json) |
+| El resultado, con la frase | [`RESULTADO-MDM.md`](RESULTADO-MDM.md) |
+
+Los scripts del aparato de la etapa están en [`md/`](md/).
 
 ## El mantenimiento de la integración continua (25, 31-oct-2026)
 
@@ -391,6 +430,10 @@ publica.
   `ANTES-ETAPA-CI2.md` y `cv/ci/ENCARGO-CI20.md`.
 - **Dos documentos del mantenimiento de la integración continua llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-MANT.md` y `cv/ci/ENCARGO-MANT0.md`.
+- **Dos documentos de la etapa de MDM llevan una parte redactada,** marcados en su primera línea: `ANTES-ETAPA-MDM.md` y
+  `md/estado_md0_modelo.md`. Y los dos
+  `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
+  LinuxForHealth, a su jar.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
@@ -400,6 +443,9 @@ publica.
 - **Las bases y los pares mínimos de VXU tampoco.**
   - Las bases las escribe `bases_vxu.py`, y su autoprueba comprueba la huella del conjunto.
   - Los pares, `cv/cv3_minimos_vxu.py escribir <carpeta>`, y su secuencia, `secuencias <carpeta>`.
+- **Las bases de MDM, en cambio, sí están:** `bases_mdm/`, `bases_mdm.jsonl` y las cuatro de `bases_mdm_secundario/`, tal
+  como las escriben `bases_mdm.py` y `bases_mdm.py --secundario`. Se comprobó que salen iguales byte a byte, y la autoprueba
+  comprueba la huella del conjunto.
 
 ## Lo que no está
 
@@ -422,6 +468,13 @@ publica.
   - las muestras de los proyectos, en sus repositorios. Las de LinuxForHealth son literales de sus pruebas Java;
   - las hojas CSV de la guía que trae `vx/traer_guia_vxu.py`;
   - los parches con que se aplicó cada cambio en el laboratorio;
+  - `prueba_multitipo.py`.
+- **De MDM:**
+  - las evidencias y los juicios por caso: están los agregados de `md/`;
+  - las muestras de los proyectos, en sus repositorios. Las de LinuxForHealth son literales de sus pruebas Java, que saca
+    `md/extraer_mdm_lfh.py`;
+  - las hojas CSV de la guía que trae `md/traer_guia_mdm.py`, y el inventario de contraste de `md/inventario_contraste_mdm.py`;
+  - los parches con que se aplicó cada cambio en el laboratorio y el guion que corre sus suites;
   - `prueba_multitipo.py`.
 - **Del arrastre:**
   - los juicios, las evidencias y los Bundles de las cuatro corridas: están los agregados de `cv/ar/`;

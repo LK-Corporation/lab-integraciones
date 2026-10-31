@@ -55,8 +55,9 @@ except Exception as _ex:                          # AP-3
     sys.stderr.write("mcp_verificador: no se pudieron cargar las piezas (%s)\n" % type(_ex).__name__)
     sys.exit(2)
 
-SERVIDOR = "1.3"                                   # 1.3: etapa de VXU (20); la identidad sigue siendo la huella
-REVISION = ("etapa de VXU (20): vxu_conv y perfil «guía» de Immunization (S-VX-1..14), L-VX-1..14, AMB-VX-1..13, Q-VX-D-1..10, "
+SERVIDOR = "1.4"                                   # 1.4: etapa de MDM (26); la identidad sigue siendo la huella
+REVISION = ("etapa de MDM (26): mdm_conv y perfil «guía» de DocumentReference (S-MD-1..17), L-MD-1..17, AMB-MD-1..25, Q-MD-D-1..12, "
+            "DV-MD-0..14; antes, 20: vxu_conv y perfil «guía» de Immunization (S-VX-1..14), L-VX-1..14, AMB-VX-1..13, Q-VX-D-1..10, "
             "DV-VX-1..9; antes, 14l: adt_conv/oru_conv y perfil «guía» (S-CV-1..6), L-CV-1..16, AMB-CV-1..10, "
             "Q-CV-D-1..14 (abiertas Q-CV-D-15/16), DV-CV-1..18; antes, 14k: S104-S107, L-VE-1..8, DV-VE-1..14")
 HEREDADAS = ("2025-06-18", "2025-11-25")
@@ -66,7 +67,7 @@ META_S = "io.modelcontextprotocol/serverInfo"
 FICHEROS = ["verificador.py", "acuse_referencia.py", "mapeador_referencia.py", "lectura_evidencia.py",
             "hechos_normativos.py", "medida/encargo_medida.md", "mcp_verificador.py",
             "puntos_entrada.py", "estructuras_hl7.py", "estructuras_25.json", "mapeador_oru.py", "almacen_oru.py",
-            "mapeador_adt.py", "almacen_adt.py", "conversion.py", "conversion_vxu.py"]                 # DV-VX-6
+            "mapeador_adt.py", "almacen_adt.py", "conversion.py", "conversion_vxu.py", "conversion_mdm.py"]  # DV-VX-6; etapa 26
 OPC = {"silencio": "--silencio" in sys.argv, "sin_ficha": "--sin-ficha" in sys.argv,
        "ocultar": "--ocultar-por-defecto" in sys.argv, "compacto": "--esquema-compacto" in sys.argv}
 
@@ -1099,7 +1100,7 @@ E_PROPS = {
                                                                                           "texto": {"type": ["string", "null"], "maxLength": 4000}}},
                                       "duracion_ms": {"type": ["integer", "null"]}}},
                                   "perfil_valor": {"type": "string", "enum": ["guia"]}},
-                   "description": "Solo con punto_entrada adt_conv, oru_conv o vxu_conv (etapas 14l y 20): lo que devolvió un conversor HL7 v2 -> FHIR de "
+                   "description": "Solo con punto_entrada adt_conv, oru_conv, vxu_conv o mdm_conv (etapas 14l, 20 y 26): lo que devolvió un conversor HL7 v2 -> FHIR de "
                                   "terceros: {conversor: {nombre, version, huella}, salida: {estado: bundle|error|vacio|sin_respuesta, bundle: "
                                   "<JSON del Bundle como texto>, error: {codigo, texto}}}. Se juzga contra el perfil «guía» (ConceptMap de "
                                   "v2-to-FHIR 1.0.0); sin acuse, log ni canónico."},
@@ -1108,7 +1109,7 @@ E_PROPS = {
                                      "adt (2580), oru (2581), siu (2582), ord (2583), mdm (2584) [S51], oru_fhir (2585, ORU^R01 -> Observation/DiagnosticReport, "
                                      "con mapeador sobre canonico_oru [S57]), adt_fhir (2586, ADT de 8 eventos -> Patient/Encounter, con mapeador "
                                      "sobre canonico_adt y almacen_adt). Precedencia: este parámetro > el campo punto_entrada del bundle > adt_a01. "
-                                     "Con uno distinto de adt_a01 y oru_fhir solo se juzga el acuse (L-MT1). adt_conv, oru_conv y vxu_conv (etapas 14l y 20, sin puerto) juzgan la salida de un "
+                                     "Con uno distinto de adt_a01 y oru_fhir solo se juzga el acuse (L-MT1). adt_conv, oru_conv, vxu_conv y mdm_conv (etapas 14l, 20 y 26, sin puerto) juzgan la salida de un "
                                      "conversor de terceros (`conversion`) contra el perfil «guía», sin acuse."},
 }
 NIVEL = {"type": "string", "enum": ["consumido", "estricto"], "default": "consumido",
@@ -1852,6 +1853,8 @@ TABLAS["perfil_guia_oru"] = (lambda: [dict(f, codigo=f["elemento"]) for f in CV.
                              "perfil «guía» de oru_conv (cv/diseno-conversores-fable.md §3.3-§3.4; ConceptMap de v2-to-FHIR 1.0.0)")
 TABLAS["perfil_guia_vxu"] = (lambda: [dict(f, codigo=f["elemento"]) for f in CV.CVX.PERFIL_GUIA_VXU],
                              "perfil «guía» de vxu_conv (vx/diseno-vx-fable.md §3; ConceptMap de v2-to-FHIR 1.0.0; decisiones Q-VX-D de Jev)")
+TABLAS["perfil_guia_mdm"] = (lambda: [dict(f, codigo=f["elemento"]) for f in CV.CVM.PERFIL_GUIA_MDM],
+                             "perfil «guía» de mdm_conv (md/diseno-md.md §4; ConceptMap de v2-to-FHIR 1.0.0; decisiones Q-MD-D de Jev)")
 
 
 def t_tabla(a):

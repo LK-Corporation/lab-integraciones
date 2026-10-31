@@ -4540,6 +4540,1191 @@
    "hallazgos": [],
    "subtipo": null
   },
+  "mdm/MDM-B01": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B02": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B03": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B04": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B05": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B06": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B07": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B08": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B09": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B10": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "TXA-19",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B11": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B12": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B13": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B14": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B15": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B16": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B17": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B18": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B19": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B20": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B21": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B22": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B23": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX(3)-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B24": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX(2)-5",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "OBX(3)-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B25": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "OBX(3)-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "OBX(4)-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B26": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "NTE-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B27": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "NTE(2)-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "NTE-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "OBX-5",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B28": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B29": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B30": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B31": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B32": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B33": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B34": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B35": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B36": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B37": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-10",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B38": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B39": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-3",
+     "fidelidad",
+     "dato_perdido"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ],
+    [
+     "TXA-16",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
+  "mdm/MDM-B40": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
   "minimos/L01-sin-location-caso": {
    "categoria": "fallo_silencioso",
    "estado": "bundle",
@@ -6984,9 +8169,10 @@
   "version": "v1.1.0 (Maven Central; DV-CV-3)"
  },
  "corpus": {
-  "huella": "39240ada8f8cbf8ef940be61b5bd38843526b21e872faa14379b64884f8d5dad",
+  "huella": "79c4b33d41a80eabfec46a0f7fc59088e1c503a292ed1d547959df3c6cc9b561",
   "n": {
    "adt": 263,
+   "mdm": 40,
    "minimos": 68,
    "muestras": 0,
    "oru": 40,
@@ -6995,6 +8181,7 @@
   },
   "por_corpus": {
    "adt": "7b4e7cfba0411d29fcc8a57575c6104aa6c7cabbb6718a13515c8bc6b57f6242",
+   "mdm": "ebb095e3fdfe6634b13f7a249e0e729d78940399a20d0b26b4dcc5f58092dd5c",
    "minimos": "53a33c15a5f16833cd4afd608e9288c04d837e61eae9ddc20722cc0be08150e1",
    "oru": "b5be5675b2047bf4429741d808e1c5d24d473f31d9aae9bc9f2a5e4f0ba90891",
    "vxu": "3bcb0eefe4ddf14f4c89e0a8ef0f413c0b36833772bd1f5c60b47db11a82bea3"
@@ -7002,14 +8189,14 @@
  },
  "creada_de": {
   "herramienta": {
-   "huella": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd",
+   "huella": "e0a7517a5ab41150aabf81a14adee55704a2f23a1aa97853effe585c17458b6f",
    "version": "1.0"
   },
   "juez": {
-   "huella": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
-   "servidor": "1.3"
+   "huella": "cb1338ca647af63dd58a583a7296a44cc0ab5dec21eea9e6d7fd75d465d15890",
+   "servidor": "1.4"
   }
  },
  "formato": "linea-base-ci/1",
- "n_casos": 411
+ "n_casos": 451
 }
