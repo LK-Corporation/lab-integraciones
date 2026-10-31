@@ -218,6 +218,108 @@
      "aviso_node20": false
     }
    }
+  },
+  "41160958010": {
+   "commit": "537f1a1b665ac546f99b35ae126be8f5366f936b",
+   "flujo": "demo-ci",
+   "estado": "completed",
+   "conclusion": "success",
+   "repetidos": [],
+   "jobs": {
+    "pruebas": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "negativo / verificar": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "positivo / verificar": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "real / verificar": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "positivo-comprobado": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "real-comprobado": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    }
+   }
+  },
+  "41160957995": {
+   "commit": "537f1a1b665ac546f99b35ae126be8f5366f936b",
+   "flujo": "higiene",
+   "estado": "completed",
+   "conclusion": "success",
+   "repetidos": [],
+   "jobs": {
+    "higiene": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    }
+   }
+  },
+  "41160958094": {
+   "commit": "537f1a1b665ac546f99b35ae126be8f5366f936b",
+   "flujo": "ejemplo-ci",
+   "estado": "completed",
+   "conclusion": "success",
+   "repetidos": [],
+   "jobs": {
+    "ejemplo / verificar": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "ejemplo-propio / verificar": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    },
+    "ejemplo-comprobado": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    }
+   }
+  },
+  "41160955028": {
+   "commit": "537f1a1b665ac546f99b35ae126be8f5366f936b",
+   "flujo": "higiene",
+   "estado": "completed",
+   "conclusion": "success",
+   "repetidos": [],
+   "jobs": {
+    "higiene": {
+     "conclusion": "success",
+     "anotaciones": 1,
+     "node20": [],
+     "aviso_node20": false
+    }
+   }
   }
  },
  "motivos": [],

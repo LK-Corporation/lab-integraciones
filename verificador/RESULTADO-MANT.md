@@ -4,13 +4,13 @@
 mismos informes byte a byte, y sin el aviso de Node.js 20.**
 
 En GitHub Actions, y a la primera:
-- **La demostración** siguió en verde en los dos pushes. Sus tres `INFORME.json` salieron iguales byte a byte a los de la corrida
-  1 de la etapa 23.
-- **El proyecto de ejemplo** ([`../ejemplo-ci/`](../ejemplo-ci/)) siguió en verde con el flujo viejo y con el nuevo. Sus tres
-  artefactos salieron iguales a los de la etapa 24.
+- **La demostración** siguió en verde en los dos pushes y en el PR. Sus tres `INFORME.json` salieron iguales byte a byte a los de
+  la corrida 1 de la etapa 23.
+- **El proyecto de ejemplo** ([`../ejemplo-ci/`](../ejemplo-ci/)) siguió en verde con el flujo viejo, con el nuevo y en el PR.
+  Sus tres artefactos salieron iguales a los de la etapa 24.
 - **El run en rojo a propósito** falló solo en el paso de la comparación, en los mismos 164 casos. Su comprobación de fuera
   salió en verde.
-- **El aviso de Node.js 20 desapareció** de todos los jobs con las acciones nuevas, en las siete corridas medidas. Solo quedó en
+- **El aviso de Node.js 20 desapareció** de todos los jobs con las acciones nuevas, en las once corridas medidas. Solo quedó en
   los dos jobs que aún llamaban al flujo viejo, y se fue al subir el pin.
 
 La pregunta, fijada antes de medir en [`ANTES-ETAPA-MANT.md`](ANTES-ETAPA-MANT.md):
@@ -45,15 +45,16 @@ Cada artefacto se comparó por huella con el de la corrida registrada en su etap
 
 | Control | Corridas | Igual a | Qué dio |
 |---|---|---|---|
-| La demo: `negativo`, `positivo` y `real` | [en `M1`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41155838459), [en `M2`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157546381) | [`cv/ci/CORRIDA-CI-1.json`](cv/ci/CORRIDA-CI-1.json), de la 23 | los tres `INFORME.json`, iguales byte a byte (`e7c2e65d…`, `2f89fa13…` y `488ee643…`); seis jobs en verde |
-| El ejemplo: `ejemplo`, `ejemplo-propio` y su comprobación | [en `M1`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41155838502), con el flujo viejo; [en `M2`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157546469), con el nuevo | [`cv/ci/CORRIDA-CI2-2.json`](cv/ci/CORRIDA-CI2-2.json), de la 24 | `pasa` en 349 y 6 casos, con los informes iguales (`c99e7ba3…` y `7c1b37be…`); la comprobación de fuera, la misma |
+| La demo: `negativo`, `positivo` y `real` | [en `M1`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41155838459), [en `M2`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157546381), [en el PR](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41160958010) | [`cv/ci/CORRIDA-CI-1.json`](cv/ci/CORRIDA-CI-1.json), de la 23 | los tres `INFORME.json`, iguales byte a byte (`e7c2e65d…`, `2f89fa13…` y `488ee643…`); seis jobs en verde |
+| El ejemplo: `ejemplo`, `ejemplo-propio` y su comprobación | [en `M1`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41155838502), con el flujo viejo; [en `M2`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157546469), con el nuevo; [en el PR](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41160958094) | [`cv/ci/CORRIDA-CI2-2.json`](cv/ci/CORRIDA-CI2-2.json), de la 24 | `pasa` en 349 y 6 casos, con los informes iguales (`c99e7ba3…` y `7c1b37be…`); la comprobación de fuera, la misma |
 | El rojo, a mano | [sobre `M2`](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41157678311) | [`cv/ci/CORRIDA-CI2-3.json`](cv/ci/CORRIDA-CI2-3.json), de la 24 | `rojo` falló solo en «Veredicto frente a la linea base», con `PID-8` en 164 casos y el informe igual (`30ddf4a7…`); `rojo-comprobado`, en verde con la misma comprobación |
-| La higiene | en `M1` y en `M2` | — | en verde |
+| La higiene | en `M1`, en `M2` y en el PR | — | en verde |
 
 Las corridas están en [`cv/ci/CORRIDA-MANT-1.json`](cv/ci/CORRIDA-MANT-1.json) y
 [`cv/ci/CORRIDA-MANT-1-ejemplo.json`](cv/ci/CORRIDA-MANT-1-ejemplo.json) (`M1`), en
 [`cv/ci/CORRIDA-MANT-2-demo.json`](cv/ci/CORRIDA-MANT-2-demo.json) y [`cv/ci/CORRIDA-MANT-2.json`](cv/ci/CORRIDA-MANT-2.json) (`M2`),
-y en [`cv/ci/CORRIDA-MANT-3.json`](cv/ci/CORRIDA-MANT-3.json) (el rojo).
+en [`cv/ci/CORRIDA-MANT-3.json`](cv/ci/CORRIDA-MANT-3.json) (el rojo) y en
+[`cv/ci/CORRIDA-MANT-4-demo.json`](cv/ci/CORRIDA-MANT-4-demo.json) y [`cv/ci/CORRIDA-MANT-4.json`](cv/ci/CORRIDA-MANT-4.json) (el PR).
 
 En `M1`, el ejemplo llamaba al flujo de la 24, con las acciones viejas. Su job propio, con `download-artifact` v7, bajó sin
 problema lo que habían subido sus dos llamadas con `upload-artifact` v4.6.2.
@@ -72,6 +73,7 @@ El aviso no está en los artefactos ni en los campos de `gh run view --json`: es
 | `ejemplo-ci` en `M1` | 3 | `ejemplo / verificar` y `ejemplo-propio / verificar`, admitidos: llamaban al flujo de `5183b4e` |
 | `ejemplo-ci` en `M2` | 3 | ninguno |
 | `rojo-ci` sobre `M2` | 2 | ninguno |
+| `demo-ci`, `ejemplo-ci` y `higiene` en el PR; `higiene` en el push de su rama | 6, 3, 1 y 1 | ninguno |
 
 Hay dos controles de que el lector ve el aviso cuando está:
 - [una corrida de `ejemplo-ci` de la 24](https://github.com/LK-Corporation/lab-integraciones/actions/runs/41136715322), con el aviso
@@ -86,15 +88,24 @@ Cada job lleva además una nota de GitHub: la etiqueta `ubuntu-latest` pasa a Ub
 
 ## `pull_request`
 
-El PR que trae este documento recorre el evento `pull_request` con las acciones nuevas. Sus corridas se anotan en el commit
-siguiente de la rama.
+El PR que trajo este documento, [LK-Corporation/lab-integraciones#2](https://github.com/LK-Corporation/lab-integraciones/pull/2),
+recorrió el evento con las acciones nuevas, desde una rama del propio repositorio. Se integra en `main` por avance rápido, sin
+commit de fusión. Sus tres flujos salieron en verde a la primera:
+- **`demo-ci`**, con los tres `INFORME.json` iguales byte a byte a los de la etapa 23. El laboratorio se sacó en el commit de
+  fusión que crea GitHub, que la demo pasa como `laboratorio_ref`.
+- **`ejemplo-ci`**, con sus tres artefactos iguales a los de la etapa 24.
+- **La higiene**, con la prueba de correos ante el commit de fusión sintético, arreglada en la 24.
+
+Están en [`cv/ci/CORRIDA-MANT-4-demo.json`](cv/ci/CORRIDA-MANT-4-demo.json) y [`cv/ci/CORRIDA-MANT-4.json`](cv/ci/CORRIDA-MANT-4.json).
+En los dos, `commit` es la cabeza del PR (`537f1a1`), que es lo que da GitHub. El commit siguiente de la rama, que trae este
+párrafo, vuelve a correr los flujos del PR; esas corridas quedan en el PR.
 
 ## Lo que cuesta
 
 | Corrida | Minutos de reloj |
 |---|---|
-| `demo-ci` en `M1` / en `M2` | 1,8 / 1,5 |
-| `ejemplo-ci` en `M1` / en `M2` | 0,5 / 0,5 |
+| `demo-ci` en `M1` / en `M2` / en el PR | 1,8 / 1,5 / 1,4 |
+| `ejemplo-ci` en `M1` / en `M2` / en el PR | 0,5 / 0,5 / 0,5 |
 | `rojo-ci` | 0,6 |
 
 En la 24 fueron 1,3 a 1,5 la demo, 0,4 a 0,5 el ejemplo y 0,5 el rojo.
@@ -112,13 +123,15 @@ La previsión se selló antes del primer push: [`cv/ci/PREVISION-MANT.md`](cv/ci
 | El rojo como se espera a la primera | 0,85 | — | **sí** |
 | Sin el aviso de Node.js 20 donde debe desaparecer | 0,85 | 0,75 | **sí** |
 | Casos con el hallazgo del rojo | 164 | — | **164** |
-| Minutos: demo 1 a 2; ejemplo y rojo, 0,3 a 1 | — | — | **dentro:** 1,5 a 1,8; 0,5 y 0,6 |
-| Las corridas del PR en verde a la primera | 0,8 | 0,74 | se anota con el PR |
-| Todo en una sesión | 0,7 | — | se anota con el PR |
-| Pushes | de 4 a 6; lo más probable, 4 | cuatro o menos, 0,98 | se anota con el PR |
+| Minutos: demo 1 a 2; ejemplo y rojo, 0,3 a 1 | — | — | **dentro:** 1,4 a 1,8; 0,5 y 0,6 |
+| Las corridas del PR en verde a la primera | 0,8 | 0,74 | **sí**, la higiene también |
+| Todo en una sesión | 0,7 | — | **sí** |
+| Pushes | de 4 a 6; lo más probable, 4 | cuatro o menos, 0,98 | **5** al repositorio, con el avance rápido; **4** contando la rama y el avance rápido como uno, la regla de la 24 |
 
 De las causas de fallo previstas no apareció ninguna. Entre ellas estaban una acción nueva que no cargara en el runner,
-Python 3.12 en Ubuntu 26 y `download-artifact` v7 bajando lo de v4.6.2.
+Python 3.12 en Ubuntu 26 y `download-artifact` v7 bajando lo de v4.6.2. Tampoco falló nada que no estuviera en la lista.
+En las cuatro probabilidades que dieron los dos, todas de cosas que pasaron, el programador dio más probabilidad a lo que pasó en tres, y Jev en
+una, la del ejemplo.
 
 ## Antes del primer push
 
@@ -150,8 +163,10 @@ Python 3.12 en Ubuntu 26 y `download-artifact` v7 bajando lo de v4.6.2.
 - **Un tercero fijado a un commit anterior sigue con las acciones viejas** hasta que suba su pin (L-MANT-4), como el ejemplo en
   `M1`. Como el juez y el corpus no cambiaron, su base no se rehace.
 - **`ubuntu-latest` ya es Ubuntu 26 y no se controla aparte** (L-MANT-5). Su nota sigue en cada job.
-- **Los límites del diseño que dependían de las otras opciones no aplican:** el PR sí se recorre, la higiene no persiste el token
+- **Los límites del diseño que dependían de las otras opciones no aplican:** el PR sí se recorrió, la higiene no persiste el token
   y `download-artifact` es v7, no v8 (L-MANT-6..8).
+- **El PR salió de una rama del propio repositorio.** Un PR desde un fork, con el token restringido, sigue sin recorrer, como en la
+  24.
 
 ## Cómo repetirlo
 
