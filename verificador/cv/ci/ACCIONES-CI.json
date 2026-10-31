@@ -1,20 +1,68 @@
 {
  "formato": "acciones-ci/1",
- "_que": "Las acciones de GitHub que usan los flujos del repositorio, fijadas por commit (etapa 24, S-CI2-2). P-CI-17 exige que cada uses: lleve este sha y esta etiqueta en comentario, y el mismo sha en todos los YAML.",
- "fecha": "2026-10-26",
- "como": "git ls-remote --tags https://github.com/<accion>: el commit al que apunta la etiqueta mayor ese dia (ninguna de las cuatro es anotada: no hay linea ^{}), y las etiquetas que apuntan a ese commit; cruzado con gh api repos/<accion>/git/ref/tags/<etiqueta> y gh api repos/<accion>/commits/<sha>",
+ "_que": "Las acciones de GitHub que usan los flujos del repositorio, fijadas por commit (etapa 24, S-CI2-2; subidas en la etapa 25 a la mayor mínima con Node.js 24, Q-MANT-D-1). P-CI-17 exige que cada uses: lleve este sha y esta etiqueta en comentario, y el mismo sha en todos los YAML; P-CI-28, que node sea node24.",
+ "fecha": "2026-10-31",
+ "como": "git ls-remote --tags https://github.com/<accion>: el commit al que apunta la etiqueta mayor ese dia y la etiqueta vX.Y.Z del mismo commit; cruzado con gh api repos/<accion>/git/ref/tags/<etiqueta> y gh api repos/<accion>/commits/<sha>; node, el runs.using de su action.yml en ese sha",
  "acciones": {
-  "actions/checkout": {"etiqueta": "v4.4.0", "mayor": "v4", "sha": "11d5960a326750d5838078e36cf38b85af677262",
-                       "ls_remote": ["11d5960a326750d5838078e36cf38b85af677262\trefs/tags/v4", "11d5960a326750d5838078e36cf38b85af677262\trefs/tags/v4.4.0"],
-                       "api": "commit 11d5960a326750d5838078e36cf38b85af677262; 2026-07-16T19:43:47Z"},
-  "actions/setup-python": {"etiqueta": "v5.6.0", "mayor": "v5", "sha": "a26af69be951a213d495a4c3e4e4022e16d87065",
-                           "ls_remote": ["a26af69be951a213d495a4c3e4e4022e16d87065\trefs/tags/v5", "a26af69be951a213d495a4c3e4e4022e16d87065\trefs/tags/v5.6.0"],
-                           "api": "commit a26af69be951a213d495a4c3e4e4022e16d87065; 2025-04-24T02:42:27Z"},
-  "actions/upload-artifact": {"etiqueta": "v4.6.2", "mayor": "v4", "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02",
-                              "ls_remote": ["ea165f8d65b6e75b540449e92b4886f43607fa02\trefs/tags/v4", "ea165f8d65b6e75b540449e92b4886f43607fa02\trefs/tags/v4.6.2"],
-                              "api": "commit ea165f8d65b6e75b540449e92b4886f43607fa02; 2025-03-19T17:34:59Z"},
-  "actions/download-artifact": {"etiqueta": "v4.3.0", "mayor": "v4", "sha": "d3f86a106a0bac45b974a628896c90dbdf5c8093",
-                                "ls_remote": ["d3f86a106a0bac45b974a628896c90dbdf5c8093\trefs/tags/v4", "d3f86a106a0bac45b974a628896c90dbdf5c8093\trefs/tags/v4.3.0"],
-                                "api": "commit d3f86a106a0bac45b974a628896c90dbdf5c8093; 2025-04-24T16:25:03Z"}
+  "actions/checkout": {
+   "etiqueta": "v5.1.0",
+   "mayor": "v5",
+   "sha": "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+   "node": "node24",
+   "ls_remote": [
+    "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09\trefs/tags/v5",
+    "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09\trefs/tags/v5.1.0"
+   ],
+   "api": "commit fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09; 2026-07-16T19:43:40Z",
+   "anterior": {
+    "etiqueta": "v4.4.0",
+    "sha": "11d5960a326750d5838078e36cf38b85af677262"
+   }
+  },
+  "actions/setup-python": {
+   "etiqueta": "v6.3.0",
+   "mayor": "v6",
+   "sha": "ece7cb06caefa5fff74198d8649806c4678c61a1",
+   "node": "node24",
+   "ls_remote": [
+    "ece7cb06caefa5fff74198d8649806c4678c61a1\trefs/tags/v6",
+    "ece7cb06caefa5fff74198d8649806c4678c61a1\trefs/tags/v6.3.0"
+   ],
+   "api": "commit ece7cb06caefa5fff74198d8649806c4678c61a1; 2026-06-23T18:01:57Z",
+   "anterior": {
+    "etiqueta": "v5.6.0",
+    "sha": "a26af69be951a213d495a4c3e4e4022e16d87065"
+   }
+  },
+  "actions/upload-artifact": {
+   "etiqueta": "v6.0.0",
+   "mayor": "v6",
+   "sha": "b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+   "node": "node24",
+   "ls_remote": [
+    "b7c566a772e6b6bfb58ed0dc250532a479d7789f\trefs/tags/v6",
+    "b7c566a772e6b6bfb58ed0dc250532a479d7789f\trefs/tags/v6.0.0"
+   ],
+   "api": "commit b7c566a772e6b6bfb58ed0dc250532a479d7789f; 2025-12-12T17:58:04Z",
+   "anterior": {
+    "etiqueta": "v4.6.2",
+    "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+   }
+  },
+  "actions/download-artifact": {
+   "etiqueta": "v7.0.0",
+   "mayor": "v7",
+   "sha": "37930b1c2abaa49bbe596cd826c3c89aef350131",
+   "node": "node24",
+   "ls_remote": [
+    "37930b1c2abaa49bbe596cd826c3c89aef350131\trefs/tags/v7",
+    "37930b1c2abaa49bbe596cd826c3c89aef350131\trefs/tags/v7.0.0"
+   ],
+   "api": "commit 37930b1c2abaa49bbe596cd826c3c89aef350131; 2025-12-12T17:58:13Z",
+   "anterior": {
+    "etiqueta": "v4.3.0",
+    "sha": "d3f86a106a0bac45b974a628896c90dbdf5c8093"
+   }
+  }
  }
 }

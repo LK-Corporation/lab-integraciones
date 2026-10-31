@@ -2,13 +2,15 @@
 # -*- coding: utf-8 -*-
 """Etapa 23 (cv/ci/diseno-ci-fable.md §9; decisiones de Jev en cv/ci/decision-jev-qci.md): P-CI-1..15, la línea base, la siembra
 del positivo y los dos flujos de GitHub Actions. Etapa 24 (cv/ci/diseno-ci2-fable.md §8; cv/ci/decision-jev-qci2.md): P-CI-16..26,
-los endurecimientos, el proyecto de ejemplo, la forma remota y el run en rojo; P-CI-27, en el segundo push. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
+los endurecimientos, el proyecto de ejemplo, la forma remota y el run en rojo; P-CI-27, en el segundo push. Etapa 25
+(cv/ci/diseno-mant-fable.md §5): P-CI-28..31, las acciones en Node.js 24, y las de la 24 leen las plantillas de github-mant/. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
 con PyYAML (la única dependencia, solo de pruebas).
 
 Antes del código fallan todas: linea_base.py, sembrar_juguete.py, POSITIVO-CI.json y los YAML no existen.
   python3 cv/ci/prueba_ci.py          -> TODO BIEN si no hay ningún MAL
   python3 cv/ci/prueba_ci.py rojo     -> sale 0 solo si fallan todas"""
 import copy
+import hashlib
 import importlib.util
 import io
 import json
@@ -128,8 +130,10 @@ def yaml_dir():
     pub = os.path.join(os.path.dirname(FASE), ".github", "workflows")
     if os.path.exists(os.path.join(pub, "verificador-conversor.yml")):
         return pub
-    ci2 = os.path.join(CI_D, "github-ci2")                                   # etapa 24: las plantillas selladas; antes, las de la 23
-    return ci2 if os.path.exists(os.path.join(ci2, "verificador-conversor.yml")) else os.path.join(CI_D, "github")
+    for d in ("github-mant", "github-ci2"):                                  # etapa 25, después la 24; antes, las de la 23
+        if os.path.exists(os.path.join(CI_D, d, "verificador-conversor.yml")):
+            return os.path.join(CI_D, d)
+    return os.path.join(CI_D, "github")
 
 
 def cargar_yaml(nombre):
@@ -495,12 +499,12 @@ def p15():
 
 # ---------------------------------------------------------------------------- P-CI-16..26 (etapa 24, cv/ci/diseno-ci2-fable.md §8)
 ACCIONES_JSON = os.path.join(CI_D, "ACCIONES-CI.json")
-LK_REMOTO = re.compile(r"^LK-Corporation/lab-integraciones/\.github/workflows/verificador-conversor\.yml@(COMMIT_C1|[0-9a-f]{40})$")
+LK_REMOTO = re.compile(r"^LK-Corporation/lab-integraciones/\.github/workflows/verificador-conversor\.yml@(COMMIT_C1|COMMIT_M1|[0-9a-f]{40})$")
 USO_ACCION = re.compile(r"^\s*-?\s*uses: actions/([\w-]+)@([0-9a-f]{40})  # (v\d+\.\d+\.\d+)$")
 
 
 def plantillas_dir():
-    return os.path.join(CI_D, "github-ci2")
+    return os.path.join(CI_D, "github-mant")                                  # etapa 25; las de la 24, en github-ci2/
 
 
 def ejemplo_dir():
@@ -531,7 +535,7 @@ def p16():
     """Ninguna ${{ }} dentro de un run: en ningún YAML (S-CI2-1)."""
     fs = ficheros_yaml()
     mira("hay YAML que mirar (los que corren y las plantillas de la 24)",
-         len(fs) >= 3 and any(os.sep + "github-ci2" + os.sep in f for f in fs), True)
+         len(fs) >= 3 and any(os.sep + "github-mant" + os.sep in f for f in fs), True)
     mira("ningún run: con ${{", {os.path.basename(f): runs_con_expresion(cargar(f)) for f in fs if runs_con_expresion(cargar(f))}, {})
     malo = {"jobs": {"j": {"steps": [{"run": "echo ${{ inputs.x }}"}]}}}
     bueno = {"jobs": {"j": {"steps": [{"run": "echo $IN_X", "env": {"IN_X": "${{ inputs.x }}"}}]}}}
@@ -567,7 +571,7 @@ def guarda_acciones(textos, acciones):
 def p17():
     """Toda acción por commit, con su etiqueta, el mismo commit en todos los YAML (S-CI2-2)."""
     acciones = leer_json(ACCIONES_JSON)
-    textos = {os.path.basename(f) + ("@plantilla" if "github-ci2" in f else ""): open(f, encoding="utf-8").read() for f in ficheros_yaml()}
+    textos = {os.path.basename(f) + ("@plantilla" if "github-mant" in f else ""): open(f, encoding="utf-8").read() for f in ficheros_yaml()}
     mira("las acciones, por commit y con su etiqueta", guarda_acciones(textos, acciones), [])
     sha = acciones["acciones"]["actions/checkout"]["sha"]
     et = acciones["acciones"]["actions/checkout"]["etiqueta"]
@@ -1006,6 +1010,9 @@ def p26():
 
 
 C0 = "0f8543718e0ce004fb477bbd7da06cb7c44486ee"                              # el commit publicado del que partió la etapa 24
+C1 = "5183b4edeb2fff421cd441b248f141ccd52852bc"                              # el pin del ejemplo en la 24
+M1 = None                                                                   # etapa 25: el commit del primer push, puesto en M2
+PIN_ESPERADO = M1 or C1
 
 
 def comprobar_vivos(vivos):
@@ -1022,12 +1029,14 @@ def comprobar_vivos(vivos):
             p.append("%s sin forma remota de 40 hex" % f)
             continue
         commits.add(m.group(1))
-        if t != plantilla.replace("COMMIT_C1", m.group(1)):
+        if t != plantilla.replace("COMMIT_M1", m.group(1)):
             p.append("%s no es su plantilla" % f)
     if len(commits) != 1:
         p.append("commits distintos")
     if C0 in commits:
         p.append("C0")
+    if commits and commits != {PIN_ESPERADO}:
+        p.append("no es el pin esperado")
     return p, commits
 
 
@@ -1057,18 +1066,143 @@ def p27():
     plantilla = open(os.path.join(plantillas_dir(), "rojo-ci.yml"), encoding="utf-8").read()
 
     def otro_commit(d):
-        open(os.path.join(d, "rojo-ci.yml"), "w", encoding="utf-8").write(plantilla.replace("COMMIT_C1", "b" * 40))
+        open(os.path.join(d, "rojo-ci.yml"), "w", encoding="utf-8").write(plantilla.replace("COMMIT_M1", "b" * 40))
     mira("control: dos commits distintos", "commits distintos" in comprobar_vivos(copia(otro_commit))[0], True)
 
     def con_c0(d):
         for f in ("ejemplo-ci.yml", "rojo-ci.yml"):
-            open(os.path.join(d, f), "w", encoding="utf-8").write(open(os.path.join(plantillas_dir(), f), encoding="utf-8").read().replace("COMMIT_C1", C0))
+            open(os.path.join(d, f), "w", encoding="utf-8").write(open(os.path.join(plantillas_dir(), f), encoding="utf-8").read().replace("COMMIT_M1", C0))
     mira("control: los dos con C0", "C0" in comprobar_vivos(copia(con_c0))[0], True)
     mira("control: sin rojo-ci.yml", "rojo-ci.yml no existe" in comprobar_vivos(copia(lambda d: os.remove(os.path.join(d, "rojo-ci.yml"))))[0], True)
 
 
+# ---------------------------------------------------------------------------- P-CI-28..31 (etapa 25, cv/ci/diseno-mant-fable.md §5)
+MINIMO_NODE24 = {"actions/checkout": 5, "actions/setup-python": 6, "actions/upload-artifact": 6, "actions/download-artifact": 7}
+ENTRADAS_ACCION = {"actions/checkout": {"path", "persist-credentials", "repository", "ref", "fetch-depth"},
+                   "actions/setup-python": {"python-version"},
+                   "actions/upload-artifact": {"name", "path", "retention-days", "if-no-files-found"},
+                   "actions/download-artifact": {"name", "path"}}
+
+
+def guarda_node24(acciones):
+    p = []
+    for a, x in (acciones.get("acciones") or {}).items():
+        sha, ant = x.get("sha", ""), (x.get("anterior") or {})
+        if x.get("node") != "node24":
+            p.append("%s node" % a)
+        if not str(x.get("mayor", "")).startswith("v") or int(str(x["mayor"])[1:]) < MINIMO_NODE24.get(a, 99):
+            p.append("%s mayor" % a)
+        if not str(x.get("etiqueta", "")).startswith(str(x.get("mayor")) + "."):
+            p.append("%s etiqueta" % a)
+        if sha == ant.get("sha") or not re.match(r"^[0-9a-f]{40}$", ant.get("sha", "")):
+            p.append("%s anterior" % a)
+        if sha not in str(x.get("api", "")):
+            p.append("%s api" % a)
+    return p
+
+
+def huellas_ci2():
+    """Las plantillas de la 24 (github-ci2/*.yml) frente a sus líneas de SELLO-CI2.txt."""
+    sello = {}
+    for l in open(os.path.join(CI_D, "SELLO-CI2.txt"), encoding="utf-8"):
+        m = re.match(r"^([0-9a-f]{64})  (github-ci2/\S+\.yml)\s*$", l)
+        if m:
+            sello[m.group(2)] = m.group(1)
+    return sello, {r: hashlib.sha256(open(os.path.join(CI_D, r), "rb").read()).hexdigest() for r in sello}
+
+
+def p28():
+    """ACCIONES-CI.json: las cuatro en Node.js 24, en la mayor mínima o más, distintas de las de la 24; github-ci2/ intacto."""
+    acciones = leer_json(ACCIONES_JSON)
+    mira("las acciones, en Node.js 24", guarda_node24(acciones), [])
+    for n, f, motivo in (("node20", lambda x: x["acciones"]["actions/checkout"].__setitem__("node", "node20"), "actions/checkout node"),
+                         ("download v6", lambda x: x["acciones"]["actions/download-artifact"].__setitem__("mayor", "v6"), "actions/download-artifact mayor"),
+                         ("el mismo sha que la 24", lambda x: x["acciones"]["actions/setup-python"].__setitem__("sha", x["acciones"]["actions/setup-python"]["anterior"]["sha"]),
+                          "actions/setup-python anterior")):
+        malo = copy.deepcopy(acciones)
+        f(malo)
+        mira("control: %s" % n, motivo in guarda_node24(malo), True)
+    sello, ahora = huellas_ci2()
+    mira("las cinco plantillas de la 24, intactas", (len(sello), sello == ahora), (5, True))
+    d = tmp("ci2")
+    shutil.copyfile(os.path.join(CI_D, "github-ci2", "demo-ci.yml"), os.path.join(d, "demo-ci.yml"))
+    open(os.path.join(d, "demo-ci.yml"), "a", encoding="utf-8").write(" ")
+    mira("control: una plantilla de la 24 con un espacio más",
+         hashlib.sha256(open(os.path.join(d, "demo-ci.yml"), "rb").read()).hexdigest() == sello["github-ci2/demo-ci.yml"], False)
+
+
+def checkouts_sin_persistencia(d):
+    return ["%s/%s" % (jn, s.get("name") or "?") for jn, j in (d.get("jobs") or {}).items() for s in j.get("steps") or []
+            if str(s.get("uses", "")).startswith("actions/checkout@") and (s.get("with") or {}).get("persist-credentials") is not False]
+
+
+def p29():
+    """Todo checkout de todo YAML, sin persistir credenciales (Q-MANT-D-2: también la higiene)."""
+    mira("ningún checkout persiste credenciales",
+         {os.path.basename(f): checkouts_sin_persistencia(cargar(f)) for f in ficheros_yaml() if checkouts_sin_persistencia(cargar(f))}, {})
+    mira("control: un checkout sin la clave", checkouts_sin_persistencia({"jobs": {"j": {"steps": [{"uses": "actions/checkout@" + "a" * 40}]}}}), ["j/?"])
+
+
+def cargar_anotaciones():
+    spec = importlib.util.spec_from_file_location("anotaciones_ci", os.path.join(CI_D, "anotaciones_ci.py"))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def p30():
+    """anotaciones_ci.py sin red: ve el aviso de Node.js 20 y decide con lo admitido y el control (S-MANT-7)."""
+    an = cargar_anotaciones()
+    aviso = {"message": "Node.js 20 actions are deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@x", "title": ""}
+    mira("ve el aviso", (len(an.avisos_de([aviso, {"message": "otra cosa"}])), an.avisos_de([{"message": "otra cosa"}])), (1, []))
+    mira("control: Node.js 24 no es el aviso", an.avisos_de([{"message": "running on Node.js 24", "title": ""}]), [])
+    def corrida(estado="completed", **jobs):
+        return {"estado": estado, "jobs": {n: {"conclusion": "success", "aviso_node20": v} if isinstance(v, bool) else v for n, v in jobs.items()}}
+    corridas = {"1": corrida(a=False, b=True)}
+    control = {"jobs_con_aviso": ["x"]}
+    mira("un job con aviso, no admitido: 1", an.veredicto(corridas, [], control), 1)
+    mira("admitido por <run_id>:<job>: 0", an.veredicto(corridas, ["1:b"], control), 0)
+    mira("control: admitido solo por el nombre: 1", an.veredicto(corridas, ["b"], control), 1)
+    mira("control: lo admitido vale solo en su corrida", an.veredicto({"1": corrida(b=True), "2": corrida(b=True)}, ["1:b"], control), 1)
+    mira("control: admitido y sin el aviso: 1", an.veredicto({"1": corrida(a=False, b=False)}, ["1:b"], control), 1)
+    mira("control: control sin aviso: 1", an.veredicto({"1": corrida(a=False)}, [], {"jobs_con_aviso": []}), 1)
+    mira("control: ninguna corrida: 1", an.veredicto({}, [], control), 1)
+    mira("control: corrida sin acabar: 1", an.veredicto({"1": corrida("in_progress", a=False)}, [], control), 1)
+    mira("control: job saltado: 1", an.veredicto({"1": corrida(a={"conclusion": "skipped", "aviso_node20": False})}, [], control), 1)
+    mira("control: job cancelado: 1", an.veredicto({"1": corrida(a={"conclusion": "cancelled", "aviso_node20": False})}, [], control), 1)
+    mira("un job en rojo es medida: 0", an.veredicto({"1": corrida(a={"conclusion": "failure", "aviso_node20": False})}, [], control), 0)
+    mira("control: sin jobs: 1", an.veredicto({"1": corrida()}, [], control), 1)
+    mira("sin aviso, medido: 0", an.veredicto({"1": corrida(a=False)}, [], control), 0)
+    llamadas = []
+    paginas = an.anotaciones_de(7, lambda *a: (llamadas.append(a), '{"message": "x"}\n{"message": "y"}\n')[1])
+    mira("lee todas las páginas", (len(paginas), "--paginate" in llamadas[0]), (2, True))
+
+
+def entradas_raras(d):
+    p = []
+    for jn, j in (d.get("jobs") or {}).items():
+        for s in j.get("steps") or []:
+            u = str(s.get("uses", ""))
+            a = u.split("@")[0]
+            if a in ENTRADAS_ACCION:
+                extra = set(s.get("with") or {}) - ENTRADAS_ACCION[a]
+                if extra or (a == "actions/download-artifact" and set(s.get("with") or {}) != {"name", "path"}):
+                    p.append("%s/%s %s" % (jn, a, sorted(extra)))
+    return p
+
+
+def p31():
+    """Las entradas de cada acción, las revisadas en sus notas de versión (§2.1)."""
+    mira("ninguna entrada fuera de las revisadas",
+         {os.path.basename(f): entradas_raras(cargar(f)) for f in ficheros_yaml() if entradas_raras(cargar(f))}, {})
+    for n, paso in (("archive: false", {"uses": "actions/upload-artifact@x", "with": {"name": "a", "path": "b", "archive": False}}),
+                    ("artifact-ids", {"uses": "actions/download-artifact@x", "with": {"artifact-ids": "1", "path": "b"}}),
+                    ("cache: pip", {"uses": "actions/setup-python@x", "with": {"python-version": "3.12", "cache": "pip"}})):
+        mira("control: %s" % n, bool(entradas_raras({"jobs": {"j": {"steps": [paso]}}})), True)
+
+
 PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24,
-           p25, p26, p27]
+           p25, p26, p27, p28, p29, p30, p31]
 
 
 def main():

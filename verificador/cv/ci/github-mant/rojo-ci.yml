@@ -1,0 +1,62 @@
+# El run en rojo a proposito (etapa 24, verificador/cv/ci/CI.md): el proyecto de ejemplo con un defecto sembrado al preparar,
+# llamado por la forma remota en el modo «pasa». El job «rojo» tiene que fallar; «rojo-comprobado» comprueba desde fuera que
+# fallo por el hallazgo sembrado y solo por el, que dejo su resumen y que el artefacto lleva su veredicto. Solo a mano, nunca
+# en cada push: la corrida queda roja a proposito.
+name: rojo-ci
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rojo-ci
+  cancel-in-progress: false
+
+jobs:
+  rojo:
+    # ejemplo-ci/ci/DEFECTO.json sembrado en la copia del conversor; la base es la de siempre; esperar vale «pasa» por omision
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@COMMIT_M1
+    permissions:
+      contents: read
+    with:
+      adaptador: proyecto/ejemplo-ci/ci/adaptador.json
+      linea_base: proyecto/ejemplo-ci/ci/LINEA-BASE.json
+      preparar: bash "$PROYECTO/ejemplo-ci/preparar.sh" "$ARTEFACTOS" && python3 "$PROYECTO/ejemplo-ci/ci/sembrar.py" "$ARTEFACTOS/conv/conversor.py" "$PROYECTO/ejemplo-ci/ci/DEFECTO.json"
+      imagen: python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+      corpus: proyecto/ejemplo-ci/corpus
+      laboratorio: LK-Corporation/lab-integraciones
+      laboratorio_ref: COMMIT_M1
+      nombre: rojo
+
+  rojo-comprobado:
+    # corre aunque «rojo» haya fallado (es lo que se espera): descarga su artefacto y lo juzga; las salidas del job se anotan
+    needs: rojo
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
+        with:
+          name: rojo-${{ github.run_attempt }}
+          path: artefacto
+      - shell: bash
+        env:
+          RESULTADO_JOB: ${{ needs.rojo.result }}
+          RESULTADO: ${{ needs.rojo.outputs.resultado }}
+          NUEVOS: ${{ needs.rojo.outputs.nuevos }}
+          DISTINTOS: ${{ needs.rojo.outputs.nuevos_distintos }}
+        run: |
+          set -euo pipefail
+          python3 verificador/cv/ci/comprobar_rojo.py artefacto ejemplo-ci/ci/DEFECTO.json ejemplo-ci/ci/LINEA-BASE.json \
+            --resultado-job "$RESULTADO_JOB" --salidas "$RESULTADO" "$NUEVOS" "$DISTINTOS" -o comprobacion
+      - if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
+        with:
+          name: rojo-comprobado-${{ github.run_attempt }}
+          retention-days: 14
+          path: comprobacion/

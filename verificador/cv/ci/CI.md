@@ -56,7 +56,7 @@ base, para separar lo que ya conoces de lo que acaba de aparecer.
    En el workspace del runner, `proyecto/` es tu repositorio y `lab/` el laboratorio.
    - **`laboratorio_ref` es obligatoria y tiene que ser el mismo commit entero (40 hex) que en `uses:`.** Una rama o una
      etiqueta se rechazan con el código 2. El juez, la herramienta y el corpus son los de ese commit, y tu base se hizo con ellos.
-   - **Cuando subas de commit, regenera la base.** Un juez distinto se avisa y la base propuesta lo marca (`juez_cambiado`).
+   - **Cuando subas de commit y cambie el juez o el corpus, regenera la base.** Un juez distinto se avisa y la base propuesta lo marca (`juez_cambiado`).
 
 ## Lo que cambia desde la etapa 24 (para quien ya lo usaba)
 
@@ -118,8 +118,9 @@ conocido.
 - **Una corrida es una corrida:** un conversor no determinista dará hallazgos y arreglos intermitentes (L-CI-5).
 - **Las entradas llegan a las órdenes por variables de entorno,** pero `preparar` es una orden tuya que se ejecuta tal cual. No
   pongas en ella texto que controle otro, como `github.head_ref` o el título de un PR.
-- **Las acciones van fijadas por commit y no se actualizan solas.** En octubre de 2026 GitHub ya avisa de que corren en Node.js
-  20 y las fuerza a Node.js 24, y `ubuntu-latest` pasa a Ubuntu 26. Subirlas es un commit con `ACCIONES-CI.json` al día.
+- **Las acciones van fijadas por commit y no se actualizan solas.** El 31-oct-2026 (etapa 25) se subieron a la mayor mínima con
+  Node.js 24, porque GitHub ya avisaba de que las de antes corrían en Node.js 20. `ACCIONES-CI.json` guarda la anterior al lado.
+  Subirlas otra vez es un commit con ese registro al día y, para el ejemplo, dos pushes: el flujo nuevo y después su pin.
 - **Si un job de comprobación descarga el artefacto del flujo, relanza todos los jobs, no solo el que falló.** El relanzado
   busca el artefacto de su intento, y el job que lo sube no se relanzó.
 - **Microsoft FHIR-Converter** se puede preparar con `dotnet publish` en `preparar` (ver [`../CV1.md`](../CV1.md)), pero no es un
@@ -137,8 +138,8 @@ controles:
 
 Las dos llamadas del proyecto de ejemplo son `.github/workflows/ejemplo-ci.yml` y `.github/workflows/rojo-ci.yml`.
 - **Cuándo llegan:** en el segundo push de la etapa 24, con el commit del primero fijado en `uses:`.
-- **Sus plantillas,** con el commit por poner: [`github-ci2/ejemplo-ci.yml`](github-ci2/ejemplo-ci.yml) y
-  [`github-ci2/rojo-ci.yml`](github-ci2/rojo-ci.yml).
+- **Sus plantillas,** con el commit por poner: [`github-mant/ejemplo-ci.yml`](github-mant/ejemplo-ci.yml) y
+  [`github-mant/rojo-ci.yml`](github-mant/rojo-ci.yml).
 
 ## Un proyecto de ejemplo para copiar
 

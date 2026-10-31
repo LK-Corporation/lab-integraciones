@@ -1,0 +1,95 @@
+{
+ "etapa": "25, el mantenimiento de la integración continua: previsión sellada antes del primer push",
+ "base_de_la_prevision": "Todo lo del laboratorio, nada del runner. Las 31 pruebas P-CI pasan (P-CI-28..31 nuevas). Las cuatro acciones, a la mayor mínima con Node.js 24 (checkout v5.1.0, setup-python v6.3.0, upload-artifact v6.0.0, download-artifact v7.0.0), cruzadas con la API y con runs.using node24. El ensayo local con los YAML nuevos: la demo con los tres INFORME.json iguales a la corrida 1 de la 23; ejemplo-ci en verde; el rojo, rojo solo por «Veredicto», con rojo-comprobado en verde y 164 casos. El control del aviso: anotaciones_ci.py ve el aviso de Node.js 20 en los tres jobs de una corrida de la 24. traer_resultados_ci.py --igual-a, generalizado, da iguales las corridas de la 24 frente a sí mismas. Lo no probado: el código de las acciones nuevas en el runner (el ensayo las emula por nombre), Python 3.12 en Ubuntu 26 con setup-python v6, el PR otra vez.",
+ "probabilidad_demo_verde_en_m1_a_la_primera": 0.9,
+ "probabilidad_demo_informes_iguales": 0.97,
+ "probabilidad_ejemplo_verde_en_m2_a_la_primera": 0.85,
+ "probabilidad_rojo_a_la_primera": 0.85,
+ "probabilidad_sin_aviso_node20": 0.85,
+ "probabilidad_pull_request_verde_a_la_primera": 0.8,
+ "probabilidad_todo_en_una_sesion": 0.7,
+ "pushes_previstos": [
+  4,
+  6
+ ],
+ "pushes_mas_probable": 4,
+ "minutos_por_corrida_previstos": {
+  "demo": [
+   1,
+   2
+  ],
+  "ejemplo": [
+   0.3,
+   1
+  ],
+  "rojo": [
+   0.3,
+   1
+  ]
+ },
+ "rojo_n_casos_previsto": 164,
+ "causas_de_fallo_previstas": [
+  "una acción nueva que no carga o cambia algo en el runner (el ensayo no corre su código)",
+  "setup-python v6 sin Python 3.12 en Ubuntu 26",
+  "download-artifact v7 bajando lo que subió upload-artifact v4.6.2 desde el flujo de C1, en M1",
+  "el patrón del aviso deja de casar con el texto de GitHub (lo ve el control)",
+  "el commit de M1 mal copiado en M2 (P-CI-27 lo ve antes del push)",
+  "la higiene con los JSON nuevos",
+  "la higiene con persist-credentials: false y fetch-depth: 0"
+ ],
+ "diferencias_que_se_explicarian": [
+  "ninguna: las acciones no tocan lo que produce INFORME.json; una diferencia es un fallo del aparato o de la acción, y entra en la escalera"
+ ],
+ "regla_de_parada": "una acción nueva cambia un resultado y no se explica: se declara, se queda en la versión anterior que funciona, y se publica lo que sí",
+ "jev": {
+  "_que": "la previsión de Jev con un estado neutro (estado_prevision_mant.md, preguntas_prevision_mant.json, decision-jev-prevision-mant.md), sellada al lado de la del programador; las cifras del programador se fijaron antes de leer la de Jev y no se cambiaron",
+  "demo_verde_en_m1": 0.84,
+  "ejemplo_verde_en_m2": 0.87,
+  "sin_aviso_node20": 0.75,
+  "pull_request_verde": 0.74,
+  "pushes": {
+   "cuatro_o_menos": 0.98,
+   "cinco_o_seis": 0.01,
+   "siete_o_mas": 0.01
+  }
+ },
+ "fecha": "2026-10-31T01:29:02+01:00",
+ "juez": "b3f00f6ad63f26a0edacd1f21eddefbcd7b5d616a39a74bc6fd6d65c75fb1958",
+ "acciones": {
+  "actions/checkout": {
+   "etiqueta": "v5.1.0",
+   "sha": "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+   "node": "node24"
+  },
+  "actions/setup-python": {
+   "etiqueta": "v6.3.0",
+   "sha": "ece7cb06caefa5fff74198d8649806c4678c61a1",
+   "node": "node24"
+  },
+  "actions/upload-artifact": {
+   "etiqueta": "v6.0.0",
+   "sha": "b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+   "node": "node24"
+  },
+  "actions/download-artifact": {
+   "etiqueta": "v7.0.0",
+   "sha": "37930b1c2abaa49bbe596cd826c3c89aef350131",
+   "node": "node24"
+  }
+ },
+ "herramienta": {
+  "github-mant/verificador-conversor.yml": "f7f5e9d3dac902a29127eb1f25ab365da86d9823cace79f8120c263f8370c07c",
+  "github-mant/demo-ci.yml": "c2ca157da0b9abafa15dc47ab57bdec3c12c594932342a83f56f66f72c64e82c",
+  "github-mant/higiene.yml": "618fdef37fd8b54f664af1321ca3ff1c3ab6b8c7b1b83ebd46a6ea3c9f1fc991",
+  "github-mant/ejemplo-ci.yml": "60ae63301791df9e2f8923ca3cb6dbd3894a45412828cac4fe323808288d100f",
+  "github-mant/rojo-ci.yml": "5e2c8eb0564f0ed44bd96d453f6fc59d1a973f6c3946c368b10d554f2549a36e",
+  "ACCIONES-CI.json": "283a0e89eeeb1bdcb92769861ba22fb0fb66839dfb3ffff094437491fac63474",
+  "prueba_ci.py": "77dab16fde7aa537cd8fe399f2661dd7cd3e1b08871645c290a398f7bb78e3f4",
+  "ensayo_flujo.py": "3c60b7f3a7aef242a5270693fe21cc707d7242d0cf72cef1a696bf542c4b81c7",
+  "traer_resultados_ci.py": "8b42c14a070c37e6c10e8ac4fc787525b80d3edd7384b4c4b25367b0be31fee3",
+  "anotaciones_ci.py": "aa6aa1c74c43b03132476ffd25ba0f3fff82ef33d1fe9c85a30b6cb723b56df9",
+  "sellar_prevision_mant.py": "4a7a42548163a9e1d97d36d21d682e453387c9b46007f4e4d4ea9ed050148544",
+  "decision-jev-prevision-mant.md": "16dbd578ecd618e3981159b7e5681d267a0546fc958a1c8baf969ef9fec6ff54",
+  "verificar_conversor.py": "f4e29e1d7e20e84eb01314dc7485fd0298ea132852b280b0885906cb542443cd"
+ }
+}

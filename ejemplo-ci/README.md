@@ -2,8 +2,8 @@
 
 Es un proyecto de conversor HL7 v2 → FHIR R4 como lo tendría un tercero, dentro del repositorio del laboratorio. Su llamada al
 flujo reutilizable del verificador es `.github/workflows/ejemplo-ci.yml`, por la forma remota y fijada a un commit del
-laboratorio, como la escribiría cualquier proyecto. Su plantilla, con el commit por poner (`COMMIT_C1`), es
-[`../verificador/cv/ci/github-ci2/ejemplo-ci.yml`](../verificador/cv/ci/github-ci2/ejemplo-ci.yml). La guía del flujo es
+laboratorio, como la escribiría cualquier proyecto. Su plantilla, con el commit por poner (`COMMIT_M1`), es
+[`../verificador/cv/ci/github-mant/ejemplo-ci.yml`](../verificador/cv/ci/github-mant/ejemplo-ci.yml). La guía del flujo es
 [`../verificador/cv/ci/CI.md`](../verificador/cv/ci/CI.md).
 
 ## Qué hay
@@ -49,8 +49,8 @@ El guion hace:
 ## El run en rojo
 
 `.github/workflows/rojo-ci.yml` (su plantilla:
-[`../verificador/cv/ci/github-ci2/rojo-ci.yml`](../verificador/cv/ci/github-ci2/rojo-ci.yml)) corre solo a mano. Siembra el defecto en la copia del
-conversor que deja `preparar.sh` y llama al flujo en el modo normal. El job `rojo` tiene que fallar, y `rojo-comprobado`
+[`../verificador/cv/ci/github-mant/rojo-ci.yml`](../verificador/cv/ci/github-mant/rojo-ci.yml)) corre solo a mano.
+Siembra el defecto en la copia del conversor que deja `preparar.sh` y llama al flujo en el modo normal. El job `rojo` tiene que fallar, y `rojo-comprobado`
 comprueba desde fuera que falló por el hallazgo sembrado y solo por él. La corrida queda en rojo, porque tiene que estarlo.
 
 En una máquina se repite con los pasos 8 a 10 de `ci/hacer_base.sh`: sembrar, la corrida sembrada y deshacer.

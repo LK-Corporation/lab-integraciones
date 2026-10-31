@@ -89,6 +89,8 @@ EXCEPCIONES_MANIFIESTO = {
     ("verificador/cv/ci/diseno-ci-fable.md", "ni `docker inspect X`, ni `ssh x`"),   # describe la regla de la higiene
     ("verificador/cv/ci/CI.md", "<tu repo>/ci/LINEA-BASE.json"),
     ("verificador/cv/ci/ACCIONES-CI.json", "gh api repos/<accion>/git/ref/tags/<etiqueta>"),   # etapa 24: la orden, con marcadores
+    ("verificador/cv/ci/diseno-mant-fable.md", "gh api repos/actions/<a>/contents/action.yml?ref=<sha>"),   # etapa 25: las órdenes, con marcadores
+    ("verificador/cv/ci/diseno-mant-fable.md", "`gh api repos/<accion>/git/ref/tags/<etiqueta>`"),
 }
 # La clave del banco vive en .json: del verificador se admiten por nombre, no por tipo.
 JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adaptadores/microsoft.json", "verificador/cv/adaptadores/linuxforhealth.json",
@@ -134,7 +136,13 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/cv/ci/preguntas_prevision_ci2.json", "verificador/cv/ci/prevision-cuerpo-ci2.json",
                   "verificador/cv/ci/PREVISION-CI2.json", "verificador/cv/ci/CORRIDA-CI2-1.json", "verificador/cv/ci/CORRIDA-CI2-2.json",
                   "verificador/cv/ci/CORRIDA-CI2-2-demo.json", "verificador/cv/ci/CORRIDA-CI2-3.json", "verificador/cv/ci/CORRIDA-CI2-4.json",
-                  "verificador/cv/ci/CORRIDA-CI2-4-demo.json"}
+                  "verificador/cv/ci/CORRIDA-CI2-4-demo.json",
+                  # 31-oct-2026, el mantenimiento de la integración continua: preguntas, previsión, corridas y avisos
+                  "verificador/cv/ci/preguntas_qmant.json", "verificador/cv/ci/preguntas_prevision_mant.json",
+                  "verificador/cv/ci/prevision-cuerpo-mant.json", "verificador/cv/ci/PREVISION-MANT.json", "verificador/cv/ci/AVISOS-MANT.json",
+                  "verificador/cv/ci/CORRIDA-MANT-1.json", "verificador/cv/ci/CORRIDA-MANT-1-ejemplo.json", "verificador/cv/ci/CORRIDA-MANT-2.json",
+                  "verificador/cv/ci/CORRIDA-MANT-2-demo.json", "verificador/cv/ci/CORRIDA-MANT-3.json", "verificador/cv/ci/CORRIDA-MANT-4.json",
+                  "verificador/cv/ci/CORRIDA-MANT-4-demo.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

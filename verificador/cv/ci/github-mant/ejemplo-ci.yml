@@ -1,0 +1,89 @@
+# El proyecto de ejemplo (etapa 24, ejemplo-ci/README.md): la llamada al flujo reutilizable por la forma remota, como la haria
+# un tercero, fijada a un commit del laboratorio, con su adaptador, su linea base y su corpus, en el modo «pasa». Dos llamadas:
+# con el corpus del laboratorio mas el propio, y solo con el propio (sin_corpus_lab, opciones y artefacto_completo). Un job de
+# fuera descarga los artefactos y comprueba lo que tiene que salir.
+name: ejemplo-ci
+
+on:
+  push:
+    branches: [main]
+    paths: ['ejemplo-ci/**', '.github/workflows/**', 'verificador/**']
+  pull_request:
+    paths: ['ejemplo-ci/**', '.github/workflows/**', 'verificador/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ejemplo-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ejemplo:
+    # el corpus del laboratorio mas el propio, contra ci/LINEA-BASE.json; esperar vale «pasa» por omision, como en un proyecto
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@COMMIT_M1
+    permissions:
+      contents: read
+    with:
+      adaptador: proyecto/ejemplo-ci/ci/adaptador.json
+      linea_base: proyecto/ejemplo-ci/ci/LINEA-BASE.json
+      preparar: bash "$PROYECTO/ejemplo-ci/preparar.sh" "$ARTEFACTOS"
+      imagen: python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+      corpus: proyecto/ejemplo-ci/corpus
+      laboratorio: LK-Corporation/lab-integraciones
+      laboratorio_ref: COMMIT_M1
+      nombre: ejemplo
+
+  ejemplo-propio:
+    # solo el corpus propio, sin INFORME.md y con evidencias y corpus en el artefacto, contra ci/LINEA-BASE-propio.json
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@COMMIT_M1
+    permissions:
+      contents: read
+    with:
+      adaptador: proyecto/ejemplo-ci/ci/adaptador.json
+      linea_base: proyecto/ejemplo-ci/ci/LINEA-BASE-propio.json
+      preparar: bash "$PROYECTO/ejemplo-ci/preparar.sh" "$ARTEFACTOS"
+      imagen: python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+      corpus: proyecto/ejemplo-ci/corpus
+      sin_corpus_lab: true
+      opciones: '--sin-sensibilidad --json-solo'
+      artefacto_completo: true
+      laboratorio: LK-Corporation/lab-integraciones
+      laboratorio_ref: COMMIT_M1
+      nombre: ejemplo-propio
+
+  ejemplo-comprobado:
+    # desde fuera del flujo: los dos artefactos dicen lo que tienen que decir, y las salidas de los jobs cuadran con ellos
+    needs: [ejemplo, ejemplo-propio]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
+        with:
+          name: ejemplo-${{ github.run_attempt }}
+          path: artefacto-ejemplo
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
+        with:
+          name: ejemplo-propio-${{ github.run_attempt }}
+          path: artefacto-propio
+      - shell: bash
+        env:
+          RESULTADO_EJEMPLO: ${{ needs.ejemplo.outputs.resultado }}
+          HUELLA_EJEMPLO: ${{ needs.ejemplo.outputs.huella }}
+          DIGEST_EJEMPLO: ${{ needs.ejemplo.outputs.imagen_digest }}
+          RESULTADO_PROPIO: ${{ needs.ejemplo-propio.outputs.resultado }}
+        run: |
+          set -euo pipefail
+          python3 verificador/cv/ci/comprobar_ejemplo.py artefacto-ejemplo artefacto-propio \
+            ejemplo-ci/ci/LINEA-BASE.json ejemplo-ci/ci/LINEA-BASE-propio.json ejemplo-ci/ci/adaptador.json \
+            --salidas "$RESULTADO_EJEMPLO" "$HUELLA_EJEMPLO" "$DIGEST_EJEMPLO" "$RESULTADO_PROPIO" -o comprobacion
+      - if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
+        with:
+          name: ejemplo-comprobado-${{ github.run_attempt }}
+          retention-days: 14
+          path: comprobacion/

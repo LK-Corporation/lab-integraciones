@@ -59,6 +59,9 @@ un run en rojo a propósito. **En GitHub Actions, a la primera:** las dos llamad
 por el hallazgo sembrado, comprobado desde fuera, y la demostración siguió con los mismos informes. Está en
 [`verificador/RESULTADO-CI2.md`](verificador/RESULTADO-CI2.md).
 
+**Y su mantenimiento** (31-oct). Las acciones de los flujos, subidas a versiones con Node.js 24 y fijadas por commit, y el
+pin del ejemplo, en un segundo push. Está en la sección de la etapa 25 de [`verificador/README.md`](verificador/README.md).
+
 **Los tres estudios sobre agentes, en pocas líneas cada uno:**
 
 1. **¿Puede un modelo local de 30B triar fallos de integración?** (septiembre)

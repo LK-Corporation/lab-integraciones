@@ -1,0 +1,22 @@
+# Testigo público de las guardas de higiene. La puerta de verdad corre antes, en el repositorio privado,
+# porque ve lo que desde aquí no se puede comprobar sin publicarlo.
+name: higiene
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  higiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
+        with:
+          fetch-depth: 0          # el test de correos lee todo el historial
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1  # v6.3.0
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - run: python -m pytest tests -q

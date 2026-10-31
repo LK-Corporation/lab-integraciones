@@ -37,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
         with:
           persist-credentials: false
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093  # v4.3.0
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7.0.0
         with:
           name: rojo-${{ github.run_attempt }}
           path: artefacto
@@ -55,7 +55,7 @@ jobs:
           python3 verificador/cv/ci/comprobar_rojo.py artefacto ejemplo-ci/ci/DEFECTO.json ejemplo-ci/ci/LINEA-BASE.json \
             --resultado-job "$RESULTADO_JOB" --salidas "$RESULTADO" "$NUEVOS" "$DISTINTOS" -o comprobacion
       - if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
         with:
           name: rojo-comprobado-${{ github.run_attempt }}
           retention-days: 14

@@ -1,0 +1,29 @@
+{
+ "etapa": "25, el mantenimiento de la integración continua: previsión sellada antes del primer push",
+ "base_de_la_prevision": "Todo lo del laboratorio, nada del runner. Las 31 pruebas P-CI pasan (P-CI-28..31 nuevas). Las cuatro acciones, a la mayor mínima con Node.js 24 (checkout v5.1.0, setup-python v6.3.0, upload-artifact v6.0.0, download-artifact v7.0.0), cruzadas con la API y con runs.using node24. El ensayo local con los YAML nuevos: la demo con los tres INFORME.json iguales a la corrida 1 de la 23; ejemplo-ci en verde; el rojo, rojo solo por «Veredicto», con rojo-comprobado en verde y 164 casos. El control del aviso: anotaciones_ci.py ve el aviso de Node.js 20 en los tres jobs de una corrida de la 24. traer_resultados_ci.py --igual-a, generalizado, da iguales las corridas de la 24 frente a sí mismas. Lo no probado: el código de las acciones nuevas en el runner (el ensayo las emula por nombre), Python 3.12 en Ubuntu 26 con setup-python v6, el PR otra vez.",
+ "probabilidad_demo_verde_en_m1_a_la_primera": 0.9,
+ "probabilidad_demo_informes_iguales": 0.97,
+ "probabilidad_ejemplo_verde_en_m2_a_la_primera": 0.85,
+ "probabilidad_rojo_a_la_primera": 0.85,
+ "probabilidad_sin_aviso_node20": 0.85,
+ "probabilidad_pull_request_verde_a_la_primera": 0.8,
+ "probabilidad_todo_en_una_sesion": 0.7,
+ "pushes_previstos": [4, 6],
+ "pushes_mas_probable": 4,
+ "minutos_por_corrida_previstos": {"demo": [1, 2], "ejemplo": [0.3, 1], "rojo": [0.3, 1]},
+ "rojo_n_casos_previsto": 164,
+ "causas_de_fallo_previstas": [
+  "una acción nueva que no carga o cambia algo en el runner (el ensayo no corre su código)",
+  "setup-python v6 sin Python 3.12 en Ubuntu 26",
+  "download-artifact v7 bajando lo que subió upload-artifact v4.6.2 desde el flujo de C1, en M1",
+  "el patrón del aviso deja de casar con el texto de GitHub (lo ve el control)",
+  "el commit de M1 mal copiado en M2 (P-CI-27 lo ve antes del push)",
+  "la higiene con los JSON nuevos",
+  "la higiene con persist-credentials: false y fetch-depth: 0"
+ ],
+ "diferencias_que_se_explicarian": ["ninguna: las acciones no tocan lo que produce INFORME.json; una diferencia es un fallo del aparato o de la acción, y entra en la escalera"],
+ "regla_de_parada": "una acción nueva cambia un resultado y no se explica: se declara, se queda en la versión anterior que funciona, y se publica lo que sí",
+ "jev": {"_que": "la previsión de Jev con un estado neutro (estado_prevision_mant.md, preguntas_prevision_mant.json, decision-jev-prevision-mant.md), sellada al lado de la del programador; las cifras del programador se fijaron antes de leer la de Jev y no se cambiaron",
+         "demo_verde_en_m1": 0.84, "ejemplo_verde_en_m2": 0.87, "sin_aviso_node20": 0.75, "pull_request_verde": 0.74,
+         "pushes": {"cuatro_o_menos": 0.98, "cinco_o_seis": 0.01, "siete_o_mas": 0.01}}
+}

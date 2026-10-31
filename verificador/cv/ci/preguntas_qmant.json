@@ -1,0 +1,8 @@
+{
+ "q_mant_d_1_version": {"type": "choice", "instructions": "Pregunta 1: qué mayor se fija de cada acción.",
+  "criteria": {"minima": "La mínima con Node.js 24.", "ultima": "La última.", "ultima_salvo_download": "La última, salvo download-artifact en su mínima con Node.js 24 (sin la huella forzada)."}},
+ "q_mant_d_2_higiene": {"type": "choice", "instructions": "Pregunta 2: si se añade persist-credentials: false al checkout de la higiene.",
+  "criteria": {"si": "Sí, con su guarda estática.", "no": "No: solo cambia su commit, y se declara dónde queda el token."}},
+ "q_mant_d_3_pull_request": {"type": "choice", "instructions": "Pregunta 3: si se recorre otra vez el evento pull_request con las acciones nuevas.",
+  "criteria": {"no": "No: el resultado va a la rama principal y se declara.", "si": "Sí: la rama del resultado como PR, integrada por avance rápido."}}
+}

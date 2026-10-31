@@ -4,9 +4,10 @@
 un JSON sin rutas ni fechas de máquina: los jobs con su conclusión y sus minutos, y de cada artefacto `verificador-*` su
 VEREDICTO-CI.json (resultado, cuentas, identidades), y si su INFORME.json es igual byte a byte al de la corrida del laboratorio
 de la que salió la base (con --laboratorio, la carpeta de trabajo de hacer_bases.py; solo se anota el sí o el no).
-Etapa 24 (cv/ci/diseno-ci2-fable.md §7): con --igual-a <CORRIDA-CI-1.json>, cada artefacto `verificador-<control>-<n>` lleva
-`igual_a_la_corrida_1` (su INFORME.json frente al de la etapa 23, por control) y la orden sale con 1 si alguno es falso; los
-artefactos de los jobs de comprobación llevan su COMPROBACION-*.json.
+Etapa 24 (cv/ci/diseno-ci2-fable.md §7): los artefactos de los jobs de comprobación llevan su COMPROBACION-*.json. Etapa 25
+(cv/ci/diseno-mant-fable.md §4): con --igual-a <referencia>, todo artefacto que esté en la referencia lleva `igual_a_la_referencia`
+(su INFORME.json por huella, o sus COMPROBACION-* como objetos) y la orden sale con 1 si alguno es falso; uno que no está se anota
+(`sin_referencia`) y no decide.
   python3 cv/ci/traer_resultados_ci.py <run_id> <carpeta de trabajo vacía> -o cv/ci/CORRIDA-CI-<n>.json [--laboratorio <dir>] [--mensaje]
           [--igual-a cv/ci/CORRIDA-CI-1.json]"""
 import datetime
@@ -68,19 +69,26 @@ def main(run_id, trabajo, salida, laboratorio=None, igual_a=None):
                 r["artefactos"][nombre]["igual_byte_a_byte_al_laboratorio"] = open(inf, "rb").read() == open(lab, "rb").read()
     distintos = []
     if igual_a:
-        c1 = json.load(open(igual_a, encoding="utf-8"))["artefactos"]
+        ref = json.load(open(igual_a, encoding="utf-8"))["artefactos"]
+        r["referencia"] = os.path.basename(igual_a)
         for nombre, x in r["artefactos"].items():
-            if nombre.startswith("verificador-") and "informe_sha256" in x:
-                control = nombre.rsplit("-", 1)[0]
-                x["igual_a_la_corrida_1"] = x["informe_sha256"] == (c1.get(control + "-1") or {}).get("informe_sha256")
-                if not x["igual_a_la_corrida_1"]:
-                    distintos.append(nombre)
+            de_ref = ref.get(nombre.rsplit("-", 1)[0] + "-1")                # el mismo artefacto, en el primer intento de la referencia
+            if de_ref is None:
+                x["sin_referencia"] = True                                  # se anota y no decide
+                continue
+            if "informe_sha256" in x:                                       # etapa 25: todo artefacto con informe, no solo los verificador-*
+                x["igual_a_la_referencia"] = x["informe_sha256"] == de_ref.get("informe_sha256")
+            else:                                                           # los de comprobación: sus COMPROBACION-* como objetos
+                claves = [k for k in x if k.startswith("COMPROBACION-")]
+                x["igual_a_la_referencia"] = bool(claves) and all(x[k] == de_ref.get(k) for k in claves)
+            if not x["igual_a_la_referencia"]:
+                distintos.append(nombre)
     json.dump(r, open(salida, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({"conclusion": r["conclusion"], "jobs": {k: (v["conclusion"], v["minutos"]) for k, v in r["jobs"].items()},
-                      "artefactos": {k: (v.get("resultado"), v.get("nuevos"), v.get("arreglos"), v.get("igual_a_la_corrida_1"))
+                      "artefactos": {k: (v.get("resultado"), v.get("nuevos"), v.get("arreglos"), v.get("igual_a_la_referencia"))
                                      for k, v in r["artefactos"].items()}}, ensure_ascii=False, indent=1))
     if distintos:
-        print("traer_resultados_ci: distintos de la corrida 1: %s" % ", ".join(distintos))
+        print("traer_resultados_ci: distintos de la referencia: %s" % ", ".join(distintos))
         return 1
     return 0
 

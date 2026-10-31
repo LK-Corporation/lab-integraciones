@@ -188,6 +188,27 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## El mantenimiento de la integración continua (25, 31-oct-2026)
+
+> **Las cuatro acciones de los flujos, subidas a la mayor mínima con Node.js 24 y fijadas por commit.** GitHub avisaba de
+> que las de antes corrían en Node.js 20. La pregunta es si los controles de las etapas 23 y 24 siguen dando lo mismo.
+
+- **Las versiones:** checkout v5.1.0, setup-python v6.3.0, upload-artifact v6.0.0 y download-artifact v7.0.0, cruzadas con la
+  API, en [`cv/ci/ACCIONES-CI.json`](cv/ci/ACCIONES-CI.json), con la anterior al lado.
+- **La higiene** tampoco persiste ya las credenciales del checkout.
+- **El aviso de Node.js 20** se lee de las anotaciones de cada job con [`cv/ci/anotaciones_ci.py`](cv/ci/anotaciones_ci.py), con una
+  corrida de la 24 como control.
+- **«Nada cambia»** se mide por huella frente a las corridas de las 23 y 24, con
+  [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py).
+- **El pin del ejemplo** sube en un segundo push. El resultado irá, como en la 24, por una rama con su PR.
+
+| Fase | Documentos |
+|---|---|
+| Antes | [`ANTES-ETAPA-MANT.md`](ANTES-ETAPA-MANT.md) |
+| El diseño a ciegas y las decisiones | [`cv/ci/ENCARGO-MANT0.md`](cv/ci/ENCARGO-MANT0.md), [`cv/ci/MAYORES-MANT.txt`](cv/ci/MAYORES-MANT.txt), [`cv/ci/diseno-mant-fable.md`](cv/ci/diseno-mant-fable.md), [`cv/ci/decisiones-qmant.md`](cv/ci/decisiones-qmant.md), [`cv/ci/estado_qmant.md`](cv/ci/estado_qmant.md), [`cv/ci/preguntas_qmant.json`](cv/ci/preguntas_qmant.json), [`cv/ci/decision-jev-qmant.md`](cv/ci/decision-jev-qmant.md) |
+| El código, con las pruebas en rojo antes | [`cv/ci/prueba_ci.py`](cv/ci/prueba_ci.py), [`cv/ci/anotaciones_ci.py`](cv/ci/anotaciones_ci.py), [`cv/ci/traer_resultados_ci.py`](cv/ci/traer_resultados_ci.py), [`cv/ci/github-mant/verificador-conversor.yml`](cv/ci/github-mant/verificador-conversor.yml), [`cv/ci/github-mant/demo-ci.yml`](cv/ci/github-mant/demo-ci.yml), [`cv/ci/github-mant/higiene.yml`](cv/ci/github-mant/higiene.yml), [`cv/ci/github-mant/ejemplo-ci.yml`](cv/ci/github-mant/ejemplo-ci.yml), [`cv/ci/github-mant/rojo-ci.yml`](cv/ci/github-mant/rojo-ci.yml) |
+| La previsión sellada | [`cv/ci/PREVISION-MANT.md`](cv/ci/PREVISION-MANT.md), [`cv/ci/PREVISION-MANT.json`](cv/ci/PREVISION-MANT.json), [`cv/ci/SELLO-MANT.txt`](cv/ci/SELLO-MANT.txt), [`cv/ci/estado_prevision_mant.md`](cv/ci/estado_prevision_mant.md), [`cv/ci/preguntas_prevision_mant.json`](cv/ci/preguntas_prevision_mant.json), [`cv/ci/decision-jev-prevision-mant.md`](cv/ci/decision-jev-prevision-mant.md), [`cv/ci/prevision-cuerpo-mant.json`](cv/ci/prevision-cuerpo-mant.json), [`cv/ci/sellar_prevision_mant.py`](cv/ci/sellar_prevision_mant.py) |
+
 ## Lo abierto de la integración continua (24, 26-oct-2026)
 
 > **Llamado como lo llamaría un tercero, por referencia remota fijada a un commit y con su adaptador, su base y su corpus, el
@@ -365,6 +386,8 @@ publica.
   `ANTES-ETAPA-CI.md`, `cv/ci/ENCARGO-CI0.md` y `cv/ci/diseno-ci-fable.md`.
 - **Dos documentos de lo abierto de la integración continua llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-CI2.md` y `cv/ci/ENCARGO-CI20.md`.
+- **Dos documentos del mantenimiento de la integración continua llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-MANT.md` y `cv/ci/ENCARGO-MANT0.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

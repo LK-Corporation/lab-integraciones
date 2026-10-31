@@ -1,0 +1,7 @@
+{
+ "q1_demo": {"type": "choice", "instructions": "Pregunta 1: si la demostración sale en verde en el primer push, con los mismos informes.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q2_ejemplo": {"type": "choice", "instructions": "Pregunta 2: si el proyecto de ejemplo sale en verde a la primera tras subir su pin.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q3_aviso": {"type": "choice", "instructions": "Pregunta 3: si desaparece el aviso de Node.js 20 en todas las corridas donde debe.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q4_pr": {"type": "choice", "instructions": "Pregunta 4: si las corridas del PR salen en verde a la primera.", "criteria": {"si": "Sí.", "no": "No."}},
+ "q5_pushes": {"type": "choice", "instructions": "Pregunta 5: cuántos pushes harán falta hasta cerrar la etapa.", "criteria": {"cuatro_o_menos": "Cuatro o menos.", "cinco_o_seis": "Cinco o seis.", "siete_o_mas": "Siete o más, o no se cierra."}}
+}

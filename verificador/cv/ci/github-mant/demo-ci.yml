@@ -1,0 +1,139 @@
+# Demostracion de la etapa 23, endurecida en la 24 (verificador/cv/ci/CI.md): los tres controles del ANTES, en el sitio donde el
+# flujo va a vivir. En un fork, el laboratorio es el fork mismo (github.repository).
+name: demo-ci
+
+on:
+  push:
+    branches: [main]
+    paths: ['verificador/**', '.github/workflows/**', 'tests/**']
+  pull_request:
+    paths: ['verificador/**', '.github/workflows/**', 'tests/**']
+  workflow_dispatch:
+    inputs:
+      modo_real:
+        description: "LinuxForHealth en lote (un proceso por corpus) o mensaje a mensaje (un proceso por mensaje, ~30 min)"
+        type: choice
+        options: [lote, mensaje]
+        default: lote
+
+permissions:
+  contents: read
+
+concurrency:
+  group: demo-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pruebas:
+    # P-CI-1..27 sin Docker ni red: valida los dos YAML y los guiones antes de gastar un minuto de caja
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1  # v6.3.0
+        with:
+          python-version: "3.12"
+      - run: python3 -m pip install --quiet pyyaml
+      - run: python3 cv/ci/prueba_ci.py
+        working-directory: verificador
+      - run: python3 cv/prueba_vc.py
+        working-directory: verificador
+
+  negativo:
+    # el juguete contra su propia linea base: los mismos veredictos
+    needs: pruebas
+    uses: ./.github/workflows/verificador-conversor.yml
+    permissions:
+      contents: read
+    with:
+      adaptador: lab/verificador/cv/adaptadores/juguete.json
+      artefactos: lab/verificador/cv
+      linea_base: lab/verificador/cv/ci/LINEA-BASE-juguete.json
+      laboratorio: ${{ github.repository }}
+      laboratorio_ref: ${{ github.sha }}
+      esperar: igual
+      nombre: verificador-negativo
+
+  positivo:
+    # el juguete con el defecto sembrado: el flujo falla, y solo por el hallazgo esperado; entonces el job sale en verde
+    needs: pruebas
+    uses: ./.github/workflows/verificador-conversor.yml
+    permissions:
+      contents: read
+    with:
+      adaptador: lab/verificador/cv/adaptadores/juguete.json
+      artefactos: lab/verificador/cv
+      linea_base: lab/verificador/cv/ci/LINEA-BASE-juguete.json
+      laboratorio: ${{ github.repository }}
+      laboratorio_ref: ${{ github.sha }}
+      sembrar: juguete
+      esperar: falla
+      hallazgo_esperado: '[["PID-7", "fidelidad", "dato_perdido"]]'
+      nombre: verificador-positivo
+
+  positivo-comprobado:
+    # segunda comprobacion, fuera del flujo: lo que el flujo dice que hizo fallar es exactamente el hallazgo sembrado
+    needs: positivo
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5.1.0
+        with:
+          persist-credentials: false
+      - shell: bash
+        env:
+          RESULTADO: ${{ needs.positivo.outputs.resultado }}
+          NUEVOS: ${{ needs.positivo.outputs.nuevos }}
+          DISTINTOS: ${{ needs.positivo.outputs.nuevos_distintos }}
+        run: |
+          set -euo pipefail
+          python3 - "$RESULTADO" "$NUEVOS" "$DISTINTOS" <<'EOF'
+          import json, sys
+          resultado, nuevos, distintos = sys.argv[1], int(sys.argv[2]), json.loads(sys.argv[3])
+          esperado = json.load(open("verificador/cv/ci/POSITIVO-CI.json"))["hallazgo_esperado"]
+          assert resultado == "falla", resultado
+          assert nuevos > 0, nuevos
+          assert sorted(map(tuple, distintos)) == sorted(map(tuple, esperado)), (distintos, esperado)
+          print("positivo: el flujo fallo por", esperado, "en", nuevos, "casos, y por nada mas")
+          EOF
+
+  real:
+    # LinuxForHealth v1.1.0 traido en el runner, con su huella comprobada, contra la linea base del laboratorio: los mismos veredictos
+    needs: pruebas
+    uses: ./.github/workflows/verificador-conversor.yml
+    permissions:
+      contents: read
+    with:
+      adaptador: ${{ inputs.modo_real == 'mensaje' && 'lab/verificador/cv/adaptadores/linuxforhealth-mensaje.json' || 'lab/verificador/cv/adaptadores/linuxforhealth.json' }}
+      artefactos: artefactos
+      preparar: bash "$LAB/verificador/cv/ci/preparar_lfh.sh" "$ARTEFACTOS"
+      imagen: maven:3.9-eclipse-temurin-11@sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64
+      huella_esperada: ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2
+      linea_base: ${{ inputs.modo_real == 'mensaje' && 'lab/verificador/cv/ci/LINEA-BASE-linuxforhealth-mensaje.json' || 'lab/verificador/cv/ci/LINEA-BASE-linuxforhealth.json' }}
+      laboratorio: ${{ github.repository }}
+      laboratorio_ref: ${{ github.sha }}
+      esperar: igual
+      nombre: verificador-real
+
+  real-comprobado:
+    # las identidades que el ANTES pide, leidas desde fuera del flujo
+    needs: real
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - shell: bash
+        env:
+          HUELLA: ${{ needs.real.outputs.huella }}
+          DIGEST: ${{ needs.real.outputs.imagen_digest }}
+          RESULTADO: ${{ needs.real.outputs.resultado }}
+          ARREGLOS: ${{ needs.real.outputs.arreglos }}
+          NUEVOS: ${{ needs.real.outputs.nuevos }}
+        run: |
+          set -euo pipefail
+          test "$RESULTADO" = pasa
+          test "$NUEVOS" = 0 && test "$ARREGLOS" = 0
+          test "$HUELLA" = ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2
+          test "$DIGEST" = sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64
+          echo "real: los mismos veredictos que el laboratorio, con la huella y la imagen del estudio"
