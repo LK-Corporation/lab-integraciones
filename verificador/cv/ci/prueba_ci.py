@@ -1011,7 +1011,7 @@ def p26():
 
 C0 = "0f8543718e0ce004fb477bbd7da06cb7c44486ee"                              # el commit publicado del que partió la etapa 24
 C1 = "5183b4edeb2fff421cd441b248f141ccd52852bc"                              # el pin del ejemplo en la 24
-M1 = None                                                                   # etapa 25: el commit del primer push, puesto en M2
+M1 = "e704b97b560a252cfac2cdeae68ed1530cc78be7"                              # etapa 25: el commit del primer push, puesto en M2
 PIN_ESPERADO = M1 or C1
 
 

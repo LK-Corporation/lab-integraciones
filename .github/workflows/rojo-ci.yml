@@ -17,7 +17,7 @@ concurrency:
 jobs:
   rojo:
     # ejemplo-ci/ci/DEFECTO.json sembrado en la copia del conversor; la base es la de siempre; esperar vale «pasa» por omision
-    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@5183b4edeb2fff421cd441b248f141ccd52852bc
+    uses: LK-Corporation/lab-integraciones/.github/workflows/verificador-conversor.yml@e704b97b560a252cfac2cdeae68ed1530cc78be7
     permissions:
       contents: read
     with:
@@ -27,7 +27,7 @@ jobs:
       imagen: python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
       corpus: proyecto/ejemplo-ci/corpus
       laboratorio: LK-Corporation/lab-integraciones
-      laboratorio_ref: 5183b4edeb2fff421cd441b248f141ccd52852bc
+      laboratorio_ref: e704b97b560a252cfac2cdeae68ed1530cc78be7
       nombre: rojo
 
   rojo-comprobado:
