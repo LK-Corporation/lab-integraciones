@@ -1,0 +1,215 @@
+{
+ "formato": "corrida-ci/1",
+ "run_id": 41186811736,
+ "numero": 11,
+ "url": "https://github.com/LK-Corporation/lab-integraciones/actions/runs/41186811736",
+ "commit": "c84bf77fc0f0314a673bd70d440ee7a32137cd63",
+ "evento": "push",
+ "estado": "completed",
+ "conclusion": "success",
+ "minutos_de_la_corrida": 0.5,
+ "jobs": {
+  "ejemplo-propio / verificar": {
+   "conclusion": "success",
+   "minutos": 0.2,
+   "pasos_fallidos": []
+  },
+  "ejemplo / verificar": {
+   "conclusion": "success",
+   "minutos": 0.2,
+   "pasos_fallidos": []
+  },
+  "ejemplo-comprobado": {
+   "conclusion": "success",
+   "minutos": 0.2,
+   "pasos_fallidos": []
+  }
+ },
+ "artefactos": {
+  "ejemplo-1": {
+   "esperado": "pasa",
+   "resultado": "pasa",
+   "pasa": true,
+   "motivos": [],
+   "nuevos_distintos": [],
+   "identidades": {
+    "corpus": "2d63cf294feddd36fd58574f2c75a43b5e1317a51729c2e9f504fac9d936998c",
+    "herramienta": "e0a7517a5ab41150aabf81a14adee55704a2f23a1aa97853effe585c17458b6f",
+    "huella": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+    "huella_con_nombres": "deacb4159fafaa1906efde5abdaf76fed34418c73101e4521237baf99899c422",
+    "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+    "juez": "cb1338ca647af63dd58a583a7296a44cc0ab5dec21eea9e6d7fd75d465d15890"
+   },
+   "n": {
+    "base": 389,
+    "comparados": 389,
+    "corrida": 389
+   },
+   "avisos": {},
+   "nuevos": 0,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 0,
+   "por_corpus": {
+    "adt": {
+     "n": 263,
+     "estados": {
+      "bundle": 239,
+      "error": 24
+     },
+     "categorias": {
+      "correcto": 3,
+      "fallo_silencioso": 236,
+      "rechazo_incorrecto": 24
+     },
+     "porcentajes": {
+      "correcto": 1.1,
+      "fallo_silencioso": 89.7,
+      "rechazo_incorrecto": 9.1
+     }
+    },
+    "oru": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    },
+    "vxu": {
+     "n": 40,
+     "estados": {
+      "bundle": 40
+     },
+     "categorias": {
+      "fallo_silencioso": 40
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    },
+    "propio": {
+     "n": 6,
+     "estados": {
+      "bundle": 6
+     },
+     "categorias": {
+      "fallo_silencioso": 6
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    },
+    "mdm": {
+     "n": 40,
+     "estados": {
+      "error": 40
+     },
+     "categorias": {
+      "rechazo_incorrecto": 40
+     },
+     "porcentajes": {
+      "rechazo_incorrecto": 100.0
+     }
+    }
+   },
+   "informe_sha256": "8dd733d7f1d14beb29c86571d727cdcb5beee090cd4476c8cc212146c4b36970"
+  },
+  "ejemplo-comprobado-1": {
+   "sin_veredicto": true,
+   "ficheros": [
+    "COMPROBACION-EJEMPLO.json"
+   ],
+   "COMPROBACION-EJEMPLO": {
+    "formato": "comprobacion-ejemplo/1",
+    "comprobaciones": {
+     "ejemplo": {
+      "pasa": true,
+      "nada_nuevo": true,
+      "sin_avisos": true,
+      "todos_los_casos": true,
+      "identidades": true,
+      "corpus_del_informe": true,
+      "resumen": true,
+      "corpus_del_laboratorio_y_el_propio": true,
+      "con_INFORME_md": true,
+      "sin_evidencias_ni_corpus": true,
+      "nada_mas": true
+     },
+     "ejemplo-propio": {
+      "pasa": true,
+      "nada_nuevo": true,
+      "sin_avisos": true,
+      "todos_los_casos": true,
+      "identidades": true,
+      "corpus_del_informe": true,
+      "resumen": true,
+      "solo_el_corpus_propio": true,
+      "sin_INFORME_md": true,
+      "con_evidencias_y_corpus": true,
+      "nada_mas": true
+     },
+     "salidas": {
+      "resultado": true,
+      "huella": true,
+      "digest": true,
+      "resultado_propio": true
+     }
+    },
+    "todo_bien": true
+   }
+  },
+  "ejemplo-propio-1": {
+   "esperado": "pasa",
+   "resultado": "pasa",
+   "pasa": true,
+   "motivos": [],
+   "nuevos_distintos": [],
+   "identidades": {
+    "corpus": "1c2574718502bc5bfb32526aba29fdf04761037ff0cc5edc8dbdcabc70626831",
+    "herramienta": "e0a7517a5ab41150aabf81a14adee55704a2f23a1aa97853effe585c17458b6f",
+    "huella": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+    "huella_con_nombres": "deacb4159fafaa1906efde5abdaf76fed34418c73101e4521237baf99899c422",
+    "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+    "juez": "cb1338ca647af63dd58a583a7296a44cc0ab5dec21eea9e6d7fd75d465d15890"
+   },
+   "n": {
+    "base": 6,
+    "comparados": 6,
+    "corrida": 6
+   },
+   "avisos": {},
+   "nuevos": 0,
+   "arreglos": 0,
+   "casos_nuevos": 0,
+   "casos_ausentes": 0,
+   "salida_perdida": 0,
+   "indeterminado_nuevo": 0,
+   "notas": 0,
+   "casos_con_nuevos": 0,
+   "por_corpus": {
+    "propio": {
+     "n": 6,
+     "estados": {
+      "bundle": 6
+     },
+     "categorias": {
+      "fallo_silencioso": 6
+     },
+     "porcentajes": {
+      "fallo_silencioso": 100.0
+     }
+    }
+   },
+   "informe_sha256": "9b28a31e8953586c0292b4c9ad49af7202f0b721ef1c063bac6f33653940cf3b"
+  }
+ }
+}

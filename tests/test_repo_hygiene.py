@@ -161,7 +161,7 @@ JSON_ADMITIDOS = {"verificador/cv/pg/preguntas_qpg.json", "verificador/cv/adapta
                   "verificador/md/prevision-mdm.json", "verificador/md/HALLAZGOS-MD3.json", "verificador/md/HALLAZGOS-MD3-r1.json",
                   "verificador/md/contraste-md3-microsoft.json", "verificador/md/contraste-md3-linuxforhealth.json",
                   "verificador/md/revision-adversaria-md3.json", "verificador/md/CLASES-MD3.json", "verificador/md/RESULTADO-MD3-pares.json",
-                  "verificador/md/RESULTADO-MD3-pares-main.json", "verificador/pin/prevision-pin.json", "verificador/pin/preguntas_prevision_pin.json", "verificador/pin/preguntas_qpin.json"}
+                  "verificador/md/RESULTADO-MD3-pares-main.json", "verificador/pin/prevision-pin.json", "verificador/pin/preguntas_prevision_pin.json", "verificador/pin/preguntas_qpin.json", "verificador/pin/CORRIDA-PIN-1.json", "verificador/pin/CORRIDA-PIN-2.json"}
 
 # Orígenes externos que la página puede cargar. Vacío desde que las fuentes se autoalojan (30-sep-2026).
 ORIGENES_PERMITIDOS = set()

@@ -200,6 +200,8 @@ corrido en lote, un proceso por carpeta.
   [`cv/ci/CI.md`](cv/ci/CI.md).
 - **La receta llevaba el número de casos a mano y se paraba.** Ahora lo cuenta con la herramienta en el commit fijado
   ([`pin/estado_qpin.md`](pin/estado_qpin.md), Jev).
+- **El resultado,** con la frase: [`RESULTADO-PIN.md`](RESULTADO-PIN.md). En GitHub, a la primera: el ejemplo en verde con
+  389 casos y el rojo solo por su defecto, en 164.
 - **La pregunta y la previsión,** fijadas antes de medir: [`ANTES-ETAPA-PIN.md`](ANTES-ETAPA-PIN.md) y
   [`pin/prevision-pin.json`](pin/prevision-pin.json), con la de Jev en
   [`pin/decision-jev-prevision-pin.md`](pin/decision-jev-prevision-pin.md).
