@@ -1,0 +1,281 @@
+{"filas": [
+{"fichero": "vxu/B01.hl7", "veredicto": "valido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-3 / PID-7", "nivel": "aviso", "que": "Vacuna del 26-01-2023 anterior a la fecha de nacimiento (12-05-2023). Incoherencia de datos; v2.5 no tiene regla que la prohíba.", "cita": "sin regla en v2.5 (PID-7: Ch03.txt:4806)"}]},
+{"fichero": "vxu/B02.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 (tabla de origen) ni XCN-9 (autoridad asignadora).", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B03.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-3 / PID-7", "nivel": "aviso", "que": "Vacuna del 01-03-2023 anterior al nacimiento (12-05-2023). Sin regla en v2.5.", "cita": "sin regla en v2.5"}]},
+{"fichero": "vxu/B04.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "ORC-12", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B05.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B06.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-3 / PID-7", "nivel": "aviso", "que": "Vacuna del 21-04-2023 anterior al nacimiento (12-05-2023). Sin regla en v2.5.", "cita": "sin regla en v2.5"}]},
+{"fichero": "vxu/B07.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9. (RXA-20/21 ausentes: son O en v2.5, no es defecto.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B08.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B09.hl7", "veredicto": "duda", "veredicto_sin_transversales": "duda", "defectos": [
+  {"donde": "RXA-7", "nivel": "duda", "que": "RXA-6=0 sin RXA-7. RXA-7 es C: 'required if the administered amount code does not imply units'; un código CVX no implica unidades, así que la letra lo exige, aunque con cantidad 0 la unidad es vacía.", "cita": "CH04.txt:11249-11250; CH04.txt:12450"}]},
+{"fichero": "vxu/B10.hl7", "veredicto": "duda", "veredicto_sin_transversales": "duda", "defectos": [
+  {"donde": "RXA-7", "nivel": "duda", "que": "RXA-6=0 sin RXA-7 (misma condición C que en B09).", "cita": "CH04.txt:11249-11250"},
+  {"donde": "RXA-18 / RXA-20", "nivel": "duda", "que": "RXA-18 es el motivo por el que el paciente rechazó la sustancia, y aquí lleva una contraindicación ('CTR') con RXA-20=NA (no administrada), no RE (rechazada). v2.5 no prohíbe la combinación de forma expresa.", "cita": "CH04.txt:11408-11409; CH04.txt:11434-11435"}]},
+{"fichero": "vxu/B11.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-21=D con CP: v2.5 no lo restringe.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B12.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B13.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B14.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-4 / MSH-7", "nivel": "aviso", "que": "El fin de la administración (11:30+0200) es posterior a la creación del mensaje (11:00, sin zona, que es la hora local del emisor). Es plausibilidad; el formato TS es correcto.", "cita": "CH02.txt:4448-4449; CH02A.txt:1733"}]},
+{"fichero": "vxu/B15.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B16.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-15", "nivel": "aviso", "que": "La 2.ª repetición 'DIL-B16' parece el lote del diluyente. El texto dice que se informe el lote de la sustancia, no el del diluyente ('should'). RXA-15 sí admite repetición.", "cita": "CH04.txt:11379-11383"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "CVX 88 (influenza, NOS) en una administración con lote: 'avoid using NOS codes except to record historical records'.", "cita": "CH04.txt:14873-14874"}]},
+{"fichero": "vxu/B17.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-17", "nivel": "aviso", "que": "Fabricante solo en texto ('^Laboratorio Sintetico^'), sin código de la tabla 0227 ni sistema MVX ('should').", "cita": "CH04.txt:12437-12438; CH04.txt:14985-14986"}]},
+{"fichero": "vxu/B18.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B19.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B20.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "Sistema de codificación 'HL70292'. El texto dice que debe ser 'CVX', 'not as HL70292' ('should').", "cita": "CH04.txt:14897-14898"}]},
+{"fichero": "vxu/B21.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10 (2 repeticiones)", "nivel": "defecto", "transversal": true, "que": "En las dos repeticiones ('PR01^Ensayo^Ana', 'PR02^Muestra^Jorge'), XCN-1 valorado sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B22.hl7", "veredicto": "valido", "veredicto_sin_transversales": "valido", "defectos": []},
+{"fichero": "vxu/B23.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "ORC-12", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "CVX 88 (NOS) en una administración actual.", "cita": "CH04.txt:14873-14874"}]},
+{"fichero": "vxu/B24.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B25.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B26.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "ORC-28", "nivel": "aviso", "que": "'V' de la tabla 0177. El campo está bien colocado (ORC-28, CWE con sistema HL7, sin versión obligatoria), pero la tabla 0177 no está en el texto aportado: no se ha podido comprobar el valor.", "cita": "CH04.txt:3102-3104"}]},
+{"fichero": "vxu/B27.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9. (RXR-2 'DELT^^HL70550' es válido: tabla 0550.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B28.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXR-2", "nivel": "defecto", "que": "RXR-2 es CWE y su sistema es 'SCT', que no es el sistema HL7, pero falta CWE-7 (versión del sistema): 'version ID must be valued with an actual version ID'. Además, 'SCT' no figura en la tabla 0396 de v2.5; eso es admisible, porque las tablas HL7 pueden ampliarse localmente.", "cita": "CH02A.txt:828; CH02A.txt:847-849; CH02.txt:562-564"}]},
+{"fichero": "vxu/B29.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9. (RXR-1 'JET^…^L' es un código local de la tabla de usuario 0162: válido.)", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "CVX 88 (NOS) en una administración actual.", "cita": "CH04.txt:14873-14874"}]},
+{"fichero": "vxu/B30.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B31.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B32.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "OBX-14 / MSH-7", "nivel": "aviso", "que": "Observación a las 18:00, 7 h después de crearse el mensaje (11:00 del mismo día). Es plausibilidad; no hay regla en v2.5.", "cita": "sin regla en v2.5"}]},
+{"fichero": "vxu/B33.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10 (grupos 1 y 2)", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B34.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10 (grupos 1, 2 y 3)", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado (PR01, PR02, PR03) sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-3 (grupos 2 y 3) / MSH-7", "nivel": "aviso", "que": "Hay administraciones del 12-09-2024 y del 16-10-2024 en un mensaje creado el 09-08-2024, es decir, fechas futuras. Es plausibilidad; no hay regla en v2.5.", "cita": "sin regla en v2.5"}]},
+{"fichero": "vxu/B35.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "ORC-3 (grupo 1)", "nivel": "defecto", "que": "'ORC|RE' sin número de pedido del ejecutor (filler). En el segmento RXA, 'The ORC must have the filler order number and the order control code RE'; ORC-3 es C y, si no está en el ORC, debe estar en el OBR asociado, que no existe en VXU.", "cita": "CH04.txt:11155; CH04.txt:1825; CH04.txt:2426-2427"},
+  {"donde": "ORC-3 (grupo 2)", "nivel": "defecto", "que": "Igual que en el grupo 1: 'ORC|RE' sin ORC-3.", "cita": "CH04.txt:11155; CH04.txt:2426-2427"},
+  {"donde": "RXA-10 (grupo 2)", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-7 (grupo 1)", "nivel": "duda", "que": "RXA-6=0 sin RXA-7 (condición C del RXA-7).", "cita": "CH04.txt:11249-11250"},
+  {"donde": "RXA-5 (grupo 1)", "nivel": "aviso", "que": "CVX 88 (NOS).", "cita": "CH04.txt:14873-14874"},
+  {"donde": "RXA-3 (grupo 2) / MSH-7", "nivel": "aviso", "que": "Administración a las 11:30, posterior a la creación del mensaje (11:00). Es plausibilidad.", "cita": "sin regla en v2.5"}]},
+{"fichero": "vxu/B36.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B37.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR04^Plantilla^Raul') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B38.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "PD1-3 (XON-3)", "nivel": "defecto", "que": "XON-3 (ID Number) es NM, y 'CS01' no es numérico: 'no non-numeric ASCII characters are allowed'. Para un identificador alfanumérico existe XON-10.", "cita": "CH02A.txt:6032; CH02A.txt:2962-2964; CH02A.txt:2981; CH02A.txt:6078-6080; Ch03.txt:8551-8552"},
+  {"donde": "PD1-4", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "vxu/B39.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "MSH-9", "nivel": "defecto", "que": "'VXU^V04' sin el 3.er componente (Message Structure, 'VXU_V04'), que es R en el tipo MSG de v2.5.", "cita": "CH02A.txt:2809; CH02.txt:4357"},
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR02^Muestra^Jorge') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "GT1 / IN1 / IN2", "nivel": "aviso", "que": "El orden es correcto según VXU_V04, pero los campos no se han podido verificar porque el capítulo 6 no se aportó. MSH-18 'UNICODE UTF-8' es válido (tabla 0211) y SFT tiene sus cuatro campos R.", "cita": "CH04.txt:12385-12395; CH02.txt:4708; CH02.txt:5200-5203"}]},
+{"fichero": "vxu/B40.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR03^Patron^Irene') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "CVX 88 (NOS) en una administración actual.", "cita": "CH04.txt:14873-14874"}]},
+
+{"fichero": "pares_vxu/VL01-orc3-perdido-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL01-orc3-perdido-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "ORC-3", "nivel": "defecto", "que": "'ORC|RE' sin número de pedido del ejecutor (filler): 'The ORC must have the filler order number and the order control code RE'; en VXU no hay OBR que lo lleve.", "cita": "CH04.txt:11155; CH04.txt:1825; CH04.txt:2426-2427"},
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL02-ruta-v2-0162-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL02-ruta-v2-0162-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXR-1 'JET^…^L' es un código local de la tabla de usuario 0162: válido.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL03-unidad-ce1-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL03-unidad-ce1-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL04-rxa21-d-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-21=D con CP: v2.5 no lo restringe.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL04-rxa21-d-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL05-recorded-con-u-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-21=U: válido.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL05-recorded-con-u-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL06-dos-rxa10-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10 (2 repeticiones)", "nivel": "defecto", "transversal": true, "que": "En las dos repeticiones (PR01, PR02), XCN-1 valorado sin XCN-8 ni XCN-9. La repetición está permitida (RP Y).", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL06-dos-rxa10-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL07-dos-indicaciones-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-19 con dos repeticiones: permitido.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL07-dos-indicaciones-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL08-pa-subpotente-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-20=PA: válido en la tabla 0322.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL08-pa-subpotente-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL09-nk1-perdido-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (NK1 bien colocado; NK1-15/16 en su posición.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL09-nk1-perdido-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL10-obx-nm-perdido-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (OBX: OBX-2, OBX-3 y OBX-11 presentes.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VL10-obx-nm-perdido-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM01-cvx-system-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM01-cvx-system-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5", "nivel": "aviso", "que": "'03^MMR' sin sistema de codificación. En vacunas debe usarse la tabla 0292, con el sistema valorado como 'CVX' ('should'). CE-3 es O, así que no es un defecto de formato.", "cita": "CH04.txt:12430-12431; CH04.txt:14897-14898; CH02A.txt:314"}]},
+{"fichero": "pares_vxu/VM02-mvx-system-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM02-mvx-system-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-17", "nivel": "aviso", "que": "'MSD^Merck' sin sistema de codificación. La tabla 0227 debe usarse con el sistema 'MVX' ('should'). CE-3 es O.", "cita": "CH04.txt:12437-12438; CH04.txt:14985-14986"}]},
+{"fichero": "pares_vxu/VM03-ruta-0162-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM03-ruta-0162-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXR-1 'JET^…^L': código local de la tabla de usuario 0162, válido.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM04-sitio-0163-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM04-sitio-0163-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXR sin RXR-2: es O.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM05-unidad-sin-ce2-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-7 'mL^^UCUM' sin CE-2: es O.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM05-unidad-sin-ce2-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM06-obx6-sin-ce2-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (OBX-6 'Cel^^UCUM' sin CE-2: es O.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM06-obx6-sin-ce2-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM07-lote-repetido-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-15", "nivel": "aviso", "que": "La 2.ª repetición 'DIL-M07c' parece el lote del diluyente; debe informarse el de la sustancia ('should'). La repetición está permitida.", "cita": "CH04.txt:11379-11383"}]},
+{"fichero": "pares_vxu/VM07-lote-repetido-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM08-fabricante-alterno-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-17 con código alternativo local CE-4..6: válido.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM08-fabricante-alterno-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM09-telefono-xtn7-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (NK1-5 con XTN-7: forma recomendada.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM09-telefono-xtn7-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "duda", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "NK1-5 (XTN-1)", "nivel": "duda", "que": "El número '5551001' va en XTN-1, que es B (obsoleto desde 2.3). Su formato '[NNN] [(999)]999-9999 …' no se cumple literalmente, porque falta el guion. Desde 2.3 se recomienda la forma delimitada (XTN-5..7).", "cita": "CH02A.txt:6532; CH02A.txt:6551-6554; CH02A.txt:6574"}]},
+{"fichero": "pares_vxu/VM10-relacion-grd-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (NK1-3 'GRD': tabla de usuario 0063.)", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM10-relacion-grd-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM11-obx-sin-partof-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM11-obx-sin-partof-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM12-dos-indicaciones-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM12-dos-indicaciones-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM13-grupos-sin-orc3-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "invalido", "defectos": [
+  {"donde": "ORC-3 (grupos 1 y 2)", "nivel": "defecto", "que": "Los dos ORC son 'ORC|RE' sin número de pedido del ejecutor (filler): 'The ORC must have the filler order number…'; en VXU no hay OBR que lo lleve.", "cita": "CH04.txt:11155; CH04.txt:1825; CH04.txt:2426-2427"},
+  {"donde": "RXA-10 (grupos 1 y 2)", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5 (grupo 1)", "nivel": "aviso", "que": "CVX 88 (NOS).", "cita": "CH04.txt:14873-14874"}]},
+{"fichero": "pares_vxu/VM13-grupos-sin-orc3-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10 (grupos 1 y 2)", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-5 (grupo 1)", "nivel": "aviso", "que": "CVX 88 (NOS).", "cita": "CH04.txt:14873-14874"}]},
+{"fichero": "pares_vxu/VM14-dosis-punto-inicial-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9. (RXA-6 '.5' es un NM válido, como en el ejemplo del estándar.)", "cita": "CH02A.txt:5870-5871; CH02A.txt:2962-2964; CH04.txt:12611"}]},
+{"fichero": "pares_vxu/VM14-dosis-punto-inicial-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "valido", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"}]},
+{"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "duda", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-20 / RXA-6 / RXA-15 / RXR", "nivel": "duda", "que": "RXA-20=RE (rechazada), pero el mensaje da 0,5 mL como cantidad administrada (RXA-6), además de lote, fabricante, vía y sitio. Es incoherente con el estado, aunque v2.5 no fija qué valor debe llevar RXA-6 cuando no se administra.", "cita": "CH04.txt:11236; CH04.txt:11434"},
+  {"donde": "RXA-18", "nivel": "aviso", "que": "RE sin RXA-18. En v2.5, RXA-18 es O; la condición 'RE ⇒ RXA-18' no existe en esta versión, y el texto solo dice que el motivo 'would record'.", "cita": "CH04.txt:11180; CH04.txt:12461; CH04.txt:12597-12598"}]},
+{"fichero": "pares_vxu/VM15-re-sin-rxa18-control.hl7", "veredicto": "invalido", "veredicto_sin_transversales": "duda", "defectos": [
+  {"donde": "RXA-10", "nivel": "defecto", "transversal": true, "que": "XCN-1 valorado ('PR01^Ensayo^Ana') sin XCN-8 ni XCN-9.", "cita": "CH02A.txt:5870-5871"},
+  {"donde": "RXA-18 / RXA-6 / RXA-15 / RXR", "nivel": "duda", "que": "Según el texto, cualquier valor en RXA-18 'indicates that the patient did not take the substance', y RE lo confirma. Pero RXA-6 dice que se administraron 0,5 mL, con lote, vía y sitio. Los campos se contradicen; v2.5 no fija RXA-6 para dosis rechazadas.", "cita": "CH04.txt:11408-11409; CH04.txt:11236"}]}
+],
+"resumen": {
+  "mensajes": 90,
+  "reglas": "nivel 'defecto' = lo que el texto de v2.5 exige (must/shall/R/formato/tabla) y hace el mensaje invalido; 'duda' = condicion de aplicacion discutible o incoherencia entre campos que v2.5 no prohibe de forma expresa; 'aviso' = recomendacion (should/avoid) o plausibilidad, no cambia el veredicto.",
+  "msh12": "Los 90 llevan MSH-12=2.5: no hay ninguna discrepancia de version.",
+  "veredicto_completo": {"valido": 2, "invalido": 86, "duda": 2, "validos": ["vxu/B01.hl7", "vxu/B22.hl7"], "en_duda": ["vxu/B09.hl7", "vxu/B10.hl7"]},
+  "transversales": {
+    "regla": "XCN-1 (ID Number) valorado sin XCN-8 (Source Table) ni XCN-9 (Assigning Authority): 'If the first component is present, either the source table or the assigning authority must be valued'.",
+    "cita": "CH02A.txt:5870-5871 (§2.A.86.1)",
+    "mensajes_afectados": 86,
+    "por_campo": {
+      "RXA-10": {"mensajes": 85, "detalle": "todos salvo B01 (que lleva XCN-9 'CSSYN'), B09 y B10 (sin RXA-10), B22 (sin XCN-1) y B23 (sin RXA-10). Con varias repeticiones o grupos en B21, B33, B34, VL06-caso y VM13 (caso y control)."},
+      "ORC-12": {"mensajes": 2, "ficheros": ["vxu/B04.hl7", "vxu/B23.hl7"]},
+      "PD1-4": {"mensajes": 1, "ficheros": ["vxu/B38.hl7"]}
+    },
+    "no_afectados": ["vxu/B01.hl7", "vxu/B09.hl7", "vxu/B10.hl7", "vxu/B22.hl7"],
+    "nota": "El propio ejemplo VXU del estandar hace lo mismo (RXA-10 '1234567891^GOLDSTEIN^HAROLD^A^^DR', CH04.txt:12611-12612), pero los ejemplos no son normativos. En los 86 mensajes es el mismo patron, generado por el corpus, y no distingue caso de control."
+  },
+  "propios": [
+    {"fichero": "vxu/B28.hl7", "campo": "RXR-2", "nivel": "defecto", "defecto": "CWE con sistema 'SCT' (no HL7) sin CWE-7 (version del sistema).", "cita": "CH02A.txt:828; CH02A.txt:847-849"},
+    {"fichero": "vxu/B35.hl7", "campo": "ORC-3 (grupo 1)", "nivel": "defecto", "defecto": "'ORC|RE' sin numero de pedido del ejecutor (filler); en VXU no hay OBR que lo lleve.", "cita": "CH04.txt:11155; CH04.txt:1825; CH04.txt:2426-2427"},
+    {"fichero": "vxu/B35.hl7", "campo": "ORC-3 (grupo 2)", "nivel": "defecto", "defecto": "Igual que en el grupo 1.", "cita": "CH04.txt:11155; CH04.txt:2426-2427"},
+    {"fichero": "vxu/B38.hl7", "campo": "PD1-3 (XON-3)", "nivel": "defecto", "defecto": "'CS01' en XON-3, que es NM: no es numerico.", "cita": "CH02A.txt:6032; CH02A.txt:2981; Ch03.txt:8551-8552"},
+    {"fichero": "vxu/B39.hl7", "campo": "MSH-9", "nivel": "defecto", "defecto": "'VXU^V04' sin MSG-3 (Message Structure), que es R.", "cita": "CH02A.txt:2809"},
+    {"fichero": "pares_vxu/VL01-orc3-perdido-control.hl7", "campo": "ORC-3", "nivel": "defecto", "defecto": "'ORC|RE' sin ORC-3.", "cita": "CH04.txt:11155; CH04.txt:2426-2427"},
+    {"fichero": "pares_vxu/VM13-grupos-sin-orc3-caso.hl7", "campo": "ORC-3 (grupos 1 y 2)", "nivel": "defecto", "defecto": "Dos 'ORC|RE' sin ORC-3.", "cita": "CH04.txt:11155; CH04.txt:2426-2427"},
+    {"fichero": "vxu/B09.hl7", "campo": "RXA-7", "nivel": "duda", "defecto": "RXA-6=0 sin unidades; RXA-7 es C ('required if the administered amount code does not imply units').", "cita": "CH04.txt:11249-11250"},
+    {"fichero": "vxu/B10.hl7", "campo": "RXA-7", "nivel": "duda", "defecto": "RXA-6=0 sin unidades.", "cita": "CH04.txt:11249-11250"},
+    {"fichero": "vxu/B10.hl7", "campo": "RXA-18 / RXA-20", "nivel": "duda", "defecto": "Motivo de rechazo ('CTR', una contraindicacion) con estado NA, no RE.", "cita": "CH04.txt:11408-11409; CH04.txt:11434-11435"},
+    {"fichero": "vxu/B35.hl7", "campo": "RXA-7 (grupo 1)", "nivel": "duda", "defecto": "RXA-6=0 sin unidades.", "cita": "CH04.txt:11249-11250"},
+    {"fichero": "pares_vxu/VM09-telefono-xtn7-control.hl7", "campo": "NK1-5 (XTN-1)", "nivel": "duda", "defecto": "Numero en XTN-1, que es obsoleto (B); '5551001' no sigue el formato '[(999)]999-9999'.", "cita": "CH02A.txt:6532; CH02A.txt:6574"},
+    {"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7", "campo": "RXA-20 / RXA-6", "nivel": "duda", "defecto": "RE (rechazada) con 0,5 mL administrados, lote, via y sitio.", "cita": "CH04.txt:11236; CH04.txt:11434"},
+    {"fichero": "pares_vxu/VM15-re-sin-rxa18-control.hl7", "campo": "RXA-18 / RXA-6", "nivel": "duda", "defecto": "RXA-18 dice 'did not take the substance', pero RXA-6 da 0,5 mL administrados.", "cita": "CH04.txt:11408-11409; CH04.txt:11236"},
+    {"fichero": "vxu/B01.hl7", "campo": "RXA-3 / PID-7", "nivel": "aviso", "defecto": "Vacuna (26-01-2023) anterior al nacimiento (12-05-2023).", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B03.hl7", "campo": "RXA-3 / PID-7", "nivel": "aviso", "defecto": "Vacuna (01-03-2023) anterior al nacimiento.", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B06.hl7", "campo": "RXA-3 / PID-7", "nivel": "aviso", "defecto": "Vacuna (21-04-2023) anterior al nacimiento.", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B14.hl7", "campo": "RXA-4 / MSH-7", "nivel": "aviso", "defecto": "Fin de la administracion (11:30+0200) posterior al mensaje (11:00, hora local).", "cita": "CH02.txt:4448-4449; CH02A.txt:1733"},
+    {"fichero": "vxu/B32.hl7", "campo": "OBX-14 / MSH-7", "nivel": "aviso", "defecto": "Observacion a las 18:00, 7 h despues del mensaje.", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B34.hl7", "campo": "RXA-3 (grupos 2 y 3) / MSH-7", "nivel": "aviso", "defecto": "Dosis del 12-09 y del 16-10-2024 en un mensaje del 09-08-2024.", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B35.hl7", "campo": "RXA-3 (grupo 2) / MSH-7", "nivel": "aviso", "defecto": "Administracion a las 11:30, despues del mensaje (11:00).", "cita": "sin regla en v2.5"},
+    {"fichero": "vxu/B16.hl7", "campo": "RXA-15", "nivel": "aviso", "defecto": "2.a repeticion 'DIL-B16': parece el lote del diluyente ('should' informar el de la sustancia).", "cita": "CH04.txt:11379-11383"},
+    {"fichero": "pares_vxu/VM07-lote-repetido-caso.hl7", "campo": "RXA-15", "nivel": "aviso", "defecto": "2.a repeticion 'DIL-M07c': parece el lote del diluyente.", "cita": "CH04.txt:11379-11383"},
+    {"fichero": "vxu/B20.hl7", "campo": "RXA-5", "nivel": "aviso", "defecto": "Sistema 'HL70292' en lugar de 'CVX' ('should ... not as HL70292').", "cita": "CH04.txt:14897-14898"},
+    {"fichero": "pares_vxu/VM01-cvx-system-control.hl7", "campo": "RXA-5", "nivel": "aviso", "defecto": "'03^MMR' sin sistema de codificacion; debe ser 'CVX' ('should'). CE-3 es O.", "cita": "CH04.txt:12430-12431; CH04.txt:14897-14898"},
+    {"fichero": "vxu/B16.hl7; vxu/B23.hl7; vxu/B29.hl7; vxu/B35.hl7; vxu/B40.hl7; pares_vxu/VM13-grupos-sin-orc3-caso.hl7; pares_vxu/VM13-grupos-sin-orc3-control.hl7", "campo": "RXA-5", "nivel": "aviso", "defecto": "CVX 88 (influenza, NOS) en administraciones actuales ('avoid using NOS codes except ... historical records').", "cita": "CH04.txt:14873-14874"},
+    {"fichero": "vxu/B17.hl7", "campo": "RXA-17", "nivel": "aviso", "defecto": "Fabricante solo en texto, sin codigo de la tabla 0227 ni sistema MVX ('should').", "cita": "CH04.txt:12437-12438; CH04.txt:14985-14986"},
+    {"fichero": "pares_vxu/VM02-mvx-system-control.hl7", "campo": "RXA-17", "nivel": "aviso", "defecto": "'MSD^Merck' sin sistema; debe ser 'MVX' ('should'). CE-3 es O.", "cita": "CH04.txt:14985-14986"},
+    {"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7", "campo": "RXA-18", "nivel": "aviso", "defecto": "RE sin RXA-18. En v2.5, RXA-18 es O; la condicion RE => RXA-18 no existe en esta version.", "cita": "CH04.txt:11180; CH04.txt:12461; CH04.txt:12597-12598"},
+    {"fichero": "vxu/B26.hl7", "campo": "ORC-28", "nivel": "aviso", "defecto": "'V' de la tabla 0177, que no esta en el texto aportado: no se ha podido comprobar.", "cita": "CH04.txt:3102-3104"},
+    {"fichero": "vxu/B39.hl7", "campo": "GT1 / IN1 / IN2", "nivel": "aviso", "defecto": "El orden es correcto, pero los campos no se han podido verificar: falta el capitulo 6.", "cita": "CH04.txt:12385-12395"}
+  ],
+  "propios_cuentas": {"defecto": "7 hallazgos en 6 mensajes", "duda": "7 hallazgos en 6 mensajes (B35 ya es invalido por ORC-3)", "aviso": "23 hallazgos; no cambian el veredicto"},
+  "orc12_y_rxr2": "ORC-12 solo sale como transversal (B04, B23). En RXR-2, el unico defecto propio es B28 (SCT sin CWE-7); HL70163 y HL70550 son correctos en el resto.",
+  "veredicto_sin_transversales": {
+    "total": {"valido": 79, "invalido": 6, "duda": 5},
+    "vxu": {"valido": 34, "invalido": 4, "duda": 2},
+    "pares_vxu": {"valido": 45, "invalido": 2, "duda": 3},
+    "invalidos": ["vxu/B28.hl7", "vxu/B35.hl7", "vxu/B38.hl7", "vxu/B39.hl7", "pares_vxu/VL01-orc3-perdido-control.hl7", "pares_vxu/VM13-grupos-sin-orc3-caso.hl7"],
+    "en_duda": ["vxu/B09.hl7", "vxu/B10.hl7", "pares_vxu/VM09-telefono-xtn7-control.hl7", "pares_vxu/VM15-re-sin-rxa18-caso.hl7", "pares_vxu/VM15-re-sin-rxa18-control.hl7"],
+    "pares_que_difieren": "VL01 (caso valido, control invalido); VM09 (caso valido, control duda); VM13 (caso invalido, control valido). VM15: los dos en duda. Los otros 21 pares: los dos validos."
+  },
+  "no_contado": "UCUM (en casi todos) y SCT no figuran en la tabla 0396 de v2.5, pero las tablas HL7 pueden ampliarse localmente (CH02.txt:562-564) y el texto admite otros sistemas para unidades (CH07.txt:2931-2933) y para el sitio (CH04.txt:9350-9352). En v2.5, RXA-9, RXA-18 y RXA-21 son O; los unicos campos C del RXA son RXA-7, RXA-11 y RXA-12 (CH04.txt:11169-11174, 12450-12455)."
+}
+}

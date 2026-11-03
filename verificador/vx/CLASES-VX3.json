@@ -216,7 +216,9 @@
    "referencia": null,
    "par_minimo": "VM15-re-sin-rxa18",
    "fuerza": "fuerte",
-   "nota": null
+   "nota": null,
+   "nota_auditoria": "Auditoría de validez de la etapa 29 (au/, RESULTADO-AUDITORIA.md): el par VM15 quedó en duda (RE con 0,5 mL, lote y sitio). Se confirma con AU1, válido: RE sin nada administrado.",
+   "par_valido": "AU1 (au/pares_auditoria.py)"
   },
   {
    "id": "VX-M16",
@@ -385,7 +387,9 @@
    "referencia": null,
    "par_minimo": "VL06-dos-rxa10",
    "fuerza": "débil",
-   "nota": null
+   "nota": null,
+   "nota_auditoria": "Auditoría de validez de la etapa 29 (au/, RESULTADO-AUDITORIA.md): el par VL06 llevaba RXA-10 sin XCN-8 ni XCN-9 (CH02A §2.A.86.1), en el campo del hallazgo. Se confirma con AU2, con XCN-9.",
+   "par_valido": "AU2 (au/pares_auditoria.py)"
   },
   {
    "id": "VX-L9",

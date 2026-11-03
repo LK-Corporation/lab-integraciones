@@ -1,0 +1,125 @@
+{
+  "criterio": "Validación contra HL7 v2.5 con el texto de estandar/ (CH02, CH02A, Ch03, CH04, CH07). Defecto = lo que el texto dice claramente; duda = lectura discutible. El veredicto de cada fila refleja solo los hallazgos propios del mensaje. La Tabla 0396 (sistemas de codificación) se trata aparte, como duda sistémica, en el campo tabla_0396 y en el resumen: no cambia el veredicto. Cada defecto lleva grado: defecto o duda.",
+  "filas": [
+    {"fichero": "oru/B01.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-3)"]},
+    {"fichero": "oru/B02.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-7 '<1.3' y '>135' siguen los formatos b) y c) (CH07.txt:3145-3146)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-3)"]},
+    {"fichero": "oru/B03.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3 (todas las OBX)"]},
+    {"fichero": "oru/B04.hl7", "veredicto": "valido", "defectos": [], "notas": ["La OBX del INR (OBR 3) no lleva OBX-6. Es una magnitud adimensional; CH07.txt:2914-2915 pide unidades en escala continua, pero no se cuenta como defecto."], "tabla_0396": ["UCUM en OBX-6.3 (OBR 1 y 2)"]},
+    {"fichero": "oru/B05.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-8 S/R/I son de la tabla 0078 (CH07.txt:3186-3188). OBX-4 = 1 agrupa observaciones con OBX-3 distintos (CH07.txt:2686, 2714)."], "tabla_0396": ["SCT en OBX-5.3 (OBX 1, CE)"]},
+    {"fichero": "oru/B06.hl7", "veredicto": "valido", "defectos": [], "notas": ["SN '>^100' es válido (CH02A.txt:4864-4876)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B07.hl7", "veredicto": "valido", "defectos": [], "notas": ["SN de rango '^1^-^5' bien formado (CH02A.txt:4857-4859, 4873). Sin unidades: escala ordinal."]},
+    {"fichero": "oru/B08.hl7", "veredicto": "valido", "defectos": [], "notas": ["SN de razón con ':' y '/' válidos (CH02A.txt:4873-4879). Los títulos son adimensionales."]},
+    {"fichero": "oru/B09.hl7", "veredicto": "valido", "defectos": [], "notas": ["Las dos OBX tienen el mismo OBX-3 y OBX-4 distinto: vacío y '2'. Cumple CH07.txt:2774-2777; el vacío equivale a 1.", "'<>' es comparador SN válido (CH02A.txt:4864-4865)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-2)"]},
+    {"fichero": "oru/B10.hl7", "veredicto": "valido", "defectos": [], "notas": ["En TX, '~' separa párrafos y está permitido (CH07.txt:2647-2648, 2792)."]},
+    {"fichero": "oru/B11.hl7", "veredicto": "valido", "defectos": [], "notas": ["'.br' es un comando de formato FT válido (CH02.txt:1056-1064)."]},
+    {"fichero": "oru/B12.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-2 = TS con OBX-5 en formato DTM válido (CH07.txt:2623; CH02A.txt:1715)."]},
+    {"fichero": "oru/B13.hl7", "veredicto": "valido", "defectos": [], "notas": ["DT '20230601' y TM '0715' son válidos (CH02A.txt:1686, 5093)."]},
+    {"fichero": "oru/B14.hl7", "veredicto": "duda", "defectos": [
+      {"donde": "OBX-3", "que": "'71020&IMP' usa la convención de sufijo (el '&' solo es legítimo por ella), pero la base no es el ID de OBR-4 (600-7). El texto construye el ID concatenando el ID de OBR-4 con el sufijo. En el ejemplo del estándar, 71020 es CPT4; aquí va con sistema L.", "cita": "CH07.txt:367-372", "grado": "duda"}
+    ], "notas": ["OBX-5 CE solo con texto ('^Insuficiencia...') está permitido (CH07.txt:2851-2854)."]},
+    {"fichero": "oru/B15.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBX-5 (CWE.7)", "que": "El sistema de codificación es SCT, que no es el de HL7, y CWE.7 (Coding System Version ID) va vacío. El texto exige versión real cuando el sistema no es HL7.", "cita": "CH02A.txt:828, CH02A.txt:843-849", "grado": "defecto"},
+      {"donde": "OBX-2", "que": "'CWE' no figura en el listado de la Tabla 0125 de v2.5. Sin embargo, el texto dice que todos los tipos HL7 son válidos salvo CM, CQ, SI e ID: el texto se contradice.", "cita": "CH07.txt:2590, CH07.txt:2603-2637", "grado": "duda"}
+    ], "notas": ["Discrepancia: MSH-12 = 2.6, valor que no está en la Tabla 0104 de v2.5 (CH02.txt:4525-4534). Se valida como v2.5."], "tabla_0396": ["SCT en OBX-5.3 (CWE)"]},
+    {"fichero": "oru/B16.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBR-25 = P y OBX-11 = P: coherentes y de tabla (CH04.txt:3906; CH07.txt:3271)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B17.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBR-25 = C y OBX-11 = C: coherentes (CH04.txt:3908; CH07.txt:3264)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B18.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX 1 va sin OBX-2 y con OBX-11 = X: lo permite el texto, que solo exige OBX-2 si OBX-11 no es X (CH07.txt:2574-2575)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 2)"]},
+    {"fichero": "oru/B19.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-11 = W con OBR-25 = F: ambos valores son de tabla y ningún texto los declara incompatibles (CH07.txt:3235-3236, 3284; CH04.txt:3910)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B20.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-11 = D, con OBX-5 valorado y OBR-25 = F. D está en la tabla 0085; el texto no prohíbe el valor ni fija el OBR-25 (CH07.txt:3239-3242, 3265)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B21.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBR-25 = R y OBX-11 = R: coherentes (CH04.txt:3909; CH07.txt:3272)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B22.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBX-2", "que": "Va vacío con OBX-11 = I. OBX-2 debe valorarse siempre que OBX-11 no sea X.", "cita": "CH07.txt:2574-2575", "grado": "defecto"}
+    ], "notas": ["OBR-25 = I y OBX-11 = I son coherentes entre sí."]},
+    {"fichero": "oru/B23.hl7", "veredicto": "valido", "defectos": [], "notas": ["NTE tras OBR y dos NTE tras OBX: permitido (CH07.txt:700, 717, 767-770)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B24.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "SPM-4 (CWE.7)", "que": "El sistema de codificación es SCT, que no es el de HL7, y CWE.7 va vacío. El texto exige versión real.", "cita": "CH02A.txt:828, CH02A.txt:843-849", "grado": "defecto"}
+    ], "notas": ["La estructura SPM + OBX del grupo SPECIMEN es válida (CH07.txt:735-742).", "SPM-2 es EIP: 'SPM-24^LABSYS' se lee como placer = SPM-24 y filler = LABSYS (CH07.txt:3508). No es defecto."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1)", "SCT en SPM-4.3"]},
+    {"fichero": "oru/B25.hl7", "veredicto": "valido", "defectos": [], "notas": ["Las secuencias de escape \\S\\ \\T\\ \\F\\ son válidas en ST (CH02.txt:957-958; CH02A.txt:5069-5070)."]},
+    {"fichero": "oru/B26.hl7", "veredicto": "valido", "defectos": [], "notas": ["MSH-18 = 'UNICODE UTF-8' está en la Tabla 0211 (CH02.txt:4708) y habilita caracteres no ASCII en ST (CH02A.txt:5077-5078; CH02.txt:4598-4602).", "CH07.txt:2807-2808 dice 'ASCII text'; se entiende superado por MSH-18."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1)"]},
+    {"fichero": "oru/B27.hl7", "veredicto": "valido", "defectos": [], "notas": ["NM '01.20' es válido de forma explícita (CH02A.txt:2979-2980)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B28.hl7", "veredicto": "valido", "defectos": [], "notas": ["NM '-0.5' es válido. OBX-7 '-2-2' es ST y su forma resulta ambigua, pero no es defecto."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B29.hl7", "veredicto": "valido", "defectos": [], "notas": ["NM '.5' y '5.' cumplen la definición: signo opcional, dígitos y punto decimal opcional (CH02A.txt:2962-2964, 2980-2981)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-2)"]},
+    {"fichero": "oru/B30.hl7", "veredicto": "valido", "defectos": [], "notas": ["Sin PID: el grupo PATIENT es opcional en ORU_R01 (CH07.txt:672-692)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B31.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBR sin OBX: el grupo OBSERVATION es opcional (CH07.txt:713). OBR-25 = I ('No results available') es coherente."]},
+    {"fichero": "oru/B32.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-14 vacío: solo es obligatorio si las OBX de un OBR difieren en fecha (CH07.txt:3315-3318)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-2)"]},
+    {"fichero": "oru/B33.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBR-7", "que": "Va vacío y el OBR forma parte de un mensaje de informe, donde el campo condicional es obligatorio.", "cita": "CH07.txt:1837-1838 (también CH04.txt:3477-3478)", "grado": "defecto"}
+    ], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B34.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBR-25", "que": "Va vacío. El campo condicional es obligatorio siempre que el OBR esté en un mensaje de informe.", "cita": "CH07.txt:2118-2119 (también CH04.txt:3886-3887)", "grado": "defecto"}
+    ], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B35.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBR-8 es opcional (CH07.txt:1643). OBR-22 con precisión de minutos es un TS válido (CH02A.txt:1715-1722)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B36.hl7", "veredicto": "duda", "defectos": [
+      {"donde": "OBX-5", "que": "Un NM repetido ('95~96') da dos valores a una sola glucosa. OBX-5 solo repite para resultados multiparte de respuesta única con tipos apropiados (por ejemplo CE, TX, FT), y una OBX no debe llevar más de una observación independiente. El texto no excluye NM de forma expresa.", "cita": "CH07.txt:2566, CH07.txt:2792, CH07.txt:2812-2815", "grado": "duda"}
+    ], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B37.hl7", "veredicto": "valido", "defectos": [], "notas": ["Se permite ORC con ORC-1 = RE; ORC-2 y ORC-3 coinciden con OBR (CH07.txt:696, 761-762; CH07.txt:1745-1749). OBX-4 '1.1' y '1.2' son válidos (CH07.txt:2758-2772)."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 1-2)"]},
+    {"fichero": "oru/B38.hl7", "veredicto": "valido", "defectos": [], "notas": ["El orden PID, PD1, NK1, PV1 es conforme (CH07.txt:672-690). NK1-1 está valorado y PV1-2 = O pertenece a la tabla de usuario 0004."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B39.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBX-11", "que": "El valor 'f' (minúscula) no está en la Tabla 0085 (HL7, tipo ID), que solo define 'F'. El texto no declara los códigos insensibles a mayúsculas.", "cita": "CH07.txt:3230-3231, CH07.txt:3262-3284, CH02A.txt:2417-2418", "grado": "defecto"}
+    ], "notas": ["OBX-8 'h' pertenece a la tabla de usuario 0078, así que no invalida (CH07.txt:3164, 3170).", "Los TS con fracción de segundo y zona horaria son válidos (CH02A.txt:1715)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "oru/B40.hl7", "veredicto": "valido", "defectos": [], "notas": ["XPN está en la Tabla 0125 (CH07.txt:2636). OBR-4 con código alternativo local también es válido."], "tabla_0396": ["UCUM en OBX-6.3 (OBX 2)"]},
+
+    {"fichero": "pares_oru/L06-obx-sin-tipo-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-2 vacío con OBX-11 = X: lo permite el texto de v2.5 (CH07.txt:2574-2575)."]},
+    {"fichero": "pares_oru/L06-obx-sin-tipo-control.hl7", "veredicto": "valido", "defectos": []},
+    {"fichero": "pares_oru/L07-ft-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["FT está permitido en OBX, aunque desaconsejado (CH07.txt:2643)."]},
+    {"fichero": "pares_oru/L07-ft-control.hl7", "veredicto": "valido", "defectos": []},
+    {"fichero": "pares_oru/L08-tm-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["TM '0715' es válido (CH02A.txt:5093)."]},
+    {"fichero": "pares_oru/L08-tm-control.hl7", "veredicto": "valido", "defectos": []},
+    {"fichero": "pares_oru/L09-obx-11-d-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-11 = D está en la Tabla 0085. El texto no prohíbe OBX-5 ni fija el OBR-25 (CH07.txt:3239-3242)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L09-obx-11-d-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L10-obr-25-i-caso.hl7", "veredicto": "invalido", "defectos": [
+      {"donde": "OBR-25 / OBX-11", "que": "OBR-25 = I ('No results available; specimen received, procedure incomplete'), pero la OBX trae un resultado con valor y OBX-11 = F (Final). El estado del informe contradice su contenido.", "cita": "CH04.txt:3901-3902, CH07.txt:2117-2119, CH07.txt:3266", "grado": "defecto"}
+    ], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L10-obr-25-i-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L11-sn-rango-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["SN de rango '^1^-^5' es válido (CH02A.txt:4857-4859)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L11-sn-rango-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L12-sn-distinto-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["'<>' es comparador SN válido (CH02A.txt:4864-4865)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L12-sn-distinto-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L18-unidad-cwe-2-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["OBX-6.2 con texto descriptivo de la unidad es válido."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/L18-unidad-cwe-2-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M01-nm-punto-inicial-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["NM '.5' cumple la definición de NM (CH02A.txt:2962-2964, 2980-2981)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M01-nm-punto-inicial-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06-obx-tras-nte-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["NTE tras OBX: permitido (CH07.txt:717, 767-770)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06-obx-tras-nte-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06b-dos-nte-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["Varias NTE tras OBX: permitido (CH07.txt:717)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06b-dos-nte-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06c-nte-al-final-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["NTE final aplicada a la OBX 2: permitido (CH07.txt:717, 767-770)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06c-nte-al-final-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06d-tres-obx-caso.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M06d-tres-obx-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M07-oru-sin-pid-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["Sin PID: el grupo PATIENT es opcional en ORU_R01 de v2.5 (CH07.txt:672-692)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M07-oru-sin-pid-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/M09-ft-br-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["'.br' es un comando de formato FT válido (CH02.txt:1056-1064)."]},
+    {"fichero": "pares_oru/M09-ft-br-control.hl7", "veredicto": "valido", "defectos": []},
+    {"fichero": "pares_oru/R02-nm-cero-inicial-caso.hl7", "veredicto": "valido", "defectos": [], "notas": ["NM '01.20' es válido de forma explícita (CH02A.txt:2979-2980)."], "tabla_0396": ["UCUM en OBX-6.3"]},
+    {"fichero": "pares_oru/R02-nm-cero-inicial-control.hl7", "veredicto": "valido", "defectos": [], "tabla_0396": ["UCUM en OBX-6.3"]}
+  ],
+  "resumen": {
+    "totales": {"mensajes": 72, "valido": 63, "invalido": 7, "duda": 2},
+    "por_carpeta": {
+      "oru (40)": {"valido": 32, "invalido": 6, "duda": 2, "invalidos": ["B15", "B22", "B24", "B33", "B34", "B39"], "dudas": ["B14", "B36"]},
+      "pares_oru (32)": {"valido": 31, "invalido": 1, "duda": 0, "invalidos": ["L10-obr-25-i-caso"], "nota": "Solo L10-caso es inválido. Los demás 'caso' son HL7 v2.5 válidos: lo mutado es tolerado por el texto de v2.5."}
+    },
+    "defectos_que_se_repiten": [
+      "CWE.7 (versión del sistema) vacío con sistema no HL7 (SCT): B15 (OBX-5) y B24 (SPM-4). CH02A.txt:843-849. Es una regla literal y muy poco aplicada en la práctica: B24 es inválido solo por ella.",
+      "Campos condicionales de OBR exigidos en un informe: OBR-7 vacío en B33 y OBR-25 vacío en B34.",
+      "Estado incoherente o fuera de tabla: OBX-2 vacío con OBX-11 = I (B22), OBX-11 'f' fuera de la Tabla 0085 (B39), OBR-25 = I con OBX final (L10-caso)."
+    ],
+    "dudas": [
+      "B14: sufijo '&IMP' sobre una base distinta del OBR-4.",
+      "B36: NM repetido en OBX-5.",
+      "B15: CWE en OBX-2 no figura en el listado de la Tabla 0125 (además del defecto de CWE.7)."
+    ],
+    "sistemico_no_contado": [
+      "Tabla 0396: 'UCUM' (OBX-6.3) y 'SCT' (CE.3/CWE.3) no están en la Tabla 0396 impresa en v2.5 (CH02.txt:6297-6690; CH02A.txt:359, 843-846). Se trata como duda porque CH07.txt:2674 remite también al servidor de HL7, así que la lista impresa podría no ser cerrada. Lo tienen 30 de oru y 24 de pares, casos y controles por igual. Si se contara en el veredicto, 47 'valido' pasarían a 'duda': quedarían 16 válidos, 49 dudas y 7 inválidos.",
+      "OBR-22 posterior a MSH-7 en oru B05, B12, B14, B15, B24, B25 y B36, y en los 32 de pares_oru (09:00+0100 frente a 08:00+0100). El texto (CH02.txt:4448; CH07.txt:2093-2095) no lo prohíbe de forma expresa; es una incoherencia temporal, no un defecto.",
+      "OBX-14 distinto de OBR-7 en casi todos los mensajes. Para muestras, ambos deberían ser la hora de toma (CH07.txt:1830-1831, 3325-3327). Se anota, no se cuenta.",
+      "OBX-8 = 'N' con resultados numéricos: la Tabla 0078 lo describe para resultados no numéricos, pero es una tabla de usuario (CH07.txt:3170, 3178), así que no invalida."
+    ],
+    "advertencias_de_lectura": [
+      "En v2.5, la condición de OBX-2 no es 'si OBX-5 tiene valor' sino 'si OBX-11 no es X' (CH07.txt:2574-2575). Por eso B18 y L06-caso son válidos y B22 es inválido.",
+      "La ausencia de PID es válida en ORU_R01 v2.5 porque el grupo PATIENT es opcional (B30, M07-caso).",
+      "MSH-12: solo B15 declara 2.6 (discrepancia anotada; validado como v2.5)."
+    ]
+  }
+}

@@ -541,9 +541,9 @@ PV1|1|I|UCI^3^1^HOSP</pre></div>
 <details>
 <summary>El registro del estudio, la cita y el par mínimo</summary>
 <dl class="registro">
-<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Discrepancia">Un OBX sin OBX-2 y sin valor (resultado no obtenible «X», o pendiente «I») no da Observation. Va contra la guía y contra el comentario de su propia plantilla («OBX.2 is null/empty … CREATE»)</span></dd>
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Discrepancia">Un OBX sin OBX-2 y sin valor, con resultado no obtenible («X»), no da Observation. Va contra la guía y contra el comentario de su propia plantilla («OBX.2 is null/empty … CREATE»). (Acotado en la auditoría de la etapa 29: sin OBX-2, v2.5 solo admite «X», y el caso «I» solo salía en ORU-B22, que es inválida)</span></dd>
 <dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Guía"><code>MSG_ORU_R01.csv:67</code>; <code>CH07.txt:2574</code> (OBX-2 es condicional)</span></dd>
-<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Casos">ORU-B18, B22</span></dd>
+<dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-15|Casos">ORU-B18</span></dd>
 <dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-15|Rama principal"><strong>sigue</strong></span></dd>
 </dl>
 <p class="rot">Par mínimo <code data-fuente="json:verificador/cv/RESULTADO-CV3-minimos.json#pares[id=L06-obx-sin-tipo].id">L06-obx-sin-tipo</code></p>
@@ -793,7 +793,7 @@ OBR|1|PL1|FL1|24323-8^Panel basico^LN|||20260101070000+0100|||||||||||||||202601
 <details>
 <summary>El registro del estudio, la cita y el par mínimo</summary>
 <dl class="registro">
-<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Discrepancia">OBR-25 «I» se escribe «unknown»; la guía da «registered»</span></dd>
+<dt>Qué registró el estudio</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Discrepancia">OBR-25 «I» se escribe «unknown»; la guía da «registered». (En la auditoría de la etapa 29, también «O» y «S», los otros estados sin resultados)</span></dd>
 <dt>Cita de la guía</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Guía"><code>OBR_DiagnosticReport.csv:33</code>; CM <code>table-hl70123</code></span></dd>
 <dt>Casos en el corpus</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-CV3.md### Las 15 nuevas y confirmadas|L-19|Casos">ORU-B22, B31</span></dd>
 <dt>En la rama principal</dt><dd><span data-fuente="tabla:verificador/cv/RESULTADO-15A.md### Cada nueva, en la versión fijada|L-19|Rama principal"><strong>sigue</strong></span></dd>

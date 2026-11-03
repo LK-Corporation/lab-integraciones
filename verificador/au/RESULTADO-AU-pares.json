@@ -1,0 +1,85 @@
+[
+ {
+  "id": "AU1",
+  "nueva": "VX-M15",
+  "conversor_de_la_nueva": "microsoft",
+  "esperado": [
+   "RXA-20",
+   "codigo_mal_mapeado"
+  ],
+  "microsoft": {
+   "caso": true,
+   "controles": {
+    "k": false
+   },
+   "categoria_caso": "fallo_silencioso",
+   "confirma": true
+  },
+  "linuxforhealth": {
+   "caso": false,
+   "controles": {
+    "k": false
+   },
+   "categoria_caso": "fallo_silencioso",
+   "confirma": false
+  }
+ },
+ {
+  "id": "AU2",
+  "nueva": "VX-L8",
+  "conversor_de_la_nueva": "linuxforhealth",
+  "esperado": [
+   "RXA-10",
+   ""
+  ],
+  "microsoft": {
+   "caso": false,
+   "controles": {
+    "k": false
+   },
+   "categoria_caso": "fallo_silencioso",
+   "confirma": false
+  },
+  "linuxforhealth": {
+   "caso": true,
+   "controles": {
+    "k": false
+   },
+   "categoria_caso": "fallo_silencioso",
+   "confirma": true
+  }
+ },
+ {
+  "id": "AU3",
+  "nueva": "L-19",
+  "conversor_de_la_nueva": "linuxforhealth",
+  "esperado": [
+   "OBR-25",
+   "codigo_mal_mapeado"
+  ],
+  "microsoft": {
+   "caso": false,
+   "controles": {
+    "o": false,
+    "s": false,
+    "x": false
+   },
+   "categoria_caso": "correcto",
+   "confirma": false
+  },
+  "linuxforhealth": {
+   "caso": true,
+   "controles": {
+    "o": true,
+    "s": true,
+    "x": false
+   },
+   "categoria_caso": "fallo_silencioso",
+   "confirma": false
+  },
+  "nota": "confirma=false porque cuenta los tres controles. «O» y «S» resultaron casos: la guía los lleva a «registered», como «I», y LinuxForHealth también los da «unknown». Frente al control «X» («cancelled»), el par confirma L-19.",
+  "confirma_frente_a": {
+   "x": true
+  }
+ }
+]

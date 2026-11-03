@@ -105,7 +105,7 @@ Están ordenadas por fuerza. Las citas de la guía son de las hojas CSV del comm
 | M-23 | Microsoft | ORU sin PID: `subject` apunta a «Patient/364bf61f…», que no está en el Bundle. Es el mismo id en ORU-B30 y en el mínimo: todos los mensajes sin PID quedan colgados del mismo paciente inexistente | ORU-B30 | `MSG_ORU_R01.csv:14,67-69` (Patient[1] solo desde PID) | M07 | fuerte |
 | M-18 | Microsoft | En ADT^A02, un PDA sin datos (`PDA\|""`) da `deceasedBoolean: true`, sin PID-29 ni PID-30. En A01 no pasa | 5 (A02 «nulos») | `PID_Patient.csv:50-51`; PDA sin destino (`MSG_ADT_A01.csv:81`) | M03 (y M03b, el control en A01) | fuerte |
 | L-10 | LinuxForHealth | PID-16 «A» (separado) se escribe en v3-MaritalStatus como «A», que allí es **anulado**; la guía da «L» | 2 | CM `table-hl70002-to-v3-maritalstatus` | L02 | fuerte |
-| L-15 | LinuxForHealth | Un OBX sin OBX-2 y sin valor (resultado no obtenible «X», o pendiente «I») no da Observation. Va contra la guía y contra el comentario de su propia plantilla («OBX.2 is null/empty … CREATE») | ORU-B18, B22 | `MSG_ORU_R01.csv:67`; `CH07.txt:2574` (OBX-2 es condicional) | L06 | fuerte |
+| L-15 | LinuxForHealth | Un OBX sin OBX-2 y sin valor, con resultado no obtenible («X»), no da Observation. Va contra la guía y contra el comentario de su propia plantilla («OBX.2 is null/empty … CREATE»). (Acotado en la auditoría de la etapa 29: sin OBX-2, v2.5 solo admite «X», y el caso «I» solo salía en ORU-B22, que es inválida) | ORU-B18 | `MSG_ORU_R01.csv:67`; `CH07.txt:2574` (OBX-2 es condicional) | L06 | fuerte |
 | L-16 | LinuxForHealth | Los valores FT y TM se pierden: valueString solo existe para ST, y no hay valueTime | ORU-B11, B13 | `OBX_Observation.csv:9,19` | L07, L08 | fuerte |
 | L-20 | LinuxForHealth | SN «^1^-^5» (rango) se escribe como valueQuantity **1** | ORU-B07 | `OBX_Observation.csv:22` (SN con «-» → valueRange); CM `datatype-sn-to-range` | L11 | fuerte |
 | M-7 | Microsoft | De PV1-8 repetido, solo la primera repetición llega a participant | 8 | `PV1_Encounter.csv:18-21` (PV1-8, 0..*) | M04 | media |
@@ -113,7 +113,7 @@ Están ordenadas por fuerza. Las citas de la guía son de las hojas CSV del comm
 | L-11 | LinuxForHealth | SAD.2 y SAD.3 de XAD.1 no llegan a address.line | 5 + 12 muestras | CM `datatype-sad-to-address` (SAD.1-3 → line[1-3]) | L04 | media |
 | L-12 | LinuxForHealth | PID-8 «N» se escribe «unknown»; la guía da «other» | 1 | CM `table-hl70001-to-administrative-gender` | L05 | media |
 | L-18 | LinuxForHealth | OBX-11 «D» se escribe «cancelled»; la guía da «entered-in-error» | ORU-B20 | CM `table-hl70085-to-observation-status` | L09 | media |
-| L-19 | LinuxForHealth | OBR-25 «I» se escribe «unknown»; la guía da «registered» | ORU-B22, B31 | `OBR_DiagnosticReport.csv:33`; CM `table-hl70123` | L10 | media |
+| L-19 | LinuxForHealth | OBR-25 «I» se escribe «unknown»; la guía da «registered». (En la auditoría de la etapa 29, también «O» y «S», los otros estados sin resultados) | ORU-B22, B31 | `OBR_DiagnosticReport.csv:33`; CM `table-hl70123` | AU3 (etapa 29: «I» frente a «X»; L10 tenía un caso inválido) | media |
 | L-22 | LinuxForHealth | PV1-52 no llega a participant (PART) | 10 muestras | `PV1_Encounter.csv:80-83` | L13 | media |
 | M-10 | Microsoft | PID-16 «T» (no declarado) no da maritalStatus; la guía da NullFlavor NAVU | 1 | CM `table-hl70002-to-v3-maritalstatus` | M08 | débil |
 

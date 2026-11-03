@@ -190,6 +190,18 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## La validez de los corpus de VXU y ORU (29, 3-nov-2026)
+
+> **De los 162 mensajes sintéticos publicados de VXU y ORU, 65 son válidos en v2.5 con todas sus reglas, y 142 si se deja
+> aparte una regla transversal del tipo XCN que no sostiene ningún hallazgo. Ninguna nueva publicada se apoya solo en
+> mensajes inválidos.**
+
+- **Lo que cambia:** L-15 se acota a «X»; L-19 se confirma con un par válido y es más amplio (también «O» y «S»); VX-M15 y
+  VX-L8 se confirman con pares válidos. Las frases de los estudios no cambian.
+- **Cómo:** dos auditores a ciegas de los resultados, con el texto de v2.5, y tres pares nuevos corridos con los dos
+  conversores. Está en [`RESULTADO-AUDITORIA.md`](RESULTADO-AUDITORIA.md); la pregunta, en
+  [`ANTES-ETAPA-AUDITORIA.md`](ANTES-ETAPA-AUDITORIA.md).
+
 ## Los otros eventos de MDM (28, 31-oct-2026)
 
 > **En T04, T06, T08 y T10, los conversores tratan el documento como en T02 en todos los eventos que convierten: 0
