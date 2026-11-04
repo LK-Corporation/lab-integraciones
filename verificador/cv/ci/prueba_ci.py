@@ -1013,7 +1013,8 @@ C0 = "0f8543718e0ce004fb477bbd7da06cb7c44486ee"                              # e
 C1 = "5183b4edeb2fff421cd441b248f141ccd52852bc"                              # el pin del ejemplo en la 24
 M1 = "e704b97b560a252cfac2cdeae68ed1530cc78be7"                              # etapa 25: el commit del primer push, puesto en M2
 P27 = "c9d49d9566d14121cef9fc7a21dbaf1ee906d494"                             # etapa 27: el pin subido al commit con MDM
-PIN_ESPERADO = P27 or M1 or C1
+PNC = "19761c164a5eda0b51df811106dd289855afc4d7"                             # 4-nov: el pin, al commit del juez con el texto nuevo de S95 y S96
+PIN_ESPERADO = PNC or P27 or M1 or C1
 
 
 def comprobar_vivos(vivos):

@@ -200,6 +200,8 @@ corrido en lote, un proceso por carpeta.
   `info_verificador` solo cambian esos dos textos y la versión.
 - **Las tres bases de la demostración,** rehechas con [`cv/ci/hacer_bases.py`](cv/ci/hacer_bases.py): en cada una solo
   cambia la huella del juez.
+- **El proyecto de ejemplo y el run en rojo** suben su pin a `19761c1`, el commit de este juez, y el ejemplo rehace sus
+  dos bases con su receta ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)).
 
 ## La validez de los corpus de VXU y ORU (29, 3-nov-2026)
 
