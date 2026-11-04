@@ -26,7 +26,7 @@ Al terminar, devuelve un resumen de 15 líneas como máximo:
 
 | Ruta | Qué es |
 |---|---|
-| `etapa/ANTES-PILOTO-AGENTE.md` | **Léelo primero.** La pregunta, el alcance fijado por Víctor (Q-AG-1..7), los corpus, las fases AG-pre..AG4, «hecho cuando» y tope. La lista de H está resumida a propósito |
+| `etapa/ANTES-PILOTO-AGENTE.md` | **Léelo primero.** La pregunta, el alcance fijado por el autor (Q-AG-1..7), los corpus, las fases AG-pre..AG4, «hecho cuando» y tope. La lista de H está resumida a propósito |
 | `etapa/RESULTADO-AGPRE.md` | El eslabón débil ya medido: dos casos de punta a punta (Mirth e IRIS) y **los 7 puntos que obligan al diseño** |
 | `etapa/CONOCIDOS-ANTES-DEL-SELLO.md` | El corpus R: los fallos vivos del circuito congelado, con sus disparadores |
 | `lecciones/LECCIONES.md` | Lo medido antes en este laboratorio que condiciona el diseño (Fase 12: el script batió al agente) |
@@ -75,3 +75,5 @@ Al terminar, devuelve un resumen de 15 líneas como máximo:
 7. **Q-AG-n** (desde la 8) para Jev, cada una con recomendación y alternativa; **L-AG-n**, límites declarados de entrada.
 
 Etiquetas: S-AG (decisión propuesta), Q-AG (pregunta), L-AG (límite), DV-AG (reservada para la implementación).
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

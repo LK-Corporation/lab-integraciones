@@ -9,7 +9,7 @@ respuesta de GPT a la pregunta «¿qué hacer?» (`revision-quehacer-gpt.md`).
 curador, adjudicación masiva y pasada confirmatoria hay que **falsar barato** que exista la clase
 que la fase mide. Si no existe, no hay fase, y eso es el resultado.
 
-Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide Víctor.
+Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide el autor.
 
 ---
 
@@ -609,3 +609,5 @@ comparables con el +0,629 del reservado.
 - Quiénes son, en concreto, los modelos nuevos de los papeles 2 y 3 — la **decisión** está tomada
   (modelos nuevos en sesión limpia con familia registrada); falta elegirlos y registrarlos en el
   manifiesto.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

@@ -14,7 +14,7 @@ El piloto del agente y su ampliación (`RESULTADO-AG2-AG3.md`, `RESULTADO-AMP.md
 Hipótesis: **si el agente puede probar su parche en la caja y leer el veredicto del juez sobre el circuito parcheado, arregla
 más** sin aprender a contentar al juez.
 
-## Alcance fijado por Víctor (13-oct)
+## Alcance fijado por el autor (13-oct)
 
 - **Un solo factor:** el bucle de prueba. El agente de hoy, con una herramienta más, `probar_parche`. Aplica el parche en la
   caja, la carga y devuelve el veredicto del juez sobre los mensajes de prueba.
@@ -25,7 +25,7 @@ más** sin aprender a contentar al juez.
   - cargar los esquemas de las herramientas desde el principio.
 - **Primero el eslabón débil: la latencia.** Hoy evaluar un parche cuesta 3-4 minutos y el presupuesto de una tirada es de 10.
   Si `probar_parche` no baja de un minuto, el bucle no cabe y hay que cambiar el diseño antes de gastar tiradas.
-- **Fable diseña** a ciegas de los resultados por caso. Jev decide las preguntas de diseño; Víctor, las de alcance.
+- **Fable diseña** a ciegas de los resultados por caso. Jev decide las preguntas de diseño; el autor, las de alcance.
 
 ## Lo que el diseño tiene que resolver
 
@@ -53,3 +53,5 @@ más** sin aprender a contentar al juez.
 **Regla de parada del eslabón débil:** si `probar_parche` tarda más de 90 s en la caja más lenta con 3 disparadores y 5 de
 regresión, y no se baja con una caja que se mantiene arrancada durante la tirada, se para y se publica eso («el bucle no cabe
 en el presupuesto de una tirada»), sin cambiar el presupuesto para hacerlo caber.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

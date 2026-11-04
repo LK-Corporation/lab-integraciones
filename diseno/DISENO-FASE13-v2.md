@@ -8,7 +8,7 @@ escribiendo operadores** (§7.2 de la quinta revisión). No es un ajuste del dis
 la pregunta que la fase puede contestar, elimina tres de sus cuatro modos de fallo y crea otros
 que hay que nombrar aquí.
 
-Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide Víctor.
+Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide el autor.
 
 ---
 
@@ -303,3 +303,5 @@ adversarios y los tres triadores (`v3`, `v3-invariante`, congelado).
 6. Si el **estrato de los diez conocidos** se corre igualmente como descriptivo.
 7. **Rotar las dos claves de API** antes de cualquier ronda de panel: siguen quemadas desde el
    20-sep.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

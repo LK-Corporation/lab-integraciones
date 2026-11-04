@@ -1,6 +1,6 @@
 # Opciones tras el piloto del agente (13-oct-2026)
 
-El orden fijado tras ORU está completo: ORU → ADT → modo sitio → Mirth → piloto del agente. Lo que sigue lo decide Víctor. Aquí
+El orden fijado tras ORU está completo: ORU → ADT → modo sitio → Mirth → piloto del agente. Lo que sigue lo decide el autor. Aquí
 van los hechos medidos para decidir, **sin recomendación**.
 
 ## 1. Salir del «indeterminado» en localizar
@@ -57,5 +57,7 @@ del agente (2 réplicas × ~8 casos × ~42 000).
 - **Arreglar las deudas vivas de los circuitos** (CIR-ADT-7/8, CIR-MS-3/4, CIR-MT1/4). Choca con la opción 1: arreglarlas
   antes elimina los casos R nuevos.
 - **Más motores** (la familia de laboratorios: Mirth ya está; los demás no).
-- **Preguntas abiertas para Víctor:** Q-MI-11, Q-AG-8/14 (contra Jev por el alcance), Q-AG-10/11/16 (a cara o cruz en Jev) y
+- **Preguntas abiertas para el autor:** Q-MI-11, Q-AG-8/14 (contra Jev por el alcance), Q-AG-10/11/16 (a cara o cruz en Jev) y
   Q-AG-18.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

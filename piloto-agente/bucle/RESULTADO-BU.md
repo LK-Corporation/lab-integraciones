@@ -162,4 +162,6 @@ El bucle cuesta casi lo mismo por tirada y la mitad por arreglo aceptado.
 - **USER en marcha:** `comprobar_circuito.py` da IGUAL (`342a21b5`) y la sonda contesta `MSA|AA`.
 - **Guarda:** `antes_de_publicar.py` LIMPIO.
 - **Publicación:** subir al repo público el diseño, el sello y este resultado (sin la clave, sin transcripciones y sin
-  `pruebas.jsonl`) espera al visto bueno de Víctor al diff.
+  `pruebas.jsonl`) espera al visto bueno del autor al diff.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

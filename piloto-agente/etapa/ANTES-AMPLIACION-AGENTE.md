@@ -8,10 +8,10 @@ El piloto (AG0-AG4) dejó dos frases (`RESULTADO-AG2-AG3.md`):
   p = 0,22, con n = 11.
 
 Toda la ventaja está en H (5/5 frente a 1/5); en R empatan (5/6). El diseño prohibía añadir casos dentro del piloto, porque
-eso es mirar los datos para decidir n. **Víctor decide ampliar el corpus (13-oct)**, así que la ampliación es un estudio
+eso es mirar los datos para decidir n. **El autor decide ampliar el corpus (13-oct)**, así que la ampliación es un estudio
 nuevo, con diseño propio preinscrito.
 
-## Alcance fijado por Víctor
+## Alcance fijado por el autor
 
 - **Ampliar el corpus** con las fuentes medidas en `OPCIONES-TRAS-PILOTO.md`:
   - **H nuevos**, aislados por hunks (como DV-AG-2) desde los commits que cerraron deudas de los circuitos: la pieza común
@@ -43,10 +43,12 @@ nuevo, con diseño propio preinscrito.
 
 ## Hecho cuando
 
-- El diseño (`diseno-ampliacion-fable.md`) está escrito, sus Q-AMP están decididas (Jev; las de alcance, Víctor), y el sello AMP
+- El diseño (`diseno-ampliacion-fable.md`) está escrito, sus Q-AMP están decididas (Jev; las de alcance, el autor), y el sello AMP
   está commiteado **antes de la primera tirada**.
 - Las tiradas REF y AG (y DS si alcanza) están hechas y evaluadas en sus cajas.
 - `RESULTADO-AMP.md` da las dos frases con la regla preinscrita, aunque salgan «no aporta» o «indeterminado».
 
 **Tope: 1,5 sesiones.** Si al pasar las puertas quedan menos de 4 casos nuevos que cuentan, se para y se publica eso
 («la ampliación no da casos»), sin buscar más fuentes.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

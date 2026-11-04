@@ -1,6 +1,6 @@
 # ANTES: piloto del agente que se apoya en el verificador (14h, FIJADO el 12-oct-2026)
 
-**Fijado.** Víctor contestó Q-AG-1..7 el 12-oct y aceptó las siete recomendaciones:
+**Fijado.** El autor contestó Q-AG-1..7 el 12-oct y aceptó las siete recomendaciones:
 
 | Q | Decisión |
 |---|---|
@@ -12,7 +12,7 @@
 | Q-AG-6 | **Fable diseña** a ciegas de los arreglos de H; Jev decide las Q del diseño |
 | Q-AG-7 | **Tres sesiones**; Fable un diseño; el agente ≤ 70 casos × 2 réplicas; DeepSeek ≤ 2 USD |
 
-Orden acordado con Víctor el 4-oct: ORU ✅ → familia ADT ✅ → modo sitio ✅ → Mirth ✅ → **piloto del agente**.
+Orden acordado con el autor el 4-oct: ORU ✅ → familia ADT ✅ → modo sitio ✅ → Mirth ✅ → **piloto del agente**.
 
 ## La pregunta
 
@@ -65,7 +65,7 @@ verificador: debe dar `correcto` en los casos que fallaban y no romper ninguno d
 
 **Presupuesto de modelos:** el saldo de DeepSeek es 2,09 USD. Fable y Jev se usan como hasta ahora.
 
-## Preguntas de alcance para Víctor (Q-AG), con recomendación (contestadas: ver arriba)
+## Preguntas de alcance para el autor (Q-AG), con recomendación (contestadas: ver arriba)
 
 | Q | Recomendación | Alternativa |
 |---|---|---|
@@ -108,3 +108,5 @@ Tres sesiones (Q-AG-7). Fable: un diseño. El agente: ≤ 70 casos × 2 réplica
 - Circuitos que no estén en git.
 - Aplicar parches en producción.
 - La Fase 13 completa (detección de tipos nuevos).
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

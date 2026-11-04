@@ -4,7 +4,7 @@
 
 Referencia contra la que se medirá la ampliación. Lo implementa otro (Claude), que declara cada desviación como DV-AMP-n y
 fija en git la regla de parada **antes** de medir. Etiquetas: S-AMP (decisión propuesta), Q-AMP (pregunta: a Jev, salvo las de
-alcance, que son de Víctor), L-AMP (límite declarado de entrada), DV-AMP (reservada a la implementación). Todo lo que este
+alcance, que son del autor), L-AMP (límite declarado de entrada), DV-AMP (reservada a la implementación). Todo lo que este
 diseño no nombra queda **como en el piloto** (`piloto/agente/diseno-agente-fable.md`, en adelante «D-AG», y sus sellos).
 
 Lo que el ANTES da por fijado (13-oct): se amplía el corpus con H de los commits de cierre (pieza común `14e17de` y cabecera
@@ -48,7 +48,7 @@ cerró CIR-MT3 / CIR-ADT-6 / CIR-ORU-2 (el `SINID` inventado), que es el **R6** 
 otra copia del mismo código, resuelto por el mismo modelo, no es una observación independiente para McNemar; contarlo inflaría
 la etapa 2 con lo que ya se midió. Regla: **un caso de la etapa 2 no cuenta si su causa (la unidad de la verdad y el hallazgo
 del juez) es la de un caso H, R o M de la etapa 1**; se construye igual si es barato y sirve de control (§1.2), pero no entra en
-n₂. Es la Q-AMP-1 (alcance: Víctor), porque reduce lo «previsto 1-3» del ANTES a 1-2 H.
+n₂. Es la Q-AMP-1 (alcance: el autor), porque reduce lo «previsto 1-3» del ANTES a 1-2 H.
 
 Correspondencia preinscrita (la implementación la confirma con los diffs reales en AMP1, y si un hunk cierra algo que **no**
 está en esta tabla, ese es un H candidato nuevo y se declara):
@@ -304,7 +304,7 @@ obligatorio: ya tienen su FIX real como control).
 
 ### 3.1 El problema y las tres opciones
 
-El piloto preinscribió «indeterminado no dispara añadir casos» y, aun así, Víctor decide ampliar. Si los 11 casos se juntan con
+El piloto preinscribió «indeterminado no dispara añadir casos» y, aun así, el autor decide ampliar. Si los 11 casos se juntan con
 los nuevos y se calcula McNemar como si fueran 19, el p es **optimista**: la decisión de seguir se tomó mirando el p de la etapa
 1 (parada opcional). Opciones:
 
@@ -477,7 +477,7 @@ contrato) o no; no cambia ninguna puntuación.
 
 | Fase | Qué se hace | Hecho cuando | Tope y regla de parada |
 |---|---|---|---|
-| **AMP0** Diseño | Este documento; Q-AMP decididas (Jev; las de alcance, Víctor) | `diseno-ampliacion-fable.md` en el repo con las Q-AMP respondidas en `etapa/SELLO-AMP.md` §0 | **0,15 sesión.** Si una Q de alcance no está decidida al cerrar AMP0, se sigue con la recomendación y se declara |
+| **AMP0** Diseño | Este documento; Q-AMP decididas (Jev; las de alcance, el autor) | `diseno-ampliacion-fable.md` en el repo con las Q-AMP respondidas en `etapa/SELLO-AMP.md` §0 | **0,15 sesión.** Si una Q de alcance no está decidida al cerrar AMP0, se sigue con la recomendación y se declara |
 | **AMP1** Casos, caja y sello | Puerta en seco de R-ADT-7 (§1.3.1) **lo primero**; caja LABMULTIMUT (creación, exportador, medir, restaurar, 5 controles del evaluador); firma/veredicto por caja (§1.4.2); R: construcciones, zonas preinscritas, puertas, regresiones con los mínimos de §1.4.1; H: hunks de los dos commits, correspondencia con §1.1, H-CAB-1 (y 1b/2 si salen), H-COM-MT2 como control si cabe; L-multi; cajas generadas; escáner de fugas (§1.4.3); n₂; `amp_clave.json` y `SELLO-AMP.md` commiteados | Todo lo anterior medido y escrito; el sello lleva n₂, Z₁, los pesos, las reglas de restauración y de parada, los controles por caja y la lista de pistas | **0,7 sesión.** Se para (y se publica «la ampliación no da casos» con las puertas medidas) si al agotar el tope hay **< 4** casos nuevos que cuentan (ANTES). Ninguna puerta se relaja para llegar a 4 |
 | **AMP2** Tiradas | REF sobre n₂ + 1 → AG 2 réplicas en orden sembrado `AMP2\|<huella>` → DS hasta 0,45 USD → evaluación de cada parche en su caja con restauración | Todas las tiradas con transcripción auditada, `respuesta.json`, `puntos.json`, `fix.json`, coste | **0,4 sesión** (el resto en segundo plano). Reglas de §4.3 |
 | **AMP3** Análisis y cierre | `amp3.py` (el guion de §3, escrito y sellado en AMP1, sin cambios); verdad ampliada de R; tabla por caso y brazo; las tres columnas; sensibilidades (i)-(x); lectura manual de **2** parches aceptados nuevos si los hay (Jev; no cambia puntuaciones); amenazas con lo observado; `RESULTADO-AMP.md` con el formato de §3.5; cajas paradas, USER en marcha con huella y sonda AA; `antes_de_publicar.py` LIMPIO; publicación del diseño, el sello y los agregados (sin clave ni transcripciones con datos); memoria: ficha con las dos frases y «última etapa» | `RESULTADO-AMP.md` da las dos frases con la regla preinscrita aunque salgan «no aporta» o «indeterminado»; guarda LIMPIO | **0,25 sesión.** No se añade ningún caso ni réplica tras ver los datos; no habrá AMP4 de corpus |
@@ -488,7 +488,7 @@ contrato) o no; no cambia ninguna puntuación.
 
 | Q | A quién | Pregunta | Recomendación | Alternativa | Qué cambia en la medida |
 |---|---|---|---|---|---|
-| **Q-AMP-1** | Víctor (alcance) | ¿Cuenta un H de la pieza común cuyo fallo ya estuvo en el piloto como R6 o como el mutante MA11? | No (S-AMP-1); se usa como control de la caja nueva | Sí: H-COM-MT2 y H-COM-MT3 cuentan | Con la alternativa n₂ sube en 2 con casos correlacionados con la etapa 1 y que el mismo modelo ya resolvió: el p₂ se infla por construcción |
+| **Q-AMP-1** | El autor (alcance) | ¿Cuenta un H de la pieza común cuyo fallo ya estuvo en el piloto como R6 o como el mutante MA11? | No (S-AMP-1); se usa como control de la caja nueva | Sí: H-COM-MT2 y H-COM-MT3 cuentan | Con la alternativa n₂ sube en 2 con casos correlacionados con la etapa 1 y que el mismo modelo ya resolvió: el p₂ se infla por construcción |
 | **Q-AMP-2** | Jev | Si el juez no da `correcto` a «sin ACK con MSH-15/16 = NE», ¿qué se hace con R-ADT-7? | Retirarlo como «del juez / del perfil», declarado; no tocar el verificador | Arreglar el verificador antes del sello y remedir | La alternativa cambia al juez en mitad del estudio: la etapa 2 se mediría con otro juez que la 1 |
 | **Q-AMP-3** | Jev | ¿Cuenta R-MT1, que es una decisión declarada (S98, confianza 0,16)? | Sí, con la sensibilidad (ix) y el recuento de negaciones razonadas | No: solo como control | Sin R-MT1, n₂ baja en 1 y se pierde el único caso de «guarda de modo»; con él, un `hay_fallo: false` bien argumentado puntúa 0 |
 | **Q-AMP-4** | Jev | ¿Se recortan de `verificador.json` los cuatro paréntesis que nombran `CIR-*` (L-MS-1, S97, S98) y describen la causa? | No: idéntico al piloto, pistas listadas, sensibilidades (iii-amp) y (viii) | Recortar solo esos paréntesis | Recortar hace la etapa 2 no comparable con la 1 y es diseñar la caja mirando el corpus; no recortar favorece a AG y DS (REF no lo lee) en 4 de 6 R: lo acota la sensibilidad, no lo elimina |
@@ -528,3 +528,5 @@ contrato) o no; no cambia ninguna puntuación.
 | S-AMP-8 | Restauración por firma o por veredicto decidida por caja con medida antes del sello |
 | S-AMP-9 | Esta es la última etapa: ningún resultado dispara una tercera ampliación del corpus |
 | S-AMP-10 | Presupuesto: AG ≤ 3 M tokens nuevos, DS ≤ 0,45 USD, 1,5 sesiones (0,15 / 0,7 / 0,4 / 0,25); < 4 casos nuevos que cuentan → se para y se publica |
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

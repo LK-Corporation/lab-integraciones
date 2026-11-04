@@ -26,7 +26,7 @@ Al terminar, devuelve un resumen de 15 líneas como máximo:
 
 | Ruta | Qué es |
 |---|---|
-| `etapa/ANTES-AMPLIACION-AGENTE.md` | **Léelo primero.** Por qué se amplía, el alcance fijado por Víctor, lo que el diseño tiene que resolver, «hecho cuando» y tope |
+| `etapa/ANTES-AMPLIACION-AGENTE.md` | **Léelo primero.** Por qué se amplía, el alcance fijado por el autor, lo que el diseño tiene que resolver, «hecho cuando» y tope |
 | `piloto/` | El diseño del piloto, su sello y la adenda (DV-AG-1..16, L-AG-13..16), el resultado agregado, las opciones medidas tras el piloto y los fallos vivos del congelado |
 | `circuitos/` | La fuente actual de LABADT, LABORU, LABMULTI y la pieza común |
 | `arneses/` | El arnés del piloto: las cajas (`ag1_cajas.py`), los evaluadores, los corpus R y M, la orquestación (`ag2.py`), el análisis (`ag3.py`), la referencia (`ref.py`), las unidades, el lanzador, `mutacion.py`, `multi.py` (LABMULTI) y `adt.py` |
@@ -46,3 +46,5 @@ Al terminar, devuelve un resumen de 15 líneas como máximo:
 4. **Brazos, réplicas, presupuesto y reglas de parada**, en números. Lo mínimo que cambia respecto al piloto, y por qué.
 5. **Amenazas a la validez** nuevas, frente a las del piloto.
 6. **El plan AMP0-AMP3**, con «hecho cuando» y tope por fase. El tope total es 1,5 sesiones.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

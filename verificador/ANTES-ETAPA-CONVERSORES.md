@@ -1,8 +1,8 @@
-> *Copia pública: se quitaron las alusiones al trabajo del autor y la cola de lo que solo él decide. El resto es el original del laboratorio.*
+> *Copia pública: se quitaron las alusiones al trabajo del autor y la cola de lo que solo él decide. El resto es el original del laboratorio. Donde decía el nombre del autor, dice «el autor».*
 
 # ANTES: etapa de conversores, el verificador juzga conversores HL7 v2 → FHIR de código abierto (14l, FIJADO el 23-oct-2026)
 
-**Fijado en autónomo.** El 23-oct Víctor pidió preparar este ANTES y seguir sin preguntarle. Las Q-CV de alcance se toman con
+**Fijado en autónomo.** El 23-oct el autor pidió preparar este ANTES y seguir sin preguntarle. Las Q-CV de alcance se toman con
 la recomendación (tabla de abajo) y quedan revisables por él. Las de diseño van a Jev en CV0. El eslabón débil (CV-pre) ya se
 midió: `RESULTADO-CV-PRE.md`.
 
@@ -51,7 +51,7 @@ abierto que usa gente de verdad, juzgados contra la guía oficial v2-to-FHIR de 
    se cuentan aparte, y sirven de control positivo: el verificador debe verlas.
 5. **El juez del laboratorio no cambia para ganar casos.** Lo nuevo (lector, punto de entrada, perfil «guía») se añade con su
    prueba en rojo antes, y los resultados sellados conservan la huella de su juez.
-6. **Nada sale fuera sin el visto bueno de Víctor:** ni se publica ni se reporta a los proyectos.
+6. **Nada sale fuera sin el visto bueno del autor:** ni se publica ni se reporta a los proyectos.
 
 ## Eslabón débil (CV-pre, solo lectura): hecho, ver `RESULTADO-CV-PRE.md`
 
@@ -78,7 +78,7 @@ abierto que usa gente de verdad, juzgados contra la guía oficial v2-to-FHIR de 
 | Q-CV-2 qué mensajes | **ADT de los 8 eventos de `adt_fhir` y ORU^R01.** Corpus principal: las bases públicas del laboratorio (A1, E2 y ORU), en v2.5 y con su esperado conocido. Secundario: las muestras de cada conversor que el juez acepta | Añadir SIU, MDM y VXU, que el juez hoy solo acusa, sin fidelidad |
 | Q-CV-3 contra qué se juzga | **Un perfil «guía» nuevo,** que toma el valor esperado de los mapas de tipos de datos y vocabularios de la guía. En ORU ya cita el mapeo oficial `[M]` en 24 de 30 filas. Las S-n del laboratorio no cuentan | Juzgar con el perfil del laboratorio y contar solo lo que contradice FHIR R4 |
 | Q-CV-4 reparto | **Fable diseña a ciegas** el punto de entrada de solo transformación, el lector de la salida de un conversor y el perfil «guía», sin ver lo que devuelven los conversores. **Jev** decide las Q de diseño y las S-n nuevas. Sin DeepSeek | — |
-| Q-CV-5 qué se hace con lo que salga | **Un `RESULTADO` privado.** Publicarlo o abrir issues en los proyectos, solo con el visto bueno de Víctor | Abrir issues directamente |
+| Q-CV-5 qué se hace con lo que salga | **Un `RESULTADO` privado.** Publicarlo o abrir issues en los proyectos, solo con el visto bueno del autor | Abrir issues directamente |
 
 ## Fases
 
@@ -120,7 +120,7 @@ Si es pieza de portfolio:
 Vale igual si la etapa para por una regla de parada sin alternativa que quepa en el tope.
 
 **Si hay al menos una**, la etapa concluye que el verificador encuentra algo fuera del laboratorio. Lo siguiente (publicarlo,
-abrir issues, otra etapa) lo decide Víctor.
+abrir issues, otra etapa) lo decide el autor.
 
 ## Fuera de la etapa
 

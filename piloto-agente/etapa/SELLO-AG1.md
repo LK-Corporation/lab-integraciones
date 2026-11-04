@@ -42,7 +42,7 @@ se concentran en pocas unidades «calientes» (el método que envía a FHIR, la 
 casos distintos comparten. Hacerla caer exigía quitar a la referencia lo que la hace fuerte en M, y un adversario más débil puede
 dar un «aporta» falso. Jev decidió (Q-AG-18) **congelar y declarar**: la referencia se congela como está, y **0,375 se reporta
 como el acierto «sin mirar el caso» de este corpus** junto a los resultados de los dos brazos (L-AG-13). Q-AG-18 queda en la
-lista de Víctor (es_del_humano 0,54).
+lista del autor (es_del_humano 0,54).
 
 ## 3. Controles del evaluador por caja (§4.2)
 
@@ -138,3 +138,5 @@ Una tirada cortada por presupuesto no se repite: cuenta «sin respuesta».
 | `agente/ag1_eval_mirth.py` | `0f4f48a61eb53012bb925376221f122748e48ade2f50fdbea5587009620dab0e` |
 | `agente/gen_cajas.py` | `2a05842e66926eeacb9eccadf6de3bb30a3e879df64dda92f383d32e6005a056` |
 | `agente/diseno-agente-fable.md` | `48e21ba408bd7e6b1e056423bccc1af0bf5e2c9605638db08ca65271ebc8b67d` |
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

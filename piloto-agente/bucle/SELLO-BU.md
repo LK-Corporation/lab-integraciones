@@ -7,7 +7,7 @@ ningún caso, réplica, umbral ni regla, y la consigna no se retoca. **Este estu
 ## 0. Decisiones (BU0)
 
 `agente/bucle/decisiones-qbu.md`:
-- **Víctor:** Q-BU-1, se remide entero el agente de hoy; Q-BU-5, un caso de más de 90 s se retira.
+- **El autor:** Q-BU-1, se remide entero el agente de hoy; Q-BU-5, un caso de más de 90 s se retira.
 - **Jev,** las seis de diseño, todas como recomendó Fable:
   - Q-BU-2: veredicto completo sin evidencia;
   - Q-BU-3: un disparador visible por grupo;
@@ -174,3 +174,5 @@ primera llamada nunca llegó a la herramienta, porque `claude -p` no pudo leer c
 (`InputValidationError`) y la rechazó antes de enviarla. El recuento de la transcripción contaba esas llamadas. Ahora cuenta
 solo las que llegan a la herramienta, que es lo que la comprobación pretendía. Se volvieron a puntuar todas las tiradas BU
 hechas, y la 39 pasa a válida.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

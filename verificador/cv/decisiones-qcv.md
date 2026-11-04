@@ -1,4 +1,4 @@
-> *Copia pública: se quitaron las alusiones al trabajo del autor y la cola de lo que solo él decide. El resto es el original del laboratorio.*
+> *Copia pública: se quitaron las alusiones al trabajo del autor y la cola de lo que solo él decide. El resto es el original del laboratorio. Donde decía el nombre del autor, dice «el autor».*
 
 # Decisiones Q-CV de CV0 (23-oct-2026)
 
@@ -8,7 +8,7 @@ guarda en LIMPIO y no alude a ningún sitio real.
 **Cómo se decidió:**
 - **Q-CV-D:** las 12 de diseño las decidió Jev, sobre un estado neutral, sin la recomendación de nadie (`cv/estado_qcv.md`,
   `cv/preguntas_qcv.json` y `cv/decision-jev-qcv.md`).
-- **Q-CV-A:** las 6 de alcance se tomaron en autónomo, con la recomendación, por delegación de Víctor del 23-oct. Quedan
+- **Q-CV-A:** las 6 de alcance se tomaron en autónomo, con la recomendación, por delegación del autor del 23-oct. Quedan
   revisables por él.
 
 ## Q-CV-D: diseño (Jev)
@@ -44,7 +44,7 @@ una de esas tres, se dice en la frase.
 | Q-CV-A-3, Google (Whistle) | **Solo si sobra tope** tras CV3, como Q-CV-1 |
 | Q-CV-A-4, hojas XTN y 0396 de la guía | **Se traen en CV1** desde `HL7/v2-to-fhir` (`873b331`), si cuesta menos de 15 minutos, para cerrar L-CV-2 y L-CV-3 |
 | Q-CV-A-5, issues de los proyectos | **Sí:** CV3 los lee con `gh api`, en solo lectura y fuera de la caja, y los guarda como referencias en el `RESULTADO` privado. No se escribe nada en los proyectos |
-| Q-CV-A-6, publicar el perfil «guía» | **Se prepara en CV4 y se publica solo con el visto bueno de Víctor al diff**, como manda la condición 6 del ANTES |
+| Q-CV-A-6, publicar el perfil «guía» | **Se prepara en CV4 y se publica solo con el visto bueno del autor al diff**, como manda la condición 6 del ANTES |
 
 ## Siguiente: CV1
 

@@ -4,7 +4,7 @@
 
 Referencia contra la que se medirá el estudio. Lo implementa otro (Claude), que declara cada desviación como DV-BU-n y fija
 en git la regla de decisión y las de parada **antes** de medir. Etiquetas: S-BU (decisión propuesta), Q-BU (pregunta: a Jev
-las de diseño, a Víctor las de alcance), L-BU (límite declarado de entrada), DV-BU (reservada a la implementación). Todo lo
+las de diseño, al autor las de alcance), L-BU (límite declarado de entrada), DV-BU (reservada a la implementación). Todo lo
 que este diseño no nombra queda **como en el piloto y la ampliación** (`piloto/piloto-agente/agente/diseno-agente-fable.md`,
 en adelante D-AG; `.../amp/diseno-ampliacion-fable.md`, D-AMP; y sus sellos).
 
@@ -337,7 +337,7 @@ entremezclado anula la deriva dentro de BU2 (si el proveedor cambia algo a mitad
 Alternativa: AG₀ como control y **6 casos** sembrados de AG₁ con 1 réplica como sonda de deriva (si en esos 6 la media de FIX
 difiere de la de AG₀ en ≥ 0,34, se declara deriva y el primario pasa a ser «no comparable»). Qué cambia: la alternativa ahorra
 ≈ 2 M tokens y ≈ 3 h de caja, y deja el primario expuesto a la deriva y a la regresión a la media; la recomendación cuesta eso y
-convierte la comparación en una medida del factor y nada más. Víctor decide (alcance: presupuesto).
+convierte la comparación en una medida del factor y nada más. El autor decide (alcance: presupuesto).
 
 ### 4.2 Medida primaria y secundarias
 
@@ -404,7 +404,7 @@ en la práctica: 4/0 sigue sin bastar, 5/0 sí, 7/1 sí, 9/2 sí).
 | **AG₀** | Ya medido; valores por caso de `privado/agente/ag3/analisis.json` y `amp3/analisis.json` | 0 nuevas | — |
 | **AG₁** | `claude -p`, `claude-opus-5-5` (una tirada con otro modelo es inválida), consigna, lanzador, MCP y presupuesto sellados, 2 réplicas × 22 | **44** | 200 000 tokens nuevos / 30 llamadas / 10 min |
 | **BU** | Ídem + `caja` (§1) + `CONSIGNA_BU.md` (§1.7), 2 réplicas × 22 | **44** | Ídem + **4 pruebas** (≤ 10 llamadas sin aplicar) |
-| REF, DS | No corren: REF no tiene bucle y su FIX es 0/18; DS no tiene saldo (0,08 USD) y recargarlo es decisión de Víctor fuera del estudio | 0 | L-BU-4 |
+| REF, DS | No corren: REF no tiene bucle y su FIX es 0/18; DS no tiene saldo (0,08 USD) y recargarlo es decisión del autor fuera del estudio | 0 | L-BU-4 |
 
 Orden: un solo `orden.json` con las 88 tiradas sembradas por `sha256("BU2|<huella>|<caso>|<brazo>|<réplica>")`, carpetas
 opacas con ese prefijo, bajo la carpeta de cajas del agente, fuera del repositorio. El lado de la máquina del usuario ve «i
@@ -472,7 +472,7 @@ huella del verificador (tiene que ser `73d36c38d23c8620…`, la de las dos etapa
    probar el árbol tal cual para verlos antes de escribir nada (Q-BU-7). Es inherente a un bucle de prueba (quien tiene tests,
    los corre primero). Se declara (L-BU-5) y se describe: cuántas tiradas BU hacen una prueba vacía primero, y la sensibilidad
    (iii) de §4.2 (multigrupo frente a monogrupo) dice si la ganancia va donde «ver variantes» importa.
-3. **Deriva del modelo y de la herramienta.** AG₁ remedido y entremezclado (§4.1). Si Víctor elige la alternativa, la sonda de
+3. **Deriva del modelo y de la herramienta.** AG₁ remedido y entremezclado (§4.1). Si el autor elige la alternativa, la sonda de
    6 casos y la etiqueta «no comparable» si difiere.
 4. **El reloj compartido.** BU gasta hasta ~2,5 min de sus 10 en pruebas: menos tiempo para leer. Es parte del factor (el
    presupuesto no cambia, ANTES); se reporta cortadas por brazo y la sensibilidad (ii). Si BU se corta por tiempo en ≥ 25 % de
@@ -498,7 +498,7 @@ huella del verificador (tiene que ser `73d36c38d23c8620…`, la de las dos etapa
 
 | Fase | Qué se hace | Hecho cuando | Tope y regla de parada |
 |---|---|---|---|
-| **BU0** Diseño | Este documento; Q-BU decididas (Jev las de diseño; Víctor Q-BU-1 y Q-BU-5) | `diseno-bucle-fable.md` en el repo y las respuestas en `SELLO-BU.md` §0 | **0,15 sesión.** Una Q de alcance sin decidir al cerrar BU0 → se sigue con la recomendación y se declara |
+| **BU0** Diseño | Este documento; Q-BU decididas (Jev las de diseño; el autor Q-BU-1 y Q-BU-5) | `diseno-bucle-fable.md` en el repo y las respuestas en `SELLO-BU.md` §0 | **0,15 sesión.** Una Q de alcance sin decidir al cerrar BU0 → se sigue con la recomendación y se declara |
 | **BU1** Herramienta, conjuntos y sello | **Primero el eslabón débil que queda:** latencia de LABMUT (R4 y R1) con el guardián mínimo. Luego: `bu_caja.py` y `mcp_caja.py`; cerrojos; `bu_clave.json` con `D_v`/`R_v` por semilla; consistencia y latencia de los 18 (§3.2-3.3); 6 controles por caja + cerrojo + tirada cortada + cadena R5 (§3.4); escáner de fugas sobre las salidas; `CONSIGNA_BU.md` y descripción; `bu2_tiradas.py`/`bu2.py` (orden de 88, reglas de §5.3), `bu3.py` (§4.2-4.4, incluido el escáner de literales y la lectura sorteada); `SELLO-BU.md` commiteado | Todo medido y en el sello; ≥ 14 casos siguen (18 menos retirados por latencia o inestabilidad); los controles separan en las 4 cajas; la cadena R5 llama a la herramienta y da FIX 1 | **0,5 sesión.** Se para y se publica («no se pudo construir el bucle» o «el bucle no cabe en la caja X») si al agotar el tope la cadena R5 no pasa, o quedan < 14 casos, o una caja entera cae por latencia. Ninguna puerta se relaja; `D_v`/`R_v` no se recortan |
 | **BU2** Tiradas | Las 88 en orden sembrado, secuenciales, en segundo plano desde la máquina del usuario; el guardián por tirada BU; evaluación de aceptación de todos los parches en lote al final (o en ventanas AG₁ bajo cerrojo), con restauración por caja | 88 tiradas con transcripción auditada, `respuesta.json`, `puntos.json`, `fix.json` (con `FIX_visible`, `FIX_parcial_oculto`, `sobreajuste`), `pruebas.jsonl` en las BU, coste, minutos de USER parado | **0,5 sesión** activa (el resto en segundo plano; BU3 espera). Reglas de §5.3 |
 | **BU3** Análisis y cierre | `bu3.py` sin cambios; tabla por caso (opaco) y brazo; frase de §4.4; sensibilidades (i)-(vii); secuencias de prueba agregadas; escáner de literales; lectura por Jev (4 + sospechosos + 2 de AG₁); amenazas con lo observado; `RESULTADO-BU.md`; cajas paradas, USER en marcha con huella y sonda, `antes_de_publicar.py` LIMPIO; publicación del diseño, el sello y los agregados (sin clave, sin transcripciones con datos, sin `pruebas.jsonl`); memoria: una ficha con la frase y «cerrado» | `RESULTADO-BU.md` da la frase con la regla preinscrita, salga lo que salga; guarda LIMPIO | **0,35 sesión.** No se añade caso ni réplica tras ver datos; no hay BU-bis |
@@ -509,11 +509,11 @@ huella del verificador (tiene que ser `73d36c38d23c8620…`, la de las dos etapa
 
 | Q | A quién | Pregunta | Recomendación | Alternativa | Qué cambia en la medida |
 |---|---|---|---|---|---|
-| **Q-BU-1** | Víctor (alcance) | ¿Se remide entero el agente de hoy (AG₁, 44 tiradas) como control? | Sí, 2 réplicas, entremezclado con BU (§4.1) | AG₀ como control + sonda de deriva de 6 casos × 1 réplica | La alternativa ahorra ≈ 2 M tokens y ≈ 3 h de caja; deja el primario expuesto a la deriva y a la regresión a la media de los valores que motivaron la hipótesis |
+| **Q-BU-1** | El autor (alcance) | ¿Se remide entero el agente de hoy (AG₁, 44 tiradas) como control? | Sí, 2 réplicas, entremezclado con BU (§4.1) | AG₀ como control + sonda de deriva de 6 casos × 1 réplica | La alternativa ahorra ≈ 2 M tokens y ≈ 3 h de caja; deja el primario expuesto a la deriva y a la regresión a la media de los valores que motivaron la hipótesis |
 | **Q-BU-2** | Jev | ¿Qué devuelve `probar_parche` por mensaje? | Veredicto completo (categoría, subtipo, hallazgos con que/esperado/observado/certeza) **sin evidencia** (§1.1) | (a) solo categoría; (b) evidencia completa de los 8 | (a) deja al agente sin saber por qué sigue fallando: mide menos de lo que la hipótesis necesita; (b) mezcla el factor con «enseñar más casos» |
 | **Q-BU-3** | Jev | ¿`D_v` estratificado por grupo de disparadores o sembrado puro? | Uno por grupo, con el caso mostrado (§2.1) | Sembrado puro sobre `D` | Con sembrado puro, en casos de 2-3 grupos `D_v` puede caer entero en el grupo del mostrado: la prueba no revela el arreglo a medias y el bucle no puede ayudar donde la hipótesis dice que ayuda |
 | **Q-BU-4** | Jev | ¿La consigna recomienda probar o lo exige? | Recomienda («entregar sin probar también vale»), con regla de parada si no usa la herramienta (§5.3) | Exige ≥ 1 prueba antes de entregar | Exigir mide «herramienta + obligación»; recomendar mide «herramienta disponible», que es lo que tendría en guardia; el riesgo (no la usa) lo acota la parada |
-| **Q-BU-5** | Víctor (alcance) | Si en BU1 un caso (o LABMUT) pasa de 90 s por prueba, ¿se retira el caso o se para el estudio? | Retirar el caso, declarado; parar solo si caen ≥ 5 (quedan < 14) o una caja entera (§3.3) | Parar el estudio a la primera, como la regla literal del ANTES | Retirar baja n (18 → ≥ 14) y sesga hacia casos baratos; parar deja el estudio sin hacer por un caso que depende de un tiempo de espera |
+| **Q-BU-5** | El autor (alcance) | Si en BU1 un caso (o LABMUT) pasa de 90 s por prueba, ¿se retira el caso o se para el estudio? | Retirar el caso, declarado; parar solo si caen ≥ 5 (quedan < 14) o una caja entera (§3.3) | Parar el estudio a la primera, como la regla literal del ANTES | Retirar baja n (18 → ≥ 14) y sesga hacia casos baratos; parar deja el estudio sin hacer por un caso que depende de un tiempo de espera |
 | **Q-BU-6** | Jev | ¿Una llamada cuyo parche no aplica gasta prueba? | No (tope 10); solo gastan las que cargan la caja (§1.3) | Toda llamada gasta | La alternativa mide también la torpeza con `viejo` (un blanco de más cuesta ¼ del presupuesto); la recomendación mide el bucle |
 | **Q-BU-7** | Jev | ¿Se admite `cambios: []` (probar el árbol tal cual)? | Sí, gasta prueba, se cuenta cuántas tiradas lo hacen primero (§6.2) | Error «parche vacío» | Prohibirlo reduce la fuga «ver más casos» pero quita lo que haría cualquiera con tests (correrlos antes); admitirlo se declara como parte del factor (L-BU-5) |
 | **Q-BU-8** | Jev | ¿α = 0,05 a una cola (hipótesis con dirección) o 0,10 a dos colas como el piloto? | Una cola, 0,05 (§4.3) | Dos colas, 0,10 | Casi equivalentes (5/0, 7/1 y 9/2 aportan en los dos); con dos colas una Δ negativa grande también daría p pequeño, que la frase «daña» ya cubre aparte |
@@ -549,3 +549,5 @@ huella del verificador (tiene que ser `73d36c38d23c8620…`, la de las dos etapa
 | S-BU-10 | FIX apareado; aporta si p ≤ 0,05 a una cola y Δ ≥ 0,20; no aporta si Δ ≤ 0,10 o IC con 0 y Δ < 0,20; si no, indeterminado y se cierra; «daña» como frase propia |
 | S-BU-11 | 88 tiradas, ≈ 6,3 M tokens (tope 9 M), ≈ 10-11 h de caja en segundo plano, 1,5 sesiones (0,15 / 0,5 / 0,5 / 0,35) |
 | S-BU-12 | Consigna BU = la sellada + tres cambios declarados; descripción de la herramienta sellada; sin retoques tras la primera tirada |
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original. La huella que cita `SELLO-BU.md` es la del original: `git show 82657aa:piloto-agente/bucle/diseno-bucle-fable.md | sha256sum`.*

@@ -65,7 +65,7 @@ En LABMULTIMUT el FIX se decide solo por el acuse (L-AMP-4).
 - Después se agotó el **saldo** de la cuenta: 0,08 USD restantes, con 0,39 de 0,45 gastados. Las otras 6 dan error HTTP y
   quedan **no medidas**.
 
-Recargar el saldo es una decisión de Víctor, y no se hace dentro del estudio. La sensibilidad (iv) DS frente a REF
+Recargar el saldo es una decisión del autor, y no se hace dentro del estudio. La sensibilidad (iv) DS frente a REF
 («no aporta», con n₂ = 2) no dice nada útil.
 
 ## Sensibilidades (LOC3, combinado de dos etapas)
@@ -118,3 +118,5 @@ Ninguno se adapta al juez. La lectura no cambia ninguna puntuación.
 5. **n pequeño.** Con 7 casos nuevos, cada uno vale 0,14 de Δ₂.
 
 **Esta es la última etapa (S-AMP-9).** Ningún resultado abre otra ampliación.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

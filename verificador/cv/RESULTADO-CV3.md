@@ -20,7 +20,7 @@ Cada nueva:
 `54a90cd9…`, tras los dos rejuicios que permite el diseño.
 
 **Para la regla de portfolio:** hay al menos una discrepancia nueva y confirmada, así que el verificador **no** se declara pieza
-de portfolio. CV4 lo cierra con la frase. Lo siguiente (publicarlo, abrir issues, otra etapa) lo decide Víctor, y nada sale sin
+de portfolio. CV4 lo cierra con la frase. Lo siguiente (publicarlo, abrir issues, otra etapa) lo decide el autor, y nada sale sin
 su visto bueno (condición 6).
 
 | | |
@@ -262,8 +262,10 @@ mensajes públicos; además ve 31 de las ya declaradas, y 16 diferencias son con
 - reiniciar `verificador-mcp`;
 - la guarda en LIMPIO.
 
-**Publicar o abrir issues:** solo con el visto bueno de Víctor.
+**Publicar o abrir issues:** solo con el visto bueno del autor.
 
 **Sueltos:**
 - el generador de E2 desplaza GT1 en las familias «comp» y «opci»;
 - hay dos muestras de LinuxForHealth mal formadas, que no se tocan porque son de terceros.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

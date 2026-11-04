@@ -1,9 +1,9 @@
-> *Copia pública: la procedencia y el desglose por origen de la muestra privada del sitio están redactados (punto 4 de la revisión de la publicación). Los totales y el mecanismo son los del original.*
+> *Copia pública: la procedencia y el desglose por origen de la muestra privada del sitio están redactados (punto 4 de la revisión de la publicación). Los totales y el mecanismo son los del original. Donde decía el nombre del autor, dice «el autor».*
 
 # VE1-a: las sondas antes de escribir pruebas ni código (22-oct-2026)
 
 El diseño (`ve/diseno-verificador-ve-fable.md` §7) pone estas cuatro sondas en cabeza de VE1. **Las cuatro están
-contestadas y ninguna regla de parada salta.** Víctor aceptó antes Q-VE-A-1..5 tal como se recomendaban
+contestadas y ninguna regla de parada salta.** El autor aceptó antes Q-VE-A-1..5 tal como se recomendaban
 (`ve/decisiones-qve.md`).
 
 El guion es `ve/ve1_sondas.py` (e1 a e4, y `limpiar`). El detalle está en `privado/ve/ve1a/`. Salvo E-VE1-2, todo fue de

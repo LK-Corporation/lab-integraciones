@@ -33,17 +33,17 @@
 
 | Q | Jev | Confianza | Queda | Por qué |
 |---|---|---|---|---|
-| Q-AG-8 cajas de LABADT/LABORU | en el namespace del circuito | 0,68 | **namespaces caja aparte (LABADTMUT, LABORUMUT)**, contra Jev | El «hecho cuando» del ANTES, fijado por Víctor, dice que nada del agente toca los circuitos del laboratorio |
+| Q-AG-8 cajas de LABADT/LABORU | en el namespace del circuito | 0,68 | **namespaces caja aparte (LABADTMUT, LABORUMUT)**, contra Jev | El «hecho cuando» del ANTES, fijado por el autor, dice que nada del agente toca los circuitos del laboratorio |
 | Q-AG-9 el juez como oráculo de la referencia | tres sondas fijas | 0,32 | tres sondas fijas | |
 | Q-AG-10 ¿cuenta R5 (AG-pre)? | no cuenta | 0,02 | no cuenta | Moneda al aire; coincide con el diseño |
 | Q-AG-11 granularidad | unidad, top-3 | 0,08 | unidad, top-3 | Moneda al aire; coincide con el diseño |
 | Q-AG-12 réplicas | 2, y una 3.ª condicional | 0,88 | 2, y una 3.ª condicional | |
 | Q-AG-13 brazos | Claude y DeepSeek | 0,56 | Claude y DeepSeek | |
-| Q-AG-14 memoria del subagente | desde la sesión (hereda la memoria) | 0,98 | **aislado**, contra Jev | Q-AG-5 de Víctor: el agente no ve los arreglos. La memoria del laboratorio describe al menos el de un caso H |
+| Q-AG-14 memoria del subagente | desde la sesión (hereda la memoria) | 0,98 | **aislado**, contra Jev | Q-AG-5 del autor: el agente no ve los arreglos. La memoria del laboratorio describe al menos el de un caso H |
 | Q-AG-15 umbral | Δ y McNemar | 0,66 | Δ ≥ 0,20 y McNemar p < 0,10 | |
 | Q-AG-16 afinar la referencia | 1.ª vuelta: también con H (0,54); **2.ª vuelta, con el dato que faltaba**: solo M y R público (0,54) | 0,08 | solo M y R público | Indeciso las dos veces. Al estado le faltaba que quien afina conoce los arreglos y que H no tiene casos de reserva |
 | Q-AG-17 H con otros fallos vivos | excluir esos mensajes de la regresión | 0,30 | excluir esos mensajes | |
-| ¿Lo decide una persona? | 0,63 | | **Para Víctor:** Q-AG-8 y Q-AG-14 (contra Jev, por el alcance que fijó él) y las monedas al aire (10, 11, 16) | |
+| ¿Lo decide una persona? | 0,63 | | **Para el autor:** Q-AG-8 y Q-AG-14 (contra Jev, por el alcance que fijó él) y las monedas al aire (10, 11, 16) | |
 
 ## Eslabón de Q-AG-14, medido: el agente aislado
 
@@ -66,3 +66,5 @@ Es viable. Los agentes de AG2 se lanzan así, no con la herramienta Agent de la 
 - el evaluador con 4 controles por caja;
 - la referencia y sus 3 controles;
 - `SELLO-AG1.md`.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

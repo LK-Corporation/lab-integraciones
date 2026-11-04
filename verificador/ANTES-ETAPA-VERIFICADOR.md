@@ -1,10 +1,10 @@
 # ANTES: etapa del verificador, cerrar los huecos medidos del juez (14k, FIJADO el 22-oct-2026)
 
-**Fijado.** Víctor aceptó el 22-oct las cinco recomendaciones Q-VE (tabla «Decisiones de Víctor», abajo). **La etapa no
+**Fijado.** El autor aceptó el 22-oct las cinco recomendaciones Q-VE (tabla «Decisiones del autor», abajo). **La etapa no
 empezaba hasta que se cerrara BU (14j)**, porque el verificador era su juez sellado. BU se cerró el 22-oct
 (`RESULTADO-BU.md`, con la huella de este juez).
 
-## Decisiones de Víctor (22-oct)
+## Decisiones del autor (22-oct)
 
 | Q | Decisión |
 |---|---|
@@ -12,7 +12,7 @@ empezaba hasta que se cerrara BU (14j)**, porque el verificador era su juez sell
 | Q-VE-2 | **La neutralidad de motor (C), fuera,** como límite declarado hasta el siguiente motor |
 | Q-VE-3 | **Los resultados sellados no se rejuzgan.** Cada uno queda con la huella de su juez, y la etapa publica por corpus una tabla de qué cambiaría |
 | Q-VE-4 | **Fable diseña los cambios a ciegas de los corpus de rejuicio; Jev decide las S-n nuevas.** Sin DeepSeek |
-| Q-VE-5 | **Al cerrar, se prepara la publicación del verificador** en el repo público, con la guarda y el visto bueno de Víctor al diff |
+| Q-VE-5 | **Al cerrar, se prepara la publicación del verificador** en el repo público, con la guarda y el visto bueno del autor al diff |
 
 Orden: ORU ✅ → ADT ✅ → modo sitio ✅ → Mirth ✅ → piloto del agente ✅ → BU ✅ → **verificador**.
 
@@ -109,7 +109,7 @@ cambia veredictos en tráfico real si se unifica la versión.
   separa, MMI-12 **pasa a límite declarado** y la etapa sigue con lo demás. No se fuerza.
 - **Sin línea base (E-VE-4), no se cambia nada.**
 
-## Preguntas de alcance para Víctor (Q-VE), con recomendación (contestadas: ver arriba)
+## Preguntas de alcance para el autor (Q-VE), con recomendación (contestadas: ver arriba)
 
 | Q | Recomendación | Alternativa |
 |---|---|---|
@@ -148,3 +148,5 @@ cambia veredictos en tráfico real si se unifica la versión.
   del piloto y de BU.
 - **L-MI-15** (MMI-11 y los mutantes del lector), que es del lector de Mirth.
 - **Los L-n que marcan la frontera de la v1** (L-ADT-1, L-ORU-2 y los demás de alcance): no son huecos, son alcance declarado.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

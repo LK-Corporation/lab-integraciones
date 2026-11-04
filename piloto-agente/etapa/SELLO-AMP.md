@@ -7,9 +7,9 @@ otra ampliación. La clave (`privado/agente/amp1/amp_clave.json`) no se publica;
 ## 0. Decisiones (AMP0)
 
 `agente/amp/decisiones-qamp.md`:
-- Q-AMP-1, de Víctor: no cuentan los fallos ya medidos en el piloto.
+- Q-AMP-1, del autor: no cuentan los fallos ya medidos en el piloto.
 - Q-AMP-2..10, de Jev: las 9 como recomendó Fable salvo Q-AMP-9 (los controles C0 entran en R-MT4, DV-AMP-1).
-- Q-AMP-8 y Q-AMP-9 quedan para Víctor como «a cara o cruz en Jev».
+- Q-AMP-8 y Q-AMP-9 quedan para el autor como «a cara o cruz en Jev».
 
 ## 1. Casos de la etapa 2
 
@@ -156,3 +156,5 @@ leía como «sin respuesta». Se decidió (Jev) **antes de mirar qué localiza**
 las cadenas para **todas** las tiradas de la ampliación, de los dos brazos; el estricto se reporta como sensibilidad
 (`json_estricto` en cada `puntos.json`). En el piloto no hubo ninguna respuesta no estricta (0 de las del piloto), así que la
 etapa 1 no cambia.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

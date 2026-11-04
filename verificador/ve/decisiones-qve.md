@@ -19,9 +19,9 @@ Se le pasó un estado neutro, sin la recomendación de Fable (`ve/estado_qve.md`
 **Limitación:** Jev juzga el estado que se le escribe. El estado lo redactó quien implementa, con las consecuencias de cada
 opción tal como las describe el diseño. Las S-VE-1..4 se numeran como S-n al declararlas en el MCP, en VE1.
 
-## De alcance: Víctor (Q-VE-A-1..5), el 22-oct
+## De alcance: el autor (Q-VE-A-1..5), el 22-oct
 
-Víctor aceptó las cinco recomendaciones de Fable:
+El autor aceptó las cinco recomendaciones de Fable:
 
 | Q | Decisión |
 |---|---|
@@ -30,3 +30,5 @@ Víctor aceptó las cinco recomendaciones de Fable:
 | Q-VE-A-3 | **La versión se nombra `servidor 1.1` + `revision`,** además de la huella |
 | Q-VE-A-4 | **El contrato público del canónico se genera desde el código,** con guarda |
 | Q-VE-A-5 | **Se repite el piloto A3** (10 sondas) con LABADT y el lector nuevo, sin tocar el circuito |
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

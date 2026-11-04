@@ -27,5 +27,7 @@ y se commitea antes de cualquier tirada.
 ## Lo siguiente (AG2)
 
 Por el orden del diseño: REF sobre los 31 casos, luego AG con 2 réplicas en orden sembrado, luego DS. Falta preparar el adaptador
-del brazo DeepSeek. Siguen abiertas para Víctor Q-MI-11, Q-AG-8/14 (contra Jev por su alcance), Q-AG-10/11/16 (a cara o cruz en
+del brazo DeepSeek. Siguen abiertas para el autor Q-MI-11, Q-AG-8/14 (contra Jev por su alcance), Q-AG-10/11/16 (a cara o cruz en
 Jev) y Q-AG-18.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

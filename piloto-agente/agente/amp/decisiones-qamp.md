@@ -2,7 +2,7 @@
 
 | Q | Quién | Decisión | Confianza | ¿Como recomendó Fable? |
 |---|---|---|---|---|
-| Q-AMP-1 | Víctor (alcance) | **No cuentan** los H de la pieza común que repiten R6 / MA11 (S-AMP-1) | — | Sí |
+| Q-AMP-1 | El autor (alcance) | **No cuentan** los H de la pieza común que repiten R6 / MA11 (S-AMP-1) | — | Sí |
 | Q-AMP-2 | Jev | Si el juez no acepta el silencio con NE, **R-ADT-7 se retira declarado**; el verificador no se toca | 0,72 | Sí |
 | Q-AMP-3 | Jev | **R-MT1 cuenta**, con la sensibilidad (ix) y las negaciones razonadas aparte | 0,68 | Sí |
 | Q-AMP-4 | Jev | **No se recorta** `verificador.json` (idéntico al piloto); pistas listadas, sensibilidades (iii-amp) y (viii) | 0,98 | Sí |
@@ -13,8 +13,10 @@
 | Q-AMP-9 | Jev | **Los controles C0 entran** en R-MT4 como tercer grupo | 0,18 (a cara o cruz) | **No**: Fable recomendaba dejarlos fuera |
 | Q-AMP-10 | Jev | **R-ADT-8 cuenta para localizar y arreglar**, con la previsión «localiza, no arregla» | 0,42 | Sí |
 
-¿Es del humano? Jev: 0,55. Q-AMP-1 la decidió Víctor. Q-AMP-8 y Q-AMP-9 quedan en su lista como «a cara o cruz en Jev».
+¿Es del humano? Jev: 0,55. Q-AMP-1 la decidió el autor. Q-AMP-8 y Q-AMP-9 quedan en su lista como «a cara o cruz en Jev».
 
 **DV-AMP-1 (Q-AMP-9 contra la recomendación de Fable).** R-MT4 lleva un tercer grupo de disparadores con un carácter de
 control C0 en un campo de texto consumido (S10: AE 102). Lo decidió Jev. La previsión de Fable se mantiene escrita: con C0,
 FIX exige tres comprobaciones nuevas y casi seguro sale 0.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

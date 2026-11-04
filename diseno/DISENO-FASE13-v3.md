@@ -9,7 +9,7 @@ Gemini, Opus, GPT y DeepSeek, sobre `encargo_diseno13b.md`).
 **Lo que cambia, en una frase: el primario de la v2 estaba roto, y era la rotura de la v1 por otra
 puerta.** Los cuatro revisores abrieron por ahí antes de contestar nada.
 
-Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide Víctor.
+Convención: 📏 sale de una medida, 🔍 de una revisión externa, 🧑 lo decide el autor.
 
 ---
 
@@ -439,3 +439,5 @@ antes de curar», que era imposible.
    puntuador. 🔍 Dos revisores lo pidieron explícitamente y dijeron para qué; sin ellas, «exposición
    cero» no se puede defender.
 7. Si el **estrato de los diez conocidos** se corre igualmente como descriptivo.
+
+> *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

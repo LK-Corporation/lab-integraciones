@@ -1,4 +1,4 @@
-> *Copia pública: la procedencia y el desglose por origen de la muestra privada del sitio están redactados (punto 4 de la revisión de la publicación). Los totales y el mecanismo son los del original.*
+> *Copia pública: la procedencia y el desglose por origen de la muestra privada del sitio están redactados (punto 4 de la revisión de la publicación). Los totales y el mecanismo son los del original. Donde decía el nombre del autor, dice «el autor».*
 
 # RESULTADO de la etapa del verificador (14k): cerrar los huecos medidos del juez, 22-oct-2026. Cerrada
 
@@ -45,7 +45,7 @@ declarado. Se hizo en una sesión de las dos de tope.
 | Fase | Documento | Resultado |
 |---|---|---|
 | VE-pre | `RESULTADO-VE-PRE.md` | La línea base rehecha. MMI-12 reproducido. 0 evidencias legítimas sin canónico. Q-MS-9 en 39 de 12.419 |
-| VE0 | `ve/diseno-verificador-ve-fable.md`, `ve/decisiones-qve.md` | Diseño de Fable a ciegas. Jev decidió 6/6 como Fable y Víctor 5/5 como Fable |
+| VE0 | `ve/diseno-verificador-ve-fable.md`, `ve/decisiones-qve.md` | Diseño de Fable a ciegas. Jev decidió 6/6 como Fable y el autor 5/5 como Fable |
 | VE1-a | `ve/SONDAS-VE1A.md` | El FHIR no admite `subject:identifier`, pero sí `_lastUpdated`. Las cotas abiertas cerradas (0 y 39) |
 | VE1-b | `ve/PRUEBAS-VE1B.md` | 21 pruebas: 14 en rojo por la razón prevista y 7 controles |
 | VE1-c | `ve/CODIGO-VE1C.md` | Cinco commits, uno por mecanismo. 21/21 y regresión CASA |
@@ -82,5 +82,5 @@ Cada resultado anterior queda juzgado con `73d36c38…` (o con su propia huella)
 
 ## Publicación (Q-VE-5)
 
-**Preparada, no publicada:** `ve/PUBLICACION-VE3.md`. Subirla al repo público espera al visto bueno de Víctor al diff,
+**Preparada, no publicada:** `ve/PUBLICACION-VE3.md`. Subirla al repo público espera al visto bueno del autor al diff,
 junto con la de BU, que sigue pendiente.
