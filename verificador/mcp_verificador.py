@@ -266,8 +266,8 @@ DECISIONES.update({
     "S92": "(Q-ADT-18, Jev) PV1-10: literal en v2-0069 para todos los códigos.",
     "S93": "(AMB-ADT-1, Jev) Errata de A31: ROL en PROCEDURE se lee [{ ROL }] (definición de ADT_A05, Ch03 642).",
     "S94": "(AMB-ADT-3, Jev) Tipos de participante: el ConceptMap tal cual (display attender en PV1-7; text referrer/admitter en PV1-8/17).",
-    "S95": "(Q-ADT-19, Jev 0,87 y Víctor 10-oct) PV1-2 vacío (el HIS real lo deja vacío): AE 101 en el perfil lab; el perfil del sitio lo tolera con el mando pv1_2_vacio (class v3-NullFlavor UNK, status por PV1-45 o por la 0003 del evento).",
-    "S96": "(AMB-ADT-4, Jev 0,91 y Víctor 10-oct) Nombre de pila: XPN.2 (y XCN.3) entero como given[1]; XPN.3 (y XCN.4) se parte por espacios (Ch03 4975-4976).",
+    "S95": "(Q-ADT-19, Jev 0,87 y el autor, 10-oct) PV1-2 vacío (el HIS real lo deja vacío): AE 101 en el perfil lab; el perfil del sitio lo tolera con el mando pv1_2_vacio (class v3-NullFlavor UNK, status por PV1-45 o por la 0003 del evento).",
+    "S96": "(AMB-ADT-4, Jev 0,91 y el autor, 10-oct) Nombre de pila: XPN.2 (y XCN.3) entero como given[1]; XPN.3 (y XCN.4) se parte por espacios (Ch03 4975-4976).",
 })
 DESVIACIONES_ADT = {
     "DV-ADT-1": "XPN.6 -> suffix[2], del ConceptMap datatype-xpn-to-humanname (el diseño no lo listaba).",
@@ -508,7 +508,7 @@ LIMITES.update(LIMITES_MS)                       # etapa modo sitio
 PREGUNTAS.update(PREGUNTAS_MS)                   # etapa modo sitio (para la etapa del verificador)
 
 # ---------------------------------------------------------------------------- etapa del verificador (14k, servidor 1.1)
-# ve/diseno-verificador-ve-fable.md (S-VE-1..4, L-VE), ve/decisiones-qve.md (Jev y Víctor), RESULTADO-ETAPA-VERIFICADOR.md.
+# ve/diseno-verificador-ve-fable.md (S-VE-1..4, L-VE), ve/decisiones-qve.md (Jev y el autor), RESULTADO-ETAPA-VERIFICADOR.md.
 DECISIONES.update({
     "S104": "(S-VE-1; Q-VE-D-1 Jev 0,78 y Q-VE-D-2 Jev 0,94) En los puntos con mapeador (adt_a01, adt_fhir, oru_fhir), con ACK AA y una "
             "fila terminal de éxito, la sesión sin canónico es fidelidad/sin_canonico, cuenta y da fallo_silencioso: el circuito dice "

@@ -190,6 +190,17 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## El texto de dos decisiones declaradas (4-nov-2026)
+
+> **La huella del juez cambia, y sus veredictos no.** El juez publicado pasa de `cb1338ca…` a `ff9f1087…`: en el texto de
+> las decisiones S95 y S96, y en cuatro líneas de comentario del código, donde decía el nombre del autor, dice «el autor».
+
+- **Los veredictos, iguales:** 0 diferencias en el rejuicio de 24.196 evidencias de conversión
+  ([`md/rejuicio_md.py`](md/rejuicio_md.py)) y de 10.104 casos del circuito ADT del laboratorio. En lo que sirve
+  `info_verificador` solo cambian esos dos textos y la versión.
+- **Las tres bases de la demostración,** rehechas con [`cv/ci/hacer_bases.py`](cv/ci/hacer_bases.py): en cada una solo
+  cambia la huella del juez.
+
 ## La validez de los corpus de VXU y ORU (29, 3-nov-2026)
 
 > **De los 162 mensajes sintéticos publicados de VXU y ORU, 65 son válidos en v2.5 con todas sus reglas, y 142 si se deja

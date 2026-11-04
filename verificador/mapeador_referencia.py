@@ -13,7 +13,7 @@ Fuentes de cada regla:
   [E] HL7 v2.5 capítulo 2 (separadores §2.5, escapes §2.7, tipos de dato) y capítulo 3 (PID, ADT_A01)
   [M] mapeo oficial HL7 v2-to-FHIR, ConceptMap table-hl70001-to-administrative-gender
   [D] declarado: lo que el contrato no fija y se toma de un caso base (unir subcomponentes con espacio)
-  [V] decisión del experto (Víctor, 27-sep, tras el piloto): minúscula = tolerancia; el límite de 10
+  [V] decisión del experto (el autor, 27-sep, tras el piloto): minúscula = tolerancia; el límite de 10
       repeticiones del contrato es un defecto
   [S19] versiones aceptadas: 2.x desde 2.4; [S22] en un mensaje posterior a 2.5, un PID-8 fuera de la 0001
       de v2.5 no es imposible: Gender solo tiene que ser un código de AdministrativeGender

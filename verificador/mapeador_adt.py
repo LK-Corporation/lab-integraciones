@@ -182,7 +182,7 @@ def _identificador_paciente(L, pid):
 
 
 def _given(L, c, i, donde):
-    """S96 (AMB-ADT-4, Jev 0,91 y Víctor, 10-oct): el componente i (XPN.2 / XCN.3) entero es given[1] (literal de [CM
+    """S96 (AMB-ADT-4, Jev 0,91 y el autor, 10-oct): el componente i (XPN.2 / XCN.3) entero es given[1] (literal de [CM
     datatype-xpn-to-humanname] XPN.2 -> given[1]); el siguiente (XPN.3 / XCN.4, «second and further given names») se parte
     por espacios ([E3 4975-4976]). «Luis Miguel^» -> ["Luis Miguel"]; «Ana^María José» -> ["Ana", "María", "José"]."""
     primero = L.texto(c[i] if len(c) > i else "", "%s.%d" % (donde, i + 1))

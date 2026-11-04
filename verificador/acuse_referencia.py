@@ -459,7 +459,7 @@ def esperado(m, ctx):
         elif r["via"] == "lf":
             x["notas"].append("[S10] %s: byte 0A del cable (LF) dentro del campo es un carácter de control; no termina segmento "
                               "[E2 §2.5.4] (L1)" % donde)
-    c39 = x["descodificacion"]["contradiccion"]                          # [S39] callada si S9 ya lo dice (Víctor, 30-sep)
+    c39 = x["descodificacion"]["contradiccion"]                          # [S39] callada si S9 ya lo dice (el autor, 30-sep)
     if c39 and c39["motivo"] != "utf8_multibyte" and any(t.startswith("[S9]") for t in tol):
         x["descodificacion"]["contradiccion"] = None
         x["descodificacion"]["contradiccion_callada"] = "S9"
