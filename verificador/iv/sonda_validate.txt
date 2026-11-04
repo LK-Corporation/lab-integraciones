@@ -1,0 +1,6 @@
+set sep=$c(13)
+set bueno="MSH|^~\&|LAB|L|HIS|H|20260101120000||ADT^A01^ADT_A01|M1|P|2.5"_sep_"EVN|A01|20260101120000"_sep_"PID|1||12345^^^HOSP^MR||PEREZ^ANA||19800101|F"_sep_"PV1|1|I|W1^101^1"
+set malo="MSH|^~\&|LAB|L|HIS|H|20260101120000||ADT^A01^ADT_A01|M2|P|2.5"_sep_"EVN|A01|20260101120000"_sep_"PID|1||12345^^^HOSP^MR||PEREZ^ANA||19800101|Q|||||||||||||||||||||||||||||||||||"_sep_"PV1|1|Z|W1^101^1"_sep_"ZZZ|1"
+set sinpid="MSH|^~\&|LAB|L|HIS|H|20260101120000||ADT^A01^ADT_A01|M3|P|2.5"_sep_"EVN|A01|20260101120000"_sep_"PV1|1|I|W1^101^1"
+for nombre="bueno","malo","sinpid" { set texto=@nombre  set m=##class(EnsLib.HL7.Message).ImportFromString(texto,.sc)  set m.DocType="2.5:ADT_A01"  for spec="dm","dm-z","dmz","dmr","dmrl","dmrt","dmrtn","dmfrltn","dmscrltn" { set s=m.Validate(spec)  write nombre," ",spec," -> ",$select($system.Status.IsOK(s):"OK",1:$extract($system.Status.GetErrorText(s),1,300)),! } }
+halt

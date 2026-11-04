@@ -1,0 +1,4 @@
+{
+ "q_iv_d_11": {"type": "choice", "instructions": "Q-IV-D-11, con los hechos que faltaban: un valor que no está en la lista impresa de una tabla de HL7 de v2.5.",
+  "criteria": {"cuenta": "(a) Cuenta como inválido: manda la lista impresa.", "sin_decidir_siempre": "(b) Queda sin decidir siempre: el texto permite extender las tablas de HL7 con valores locales.", "sin_decidir_0396": "(c) Queda sin decidir en la 0396 (por el texto de las unidades y de RPT) y cuenta en las demás tablas."}}
+}

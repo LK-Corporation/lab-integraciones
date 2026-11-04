@@ -1,0 +1,1355 @@
+{
+ "auditores": {
+  "con_0396": {
+   "matriz": {
+    "no_decidible|duda": 1,
+    "no_decidible|invalido": 2,
+    "no_decidible|valido": 137,
+    "valido|valido": 22
+   },
+   "acuerdo_mensaje": 1.0,
+   "kappa": null,
+   "n_mensajes_2x2": 22,
+   "fuera_del_2x2": 140,
+   "positivos_iris": 0,
+   "positivos_auditores": 0,
+   "lugares": {
+    "unidad": "pares mensaje-campo",
+    "los_dos": 0,
+    "solo_iris": 0,
+    "solo_auditores": 2,
+    "alguno": 2,
+    "los_dos_entre_alguno": 0.0
+   },
+   "campos_distintos": {
+    "los_dos": [],
+    "solo_iris": [],
+    "solo_auditores": [
+     "MSH-9",
+     "OBX-11"
+    ]
+   },
+   "por_mensaje_y_clase": {
+    "E": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 0,
+     "ninguno": 162
+    },
+    "R": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 1,
+     "ninguno": 161
+    },
+    "L": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 0,
+     "ninguno": 162
+    },
+    "T": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 1,
+     "ninguno": 161
+    }
+   },
+   "discrepancias": [
+    {
+     "mensaje": "lab/oru/ORU-B39.hl7",
+     "lugar": "OBX-11",
+     "lo_ve": "auditores",
+     "duda_del_auditor": false,
+     "iris_lo_deja_sin_decidir": true,
+     "tiene_razon": "ninguno: sin decidir",
+     "cita": "AppendixA.txt:742 (0085); CH02.txt:564",
+     "razon": "«f» no está en la 0085 impresa, que trae «F»; el texto permite extender las tablas de HL7 con valores locales (Q-IV-D-11)"
+    },
+    {
+     "mensaje": "lab/vxu/VXU-B39.hl7",
+     "lugar": "MSH-9",
+     "lo_ve": "auditores",
+     "duda_del_auditor": false,
+     "iris_lo_deja_sin_decidir": false,
+     "tiene_razon": "auditores",
+     "cita": "CH02A.txt:2809 (MSG.3, R)",
+     "razon": "MSG.3 es obligatorio; IRIS no mira la obligatoriedad de los componentes"
+    }
+   ]
+  },
+  "sin_0396": {
+   "matriz": {
+    "no_decidible|duda": 1,
+    "no_decidible|invalido": 2,
+    "no_decidible|valido": 137,
+    "valido|valido": 22
+   },
+   "acuerdo_mensaje": 1.0,
+   "kappa": null,
+   "n_mensajes_2x2": 22,
+   "fuera_del_2x2": 140,
+   "positivos_iris": 0,
+   "positivos_auditores": 0,
+   "lugares": {
+    "unidad": "pares mensaje-campo",
+    "los_dos": 0,
+    "solo_iris": 0,
+    "solo_auditores": 2,
+    "alguno": 2,
+    "los_dos_entre_alguno": 0.0
+   },
+   "campos_distintos": {
+    "los_dos": [],
+    "solo_iris": [],
+    "solo_auditores": [
+     "MSH-9",
+     "OBX-11"
+    ]
+   },
+   "por_mensaje_y_clase": {
+    "E": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 0,
+     "ninguno": 162
+    },
+    "R": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 1,
+     "ninguno": 161
+    },
+    "L": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 0,
+     "ninguno": 162
+    },
+    "T": {
+     "los_dos": 0,
+     "solo_iris": 0,
+     "solo_auditores": 1,
+     "ninguno": 161
+    }
+   },
+   "discrepancias": [
+    {
+     "mensaje": "lab/oru/ORU-B39.hl7",
+     "lugar": "OBX-11",
+     "lo_ve": "auditores",
+     "duda_del_auditor": false,
+     "iris_lo_deja_sin_decidir": true,
+     "tiene_razon": "ninguno: sin decidir",
+     "cita": "AppendixA.txt:742 (0085); CH02.txt:564",
+     "razon": "«f» no está en la 0085 impresa, que trae «F»; el texto permite extender las tablas de HL7 con valores locales (Q-IV-D-11)"
+    },
+    {
+     "mensaje": "lab/vxu/VXU-B39.hl7",
+     "lugar": "MSH-9",
+     "lo_ve": "auditores",
+     "duda_del_auditor": false,
+     "iris_lo_deja_sin_decidir": false,
+     "tiene_razon": "auditores",
+     "cita": "CH02A.txt:2809 (MSG.3, R)",
+     "razon": "MSG.3 es obligatorio; IRIS no mira la obligatoriedad de los componentes"
+    }
+   ]
+  },
+  "auditados": 162,
+  "no_encontrados": []
+ },
+ "nuevas": [
+  {
+   "id": "M-7",
+   "juez": "CV3",
+   "campos": [
+    "PV1-8"
+   ],
+   "apoyo": [
+    "lab/adt/A1-A01-03.hl7",
+    "lab/adt/A1-A02-08.hl7",
+    "lab/adt/A1-A03-13.hl7",
+    "lab/minimos/M04-pv1-8-repetido-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 4
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A1-A01-03.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A1-A02-08.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A1-A03-13.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/M04-pv1-8-repetido-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "M-10",
+   "juez": "CV3",
+   "campos": [
+    "PID-16"
+   ],
+   "apoyo": [
+    "lab/adt/A1-A13-32.hl7",
+    "lab/minimos/M08-estado-civil-t-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A1-A13-32.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/M08-estado-civil-t-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "M-18",
+   "juez": "CV3",
+   "campos": [
+    "PDA",
+    "PID-29",
+    "PID-30"
+   ],
+   "apoyo": [
+    "lab/adt/A02-016.hl7",
+    "lab/adt/A02-017.hl7",
+    "lab/adt/A02-018.hl7",
+    "lab/minimos/M03-pda-sin-muerte-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "alguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "invalido_por_otra_regla": 3,
+    "valido": 1
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A02-016.hl7",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "OBX-3",
+      "ROL-2",
+      "ROL-4"
+     ],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A02-017.hl7",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "OBX-3",
+      "ROL-2",
+      "ROL-4"
+     ],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A02-018.hl7",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "OBX-3",
+      "ROL-2",
+      "ROL-4"
+     ],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/M03-pda-sin-muerte-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "M-23",
+   "juez": "CV3",
+   "campos": [
+    "PID"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B30.hl7",
+    "lab/minimos/M07-oru-sin-pid-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B30.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    },
+    {
+     "mensaje": "lab/minimos/M07-oru-sin-pid-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M-24",
+   "juez": "CV3",
+   "campos": [
+    "OBX-5"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B29.hl7",
+    "lab/minimos/M01-nm-punto-inicial-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B29.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    },
+    {
+     "mensaje": "lab/minimos/M01-nm-punto-inicial-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "L-1",
+   "juez": "CV3",
+   "campos": [
+    "PV1-3"
+   ],
+   "apoyo": [
+    "lab/adt/A01-001.hl7",
+    "lab/adt/A01-002.hl7",
+    "lab/adt/A01-003.hl7",
+    "lab/minimos/L01-sin-location-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 3,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 4
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A01-001.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A01-002.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A01-003.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L01-sin-location-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-10",
+   "juez": "CV3",
+   "campos": [
+    "PID-16"
+   ],
+   "apoyo": [
+    "lab/adt/A1-A01-02.hl7",
+    "lab/adt/A1-A31-37.hl7",
+    "lab/minimos/L02-estado-civil-a-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 3
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A1-A01-02.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A1-A31-37.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L02-estado-civil-a-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-11",
+   "juez": "CV3",
+   "campos": [
+    "PID-11"
+   ],
+   "apoyo": [
+    "lab/adt/A1-A01-02.hl7",
+    "lab/adt/A1-A03-12.hl7",
+    "lab/adt/A1-A04-17.hl7",
+    "lab/minimos/L04-sad-2-3-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 3,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 4
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A1-A01-02.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A1-A03-12.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/adt/A1-A04-17.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L04-sad-2-3-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-12",
+   "juez": "CV3",
+   "campos": [
+    "PID-8"
+   ],
+   "apoyo": [
+    "lab/adt/A1-A04-15.hl7",
+    "lab/minimos/L05-genero-n-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/adt/A1-A04-15.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L05-genero-n-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-15",
+   "juez": "CV3",
+   "campos": [
+    "OBX-2"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B18.hl7",
+    "lab/oru/ORU-B22.hl7",
+    "lab/minimos/L06-obx-sin-tipo-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 1,
+    "valido": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B18.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    },
+    {
+     "mensaje": "lab/oru/ORU-B22.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L06-obx-sin-tipo-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-16",
+   "juez": "CV3",
+   "campos": [
+    "OBX-2",
+    "OBX-5"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B11.hl7",
+    "lab/oru/ORU-B13.hl7",
+    "lab/minimos/L07-ft-caso.hl7",
+    "lab/minimos/L08-tm-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 4
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B11.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/oru/ORU-B13.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L07-ft-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L08-tm-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-18",
+   "juez": "CV3",
+   "campos": [
+    "OBX-11"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B20.hl7",
+    "lab/minimos/L09-obx-11-d-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B20.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    },
+    {
+     "mensaje": "lab/minimos/L09-obx-11-d-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "L-19",
+   "juez": "CV3",
+   "campos": [
+    "OBR-25"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B22.hl7",
+    "lab/oru/ORU-B31.hl7",
+    "lab/minimos/L10-obr-25-i-caso.hl7",
+    "au-pares/AU3-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 3,
+    "no_decidible": 1
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B22.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/oru/ORU-B31.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L10-obr-25-i-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    },
+    {
+     "mensaje": "au-pares/AU3-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "L-20",
+   "juez": "CV3",
+   "campos": [
+    "OBX-5"
+   ],
+   "apoyo": [
+    "lab/oru/ORU-B07.hl7",
+    "lab/minimos/L11-sn-rango-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 1,
+    "no_decidible": 1
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/oru/ORU-B07.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/minimos/L11-sn-rango-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|OBX|6|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "L-22",
+   "juez": "CV3",
+   "campos": [
+    "PV1-52"
+   ],
+   "apoyo": [
+    "lab/minimos/L13-pv1-52-caso.hl7"
+   ],
+   "completo": false,
+   "muestras_fuera": 3,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "valido": 1
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/minimos/L13-pv1-52-caso.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    }
+   ]
+  },
+  {
+   "id": "VX-M7",
+   "juez": "VX3",
+   "campos": [
+    "RXA-15"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B16.hl7",
+    "vxu-pares/VM07-lote-repetido-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B16.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VM07-lote-repetido-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-M8",
+   "juez": "VX3",
+   "campos": [
+    "RXA-17"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B18.hl7",
+    "vxu-pares/VM08-fabricante-alterno-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B18.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VM08-fabricante-alterno-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-M10",
+   "juez": "VX3",
+   "campos": [
+    "NK1-3"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B37.hl7",
+    "vxu-pares/VM10-relacion-grd-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B37.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VM10-relacion-grd-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-M12",
+   "juez": "VX3",
+   "campos": [
+    "RXA-19"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B40.hl7",
+    "vxu-pares/VM12-dos-indicaciones-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B40.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VM12-dos-indicaciones-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-M14",
+   "juez": "VX3",
+   "campos": [
+    "RXA-6"
+   ],
+   "apoyo": [
+    "vxu-pares/VM14-dosis-punto-inicial-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 1,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 1
+   },
+   "detalle": [
+    {
+     "mensaje": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-M15",
+   "juez": "VX3",
+   "campos": [
+    "RXA-20"
+   ],
+   "apoyo": [
+    "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+    "au-pares/AU1-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 6,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "au-pares/AU1-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-L6",
+   "juez": "VX3",
+   "campos": [
+    "RXA-21"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B11.hl7",
+    "vxu-pares/VL04-rxa21-d-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B11.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VL04-rxa21-d-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-L8",
+   "juez": "VX3",
+   "campos": [
+    "RXA-10"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B21.hl7",
+    "vxu-pares/VL06-dos-rxa10-caso.hl7",
+    "au-pares/AU2-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 3
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B21.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VL06-dos-rxa10-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "au-pares/AU2-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "VX-L9",
+   "juez": "VX3",
+   "campos": [
+    "RXA-19"
+   ],
+   "apoyo": [
+    "lab/vxu/VXU-B40.hl7",
+    "vxu-pares/VL07-dos-indicaciones-caso.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/vxu/VXU-B40.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    },
+    {
+     "mensaje": "vxu-pares/VL07-dos-indicaciones-caso.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "T_HL7|RXA|7|0396"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MD-L3",
+   "juez": "MD3",
+   "campos": [
+    "OBX-5"
+   ],
+   "apoyo": [
+    "lab/mdm/MDM-B03.hl7",
+    "lab/mdm/MDM-B05.hl7",
+    "lab/mdm/MDM-B06.hl7",
+    "lab/mdm/MDM-B07.hl7",
+    "lab/mdm/MDM-B13.hl7",
+    "lab/mdm/MDM-B14.hl7",
+    "lab/mdm/MDM-B15.hl7",
+    "lab/mdm/MDM-B16.hl7",
+    "lab/mdm/MDM-B17.hl7",
+    "lab/mdm/MDM-B18.hl7",
+    "lab/mdm/MDM-B19.hl7",
+    "lab/mdm/MDM-B21.hl7",
+    "lab/mdm/MDM-B23.hl7",
+    "lab/mdm/MDM-B24.hl7",
+    "lab/mdm/MDM-B25.hl7",
+    "lab/mdm/MDM-B27.hl7",
+    "mdm-pares/MP5-con.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": true,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 9,
+    "valido": 8
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/mdm/MDM-B03.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B05.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B06.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B07.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B13.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B14.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B15.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B16.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B17.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B18.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B19.hl7",
+     "estado": "valido",
+     "reglas": [],
+     "sin_decidir": []
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B21.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B23.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B24.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B25.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "lab/mdm/MDM-B27.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "mdm-pares/MP5-con.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MD-L5",
+   "juez": "MD3",
+   "campos": [
+    "OBX-5"
+   ],
+   "apoyo": [
+    "lab/mdm/MDM-B24.hl7",
+    "mdm-pares/MP4-con.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/mdm/MDM-B24.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "mdm-pares/MP4-con.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MD-M5",
+   "juez": "MD3",
+   "campos": [
+    "TXA-8",
+    "MSH-9"
+   ],
+   "apoyo": [
+    "lab/mdm/MDM-B33.hl7",
+    "mdm-pares/MP1-con.hl7"
+   ],
+   "completo": true,
+   "muestras_fuera": 0,
+   "criterio_del_antes": "ninguno_invalido",
+   "con_algun_apoyo_valido": false,
+   "estado": "intacta",
+   "apoyo_por_estado": {
+    "no_decidible": 2
+   },
+   "detalle": [
+    {
+     "mensaje": "lab/mdm/MDM-B33.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    },
+    {
+     "mensaje": "mdm-pares/MP1-con.hl7",
+     "estado": "no_decidible",
+     "reglas": [],
+     "sin_decidir": [
+      "L|TXA|3|"
+     ]
+    }
+   ]
+  }
+ ]
+}

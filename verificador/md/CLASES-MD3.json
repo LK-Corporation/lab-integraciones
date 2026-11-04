@@ -54,7 +54,8 @@
    "fuerza": "debil",
    "que": "un FT junto a un TX llega con sus órdenes de formato crudas (\\.br\\) en el adjunto text/plain",
    "par": "MP4",
-   "referencia": "no declarada: solo consta que el contentType es siempre text/plain"
+   "referencia": "no declarada: solo consta que el contentType es siempre text/plain",
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por TXA-3, cuyo valor está en su tabla y no cabe en su LEN (Q-IV-D-12). Ninguna de esas reglas toca OBX-5, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "MD-L6",
@@ -134,7 +135,8 @@
    "fuerza": "fuerte",
    "que": "rechaza entero un MDM_T02 válido con TXA-8 (Edit Date/Time, TS repetible en v2.5) repetido: el documento no llega",
    "par": "MP1",
-   "referencia": "no declarada: ninguna muestra repite TXA-8; ningún issue. La revisión lo tumbó porque B33 no llevaba TXA-22; con DV-MD-7 la base es válida y el rechazo sigue"
+   "referencia": "no declarada: ninguna muestra repite TXA-8; ningún issue. La revisión lo tumbó porque B33 no llevaba TXA-22; con DV-MD-7 la base es válida y el rechazo sigue",
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por TXA-3, cuyo valor está en su tabla y no cabe en su LEN (Q-IV-D-12). Ninguna de esas reglas toca TXA-8 ni MSH-9, los campos del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "MD-M6",

@@ -1,0 +1,3239 @@
+{
+"origen": "texto de HL7 v2.5 (todos los capítulos y el Apéndice A): solo el número de tabla y su tipo",
+"tablas": {
+"0001": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0002": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0003": {
+"HL7": 11,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0004": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0005": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0006": {
+"HL7": 1,
+"User-defined": 3,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0007": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0008": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0009": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0010": {
+"HL7": 0,
+"User-defined": 9,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0017": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0018": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0019": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0021": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0022": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0023": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0024": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0027": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0032": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0038": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0042": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0043": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0044": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0045": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0046": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0048": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0049": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0050": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0051": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0052": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0053": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0055": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0056": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0059": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0061": {
+"HL7": 15,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0062": {
+"HL7": 1,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0063": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0064": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0065": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0066": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0068": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0069": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0070": {
+"HL7": 8,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0072": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0073": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0074": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0076": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0078": {
+"HL7": 1,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0080": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0083": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0084": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0085": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0086": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0087": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0088": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0089": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0091": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0092": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0093": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0098": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0099": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0100": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0103": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0104": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0105": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0106": {
+"HL7": 6,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0107": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0108": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0109": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0110": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0111": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0112": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0113": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0114": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0115": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0116": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0117": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0118": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0119": {
+"HL7": 8,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0121": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0122": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0123": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0124": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0125": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0126": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0127": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0128": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0129": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0130": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0131": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0132": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0133": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0135": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0136": {
+"HL7": 73,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0137": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0139": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0140": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0141": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0142": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0143": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0144": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0145": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0146": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0147": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0148": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0149": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0150": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0151": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0152": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0155": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0156": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0157": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0158": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0159": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0160": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0161": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0162": {
+"HL7": 1,
+"User-defined": 1,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0163": {
+"HL7": 6,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0164": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0165": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0166": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0167": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0168": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0169": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0170": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0171": {
+"HL7": 0,
+"User-defined": 8,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0172": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0173": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0174": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0175": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0177": {
+"HL7": 1,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0178": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0179": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0180": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0181": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0182": {
+"HL7": 1,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0183": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0184": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0185": {
+"HL7": 2,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0186": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0187": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0188": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0189": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0190": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0191": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0193": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0200": {
+"HL7": 10,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0201": {
+"HL7": 7,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0202": {
+"HL7": 7,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0203": {
+"HL7": 6,
+"User-defined": 1,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0204": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0205": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0206": {
+"HL7": 11,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0207": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0208": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0209": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0210": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0211": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0212": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0213": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0214": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0215": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0216": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0217": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0218": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0219": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0220": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0222": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0223": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0224": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0225": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0227": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0228": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0229": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0230": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0231": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0232": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0233": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0234": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0235": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0236": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0237": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0238": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0239": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0240": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0241": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0242": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0243": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0244": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0245": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0246": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0247": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0248": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0249": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0250": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0251": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0252": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0253": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0254": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0255": {
+"HL7": 1,
+"User-defined": 2,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0256": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0257": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0258": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0259": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0260": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0261": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0262": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0263": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0264": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0265": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0267": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0268": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0269": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0271": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0272": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0273": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0275": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0276": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0277": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0278": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0279": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0280": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0281": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0282": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0283": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0284": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0285": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0286": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0287": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0288": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0289": {
+"HL7": 1,
+"User-defined": 5,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0291": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0292": {
+"HL7": 8,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0293": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0294": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0295": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0296": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0297": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0298": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0299": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0300": {
+"HL7": 0,
+"User-defined": 26,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0301": {
+"HL7": 7,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0302": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0303": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0304": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0305": {
+"HL7": 1,
+"User-defined": 4,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0306": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0307": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0308": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0309": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0311": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0312": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0313": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0315": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0316": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0317": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0320": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0321": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0322": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0323": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0324": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0325": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0326": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0327": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0328": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0329": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0330": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0331": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0332": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0333": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0334": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0335": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0336": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0337": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0338": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0339": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0340": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0341": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0342": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0343": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0344": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0345": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0346": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0347": {
+"HL7": 1,
+"User-defined": 5,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0348": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0349": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0353": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0354": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0355": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0356": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0357": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0358": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0359": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0360": {
+"HL7": 0,
+"User-defined": 6,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0361": {
+"HL7": 0,
+"User-defined": 5,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0362": {
+"HL7": 0,
+"User-defined": 4,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0363": {
+"HL7": 0,
+"User-defined": 8,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0364": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0365": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0366": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0367": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0368": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0369": {
+"HL7": 0,
+"User-defined": 7,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0370": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0371": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0372": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0373": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0374": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0375": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0376": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0377": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0378": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0379": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0380": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0381": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0382": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0383": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0384": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0385": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0386": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0387": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0388": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0389": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0391": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0392": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0393": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0394": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0396": {
+"HL7": 14,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0397": {
+"HL7": 9,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0398": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0399": {
+"HL7": 9,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0401": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0402": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0403": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0404": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0405": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0406": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0409": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0411": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0412": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0413": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0414": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0415": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0416": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0417": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0418": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0421": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0422": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0423": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0424": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0425": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0426": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0427": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0428": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0429": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0430": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0431": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0432": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0433": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0434": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0435": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0436": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0437": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0438": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0440": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0441": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0442": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0443": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0444": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0445": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0446": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0447": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0448": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0450": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0451": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0452": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0453": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0454": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0455": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0456": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0457": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0458": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0459": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0460": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0461": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0462": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0463": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0464": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0465": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0466": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0467": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0468": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0469": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0470": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0471": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0472": {
+"HL7": 4,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0473": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0474": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0475": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0476": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0477": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0478": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0479": {
+"HL7": 0,
+"User-defined": 3,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0480": {
+"HL7": 6,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0482": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0483": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0484": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0487": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0488": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0489": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0490": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0491": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0492": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0493": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0494": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0495": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0497": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0498": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0500": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0503": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0504": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0505": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0506": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0507": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0508": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0509": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0510": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0511": {
+"HL7": 3,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0512": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0513": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0515": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0516": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0517": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0518": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0519": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0521": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0523": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0524": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0525": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0526": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0527": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0528": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0529": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0530": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0531": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0532": {
+"HL7": 1,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0533": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0534": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0535": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0536": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0537": {
+"HL7": 1,
+"User-defined": 4,
+"conflicto": true,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0538": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0539": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0540": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0541": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0542": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0543": {
+"HL7": 0,
+"User-defined": 1,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0544": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0547": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0549": {
+"HL7": 0,
+"User-defined": 2,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "User-defined"
+},
+"0550": {
+"HL7": 5,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+},
+"0552": {
+"HL7": 2,
+"User-defined": 0,
+"conflicto": false,
+"decide": "mayoria",
+"tipo": "HL7"
+}
+}
+}

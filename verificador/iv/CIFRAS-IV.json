@@ -1,0 +1,636 @@
+{
+ "n": 723,
+ "total": {
+  "valido": 277,
+  "invalido": 94,
+  "no_decidible": 352
+ },
+ "por_corpus": {
+  "adt: bases A1": {
+   "valido": 24,
+   "invalido": 8,
+   "no_decidible": 8
+  },
+  "adt: ejemplos del capítulo 3": {
+   "invalido": 7
+  },
+  "adt: generador GENADT": {
+   "valido": 144,
+   "invalido": 72
+  },
+  "au-pares": {
+   "no_decidible": 4,
+   "valido": 4
+  },
+  "lab/adt": {
+   "valido": 168,
+   "invalido": 87,
+   "no_decidible": 8
+  },
+  "lab/mdm": {
+   "no_decidible": 31,
+   "valido": 8,
+   "invalido": 1
+  },
+  "lab/minimos": {
+   "valido": 43,
+   "no_decidible": 24,
+   "invalido": 1
+  },
+  "lab/oru": {
+   "no_decidible": 29,
+   "valido": 11
+  },
+  "lab/vxu": {
+   "no_decidible": 37,
+   "valido": 3
+  },
+  "mdm-eventos": {
+   "no_decidible": 155,
+   "valido": 40,
+   "invalido": 5
+  },
+  "mdm-pares": {
+   "no_decidible": 14
+  },
+  "vxu-pares": {
+   "no_decidible": 50
+  }
+ },
+ "errores_sostenidos_por_clase": {
+  "R": 570,
+  "E": 7,
+  "L": 9
+ },
+ "mensajes_por_clase": {
+  "R": 86,
+  "E": 7,
+  "L": 7
+ },
+ "lugares_sostenidos": {
+  "R|ROL|2|": 208,
+  "R|OBX|11|": 72,
+  "R|DG1|6|": 63,
+  "R|PR1|5|": 48,
+  "R|ROL|4|": 42,
+  "R|OBX|3|": 24,
+  "R|DG1|1|": 21,
+  "R|NK1|1|": 18,
+  "R|AL1|1|": 18,
+  "R|GT1|1|": 18,
+  "R|GT1|3|": 18,
+  "R|PV1|2|": 8,
+  "L|TXA|12|": 6,
+  "R|PID|5|": 4,
+  "E|EVN||": 3,
+  "R|MSH|11|": 3,
+  "R|MSH|12|": 3,
+  "E|PV1||": 3,
+  "R|MSH|10|": 2,
+  "L|TXA|13|": 2,
+  "E|PID||": 1,
+  "L|PID|30|": 1
+ },
+ "importados_mal": 0,
+ "incompletos": 0,
+ "z_al_final": 24,
+ "z_que_cuentan": 0,
+ "msh9_sin_estructura": 3,
+ "msh9_sin_estructura_no_resueltos": 0,
+ "estructura_discrepante": 0,
+ "otros_separadores": 24,
+ "no_ascii": 22,
+ "avisos_de_tabla_por_tabla": {
+  "0001|de_usuario": 12,
+  "0004|de_usuario": 9,
+  "0007|de_usuario": 24,
+  "0010|vacia_en_iris": 52,
+  "0018|vacia_en_iris": 24,
+  "0023|de_usuario": 24,
+  "0050|vacia_en_iris": 30,
+  "0051|vacia_en_iris": 63,
+  "0055|vacia_en_iris": 48,
+  "0062|de_usuario": 216,
+  "0063|de_usuario": 30,
+  "0072|vacia_en_iris": 49,
+  "0078|de_usuario": 1,
+  "0088|vacia_en_iris": 48,
+  "0089|vacia_en_iris": 48,
+  "0128|de_usuario": 30,
+  "0162|de_usuario": 3,
+  "0289|vacia_en_iris": 48,
+  "0300|vacia_en_iris": 569,
+  "0302|vacia_en_iris": 394,
+  "0303|vacia_en_iris": 339,
+  "0304|vacia_en_iris": 440,
+  "0305|de_usuario": 243,
+  "0306|vacia_en_iris": 243,
+  "0307|vacia_en_iris": 243,
+  "0308|vacia_en_iris": 243,
+  "0361|vacia_en_iris": 1442,
+  "0362|vacia_en_iris": 1441,
+  "0363|vacia_en_iris": 2728,
+  "0399|vacia_en_iris": 9,
+  "0443|de_usuario": 90
+ },
+ "mensajes_con_campos_sin_evaluar": 0,
+ "mensajes_distintos": 683,
+ "copias_en_el_corpus": 40,
+ "pares_comprobados_byte_a_byte": {
+  "mdm-pares": {
+   "n": 14,
+   "iguales_a_lo_corrido": 14,
+   "con_copia_en_privado": 14
+  },
+  "au-pares": {
+   "n": 8,
+   "iguales_a_lo_corrido": 8,
+   "con_copia_en_privado": 8
+  }
+ },
+ "avisos_de_iris_que_no_cuentan": {
+  "tabla sin valores en el esquema de IRIS (tabla_usuario_vacia)": 8501,
+  "el valor está en la tabla del estándar (por valor o por patrón): lo rechaza el esquema de IRIS": 874,
+  "tabla de usuario en el estándar (Q-IV-D-3: aviso)": 682,
+  "Z al final del mensaje: el estándar permite segmentos locales (Q-IV-D-8)": 24
+ },
+ "ajustes_de_la_lectura": [
+  {
+   "lugar": "L|OBX|2|",
+   "por": "OBX-2 «CWE»: no cabe en el LEN 2 (CH07.txt:2532), y el texto lo admite (CH07.txt:2590): el estándar se contradice",
+   "n": 1
+  },
+  {
+   "lugar": "L|OBX|2|",
+   "por": "OBX-2 «XPN»: está en la 0125 y no cabe en el LEN 2; PN tiene otra descripción (AppendixA.txt:2852, 2873): no hay equivalente",
+   "n": 1
+  },
+  {
+   "lugar": "L|TXA|3|",
+   "por": "TXA-3 «TEXT»: está en la 0191 y no cabe en el LEN 2; TX tiene la misma descripción pero es «HL7 V2.2 only» (AppendixA.txt:3433): no hay equivalente en v2.5",
+   "n": 200
+  },
+  {
+   "lugar": "L|TXA|3|",
+   "por": "TXA-3 «multipart»: está en la 0191 y no cabe en el LEN 2; la 0191 no trae otro valor con su descripción (AppendixA.txt:3427)",
+   "n": 6
+  },
+  {
+   "lugar": "T_HL7|MSH|12|0104",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 9
+  },
+  {
+   "lugar": "T_HL7|NK1|4|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (CH02.txt:4580-4585): «ESP» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBX|11|0085",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBX|2|0125",
+   "por": "OBX-2 «CWE»: la 0125 impresa no lo trae, y CH07.txt:2590 dice que todos los tipos de HL7 valen salvo CM, CQ, SI e ID (el estándar se contradice)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBX|2|0125",
+   "por": "nulo",
+   "n": 24
+  },
+  {
+   "lugar": "T_HL7|OBX|6|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 80
+  },
+  {
+   "lugar": "T_HL7|PID|11|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (CH02.txt:4580-4585): «ESP» es suyo",
+   "n": 8
+  },
+  {
+   "lugar": "T_HL7|PID|30|0136",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|PID|5|0465",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|7|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 96
+  },
+  {
+   "lugar": "T_HL7|RXR|1|0162",
+   "por": "valor de otro sistema (L)",
+   "n": 3
+  },
+  {
+   "lugar": "T_HL7|RXR|2|0163",
+   "por": "valor de otro sistema (HL70550)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXR|2|0163",
+   "por": "valor de otro sistema (SCT)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXR|2|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0487",
+   "por": "valor de otro sistema (SCT)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|TXA|2|0270",
+   "por": "tabla de usuario en el índice del Apéndice A",
+   "n": 6
+  }
+ ],
+ "invalidos_por_cualquier_error_de_iris": 723,
+ "auditores": {
+  "con_0396": {
+   "acuerdo_mensaje": 1.0,
+   "kappa": null,
+   "lugares": {
+    "unidad": "pares mensaje-campo",
+    "los_dos": 0,
+    "solo_iris": 0,
+    "solo_auditores": 2,
+    "alguno": 2,
+    "los_dos_entre_alguno": 0.0
+   },
+   "campos_distintos": {
+    "los_dos": [],
+    "solo_iris": [],
+    "solo_auditores": [
+     "MSH-9",
+     "OBX-11"
+    ]
+   },
+   "n_mensajes_2x2": 22,
+   "fuera_del_2x2": 140,
+   "positivos_iris": 0,
+   "positivos_auditores": 0,
+   "matriz": {
+    "no_decidible|duda": 1,
+    "no_decidible|invalido": 2,
+    "no_decidible|valido": 137,
+    "valido|valido": 22
+   },
+   "discrepancias": 2
+  },
+  "nota": "con Q-IV-D-11 (decision-jev-qiv11b.md), lo de la 0396 queda sin decidir y la vista «sin la 0396» es igual a esta: no se da aparte"
+ },
+ "nuevas": {
+  "n": 27,
+  "por_estado": {
+   "intacta": 27
+  },
+  "criterio_del_antes": {
+   "ninguno_invalido": 26,
+   "alguno_invalido": 1
+  },
+  "todo_invalido_por_cualquier_regla": [],
+  "sin_ningun_apoyo_valido": [
+   "L-18",
+   "M-23",
+   "M-24",
+   "MD-L5",
+   "MD-M5",
+   "VX-L6",
+   "VX-L8",
+   "VX-L9",
+   "VX-M10",
+   "VX-M12",
+   "VX-M14",
+   "VX-M15",
+   "VX-M7",
+   "VX-M8"
+  ],
+  "con_algun_apoyo_valido": 13,
+  "apoyo_incompleto": 15,
+  "por_juez": {
+   "CV3": {
+    "intacta": 15
+   },
+   "VX3": {
+    "intacta": 9
+   },
+   "MD3": {
+    "intacta": 3
+   }
+  },
+  "apoyo_todo_invalido_por_otra_regla": [],
+  "indeterminadas_cv3": 0
+ },
+ "prevision": {
+  "PV1 lab/adt": {
+   "previsto": [
+    95,
+    85,
+    100
+   ],
+   "medido": 63.9,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 lab/oru": {
+   "previsto": [
+    95,
+    85,
+    100
+   ],
+   "medido": 27.5,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 lab/vxu": {
+   "previsto": [
+    90,
+    75,
+    100
+   ],
+   "medido": 7.5,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 lab/mdm": {
+   "previsto": [
+    90,
+    75,
+    100
+   ],
+   "medido": 20.0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 lab/minimos": {
+   "previsto": [
+    95,
+    85,
+    100
+   ],
+   "medido": 63.2,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 vxu-pares": {
+   "previsto": [
+    90,
+    75,
+    100
+   ],
+   "medido": 0.0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 mdm-pares": {
+   "previsto": [
+    90,
+    70,
+    100
+   ],
+   "medido": 0.0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 mdm-eventos": {
+   "previsto": [
+    90,
+    75,
+    100
+   ],
+   "medido": 20.0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV1 au-pares": {
+   "previsto": [
+    100,
+    85,
+    100
+   ],
+   "medido": 50.0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV2 inválidos por cualquier error": {
+   "previsto": [
+    100,
+    90,
+    100
+   ],
+   "medido": 100.0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV3 las dos clases mayores": {
+   "previsto": [
+    "R",
+    "T_HL7"
+   ],
+   "medido": [
+    "R",
+    "L"
+   ],
+   "por_clase": {
+    "E": 7,
+    "R": 570,
+    "L": 9,
+    "T_HL7": 0,
+    "N": 0
+   },
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV4 importados mal": {
+   "previsto": 0,
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV5 incompletos": {
+   "previsto": [
+    0,
+    0,
+    3
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV6 acuerdo por mensaje": {
+   "previsto": [
+    90,
+    75,
+    100
+   ],
+   "medido": 100.0,
+   "n": 22,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV6 kappa": {
+   "previsto": [
+    0.3,
+    0.0,
+    0.7
+   ],
+   "medido": "no se puede calcular",
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV6 lugares de los dos": {
+   "previsto": [
+    30,
+    0,
+    70
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV7 solo_iris (con_0396)": {
+   "previsto": [
+    5,
+    0,
+    20
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV7 solo_auditores (con_0396)": {
+   "previsto": [
+    5,
+    0,
+    15
+   ],
+   "medido": 2,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV8 solo IRIS sostenidas": {
+   "previsto": [
+    50,
+    0,
+    100
+   ],
+   "medido": null,
+   "acierta": false,
+   "nota": "no se puede medir: no hay pares que vea solo IRIS",
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV9 afectadas CV3": {
+   "previsto": [
+    0,
+    0,
+    1
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV9 afectadas VX3": {
+   "previsto": [
+    0,
+    0,
+    1
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV9 afectadas MD3": {
+   "previsto": [
+    0,
+    0,
+    1
+   ],
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV9b indeterminadas CV3": {
+   "previsto": ">0",
+   "medido": 0,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV10 Z que cuentan": {
+   "previsto": 0,
+   "medido": 0,
+   "acierta": true,
+   "nota": "casi por construcción: antes del sello ya se sabía que los 24 Z van al final",
+   "vista_aparte": false,
+   "repite": null
+  },
+  "PV11 sin estructura no resueltos": {
+   "previsto": 0,
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": null
+  },
+  "Jev: proporción válida": {
+   "previsto": "más del 95 %",
+   "medido": 38.3,
+   "acierta": false,
+   "vista_aparte": false,
+   "repite": "PV1, en total"
+  },
+  "Jev: lugares de los dos": {
+   "previsto": "menos del 20 %",
+   "medido": 0.0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": "PV6c, con otro intervalo"
+  },
+  "Jev: nuevas afectadas": {
+   "previsto": "ninguna",
+   "medido": 0,
+   "acierta": true,
+   "vista_aparte": false,
+   "repite": "PV9, en total"
+  }
+ },
+ "prevision_aciertos": "14 de 28"
+}

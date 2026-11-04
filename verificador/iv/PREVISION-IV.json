@@ -1,0 +1,31 @@
+{
+ "etapa": "30, el validador de IRIS como segundo lector (ANTES-ETAPA-IRISVAL.md, iv/diseno-iv-fable.md §6)",
+ "sellada": "4-nov-2026, antes de la primera corrida del corpus; los controles del aparato pueden correr antes",
+ "quien": "el conductor (Claude), con lo medido en las dos sondas y sin haber pasado ningún mensaje del corpus por IRIS",
+ "decisiones": "iv/decision-jev-qiv.md: Q-IV-D-1 todo (723), Q2 las dos estructuras, Q3 tablas de usuario solo aviso, Q4 la frase por lugar, Q5 lee el conductor, Q6 la regla toca el campo del hallazgo, Q7 ejemplos y par (incompleto), Q8 Z error solo fuera de sitio, Q9 longitud del estándar, Q10 matriz y discrepancias",
+ "medido_antes_del_sello": {
+  "z": "24 mensajes de ADT llevan un segmento Z (ZAD), siempre el último del mensaje",
+  "no_ascii": "22 mensajes llevan bytes no ASCII",
+  "msh9_sin_estructura": "3 en el corpus de la herramienta (ADT^A04 x2, VXU^V04 x1)"
+ },
+ "prevision": {
+  "PV1_validos_que_cuentan_pct": {"lab/adt": [95, 85, 100], "lab/oru": [95, 85, 100], "lab/vxu": [90, 75, 100], "lab/mdm": [90, 75, 100],
+                                  "lab/minimos": [95, 85, 100], "vxu-pares": [90, 75, 100], "mdm-pares": [90, 70, 100],
+                                  "mdm-eventos": [90, 75, 100], "au-pares": [100, 85, 100], "_forma": "[puntual, mínimo, máximo] en %"},
+  "PV2_invalidos_por_cualquier_error_pct": [100, 90, 100],
+  "PV3_reparto_de_errores_que_cuentan_pct": {"E": 10, "R": 40, "L": 10, "T_HL7": 40, "N": 0, "_forma": "puntual; acierta si el orden de las dos mayores es R y T_HL7 (en cualquier orden)"},
+  "PV4_importado_ok_false": [0, 0, 0],
+  "PV5_tope_o_no_enmudecible": [0, 0, 3],
+  "PV6_acuerdo_mensaje_con_auditores_pct": [90, 75, 100],
+  "PV6b_kappa": [0.3, 0.0, 0.7],
+  "PV6c_lugares_vistos_por_los_dos_entre_los_vistos_por_alguno_pct": [30, 0, 70],
+  "PV7_solo_iris": [5, 0, 20],
+  "PV7_solo_auditores": [5, 0, 15],
+  "PV8_solo_iris_sostenidas_pct": [50, 0, 100],
+  "PV9_nuevas_afectadas_por_juez": {"CV3": [0, 0, 1], "VX3": [0, 0, 1], "MD3": [0, 0, 1]},
+  "PV9b_nuevas_indeterminadas_CV3": [">0"],
+  "PV10_z_que_cuentan": [0, 0, 0],
+  "PV11_msh9_sin_estructura_no_resueltos": [0, 0, 0]
+ },
+ "regla": "Si una cantidad cae fuera de su intervalo, se dice y se explica; el aparato no se reajusta para que caiga dentro."
+}

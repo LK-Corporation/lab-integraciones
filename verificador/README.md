@@ -190,6 +190,26 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## El validador de IRIS como segundo lector (30, 4-nov-2026)
+
+> **De los 723 mensajes sintéticos publicados, IRIS da 277 por válidos en lo que ve y el estándar sostiene, y 94 por
+> inválidos, casi todos por obligatorios vacíos en ADT. Los 352 restantes quedan sin decidir, porque el propio texto de v2.5
+> no zanja lo que IRIS les marca. Ninguna de las 27 nuevas publicadas se apoya solo en mensajes inválidos.**
+
+- **Lo que queda sin decidir:**
+  - valores fuera de la lista impresa de una tabla de HL7, que el texto permite extender con valores locales, sobre todo
+    UCUM en las unidades de ORU y VXU;
+  - TXA-3 = `TEXT` en MDM, que está en su tabla y supera el LEN 2, sin un equivalente para v2.5 que quepa.
+
+  Las 14 nuevas sin ningún mensaje de apoyo válido llevan la salvedad en su clase (`nota_iv`). Las clases no cambian.
+- **Lo nuevo sobre el corpus:** en ADT, los segmentos opcionales del generador van sin sus campos obligatorios, y los
+  ejemplos del capítulo 3 son fragmentos.
+- **Con los auditores de la 29:** 0 lugares en común de 2. De lo poco firme y comparable que vieron ellos, IRIS no mira una
+  cosa, y la otra la ve pero la lectura la deja sin decidir.
+- **Cómo:** `Validate` de InterSystems IRIS con su esquema de v2.5, bandera a bandera, y cada error leído en el texto del
+  estándar con su cita. Está en [`RESULTADO-IRISVAL.md`](RESULTADO-IRISVAL.md); la pregunta, en
+  [`ANTES-ETAPA-IRISVAL.md`](ANTES-ETAPA-IRISVAL.md).
+
 ## El texto de dos decisiones declaradas (4-nov-2026)
 
 > **La huella del juez cambia, y sus veredictos no.** El juez publicado pasa de `cb1338ca…` a `ff9f1087…`: en el texto de

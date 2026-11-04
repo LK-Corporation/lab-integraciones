@@ -1,0 +1,8 @@
+set sep=$c(13)
+set varios="MSH|^~\&|||||20260101120000||ADT^A01^ADT_A01|M2345678901234567890123456789|P|2.5"_sep_"EVN|A01|20260101120000"_sep_"PID|1||||||19800101|Q"_sep_"PV1|1|Z|W1^101^1"
+set m=##class(EnsLib.HL7.Message).ImportFromString(varios,.sc)
+set m.DocType="2.5:ADT_A01"
+for spec="dmr","dml","dmt","dmn","dmrl","dmrlt","dmrlte","dmerlt","dmrltn-z","dmfcrltn","e","dme","dmrle" { set s=m.Validate(spec)  write spec," -> ",$select($system.Status.IsOK(s):"OK",1:$extract($system.Status.GetErrorText(s),1,700)),! }
+write "---",!
+set s=m.Validate("dmrlt") do $system.Status.DecomposeStatus(s,.err) write "errores en el status: ",$get(err),! for i=1:1:$get(err) { write "  ",i,": ",$extract(err(i),1,200),! }
+halt

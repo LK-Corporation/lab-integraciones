@@ -1,0 +1,4 @@
+{
+ "q_iv_d_11": {"type": "choice", "instructions": "Q-IV-D-11: cómo se cuenta un sistema de codificación que no está en la tabla 0396 de v2.5, ni por valor ni por patrón (UCUM, SCT).",
+  "criteria": {"cuenta": "(a) Cuenta como invalidez: la lectura literal de la tabla impresa.", "duda_aparte": "(b) Duda sistémica aparte, sin cambiar el veredicto, como en la 29.", "cuenta_y_marca": "(c) Cuenta, y además se marca aparte para leer las cifras de las dos maneras."}}
+}

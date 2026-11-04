@@ -480,7 +480,8 @@
     "oru": [
      "ORU-B30"
     ]
-   }
+   },
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca PID, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "M-24",
@@ -498,7 +499,8 @@
     "oru": [
      "ORU-B29"
     ]
-   }
+   },
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca OBX-5, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "M-25",
@@ -1134,7 +1136,8 @@
     "oru": [
      "ORU-B20"
     ]
-   }
+   },
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca OBX-11, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "L-19",

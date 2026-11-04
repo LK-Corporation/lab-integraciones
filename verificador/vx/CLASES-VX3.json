@@ -112,7 +112,8 @@
    "referencia": null,
    "par_minimo": "VM07-lote-repetido",
    "fuerza": "fuerte",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-15, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M8",
@@ -125,7 +126,8 @@
    "referencia": null,
    "par_minimo": "VM08-fabricante-alterno",
    "fuerza": "débil",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-17, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M9",
@@ -151,7 +153,8 @@
    "referencia": null,
    "par_minimo": "VM10-relacion-grd",
    "fuerza": "fuerte",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca NK1-3, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M11",
@@ -177,7 +180,8 @@
    "referencia": null,
    "par_minimo": "VM12-dos-indicaciones",
    "fuerza": "débil",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-19, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M13",
@@ -203,7 +207,8 @@
    "referencia": null,
    "par_minimo": "VM14-dosis-punto-inicial",
    "fuerza": "fuerte",
-   "nota": "misma causa que M-24 del estudio de conversores (OBX-5); aquí es la dosis administrada"
+   "nota": "misma causa que M-24 del estudio de conversores (OBX-5); aquí es la dosis administrada",
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 1 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-6, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M15",
@@ -218,7 +223,8 @@
    "fuerza": "fuerte",
    "nota": null,
    "nota_auditoria": "Auditoría de validez de la etapa 29 (au/, RESULTADO-AUDITORIA.md): el par VM15 quedó en duda (RE con 0,5 mL, lote y sitio). Se confirma con AU1, válido: RE sin nada administrado.",
-   "par_valido": "AU1 (au/pares_auditoria.py)"
+   "par_valido": "AU1 (au/pares_auditoria.py)",
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-20, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6). Su par de la etapa 29 (AU1), que allí se dio por válido, lo es con la 0396 aparte, como la leyó la 29."
   },
   {
    "id": "VX-M16",
@@ -361,7 +367,8 @@
    "referencia": null,
    "par_minimo": "VL04-rxa21-d",
    "fuerza": "fuerte",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-21, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-L7",
@@ -389,7 +396,8 @@
    "fuerza": "débil",
    "nota": null,
    "nota_auditoria": "Auditoría de validez de la etapa 29 (au/, RESULTADO-AUDITORIA.md): el par VL06 llevaba RXA-10 sin XCN-8 ni XCN-9 (CH02A §2.A.86.1), en el campo del hallazgo. Se confirma con AU2, con XCN-9.",
-   "par_valido": "AU2 (au/pares_auditoria.py)"
+   "par_valido": "AU2 (au/pares_auditoria.py)",
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 3 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-10, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6). Su par de la etapa 29 (AU2), que allí se dio por válido, lo es con la 0396 aparte, como la leyó la 29."
   },
   {
    "id": "VX-L9",
@@ -402,7 +410,8 @@
    "referencia": null,
    "par_minimo": "VL07-dos-indicaciones",
    "fuerza": "débil",
-   "nota": null
+   "nota": null,
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-19, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-L10",

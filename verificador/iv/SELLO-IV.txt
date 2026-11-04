@@ -1,0 +1,39 @@
+944a7b569dcc010491f1ad51b7bd6fb676657cd0ce160f20a23de45dba0c9b04  PREVISION-IV.json
+14bc6919d448c543d1d0680c9ef09c2fdc4494695e1af4a8f6023409e31d0b65  decision-jev-prevision-iv.md
+0fd94214215e33b0fb415280897fa9ebd0ab3a07b1014c6c2b51d17cb1e8009e  decision-jev-qiv.md
+ab79f11757647c82fde2b2a5702b804797277f1c35cc6cbb7a220329a691ef64  diseno-iv-fable.md
+1998231b5e16f1ce7445715c655d3c62883cc3812454f9bcc0eaebe33902ebef  ../ANTES-ETAPA-IRISVAL.md
+46bdb6fbd634493857bbc64c374f7ecd6822ecf6c524f90f4fcc086a4996aa67  AUDITORES-CLASIFICADOS-IV.json
+e81cf21cd4dda929865c8c7c640c77fca529d2a53c65f3a28decbe07b0f7e1aa  revision_auditores_iv.json
+528a2ba7034abc7973607a3790a9dc2e6f1bc58f0a9e1509225b3d5038eb1e3c  validar_iv.py
+b6fcfe53ddfb7b00c9a330904e48b1f079b2f9bf5b4eb24fcf59293f4c3bfc42  control_iv.py
+4430bfe30a0488b1cd92d3b478f476db20833e549ea337aaac40f6ebacdc34ee  Lab.IV.Validar.cls
+f500c5923dd4000c8d11c2ef168291083beb8a02662538d8ce494827b6ca18d2  TABLAS-TIPO-IV.json
+e4a108426757890abd3c8fc4144c6d388a27b310274215511aec55fe3b38bfba  decision-jev-qiv11.md
+# las siete de arriba, selladas tras el control (TODO BIEN, ../privado/iv/control/CONTROL-IV.json) y antes de correr el corpus
+2dd76696424773581158a74f434ea780a781ecb3cbe675b1f2a0a8b90e8ffe86  validar_iv.py
+aedd3c5bdca5000ef88aa44339f6ced1b64af934fc83aaef8aadda26e3aa51b6  control_iv.py
+# las dos de arriba, resellladas el 4-nov: la primera corrida del corpus se paró al escribir (24 mensajes de ADT con otros separadores en MSH-2; el conductor partía con ^~& fijos). Antes de pararse enseñó el resumen de 12 filas de ADT. Arreglo: los separadores de cada mensaje; el control, otra vez en TODO BIEN con N-S1 y N-S2
+# --- el orden, en claro (añadido el 4-nov, tras la revisión a ciegas; las líneas de arriba no se tocan) ---
+# Bloque 1 (las 5 primeras huellas: la previsión, la de Jev, las Q-IV-D, el diseño y el ANTES): sellado en el commit
+#   eb387ff del laboratorio, después de las dos sondas y antes de construir el aparato y de correr ningún control.
+# Bloque 2 (las 7 siguientes, «las siete de arriba»): sellado en cc8fd5b, después del control en TODO BIEN (que reveló
+#   UCUM en la 0396 y llevó a Q-IV-D-11) y antes de correr el corpus.
+# Bloque 3 (las 2 siguientes): sellado en 9b3bfab, tras la parada de la primera corrida del corpus.
+# Bloque 4 (abajo): lo escrito DESPUÉS de correr el corpus. Toda la lectura (lectura_iv.py: el tipo de tabla por el
+#   índice del Apéndice A, el nulo, el código de CE/CWE de otro sistema, la 0399, OBX-2 «CWE», los valores que no caben
+#   en su LEN, Q-IV-D-12, y los que están fuera de la lista impresa de una tabla de HL7, Q-IV-D-11 otra vez), los cruces,
+#   las cifras, la marca de las clases (Q-IV-D-13) y las decisiones que abrieron las revisiones. El orden lo dan los
+#   commits del laboratorio, que no se publica: es declaración del autor.
+# El ANTES y el diseño publicados llevan una redacción (sus notas lo dicen); las huellas de arriba son las de los originales.
+4225f22418113bcbb4772c4bd26788daf56ce1ec69dd1ed9761f72c6644976ad  corpus_iv.py
+4787a3401789c11efccf7494c0263a09efb1c92c452eeb24fd1db70bcb3fba22  lectura_iv.py
+76d030db4b17397a89941ab514384785ec003c9e5a16fca642c7f2a1928deb10  cruce_iv.py
+b6cc7c40b1f4a33640881cadcfc5f793900d9b6d985afbc399b9a5c345f07ee7  cifras_iv.py
+5d38f460059addf1f1693b083204ecf20528a813e8f52479e5b9a49fe64a71a6  parche_clases_iv.py
+90af26227973663fc81c2337c68ff1e12d27c68faea029e6bc8d86db5a18d4cc  estado_qiv12.md
+00fb3aacc3839e3e5bd4ab2f4f4d0d4e4c3f112c346888463b8c3ed9804b92d5  decision-jev-qiv12.md
+c9a913a6f73537064a53530786e809216ecb9d702bb926c824e6e34387b84178  estado_qiv12b.md
+315ea50535808dcd5580a75cfff99d39052941383122aa503e0bae6f705fd1ca  decision-jev-qiv12b.md
+ddf86c0ed3cc3928659699808ebb85a47d0ba836f65e5d0a28d72390c7f01225  estado_qiv11b.md
+344ef87b8893222d5a7510ac54ba9a686303af8493be2af0a7ccf13c7ca7dd48  decision-jev-qiv11b.md

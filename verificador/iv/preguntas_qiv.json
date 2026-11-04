@@ -1,0 +1,22 @@
+{
+ "q_iv_d_1": {"type": "choice", "instructions": "Q-IV-D-1: el alcance del corpus que se valida.",
+  "criteria": {"solo_451": "(a) Solo los 451 de la herramienta.", "con_pares": "(b) Más todos los pares (523).", "todo_723": "(c) Todo, con los otros eventos de MDM (723)."}},
+ "q_iv_d_2": {"type": "choice", "instructions": "Q-IV-D-2: la estructura cuando MSH-9.3 falta o contradice la tabla 0354.",
+  "criteria": {"manda_esquema": "(a) Manda el esquema; la contradicción es error de estructura que cuenta.", "manda_msh93": "(b) Manda MSH-9.3 cuando viene; la contradicción es aviso.", "las_dos": "(c) Se valida con las dos y se publican ambas."}},
+ "q_iv_d_3": {"type": "choice", "instructions": "Q-IV-D-3: las tablas de usuario que sí traen valores en el esquema de IRIS.",
+  "criteria": {"aviso": "(a) No cuentan nunca; son aviso.", "si_auditor": "(b) Cuentan solo si el auditor también lo señaló.", "a_lectura": "(c) Cuentan como discrepancia y van a lectura."}},
+ "q_iv_d_4": {"type": "choice", "instructions": "Q-IV-D-4: la unidad de la frase publicada (las tres se publican igual).",
+  "criteria": {"mensaje": "(a) El mensaje.", "mensaje_clase": "(b) Mensaje por clase de regla.", "locus": "(c) El lugar exacto (segmento y campo)."}},
+ "q_iv_d_5": {"type": "choice", "instructions": "Q-IV-D-5: quién lee el estándar en las discrepancias.",
+  "criteria": {"conductor": "(a) Quien corre la etapa, con cita.", "lector_ciego": "(b) Un lector nuevo a ciegas.", "dos_lectores": "(c) Dos lectores, y se publica su desacuerdo."}},
+ "q_iv_d_6": {"type": "choice", "instructions": "Q-IV-D-6: cuándo una nueva publicada está afectada.",
+  "criteria": {"cualquier_regla": "(a) Todos sus mensajes de apoyo inválidos por cualquier regla sostenida.", "campo_del_hallazgo": "(b) Por una regla sostenida que toca el campo del hallazgo.", "y_control": "(c) Como (a), y además cuenta el control del par."}},
+ "q_iv_d_7": {"type": "choice", "instructions": "Q-IV-D-7: el apoyo de las nuevas del estudio de conversores.",
+  "criteria": {"ejemplos_y_par": "(a) Los ejemplos y el par, marcado incompleto.", "reconstruir": "(b) Reconstruirlo entero desde el juicio caso a caso del laboratorio.", "fuera": "(c) Dejar ese estudio fuera del cruce de nuevas."}},
+ "q_iv_d_8": {"type": "choice", "instructions": "Q-IV-D-8: los segmentos Z.",
+  "criteria": {"aviso": "(a) Aviso.", "error_si_fuera_de_sitio": "(b) Error de estructura si no van al final del grupo.", "no_se_miran": "(c) No se miran."}},
+ "q_iv_d_9": {"type": "choice", "instructions": "Q-IV-D-9: las longitudes.",
+  "criteria": {"len_estandar": "(a) Cuentan solo si el valor supera la longitud del estándar, leída en su tabla.", "len_esquema": "(b) Cuentan como las diga el esquema.", "nunca": "(c) Se registran y no cuentan nunca."}},
+ "q_iv_d_10": {"type": "choice", "instructions": "Q-IV-D-10: qué se publica.",
+  "criteria": {"matriz_y_discrepancias": "(a) La matriz, las cifras y la lista de discrepancias con su cita breve.", "y_filas": "(b) Además las filas por mensaje enteras.", "solo_cifras": "(c) Solo las cifras."}}
+}

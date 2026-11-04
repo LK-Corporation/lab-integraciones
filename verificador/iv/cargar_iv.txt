@@ -1,0 +1,3 @@
+set sc=$system.OBJ.Load("/tmp/iv/Lab.IV.Validar.cls","ck-d")
+write "carga: ",$select($system.Status.IsOK(sc):"OK",1:$system.Status.GetErrorText(sc)),!
+halt

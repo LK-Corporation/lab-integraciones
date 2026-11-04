@@ -1,0 +1,2285 @@
+{
+"defectos": [
+{
+"i": 0,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B01.hl7",
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-3 / PID-7",
+"lugar": "RXA-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 1,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B02.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 2,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B03.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 3,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B03.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-3 / PID-7",
+"lugar": "RXA-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 4,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B04.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "ORC-12",
+"lugar": "ORC-12",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 5,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B04.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 6,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B05.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 7,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B06.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 8,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B06.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-3 / PID-7",
+"lugar": "RXA-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 9,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B07.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 10,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B08.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 11,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B09.hl7",
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "RXA-7",
+"lugar": "RXA-7",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 12,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B10.hl7",
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "RXA-7",
+"lugar": "RXA-7",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 13,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B10.hl7",
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "RXA-18 / RXA-20",
+"lugar": "RXA-18",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 14,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B11.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 15,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B12.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 16,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B13.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 17,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B14.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 18,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B14.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-4 / MSH-7",
+"lugar": "RXA-4",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 19,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B15.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 20,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B16.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 21,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B16.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-15",
+"lugar": "RXA-15",
+"clase": "N",
+"por": "programa"
+},
+{
+"i": 22,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B16.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 23,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B17.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 24,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B17.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-17",
+"lugar": "RXA-17",
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 25,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B18.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 26,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B19.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 27,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B20.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 28,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B20.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 29,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B21.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10 (2 repeticiones)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 30,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B23.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "ORC-12",
+"lugar": "ORC-12",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 31,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B23.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 32,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B24.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 33,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B25.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 34,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B26.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 35,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B26.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "ORC-28",
+"lugar": "ORC-28",
+"clase": "T_USR",
+"por": "programa"
+},
+{
+"i": 36,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B27.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 37,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B28.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 38,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B28.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXR-2",
+"lugar": "RXR-2",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 39,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B29.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 40,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B29.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 41,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B30.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 42,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B31.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 43,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B32.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 44,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B32.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "OBX-14 / MSH-7",
+"lugar": "OBX-14",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 45,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B33.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10 (grupos 1 y 2)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 46,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B34.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10 (grupos 1, 2 y 3)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 47,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B34.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-3 (grupos 2 y 3) / MSH-7",
+"lugar": "RXA-3",
+"clase": "E",
+"por": "programa"
+},
+{
+"i": 48,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "ORC-3 (grupo 1)",
+"lugar": "ORC-3",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 49,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "ORC-3 (grupo 2)",
+"lugar": "ORC-3",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 50,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10 (grupo 2)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 51,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "duda",
+"donde": "RXA-7 (grupo 1)",
+"lugar": "RXA-7",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 52,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "aviso",
+"donde": "RXA-5 (grupo 1)",
+"lugar": "RXA-5",
+"clase": "E",
+"por": "programa"
+},
+{
+"i": 53,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B35.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "aviso",
+"donde": "RXA-3 (grupo 2) / MSH-7",
+"lugar": "RXA-3",
+"clase": "E",
+"por": "programa"
+},
+{
+"i": 54,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B36.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 55,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B37.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 56,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B38.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "PD1-3 (XON-3)",
+"lugar": "PD1-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 57,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B38.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "PD1-4",
+"lugar": "PD1-4",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 58,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B38.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 59,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B39.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "MSH-9",
+"lugar": "MSH-9",
+"clase": "R",
+"por": "programa"
+},
+{
+"i": 60,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B39.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 61,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B39.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "aviso",
+"donde": "GT1 / IN1 / IN2",
+"lugar": null,
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 62,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B40.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 63,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "vxu/B40.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 64,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL01-orc3-perdido-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 65,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL01-orc3-perdido-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "ORC-3",
+"lugar": "ORC-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 66,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL01-orc3-perdido-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 67,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL02-ruta-v2-0162-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 68,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL02-ruta-v2-0162-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 69,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL03-unidad-ce1-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 70,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL03-unidad-ce1-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 71,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL04-rxa21-d-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 72,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL04-rxa21-d-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 73,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL05-recorded-con-u-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 74,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL05-recorded-con-u-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 75,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL06-dos-rxa10-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10 (2 repeticiones)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 76,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL06-dos-rxa10-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 77,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL07-dos-indicaciones-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 78,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL07-dos-indicaciones-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 79,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL08-pa-subpotente-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 80,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL08-pa-subpotente-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 81,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL09-nk1-perdido-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 82,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL09-nk1-perdido-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 83,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL10-obx-nm-perdido-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 84,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VL10-obx-nm-perdido-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 85,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM01-cvx-system-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 86,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM01-cvx-system-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 87,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM01-cvx-system-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5",
+"lugar": "RXA-5",
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 88,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM02-mvx-system-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 89,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM02-mvx-system-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 90,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM02-mvx-system-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-17",
+"lugar": "RXA-17",
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 91,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM03-ruta-0162-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 92,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM03-ruta-0162-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 93,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM04-sitio-0163-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 94,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM04-sitio-0163-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 95,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM05-unidad-sin-ce2-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 96,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM05-unidad-sin-ce2-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 97,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM06-obx6-sin-ce2-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 98,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM06-obx6-sin-ce2-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 99,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM07-lote-repetido-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 100,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM07-lote-repetido-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-15",
+"lugar": "RXA-15",
+"clase": "N",
+"por": "programa"
+},
+{
+"i": 101,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM07-lote-repetido-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 102,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM08-fabricante-alterno-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 103,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM08-fabricante-alterno-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 104,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM09-telefono-xtn7-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 105,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM09-telefono-xtn7-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 106,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM09-telefono-xtn7-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "NK1-5 (XTN-1)",
+"lugar": "NK1-5",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 107,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM10-relacion-grd-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 108,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM10-relacion-grd-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 109,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM11-obx-sin-partof-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 110,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM11-obx-sin-partof-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 111,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM12-dos-indicaciones-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 112,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM12-dos-indicaciones-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 113,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM13-grupos-sin-orc3-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "ORC-3 (grupos 1 y 2)",
+"lugar": "ORC-3",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 114,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM13-grupos-sin-orc3-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "RXA-10 (grupos 1 y 2)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 115,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM13-grupos-sin-orc3-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "aviso",
+"donde": "RXA-5 (grupo 1)",
+"lugar": "RXA-5",
+"clase": "E",
+"por": "programa"
+},
+{
+"i": 116,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM13-grupos-sin-orc3-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10 (grupos 1 y 2)",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 117,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM13-grupos-sin-orc3-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "aviso",
+"donde": "RXA-5 (grupo 1)",
+"lugar": "RXA-5",
+"clase": "E",
+"por": "programa"
+},
+{
+"i": 118,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM14-dosis-punto-inicial-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 119,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM14-dosis-punto-inicial-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 120,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 121,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "RXA-20 / RXA-6 / RXA-15 / RXR",
+"lugar": "RXA-20",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 122,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM15-re-sin-rxa18-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "aviso",
+"donde": "RXA-18",
+"lugar": "RXA-18",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 123,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM15-re-sin-rxa18-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "defecto",
+"donde": "RXA-10",
+"lugar": "RXA-10",
+"clase": "TRANSVERSAL",
+"por": "programa"
+},
+{
+"i": 124,
+"auditoria": "AUDITORIA-VXU.json",
+"fichero": "pares_vxu/VM15-re-sin-rxa18-control.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "RXA-18 / RXA-6 / RXA-15 / RXR",
+"lugar": "RXA-18",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 125,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B14.hl7",
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "OBX-3",
+"lugar": "OBX-3",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 126,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B15.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBX-5 (CWE.7)",
+"lugar": "OBX-5",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 127,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B15.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "duda",
+"donde": "OBX-2",
+"lugar": "OBX-2",
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 128,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B22.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBX-2",
+"lugar": "OBX-2",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 129,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B24.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "SPM-4 (CWE.7)",
+"lugar": "SPM-4",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 130,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B33.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBR-7",
+"lugar": "OBR-7",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 131,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B34.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBR-25",
+"lugar": "OBR-25",
+"clase": "NC",
+"por": "programa"
+},
+{
+"i": 132,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B36.hl7",
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda",
+"nivel": "duda",
+"donde": "OBX-5",
+"lugar": "OBX-5",
+"clase": "NC",
+"por": "revision"
+},
+{
+"i": 133,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "oru/B39.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBX-11",
+"lugar": "OBX-11",
+"clase": "T_HL7",
+"por": "programa"
+},
+{
+"i": 134,
+"auditoria": "AUDITORIA-ORU.json",
+"fichero": "pares_oru/L10-obr-25-i-caso.hl7",
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido",
+"nivel": "defecto",
+"donde": "OBR-25 / OBX-11",
+"lugar": "OBR-25",
+"clase": "NC",
+"por": "programa"
+}
+],
+"ficheros": {
+"vxu/B01.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B02.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B03.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B04.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B05.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B06.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B07.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B08.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B09.hl7": {
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda"
+},
+"vxu/B10.hl7": {
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda"
+},
+"vxu/B11.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B12.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B13.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B14.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B15.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B16.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B17.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B18.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B19.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B20.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B21.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B22.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B23.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B24.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B25.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B26.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B27.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B28.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"vxu/B29.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B30.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B31.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B32.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B33.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B34.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B35.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"vxu/B36.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B37.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"vxu/B38.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"vxu/B39.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"vxu/B40.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL01-orc3-perdido-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL01-orc3-perdido-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"pares_vxu/VL02-ruta-v2-0162-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL02-ruta-v2-0162-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL03-unidad-ce1-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL03-unidad-ce1-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL04-rxa21-d-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL04-rxa21-d-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL05-recorded-con-u-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL05-recorded-con-u-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL06-dos-rxa10-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL06-dos-rxa10-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL07-dos-indicaciones-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL07-dos-indicaciones-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL08-pa-subpotente-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL08-pa-subpotente-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL09-nk1-perdido-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL09-nk1-perdido-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL10-obx-nm-perdido-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VL10-obx-nm-perdido-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM01-cvx-system-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM01-cvx-system-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM02-mvx-system-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM02-mvx-system-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM03-ruta-0162-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM03-ruta-0162-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM04-sitio-0163-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM04-sitio-0163-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM05-unidad-sin-ce2-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM05-unidad-sin-ce2-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM06-obx6-sin-ce2-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM06-obx6-sin-ce2-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM07-lote-repetido-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM07-lote-repetido-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM08-fabricante-alterno-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM08-fabricante-alterno-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM09-telefono-xtn7-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM09-telefono-xtn7-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda"
+},
+"pares_vxu/VM10-relacion-grd-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM10-relacion-grd-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM11-obx-sin-partof-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM11-obx-sin-partof-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM12-dos-indicaciones-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM12-dos-indicaciones-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM13-grupos-sin-orc3-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"pares_vxu/VM13-grupos-sin-orc3-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM14-dosis-punto-inicial-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM14-dosis-punto-inicial-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_vxu/VM15-re-sin-rxa18-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda"
+},
+"pares_vxu/VM15-re-sin-rxa18-control.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "duda"
+},
+"oru/B01.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B02.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B03.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B04.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B05.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B06.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B07.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B08.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B09.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B10.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B11.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B12.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B13.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B14.hl7": {
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda"
+},
+"oru/B15.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B16.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B17.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B18.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B19.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B20.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B21.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B22.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B23.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B24.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B25.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B26.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B27.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B28.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B29.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B30.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B31.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B32.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B33.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B34.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B35.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B36.hl7": {
+"veredicto": "duda",
+"veredicto_sin_transversales": "duda"
+},
+"oru/B37.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B38.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"oru/B39.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"oru/B40.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L06-obx-sin-tipo-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L06-obx-sin-tipo-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L07-ft-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L07-ft-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L08-tm-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L08-tm-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L09-obx-11-d-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L09-obx-11-d-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L10-obr-25-i-caso.hl7": {
+"veredicto": "invalido",
+"veredicto_sin_transversales": "invalido"
+},
+"pares_oru/L10-obr-25-i-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L11-sn-rango-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L11-sn-rango-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L12-sn-distinto-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L12-sn-distinto-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L18-unidad-cwe-2-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/L18-unidad-cwe-2-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M01-nm-punto-inicial-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M01-nm-punto-inicial-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06-obx-tras-nte-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06-obx-tras-nte-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06b-dos-nte-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06b-dos-nte-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06c-nte-al-final-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06c-nte-al-final-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06d-tres-obx-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M06d-tres-obx-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M07-oru-sin-pid-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M07-oru-sin-pid-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M09-ft-br-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/M09-ft-br-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/R02-nm-cero-inicial-caso.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+},
+"pares_oru/R02-nm-cero-inicial-control.hl7": {
+"veredicto": "valido",
+"veredicto_sin_transversales": "valido"
+}
+},
+"revision": {
+"38": "NC",
+"48": "NC",
+"49": "NC",
+"51": "NC",
+"106": "NC",
+"113": "NC",
+"128": "NC",
+"129": "NC",
+"132": "NC"
+}
+}

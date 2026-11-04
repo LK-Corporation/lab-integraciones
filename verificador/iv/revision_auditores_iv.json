@@ -1,0 +1,12 @@
+{
+ "38": "NC",
+ "48": "NC",
+ "49": "NC",
+ "51": "NC",
+ "106": "NC",
+ "113": "NC",
+ "128": "NC",
+ "129": "NC",
+ "132": "NC",
+ "_por_que": "Revisión a mano del 4-nov, antes de ver ninguna fila de IRIS del corpus. 38, 126 y 129: CWE-7 que falta cuando el sistema no es HL7 (condicional). 48, 49 y 113: ORC-3 que exige el texto del RXA (regla de texto). 51: RXA-7 es C. 106: el formato de XTN-1 (tipo de dato). 128: OBX-2 condicional según OBX-11. 132: OBX-5 repetido; la estructura lo deja repetir y lo restringe el texto."
+}

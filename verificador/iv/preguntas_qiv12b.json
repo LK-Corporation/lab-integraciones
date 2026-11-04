@@ -1,0 +1,4 @@
+{
+ "q_iv_d_12": {"type": "choice", "instructions": "Q-IV-D-12, con el hecho entero: un valor que la tabla del campo admite pero no cabe en su LEN.",
+  "criteria": {"invalido_siempre": "(a) Cuenta como inválido siempre.", "sin_decidir_siempre": "(b) Queda sin decidir siempre: el estándar se contradice.", "segun_equivalente_misma_version": "(c) Cuenta solo si la tabla trae otro valor equivalente que cabe y vale en la misma versión del mensaje; si no, sin decidir."}}
+}

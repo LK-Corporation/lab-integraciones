@@ -1,0 +1,8 @@
+{
+ "pv_validos": {"type": "choice", "instructions": "Qué proporción de los 723 mensajes sale válida en lo que cuenta.",
+  "criteria": {"menos_50": "Menos del 50 %.", "50_80": "Entre el 50 % y el 80 %.", "80_95": "Entre el 80 % y el 95 %.", "mas_95": "Más del 95 %."}},
+ "pv_lugares": {"type": "choice", "instructions": "De los lugares que marca como defecto alguno de los dos lectores en lo que los dos pueden ver, qué proporción marcan los dos.",
+  "criteria": {"menos_20": "Menos del 20 %.", "20_50": "Entre el 20 % y el 50 %.", "50_80": "Entre el 50 % y el 80 %.", "mas_80": "Más del 80 %."}},
+ "pv_afectadas": {"type": "choice", "instructions": "Cuántas discrepancias nuevas publicadas salen afectadas.",
+  "criteria": {"ninguna": "Ninguna.", "una_o_dos": "Una o dos.", "tres_o_mas": "Tres o más."}}
+}

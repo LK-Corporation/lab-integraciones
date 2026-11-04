@@ -1,0 +1,6 @@
+{
+ "q_iv_d_12": {"type": "choice", "instructions": "Q-IV-D-12: un valor que la tabla del campo admite pero no cabe en su LEN (TXA-3 TEXT y multipart en la 0191; OBX-2 de tres letras en la 0125).",
+  "criteria": {"invalido_siempre": "(a) Cuenta como inválido siempre (Q-IV-D-9 tal cual).", "sin_decidir_siempre": "(b) Queda sin decidir siempre: el estándar se contradice.", "segun_equivalente": "(c) Cuenta solo si la tabla trae otro valor equivalente que cabe (TEXT frente a TX); si no, sin decidir."}},
+ "q_iv_d_13": {"type": "choice", "instructions": "Q-IV-D-13: dónde va la salvedad de las 14 nuevas cuyo apoyo es inválido solo por otras reglas.",
+  "criteria": {"solo_resultado": "(a) Solo en el resultado de la etapa, junto a la frase.", "tambien_clases": "(b) Además, una marca en cada clase de los ficheros de clases publicados, como en la 29."}}
+}
