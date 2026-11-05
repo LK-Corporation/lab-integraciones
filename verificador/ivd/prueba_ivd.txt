@@ -1,0 +1,3 @@
+set sc=##class(Lab.IVD.Validar).Lote("/tmp/ivd/prueba-entrada.jsonl","/tmp/ivd/prueba-salida.jsonl")
+write "lote: ",$select($system.Status.IsOK(sc):"OK",1:$system.Status.GetErrorText(sc)),!
+halt

@@ -1,0 +1,6 @@
+{
+ "pv_validas": {"type": "choice", "instructions": "Qué proporción de las 223 muestras sale válida en su versión.",
+  "criteria": {"menos_20": "Menos del 20 %.", "20_50": "Entre el 20 % y el 50 %.", "50_80": "Entre el 50 % y el 80 %.", "mas_80": "Más del 80 %."}},
+ "pv_nuevas": {"type": "choice", "instructions": "Cuántas de VX-M14 y VX-M15 siguen sin ningún mensaje válido.",
+  "criteria": {"ninguna": "Ninguna.", "una": "Una.", "las_dos": "Las dos."}}
+}

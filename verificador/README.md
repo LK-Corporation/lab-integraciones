@@ -190,6 +190,27 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Las muestras públicas en la versión que declaran (32, 5-nov-2026)
+
+> **De las 223 muestras públicas de los dos conversores que declaran otra versión que la 2.5, validadas por IRIS con el
+> esquema de la suya, 21 son válidas, 141 inválidas y 61 sin decidir. De las 5 nuevas que se apoyan en muestras, 2 (VX-M14 y
+> VX-M15) siguen sin ningún mensaje válido, y ninguna queda afectada.**
+
+- **Cómo se leen:** las de la 2.5.1, con el texto de v2.5.1. Las de la 2.3, la 2.4, la 2.6 y la 2.8 (179), según el esquema de
+  IRIS de su versión, porque el laboratorio no tiene ese texto: cuentan la estructura, los obligatorios y las longitudes; un
+  valor que IRIS rechaza en una tabla queda sin decidir si su esquema la trae con valores, y es aviso si la trae vacía.
+- **13 de las 21 válidas dependen de una regla del ANTES:** los campos que su versión no define van aparte. Si dejaran la
+  muestra sin decidir, serían 8 válidas, 141 inválidas y 74 sin decidir; si contaran como error, 8, 174 y 41. Se publican las
+  tres.
+- **Frente a la etapa 31** (contra v2.5): las 21 válidas son 21 de las 22 que allí quedaban sin decidir solo por la versión
+  declarada. Ninguna inválida pasa a válida.
+- **Un contraste:** el esquema de IRIS de la 2.8 hace obligatorio OBX-4, y el de la 2.6, OBX-5. En el texto de v2.5.1 los dos son
+  condicionales. 20 muestras son inválidas solo por OBX-4.
+- **Cómo:** el aparato de la 31 con la versión de cada muestra, con su control. La previsión se selló antes de correr.
+
+  Está en [`RESULTADO-IVDECLARADA.md`](RESULTADO-IVDECLARADA.md); la pregunta, en
+  [`ANTES-ETAPA-IVDECLARADA.md`](ANTES-ETAPA-IVDECLARADA.md).
+
 ## Las muestras públicas por el validador de IRIS (31, 4-nov-2026)
 
 > **De las 225 muestras públicas de los dos conversores, validadas contra v2.5 como las lee el juez, IRIS da 0 por válidas,
@@ -527,8 +548,8 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 y 31 llevan una parte redactada,** marcados en su primera línea:
-  `ANTES-ETAPA-IRISVAL.md` y `ANTES-ETAPA-IVMUESTRAS.md`.
+- **Los ANTES de las etapas 30, 31 y 32 llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md` y `ANTES-ETAPA-IVDECLARADA.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

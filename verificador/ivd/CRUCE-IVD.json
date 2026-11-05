@@ -1,0 +1,347 @@
+{
+ "nuevas": [
+  {
+   "id": "L-1",
+   "campos": [
+    "PV1-3"
+   ],
+   "apoyo_laboratorio": [
+    {
+     "mensaje": "lab/adt/A01-001.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/adt/A01-002.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/adt/A01-003.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/minimos/L01-sin-location-caso.hl7",
+     "estado": "valido"
+    }
+   ],
+   "apoyo_muestras": [
+    {
+     "mensaje": "cv/lfh-sample_unix.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "PRB"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "2.6|X|None||"
+     ]
+    },
+    {
+     "mensaje": "cv/ms-ADT-A01-01.hl7",
+     "version": "2.8",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "2.8|C|ROL||"
+     ]
+    },
+    {
+     "mensaje": "cv/ms-ADT-A01-02.hl7",
+     "version": "2.8",
+     "estado": "no_decidible",
+     "reglas": [
+      "2.8|T_HL7|EVN|4|0396",
+      "2.8|T_HL7|PID|10|0396",
+      "2.8|T_HL7|PID|15|0396",
+      "2.8|T_HL7|PID|22|0396"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    }
+   ],
+   "con_algun_valido": true,
+   "afectada": false,
+   "todo_invalido": false,
+   "estado": "intacta",
+   "estado_en_la_31": "intacta",
+   "con_algun_valido_en_la_31": true,
+   "muestras_por_estado": {
+    "invalido_por_otra_regla": 2,
+    "no_decidible": 1
+   }
+  },
+  {
+   "id": "L-11",
+   "campos": [
+    "PID-11"
+   ],
+   "apoyo_laboratorio": [
+    {
+     "mensaje": "lab/adt/A1-A01-02.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/adt/A1-A03-12.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/adt/A1-A04-17.hl7",
+     "estado": "valido"
+    },
+    {
+     "mensaje": "lab/minimos/L04-sad-2-3-caso.hl7",
+     "estado": "valido"
+    }
+   ],
+   "apoyo_muestras": [
+    {
+     "mensaje": "cv/lfh-ORU-multiline-short.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-3",
+      "OBX-5"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "cv/lfh-ORU-multiline-short-mixed.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-3",
+      "OBX-5"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "cv/ms-ADT-A01-01.hl7",
+     "version": "2.8",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "2.8|C|ROL||"
+     ]
+    }
+   ],
+   "con_algun_valido": true,
+   "afectada": false,
+   "todo_invalido": false,
+   "estado": "intacta",
+   "estado_en_la_31": "intacta",
+   "con_algun_valido_en_la_31": true,
+   "muestras_por_estado": {
+    "invalido_por_otra_regla": 3
+   }
+  },
+  {
+   "id": "L-22",
+   "campos": [
+    "PV1-52"
+   ],
+   "apoyo_laboratorio": [
+    {
+     "mensaje": "lab/minimos/L13-pv1-52-caso.hl7",
+     "estado": "valido"
+    }
+   ],
+   "apoyo_muestras": [
+    {
+     "mensaje": "cv/ms-ADT-A01-01.hl7",
+     "version": "2.8",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "2.8|C|ROL||"
+     ]
+    },
+    {
+     "mensaje": "cv/ms-ADT-A01-02.hl7",
+     "version": "2.8",
+     "estado": "no_decidible",
+     "reglas": [
+      "2.8|T_HL7|EVN|4|0396",
+      "2.8|T_HL7|PID|10|0396",
+      "2.8|T_HL7|PID|15|0396",
+      "2.8|T_HL7|PID|22|0396"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "cv/ms-ADT-A03-01.hl7",
+     "version": "2.8",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "2.8|C|ROL||"
+     ]
+    }
+   ],
+   "con_algun_valido": true,
+   "afectada": false,
+   "todo_invalido": false,
+   "estado": "intacta",
+   "estado_en_la_31": "intacta",
+   "con_algun_valido_en_la_31": true,
+   "muestras_por_estado": {
+    "invalido_por_otra_regla": 2,
+    "no_decidible": 1
+   }
+  },
+  {
+   "id": "VX-M14",
+   "campos": [
+    "RXA-6"
+   ],
+   "apoyo_laboratorio": [
+    {
+     "mensaje": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+     "estado": "no_decidible"
+    }
+   ],
+   "apoyo_muestras": [
+    {
+     "mensaje": "vxu/lfh-FHIRConverterTest__L136.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "RXA-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    }
+   ],
+   "con_algun_valido": false,
+   "afectada": false,
+   "todo_invalido": false,
+   "estado": "intacta",
+   "estado_en_la_31": "intacta",
+   "con_algun_valido_en_la_31": false,
+   "muestras_por_estado": {
+    "invalido_por_otra_regla": 1
+   }
+  },
+  {
+   "id": "VX-M15",
+   "campos": [
+    "RXA-20"
+   ],
+   "apoyo_laboratorio": [
+    {
+     "mensaje": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+     "estado": "no_decidible"
+    },
+    {
+     "mensaje": "au-pares/AU1-caso.hl7",
+     "estado": "no_decidible"
+    }
+   ],
+   "apoyo_muestras": [
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L212.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "RXA-1",
+      "RXA-2",
+      "RXA-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L256.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "RXA-1",
+      "RXA-2",
+      "RXA-4",
+      "RXA-5"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L370.hl7",
+     "version": "2.5.1",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "MSH-10",
+      "ORC-1",
+      "RXA-4",
+      "RXA-6"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": [
+      "C|MSH||"
+     ]
+    },
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L423.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "ORC-1",
+      "RXA-4",
+      "RXA-6"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L44.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "RXA-1",
+      "RXA-2",
+      "RXA-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    },
+    {
+     "mensaje": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L169.hl7",
+     "version": "2.6",
+     "estado": "invalido_por_otra_regla",
+     "reglas": [
+      "OBX-11",
+      "RXA-1",
+      "RXA-2",
+      "RXA-4"
+     ],
+     "estado_en_la_31": "invalido_por_otra_regla",
+     "aparte": []
+    }
+   ],
+   "con_algun_valido": false,
+   "afectada": false,
+   "todo_invalido": false,
+   "estado": "intacta",
+   "estado_en_la_31": "intacta",
+   "con_algun_valido_en_la_31": false,
+   "muestras_por_estado": {
+    "invalido_por_otra_regla": 6
+   }
+  }
+ ]
+}

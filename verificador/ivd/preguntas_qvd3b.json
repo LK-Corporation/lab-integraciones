@@ -1,0 +1,4 @@
+{
+ "q_vd_3b": {"type": "choice", "instructions": "Q-VD-3b: si un segmento con más campos de los que permite la estructura de su versión hace inválida la muestra.",
+  "criteria": {"aparte": "(a) No: se mide aparte, como en la 31, por las reglas del receptor del texto.", "dentro": "(b) Sí: entra en el veredicto como error de estructura."}}
+}

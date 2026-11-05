@@ -1,0 +1,4 @@
+{
+ "q_vd_3c": {"type": "choice", "instructions": "Q-VD-3c: cómo queda una muestra cuyo único problema es un segmento con más campos de los que define su versión.",
+  "criteria": {"aparte": "(a) Válida: los campos de más van aparte.", "dentro": "(b) Inválida: entra en el veredicto como error de estructura.", "sin_decidir": "(c) Sin decidir: el texto no lo zanja."}}
+}

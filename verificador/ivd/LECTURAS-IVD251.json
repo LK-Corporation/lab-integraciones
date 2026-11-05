@@ -1,0 +1,1740 @@
+{
+ "lecturas": [
+  {
+   "lugar": "L|ORC|3|",
+   "clase": "L",
+   "seg": "ORC",
+   "campo": 3,
+   "tabla": null,
+   "n_mensajes": 2,
+   "corpus": {
+    "muestras/cv": 2
+   },
+   "valores": {},
+   "longitudes": {
+    "24": 1,
+    "52": 1
+   },
+   "atributo_v251": {
+    "len": 22,
+    "dt": "EI",
+    "opt": "C",
+    "tbl": null,
+    "cita": "CH04.txt:1810"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:1810",
+   "razon": "LEN 22 en v2.5.1; los valores miden [24, 52]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "L|OBR|3|",
+   "clase": "L",
+   "seg": "OBR",
+   "campo": 3,
+   "tabla": null,
+   "n_mensajes": 2,
+   "corpus": {
+    "muestras/cv": 2
+   },
+   "valores": {},
+   "longitudes": {
+    "24": 1,
+    "52": 1
+   },
+   "atributo_v251": {
+    "len": 22,
+    "dt": "EI",
+    "opt": "C",
+    "tbl": null,
+    "cita": "CH04.txt:3265"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:3265",
+   "razon": "LEN 22 en v2.5.1; los valores miden [24, 52]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "L|OBR|49|",
+   "clase": "L",
+   "seg": "OBR",
+   "campo": 49,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "22": 1
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0507",
+    "cita": "CH04.txt:3318"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:3318",
+   "razon": "LEN 2 en v2.5.1; los valores miden [22]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|OBX|2|",
+   "clase": "L",
+   "seg": "OBX",
+   "campo": 2,
+   "tabla": null,
+   "n_mensajes": 3,
+   "corpus": {
+    "muestras/cv": 2,
+    "muestras/vxu": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "3": 11
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "ID",
+    "opt": "C",
+    "tbl": "0125",
+    "cita": "CH07.txt:2529"
+   },
+   "sostenida": true,
+   "cita": "CH07.txt:2529",
+   "razon": "LEN 2 en v2.5.1; los valores miden [3]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 9,
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "T_HL7|OBX|6|0396",
+   "clase": "T_HL7",
+   "seg": "OBX",
+   "campo": 6,
+   "tabla": "0396",
+   "n_mensajes": 2,
+   "corpus": {
+    "muestras/cv": 2
+   },
+   "valores": {
+    "UCUM": 19,
+    "ISO": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:2536"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['UCUM', 'ISO'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 20
+   }
+  },
+  {
+   "lugar": "T_HL7|OBX|2|0125",
+   "clase": "T_HL7",
+   "seg": "OBX",
+   "campo": 2,
+   "tabla": "0125",
+   "n_mensajes": 3,
+   "corpus": {
+    "muestras/cv": 2,
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "CWE": 9,
+    "DTM": 2
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 2,
+    "dt": "ID",
+    "opt": "C",
+    "tbl": "0125",
+    "cita": "CH07.txt:2529"
+   },
+   "sostenida": null,
+   "razon": "tabla 0125 de HL7; ['CWE', 'DTM'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:997",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 11
+   }
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0487",
+   "clase": "T_HL7",
+   "seg": "SPM",
+   "campo": 4,
+   "tabla": "0487",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "119297000": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CWE",
+    "opt": "R",
+    "tbl": "0487",
+    "cita": "CH07.txt:3590"
+   },
+   "sostenida": null,
+   "razon": "tabla 0487 de HL7; ['119297000'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:950",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0396",
+   "clase": "T_HL7",
+   "seg": "SPM",
+   "campo": 4,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "SCT": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CWE",
+    "opt": "R",
+    "tbl": "0487",
+    "cita": "CH07.txt:3590"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['SCT'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "E|PRT||",
+   "clase": "E",
+   "seg": "PRT",
+   "campo": null,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": null,
+   "sostenida": true,
+   "razon": "estructura del mensaje (segmento PRT): IRIS lo echa en falta o no lo esperaba",
+   "cita": "CH07.txt:656 (estructura ORU_R01)",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {}
+  },
+  {
+   "lugar": "E|OBX||",
+   "clase": "E",
+   "seg": "OBX",
+   "campo": null,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": null,
+   "sostenida": true,
+   "razon": "estructura del mensaje (segmento OBX): IRIS lo echa en falta o no lo esperaba",
+   "cita": "CH07.txt:656 (estructura ORU_R01)",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "E|TXA||",
+   "clase": "E",
+   "seg": "TXA",
+   "campo": null,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": null,
+   "sostenida": true,
+   "razon": "estructura del mensaje (segmento TXA): IRIS lo echa en falta o no lo esperaba",
+   "cita": "CH07.txt:656 (estructura ORU_R01)",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|MSH|10|",
+   "clase": "L",
+   "seg": "MSH",
+   "campo": 10,
+   "tabla": null,
+   "n_mensajes": 6,
+   "corpus": {
+    "muestras/cv": 1,
+    "muestras/vxu": 5
+   },
+   "valores": {},
+   "longitudes": {
+    "48": 1,
+    "22": 4,
+    "27": 1
+   },
+   "atributo_v251": {
+    "len": 20,
+    "dt": "ST",
+    "opt": "R",
+    "tbl": null,
+    "cita": "CH02.txt:4235"
+   },
+   "sostenida": true,
+   "cita": "CH02.txt:4235",
+   "razon": "LEN 20 en v2.5.1; los valores miden [22, 27, 48]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 6
+   }
+  },
+  {
+   "lugar": "L|PV1|14|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 14,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "42": 1
+   },
+   "atributo_v251": {
+    "len": 6,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0023",
+    "cita": "Ch03.txt:5500"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5500",
+   "razon": "LEN 6 en v2.5.1; los valores miden [42]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|PV1|16|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 16,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "63": 1
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0099",
+    "cita": "Ch03.txt:5502"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5502",
+   "razon": "LEN 2 en v2.5.1; los valores miden [63]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|PV1|18|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 18,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "9": 1
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0018",
+    "cita": "Ch03.txt:5504"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5504",
+   "razon": "LEN 2 en v2.5.1; los valores miden [9]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|PV1|36|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 36,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "32": 1
+   },
+   "atributo_v251": {
+    "len": 3,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0112",
+    "cita": "Ch03.txt:5529"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5529",
+   "razon": "LEN 3 en v2.5.1; los valores miden [32]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|PV1|39|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 39,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "15": 1
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0115",
+    "cita": "Ch03.txt:5532"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5532",
+   "razon": "LEN 2 en v2.5.1; los valores miden [15]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|PV1|41|",
+   "clase": "L",
+   "seg": "PV1",
+   "campo": 41,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "6": 1
+   },
+   "atributo_v251": {
+    "len": 2,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0117",
+    "cita": "Ch03.txt:5534"
+   },
+   "sostenida": true,
+   "cita": "Ch03.txt:5534",
+   "razon": "LEN 2 en v2.5.1; los valores miden [6]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|OBX|8|",
+   "clase": "L",
+   "seg": "OBX",
+   "campo": 8,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "18": 1
+   },
+   "atributo_v251": {
+    "len": 5,
+    "dt": "IS",
+    "opt": "O",
+    "tbl": "0078",
+    "cita": "CH07.txt:2538"
+   },
+   "sostenida": true,
+   "cita": "CH07.txt:2538",
+   "razon": "LEN 5 en v2.5.1; los valores miden [18]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "L|OBX|18|",
+   "clase": "L",
+   "seg": "OBX",
+   "campo": 18,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "52": 1,
+    "29": 1
+   },
+   "atributo_v251": {
+    "len": 22,
+    "dt": "EI",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:2548"
+   },
+   "sostenida": true,
+   "cita": "CH07.txt:2548",
+   "razon": "LEN 22 en v2.5.1; los valores miden [29, 52]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "L|SPM|17|",
+   "clase": "L",
+   "seg": "SPM",
+   "campo": 17,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {},
+   "longitudes": {
+    "39": 1
+   },
+   "atributo_v251": {
+    "len": 26,
+    "dt": "DR",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:3603"
+   },
+   "sostenida": true,
+   "cita": "CH07.txt:3603",
+   "razon": "LEN 26 en v2.5.1; los valores miden [39]",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|MSH|17|0399",
+   "clase": "T_HL7",
+   "seg": "MSH",
+   "campo": 17,
+   "tabla": "0399",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "USA": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 3,
+    "dt": "ID",
+    "opt": "O",
+    "tbl": "0399",
+    "cita": "CH02.txt:4242"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|PID|10|0396",
+   "clase": "T_HL7",
+   "seg": "PID",
+   "campo": 10,
+   "tabla": "0396",
+   "n_mensajes": 21,
+   "corpus": {
+    "muestras/cv": 1,
+    "muestras/vxu": 20
+   },
+   "valores": {
+    "CDCREC": 7,
+    " HL70005": 15
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": "0005",
+    "cita": "Ch03.txt:4656"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['CDCREC', ' HL70005'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 22
+   }
+  },
+  {
+   "lugar": "T_HL7|PID|11|0399",
+   "clase": "T_HL7",
+   "seg": "PID",
+   "campo": 11,
+   "tabla": "0399",
+   "n_mensajes": 11,
+   "corpus": {
+    "muestras/cv": 1,
+    "muestras/vxu": 10
+   },
+   "valores": {
+    "USA": 11
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XAD",
+    "opt": "O",
+    "tbl": null,
+    "cita": "Ch03.txt:4657"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 11
+   }
+  },
+  {
+   "lugar": "T_HL7|PV1|8|0200",
+   "clase": "T_HL7",
+   "seg": "PV1",
+   "campo": 8,
+   "tabla": "0200",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "MSK": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XCN",
+    "opt": "O",
+    "tbl": "0010",
+    "cita": "Ch03.txt:5494"
+   },
+   "sostenida": null,
+   "razon": "tabla 0200 de HL7; ['MSK'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:738",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|PV1|9|0200",
+   "clase": "T_HL7",
+   "seg": "PV1",
+   "campo": 9,
+   "tabla": "0200",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "NAV": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XCN",
+    "opt": "B",
+    "tbl": "0010",
+    "cita": "Ch03.txt:5495"
+   },
+   "sostenida": null,
+   "razon": "tabla 0200 de HL7; ['NAV'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:738",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|ORC|22|0399",
+   "clase": "T_HL7",
+   "seg": "ORC",
+   "campo": 22,
+   "tabla": "0399",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "USA": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XAD",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH04.txt:1829"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|ORC|31|0396",
+   "clase": "T_HL7",
+   "seg": "ORC",
+   "campo": 31,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "AR": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CWE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH04.txt:1838"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['AR'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|OBR|4|0396",
+   "clase": "T_HL7",
+   "seg": "OBR",
+   "campo": 4,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "XYZ": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": null,
+    "cita": "CH04.txt:3266"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['XYZ'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|OBR|9|0396",
+   "clase": "T_HL7",
+   "seg": "OBR",
+   "campo": 9,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "ANSI+": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 20,
+    "dt": "CQ",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH04.txt:3271"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['ANSI+'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|CTD|3|0399",
+   "clase": "T_HL7",
+   "seg": "CTD",
+   "campo": 3,
+   "tabla": "0399",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "USA": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XAD",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH11.txt:2002"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|OBX|3|0396",
+   "clase": "T_HL7",
+   "seg": "OBX",
+   "campo": 3,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "XYZ": 2
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": null,
+    "cita": "CH07.txt:2530"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['XYZ'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 2
+   }
+  },
+  {
+   "lugar": "T_HL7|OBX|24|0399",
+   "clase": "T_HL7",
+   "seg": "OBX",
+   "campo": 24,
+   "tabla": "0399",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "USA": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 631,
+    "dt": "XAD",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:2554"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|FT1|19|0396",
+   "clase": "T_HL7",
+   "seg": "FT1",
+   "campo": 19,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "SCT": 2
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": "0051",
+    "cita": "CH06.txt:978"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['SCT'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 2
+   }
+  },
+  {
+   "lugar": "T_HL7|SPM|27|0396",
+   "clase": "T_HL7",
+   "seg": "SPM",
+   "campo": 27,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/cv": 1
+   },
+   "valores": {
+    "ABC": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CWE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:3613"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['ABC'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|PID|22|0396",
+   "clase": "T_HL7",
+   "seg": "PID",
+   "campo": 22,
+   "tabla": "0396",
+   "n_mensajes": 17,
+   "corpus": {
+    "muestras/vxu": 17
+   },
+   "valores": {
+    "CDCREC": 17
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": "0189",
+    "cita": "Ch03.txt:4675"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['CDCREC'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 17
+   }
+  },
+  {
+   "lugar": "T_HL7|PID|3|0203",
+   "clase": "T_HL7",
+   "seg": "PID",
+   "campo": 3,
+   "tabla": "0203",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "AnUnknownCode": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CX",
+    "opt": "R",
+    "tbl": null,
+    "cita": "Ch03.txt:4649"
+   },
+   "sostenida": null,
+   "razon": "tabla 0203 de HL7; ['AnUnknownCode'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:653",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "R|ORC|1|",
+   "clase": "R",
+   "seg": "ORC",
+   "campo": 1,
+   "tabla": null,
+   "n_mensajes": 2,
+   "corpus": {
+    "muestras/vxu": 2
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 2,
+    "dt": "ID",
+    "opt": "R",
+    "tbl": "0119",
+    "cita": "CH04.txt:1808"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:1808",
+   "razon": "ORC-1 es R en la tabla de atributos de v2.5.1",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 2
+   }
+  },
+  {
+   "lugar": "R|RXA|4|",
+   "clase": "R",
+   "seg": "RXA",
+   "campo": 4,
+   "tabla": null,
+   "n_mensajes": 6,
+   "corpus": {
+    "muestras/vxu": 6
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 26,
+    "dt": "TS",
+    "opt": "R",
+    "tbl": null,
+    "cita": "CH04.txt:11166"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:11166",
+   "razon": "RXA-4 es R en la tabla de atributos de v2.5.1",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 10
+   }
+  },
+  {
+   "lugar": "R|RXA|6|",
+   "clase": "R",
+   "seg": "RXA",
+   "campo": 6,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 20,
+    "dt": "NM",
+    "opt": "R",
+    "tbl": null,
+    "cita": "CH04.txt:11168"
+   },
+   "sostenida": true,
+   "cita": "CH04.txt:11168",
+   "razon": "RXA-6 es R en la tabla de atributos de v2.5.1",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|18|0396",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 18,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "NIP002": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH04.txt:11180"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['NIP002'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|5|0292",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 5,
+   "tabla": "0292",
+   "n_mensajes": 4,
+   "corpus": {
+    "muestras/vxu": 4
+   },
+   "valores": {
+    "136": 1,
+    "141": 1,
+    "140": 1,
+    "49281-0215-88": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": "0292",
+    "cita": "CH04.txt:11167"
+   },
+   "sostenida": null,
+   "razon": "tabla 0292 de HL7; ['136', '141', '140', '49281-0215-88'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:995",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "no_cuenta": 4
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|5|0396",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 5,
+   "tabla": "0396",
+   "n_mensajes": 2,
+   "corpus": {
+    "muestras/vxu": 2
+   },
+   "valores": {
+    "CPT": 2
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": "0292",
+    "cita": "CH04.txt:11167"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['CPT'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 2
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|21|0323",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 21,
+   "tabla": "0323",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "CP": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 2,
+    "dt": "ID",
+    "opt": "O",
+    "tbl": "0323",
+    "cita": "CH04.txt:11190"
+   },
+   "sostenida": null,
+   "razon": "tabla 0323 de HL7; ['CP'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:418",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|7|0396",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 7,
+   "tabla": "0396",
+   "n_mensajes": 3,
+   "corpus": {
+    "muestras/vxu": 3
+   },
+   "valores": {
+    "UCUM": 5
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "C",
+    "tbl": null,
+    "cita": "CH04.txt:11169"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['UCUM'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 5
+   }
+  },
+  {
+   "lugar": "T_HL7|RXR|1|0396",
+   "clase": "T_HL7",
+   "seg": "RXR",
+   "campo": 1,
+   "tabla": "0396",
+   "n_mensajes": 4,
+   "corpus": {
+    "muestras/vxu": 4
+   },
+   "valores": {
+    "NCIT": 6
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": "0162",
+    "cita": "CH04.txt:9260"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['NCIT'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 6
+   }
+  },
+  {
+   "lugar": "T_HL7|OBX|17|0396",
+   "clase": "T_HL7",
+   "seg": "OBX",
+   "campo": 17,
+   "tabla": "0396",
+   "n_mensajes": 4,
+   "corpus": {
+    "muestras/vxu": 4
+   },
+   "valores": {
+    "CDCPHINVS": 5
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH07.txt:2547"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['CDCPHINVS'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 5
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|9|0396",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 9,
+   "tabla": "0396",
+   "n_mensajes": 4,
+   "corpus": {
+    "muestras/vxu": 4
+   },
+   "valores": {
+    "NIP001": 7
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": null,
+    "cita": "CH04.txt:11171"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['NIP001'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 7
+   }
+  },
+  {
+   "lugar": "R|OBX|11|",
+   "clase": "R",
+   "seg": "OBX",
+   "campo": 11,
+   "tabla": null,
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {},
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 1,
+    "dt": "ID",
+    "opt": "R",
+    "tbl": "0085",
+    "cita": "CH07.txt:2541"
+   },
+   "sostenida": true,
+   "cita": "CH07.txt:2541",
+   "razon": "OBX-11 es R en la tabla de atributos de v2.5.1",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sostenido": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|IN1|2|0396",
+   "clase": "T_HL7",
+   "seg": "IN1",
+   "campo": 2,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "072": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "R",
+    "tbl": "0072",
+    "cita": "CH06.txt:3273"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['072'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|NK1|20|0396",
+   "clase": "T_HL7",
+   "seg": "NK1",
+   "campo": 20,
+   "tabla": "0396",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "ISO639": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": "0296",
+    "cita": "Ch03.txt:7036"
+   },
+   "sostenida": null,
+   "razon": "tabla 0396 de HL7; ['ISO639'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:511",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "sin_decidir": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|NK1|4|0399",
+   "clase": "T_HL7",
+   "seg": "NK1",
+   "campo": 4,
+   "tabla": "0399",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "USA": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "XAD",
+    "opt": "O",
+    "tbl": null,
+    "cita": "Ch03.txt:7019"
+   },
+   "sostenida": null,
+   "razon": "tabla 0399 de HL7; ['USA'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:548",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": true,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  },
+  {
+   "lugar": "T_HL7|RXA|17|0227",
+   "clase": "T_HL7",
+   "seg": "RXA",
+   "campo": 17,
+   "tabla": "0227",
+   "n_mensajes": 1,
+   "corpus": {
+    "muestras/vxu": 1
+   },
+   "valores": {
+    "CSL": 1
+   },
+   "longitudes": {},
+   "atributo_v251": {
+    "len": 250,
+    "dt": "CE",
+    "opt": "O",
+    "tbl": "0227",
+    "cita": "CH04.txt:11179"
+   },
+   "sostenida": null,
+   "razon": "tabla 0227 de HL7; ['CSL'] no están en su lista impresa: sin decidir, porque el texto permite extender las tablas de HL7 (v2.5.1, CH02.txt:542; Q-IV-D-11)",
+   "cita": "AppendixA.txt:704",
+   "tipo_en_indice": "HL7",
+   "reclasificado_por_el_indice": false,
+   "resultado_por_error": {
+    "no_cuenta": 1
+   }
+  }
+ ],
+ "ajustes_por_valor": [
+  {
+   "lugar": "E|PRT||",
+   "por": "aparte: segmento sin tabla de atributos en v2.5.1",
+   "n": 8
+  },
+  {
+   "lugar": "L|OBX|2|",
+   "por": "OBX-2 «CWE»: no cabe en el LEN 2 (v2.5.1, CH07.txt:2529), y el texto lo admite (CH07.txt:2593): el estándar se contradice",
+   "n": 9
+  },
+  {
+   "lugar": "T_HL7|CTD|3|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|FT1|19|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 2
+  },
+  {
+   "lugar": "T_HL7|IN1|2|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|MSH|17|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|NK1|20|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|NK1|4|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBR|4|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBR|9|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBX|17|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 5
+  },
+  {
+   "lugar": "T_HL7|OBX|24|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|OBX|2|0125",
+   "por": "OBX-2 «CWE»: la 0125 impresa no lo trae, y v2.5.1, CH07.txt:2593, dice que todos los tipos de HL7 valen salvo CM, CQ, SI e ID (el estándar se contradice)",
+   "n": 9
+  },
+  {
+   "lugar": "T_HL7|OBX|2|0125",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 2
+  },
+  {
+   "lugar": "T_HL7|OBX|3|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 2
+  },
+  {
+   "lugar": "T_HL7|OBX|6|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 20
+  },
+  {
+   "lugar": "T_HL7|ORC|22|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|ORC|31|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|PID|10|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 22
+  },
+  {
+   "lugar": "T_HL7|PID|11|0399",
+   "por": "tabla externa, ISO 3166, forma de tres letras (v2.5.1, CH02.txt:4451-4456): «USA» es suyo",
+   "n": 11
+  },
+  {
+   "lugar": "T_HL7|PID|22|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 17
+  },
+  {
+   "lugar": "T_HL7|PID|3|0203",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|PV1|8|0200",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|PV1|9|0200",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|17|0227",
+   "por": "valor de otro sistema (MVX)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|18|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|21|0323",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|5|0292",
+   "por": "valor de otro sistema (CVX)",
+   "n": 3
+  },
+  {
+   "lugar": "T_HL7|RXA|5|0292",
+   "por": "valor de otro sistema (NDC)",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|RXA|5|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 2
+  },
+  {
+   "lugar": "T_HL7|RXA|7|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 5
+  },
+  {
+   "lugar": "T_HL7|RXA|9|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 7
+  },
+  {
+   "lugar": "T_HL7|RXR|1|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 6
+  },
+  {
+   "lugar": "T_HL7|SPM|27|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0396",
+   "por": "Q-IV-D-11b: sin decidir",
+   "n": 1
+  },
+  {
+   "lugar": "T_HL7|SPM|4|0487",
+   "por": "valor de otro sistema (SCT)",
+   "n": 1
+  }
+ ],
+ "atributos_leidos": 2068,
+ "indice_tablas": 476
+}

@@ -1,0 +1,459 @@
+{
+ "n": 223,
+ "total": {
+  "valido": 21,
+  "invalido": 141,
+  "no_decidible": 61
+ },
+ "por_version": {
+  "2.3": {
+   "invalido": 6
+  },
+  "2.4": {
+   "no_decidible": 1
+  },
+  "2.5.1": {
+   "valido": 14,
+   "invalido": 11,
+   "no_decidible": 19
+  },
+  "2.6": {
+   "invalido": 94,
+   "no_decidible": 7,
+   "valido": 7
+  },
+  "2.8": {
+   "invalido": 30,
+   "no_decidible": 34
+  }
+ },
+ "por_grupo": {
+  "muestras/cv": {
+   "valido": 1,
+   "invalido": 34,
+   "no_decidible": 28
+  },
+  "muestras/mdm": {
+   "invalido": 68,
+   "no_decidible": 7
+  },
+  "muestras/vxu": {
+   "valido": 20,
+   "no_decidible": 26,
+   "invalido": 39
+  }
+ },
+ "frase": "De las 223 muestras que declaran otra versión que la 2.5, con el esquema de IRIS de la suya, 21 son válidas, 141 inválidas y 61 sin decidir; de las 5 nuevas que se apoyan en muestras, 2 siguen sin ningún mensaje válido",
+ "q_vd_3_las_tres_respuestas": {
+  "Q-VD-3b_aparte_(la_del_ANTES,_en_el_titular)": {
+   "valido": 21,
+   "invalido": 141,
+   "no_decidible": 61
+  },
+  "dentro": {
+   "valido": 8,
+   "invalido": 174,
+   "no_decidible": 41
+  },
+  "Q-VD-3c_sin_decidir": {
+   "valido": 8,
+   "invalido": 141,
+   "no_decidible": 74
+  }
+ },
+ "validas_que_dependen_de_q_vd_3": [
+  "vxu/lfh-CodeableConceptTest__L101.hl7",
+  "vxu/lfh-FHIRExtensionsTest__L38.hl7",
+  "vxu/lfh-FHIRExtensionsTest__L56.hl7",
+  "vxu/lfh-FHIRExtensionsTest__L82.hl7",
+  "vxu/lfh-Hl7IdentifierFHIRConversionTest__L41.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L179.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L186.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L194.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L204.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L213.hl7",
+  "vxu/lfh-Hl7PatientFHIRConversionTest__L222.hl7",
+  "vxu/lfh-Hl7TelecomFHIRConversionTest__L27.hl7",
+  "vxu/lfh-Hl7TelecomFHIRConversionTest__L87.hl7"
+ ],
+ "veredictos_iguales_que_la_lectura_sellada": true,
+ "pasada_de_repeticiones": {
+  "nota": "medida en las FILAS, en la variante que manda, como en la 31: «el segmento tiene más campos de los que permite la estructura»",
+  "muestras": 132,
+  "por_version": {
+   "2.5.1": 40,
+   "2.8": 21,
+   "2.3": 4,
+   "2.6": 67
+  },
+  "por_version_y_segmento": {
+   "2.3 EVN": 1,
+   "2.3 MSH": 3,
+   "2.5.1 MSH": 39,
+   "2.5.1 PV1": 1,
+   "2.6 IN2": 2,
+   "2.6 MSH": 45,
+   "2.6 RXA": 4,
+   "2.6 TXA": 16,
+   "2.8 ARV": 2,
+   "2.8 OBX": 7,
+   "2.8 ROL": 12
+  },
+  "por_veredicto_final": {
+   "invalido": 99,
+   "valido": 13,
+   "no_decidible": 20
+  }
+ },
+ "otras_formas_que_el_conductor_no_reconoce": [
+  {
+   "muestra": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L661.hl7",
+   "version": "2.5.1",
+   "pasada": "dm",
+   "veredicto": "invalido",
+   "forma": "ERROR <EnsEDI>ErrMapRequired: Missing required ORCgrp(N).RXA element at segment N"
+  },
+  {
+   "muestra": "cv/lfh-sample_unix.hl7",
+   "version": "2.6",
+   "pasada": "dl",
+   "veredicto": "invalido",
+   "forma": "Field size restriction exceeded in segment N:MSH.  Field N is larger than segment structure N.N:MSH permits it to be."
+  }
+ ],
+ "frente_a_la_31": {
+  "invalido -> invalido": 140,
+  "invalido -> no_decidible": 29,
+  "no_decidible -> invalido": 1,
+  "no_decidible -> no_decidible": 32,
+  "no_decidible -> valido": 21
+ },
+ "errores_sostenidos_por_clase": {
+  "L": 117,
+  "E": 61,
+  "R": 455
+ },
+ "invalidas_por_un_solo_lugar": {
+  "2.5.1": {
+   "MSH-10 (L)": 2,
+   "RXA-4 (R)": 2,
+   "OBX-11 (R)": 1
+  },
+  "2.6": {
+   "PID (E)": 4,
+   "RXA-6 (R)": 3,
+   "PID-3 (R)": 2,
+   "PV2-25 (L)": 2,
+   "PRB (E)": 1,
+   "RXA-4 (R)": 1,
+   "TXA (E)": 1
+  },
+  "2.8": {
+   "OBX-4 (R)": 20,
+   "MRG-1 (R)": 4
+  }
+ },
+ "sin_decidir_por": {
+  "PID-10 (tabla 0396)": 45,
+  "PID-22 (tabla 0396)": 39,
+  "PID-15 (tabla 0396)": 25,
+  "MSH-9 (tabla 0354)": 23,
+  "EVN-4 (tabla 0396)": 20,
+  "OBR-31 (tabla 0396)": 8,
+  "OBR-4 (tabla 0396)": 7,
+  "TQ1-3 (tabla 0396)": 7,
+  "PID-3 (tabla 0203)": 4,
+  "OBX-3 (tabla 0396)": 4,
+  "RXR-1 (tabla 0162)": 4,
+  "RXR-1 (tabla 0396)": 4,
+  "PID-17 (tabla 0396)": 3,
+  "OBX-2 (tabla 0125)": 3,
+  "IAM-2 (tabla 0396)": 2,
+  "IAM-6 (tabla 0396)": 2,
+  "MRG-1 (tabla 0203)": 1,
+  "PID-22 (tabla 0189)": 1,
+  "IN1-2 (tabla 0396)": 1
+ },
+ "sin_decidir_solo_por": {
+  "PID-10 (tabla 0396)": 4,
+  "MSH-9 (tabla 0354)": 2,
+  "PID-3 (tabla 0203)": 1,
+  "PID-15 (tabla 0396)": 1
+ },
+ "muestras_con_algo_aparte": 133,
+ "aparte_por_motivo": {
+  "segmento sin tabla de atributos en v2.5.1": 8,
+  "segmento con más campos de los que define su versión": 132,
+  "forma de error que el conductor no reconoce": 2
+ },
+ "muestras_con_campos_sin_evaluar": [
+  "mdm/ms-MDM-T02-03.hl7",
+  "vxu/lfh-FHIRConverterTest__L272.hl7",
+  "vxu/lfh-Hl7IdentifierFHIRConversionTest__L612.hl7",
+  "vxu/lfh-Hl7IdentifierFHIRConversionTest__L640.hl7",
+  "vxu/lfh-Hl7IdentifierFHIRConversionTest__L686.hl7"
+ ],
+ "sin_decidir_solo_por_tablas_de_usuario_en_v251": [],
+ "contraste_obligatorios_sin_texto_frente_a_v251": {
+  "nota": "no es veredicto: la OPT del mismo campo en el texto de v2.5.1, la versión más cercana con texto",
+  "obligatorios_que_v251_no_hace_obligatorios": {
+   "NK1-7": {
+    "opt_v251": "O",
+    "muestras": 1
+   },
+   "OBX-4": {
+    "opt_v251": "C",
+    "muestras": 26
+   },
+   "OBX-5": {
+    "opt_v251": "C",
+    "muestras": 33
+   },
+   "ORC-7": {
+    "opt_v251": "B",
+    "muestras": 1
+   }
+  },
+  "invalidas_solo_por_esos": [
+   "cv/ms-ADT-A01-01.hl7",
+   "cv/ms-ADT-A02-01.hl7",
+   "cv/ms-ADT-A03-01.hl7",
+   "cv/ms-ADT-A04-01.hl7",
+   "cv/ms-ADT-A05-01.hl7",
+   "cv/ms-ADT-A08-01.hl7",
+   "cv/ms-ADT-A11-01.hl7",
+   "cv/ms-ADT-A13-01.hl7",
+   "cv/ms-ADT-A14-01.hl7",
+   "cv/ms-ADT-A15-01.hl7",
+   "cv/ms-ADT-A16-01.hl7",
+   "cv/ms-ADT-A25-01.hl7",
+   "cv/ms-ADT-A26-01.hl7",
+   "cv/ms-ADT-A27-01.hl7",
+   "cv/ms-ADT-A28-01.hl7",
+   "cv/ms-ADT-A29-01.hl7",
+   "cv/ms-ADT-A31-01.hl7",
+   "mdm/ms-MDM-T02-01.hl7",
+   "mdm/ms-MDM-T06-01.hl7",
+   "mdm/ms-MDM-T10-01.hl7"
+  ],
+  "n_invalidas_solo_por_esos": 20,
+  "todos": {
+   "AL1-1": {
+    "opt_v251": "R",
+    "muestras": 2
+   },
+   "DB1-1": {
+    "opt_v251": "R",
+    "muestras": 4
+   },
+   "IN1-1": {
+    "opt_v251": "R",
+    "muestras": 1
+   },
+   "IN1-3": {
+    "opt_v251": "R",
+    "muestras": 1
+   },
+   "MRG-1": {
+    "opt_v251": "R",
+    "muestras": 6
+   },
+   "MSH-10": {
+    "opt_v251": "R",
+    "muestras": 2
+   },
+   "MSH-11": {
+    "opt_v251": "R",
+    "muestras": 2
+   },
+   "MSH-7": {
+    "opt_v251": "R",
+    "muestras": 1
+   },
+   "NK1-1": {
+    "opt_v251": "R",
+    "muestras": 1
+   },
+   "NK1-7": {
+    "opt_v251": "O",
+    "muestras": 1
+   },
+   "OBR-4": {
+    "opt_v251": "R",
+    "muestras": 46
+   },
+   "OBX-11": {
+    "opt_v251": "R",
+    "muestras": 25
+   },
+   "OBX-3": {
+    "opt_v251": "R",
+    "muestras": 34
+   },
+   "OBX-4": {
+    "opt_v251": "C",
+    "muestras": 26
+   },
+   "OBX-5": {
+    "opt_v251": "C",
+    "muestras": 33
+   },
+   "ORC-1": {
+    "opt_v251": "R",
+    "muestras": 9
+   },
+   "ORC-7": {
+    "opt_v251": "B",
+    "muestras": 1
+   },
+   "PID-3": {
+    "opt_v251": "R",
+    "muestras": 2
+   },
+   "PID-5": {
+    "opt_v251": "R",
+    "muestras": 45
+   },
+   "RXA-1": {
+    "opt_v251": "R",
+    "muestras": 4
+   },
+   "RXA-2": {
+    "opt_v251": "R",
+    "muestras": 4
+   },
+   "RXA-4": {
+    "opt_v251": "R",
+    "muestras": 16
+   },
+   "RXA-5": {
+    "opt_v251": "R",
+    "muestras": 2
+   },
+   "RXA-6": {
+    "opt_v251": "R",
+    "muestras": 11
+   },
+   "TXA-12": {
+    "opt_v251": "R",
+    "muestras": 53
+   },
+   "TXA-17": {
+    "opt_v251": "R",
+    "muestras": 41
+   },
+   "TXA-2": {
+    "opt_v251": "R",
+    "muestras": 41
+   }
+  }
+ },
+ "nuevas": {
+  "n": 5,
+  "sin_ningun_valido": [
+   "VX-M14",
+   "VX-M15"
+  ],
+  "con_algun_valido": [
+   "L-1",
+   "L-11",
+   "L-22"
+  ],
+  "afectadas": [],
+  "por_estado": {
+   "intacta": 5
+  }
+ },
+ "prevision": {
+  "PVD1_validas_pct_por_version 2.5.1": {
+   "previsto": [
+    35,
+    10,
+    70
+   ],
+   "medido": 31.8,
+   "acierta": true
+  },
+  "PVD1_validas_pct_por_version 2.6": {
+   "previsto": [
+    15,
+    0,
+    50
+   ],
+   "medido": 6.5,
+   "acierta": true
+  },
+  "PVD1_validas_pct_por_version 2.8": {
+   "previsto": [
+    10,
+    0,
+    40
+   ],
+   "medido": 0.0,
+   "acierta": true
+  },
+  "PVD2_validas_pct_total": {
+   "previsto": [
+    17,
+    3,
+    45
+   ],
+   "medido": 9.4,
+   "acierta": true
+  },
+  "PVD3_invalidas_pct_total": {
+   "previsto": [
+    45,
+    15,
+    80
+   ],
+   "medido": 63.2,
+   "acierta": true
+  },
+  "PVD4_sin_decidir_pct_total": {
+   "previsto": [
+    38,
+    10,
+    75
+   ],
+   "medido": 27.4,
+   "acierta": true
+  },
+  "PVD5_invalidas_en_la_31_que_salen_validas": {
+   "previsto": [
+    25,
+    5,
+    70
+   ],
+   "medido": 0,
+   "acierta": false
+  },
+  "PVD6_muestras_con_algo_aparte_pct": {
+   "previsto": [
+    20,
+    0,
+    60
+   ],
+   "medido": 59.6,
+   "acierta": true
+  },
+  "PVD7_nuevas_con_muestras_sin_ningun_mensaje_valido": {
+   "previsto": [
+    2,
+    1,
+    2
+   ],
+   "medido": 2,
+   "acierta": true
+  },
+  "Jev pv_validas (menos_20)": {
+   "medido": "menos_20",
+   "acierta": true
+  },
+  "Jev pv_nuevas (las_dos)": {
+   "medido": 2,
+   "acierta": true
+  }
+ },
+ "prevision_aciertos": "10 de 11"
+}

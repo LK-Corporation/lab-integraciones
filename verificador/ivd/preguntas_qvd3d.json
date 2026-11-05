@@ -1,0 +1,4 @@
+{
+ "q_vd_3d": {"type": "choice", "instructions": "Q-VD-3d: qué regla de Q-VD-3 va en el titular de la etapa 32.",
+  "criteria": {"la_del_antes": "(a) La del ANTES (aparte, 21/141/61); «sin decidir» y «dentro», como sensibilidad.", "cuarta_pregunta": "(b) Una cuarta pregunta con el estado completo, revisado antes por el lector a ciegas; va al titular lo que salga."}}
+}

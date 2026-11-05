@@ -1,0 +1,71 @@
+# sellado el 5-nov-2026, antes de pasar ninguna muestra por el aparato de la 32; control en TODO BIEN (CONTROL-IVD.json)
+3a61e0ead8e0b3d737f334343f1515d90baf3c33e5b4fbde90bf6ac34454befb  ../ANTES-ETAPA-IVDECLARADA.md
+da86c00e97cfa2e5c2501c8c1f03dd112f80ecce1126d1911a71ea37375b0622  estado_qvd.md
+bcf756706a3b94b6e8835cbfa07a91369482ba40e250a3f9df8d4e5c394508da  preguntas_qvd.json
+09f0cc7c0217a2fd5bc04483942ee0a8f28db31cd19eb061961402f510d413b1  decision-jev-qvd.md
+fa4c185eec407e21a00009363484eeb86fa040902f856cad8b753154b928d902  estado_qvd3b.md
+4f18c1e5ba0dd95a5a27bae2c50181d461037ec1caa4e17c014cf5a0a5b8efa2  preguntas_qvd3b.json
+971337a788ba033b5c82f06847d6207f8c7a17677ed8625477f29bc57b8b65ab  decision-jev-qvd3b.md
+b228caa3e90794d04e715b84c06bd635f8622859f98ea22512a201e9ca8d2d08  estado_prevision_ivd.md
+85c7c0eb187af98b60593bc1d0f278466181d6eb009556e6e0934ea6f7a7554d  preguntas_prevision_ivd.json
+ed4df4524a5fac949936c43da014a0606a11d61ddbb08b68668aa4e892b4578d  decision-jev-prevision-ivd.md
+e1d51b7cf71de33077e666247f3b93c156aabef02a52606a6b474da6906bada8  PREVISION-IVD.json
+c643ef17765ce7571f475acd3c4f63b4a9cd29a928614a6206df18309d8fa04c  Lab.IVD.Validar.cls
+483d895a660490467791eec5a7bee3e9ccf7f91e049cd969ca28ef9342154ead  cargar_ivd.txt
+477c7c1e88ab222f630dee5a6d48878c49d19efc69c6d7f8305c5bec06510cd7  prueba_ivd.txt
+23011cee6f2a4f193408a87c86a6cfd5e1476055a17419d5ddf89f05a9efd732  prueba_lote_ivd.py
+3e0589af91f505ef22fdb99047a759e5a2426e394af1663ccd75e3762289cb43  texto_ivd.py
+61c404fe23b6a3a8e75a054a84323c1c55c3e23bb330142d4d791c71373e2f1d  hacer_vista_251.sh
+33a4850f1a7da1ea0aefcc5477e0371145f48d8742f2596ff663e181d632b66e  tablas_ivd.py
+84f098fddd658d20a53b82d566a8f12caf51b7eb51614e92b8c7e6bd3ed9eecf  TABLAS-TIPO-IVD251.json
+d8a19032cd2a8820ca34ebdd3df65cb6f058e6dc63dca6ff6373ce77502c18cc  hacer_validar_ivd.py
+3d1389ecb963c0b0f1df1fc3f14f327f07f970403ccd3b7225841c09842ce102  validar_ivd251.py
+4eabb3d7c2cf796b71f1c412a4147fd95f1dce7f16dbffc73d9a00229392fe32  validar_ivdst.py
+812611faf65584d8c94fd26f49523eec57ddba593e9f630247d2606b56c44a36  hacer_lectura_ivd.py
+b6a392afa09eb05f35a99b3d313c3ebe13c185cc7f2de304b90768d1e7305c3d  lectura_ivd251.py
+01081e13fe390086a4484321eadc60a70d6aa12965b5a821c587e3c6c084ae59  lectura_ivdst.py
+827385f8021b3cd02884ea47113b065e49bb915788b0e4783f26c293d6a06047  corpus_ivd.py
+3b98f526cc5e85d5a01f2df6e04b60bcab5b4b1304baf6102e0f8b0d4cb38445  CORPUS-IVD-lista.json
+a663b28e032a44b9659d062e30060b95f14727f12e704d4df7121f629d998a86  control_ivd.py
+4994d7d0a5985e1d692101961c3a78431879c18ad957f276b987931952748df7  CONTROL-IVD.json
+# lo que no se publica (el texto de HL7 no se redistribuye; las muestras están en sus proyectos), solo su huella
+b5954dc6a5c3074dfecc31650d652952f504df0a698a778ae991ec840b1160f5  ../../privado/ivd/TABLAS-VALORES-IVD251.json
+610ebd93efcc3f230cdf63218fc08db8d24e67985efecf05e8c6800131d22a99  ../../privado/ivd/corpus251/CORPUS-IV.json
+4a8da87bf23caa575e4373311eab7e0b77a830794eca65daebaf98fb7bf22f99  ../../privado/ivd/corpusst/CORPUS-IV.json
+# de los que salen las copias, sin cambios desde la 31
+2c866e2dd12e0f48ecb46da3f6a08a86c30efb3630b14893c9f257b8a98c33a4  ../ivm/validar_ivm.py
+b3f05df93a8a64fa9f306b13d0f109a2eb7f05687a90cf261cac08a381e4b50b  ../ivm/lectura_ivm.py
+89b2167b148723212f7afe99cafb2bb95a96e1d7a10d87deb5ab1cf17b811a08  ../iv/tablas_iv.py
+# --- tras la revisión a ciegas (5-nov, un lector; dos bloqueantes): Q-VD-3 por tercera vez, después de correr, con los hechos de los dos lados y el efecto medido (Q-VD-3c: sin decidir, estado_qvd3c.md); las dos lecturas dejan sin decidir los campos de más, y la de la 2.5.1 anota aparte las otras formas que el conductor no reconoce; el control, con N-C2, N-C3 y el negativo de N-C3 (TODO BIEN); el cruce mide la pasada de repeticiones en las FILAS y da las tres respuestas a Q-VD-3. El conductor y la clase de IRIS no cambian; la corrida no se repite. Lo de arriba queda como historia. Las de abajo son las finales
+344d02d08f18b441241d4507561402e691ed74e5dc8637594130d1383290a707  estado_qvd3c.md
+19ea2200081f6cac516f2b5b36989f160ad8ae3bcb27dcd490d8b7bd8427c437  preguntas_qvd3c.json
+ae39222f4188fc93099e449c52be3b4d37c760dfc258be7edde76e27bc073d15  decision-jev-qvd3c.md
+b7f4c62c5744b044793cf7e6ab14aabf89d74cba467cc9da8686e0f603d34453  hacer_lectura_ivd.py
+6ce21f7f2db391c144ecff6797fc938c078ad2a513f9ba147efeb99312c758c8  lectura_ivd251.py
+91999774e2d8ca81a084f8b7056a27270a94f3a91676eef234725ab7334307ea  lectura_ivdst.py
+7d28e1f1e3b67bc4440a60f313c1100a67e7483d0fc424ca73c1a19fe0175cb1  control_ivd.py
+98ffb0b5d18c330d5f14cd0f1ffa6e6f7bcd21c0b0a65704fe14277ebc37ade6  CONTROL-IVD.json
+7d2902f8a7269fc82c7ee603df4e83a8afa482b7d08411306846118afc9032fa  cruce_ivd.py
+# los veredictos de la lectura sellada, guardados aparte, y los finales (privados: solo su huella)
+110bf6212323eb3447a17e3549c131ee6e808ad916215e9a5d0ac1ae901e7f10  ../../privado/ivd/VEREDICTOS-IVD251-sellada.jsonl
+63626fa29e0c5cfe513c2cdf02ed62bb36ade332624fd2692086388a38d6e0c9  ../../privado/ivd/VEREDICTOS-IVDST-sellada.jsonl
+25c38c58dff9562b7ec1ff6fb24ea87ede5057af4f224769aa25c1d7c23fb13b  ../../privado/ivd/VEREDICTOS-IVD251.jsonl
+479e58f8f9044254bc29f75f8e67107fe2fb26f87035aad7e444d9f2d4e0a750  ../../privado/ivd/VEREDICTOS-IVDST.jsonl
+# --- tras la segunda pasada de la revisión a ciegas (5-nov; un bloqueante: el estado de Q-VD-3c no era neutral ni traía todos los hechos): Q-VD-3d (estado_qvd3d.md), qué regla va en el titular: la del ANTES (aparte, Q-VD-3b), con «sin decidir» y «dentro» como sensibilidad. Las dos lecturas vuelven a poner aparte los campos de más (la de la 2.5.1 sigue anotando la clase X, sin cambiar ningún veredicto: los finales son los de la lectura sellada); N-C2 espera «aparte» en la lectura; el cruce da las tres respuestas y deja de dar la previsión con la lectura sellada. El bloque de arriba queda como historia. Las versiones de antes de correr de lo que cambió, en sellada/ (sus huellas son las del primer bloque). Las de abajo son las finales
+f21fa6fce8f22641de0e09353b58356b24d51a73e6bfd25ce624fb0ff5b59207  estado_qvd3d.md
+07ef0b5d7bf2defd608596a7da0a320c154e9c7c971684350384cda68efc67b3  preguntas_qvd3d.json
+573787d5e9d671fef99fdf49966a38dfcaf249547db93d81784c15495d0071a0  decision-jev-qvd3d.md
+3eda9eb1c0a19fd422e411d1201ffe50c9ec2f8cf5f00ef992fada0f79c5fa7a  hacer_lectura_ivd.py
+910eeed80fb026d4bfba2df456d9478dbd55331a2f302862f9b3cdc2745fbd31  lectura_ivd251.py
+589187771d1b9a07f9c60a29a260a46847f62fd8ecb83285db6ca8995481b641  lectura_ivdst.py
+e8cd0118f3e03d432b2c89fcca8426dc833903a16a10ce19718ddfa12d38af38  control_ivd.py
+bcd89b9c3863746677d1db980c19d19dc046878c02bd3e48f95bf40a207dda8c  CONTROL-IVD.json
+fa9289b0eb6461164ce23179c644696129c61cfa2ce4ea534432b58dd1b6de41  cruce_ivd.py
+4994d7d0a5985e1d692101961c3a78431879c18ad957f276b987931952748df7  sellada/CONTROL-IVD.json
+a663b28e032a44b9659d062e30060b95f14727f12e704d4df7121f629d998a86  sellada/control_ivd.py
+812611faf65584d8c94fd26f49523eec57ddba593e9f630247d2606b56c44a36  sellada/hacer_lectura_ivd.py
+b6a392afa09eb05f35a99b3d313c3ebe13c185cc7f2de304b90768d1e7305c3d  sellada/lectura_ivd251.py
+01081e13fe390086a4484321eadc60a70d6aa12965b5a821c587e3c6c084ae59  sellada/lectura_ivdst.py
+# los veredictos finales (privados: solo su huella), iguales en veredicto a los sellados
+cd09334e8c501bf1077fd602dfd25c90f1cf4524401b41e8be41dfefb49419a6  ../../privado/ivd/VEREDICTOS-IVD251.jsonl
+685239061fe690226f4642cd893c2f0d7f35ae6d51dfc598dd39e8db223fcf41  ../../privado/ivd/VEREDICTOS-IVDST.jsonl

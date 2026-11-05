@@ -1,0 +1,8 @@
+{
+ "q_vd_1": {"type": "choice", "instructions": "Q-VD-1: en las versiones sin texto en el laboratorio (2.3, 2.4, 2.6 y 2.8), qué cuenta como error.",
+  "criteria": {"calibrado": "(a) Estructura, obligatorios y longitudes, como los da IRIS; las tablas de HL7, sin decidir; las de usuario, aviso.", "todo_iris": "(b) Todo lo que da IRIS, salvo las tablas de usuario vacías.", "solo_estructura": "(c) Solo la estructura."}},
+ "q_vd_2": {"type": "choice", "instructions": "Q-VD-2: cómo se leen las 44 muestras de la 2.5.1.",
+  "criteria": {"como_las_demas": "(a) Como las demás, con la regla de Q-VD-1.", "texto_251": "(b) Con el texto de v2.5.1, como la 30 con el de v2.5."}},
+ "q_vd_3": {"type": "choice", "instructions": "Q-VD-3: si la pasada de repeticiones entra en el veredicto.",
+  "criteria": {"aparte": "(a) No: se mide aparte, como en la 31.", "dentro": "(b) Sí: es un error de estructura que IRIS da desde el esquema de la versión."}}
+}

@@ -1,0 +1,991 @@
+{
+ "deterministas": {
+  "251": true,
+  "st": true
+ },
+ "fallos": [],
+ "lecturas": {
+  "2.5.1-N-C2": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-C3": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-E1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-E3": {
+   "aparte": [
+    "E|QQQ||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-L1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-M2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-R1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-R2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-T1": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.5.1-N-T2": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.5.1-N-T4": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-U1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-N-V1": {
+   "aparte": [
+    "E|ARV||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-Z1": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-N-Z2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.5.1-base-adt": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.5.1-base-oru": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-N-C2": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-N-E1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-E3": {
+   "aparte": [
+    "2.6|E|QQQ||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-N-L1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-M2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-R1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-R2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-T1": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.6-N-T2": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.6-N-T4": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.6-N-U1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-V1": {
+   "aparte": [
+    "2.6|E|PRT||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-N-V2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-N-Z1": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-N-Z2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.6-base-adt": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.6-base-oru": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-C1": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-C2": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-E1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-E3": {
+   "aparte": [
+    "2.8|E|QQQ||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-L1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-M2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-R1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-R2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-T1": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.8-N-T2": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.8-N-T4": {
+   "bien": true,
+   "veredicto": "no_decidible"
+  },
+  "2.8-N-U1": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-N-V1": {
+   "aparte": [
+    "2.8|E|QQQ||"
+   ],
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-Z1": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-N-Z2": {
+   "bien": true,
+   "veredicto": "invalido"
+  },
+  "2.8-base-adt": {
+   "bien": true,
+   "veredicto": "valido"
+  },
+  "2.8-base-oru": {
+   "bien": true,
+   "veredicto": "valido"
+  }
+ },
+ "limpieza": {
+  "2.5.1-base-adt": [],
+  "2.5.1-base-oru": [
+   {
+    "campo": 6,
+    "clase": "T_HL7",
+    "motivo": "sistema de codificación que la 0396 de la versión no trae (Q-IV-D-11: cuenta)",
+    "seg": "OBX",
+    "tabla": "0396",
+    "valor": "UCUM",
+    "vuelta": 1
+   },
+   {
+    "campo": 6,
+    "clase": "T_HL7",
+    "motivo": "sistema de codificación que la 0396 de la versión no trae (Q-IV-D-11: cuenta)",
+    "seg": "OBX",
+    "tabla": "0396",
+    "valor": "UCUM",
+    "vuelta": 1
+   },
+   {
+    "campo": 6,
+    "clase": "T_HL7",
+    "motivo": "sistema de codificación que la 0396 de la versión no trae (Q-IV-D-11: cuenta)",
+    "seg": "OBX",
+    "tabla": "0396",
+    "valor": "UCUM",
+    "vuelta": 1
+   }
+  ],
+  "2.6-base-adt": [
+   {
+    "campo": 4,
+    "clase": "T_HL7",
+    "motivo": "tabla con valores en el esquema de IRIS, sin texto de la versión: a lectura, sin decidir (Q-VD-1)",
+    "seg": "EVN",
+    "tabla": "0062",
+    "valor": "00",
+    "vuelta": 1
+   },
+   {
+    "campo": 3,
+    "clase": "T_HL7",
+    "motivo": "tabla con valores en el esquema de IRIS, sin texto de la versión: a lectura, sin decidir (Q-VD-1)",
+    "seg": "PV1",
+    "tabla": "0305",
+    "valor": "A",
+    "vuelta": 1
+   }
+  ],
+  "2.6-base-oru": [],
+  "2.8-base-adt": [
+   {
+    "campo": 4,
+    "clase": "T_HL7",
+    "motivo": "tabla con valores en el esquema de IRIS, sin texto de la versión: a lectura, sin decidir (Q-VD-1)",
+    "seg": "EVN",
+    "tabla": "0062",
+    "valor": "00",
+    "vuelta": 1
+   },
+   {
+    "campo": 3,
+    "clase": "T_HL7",
+    "motivo": "tabla con valores en el esquema de IRIS, sin texto de la versión: a lectura, sin decidir (Q-VD-1)",
+    "seg": "PV1",
+    "tabla": "0305",
+    "valor": "A",
+    "vuelta": 1
+   }
+  ],
+  "2.8-base-oru": [
+   {
+    "campo": 4,
+    "clase": "R",
+    "motivo": "según IRIS, sin texto de la versión (Q-VD-1)",
+    "seg": "OBX",
+    "tabla": null,
+    "valor": null,
+    "vuelta": 1
+   },
+   {
+    "campo": 4,
+    "clase": "R",
+    "motivo": "según IRIS, sin texto de la versión (Q-VD-1)",
+    "seg": "OBX",
+    "tabla": null,
+    "valor": null,
+    "vuelta": 1
+   },
+   {
+    "campo": 4,
+    "clase": "R",
+    "motivo": "según IRIS, sin texto de la versión (Q-VD-1)",
+    "seg": "OBX",
+    "tabla": null,
+    "valor": null,
+    "vuelta": 1
+   }
+  ]
+ },
+ "mutantes": {
+  "2.5.1-N-C2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "X",
+      null,
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.5.1-N-C3": {
+   "bien": true,
+   "nuevos": []
+  },
+  "2.5.1-N-E1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "PID",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-E3": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "QQQ",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-L1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "L",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-M2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PV1",
+      2
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-R1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-R2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-T1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "MSH",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-T2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "OBX",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-T4": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_USR",
+      "PID",
+      8
+     ],
+     false
+    ]
+   ]
+  },
+  "2.5.1-N-U1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-V1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "ARV",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.5.1-N-Z1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.5.1-N-Z2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-C2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "X",
+      null,
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.6-N-E1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "PID",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-E3": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "QQQ",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-L1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "L",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-M2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PV1",
+      2
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-R1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-R2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-T1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "MSH",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-T2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "OBX",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-T4": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "PID",
+      8
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-U1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-V1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "PRT",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-V2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "ARV",
+      3
+     ],
+     true
+    ]
+   ]
+  },
+  "2.6-N-Z1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.6-N-Z2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-C1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_USR",
+      "MSH",
+      24
+     ],
+     false
+    ]
+   ]
+  },
+  "2.8-N-C2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "X",
+      null,
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.8-N-E1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "PID",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-E3": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "QQQ",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-L1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "L",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-M2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ],
+    [
+     [
+      "R",
+      "PV1",
+      2
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-R1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-R2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "PID",
+      3
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-T1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "MSH",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-T2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "OBX",
+      11
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-T4": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "T_HL7",
+      "PID",
+      8
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-U1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "R",
+      "MSH",
+      10
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-V1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "E",
+      "QQQ",
+      null
+     ],
+     true
+    ]
+   ]
+  },
+  "2.8-N-Z1": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     false
+    ]
+   ]
+  },
+  "2.8-N-Z2": {
+   "bien": true,
+   "nuevos": [
+    [
+     [
+      "Z",
+      "ZPI",
+      null
+     ],
+     true
+    ]
+   ]
+  }
+ },
+ "negativo_N-C1_con_el_conductor_de_la_31": {
+  "bien": true,
+  "crudo": [
+   "ERROR <Ens>ErrGeneral: Segment structure not obeyed in segment 1:MSH.  Segment has more fields than permitted by segment structure MSH."
+  ],
+  "nuevos": [
+   [
+    [
+     "X",
+     null,
+     null
+    ],
+    false
+   ]
+  ]
+ },
+ "negativo_N-C3_con_el_conductor_de_la_31": {
+  "bien": true,
+  "crudo": [
+   "ERROR <Ens>ErrGeneral: Segment structure not obeyed in segment 4:OBX.  Segment has more fields than permitted by segment structure OBX."
+  ],
+  "nuevos": [
+   [
+    [
+     "X",
+     null,
+     null
+    ],
+    false
+   ]
+  ]
+ }
+}

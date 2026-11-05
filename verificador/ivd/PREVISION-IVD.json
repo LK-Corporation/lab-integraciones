@@ -1,0 +1,22 @@
+{
+ "etapa": "32, las muestras públicas en la versión que declaran (ANTES-ETAPA-IVDECLARADA.md)",
+ "sellada": "5-nov-2026, antes de pasar ninguna muestra por el aparato de la 32; con las dos lecturas ya escritas y el control en TODO BIEN",
+ "quien": "el conductor, sabiendo lo que dio la 31 contra v2.5 en cada versión y lo que dio el control",
+ "decisiones": "ivd/decision-jev-qvd.md (Q-VD-1 calibrado, Q-VD-2 texto de v2.5.1) e ivd/decision-jev-qvd3b.md (Q-VD-3b aparte); las de la 30 y la 31, heredadas",
+ "medido_antes_del_sello": {
+  "muestras": "223 (2.6: 108, 2.8: 64, 2.5.1: 44, 2.3: 6, 2.4: 1); 2 de la 2.5 se quedan con la 31",
+  "la_31_por_version": "2.5.1: 11 inválidas y 33 sin decidir (14 solo por MSH-12); 2.6: 95 y 13 (8 solo por MSH-12); 2.8: 58 y 6; 2.3: 5 y 1; 2.4: 0 y 1",
+  "el_control": "41 mutantes y 47 lecturas bien; sin texto, la tabla 0001 de IRIS (PID-8) trae valores, así que un valor fuera queda sin decidir"
+ },
+ "prevision": {
+  "PVD1_validas_pct_por_version": {"2.5.1": [35, 10, 70], "2.6": [15, 0, 50], "2.8": [10, 0, 40],
+                                   "_forma": "[puntual, mínimo, máximo] en % de las muestras de cada versión"},
+  "PVD2_validas_pct_total": [17, 3, 45],
+  "PVD3_invalidas_pct_total": [45, 15, 80],
+  "PVD4_sin_decidir_pct_total": [38, 10, 75],
+  "PVD5_invalidas_en_la_31_que_salen_validas": [25, 5, 70],
+  "PVD6_muestras_con_algo_aparte_pct": [20, 0, 60],
+  "PVD7_nuevas_con_muestras_sin_ningun_mensaje_valido": [2, 1, 2]
+ },
+ "regla": "Si una cantidad cae fuera de su intervalo, se dice y se explica; el aparato y la lectura no se tocan para que caiga dentro."
+}
