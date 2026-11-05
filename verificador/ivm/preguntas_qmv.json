@@ -1,0 +1,6 @@
+{
+ "q_mv_1": {"type": "choice", "instructions": "Q-MV-1: contra qué versión se valida cada muestra.",
+  "criteria": {"v25": "(a) Contra v2.5, como el juez.", "declarada": "(b) Contra la versión que declara, con el esquema de IRIS de esa versión.", "las_dos": "(c) Las dos, y se publican lado a lado."}},
+ "q_mv_2": {"type": "choice", "instructions": "Q-MV-2: qué se hace con un error que no se puede leer con el texto de v2.5 o v2.5.1.",
+  "criteria": {"cuenta_sin_lectura": "(a) Cuenta como lo marca IRIS, marcado sin lectura.", "sin_decidir": "(b) Queda sin decidir.", "aparte": "(c) Se da aparte y no entra en el veredicto."}}
+}

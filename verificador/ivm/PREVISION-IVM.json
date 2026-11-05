@@ -1,0 +1,18 @@
+{
+ "etapa": "31, las muestras públicas por el validador de IRIS (ANTES-ETAPA-IVMUESTRAS.md)",
+ "sellada": "4-nov-2026, noche, antes de pasar ninguna muestra por IRIS; con la lectura de las muestras (ivm/lectura_ivm.py) ya escrita",
+ "quien": "el conductor, sabiendo lo que dio la etapa 30 en los mensajes del laboratorio y las versiones que declaran las muestras",
+ "decisiones": "ivm/decision-jev-qmv.md: Q-MV-1 contra v2.5; Q-MV-2 lo que no se lee con v2.5, aparte. Las de la 30, heredadas",
+ "medido_antes_del_sello": {"muestras": "225 (cv 65, vxu 85, mdm 75; 222 distintas); 4 ficheros sin MSH no entran",
+                            "versiones": "cv: 52 de la 2.8; vxu: 41 de la 2.5.1 y 41 de la 2.6; mdm: 64 de la 2.6"},
+ "prevision": {
+  "PVM1_validas_pct": {"muestras/cv": [30, 5, 70], "muestras/vxu": [20, 0, 60], "muestras/mdm": [30, 0, 70],
+                       "_forma": "[puntual, mínimo, máximo] en % de las muestras de cada grupo"},
+  "PVM2_sin_decidir_pct_total": [40, 10, 80],
+  "PVM3_invalidas_pct_total": [25, 5, 60],
+  "PVM4_muestras_con_algo_aparte_pct": [60, 20, 100],
+  "PVM5_nuevas_con_muestras_sin_ningun_mensaje_valido_contando_las_muestras": [2, 0, 5],
+  "PVM6_nuevas_afectadas": [0, 0, 1]
+ },
+ "regla": "Si una cantidad cae fuera de su intervalo, se dice y se explica; el aparato y la lectura no se tocan para que caiga dentro."
+}

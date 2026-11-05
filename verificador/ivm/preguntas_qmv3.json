@@ -1,0 +1,4 @@
+{
+ "q_mv_3": {"type": "choice", "instructions": "Q-MV-3: qué se hace con MSH-12 cuando la muestra declara una versión que no está en la 0104 de v2.5.",
+  "criteria": {"sin_decidir": "(a) Queda sin decidir, como en la 30 (Q-IV-D-11b).", "aparte": "(b) Va aparte, declarado como una diferencia con la 30 por la decisión S19 del juez."}}
+}

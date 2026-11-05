@@ -1,0 +1,4 @@
+{
+ "q_mv_4": {"type": "choice", "instructions": "Q-MV-4: qué se hace con un segmento que v2.5 no define cuando IRIS echa en falta otro donde está él.",
+  "criteria": {"aparato": "(a) Una regla en el aparato, como la de los Z: se quita el segmento, se pasa otra vez el control y se repite la corrida.", "lectura": "(b) Una regla solo en la lectura: el error va aparte y los campos de detrás quedan sin evaluar, declarado.", "declarar": "(c) Nada: se declara con su número y se corrigen las frases que dicen que esos segmentos van aparte."}}
+}

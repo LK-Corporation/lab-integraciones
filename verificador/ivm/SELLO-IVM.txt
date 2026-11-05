@@ -1,0 +1,51 @@
+38469c136a46fce66a649846f4d62ebff7938cc1293a53886b83819e0c2cf86d  ../ANTES-ETAPA-IVMUESTRAS.md
+156e189e3a29732c0931e9315c61fd746b159e0bce74fdb645329737b0261ecf  estado_qmv.md
+78bdf25cf512b0daa24c338ffc4d524adff8d40cf43afb02a5135454767dda5e  decision-jev-qmv.md
+253d546fa89af39c09f4b2e5244a5dc5ed086c8ea7cf5bb898399c665f533c82  PREVISION-IVM.json
+df259aef6dc8af2bc0979c950822845dd67779a72baf7d877ee8c5cb8cfdea23  decision-jev-prevision-ivm.md
+ddb8388b3f8e4436f647a9fe0e974cbfc7e09c2f2e4e5d98f2ff650dddae5e33  corpus_ivm.py
+1494e5bbe18a0903035f329abb98eaacd191808bab567d0204ab9e1fa8787ae4  hacer_lectura_ivm.py
+91fa71482e41615467bf3746016251f3e6552800be7031069f75720b1bff1561  lectura_ivm.py
+2dd76696424773581158a74f434ea780a781ecb3cbe675b1f2a0a8b90e8ffe86  ../iv/validar_iv.py
+4430bfe30a0488b1cd92d3b478f476db20833e549ea337aaac40f6ebacdc34ee  ../iv/Lab.IV.Validar.cls
+# sellado el 4-nov, antes de pasar ninguna muestra por IRIS; el conductor (../iv/validar_iv.py) es el de la etapa 30, sin cambios
+e7d2f9fdf3b1a4d03b1785f976371a74831cb7b27965632d99921eebb7272163  hacer_lectura_ivm.py
+13c76165e08773cbdd975961c9546cd5b44f4fc4ce18dc7075f240a34e727b3d  lectura_ivm.py
+# las dos de arriba, reselladas tras la corrida: lectura_ivm.py escribía los veredictos en su mismo fichero de salida (una ruta de la 30 que no casaba con el nombre nuevo). Solo cambia esa ruta; ninguna regla (en ese momento; lo que cambió después, en la historia del final)
+7a3b538cad16d133e5e306f4aeca80ad269696e5b49db8f3b8f9a5d46620e7e5  hacer_lectura_ivm.py
+4085178fe9b403d89b28600c3682e70f56ad4c8071ac00ba8ae778490da55054  lectura_ivm.py
+47ee6e62bbc019e50ef5d38a5bb3bda73d807f18285bf78e90f021d86a4e59ab  cruce_ivm.py
+e2073285fc5a3aee5502eefaa173ed79f55a03758c66f029d474f278070a20fc  parche_clases_ivm.py
+# las cuatro de arriba, escritas o cambiadas DESPUÉS de la primera corrida (declarado en RESULTADO-IVMUESTRAS.md): la variante que manda cuando MSH-9.3 no tiene estructura en v2.5, una pasada sin leer entera no puede dar válida, la búsqueda exacta de las muestras de VXU, el cruce y la nota de las clases. La segunda corrida subió el tope a 200, como pide el diseño de la 30
+# --- tras la revisión a ciegas (4-nov): la historia de lectura_ivm.py, una huella por versión ---
+# 91fa7148: sellada antes de correr (bloque 1). 13c76165: solo la ruta de los veredictos (bloque 2). 4085178f: la variante que manda cuando MSH-9.3 no tiene estructura en v2.5, y que una pasada sin leer entera no deje salir válida una muestra (bloque 3).
+# Las de abajo son las finales: hacer_lectura_ivm.py cambia solo su docstring (lectura_ivm.py no cambia: sigue en 4085178f), cruce_ivm.py añade las cifras que pidió la revisión y parche_clases_ivm.py corrige el singular de la nota.
+e76ebd730e4f242c51b3554667bc69702293fec27a89260f5568fc91c8fdcf5d  hacer_lectura_ivm.py
+4085178fe9b403d89b28600c3682e70f56ad4c8071ac00ba8ae778490da55054  lectura_ivm.py
+5fcaa52535b518cd7475d5843d04bfcc86bbceb3e9bd31ebd4e14482febc43c8  cruce_ivm.py
+9caded3110c1db36ddf1a801f12a20c2ed593bdb4cb8b879fda88939c6bf9ddd  parche_clases_ivm.py
+# --- tras la segunda revisión a ciegas (4-nov, otro lector): MSH-12 con otra versión ya no va aparte, queda sin decidir como en la 30 (Q-MV-3, decision-jev-qmv3.md); la 0399 trae también USA y GBR; el cruce añade el veredicto por versión, lo sin decidir solo por MSH-12, los campos sin evaluar y la forma de las longitudes; la nota de las clases, con la versión de cada muestra; PVM5, marcada de intervalo ancho. Lo de arriba queda como historia. Las de abajo son las finales
+c4cf649b7079b077c613db500565d15068692cad3558feca3f578066bab5795c  estado_qmv3.md
+6014bab23fb6988f9be71246e5f7eec9ef16d1cee615e9b5c90874531955d2df  decision-jev-qmv3.md
+fe043b3d51a87ebf33674f5e3b876dc818048f457f80f06c2827a6fb9dadfce2  hacer_lectura_ivm.py
+50e4131edf9a849d65983a5611b16f1a35f2b11645c37ad0896ba8a579c8d2e3  lectura_ivm.py
+d8f7cd8fa91487c3414cb613864686dc9165bc49f8152052d7ad37a5840fdc62  cruce_ivm.py
+28005a56f5d409ae14e04248488929374567e91f4ebd1c028f1fe31aeecd2699  parche_clases_ivm.py
+# --- tras la tercera revisión a ciegas (4-nov, otro lector): Q-MV-4 (decision-jev-qmv4.md), la regla de los Z de la 30 para los segmentos que v2.5 no define, en una copia del conductor (validar_ivm.py, hecha por hacer_validar_ivm.py; ../iv/validar_iv.py no cambia) con su control (control_ivm.py, TODO BIEN, CONTROL-IVM.json: el mutante N-V1 y su control negativo con el conductor de la 30); la corrida de las 225 muestras repetida (tope 200); los veredictos llevan el índice y la repetición de cada error; el cruce, el estado de cada nueva y la pasada de repeticiones. Las de abajo son las finales
+# las 723 filas de la 30 con validar_ivm.py, iguales byte a byte a las de la 30: 53ae4c93aa859cf12a2241a091f7f1b86cda490add52ea8b1e079c8306374ee1 (la 30) y 53ae4c93aa859cf12a2241a091f7f1b86cda490add52ea8b1e079c8306374ee1 (validar_ivm.py)
+2ae0442fd62c7dbb4fb309d864a4f51a2542dcc80f10b24b2eb22a8fb5a1e0e2  hacer_validar_ivm.py
+2c866e2dd12e0f48ecb46da3f6a08a86c30efb3630b14893c9f257b8a98c33a4  validar_ivm.py
+84f8f7b9cbe62efd387e8ad1ab213d6bbee4101edb0ccc49584985aa356f74f4  control_ivm.py
+4eaffae1160bf5f1321bf40b2d7e93ca30357048420a729be88eefe00aca41dd  CONTROL-IVM.json
+22ef62794992ac497498e0fb6380fa298a044b0203f6e6c87dd350f67283dc1b  estado_qmv4.md
+0766bc024b564f019be6421e70e315569e52fef9323cff801af0a454fd736395  decision-jev-qmv4.md
+80a6d82a4394a875ad6d30094b57de4be1199cf740318c2cfcd76f35553f4888  hacer_lectura_ivm.py
+b3f05df93a8a64fa9f306b13d0f109a2eb7f05687a90cf261cac08a381e4b50b  lectura_ivm.py
+5d1ee7e8ddea0f0f9f8b5df23eea5ec8cbaa8c95921e2dbcec4580a138a48b8d  cruce_ivm.py
+28005a56f5d409ae14e04248488929374567e91f4ebd1c028f1fe31aeecd2699  parche_clases_ivm.py
+# --- tras la segunda pasada de la tercera revisión (5-nov, el mismo lector): control_ivm.py guarda en CONTROL-IVM.json el resultado de su control negativo (N-V1 con el conductor de la 30: el error de PV1 y campos sin evaluar, bien); la pasada de repeticiones del cruce lee el segmento en el clon estructural, como las otras pasadas, con una afirmación (193 -> 194 y 175 -> 176, un PV1 más; CRUCE-IVM.json no cambia). validar_ivm.py no cambia. Las 723 filas de la 30 con validar_ivm.py, en ../privado/ivm/FILAS-30-CON-VALIDAR-IVM.jsonl. Las de abajo son las finales
+8e1ed874e1deae38f7dc8197d37bb918fd91a56e71084faec1b3761733e1c3ce  hacer_validar_ivm.py
+2c866e2dd12e0f48ecb46da3f6a08a86c30efb3630b14893c9f257b8a98c33a4  validar_ivm.py
+22a990150d12b5c4e9959b3d0a7fd476a9df422e122a20413c42d518a3b8044a  control_ivm.py
+e8addfd790210314027669dfe7b9098faa814b36b5df9e03a1384e6d82b3ae9f  CONTROL-IVM.json
+3eac95cbcd2117c35d8f54a00add6fbce16970ea693bbaa04ddb102e170e60ba  cruce_ivm.py

@@ -208,7 +208,8 @@
    "par_minimo": "VM14-dosis-punto-inicial",
    "fuerza": "fuerte",
    "nota": "misma causa que M-24 del estudio de conversores (OBX-5); aquí es la dosis administrada",
-   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 1 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-6, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6)."
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 1 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-6, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6).",
+   "nota_ivm": "Validador de IRIS sobre las muestras públicas, etapa 31 (ivm/, RESULTADO-IVMUESTRAS.md): su muestra pública tampoco es válida en v2.5 (por RXA-4), así que su apoyo sigue sin ningún mensaje válido de punta a punta; el del laboratorio queda sin decidir, no inválido. La muestra declara la 2.6 en MSH-12 y se valida contra v2.5, como la lee el juez (Q-MV-1). Ninguna de esas reglas toca RXA-6, el campo del hallazgo, y la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M15",
@@ -224,7 +225,8 @@
    "nota": null,
    "nota_auditoria": "Auditoría de validez de la etapa 29 (au/, RESULTADO-AUDITORIA.md): el par VM15 quedó en duda (RE con 0,5 mL, lote y sitio). Se confirma con AU1, válido: RE sin nada administrado.",
    "par_valido": "AU1 (au/pares_auditoria.py)",
-   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-20, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6). Su par de la etapa 29 (AU1), que allí se dio por válido, lo es con la 0396 aparte, como la leyó la 29."
+   "nota_iv": "Validador de IRIS de la etapa 30 (iv/, RESULTADO-IRISVAL.md): ningún mensaje de apoyo del laboratorio es válido de punta a punta en v2.5: 2 sin decidir por UCUM, fuera de la lista impresa de la 0396, que el texto permite extender (Q-IV-D-11). Ninguna de esas reglas toca RXA-20, el campo del hallazgo, así que la clase sigue como está (Q-IV-D-6). Su par de la etapa 29 (AU1), que allí se dio por válido, lo es con la 0396 aparte, como la leyó la 29.",
+   "nota_ivm": "Validador de IRIS sobre las muestras públicas, etapa 31 (ivm/, RESULTADO-IVMUESTRAS.md): sus 6 muestras públicas tampoco son válidas en v2.5 (por MSH-10, OBX-11, ORC-1, RXA-1, RXA-2, RXA-4, RXA-5, RXA-6), así que su apoyo sigue sin ningún mensaje válido de punta a punta; el del laboratorio queda sin decidir, no inválido. Las muestras declaran en MSH-12 la 2.6 (5) y la 2.5.1 (1), y se validan contra v2.5, como las lee el juez (Q-MV-1). Ninguna de esas reglas toca RXA-20, el campo del hallazgo, y la clase sigue como está (Q-IV-D-6)."
   },
   {
    "id": "VX-M16",

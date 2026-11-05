@@ -190,6 +190,26 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Las muestras públicas por el validador de IRIS (31, 4-nov-2026)
+
+> **De las 225 muestras públicas de los dos conversores, validadas contra v2.5 como las lee el juez, IRIS da 0 por válidas,
+> 171 por inválidas y 54 sin decidir. 223 declaran en MSH-12 otra versión, sobre todo la 2.6, la 2.8 y la 2.5.1. De las 5
+> nuevas que se apoyan en muestras, 2 (VX-M14 y VX-M15) quedan sin ningún mensaje válido de punta a punta (su apoyo del
+> laboratorio queda sin decidir y sus muestras son inválidas), y ninguna queda afectada.**
+
+- **Lo que las hace inválidas contra v2.5:** longitudes que esa versión no admite (solo eso, en 40) y obligatorios vacíos o
+  fallos de estructura (131).
+- **Lo que queda sin decidir:** sobre todo la versión declarada, que no está en la tabla 0104 de v2.5, como en la etapa 30. En
+  22 muestras es lo único. Los segmentos que v2.5 no define van aparte.
+- **Cómo:** el aparato de la etapa 30 con una regla más, la que la 30 tenía para los segmentos Z, ahora para los que v2.5 no
+  define, y con su control. La lectura de las muestras se selló antes de correr. Lo cambiado después está declarado:
+  - tras la primera corrida, cuatro cosas y el tope;
+  - tras la segunda revisión a ciegas, la regla de la versión declarada y la tabla de países;
+  - tras la tercera, la regla del aparato.
+
+  Está en [`RESULTADO-IVMUESTRAS.md`](RESULTADO-IVMUESTRAS.md); la pregunta, en
+  [`ANTES-ETAPA-IVMUESTRAS.md`](ANTES-ETAPA-IVMUESTRAS.md).
+
 ## El validador de IRIS como segundo lector (30, 4-nov-2026)
 
 > **De los 723 mensajes sintéticos publicados, IRIS da 277 por válidos en lo que ve y el estándar sostiene, y 94 por
@@ -507,6 +527,8 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
+- **Los ANTES de las etapas 30 y 31 llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-IRISVAL.md` y `ANTES-ETAPA-IVMUESTRAS.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

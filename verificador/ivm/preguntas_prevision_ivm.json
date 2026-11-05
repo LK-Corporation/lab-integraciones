@@ -1,0 +1,6 @@
+{
+ "pv_validas": {"type": "choice", "instructions": "Qué proporción de las 225 muestras sale válida.",
+  "criteria": {"menos_20": "Menos del 20 %.", "20_50": "Entre el 20 % y el 50 %.", "50_80": "Entre el 50 % y el 80 %.", "mas_80": "Más del 80 %."}},
+ "pv_nuevas": {"type": "choice", "instructions": "Cuántas de las cinco nuevas que se apoyan en muestras quedan sin ningún mensaje válido, contando las muestras.",
+  "criteria": {"ninguna": "Ninguna.", "una_o_dos": "Una o dos.", "tres_o_mas": "Tres o más."}}
+}

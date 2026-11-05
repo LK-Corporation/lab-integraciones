@@ -1,0 +1,244 @@
+{
+ "n": 225,
+ "distintas": 222,
+ "total": {
+  "invalido": 171,
+  "no_decidible": 54
+ },
+ "por_grupo": {
+  "muestras/cv": {
+   "invalido": 57,
+   "no_decidible": 8
+  },
+  "muestras/mdm": {
+   "invalido": 75
+  },
+  "muestras/vxu": {
+   "no_decidible": 46,
+   "invalido": 39
+  }
+ },
+ "errores_sostenidos_por_clase": {
+  "R": 390,
+  "E": 81,
+  "L": 658
+ },
+ "muestras_con_algo_aparte": 17,
+ "aparte_por_motivo": {
+  "segmento sin tabla de atributos en v2.5": 42
+ },
+ "importadas_mal": 0,
+ "nuevas": {
+  "n": 5,
+  "con_algun_valido": 3,
+  "sin_ningun_valido": [
+   "VX-M14",
+   "VX-M15"
+  ],
+  "todo_invalido": [],
+  "afectadas": [],
+  "por_estado": {
+   "intacta": 5
+  }
+ },
+ "invalidas_por_causa": {
+  "obligatorios_o_estructura": 131,
+  "solo_longitudes": 40
+ },
+ "pasadas_sin_leer_en_la_variante_que_manda": {
+  "dn": 192,
+  "dl + dn": 1,
+  "ninguna": 31,
+  "dm + dn": 1
+ },
+ "pasadas_cortadas_que_no_son_dn": [
+  {
+   "muestra": "cv/lfh-sample_unix.hl7",
+   "pasada": "dl",
+   "veredicto": "invalido",
+   "error": "ERROR <Ens>ErrGeneral: Field size restriction exceeded in segment 1:MSH.  Field 2 is larger than segment structure 2.5:MSH permits it to be."
+  },
+  {
+   "muestra": "vxu/lfh-Hl7ImmunizationFHIRConversionTest__L661.hl7",
+   "pasada": "dm",
+   "veredicto": "invalido",
+   "error": "ERROR <EnsEDI>ErrMapRequired: Missing required ORCgrp(4).RXA element at segment 42"
+  }
+ ],
+ "variantes_con_alguna_pasada_sin_leer": 234,
+ "validas_con_algo_aparte": 0,
+ "muestras_sin_estructura_en_msh93": 40,
+ "versiones_msh12": {
+  "2.3": 6,
+  "2.4": 1,
+  "2.5": 2,
+  "2.5.1": 44,
+  "2.6": 108,
+  "2.8": 64
+ },
+ "veredicto_por_version": {
+  "2.3": {
+   "invalido": 5,
+   "no_decidible": 1
+  },
+  "2.4": {
+   "no_decidible": 1
+  },
+  "2.5": {
+   "invalido": 2
+  },
+  "2.5.1": {
+   "no_decidible": 33,
+   "invalido": 11
+  },
+  "2.6": {
+   "invalido": 95,
+   "no_decidible": 13
+  },
+  "2.8": {
+   "invalido": 58,
+   "no_decidible": 6
+  }
+ },
+ "sin_decidir_solo_por_msh12": {
+  "muestras": 22,
+  "por_version": {
+   "2.5.1": 14,
+   "2.6": 8
+  }
+ },
+ "muestras_con_msh12_sin_decidir": 216,
+ "muestras_con_campos_sin_evaluar": 4,
+ "validas_con_campos_sin_evaluar": 0,
+ "longitudes_en_las_invalidas_solo_por_longitud": {
+  "muestras": 40,
+  "errores": 289,
+  "valores_con_componentes": 165,
+  "por_version": {
+   "2.3": 1,
+   "2.5": 2,
+   "2.5.1": 3,
+   "2.6": 3,
+   "2.8": 31
+  }
+ },
+ "pasada_de_repeticiones": {
+  "con_el_error": 194,
+  "con_mas_campos_que_la_tabla_de_v25": 194,
+  "con_valor_en_un_campo_de_mas": 176,
+  "por_segmento": {
+   "MSH": 158,
+   "TXA": 14,
+   "NTE": 12,
+   "RXA": 5,
+   "IN2": 2,
+   "OBX": 1,
+   "PV1": 1,
+   "ORC": 1
+  }
+ },
+ "ficheros_y_muestras": {
+  "cv": {
+   "ficheros": 65,
+   "muestras": 65
+  },
+  "vxu": {
+   "ficheros": 87,
+   "muestras": 85
+  },
+  "mdm": {
+   "ficheros": 77,
+   "muestras": 75
+  }
+ },
+ "prevision": {
+  "PVM1 muestras/cv": {
+   "previsto": [
+    30,
+    5,
+    70
+   ],
+   "medido": 0.0,
+   "acierta": false
+  },
+  "PVM1 muestras/vxu": {
+   "previsto": [
+    20,
+    0,
+    60
+   ],
+   "medido": 0.0,
+   "acierta": true,
+   "intervalo_ancho": true
+  },
+  "PVM1 muestras/mdm": {
+   "previsto": [
+    30,
+    0,
+    70
+   ],
+   "medido": 0.0,
+   "acierta": true,
+   "intervalo_ancho": true
+  },
+  "PVM2 sin decidir": {
+   "previsto": [
+    40,
+    10,
+    80
+   ],
+   "medido": 24.0,
+   "acierta": true,
+   "intervalo_ancho": true
+  },
+  "PVM3 inválidas": {
+   "previsto": [
+    25,
+    5,
+    60
+   ],
+   "medido": 76.0,
+   "acierta": false
+  },
+  "PVM4 con algo aparte": {
+   "previsto": [
+    60,
+    20,
+    100
+   ],
+   "medido": 7.6,
+   "acierta": false,
+   "intervalo_ancho": true
+  },
+  "PVM5 nuevas sin ningún válido": {
+   "previsto": [
+    2,
+    0,
+    5
+   ],
+   "medido": 2,
+   "acierta": true,
+   "intervalo_ancho": true
+  },
+  "PVM6 nuevas afectadas": {
+   "previsto": [
+    0,
+    0,
+    1
+   ],
+   "medido": 0,
+   "acierta": true
+  },
+  "Jev: proporción válida": {
+   "previsto": "entre el 20 % y el 50 %",
+   "medido": 0.0,
+   "acierta": false
+  },
+  "Jev: nuevas sin ningún válido": {
+   "previsto": "ninguna",
+   "medido": 2,
+   "acierta": false
+  }
+ },
+ "prevision_aciertos": "5 de 10"
+}
