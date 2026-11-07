@@ -190,6 +190,21 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Las 2 candidatas de la etapa 33 (36, 7-nov-2026)
+
+> **De las 2 candidatas de la etapa 33, ninguna es nueva.** La de Microsoft es M-28, una de las 31 ya declaradas, que el estudio
+> ya contaba en las muestras de Microsoft. La de LinuxForHealth es una convención, y el juez la cuenta por error.
+
+- **Microsoft** saca de un ACC una Observation (`injury-incident`). La guía no mapea ACC, y el proyecto lo declara en una salida
+  esperada publicada, en su prueba y en su documentación. La descripción de M-28, «Observation de PDA», se corrige: también de
+  ACC.
+- **LinuxForHealth** convierte PID-8 = `S` (un valor del ejemplo mismo de v2.5, en una tabla de usuario) en `unknown`. La guía no
+  dice qué hacer con un valor fuera de su mapa de la 0001, y FHIR obliga a uno de cuatro códigos.
+- **Cómo:** el método de las etapas 20 y 26 (par mínimo, contraste con cada proyecto y revisión adversaria), con la previsión
+  sellada antes, que las daba por nuevas. El juez no cambia, y las cifras del estudio de conversores tampoco.
+
+  Está en [`RESULTADO-CANDIDATAS.md`](RESULTADO-CANDIDATAS.md); la pregunta, en [`ANTES-ETAPA-CANDIDATAS.md`](ANTES-ETAPA-CANDIDATAS.md).
+
 ## Cerrar el círculo del ensayo (35, 7-nov-2026)
 
 > **Después del push, la comprobación dice si el árbol publicado es el ensayado: cae cuando no lo es y pasa cuando lo es.**
@@ -235,7 +250,8 @@ corrido en lote, un proceso por carpeta.
   [`cv/VC.md`](cv/VC.md)).
 - **En el estudio de conversores** no cambian las 15 nuevas confirmadas, las 31 ya declaradas ni las 16 convenciones, y los
   mensajes pasan de 368 a 375. Desaparece un rechazo que el estudio había apartado como defecto del corpus: Microsoft rechazaba 30
-  mensajes por un tipo mal escrito en GT1-2, y ahora los convierte. Aparecen 2 candidatas, sin confirmar.
+  mensajes por un tipo mal escrito en GT1-2, y ahora los convierte. Aparecen 2 candidatas; la etapa 36 da la de Microsoft
+  por M-28, ya declarada, y la de LinuxForHealth por convención.
 - **Un instrumento nuevo:** un comprobador de tipos y tablas de v2.5, que mira lo que IRIS no ve, con 93 mutantes de control.
 - **El proyecto de ejemplo y el run en rojo** suben su pin a `54e8b9f`, el commit de la versión 2, en un segundo push. El
   ejemplo rehace sus dos bases con su receta ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)), que
@@ -604,9 +620,9 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 35 llevan una parte redactada,** marcados en su primera línea:
+- **Los ANTES de las etapas 30 a 36 llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md`,
-  `ANTES-ETAPA-ENSAYO.md` y `ANTES-ETAPA-CIRCULO.md`; y los encargos del diseño de la 33 a la 35,
+  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md` y `ANTES-ETAPA-CANDIDATAS.md`; y los encargos del diseño de la 33 a la 35,
   `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md` y `cr/encargo-diseno-cr.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la

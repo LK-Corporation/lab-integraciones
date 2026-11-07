@@ -1,0 +1,21 @@
+{
+  "conducta": "PID-8 fuera del mapa -> gender unknown",
+  "declarada": "si",
+  "donde": "prueba",
+  "referencia": "src/test/java/io/github/linuxforhealth/hl7/data/SimpleDataValueResolverTest.java:56-58 (rama principal 2cb72c2; en la etiqueta v1.1.0, afad74c, las líneas 52-54)",
+  "cita": "String gen = \"ABC\"; assertThat(SimpleDataValueResolver.ADMINISTRATIVE_GENDER_CODE_FHIR.apply(gen)).isEqualTo(\"unknown\");",
+  "de_donde_sale": "src/main/resources/hl7/resource/Patient.yml:225-228 enlaza PID.8 con type ADMINISTRATIVE_GENDER; el mapa src/main/resources/hl7/codesystem/v2ToFhirMapping.yml:40-46 (A other, F female, M male, N unknown, O other, U unknown; sin S ni valor por omisión); el respaldo a unknown está en src/main/java/io/github/linuxforhealth/hl7/data/SimpleDataValueResolver.java:177-186 (val no nulo y sin código -> AdministrativeGender.UNKNOWN). En v1.1.0: mapa en el jar, hl7/codesystem/v2ToFhirMapping.yml:36-42, y el extractor en SimpleDataValueResolver.java:169-178.",
+  "rama_principal": "igual",
+  "nota": "La prueba unitaria get_adm_gender_value_unknow aplica al valor fuera del mapa \"ABC\" el mismo extractor que Patient.yml enlaza con PID.8 y espera \"unknown\"; es a nivel de extractor, no con un mensaje completo. El fichero de mapeo no declara valor por omisión (solo U y N -> unknown), y el issue #105 / PR #117 tratan otra conducta: PID-8 vacío -> sin gender.",
+  "buscado_en": [
+    "lfh-main/src/src/main/resources/hl7/codesystem/v2ToFhirMapping.yml (y la copia del jar hl7v2-fhir-converter-v1.1.0.jar)",
+    "lfh-main/src/src/main/resources/hl7/resource/Patient.yml (y la copia del jar v1.1.0)",
+    "lfh-main/src/src/test (grep gender): SimpleDataValueResolverTest, Hl7PatientFHIRConversionTest, Hl7CustomMessageTest, Hl7FinancialInsuranceTest",
+    "SimpleDataValueResolver.java y SimpleDataValueResolverTest.java en la etiqueta v1.1.0 (gh api, ref=v1.1.0)",
+    "README.md, TECHNIQUES.md, TEMPLATING.md, HL7FHIR.md, BEST_PRACTICES.md, DEVELOPMENT.md (sin mención al valor por omisión)",
+    "gh search issues/prs: gender, sex, PID-8, PID.8, AdministrativeGender, v2ToFhirMapping, unknown gender",
+    "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/105 (PID-8 vacío)",
+    "https://github.com/LinuxForHealth/hl7v2-fhir-converter/pull/117",
+    "https://github.com/LinuxForHealth/hl7v2-fhir-converter/issues/386 (sin mención a gender)"
+  ]
+}

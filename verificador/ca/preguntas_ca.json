@@ -1,0 +1,1 @@
+{"q_ca_1": {"type": "choice", "instructions": "Q-CA-1: la clase de la candidata de LinuxForHealth (PID-8 S a unknown).", "criteria": {"ya_declarada": "(a) Ya declarada: el proyecto la sabe por su prueba del extractor.", "convencion": "(b) Convención: la guía no dice nada y la prueba del proyecto es solo del extractor."}}}

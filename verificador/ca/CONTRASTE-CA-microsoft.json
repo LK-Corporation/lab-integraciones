@@ -1,0 +1,18 @@
+{
+  "conducta": "ACC -> Observation injury-incident",
+  "declarada": "si",
+  "donde": "salida_esperada",
+  "referencia": "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ADT_A01/ADT-A01-01-expected.json:5550",
+  "cita": "\"code\": \"injury-incident\",",
+  "de_donde_sale": "data/Templates/Hl7v2/ADT_A01.liquid:810-826 (si hay ACC, include 'Resource/Observation' ACC: firstSegments.ACC); data/Templates/Hl7v2/Resource/_Observation.liquid:59-65 (coding injury-incident, display y system example.com) y :451 (effectiveDateTime = ACC.1.Value | format_as_date_time)",
+  "rama_principal": "igual: en ms-main/src ADT_A01.liquid y Resource/_Observation.liquid son identicos a v7.0 (diff vacio), y ADT-A01-01-expected.json es identico byte a byte (cmp), con injury-incident en :5550 y effectiveDateTime en :5619",
+  "nota": "La entrada data/SampleData/Hl7v2/ADT-A01-01.hl7:23 lleva ACC|20140317|...; la salida esperada trae la Observation injury-incident (display y system iguales a los nuestros) con effectiveDateTime 2014-03-17 (:5619), es decir ACC-1; la prueba BaseConvertDataFunctionalTests.cs:27 la compara con JToken.DeepEquals (:307). Esa muestra es v2.8, no v2.5; la conducta es la misma, y otras 18 salidas esperadas con ACC (ADT_A03..A31, BAR_P01, DFT_P11, REF_I12, REF_I14) llevan tambien injury-incident.",
+  "buscado_en": [
+    "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/ (grep injury-incident: 19 ficheros, entre ellos ADT_A01/ADT-A01-01-expected.json)",
+    "data/SampleData/Hl7v2/ (19 entradas con segmento ACC; ADT-A01-01.hl7:23)",
+    "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/BaseConvertDataFunctionalTests.cs:27 y :307 (prueba que compara con la salida esperada)",
+    "docs/ y README.md (docs/HL7v2-templates.md:152 lista Observation <- OBX, ACC, PDA para ADT_A01, sin decir el codigo injury-incident; README sin mencion)",
+    "GitHub: gh search issues/prs --repo microsoft/FHIR-Converter con 'injury', 'injury-incident', 'ACC', 'ACC segment', 'accident', 'Observation ACC': sin resultados pertinentes",
+    "rama principal ms-main/src: plantillas y salida esperada"
+  ]
+}

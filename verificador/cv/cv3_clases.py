@@ -84,7 +84,7 @@ R = [
     ("M-27", MS, {"MC-ADT-8"}, "Patient.telecom: falta", None, "dudosa", "Q-CV-D-15", None, None,
      "número de XTN escrito con otro formato: el juez busca los componentes literales"),
     ("M-28", MS, {"MC-ORU-7"}, None, ("ms-ADT",), "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json", None, "media",
-     "Observation de PDA (certificado de defunción, autopsia…) que la guía no mapea"),
+     "Observation de PDA (certificado de defunción, autopsia…) o de ACC (injury-incident) que la guía no mapea"),
     ("M-29", MS, {"MC-ORU-7", "fuera:falta|recurso_ausente"}, None, ("lfh-ORU",), "fuera_muestra_invalida",
      "lfh-ORU-multiline-short(-mixed): OBX-3 vacío (obligatorio): los OBX chocan de id", None, None, "muestra con OBX-3 vacío"),
     ("M-30", MS, {"fuera:DiagnosticReport|recurso_inventado"}, None, None, "ya_declarada", ESP + "ORU_R01/ORU-R01-01-expected.json",

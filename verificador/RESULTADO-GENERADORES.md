@@ -1,5 +1,9 @@
 # RESULTADO de la etapa 33: los generadores del corpus, arreglados (5-nov-2026)
 
+**Completado el 7-nov (etapa 36):** de las 2 candidatas que este resultado deja sin confirmar, ninguna es nueva. La de
+Microsoft es M-28, una de las 31 ya declaradas, que el estudio ya contaba en las muestras de Microsoft; la de LinuxForHealth es
+una convención ([`RESULTADO-CANDIDATAS.md`](RESULTADO-CANDIDATAS.md)). Las cifras de abajo no cambian.
+
 > **De los 767 mensajes de la versión 2 del corpus, 392 son válidos en v2.5, 16 inválidos (todos a propósito o fragmentos del
 > estándar) y 359 sin decidir.** Los sin decidir son estos:
 > - 206 por TXA-3: 200 con `TEXT` y 6 con `multipart` (B17, en T02 y en sus cinco eventos);
@@ -20,14 +24,14 @@
 > - Desaparece M-11, un rechazo de Microsoft que el estudio había apartado como defecto del corpus. Lo causaba un error de tipo
 >   del generador, y Microsoft convierte ahora esos 30 mensajes.
 > - 10 clases ya declaradas ganan casos.
-> - Aparecen 2 candidatas, sin confirmar.
+> - Aparecen 2 candidatas, sin confirmar (la etapa 36: M-28, ya declarada, y una convención).
 
 | | |
 |---|---|
 | La pregunta | `ANTES-ETAPA-GENERADORES.md`, fijada antes de diseñar |
 | Las decisiones | Jev: siete de alcance (`ga/decision-jev-ga.md` y `ga2`) y once del diseño (`ga/decision-jev-gad.md` y `gad2`) |
 | El diseño | Fable, a ciegas de conversores, juez y resultados (`ga/diseno-ga-fable.md`, encargo en `ga/encargo-diseno-ga.md`) |
-| El sello | `ga/SELLO-GA.txt`: el bloque 1, antes de pasar la versión 2 por IRIS; el 2, antes de correr los conversores sobre ella; el 3, después; el 4, el 5 y el 6, lo que cambió después del 3, tras la segunda pasada de la revisión y tras el segundo lector, cada fichero con su razón |
+| El sello | `ga/SELLO-GA.txt`: el bloque 1, antes de pasar la versión 2 por IRIS; el 2, antes de correr los conversores sobre ella; el 3, después; el 4, el 5 y el 6, lo que cambió después del 3, tras la segunda pasada de la revisión y tras el segundo lector, cada fichero con su razón; el 7, desde la etapa 36, la descripción de M-28 corregida en `cv/cv3_clases.py` |
 | El juez | El de hoy, el mismo en las dos versiones |
 | Los conversores | Los dos del estudio, con sus adaptadores fijados (`cv/adaptadores/microsoft.json` y `linuxforhealth.json`), en su caja |
 
@@ -173,7 +177,8 @@ proyectos. Los resultados están en `ga/COMPARACION-GA.json` y `ga/CIFRAS-GA-B.j
 
 - **Las 5 clases con todos sus casos en mensajes que cambian** conservan su número de casos: L-10, L-8, M-10, M-12 y M-18. El
   arreglo no toca sus campos (PID-16, XTN, el nulo de ACC-1 en `nulos` y PDA).
-- **Las 2 candidatas** (Q-GA-7: anotadas, sin confirmar):
+- **Las 2 candidatas** (Q-GA-7: anotadas, sin confirmar; la etapa 36 da la de Microsoft por M-28, ya declarada, y la de
+  LinuxForHealth por convención):
   - **Microsoft**, en los 30 mensajes de ADT que ahora convierte, emite una Observation (con el código `injury-incident`) que el
     juez no atribuye a ningún elemento del mensaje y da por recurso inventado. Sale en los 30, que llevan ACC, y en ningún ADT
     convertido sin ACC. El juez cita para ella una regla de ORU, así que puede ser del juez y no del conversor;
@@ -328,7 +333,8 @@ La segunda pasada aprobó, con ocho menores, todos aplicados (el bloque 5 del se
 - **No se rehicieron:**
   - la línea del circuito de IRIS y del verificador (la concordancia de A1 y el rejuicio de la 14k), que se declara así (Q-GA-5);
   - el arrastre (etapa 21).
-- **Las 2 candidatas no se han confirmado:** ni par mínimo, ni búsqueda en el proyecto, ni revisión adversaria.
+- **Las 2 candidatas no se han confirmado:** ni par mínimo, ni búsqueda en el proyecto, ni revisión adversaria. (Lo hizo la
+  etapa 36.)
 - **La deriva del juez desde lo publicado** (L-24, M-36, M-4 y el par L16) es la que ya declaró la etapa 21. Esta etapa compara las
   dos versiones con el mismo juez, el de hoy.
 - **Los 7 fragmentos del capítulo 3 siguen siendo inválidos en v2.5,** como los escribe el estándar.

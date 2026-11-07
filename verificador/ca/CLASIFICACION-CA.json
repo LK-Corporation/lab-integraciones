@@ -1,0 +1,23 @@
+{
+ "_lectura": "Etapa 36: la clasificación de las 2 candidatas de la 33, antes de la revisión adversaria. Clases: nueva, ya declarada, convención o fallo del juez (ANTES-ETAPA-CANDIDATAS.md). Las citas del estándar, de la guía y de los proyectos, con fichero y línea; el contraste, en ca/CONTRASTE-CA-*.json; los pares, en ca/PARES-CA.json.",
+ "microsoft": {
+  "candidata": "En un ADT con ACC, una Observation de más (code injury-incident, effectiveDateTime = ACC-1) que el juez da por recurso sin origen propio en el mensaje",
+  "clase": "ya_declarada",
+  "par_minimo": "Solo cambia eso entre MS-ACC-con y MS-ACC-sin: con ACC sale la Observation y el hallazgo «sin origen propio»; sin ACC, ninguno de los dos. LinuxForHealth no saca nada de ACC.",
+  "guia": "La guía (v2mappings 1.0.0) no mapea ACC en ningún mapa de mensaje ni de segmento; en ADT_A01, las Observation salen de OBX (ConceptMap-message-adt-a01-to-bundle.json, ADT_A01.OBSERVATION.OBX).",
+  "proyecto": "Lo declara: la salida esperada de su muestra ADT-A01-01 (con ACC en la línea 23) trae la misma Observation injury-incident con effectiveDateTime = ACC-1 (ADT-A01-01-expected.json:5550 y 5619), y su prueba funcional compara la salida entera (BaseConvertDataFunctionalTests.cs:27 y 307). Su documentación dice que la Observation de ADT_A01 sale de OBX, ACC y PDA (docs/HL7v2-templates.md:152). Lo mismo en 18 salidas esperadas más y en la rama principal.",
+  "juez": "El juez la cuenta como recurso inventado («sin origen propio en el mensaje», conversion.py:1531) porque no está en lo que proyecta la guía. Tiene origen en el mensaje (ACC-1); lo exacto sería «fuera de la proyección de la guía», como la nota que el juez ya da a un OBX fuera de su grupo (L-CV-7). Corregir el juez queda fuera de la etapa.",
+  "por_que": "El proyecto la declara (salida esperada y prueba), y la guía no dice nada de ACC: no es una discrepancia nueva con la guía."
+ },
+ "linuxforhealth": {
+  "candidata": "PID-8 = S convertido en Patient.gender = unknown, que el juez da por valor fuera de su tabla convertido",
+  "clase": "ya_declarada",
+  "par_minimo": "Con S, unknown y el hallazgo de PID-8; con F, female; con U, unknown; sin hallazgo de PID-8 con F ni con U. Microsoft pasa la S tal cual a Patient.gender, que no es válido en FHIR R4 (otra clase, ya conocida en la 33).",
+  "estandar": "La tabla 0001 de v2.5 es de usuario y sus valores son sugeridos: F, M, O, U, A, N (Ch03.txt:5034-5044). La S está en el ejemplo mismo de v2.5, el de una perra esterilizada (Ch03.txt:10863-10868).",
+  "guia": "La guía lleva PID-8 a Patient.gender con el vocabulario AdministrativeSex (PID_Patient.csv:14), cuyo mapa (table-hl70001-to-administrative-gender 1.0.0) tiene F, M, O, U, A y N, y no dice qué hacer con otro valor. Patient.gender de FHIR R4 es de enlace obligatorio a cuatro valores.",
+  "proyecto": "Lo declara en una prueba: get_adm_gender_value_unknow aplica a «ABC», un valor fuera del mapa, el extractor que Patient.yml usa para PID.8, y espera «unknown» (SimpleDataValueResolverTest.java:56-58 en la rama principal; 52-54 en v1.1.0). La prueba es del extractor, no de un mensaje entero. Su mapa (v2ToFhirMapping.yml:40-46) no tiene S ni valor por omisión; el paso a unknown es del código (SimpleDataValueResolver.java:177-186).",
+  "juez": "El juez la cuenta como valor imposible convertido. Con una tabla de usuario, un valor fuera de los sugeridos no es imposible en v2.5, y FHIR obliga a uno de cuatro códigos: unknown es una elección defendible. Corregir el juez queda fuera de la etapa.",
+  "por_que": "El proyecto la declara en una prueba, y la guía no dice qué hacer con un valor fuera de su mapa: no es una discrepancia nueva con la guía."
+ },
+ "prevision": {"jev": "las dos, nuevas (0,90 y 0,49)", "acierta": "ninguna"}
+}

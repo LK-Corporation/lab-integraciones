@@ -1,0 +1,9 @@
+{
+ "que": "Etapa 36, la previsión del ANTES, sellada antes de correr los pares mínimos y el contraste",
+ "fecha": "07-11-2026 16:22",
+ "jev": {
+  "microsoft": "nueva, 0,90; confianza 0,87",
+  "linuxforhealth": "nueva, 0,49 (convención 0,37); confianza 0,32",
+  "decision": "ca/decision-jev-prevision-ca.md"
+ }
+}

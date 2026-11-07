@@ -164,7 +164,7 @@ Están ordenadas por fuerza. Las citas de la guía son de las hojas CSV del comm
 | M-21 | El OBX perdido tras una NTE | #325 |
 | M-25 | FT «\n» literal | prueba unitaria |
 | M-26 | ContactPoint.use | salidas esperadas |
-| M-28 | Observation de PDA | salidas esperadas |
+| M-28 | Observation de PDA o de ACC (descripción corregida en la etapa 36) | salidas esperadas |
 | M-30 | DiagnosticReport de un OBX RP/ED | salidas esperadas |
 | M-31 | period.end sin PV1-45 | salidas esperadas |
 | M-35 | PID-30 «NO» | salidas esperadas |

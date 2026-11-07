@@ -1,0 +1,39 @@
+{
+ "microsoft": {
+  "clase_propuesta": "ya_declarada",
+  "veredicto": "se sostiene con matices",
+  "clase_que_darias": "ya_declarada (con el fallo del juez como segunda lectura, no como clase principal)",
+  "pruebas": [
+   "ADT-A01-01-expected.json:5550 code injury-incident y :5619 effectiveDateTime 2014-03-17 (= ACC-1 de ADT-A01-01.hl7:23, ACC|20140317|...): comprobado",
+   "BaseConvertDataFunctionalTests.cs:27 (ADT_A01 con ADT-A01-01-expected.json) y :307 (JToken.DeepEquals): comprobado",
+   "docs/HL7v2-templates.md:152: Observation <- OBX, ACC, PDA: comprobado; es documentacion explicita, mas fuerte que la salida esperada",
+   "ADT_A01.liquid:810-826 (si firstSegments.ACC, include Resource/Observation) y _Observation.liquid:59-65 y :451: comprobado. 19 expected con injury-incident y 19 muestras con ACC: comprobado",
+   "Guia: ConceptMap-message-adt-a01-to-bundle.json no contiene ACC; MSG_ADT_A01.csv:78 solo lista ADT_A01.ACC en la estructura del mensaje; ningun ConceptMap de segmento lo mapea. Silencio confirmado, no contradiccion",
+   "Evidencia ca/corridas/microsoft-pares MS-ACC-con: Observation status final, injury-incident, effectiveDateTime 1992-05-10T18:56:31-05:00 (ACC-1); MS-ACC-sin sin ella: par minimo valido"
+  ],
+  "nota": "No encuentro razon para tumbarla: version (2.8 la muestra, 2.5 el par) no importa porque la plantilla Liquid no depende de la version; la guia solo calla. Matices: (1) la clasificacion cita la muestra en v2.8 pero el par es v2.5 y la afirmacion de que la conducta es la misma se apoya en la plantilla, no en una salida esperada v2.5; conviene decirlo. (2) El hallazgo del juez lleva cita [G MSG_ORU_R01.csv:67-69] y la regla de ORU en un ADT: la etiqueta recurso_inventado / sin origen propio es inexacta (ACC-1 es origen), asi que el fallo del juez es real pero secundario; en el juez L-CV-7 ya existe nota fuera_proyeccion para el caso analogo. (3) La Observation usa un CodeSystem placeholder example.com: es un punto de la implementacion de Microsoft, tambien declarado en su expected, sin efecto en la clase. (4) Declararla no equivale a conformidad con la guia: la guia no mapea ACC y el proyecto anade un recurso; 'ya declarada' es correcto porque la clase se define por lo que el proyecto sabe."
+ },
+ "linuxforhealth": {
+  "clase_propuesta": "ya_declarada",
+  "veredicto": "se sostiene con matices",
+  "clase_que_darias": "ya_declarada, limitada a 'el proyecto lo sabe'; si se exige declaracion con mensaje entero, convencion",
+  "pruebas": [
+   "SimpleDataValueResolverTest.java:56-58 (get_adm_gender_value_unknow con 'ABC' espera 'unknown'): comprobado; es del extractor, no de un mensaje con S",
+   "SimpleDataValueResolver.java:177-186: val no nulo sin codigo -> AdministrativeGender.UNKNOWN; SimpleDataTypeMapper.java:45 ADMINISTRATIVE_GENDER usa ese extractor; Patient.yml:225-228 gender type ADMINISTRATIVE_GENDER valueOf PID.8: cadena comprobada",
+   "v2ToFhirMapping.yml:40-46 AdministrativeGender: A other, F female, M male, N unknown, O other, U unknown; sin S: comprobado",
+   "Ch03.txt:5034-5044: tabla 0001 de usuario con valores sugeridos F M O U A N: comprobado; Ch03.txt:10863-10868 ejemplo con PID-8 = S: comprobado",
+   "Guia: ConceptMap table-hl70001-to-administrative-gender tiene F M O U A N, sin unmapped ni default; ConceptMap-segment-pid-to-patient PID-8 -> gender mappedVia ese mapa; PID_Patient.csv:14 AdministrativeSex. La guia calla sobre S",
+   "Evidencia: LFH-PID8-S da gender unknown; F y U no dan hallazgo de PID-8; Microsoft da gender 'S' (fhir_invalido, clase distinta)",
+   "conversion.py:1540: el perfil del juez dice 'fuera de la 0001: ausente'; conversion.py:699-702 cuenta valor_imposible_aceptado; en cambio _codigo_tabla (:863-865) y _uso/_estado tratan fuera de tabla de usuario como convencion"
+  ],
+  "nota": "Se sostiene, pero la declaracion es debil: un test unitario con 'ABC' sobre el extractor, no una salida esperada con S, y el mapa del proyecto no tiene valor por omision (el unknown es de codigo). Lo que no se sostiene es la etiqueta del juez: llama valor_imposible a un valor sugerido-no-listado de una tabla de usuario que el propio v2.5 usa (S), mientras en otras tablas de usuario del mismo juez lo trata como convencion; la regla 'fuera de la 0001: ausente' es una decision del juez, no de la guia. Por tanto hay un fallo del juez real (asimetria con _codigo_tabla), anotable aparte. La clase principal puede quedar en ya_declarada porque el proyecto muestra saber el comportamiento; unknown es ademas la unica salida valida sin perder la fila (binding required de 4 valores), lo que lo hace tambien convencion defendible."
+ },
+ "pasado_por_alto": [
+  "LinuxForHealth lleva N (Not applicable) a unknown (v2ToFhirMapping.yml:44) y la guia lo lleva a other: discrepancia con la guia real, declarada solo en su mapa; no es parte de las dos candidatas pero es mas 'nueva' que la S. Conviene comprobar si el juez ya la marca como codigo_mal_mapeado.",
+  "Microsoft pasa S tal cual a Patient.gender ('S', fhir_invalido) y no se pierde con la clasificacion de LFH: es la conducta peor, y cae en otra clase ya conocida (33). No cambia lo clasificado, pero la frase de resultado debe distinguir: LFH inventa un codigo valido y MS emite uno invalido.",
+  "Con S la guia deja sin respuesta: ni 'unmapped' ni default. Si el resultado afirma 'la guia lo permite', es demasiado; solo cabe 'la guia calla'.",
+  "El hallazgo MS cita [G MSG_ORU_R01.csv:67-69] y MC-ORU-7 en un ADT: cita inexacta del juez; conviene anotarlo junto al fallo del juez.",
+  "Pares LFH: las tres variantes (F, S, U) traen ademas PV1-2 valor_distinto y PV1-44 dato_inventado, y MS-ACC-con/sin traen PV1-3/PV1-10/PV1-11 y PID-12: ruido comun a ambos lados del par, sin afectar al diferencial, pero la categoria absoluta 'fallo_silencioso' de F, U y ACC-sin no debe leerse como la del hallazgo candidato.",
+  "El par LFH solo prueba S (letra suelta). No hay par con una letra de otro tipo (p. ej. X) ni con minuscula s; la minuscula tiene su propia regla AMB-CV-1 en el juez (conversion.py:690-696)."
+ ]
+}

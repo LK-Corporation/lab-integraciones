@@ -111,3 +111,7 @@ ab3642309cc80d2d700e0072a8e5f9b0c5bc6f8438771514e0c0867affb1140b  ga/parche_vc_m
 f8d2b07c73c52dfb94d24cd746ffbb9ccce998ae1f58331a7f3cec3823c1cf1a  cv/VC.md
 # El guion de la publicación: la lista de segmentos de la sección del README, con NK1, AL1 y DB1 (menor 3), y el manual entre las copias
 cdff82605e644175b677917539efa2518ec702719eb4c41bc9f10be988f8a224  ga/preparar_publicacion_ga.py
+
+SELLO DE LA ETAPA 33, bloque 7 (7-nov-2026, 17:02): desde la etapa 36, la descripción de M-28 corregida (Q-CA-2, ca/decision-jev-ca3.md)
+# M-28 también cuenta la Observation de ACC (injury-incident); solo cambia su texto, no la clase ni sus casos
+0f451e27afc814a46580a19aedce8b1934bfaeec1e28b92150a449499c7d9167  cv/cv3_clases.py

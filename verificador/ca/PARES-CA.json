@@ -1,0 +1,248 @@
+{
+ "_lectura": "Etapa 36: los pares mínimos de ca/pares/ (ca/pares_ca.py), corridos con los dos conversores en su caja (cv/verificar_conversor.py <adaptador> <salida> --corpus ca/pares --sin-corpus-lab --sin-minimos --json-solo). Por conversor y caso, la categoría y los hallazgos que cuentan (hecho, clase, subtipo, firma).",
+ "casos": {
+  "LFH-PID8-F": {
+   "microsoft": {
+    "categoria": "correcto",
+    "subtipo": null,
+    "cuentan": []
+   },
+   "linuxforhealth": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PV1-2",
+      "clase": "fidelidad",
+      "subtipo": "valor_distinto",
+      "firma": "Encounter.status: esperado uno de <v>, observado <v>"
+     },
+     {
+      "hecho": "PV1-44",
+      "clase": "fidelidad",
+      "subtipo": "dato_inventado",
+      "firma": "Encounter.period.start: <v> presente sin PV1-<n>"
+     }
+    ]
+   }
+  },
+  "LFH-PID8-S": {
+   "microsoft": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "aceptado_imposible",
+    "cuentan": [
+     {
+      "hecho": "PID-8",
+      "clase": "valor_imposible_aceptado",
+      "subtipo": "valor_imposible_convertido+fhir_invalido",
+      "firma": "Patient.gender: <v> convertido desde <v>, fuera de la <n>"
+     }
+    ]
+   },
+   "linuxforhealth": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido+aceptado_imposible",
+    "cuentan": [
+     {
+      "hecho": "PID-8",
+      "clase": "valor_imposible_aceptado",
+      "subtipo": "valor_imposible_convertido",
+      "firma": "Patient.gender: <v> convertido desde <v>, fuera de la <n>"
+     },
+     {
+      "hecho": "PV1-2",
+      "clase": "fidelidad",
+      "subtipo": "valor_distinto",
+      "firma": "Encounter.status: esperado uno de <v>, observado <v>"
+     },
+     {
+      "hecho": "PV1-44",
+      "clase": "fidelidad",
+      "subtipo": "dato_inventado",
+      "firma": "Encounter.period.start: <v> presente sin PV1-<n>"
+     }
+    ]
+   }
+  },
+  "LFH-PID8-U": {
+   "microsoft": {
+    "categoria": "correcto",
+    "subtipo": null,
+    "cuentan": []
+   },
+   "linuxforhealth": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PV1-2",
+      "clase": "fidelidad",
+      "subtipo": "valor_distinto",
+      "firma": "Encounter.status: esperado uno de <v>, observado <v>"
+     },
+     {
+      "hecho": "PV1-44",
+      "clase": "fidelidad",
+      "subtipo": "dato_inventado",
+      "firma": "Encounter.period.start: <v> presente sin PV1-<n>"
+     }
+    ]
+   }
+  },
+  "MS-ACC-con": {
+   "microsoft": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PID-12",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Patient.address.district: falta <v>"
+     },
+     {
+      "hecho": "PV1-10",
+      "clase": "fidelidad",
+      "subtipo": "codigo_mal_mapeado",
+      "firma": "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+     },
+     {
+      "hecho": "PV1-3",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location <v>: la cadena de Location no conserva <v>"
+     },
+     {
+      "hecho": "PV1-11",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido+valor_distinto",
+      "firma": "Encounter.location <v>: la cadena de Location no conserva <v>"
+     },
+     {
+      "hecho": "OBX",
+      "clase": "fidelidad",
+      "subtipo": "recurso_inventado",
+      "firma": "Observation <id> sin origen propio en el mensaje"
+     }
+    ]
+   },
+   "linuxforhealth": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PV1-2",
+      "clase": "fidelidad",
+      "subtipo": "valor_distinto",
+      "firma": "Encounter.status: esperado uno de <v>, observado <v>"
+     },
+     {
+      "hecho": "PV1-10",
+      "clase": "fidelidad",
+      "subtipo": "codigo_mal_mapeado",
+      "firma": "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+     },
+     {
+      "hecho": "PV1-3",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location: falta <v>"
+     },
+     {
+      "hecho": "PV1-11",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location: falta <v>"
+     }
+    ]
+   }
+  },
+  "MS-ACC-sin": {
+   "microsoft": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PID-12",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Patient.address.district: falta <v>"
+     },
+     {
+      "hecho": "PV1-10",
+      "clase": "fidelidad",
+      "subtipo": "codigo_mal_mapeado",
+      "firma": "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+     },
+     {
+      "hecho": "PV1-3",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location <v>: la cadena de Location no conserva <v>"
+     },
+     {
+      "hecho": "PV1-11",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido+valor_distinto",
+      "firma": "Encounter.location <v>: la cadena de Location no conserva <v>"
+     }
+    ]
+   },
+   "linuxforhealth": {
+    "categoria": "fallo_silencioso",
+    "subtipo": "convertido",
+    "cuentan": [
+     {
+      "hecho": "PV1-2",
+      "clase": "fidelidad",
+      "subtipo": "valor_distinto",
+      "firma": "Encounter.status: esperado uno de <v>, observado <v>"
+     },
+     {
+      "hecho": "PV1-10",
+      "clase": "fidelidad",
+      "subtipo": "codigo_mal_mapeado",
+      "firma": "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+     },
+     {
+      "hecho": "PV1-3",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location: falta <v>"
+     },
+     {
+      "hecho": "PV1-11",
+      "clase": "fidelidad",
+      "subtipo": "dato_perdido",
+      "firma": "Encounter.location: falta <v>"
+     }
+    ]
+   }
+  }
+ },
+ "microsoft_observation_de_acc": {
+  "status": "final",
+  "code": {
+   "coding": [
+    {
+     "code": "injury-incident",
+     "display": "Injury Incident Description Narrative",
+     "system": "http://example.com/v2-to-fhir-converter/CodeSystem/observation-code"
+    }
+   ]
+  },
+  "effectiveDateTime": "1992-05-10T18:56:31-05:00"
+ },
+ "gender": {
+  "microsoft": {
+   "LFH-PID8-S": "S",
+   "LFH-PID8-F": "female",
+   "LFH-PID8-U": "unknown"
+  },
+  "linuxforhealth": {
+   "LFH-PID8-S": "unknown",
+   "LFH-PID8-F": "female",
+   "LFH-PID8-U": "unknown"
+  }
+ }
+}
