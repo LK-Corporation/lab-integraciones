@@ -190,6 +190,29 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Los generadores del corpus, arreglados (33, 5-nov-2026)
+
+> **La versión 2 del corpus arregla lo que la etapa 30 encontró inválido en los generadores del laboratorio. De sus 767 mensajes,
+> 392 son válidos en v2.5, 16 inválidos (todos a propósito o fragmentos del propio estándar) y 359 sin decidir: 206 por TXA-3 en
+> MDM, 141 por las unidades en UCUM y 12 por otras causas. De las 27 nuevas publicadas, 25 salen ya en algún mensaje válido, 13
+> de ellas en un gemelo hecho para eso; las otras 2 tratan del contenido de texto de MDM, para el que ningún TXA-3 de v2.5 cabe
+> en su longitud.**
+
+- **Qué cambia:** el generador de ADT escribe los obligatorios, y cada valor de su tipo y su tabla, en los segmentos opcionales
+  (ROL, NK1, OBX, AL1, DB1, DG1, PR1, GT1, ACC, UB1 y PV1-37); los 7 ejemplos del capítulo 3 se quedan y llevan una copia
+  completada; B36 de MDM cabe en su TXA-12; y las 12 nuevas que solo tenían mensajes con UCUM llevan un gemelo con ISO+, el
+  sistema de v2.5. La versión 1 no cambia ni un byte; la herramienta usa la 2 (`--version-corpus`, en
+  [`cv/VC.md`](cv/VC.md)).
+- **En el estudio de conversores** no cambian las 15 nuevas confirmadas, las 31 ya declaradas ni las 16 convenciones, y los
+  mensajes pasan de 368 a 375. Desaparece un rechazo que el estudio había apartado como defecto del corpus: Microsoft rechazaba 30
+  mensajes por un tipo mal escrito en GT1-2, y ahora los convierte. Aparecen 2 candidatas, sin confirmar.
+- **Un instrumento nuevo:** un comprobador de tipos y tablas de v2.5, que mira lo que IRIS no ve, con 93 mutantes de control.
+- **Cómo:** el diseño, a ciegas; la versión 2 se comprueba campo a campo contra la 1; las dos previsiones se sellaron antes de
+  correr.
+
+  Está en [`RESULTADO-GENERADORES.md`](RESULTADO-GENERADORES.md); la pregunta, en
+  [`ANTES-ETAPA-GENERADORES.md`](ANTES-ETAPA-GENERADORES.md).
+
 ## Las muestras públicas en la versión que declaran (32, 5-nov-2026)
 
 > **De las 223 muestras públicas de los dos conversores que declaran otra versión que la 2.5, validadas por IRIS con el
@@ -548,8 +571,9 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30, 31 y 32 llevan una parte redactada,** marcados en su primera línea:
-  `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md` y `ANTES-ETAPA-IVDECLARADA.md`.
+- **Los ANTES de las etapas 30 a 33 llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md` y `ANTES-ETAPA-GENERADORES.md`;
+  y el encargo del diseño de la 33, `ga/encargo-diseno-ga.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

@@ -1,0 +1,4 @@
+{
+ "q_ga_8": {"type": "choice", "instructions": "Q-GA-8: MD-M5 y un gemelo con contenido que no es texto.",
+  "criteria": {"declarar": "(a) Se declara que no se ha probado en un mensaje válido.", "gemelo_ed": "(b) Se hace un gemelo del par MP1 con contenido ED y TXA-3 = AP, y se mira si Microsoft lo rechaza igual (caso) y no el control."}}
+}

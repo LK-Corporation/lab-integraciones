@@ -1,0 +1,113 @@
+SELLO DE LA ETAPA 33, bloque 1 (5-nov-2026): antes de pasar la versión 2 por IRIS
+71387361fdeea08a1db8cb4bba8074aa59a43b32b7dfc9dee6c12d7c2ca2bed2  ga/bases_mdm_v2.py
+e1ac097ecbac5aa3f98f518ab03f153aeda130ca86173252167f4a7069cfec10  ga/comprobar_tipos.py
+d5b5dbfc60e0de76adaec69539708aa9d5ecc4a70d112465f454d0dff3a5ee9f  ga/control_tipos.py
+303766331933aa95ec685cf7c5b5509f9318d7ecfe6146ee3dc2c5dcc2c68434  ga/corpus_ga.py
+892886001b6346c830e29cf80a788a118a60704606f05f7673960751b94840a0  ga/gen_adt_v2.py
+4d525b7ef22d90997c7d28f4159e4d07dedc3dbbf06a2123e8b2c12e304300bd  ga/gen_bases_a1_v2.py
+4238a9c459e03484cd8d82fc28e7dbd61e712288fc0419718b4706426ab1b593  ga/hacer_gen_adt_v2.py
+75a5cc1b8fbe5c08bb07ae47cb23e39ac5881f09c9a12a47d23c6b32ed4a1dbf  ga/hacer_resto_v2.py
+47bcc815545b011ab6cc45b26a6d1c1fc1cd53320802344b9ff2472db69a2337  ga/parche_vc_version.py
+f9b516afe86af1f1de15f39052af05bb8319e6d924c7c07626aa48dfd30f9cb8  ga/solo_cambia_esto.py
+fa8022470ad383bf5760296e719e2b47ba6ea91194eb40b3b536ab4975b3a0d0  ga/CONTROL-TIPOS.json
+68901a03a938832221ac9fca6ea152e2c07f9fcea6116493fb38400f0197c5ef  ga/GEMELOS.json
+544c49164a727c9cbe7779a5f5e1bd9796cf5487fe6ac9c1bb5d4d2421c9e3b0  ga/PREVISION-GA-A.json
+486c17d4c7d8183d7671100f95539bd9086e7b4dd211ae963ccb4c9888e90699  ga/SOLO-CAMBIA-ESTO.json
+40d971c761229e84cd41b8455554483439113324b0bd952827f47e361ca664e0  ga/bases_a1_v2.json
+8b436c22fbcad69757d671148353e7e57892dd4ed12fddde1a977bd2abe34937  ga/bases_adt_v2.json
+6108c0581f42b6307dde818e1b37d84f5563730d84af62ed0f062d521118a1fa  ga/ejemplos_cap3_v2.json
+a57da1b0af26b3249eaaff5dac68650ac799b8ee92a093c6cd6a0ae6c5b0018c  ga/preguntas_ga.json
+1ac71ec2241df91acdbc182072608e9b75055d351b7f44e591783517ca8987be  ga/preguntas_ga2.json
+f9f0bfdfb89182ff3627e9ce6f8d3496b9e7f5a2a84c07d3e872c258813603c3  ga/preguntas_gad.json
+a3286339e28aee7658010fd15c6a5fa232f1ba9498dac013cea992a92f3a6e92  ga/preguntas_gad2.json
+4c85cdc8c42e700f02db6593a165d337bfc980b143cbb66fd8a2645072817999  ga/gemelos/MANIFIESTO.txt
+4ec40da55cc22ec20c4ae795dc7d1c0d5acd3b320e08fe4a6e1f8941cf87db22  cv/verificar_conversor.py
+2dd76696424773581158a74f434ea780a781ecb3cbe675b1f2a0a8b90e8ffe86  iv/validar_iv.py
+4787a3401789c11efccf7494c0263a09efb1c92c452eeb24fd1db70bcb3fba22  iv/lectura_iv.py
+4430bfe30a0488b1cd92d3b478f476db20833e549ea337aaac40f6ebacdc34ee  iv/Lab.IV.Validar.cls
+corpus: dbbf3f62d233398175f8a3ba9abce2b5a0f3f83aac1c6c52b4df115f5a6a0483
+
+SELLO DE LA ETAPA 33, bloque 2 (5-nov-2026, 18:51): antes de correr los conversores sobre la versión 2, los gemelos y B36 v2
+ac69dc01abc509366bfbbab2896518fa12030eddc36b2e296e9b0903a34c406a  ga/comparar_ga.py
+17a8219fa8ca49d303cb215f32043e5af259eaa30f5db0142e8859804e8f9c2f  ga/correr_v1.sh
+3f0c224db0f1590990dd2a5d133d4e9c138c8d1f90069c63fc7555a60b13e33a  ga/correr_v2.sh
+570feaf6e60bbc3913c2c964babb3a8f540e176a86d3d759ec79f6c7fb733fc8  ga/riesgo_ga.py
+e18d0d6c2881919c1f026b2e17215508f49b126e36bd178410c398dbf8b61a78  ga/cifras_ga_a.py
+7f7dbb82cc63d9b2a1ec953d8aa9c18391b2e34ac5ea7a466c8753dbde4d179a  ga/PREVISION-GA-B.json
+59c3e0b82855829e38877b83442437971f644fced512d2b495fc9078c359f5a0  ga/RIESGO-GA.json
+4652f56366bb3c5508ffe5327ab9b5d03c1a252b73d0a0d2611ce426aa0a9e3a  ga/RUIDO-microsoft.json
+7d283369faacf30ca46cff3eae255c7c0bd2cd346508470b53eaf1189026b2cb  ga/RUIDO-linuxforhealth.json
+4d9a2f2eac93e472bf1d62968582816119b14fbb87080a53abc2f2c2d9f47595  ga/CIFRAS-GA-A.json
+5e25624b5489fdf0977fb15392a55b26589000c0bbd594c8fe893f163dc820cb  ga/VEREDICTOS-GA.jsonl
+cc7098fb42929c9dbb4b25d0ecceb95d67fe5fa3e25e704030bfb823d0693d52  ga/LECTURAS-GA.json
+4ec40da55cc22ec20c4ae795dc7d1c0d5acd3b320e08fe4a6e1f8941cf87db22  cv/verificar_conversor.py
+a93489c09f650d7a55ad4d5affa02e33e8116dafc141bd73fb0f9488ef25a4ef  cv/ar/arrastre.py
+4a3a362b0013eca055ee767cd7f156ad76ebba61b1183fd734b0a517f44c7d98  cv/cv3_clases.py
+6c7268dba17b212ccc44b582dddeb63d338bf2e6dc736d56812389c9d00d386b  cv/cv3_minimos.py
+
+SELLO DE LA ETAPA 33, bloque 3 (5-nov-2026, 19:00): después de correr. La comparación de los gemelos se corrigió después (DV-GA-5: el hecho, sin el número de aparición); la sellada está en ga/sellada/
+56bcf37a9b40b3acb4eead3f27572bfdc40edad44ad0f52e53b4975b5ef29dbf  ga/comparar_ga.py
+ac69dc01abc509366bfbbab2896518fa12030eddc36b2e296e9b0903a34c406a  ga/sellada/comparar_ga.py
+7e91f048dd43e09f49beddf3de24cf2f06a72adb333d4e6d169cda09ca70324f  ga/cifras_ga_b.py
+d4b2875199dfc2cf37f7caab8c9ef2b5d0f93e4b49d7968bc06ee6e24fe35d6f  ga/CIFRAS-GA-B.json
+79e266d0ca49ce40366d34a5bde328f66c19e5cfa916fe2d3170adf260037b81  ga/COMPARACION-GA.json
+3d5ec4311213decf00e74e569504b1cc6f8c7aac686748d6a091ef3335cf1f6a  ga/GEMELOS-GA.json
+770cf713401cbd069aaafaa9b77c8ea43aed11577ff605709080c49c3a900f61  ga/sellada/GEMELOS-GA-sellada.json
+
+
+SELLO DE LA ETAPA 33, bloque 4 (6-nov-2026, 16:28): lo que cambió después del bloque 3, cada fichero con su razón
+# Cambiaron después del 3 sin tocar lo que miden (las rutas de la máquina, fuera; lo que escriben, byte a byte igual salvo las rutas)
+c49c0f1609fcd70bc734c87a1c97e21087eebc6280d9a9533795f7aa9bcbfdb8  ga/comparar_ga.py
+7824bfc1448b373d7cfb26d343ee2c61979096984fb87c0d4faafbc5cf21cd52  ga/RUIDO-microsoft.json
+7873b95cacdc95cb6cc142dbcb2694d43a1bc5c6d3dd84b1b9b48e64ac25ebaa  ga/RUIDO-linuxforhealth.json
+6f8c2660b1df08dd82cca70b4c301f0163060b5123c684da8e64a12be3f6f3f7  ga/gen_bases_a1_v2.py
+2a826ed3ca0cf4a3fdd1744666346b97c6f053c44a8fe3eb19ac1343e6ed6f4e  ga/hacer_resto_v2.py
+# Cambiaron después del 3 tras la revisión: las cifras de la B eligen los casos de M-11 por su clase en la versión 1 (DV-GA-11), y las cifras que cambian se llaman v1 y v2
+e986e283cab3ea307ed2d7e4ea54a35cbf23bef254c1f8bee480bb3558ee3340  ga/cifras_ga_b.py
+fc8c2944535a7ebbc75c9611f368df6b5a52601085a2fbbe2c9423d4be75e6a9  ga/CIFRAS-GA-B.json
+# Salidas de la corrida que el 3 no llevaba: B36 en sus cinco eventos (sin las rutas de la máquina), y las clases y los mínimos de cada versión (copiados de la comparación)
+2168d3653f821da80843ad6627cda54801fd9ab5a8ff06c83815cb502891f37e  ga/B36-microsoft.json
+554453b4911eb6ef7694f709fee087a7bf13c1de3b9dd1eb5967444b984e9aa7  ga/B36-linuxforhealth.json
+d04b7724db5e1a3fb4ca8d170bb7cf4d6819841465a531bebba2f895cc3f14b7  ga/CLASES-GA-v1.json
+09d48cf7fe9ed9246d9cb75e8eada9d72ccf8e7813f926b17bdc5b27f3e7e3e9  ga/CLASES-GA-v2.json
+236a9e897125350e3eb6f7ebd0d9206723e1c88ec31086c62d9944f4d06e1196  ga/minimos-GA-v1.json
+96d872bf0785eaf833523551398d14baff37e0cb869faa7600fc4a90b987b002  ga/minimos-GA-v2.json
+# Nuevos después del 3: la lista de la versión 2 (DV-GA-7)
+6f595b4764f7dc821928b1cda1a044cbb1e6e64fd9764a3e0b421f4c62059315  ga/lista_corpus_v2.py
+ec9329814d685814326f089296c1f9da0e1f3c4d8ee5d2fffa4b94cf091d4932  ga/LISTA-CORPUS-V2.jsonl
+# Nuevos después del 3: el cruce de las 27 por mecanismo (DV-GA-11) y el gemelo de MD-M5 (Q-GA-8, DV-GA-12)
+f148e4c70339733a6971d8e6cd58a6b3b06d1533030874809caf55b4d07d47bd  ga/cruce_ga.py
+fbc689379ff8a7cbe47e8bc3e9724342d6c1f5262b7afa35d024f854c0e7f50a  ga/CRUCE-GA.json
+2e0a5a6442fdf0783b4bbc76b3c02e90379eec1ce5f56f1a70ff458452daacde  ga/estado_ga8.md
+b4c764ab056dabc45de70d85a2696e9eaa6d90742565c93ddca5af92981e3cca  ga/preguntas_ga8.json
+6d8c03260adf21e219578a232f38a0500b314f22655fcbc402af6a7cc825efd8  ga/decision-jev-ga8.md
+a0ba0f628c05404a50bf834530d5d29a1e3cb3acef45cbc78fe817dfd755baf7  ga/gemelo_mdm.py
+65c8bb1f0e427403d77f0131fea9d55badbdd1ca19b29aa9940f97a25db3c4b5  ga/gemelos-mdm/MANIFIESTO.txt
+d14bc367c5078050cc6f7637e063b5148120852b50fc5a0ccc81be1d154a5b5c  ga/juzgar_gemelo_mdm.py
+281d2641d8fac16fbecfc747f71ad00467d01aaa27b409e2d2ff29c64121a347  ga/GEMELO-MDM.json
+# Nuevos después del 3: la integración continua (DV-GA-9) y las pruebas de la herramienta (DV-GA-6)
+eb79fc9ed33fd1c8ec3c5f3abae36c057912e097f5b2ef6cc473718256c0e9de  ga/parche_bases_ga.py
+4e42e87268ceccc0ff32b5bdef8e31a2d1c6c2637da4176cfc45ec3138c4d6f8  cv/ci/hacer_bases.py
+c60791527fbcd1747d6c6a3661ddd092ec5eff9476c842c367d615b06d589ba6  cv/ci/LINEA-BASE-juguete.json
+78e1c88d799d75395ddc11fc8ebf73b29d00ac445bb3a8f793494fbb58d3eff0  cv/ci/LINEA-BASE-linuxforhealth.json
+c8c636fbf991af43d8d01b7f7b29cfad29cccff35147f31ea42d7b66bd940d54  cv/ci/LINEA-BASE-linuxforhealth-mensaje.json
+b539211a743f45fc1ebddc20e94abb6deb77b7591f29d12721f3ba9183160bde  ga/PRUEBA-VC.txt
+
+SELLO DE LA ETAPA 33, bloque 5 (6-nov-2026, 16:40): tras la segunda pasada de la revisión a ciegas, que aprobó con ocho menores
+# Las pruebas de la herramienta miran también la versión 2 (menor 6): el parche, las pruebas y su registro
+0a7e8eb50984098c598bee22e6b9e112e25c4c687cd2be9549108107b950b618  ga/parche_prueba_vc.py
+2715d44a5fe6fef7b3108b8fd2ca925a21e819aaaa073bc7c448d373945c2006  cv/prueba_vc.py
+4fe1da7cf953754081297d9a5cfe043cf3fd8b49008c52bbad2e29802009fd83  ga/PRUEBA-VC.txt
+# El registro de las bases nuevas de la integración continua (menor 3), copiado tal cual de lo que escribió su guion
+59e196c8d8efaaf720872672fae7a740d529e996937ff648290c6c0479de3506  ga/BASES-CI-33.json
+c45acb8f64470239389c389a4e39dd9be71c90da0e4ee63b343b956c5670150e  ga/BASES-CI-33-HECHO.txt
+# Los dos cabos de registro (menor 7): el guion de las bases del laboratorio, que para si las bases fallan (DV-GA-9), y el de la publicación (la lista .jsonl, el TXA-16 de los gemelos de MDM y la ruta del encargo)
+9c1cb15e13568b2c6f3d07093e6e8780819d065bbab580430c38719c07041a64  base_nc.sh
+38d3fe6d71448f59a9fb52b6f3b352431ef8955af793b81495052f58b65fde36  ga/preparar_publicacion_ga.py
+
+SELLO DE LA ETAPA 33, bloque 6 (7-nov-2026, 13:04): tras el segundo lector a ciegas, que aprobó con cuatro menores
+# El manual de la herramienta nombra --version-corpus y lo que ve quien ya la usa (menor 2): el parche y el manual
+ab3642309cc80d2d700e0072a8e5f9b0c5bc6f8438771514e0c0867affb1140b  ga/parche_vc_md.py
+f8d2b07c73c52dfb94d24cd746ffbb9ccce998ae1f58331a7f3cec3823c1cf1a  cv/VC.md
+# El guion de la publicación: la lista de segmentos de la sección del README, con NK1, AL1 y DB1 (menor 3), y el manual entre las copias
+cdff82605e644175b677917539efa2518ec702719eb4c41bc9f10be988f8a224  ga/preparar_publicacion_ga.py

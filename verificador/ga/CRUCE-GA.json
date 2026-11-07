@@ -1,0 +1,982 @@
+{
+ "nuevas": [
+  {
+   "id": "M-7",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A1-A01-03.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/adt/A1-A02-08.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/adt/A1-A03-13.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/M04-pv1-8-repetido-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 8,
+    "casos_validos": [
+     "lab/adt/A1-A01-03.hl7",
+     "lab/adt/A1-A02-08.hl7",
+     "lab/adt/A1-A03-13.hl7",
+     "lab/adt/A1-A04-18.hl7",
+     "lab/adt/A1-A08-23.hl7",
+     "lab/adt/A1-A11-28.hl7"
+    ],
+    "n_casos_validos": 8,
+    "pares": [
+     "M04-pv1-8-repetido"
+    ],
+    "pares_confirmados_y_validos": [
+     "M04-pv1-8-repetido"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "M-10",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A1-A13-32.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/minimos/M08-estado-civil-t-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 1,
+    "casos_validos": [
+     "lab/adt/A1-A13-32.hl7"
+    ],
+    "n_casos_validos": 1,
+    "pares": [
+     "M08-estado-civil-t"
+    ],
+    "pares_confirmados_y_validos": [
+     "M08-estado-civil-t"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "M-18",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A02-016.hl7",
+     "v1": "invalido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/adt/A02-017.hl7",
+     "v1": "invalido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/adt/A02-018.hl7",
+     "v1": "invalido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/minimos/M03-pda-sin-muerte-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 5,
+    "casos_validos": [
+     "lab/adt/A02-016.hl7",
+     "lab/adt/A02-017.hl7",
+     "lab/adt/A02-018.hl7",
+     "lab/adt/A02-022.hl7",
+     "lab/adt/A02-024.hl7"
+    ],
+    "n_casos_validos": 5,
+    "pares": [
+     "M03-pda-sin-muerte"
+    ],
+    "pares_confirmados_y_validos": [
+     "M03-pda-sin-muerte"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "M-23",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B30.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/M07-oru-sin-pid-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "M-24",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B29.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/M01-nm-punto-inicial-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "L-1",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A01-001.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/adt/A01-002.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/adt/A01-003.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L01-sin-location-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 175,
+    "casos_validos": [
+     "lab/adt/A01-001.hl7",
+     "lab/adt/A01-002.hl7",
+     "lab/adt/A01-003.hl7",
+     "lab/adt/A01-004.hl7",
+     "lab/adt/A01-005.hl7",
+     "lab/adt/A01-006.hl7"
+    ],
+    "n_casos_validos": 150,
+    "pares": [
+     "L01-sin-location"
+    ],
+    "pares_confirmados_y_validos": [
+     "L01-sin-location"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-10",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A1-A01-02.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/adt/A1-A31-37.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/minimos/L02-estado-civil-a-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 2,
+    "casos_validos": [
+     "lab/adt/A1-A01-02.hl7",
+     "lab/adt/A1-A31-37.hl7"
+    ],
+    "n_casos_validos": 2,
+    "pares": [
+     "L02-estado-civil-a"
+    ],
+    "pares_confirmados_y_validos": [
+     "L02-estado-civil-a"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-11",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A1-A01-02.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/adt/A1-A03-12.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/adt/A1-A04-17.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "cambian"
+    },
+    {
+     "apoyo": "lab/minimos/L04-sad-2-3-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 17,
+    "casos_validos": [
+     "lab/adt/A1-A01-02.hl7",
+     "lab/adt/A1-A03-12.hl7",
+     "lab/adt/A1-A04-17.hl7",
+     "lab/adt/A1-A08-22.hl7",
+     "lab/adt/A1-A31-37.hl7"
+    ],
+    "n_casos_validos": 5,
+    "pares": [
+     "L04-sad-2-3"
+    ],
+    "pares_confirmados_y_validos": [
+     "L04-sad-2-3"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-12",
+   "apoyos": [
+    {
+     "apoyo": "lab/adt/A1-A04-15.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L05-genero-n-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 1,
+    "casos_validos": [
+     "lab/adt/A1-A04-15.hl7"
+    ],
+    "n_casos_validos": 1,
+    "pares": [
+     "L05-genero-n"
+    ],
+    "pares_confirmados_y_validos": [
+     "L05-genero-n"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-15",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B18.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/oru/ORU-B22.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L06-obx-sin-tipo-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 2,
+    "casos_validos": [
+     "lab/oru/ORU-B22.hl7"
+    ],
+    "n_casos_validos": 1,
+    "pares": [
+     "L06-obx-sin-tipo"
+    ],
+    "pares_confirmados_y_validos": [
+     "L06-obx-sin-tipo"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-16",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B11.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/oru/ORU-B13.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L07-ft-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L08-tm-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 2,
+    "casos_validos": [
+     "lab/oru/ORU-B11.hl7",
+     "lab/oru/ORU-B13.hl7"
+    ],
+    "n_casos_validos": 2,
+    "pares": [
+     "L07-ft",
+     "L08-tm"
+    ],
+    "pares_confirmados_y_validos": [
+     "L07-ft",
+     "L08-tm"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-18",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B20.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L09-obx-11-d-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "L-19",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B22.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/oru/ORU-B31.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L10-obr-25-i-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "au-pares/AU3-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 2,
+    "casos_validos": [
+     "lab/oru/ORU-B22.hl7",
+     "lab/oru/ORU-B31.hl7"
+    ],
+    "n_casos_validos": 2,
+    "pares": [
+     "L10-obr-25-i"
+    ],
+    "pares_confirmados_y_validos": []
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-20",
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B07.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/minimos/L11-sn-rango-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 1,
+    "casos_validos": [
+     "lab/oru/ORU-B07.hl7"
+    ],
+    "n_casos_validos": 1,
+    "pares": [
+     "L11-sn-rango"
+    ],
+    "pares_confirmados_y_validos": []
+   },
+   "se_reproduce_en_valido": true,
+   "por": "casos de su clase"
+  },
+  {
+   "id": "L-22",
+   "apoyos": [
+    {
+     "apoyo": "lab/minimos/L13-pv1-52-caso.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "casos_de_la_clase": 10,
+    "casos_validos": [],
+    "n_casos_validos": 0,
+    "pares": [
+     "L13-pv1-52"
+    ],
+    "pares_confirmados_y_validos": [
+     "L13-pv1-52"
+    ]
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su par mínimo"
+  },
+  {
+   "id": "VX-M7",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B16.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VM07-lote-repetido-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-M8",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B18.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VM08-fabricante-alterno-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-M10",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B37.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VM10-relacion-grd-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-M12",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B40.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VM12-dos-indicaciones-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-M14",
+   "apoyos": [
+    {
+     "apoyo": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-M15",
+   "apoyos": [
+    {
+     "apoyo": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "au-pares/AU1-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-L6",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B11.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VL04-rxa21-d-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-L8",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B21.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VL06-dos-rxa10-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "au-pares/AU2-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "VX-L9",
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B40.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "vxu-pares/VL07-dos-indicaciones-caso.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "gemelos": true
+   },
+   "se_reproduce_en_valido": true,
+   "por": "su gemelo con ISO+"
+  },
+  {
+   "id": "MD-L3",
+   "apoyos": [
+    {
+     "apoyo": "lab/mdm/MDM-B03.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B05.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B06.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B07.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B13.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B14.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B15.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B16.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B17.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B18.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B19.hl7",
+     "v1": "valido",
+     "v2": "valido",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B21.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B23.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B24.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B25.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "lab/mdm/MDM-B27.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "mdm-pares/MP5-con.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": true,
+   "donde": {
+    "base": "lab/mdm/MDM-B25.hl7",
+    "base_v2": "no_decidible",
+    "par": "mdm-pares/MP5-con.hl7",
+    "par_v2": "no_decidible",
+    "sin_decidir": [
+     "L|TXA|3|"
+    ]
+   },
+   "se_reproduce_en_valido": false,
+   "por": "ninguno"
+  },
+  {
+   "id": "MD-L5",
+   "apoyos": [
+    {
+     "apoyo": "lab/mdm/MDM-B24.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "mdm-pares/MP4-con.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "base": "lab/mdm/MDM-B24.hl7",
+    "base_v2": "no_decidible",
+    "par": "mdm-pares/MP4-con.hl7",
+    "par_v2": "no_decidible",
+    "sin_decidir": [
+     "L|TXA|3|"
+    ]
+   },
+   "se_reproduce_en_valido": false,
+   "por": "ninguno"
+  },
+  {
+   "id": "MD-M5",
+   "apoyos": [
+    {
+     "apoyo": "lab/mdm/MDM-B33.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    },
+    {
+     "apoyo": "mdm-pares/MP1-con.hl7",
+     "v1": "no_decidible",
+     "v2": "no_decidible",
+     "bytes": "iguales"
+    }
+   ],
+   "apoyo_valido": false,
+   "donde": {
+    "base": "lab/mdm/MDM-B33.hl7",
+    "base_v2": "no_decidible",
+    "par": "mdm-pares/MP1-con.hl7",
+    "par_v2": "no_decidible",
+    "sin_decidir": [
+     "L|TXA|3|"
+    ],
+    "gemelo_ed": {
+     "caso": {
+      "valido": "valido",
+      "estado": "error",
+      "categoria": "rechazo_incorrecto"
+     },
+     "control": {
+      "valido": "valido",
+      "estado": "bundle",
+      "categoria": "fallo_silencioso"
+     },
+     "confirmada": true
+    }
+   },
+   "se_reproduce_en_valido": true,
+   "por": "un gemelo de su par con contenido ED"
+  }
+ ],
+ "n": 27,
+ "apoyo_valido": 13,
+ "se_reproducen_en_un_mensaje_valido": 25,
+ "por": {
+  "casos de su clase": 11,
+  "su gemelo con ISO+": 12,
+  "su par mínimo": 1,
+  "un gemelo de su par con contenido ED": 1
+ },
+ "no": [
+  "MD-L3",
+  "MD-L5"
+ ],
+ "con_apoyo_valido_y_sin_reproducirse": [
+  "MD-L3"
+ ],
+ "apoyos_que_pasan_a_validos": [
+  "lab/adt/A02-016.hl7",
+  "lab/adt/A02-017.hl7",
+  "lab/adt/A02-018.hl7"
+ ]
+}

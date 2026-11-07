@@ -1,0 +1,29 @@
+{
+ "original": {
+  "caso": {
+   "valido": "no_decidible",
+   "estado": "error",
+   "categoria": "rechazo_incorrecto"
+  },
+  "control": {
+   "valido": "no_decidible",
+   "estado": "bundle",
+   "categoria": "fallo_silencioso"
+  },
+  "confirmada": true
+ },
+ "gemelo": {
+  "caso": {
+   "valido": "valido",
+   "estado": "error",
+   "categoria": "rechazo_incorrecto"
+  },
+  "control": {
+   "valido": "valido",
+   "estado": "bundle",
+   "categoria": "fallo_silencioso"
+  },
+  "confirmada": true
+ },
+ "se_reproduce_en_valido": true
+}

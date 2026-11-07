@@ -1,0 +1,8 @@
+{
+ "p2": {"type": "choice", "instructions": "P2: la disposición de PL en PV1-3, 6 y 11.",
+  "criteria": {"dejar": "(a) Se queda: es válida por tipo.", "reescribir": "(b) Se reescribe como ICU^001^^HOSPITAL^^N en las 216."}},
+ "p6": {"type": "choice", "instructions": "P6: MSH-10 de los gemelos.",
+  "criteria": {"sufijo": "(a) El del original con el sufijo -ISO.", "igual": "(b) El mismo que el original."}},
+ "p11": {"type": "choice", "instructions": "P11: ROL-2 (tabla 0287), que GENADT no escribe.",
+  "criteria": {"ad": "(a) AD en todos.", "uc": "(b) UC en todos.", "ad_uc": "(c) AD en A01 y A04, y UC en los demás eventos.", "ad_up": "(d) AD en A01 y A04, y UP en los demás eventos."}}
+}

@@ -1,0 +1,389 @@
+{
+ "cambian": 80,
+ "clases": {
+  "L-1": {
+   "clase": "nueva",
+   "casos": 175,
+   "en_los_que_cambian": 50,
+   "todos_en_los_que_cambian": false
+  },
+  "L-10": {
+   "clase": "nueva",
+   "casos": 2,
+   "en_los_que_cambian": 2,
+   "todos_en_los_que_cambian": true
+  },
+  "L-11": {
+   "clase": "nueva",
+   "casos": 17,
+   "en_los_que_cambian": 5,
+   "todos_en_los_que_cambian": false
+  },
+  "L-12": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-13": {
+   "clase": "ya_declarada",
+   "casos": 35,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-14": {
+   "clase": "ya_declarada",
+   "casos": 4,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-15": {
+   "clase": "nueva",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-16": {
+   "clase": "nueva",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-17": {
+   "clase": "ya_declarada",
+   "casos": 3,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-18": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-19": {
+   "clase": "nueva",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-2": {
+   "clase": "ya_declarada",
+   "casos": 121,
+   "en_los_que_cambian": 35,
+   "todos_en_los_que_cambian": false
+  },
+  "L-20": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-21": {
+   "clase": "dudosa",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-22": {
+   "clase": "nueva",
+   "casos": 10,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-23": {
+   "clase": "ya_declarada",
+   "casos": 10,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-25": {
+   "clase": "no_cambia",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-26": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "L-3": {
+   "clase": "ya_declarada",
+   "casos": 118,
+   "en_los_que_cambian": 40,
+   "todos_en_los_que_cambian": false
+  },
+  "L-4": {
+   "clase": "ya_declarada",
+   "casos": 95,
+   "en_los_que_cambian": 30,
+   "todos_en_los_que_cambian": false
+  },
+  "L-5": {
+   "clase": "ya_declarada",
+   "casos": 30,
+   "en_los_que_cambian": 9,
+   "todos_en_los_que_cambian": false
+  },
+  "L-6": {
+   "clase": "ya_declarada",
+   "casos": 16,
+   "en_los_que_cambian": 15,
+   "todos_en_los_que_cambian": false
+  },
+  "L-7": {
+   "clase": "ya_declarada",
+   "casos": 15,
+   "en_los_que_cambian": 5,
+   "todos_en_los_que_cambian": false
+  },
+  "L-8": {
+   "clase": "ya_declarada",
+   "casos": 5,
+   "en_los_que_cambian": 5,
+   "todos_en_los_que_cambian": true
+  },
+  "L-9": {
+   "clase": "dudosa",
+   "casos": 13,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-1": {
+   "clase": "ya_declarada",
+   "casos": 204,
+   "en_los_que_cambian": 32,
+   "todos_en_los_que_cambian": false
+  },
+  "M-10": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 1,
+   "todos_en_los_que_cambian": true
+  },
+  "M-11": {
+   "clase": "fuera_corpus",
+   "casos": 30,
+   "en_los_que_cambian": 30,
+   "todos_en_los_que_cambian": true
+  },
+  "M-12": {
+   "clase": "nueva_rechazo",
+   "casos": 18,
+   "en_los_que_cambian": 18,
+   "todos_en_los_que_cambian": true
+  },
+  "M-13": {
+   "clase": "ya_declarada",
+   "casos": 24,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-14": {
+   "clase": "fuera_muestra_invalida",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-15": {
+   "clase": "nueva_rechazo",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-16": {
+   "clase": "ya_declarada",
+   "casos": 11,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-17": {
+   "clase": "ya_declarada",
+   "casos": 12,
+   "en_los_que_cambian": 6,
+   "todos_en_los_que_cambian": false
+  },
+  "M-18": {
+   "clase": "nueva",
+   "casos": 5,
+   "en_los_que_cambian": 5,
+   "todos_en_los_que_cambian": true
+  },
+  "M-19": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-2": {
+   "clase": "ya_declarada",
+   "casos": 48,
+   "en_los_que_cambian": 8,
+   "todos_en_los_que_cambian": false
+  },
+  "M-20": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-21": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-22": {
+   "clase": "fuera_ambiguedad",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-23": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-24": {
+   "clase": "nueva",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-25": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-26": {
+   "clase": "ya_declarada",
+   "casos": 16,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-27": {
+   "clase": "dudosa",
+   "casos": 3,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-28": {
+   "clase": "ya_declarada",
+   "casos": 7,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-29": {
+   "clase": "fuera_muestra_invalida",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-3": {
+   "clase": "ya_declarada",
+   "casos": 31,
+   "en_los_que_cambian": 10,
+   "todos_en_los_que_cambian": false
+  },
+  "M-30": {
+   "clase": "ya_declarada",
+   "casos": 1,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-31": {
+   "clase": "ya_declarada",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-32": {
+   "clase": "fuera_version",
+   "casos": 16,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-33": {
+   "clase": "fuera_version",
+   "casos": 16,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-34": {
+   "clase": "fuera_version",
+   "casos": 16,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-35": {
+   "clase": "ya_declarada",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-4": {
+   "clase": "ya_declarada",
+   "casos": 8,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-5": {
+   "clase": "ya_declarada",
+   "casos": 31,
+   "en_los_que_cambian": 6,
+   "todos_en_los_que_cambian": false
+  },
+  "M-6": {
+   "clase": "ya_declarada",
+   "casos": 18,
+   "en_los_que_cambian": 1,
+   "todos_en_los_que_cambian": false
+  },
+  "M-7": {
+   "clase": "nueva",
+   "casos": 8,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-8": {
+   "clase": "ya_declarada",
+   "casos": 6,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  },
+  "M-9": {
+   "clase": "no_cambia",
+   "casos": 2,
+   "en_los_que_cambian": 0,
+   "todos_en_los_que_cambian": false
+  }
+ },
+ "en_riesgo": [
+  "L-10",
+  "L-8",
+  "M-10",
+  "M-11",
+  "M-12",
+  "M-18"
+ ],
+ "tocadas": [
+  "L-1",
+  "L-11",
+  "L-2",
+  "L-3",
+  "L-4",
+  "L-5",
+  "L-6",
+  "L-7",
+  "M-1",
+  "M-17",
+  "M-2",
+  "M-3",
+  "M-5",
+  "M-6"
+ ]
+}

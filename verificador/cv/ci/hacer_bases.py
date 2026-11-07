@@ -40,6 +40,16 @@ def correr(ad, salida, art, extra=()):
             "segundos": cr["duraciones"]["total_s"]}
 
 
+def casos_herramienta(minimos):
+    """Los casos que junta la herramienta de la copia pública con su corpus por omisión (etapa 33: la versión 2), sin propios."""
+    r = subprocess.run([PYTHON, "-c", "import os, sys, tempfile; sys.argv = ['x', '--silencio']; sys.path.insert(0, 'cv'); "
+                        "import verificar_conversor as V; co = V.generar_corpus(os.path.join(tempfile.mkdtemp(), 'c'), lab=True, "
+                        "minimos=%s, version=2); print(len(co['casos']))" % bool(minimos)], cwd=PUB, capture_output=True, text=True)
+    if r.returncode:
+        parar("no se pudo contar el corpus de la copia pública: %s" % r.stderr[-300:])
+    return int(r.stdout.split()[-1])
+
+
 def lb(*a):
     buf = io.StringIO()
     with redirect_stdout(buf):
@@ -84,7 +94,7 @@ def base(nombre, ad, art, n_esperado, extra=(), dos=True):
 
 
 if "juguete" in QUE:
-    s1, d = base("juguete", "cv/adaptadores/juguete.json", "cv", 383)          # etapa 26: 343 + las 40 de MDM
+    s1, d = base("juguete", "cv/adaptadores/juguete.json", "cv", casos_herramienta(False))  # etapa 33: lo que junta la herramienta
     jug = os.path.join(PUB, "cv", "conversor_juguete.py")
     original = open(jug, "rb").read()
     try:
@@ -106,9 +116,9 @@ if "juguete" in QUE:
     if open(jug, "rb").read() != original:
         parar("juguete: la copia pública quedó sembrada")
 if "lote" in QUE:
-    base("linuxforhealth", "cv/adaptadores/linuxforhealth.json", ART, 451)                         # etapa 26: 411 + 40
+    base("linuxforhealth", "cv/adaptadores/linuxforhealth.json", ART, casos_herramienta(True))     # etapa 33: con los mínimos
 if "mensaje" in QUE:
-    base("linuxforhealth-mensaje", "cv/adaptadores/linuxforhealth-mensaje.json", ART, 451, dos=False)   # etapa 26: 411 + 40
+    base("linuxforhealth-mensaje", "cv/adaptadores/linuxforhealth-mensaje.json", ART, casos_herramienta(True), dos=False)   # etapa 33
 json.dump(res, open(os.path.join(TRAB, "BASES-CI.json"), "w"), ensure_ascii=False, indent=1)
 print(json.dumps({k: {x: v.get(x) for x in ("n_casos", "categorias", "positivo") if x in v} for k, v in res.items() if isinstance(v, dict)},
                  ensure_ascii=False, indent=1))

@@ -1,0 +1,4 @@
+# cv/prueba_vc.py, etapa 33: 2026-11-06T16:38:53+01:00
+# herramienta 4ec40da55cc22ec20c4ae795dc7d1c0d5acd3b320e08fe4a6e1f8941cf87db22; pruebas 2715d44a5fe6fef7b3108b8fd2ca925a21e819aaaa073bc7c448d373945c2006
+# cd verificador && python3 cv/prueba_vc.py
+PRUEBAS VC: TODO BIEN (154 comprobaciones, 26 pruebas)

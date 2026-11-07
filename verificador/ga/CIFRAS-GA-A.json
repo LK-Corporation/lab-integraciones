@@ -1,0 +1,517 @@
+{
+ "n": 767,
+ "por_estado": {
+  "igual": 637,
+  "cambia": 86,
+  "nuevo": 44
+ },
+ "PA1_identicos_mismo_veredicto": {
+  "n": 637,
+  "mismo": 637,
+  "distintos": []
+ },
+ "PA2_genadt": {
+  "validas": 72,
+  "invalidas": 0,
+  "sin_decidir": 0,
+  "n": 72,
+  "familias": {
+   "completo": 24,
+   "nulos": 24,
+   "opcionales": 24
+  }
+ },
+ "PA3_a1": {
+  "validas": 8,
+  "invalidas": 0,
+  "sin_decidir": 0,
+  "n": 8
+ },
+ "PA4_cap3_completadas": {
+  "validas": 6,
+  "invalidas": 0,
+  "sin_decidir": 1,
+  "n": 7,
+  "detalle": {
+   "cap3-08-A01-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   },
+   "cap3-10-A04-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   },
+   "cap3-12-A02-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   },
+   "cap3-14-A02-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   },
+   "cap3-15-A03-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   },
+   "cap3-36-A04-completada": {
+    "veredicto": "no_decidible",
+    "no_decidibles": [
+     "T_HL7|PID|5|0465"
+    ],
+    "sostenidos": []
+   },
+   "cap3-37-A04-completada": {
+    "veredicto": "valido",
+    "no_decidibles": [],
+    "sostenidos": []
+   }
+  }
+ },
+ "PA5_b36": {
+  "validas": 0,
+  "invalidas": 0,
+  "sin_decidir": 6,
+  "n": 6,
+  "detalle": {
+   "lab/mdm/MDM-B36.hl7": [
+    "L|TXA|3|"
+   ],
+   "mdm-eventos/MDM-B36-T02.hl7": [
+    "L|TXA|3|"
+   ],
+   "mdm-eventos/MDM-B36-T04.hl7": [
+    "L|TXA|3|"
+   ],
+   "mdm-eventos/MDM-B36-T06.hl7": [
+    "L|TXA|3|"
+   ],
+   "mdm-eventos/MDM-B36-T08.hl7": [
+    "L|TXA|3|"
+   ],
+   "mdm-eventos/MDM-B36-T10.hl7": [
+    "L|TXA|3|"
+   ]
+  }
+ },
+ "PA6_gemelos": {
+  "validas": 37,
+  "invalidas": 0,
+  "sin_decidir": 0,
+  "n": 37,
+  "no_validos": {}
+ },
+ "PA7_total": {
+  "validas": 392,
+  "invalidas": 16,
+  "sin_decidir": 359
+ },
+ "por_corpus": {
+  "au-pares": {
+   "validas": 4,
+   "invalidas": 0,
+   "sin_decidir": 4
+  },
+  "gemelos": {
+   "validas": 37,
+   "invalidas": 0,
+   "sin_decidir": 0
+  },
+  "lab/adt": {
+   "validas": 246,
+   "invalidas": 15,
+   "sin_decidir": 9
+  },
+  "lab/mdm": {
+   "validas": 8,
+   "invalidas": 0,
+   "sin_decidir": 32
+  },
+  "lab/minimos": {
+   "validas": 43,
+   "invalidas": 1,
+   "sin_decidir": 24
+  },
+  "lab/oru": {
+   "validas": 11,
+   "invalidas": 0,
+   "sin_decidir": 29
+  },
+  "lab/vxu": {
+   "validas": 3,
+   "invalidas": 0,
+   "sin_decidir": 37
+  },
+  "mdm-eventos": {
+   "validas": 40,
+   "invalidas": 0,
+   "sin_decidir": 160
+  },
+  "mdm-pares": {
+   "validas": 0,
+   "invalidas": 0,
+   "sin_decidir": 14
+  },
+  "vxu-pares": {
+   "validas": 0,
+   "invalidas": 0,
+   "sin_decidir": 50
+  }
+ },
+ "PA8_invalidas": {
+  "n": 16,
+  "ids": [
+   "lab/adt/A1-A01-01.hl7",
+   "lab/adt/A1-A02-06.hl7",
+   "lab/adt/A1-A03-11.hl7",
+   "lab/adt/A1-A04-16.hl7",
+   "lab/adt/A1-A08-21.hl7",
+   "lab/adt/A1-A11-26.hl7",
+   "lab/adt/A1-A13-31.hl7",
+   "lab/adt/A1-A31-36.hl7",
+   "lab/adt/cap3-08-A01.hl7",
+   "lab/adt/cap3-10-A04.hl7",
+   "lab/adt/cap3-12-A02.hl7",
+   "lab/adt/cap3-14-A02.hl7",
+   "lab/adt/cap3-15-A03.hl7",
+   "lab/adt/cap3-36-A04.hl7",
+   "lab/adt/cap3-37-A04.hl7",
+   "lab/minimos/L17-pid-30-no-caso.hl7"
+  ]
+ },
+ "PA9_apoyo_en_gemelos": {
+  "nuevas": {
+   "M-23": {
+    "gemelos": [
+     {
+      "apoyo": "lab/oru/ORU-B30.hl7",
+      "gemelo": "gemelos/ORU-B30-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "lab/minimos/M07-oru-sin-pid-caso.hl7",
+      "gemelo": "gemelos/M07c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "M07k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "M-24": {
+    "gemelos": [
+     {
+      "apoyo": "lab/oru/ORU-B29.hl7",
+      "gemelo": "gemelos/ORU-B29-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "lab/minimos/M01-nm-punto-inicial-caso.hl7",
+      "gemelo": "gemelos/M01c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "M01k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "L-18": {
+    "gemelos": [
+     {
+      "apoyo": "lab/oru/ORU-B20.hl7",
+      "gemelo": "gemelos/ORU-B20-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "lab/minimos/L09-obx-11-d-caso.hl7",
+      "gemelo": "gemelos/L09c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "L09k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M7": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B16.hl7",
+      "gemelo": "gemelos/VXU-B16-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VM07-lote-repetido-caso.hl7",
+      "gemelo": "gemelos/VXU-M07c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M07k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M8": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B18.hl7",
+      "gemelo": "gemelos/VXU-B18-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VM08-fabricante-alterno-caso.hl7",
+      "gemelo": "gemelos/VXU-M08c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M08k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M10": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B37.hl7",
+      "gemelo": "gemelos/VXU-B37-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VM10-relacion-grd-caso.hl7",
+      "gemelo": "gemelos/VXU-M10c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M10k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M12": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B40.hl7",
+      "gemelo": "gemelos/VXU-B40-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VM12-dos-indicaciones-caso.hl7",
+      "gemelo": "gemelos/VXU-M12c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M12k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M14": {
+    "gemelos": [
+     {
+      "apoyo": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+      "gemelo": "gemelos/VXU-M14c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M14k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-M15": {
+    "gemelos": [
+     {
+      "apoyo": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+      "gemelo": "gemelos/VXU-M15c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-M15k-ISO.hl7": "valido"
+      }
+     },
+     {
+      "apoyo": "au-pares/AU1-caso.hl7",
+      "gemelo": "gemelos/VXU-AU1c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-AU1k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-L6": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B11.hl7",
+      "gemelo": "gemelos/VXU-B11-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VL04-rxa21-d-caso.hl7",
+      "gemelo": "gemelos/VXU-L04c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-L04k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-L8": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B21.hl7",
+      "gemelo": "gemelos/VXU-B21-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VL06-dos-rxa10-caso.hl7",
+      "gemelo": "gemelos/VXU-L06c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-L06k-ISO.hl7": "valido"
+      }
+     },
+     {
+      "apoyo": "au-pares/AU2-caso.hl7",
+      "gemelo": "gemelos/VXU-AU2c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-AU2k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "VX-L9": {
+    "gemelos": [
+     {
+      "apoyo": "lab/vxu/VXU-B40.hl7",
+      "gemelo": "gemelos/VXU-B40-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {}
+     },
+     {
+      "apoyo": "vxu-pares/VL07-dos-indicaciones-caso.hl7",
+      "gemelo": "gemelos/VXU-L07c-ISO.hl7",
+      "veredicto": "valido",
+      "controles": {
+       "VXU-L07k-ISO.hl7": "valido"
+      }
+     }
+    ],
+    "con_apoyo_valido_en_gemelo": true
+   },
+   "MD-L5": {
+    "gemelos": [],
+    "con_apoyo_valido_en_gemelo": false
+   },
+   "MD-M5": {
+    "gemelos": [],
+    "con_apoyo_valido_en_gemelo": false
+   }
+  },
+  "con_apoyo_valido": 12,
+  "sin": [
+   "MD-L5",
+   "MD-M5"
+  ]
+ },
+ "prevision": {
+  "PA1": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA1",
+    "que": "Los 637 mensajes idénticos byte a byte a los de la 30 dan su mismo veredicto sostenido",
+    "cifra": 637
+   }
+  },
+  "PA2": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA2",
+    "que": "Las 72 bases de GENADT que cambian (completo, nulos, opcionales) son válidas",
+    "validas": 72,
+    "invalidas": 0,
+    "sin_decidir": 0
+   }
+  },
+  "PA3": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA3",
+    "que": "Las 8 bases A1 de contactos (María -> Maria) siguen válidas",
+    "validas": 8
+   }
+  },
+  "PA4": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA4",
+    "que": "De las 7 copias completadas del capítulo 3, 6 son válidas y la del ejemplo veterinario (cap3-36) queda sin decidir por XPN.8 = D, fuera de la 0465 impresa (Q-IV-D-11); la de cap3-37 es válida (su HD.1 largo es longitud de componente, que el aparato de la 30 no cuenta)",
+    "validas": 6,
+    "invalidas": 0,
+    "sin_decidir": 1
+   }
+  },
+  "PA5": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA5",
+    "que": "B36 en T02 (lab/mdm) y en sus 5 eventos pasa de inválida a sin decidir: solo le queda TXA-3 (Q-IV-D-12)",
+    "invalidas": 0,
+    "sin_decidir": 6
+   }
+  },
+  "PA6": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA6",
+    "que": "Los 37 gemelos son válidos",
+    "validas": 37
+   }
+  },
+  "PA7": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA7",
+    "que": "Total de la versión 2",
+    "validas": 392,
+    "invalidas": 16,
+    "sin_decidir": 359
+   }
+  },
+  "PA8": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA8",
+    "que": "Las 16 inválidas son todas a propósito (8 A1 con PV1-2 vacío y L17) o fragmentos del estándar (los 7 originales del capítulo 3)",
+    "cifra": 16
+   }
+  },
+  "PA9": {
+   "acierta": true,
+   "prevision": {
+    "id": "PA9",
+    "que": "De las 12 nuevas sin apoyo válido por la 0396, las 12 tienen apoyo válido en sus gemelos (todos sus apoyos y controles pasan a válidos); MD-L5 y MD-M5 siguen sin ninguno",
+    "cifra": 12
+   }
+  }
+ },
+ "aciertos": "9 de 9"
+}

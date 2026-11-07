@@ -1,0 +1,11 @@
+inicio=2026-11-05T19:32:57+01:00
+rc_bases=0
+rc_herramienta=0
+cmp=0
+linea_base: pasa (lo esperado); nuevos 0, arreglos 0, casos nuevos 0, ausentes 0
+igual=0
+diferencias juguete (13): .casos.adt/cap3-08-A01-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-10-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-12-A02-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-14-A02-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-15-A03-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-36-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-37-A04-completada: None -> {'categoria': 'fallo; .corpus.huella: cd2e753be895e13e43eb -> e360583faacd660c4cd0
+diferencias linuxforhealth (13): .casos.adt/cap3-08-A01-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-10-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-12-A02-completada: None -> {'categoria': 'recha; .casos.adt/cap3-14-A02-completada: None -> {'categoria': 'recha; .casos.adt/cap3-15-A03-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-36-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-37-A04-completada: None -> {'categoria': 'fallo; .corpus.huella: 79c4b33d41a80eabfec4 -> 5705c8c3faa20719be9c
+diferencias linuxforhealth-mensaje (13): .casos.adt/cap3-08-A01-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-10-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-12-A02-completada: None -> {'categoria': 'recha; .casos.adt/cap3-14-A02-completada: None -> {'categoria': 'recha; .casos.adt/cap3-15-A03-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-36-A04-completada: None -> {'categoria': 'fallo; .casos.adt/cap3-37-A04-completada: None -> {'categoria': 'fallo; .corpus.huella: 79c4b33d41a80eabfec4 -> 5705c8c3faa20719be9c
+fin=2026-11-05T20:22:26+01:00
+FIN

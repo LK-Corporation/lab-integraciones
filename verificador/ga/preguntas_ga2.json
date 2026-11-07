@@ -1,0 +1,8 @@
+{
+ "q_ga_2": {"type": "choice", "instructions": "Q-GA-2: las unidades de ORU y VXU (tabla 0396).",
+  "criteria": {"ucum": "(a) Se quedan en UCUM.", "iso": "(b) Los generadores de ORU y VXU, y los pares mínimos de las 12, pasan a ISO+ (o a ANS+ o local, donde ISO+ no tenga la unidad).", "gemelos": "(c) Las bases se quedan en UCUM, y solo para el apoyo de las 12 se añade una copia con ISO+."}},
+ "q_ga_5": {"type": "choice", "instructions": "Q-GA-5: qué se rehace.",
+  "criteria": {"todo": "(a) Todo lo que lee estos corpus (hecho 6).", "conversores": "(b) La línea de los conversores (la herramienta y la CI, los estudios 14l, VXU y MDM, y la 30); la del circuito de IRIS se declara como no rehecha.", "apoyo": "(c) Solo la 30, el apoyo de las 27 nuevas (si cada una se reproduce en un mensaje válido) y la herramienta con la CI; las demás cuentas de los estudios se declaran como no rehechas."}},
+ "q_ga_6": {"type": "choice", "instructions": "Q-GA-6: los inválidos a propósito (8 de A1 con PV1-2 vacío y L17).",
+  "criteria": {"marcados": "(a) Se quedan, marcados en la lista del corpus como inválidos a propósito.", "aparte": "(b) Salen a un juego aparte, fuera del corpus que se da por válido."}}
+}

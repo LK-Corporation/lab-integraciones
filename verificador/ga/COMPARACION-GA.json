@@ -1,0 +1,3562 @@
+{
+ "por_conversor": {
+  "microsoft": {
+   "n_v1": 516,
+   "n_v2": 523,
+   "por_estado": {
+    "igual": 435,
+    "cambia": 81,
+    "nuevo": 7
+   },
+   "iguales_distintos": [],
+   "iguales_distintos_ruido": [],
+   "cambian": [
+    {
+     "caso": "adt/A01-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A01-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A01-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A01-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A01-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A02-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A03-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A03-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A03-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A03-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A04-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A04-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A04-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A04-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A04-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A08-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A08-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A08-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A08-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A08-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A1-A01-02",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A02-07",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A03-12",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A04-17",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A08-22",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A11-27",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A13-32",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A31-37",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-45",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.period.end: falta (PV1-<n> = <v>)"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A13-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-45",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.period.end: falta (PV1-<n> = <v>)"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A13-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido+valor_distinto",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-45",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.period.end: falta (PV1-<n> = <v>)"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A13-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A13-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A31-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A31-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A31-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PID-12",
+       "fidelidad",
+       "dato_perdido",
+       "Patient.address.district: falta <v>"
+      ],
+      [
+       "PV1-10",
+       "fidelidad",
+       "codigo_mal_mapeado",
+       "Encounter.serviceType: esperado (<v>, <v>) (de <v>), observado <v>"
+      ],
+      [
+       "PV1-11",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A31-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/A31-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "error",
+      "convertido"
+     ],
+     "se_van": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ],
+     "llegan": [
+      [
+       "OBX",
+       "fidelidad",
+       "recurso_inventado",
+       "Observation <id> sin origen propio en el mensaje"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-3",
+       "fidelidad",
+       "dato_perdido",
+       "Encounter.location <v>: la cadena de Location no conserva <v>"
+      ]
+     ]
+    },
+    {
+     "caso": "mdm/MDM-B36",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    }
+   ],
+   "nuevos": [
+    {
+     "caso": "adt/cap3-08-A01-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    },
+    {
+     "caso": "adt/cap3-10-A04-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    },
+    {
+     "caso": "adt/cap3-12-A02-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    },
+    {
+     "caso": "adt/cap3-14-A02-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    },
+    {
+     "caso": "adt/cap3-15-A03-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    },
+    {
+     "caso": "adt/cap3-36-A04-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "aceptado_imposible",
+     "cuentan": [
+      [
+       "PID-8",
+       "valor_imposible_aceptado",
+       "valor_imposible_convertido+fhir_invalido",
+       "Patient.gender: <v> convertido desde <v>, fuera de la <n>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-37-A04-completada",
+     "categoria": "correcto",
+     "subtipo": null,
+     "cuentan": []
+    }
+   ],
+   "categorias_que_cambian": {
+    "rechazo_incorrecto -> fallo_silencioso": 30
+   }
+  },
+  "linuxforhealth": {
+   "n_v1": 516,
+   "n_v2": 523,
+   "por_estado": {
+    "igual": 435,
+    "cambia": 81,
+    "nuevo": 7
+   },
+   "iguales_distintos": [],
+   "iguales_distintos_ruido": [],
+   "cambian": [
+    {
+     "caso": "adt/A01-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A01-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-023",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A02-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A03-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A04-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A08-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A01-02",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A02-07",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A03-12",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A04-17",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A08-22",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A11-27",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A13-32",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A1-A31-37",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-023",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A11-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-004",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-005",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-006",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-016",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-017",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-018",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-022",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-023",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A13-024",
+     "categoria": [
+      "rechazo_incorrecto",
+      "rechazo_incorrecto"
+     ],
+     "subtipo": [
+      "error",
+      "error"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-004",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-005",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-006",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-016",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-017",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-018",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-022",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-023",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "adt/A31-024",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    },
+    {
+     "caso": "mdm/MDM-B36",
+     "categoria": [
+      "fallo_silencioso",
+      "fallo_silencioso"
+     ],
+     "subtipo": [
+      "convertido",
+      "convertido"
+     ],
+     "se_van": [],
+     "llegan": []
+    }
+   ],
+   "nuevos": [
+    {
+     "caso": "adt/cap3-08-A01-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "cuentan": [
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-44",
+       "fidelidad",
+       "dato_inventado",
+       "Encounter.period.start: <v> presente sin PV1-<n>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-10-A04-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "cuentan": [
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-44",
+       "fidelidad",
+       "dato_inventado",
+       "Encounter.period.start: <v> presente sin PV1-<n>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-12-A02-completada",
+     "categoria": "rechazo_incorrecto",
+     "subtipo": "error",
+     "cuentan": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-14-A02-completada",
+     "categoria": "rechazo_incorrecto",
+     "subtipo": "error",
+     "cuentan": [
+      [
+       "MSH-9",
+       "rechazo",
+       "incorrecto",
+       "el conversor devolvió error <v> con un mensaje que la guía convierte"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-15-A03-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "cuentan": [
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-44",
+       "fidelidad",
+       "dato_inventado",
+       "Encounter.period.start: <v> presente sin PV1-<n>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-36-A04-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido+aceptado_imposible",
+     "cuentan": [
+      [
+       "PID-8",
+       "valor_imposible_aceptado",
+       "valor_imposible_convertido",
+       "Patient.gender: <v> convertido desde <v>, fuera de la <n>"
+      ],
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-44",
+       "fidelidad",
+       "dato_inventado",
+       "Encounter.period.start: <v> presente sin PV1-<n>"
+      ]
+     ]
+    },
+    {
+     "caso": "adt/cap3-37-A04-completada",
+     "categoria": "fallo_silencioso",
+     "subtipo": "convertido",
+     "cuentan": [
+      [
+       "PV1-2",
+       "fidelidad",
+       "valor_distinto",
+       "Encounter.status: esperado uno de <v>, observado <v>"
+      ],
+      [
+       "PV1-44",
+       "fidelidad",
+       "dato_inventado",
+       "Encounter.period.start: <v> presente sin PV1-<n>"
+      ]
+     ]
+    }
+   ],
+   "categorias_que_cambian": {}
+  }
+ },
+ "ruido_declarado": [],
+ "cifras_que_cambian": [
+  {
+   "cifra": "clases.L-2.casos.adt",
+   "lote": 120,
+   "mensaje": 125,
+   "publicado": 120,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 125
+  },
+  {
+   "cifra": "clases.L-3.casos.adt",
+   "lote": 108,
+   "mensaje": 113,
+   "publicado": 108,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 113
+  },
+  {
+   "cifra": "clases.L-4.casos.adt",
+   "lote": 92,
+   "mensaje": 94,
+   "publicado": 92,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 94
+  },
+  {
+   "cifra": "clases.M-1.casos.adt",
+   "lote": 184,
+   "mensaje": 214,
+   "publicado": 184,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 214
+  },
+  {
+   "cifra": "clases.M-11.casos.adt",
+   "lote": 30,
+   "mensaje": null,
+   "publicado": 30,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 0
+  },
+  {
+   "cifra": "clases.M-16.casos.adt",
+   "lote": 11,
+   "mensaje": 12,
+   "publicado": 11,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 12
+  },
+  {
+   "cifra": "clases.M-17.casos.adt",
+   "lote": 6,
+   "mensaje": 24,
+   "publicado": 6,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 24
+  },
+  {
+   "cifra": "clases.M-2.casos.adt",
+   "lote": 33,
+   "mensaje": 47,
+   "publicado": 33,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 47
+  },
+  {
+   "cifra": "clases.M-5.casos.adt",
+   "lote": 14,
+   "mensaje": 32,
+   "publicado": 14,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 32
+  },
+  {
+   "cifra": "clases.M-6.casos.adt",
+   "lote": 16,
+   "mensaje": 21,
+   "publicado": 16,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 21
+  },
+  {
+   "cifra": "clases.M-8.casos.adt",
+   "lote": 5,
+   "mensaje": 8,
+   "publicado": 5,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 8
+  },
+  {
+   "cifra": "frase.M_mensajes",
+   "lote": 368,
+   "mensaje": 375,
+   "publicado": 368,
+   "donde_se_publica": [
+    "verificador/RESULTADO-CONVERSORES.md",
+    "ARTICULO.md",
+    "README.md",
+    "verificador/README.md",
+    "docs/conversores/index.html"
+   ],
+   "corregida": 375
+  },
+  {
+   "cifra": "sin_clase.linuxforhealth | fuera:Patient.gender|valor_imposible_convertido | Patient.gender: <v> convertido desde <v>, fuera de la <n>",
+   "lote": null,
+   "mensaje": 1,
+   "publicado": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json"
+   ],
+   "corregida": 1
+  },
+  {
+   "cifra": "sin_clase.microsoft | MC-ORU-7 | Observation <id> sin origen propio en el mensaje",
+   "lote": null,
+   "mensaje": 30,
+   "publicado": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json"
+   ],
+   "corregida": 30
+  }
+ ],
+ "frase": {
+  "v1": {
+   "N_nuevas_confirmadas": 15,
+   "N_por_conversor": {
+    "microsoft": 5,
+    "linuxforhealth": 10
+   },
+   "N_fuertes": 7,
+   "K_conversores": 2,
+   "D_ya_declaradas": 31,
+   "D_por_conversor": {
+    "microsoft": 19,
+    "linuxforhealth": 12
+   },
+   "C_convenciones": 16,
+   "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+   "rechazos_nuevos": 2,
+   "dudosas": 3,
+   "M_mensajes": 368
+  },
+  "v2": {
+   "N_nuevas_confirmadas": 15,
+   "N_por_conversor": {
+    "microsoft": 5,
+    "linuxforhealth": 10
+   },
+   "N_fuertes": 7,
+   "K_conversores": 2,
+   "D_ya_declaradas": 31,
+   "D_por_conversor": {
+    "microsoft": 19,
+    "linuxforhealth": 12
+   },
+   "C_convenciones": 16,
+   "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+   "rechazos_nuevos": 2,
+   "dudosas": 3,
+   "M_mensajes": 375
+  }
+ },
+ "minimos_confirmadas": {
+  "v1": [
+   30,
+   34
+  ],
+  "v2": [
+   30,
+   34
+  ]
+ },
+ "sin_clase": {
+  "v1": 1,
+  "v2": 3,
+  "candidatas": {
+   "linuxforhealth | fuera:Patient.gender|valor_imposible_convertido | Patient.gender: <v> convertido desde <v>, fuera de la <n>": 1,
+   "microsoft | MC-ORU-7 | Observation <id> sin origen propio en el mensaje": 30
+  },
+  "desaparecen": {}
+ },
+ "deriva_del_juez_v1": [
+  {
+   "cifra": "clases.L-24.casos.muestras",
+   "publicado": 2,
+   "con_el_juez_actual": null
+  },
+  {
+   "cifra": "clases.L-24.confirmada_con_par",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "clases.M-36.casos.muestras",
+   "publicado": 1,
+   "con_el_juez_actual": null
+  },
+  {
+   "cifra": "clases.M-4.casos.adt",
+   "publicado": 16,
+   "con_el_juez_actual": 8
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.confirmada",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.linuxforhealth.caso.sale",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "minimos.confirmadas",
+   "publicado": 31,
+   "con_el_juez_actual": 30
+  },
+  {
+   "cifra": "sin_clase.microsoft | MC-ADT-3 | Encounter.location <v>: la descripción <v> contiene PL.<n> <v> sin ser PL.<n>",
+   "publicado": null,
+   "con_el_juez_actual": 8
+  }
+ ]
+}

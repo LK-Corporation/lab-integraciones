@@ -1,0 +1,460 @@
+{
+ "por_conversor": {
+  "microsoft": {
+   "por_estado": {
+    "igual": 435,
+    "cambia": 81,
+    "nuevo": 7
+   },
+   "iguales_distintos": 0,
+   "categorias_que_cambian": {
+    "rechazo_incorrecto -> fallo_silencioso": 30
+   },
+   "nuevos": 7
+  },
+  "linuxforhealth": {
+   "por_estado": {
+    "igual": 435,
+    "cambia": 81,
+    "nuevo": 7
+   },
+   "iguales_distintos": 0,
+   "categorias_que_cambian": {},
+   "nuevos": 7
+  }
+ },
+ "frase": {
+  "v1": {
+   "N_nuevas_confirmadas": 15,
+   "N_por_conversor": {
+    "microsoft": 5,
+    "linuxforhealth": 10
+   },
+   "N_fuertes": 7,
+   "K_conversores": 2,
+   "D_ya_declaradas": 31,
+   "D_por_conversor": {
+    "microsoft": 19,
+    "linuxforhealth": 12
+   },
+   "C_convenciones": 16,
+   "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+   "rechazos_nuevos": 2,
+   "dudosas": 3,
+   "M_mensajes": 368
+  },
+  "v2": {
+   "N_nuevas_confirmadas": 15,
+   "N_por_conversor": {
+    "microsoft": 5,
+    "linuxforhealth": 10
+   },
+   "N_fuertes": 7,
+   "K_conversores": 2,
+   "D_ya_declaradas": 31,
+   "D_por_conversor": {
+    "microsoft": 19,
+    "linuxforhealth": 12
+   },
+   "C_convenciones": 16,
+   "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+   "rechazos_nuevos": 2,
+   "dudosas": 3,
+   "M_mensajes": 375
+  }
+ },
+ "minimos": {
+  "v1": [
+   30,
+   34
+  ],
+  "v2": [
+   30,
+   34
+  ]
+ },
+ "clases_que_cambian": {
+  "L-2": [
+   121,
+   126
+  ],
+  "L-3": [
+   118,
+   123
+  ],
+  "L-4": [
+   95,
+   97
+  ],
+  "M-1": [
+   204,
+   234
+  ],
+  "M-11": [
+   30,
+   0
+  ],
+  "M-16": [
+   11,
+   12
+  ],
+  "M-17": [
+   12,
+   30
+  ],
+  "M-2": [
+   48,
+   62
+  ],
+  "M-5": [
+   31,
+   49
+  ],
+  "M-6": [
+   18,
+   23
+  ],
+  "M-8": [
+   6,
+   9
+  ]
+ },
+ "cifras_que_cambian": [
+  {
+   "cifra": "clases.L-2.casos.adt",
+   "v1": 120,
+   "v2": 125,
+   "publicado": 120,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.L-3.casos.adt",
+   "v1": 108,
+   "v2": 113,
+   "publicado": 108,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.L-4.casos.adt",
+   "v1": 92,
+   "v2": 94,
+   "publicado": 92,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-1.casos.adt",
+   "v1": 184,
+   "v2": 214,
+   "publicado": 184,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-11.casos.adt",
+   "v1": 30,
+   "v2": null,
+   "publicado": 30,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-16.casos.adt",
+   "v1": 11,
+   "v2": 12,
+   "publicado": 11,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-17.casos.adt",
+   "v1": 6,
+   "v2": 24,
+   "publicado": 6,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-2.casos.adt",
+   "v1": 33,
+   "v2": 47,
+   "publicado": 33,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-5.casos.adt",
+   "v1": 14,
+   "v2": 32,
+   "publicado": 14,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-6.casos.adt",
+   "v1": 16,
+   "v2": 21,
+   "publicado": 16,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "clases.M-8.casos.adt",
+   "v1": 5,
+   "v2": 8,
+   "publicado": 5,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json",
+    "verificador/cv/RESULTADO-CV3.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "frase.M_mensajes",
+   "v1": 368,
+   "v2": 375,
+   "publicado": 368,
+   "donde_se_publica": [
+    "verificador/RESULTADO-CONVERSORES.md",
+    "ARTICULO.md",
+    "README.md",
+    "verificador/README.md",
+    "docs/conversores/index.html"
+   ]
+  },
+  {
+   "cifra": "sin_clase.linuxforhealth | fuera:Patient.gender|valor_imposible_convertido | Patient.gender: <v> convertido desde <v>, fuera de la <n>",
+   "v1": null,
+   "v2": 1,
+   "publicado": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json"
+   ]
+  },
+  {
+   "cifra": "sin_clase.microsoft | MC-ORU-7 | Observation <id> sin origen propio en el mensaje",
+   "v1": null,
+   "v2": 30,
+   "publicado": null,
+   "donde_se_publica": [
+    "verificador/cv/CLASES-CV3.json"
+   ]
+  }
+ ],
+ "candidatas": {
+  "linuxforhealth | fuera:Patient.gender|valor_imposible_convertido | Patient.gender: <v> convertido desde <v>, fuera de la <n>": 1,
+  "microsoft | MC-ORU-7 | Observation <id> sin origen propio en el mensaje": 30
+ },
+ "deriva_del_juez_desde_lo_publicado": [
+  {
+   "cifra": "clases.L-24.casos.muestras",
+   "publicado": 2,
+   "con_el_juez_actual": null
+  },
+  {
+   "cifra": "clases.L-24.confirmada_con_par",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "clases.M-36.casos.muestras",
+   "publicado": 1,
+   "con_el_juez_actual": null
+  },
+  {
+   "cifra": "clases.M-4.casos.adt",
+   "publicado": 16,
+   "con_el_juez_actual": 8
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.confirmada",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "minimos.L16-cx-4-solo-nombre.linuxforhealth.caso.sale",
+   "publicado": true,
+   "con_el_juez_actual": false
+  },
+  {
+   "cifra": "minimos.confirmadas",
+   "publicado": 31,
+   "con_el_juez_actual": 30
+  },
+  {
+   "cifra": "sin_clase.microsoft | MC-ADT-3 | Encounter.location <v>: la descripción <v> contiene PL.<n> <v> sin ser PL.<n>",
+   "publicado": null,
+   "con_el_juez_actual": 8
+  }
+ ],
+ "m11": {
+  "casos_v1": 30,
+  "estado_v2": {
+   "bundle": 30
+  }
+ },
+ "gemelos": {
+  "se_reproducen": [
+   "L-18",
+   "M-23",
+   "M-24",
+   "VX-L6",
+   "VX-L8",
+   "VX-L9",
+   "VX-M10",
+   "VX-M12",
+   "VX-M14",
+   "VX-M15",
+   "VX-M7",
+   "VX-M8"
+  ],
+  "no": [],
+  "distintas_del_origen": [],
+  "con_la_comparacion_sellada": {
+   "se_reproducen": 11,
+   "no": [
+    "VX-M10"
+   ]
+  }
+ },
+ "b36": {
+  "microsoft": {
+   "n": 5,
+   "distintos": 0
+  },
+  "linuxforhealth": {
+   "n": 5,
+   "distintos": 0
+  }
+ },
+ "prevision": {
+  "PB1": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB1",
+    "que": "Los casos idénticos byte a byte en las dos versiones (435 por conversor) dan el mismo valor (categoría, subtipo y lo que cuenta)",
+    "distintos": 0
+   }
+  },
+  "PB2": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB2",
+    "que": "Los 68 mínimos no cambian: las mismas confirmaciones en las dos versiones",
+    "minimos_confirmadas": [
+     30,
+     34
+    ]
+   }
+  },
+  "PB3": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB3",
+    "que": "La frase del estudio: las 15 nuevas confirmadas y las 31 ya declaradas no cambian, ni los 2 rechazos nuevos ni las 3 dudosas; las convenciones no bajan de 16; los mensajes pasan a 375 (270 de ADT)",
+    "N_nuevas_confirmadas": 15,
+    "D_ya_declaradas": 31,
+    "C_convenciones_al_menos": 16,
+    "rechazos_nuevos": 2,
+    "dudosas": 3,
+    "M_mensajes": 375
+   }
+  },
+  "PB4": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB4",
+    "que": "M-11 (Microsoft rechaza GENADT comp/opci por el CX.7 «L» de GT1-2; el estudio lo apartó como defecto del corpus) desaparece: 0 casos en la versión 2",
+    "casos_v1": 30,
+    "casos_v2": 0
+   }
+  },
+  "PB5": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB5",
+    "que": "Las otras cinco clases con todos sus casos en mensajes que cambian conservan su número de casos, porque el arreglo no toca su campo (PID-16, XTN, el nulo de ACC-1 en nulos, PDA)",
+    "clases": {
+     "L-10": 2,
+     "L-8": 5,
+     "M-10": 1,
+     "M-12": 18,
+     "M-18": 5
+    }
+   }
+  },
+  "PB6": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB6",
+    "que": "Los 30 mensajes que Microsoft rechazaba por M-11 se convierten (estado bundle) en la versión 2",
+    "cifra": 30
+   }
+  },
+  "PB7": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB7",
+    "que": "Aparece al menos una clave de mecanismo sin clase en la versión 2 que no estaba en la 1 (una candidata, Q-GA-7)",
+    "al_menos": 1
+   }
+  },
+  "PB8": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB8",
+    "que": "Las 12 nuevas que solo tenían apoyo sin decidir por UCUM se reproducen en sus gemelos con ISO+, igual que en sus orígenes (los pares, confirmados; las bases, con el hallazgo)",
+    "cifra": 12
+   }
+  },
+  "PB8_con_la_sellada": {
+   "acierta": false,
+   "prevision": {
+    "id": "PB8",
+    "que": "Las 12 nuevas que solo tenían apoyo sin decidir por UCUM se reproducen en sus gemelos con ISO+, igual que en sus orígenes (los pares, confirmados; las bases, con el hallazgo)",
+    "cifra": 12
+   }
+  },
+  "PB9": {
+   "acierta": true,
+   "prevision": {
+    "id": "PB9",
+    "que": "B36 en sus cinco eventos: la categoría no cambia de la versión 1 a la 2 en ninguno de los dos conversores",
+    "distintos_de_categoria": 0
+   }
+  }
+ },
+ "aciertos": "9 de 9 (PB8 con la comparación sellada: False)"
+}

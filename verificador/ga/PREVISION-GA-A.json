@@ -1,0 +1,16 @@
+{
+ "que": "Etapa 33, previsión A: la validación de la versión 2 del corpus con el aparato de la etapa 30 (iv/validar_iv.py e iv/lectura_iv.py, sin cambiarlos), sellada antes de pasar ningún mensaje de la versión 2 por IRIS. La previsión B (los conversores) se sella aparte, antes de correrlos.",
+ "fecha": "2026-11-05",
+ "corpus": {"n": 767, "identicos_a_la_30": 637, "cambian": 86, "nuevos": 44},
+ "prevision": [
+  {"id": "PA1", "que": "Los 637 mensajes idénticos byte a byte a los de la 30 dan su mismo veredicto sostenido", "cifra": 637},
+  {"id": "PA2", "que": "Las 72 bases de GENADT que cambian (completo, nulos, opcionales) son válidas", "validas": 72, "invalidas": 0, "sin_decidir": 0},
+  {"id": "PA3", "que": "Las 8 bases A1 de contactos (María -> Maria) siguen válidas", "validas": 8},
+  {"id": "PA4", "que": "De las 7 copias completadas del capítulo 3, 6 son válidas y la del ejemplo veterinario (cap3-36) queda sin decidir por XPN.8 = D, fuera de la 0465 impresa (Q-IV-D-11); la de cap3-37 es válida (su HD.1 largo es longitud de componente, que el aparato de la 30 no cuenta)", "validas": 6, "invalidas": 0, "sin_decidir": 1},
+  {"id": "PA5", "que": "B36 en T02 (lab/mdm) y en sus 5 eventos pasa de inválida a sin decidir: solo le queda TXA-3 (Q-IV-D-12)", "invalidas": 0, "sin_decidir": 6},
+  {"id": "PA6", "que": "Los 37 gemelos son válidos", "validas": 37},
+  {"id": "PA7", "que": "Total de la versión 2", "validas": 392, "invalidas": 16, "sin_decidir": 359},
+  {"id": "PA8", "que": "Las 16 inválidas son todas a propósito (8 A1 con PV1-2 vacío y L17) o fragmentos del estándar (los 7 originales del capítulo 3)", "cifra": 16},
+  {"id": "PA9", "que": "De las 12 nuevas sin apoyo válido por la 0396, las 12 tienen apoyo válido en sus gemelos (todos sus apoyos y controles pasan a válidos); MD-L5 y MD-M5 siguen sin ninguno", "cifra": 12}
+ ]
+}

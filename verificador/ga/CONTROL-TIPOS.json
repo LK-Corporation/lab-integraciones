@@ -1,0 +1,121 @@
+{
+ "mutantes": {
+  "n": 93,
+  "debe": 47,
+  "no_debe": 46,
+  "mal": []
+ },
+ "corpus": {
+  "positivo_v1_falta": [],
+  "negativo_v1_errores": {
+   "minimo": 0,
+   "repeticiones": 0,
+   "escapes": 0,
+   "delimitadores": 0,
+   "fechas": 0,
+   "z": 0
+  },
+  "errores_v2_fuera_de_lo_marcado": [],
+  "avisos_v2": {
+   "A1:clases": {
+    "tabla_usuario PID-8": 2,
+    "tabla_usuario PV1-2": 2
+   },
+   "A1:contactos": {
+    "componente_retirado PID-14.1": 8
+   },
+   "A1:escapes_251": {
+    "tabla_usuario PID-8": 8,
+    "tabla_usuario PV1-2": 7
+   },
+   "A1:pv1_2_vacio": {},
+   "cap3": {
+    "longitud_componente MSH-4.1": 1,
+    "tabla_usuario PID-8": 1
+   },
+   "cap3-completada": {
+    "longitud_componente MSH-4.1": 1,
+    "tabla_usuario PID-8": 1
+   },
+   "completo": {
+    "componente_retirado NK1-5.1": 18,
+    "componente_retirado PID-13.1": 24,
+    "tabla_usuario AL1-4.1": 18,
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario NK1-3.1": 18,
+    "tabla_usuario PV1-11.6": 24,
+    "tabla_usuario PV1-14": 24,
+    "tabla_usuario PV1-3.6": 24,
+    "tabla_usuario PV1-6.6": 3,
+    "tabla_usuario ROL-3.1": 18
+   },
+   "delimitadores": {
+    "componente_retirado PID-13.1": 24,
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   },
+   "escapes": {
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   },
+   "fechas": {
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   },
+   "minimo": {
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   },
+   "nulos": {
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24,
+    "tabla_usuario ROL-3.1": 18
+   },
+   "opcionales": {
+    "componente_retirado NK1-5.1": 12,
+    "componente_retirado PID-13.1": 24,
+    "tabla_usuario AL1-4.1": 12,
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario NK1-3.1": 12,
+    "tabla_usuario PV1-3.6": 24,
+    "tabla_usuario ROL-3.1": 12
+   },
+   "repeticiones": {
+    "componente_retirado PID-13.1": 48,
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   },
+   "z": {
+    "tabla_usuario EVN-4": 24,
+    "tabla_usuario PV1-3.6": 24
+   }
+  }
+ },
+ "unidades": {
+  "n": 37,
+  "mal": []
+ },
+ "no_contados": {
+  "segmento_sin_tabla:ZAD": 48,
+  "tabla_sin_valores:0018": 49,
+  "tabla_sin_valores:0050": 60,
+  "tabla_sin_valores:0051": 84,
+  "tabla_sin_valores:0053": 63,
+  "tabla_sin_valores:0055": 60,
+  "tabla_sin_valores:0072": 96,
+  "tabla_sin_valores:0088": 96,
+  "tabla_sin_valores:0089": 96,
+  "tabla_sin_valores:0113": 5,
+  "tabla_sin_valores:0289": 48,
+  "tabla_sin_valores:0300": 5298,
+  "tabla_sin_valores:0302": 174,
+  "tabla_sin_valores:0303": 114,
+  "tabla_sin_valores:0304": 814,
+  "tabla_sin_valores:0306": 716,
+  "tabla_sin_valores:0307": 716,
+  "tabla_sin_valores:0308": 716,
+  "tabla_sin_valores:0363": 65,
+  "tabla_sin_valores:0399": 19
+ },
+ "veredicto": "TODO BIEN"
+}

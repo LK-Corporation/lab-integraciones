@@ -351,6 +351,10 @@ def p06():
         VC.normal = normal
     c3 = os.path.join(tmp("corpus"), "c")
     mira("sin mínimos", sum(VC.generar_corpus(c3, lab=True, minimos=False)["n"].values()), 383)       # DV-VX-5: 303 + 40 de VXU; + 40 de MDM
+    c4 = os.path.join(tmp("corpus"), "c")                                   # etapa 33: la versión 2 (ga/), la de la línea de órdenes
+    n2 = VC.generar_corpus(c4, lab=True, minimos=True, version=2)["n"]
+    mira("versión 2: n", n2, {"adt": 270, "oru": 40, "vxu": 40, "minimos": 68, "muestras": 0, "propio": 0, "mdm": 40})
+    mira("versión 2: sin mínimos y con ellos", (sum(n2.values()) - n2["minimos"], sum(n2.values())), (390, 458))
 
 
 def p07():

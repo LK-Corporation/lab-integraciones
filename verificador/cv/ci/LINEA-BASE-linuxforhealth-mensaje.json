@@ -4504,11 +4504,45 @@
    "hallazgos": [],
    "subtipo": null
   },
+  "adt/cap3-08-A01-completada": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
   "adt/cap3-10-A04": {
    "categoria": "correcto",
    "estado": "bundle",
    "hallazgos": [],
    "subtipo": null
+  },
+  "adt/cap3-10-A04-completada": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido"
   },
   "adt/cap3-12-A02": {
    "categoria": "correcto",
@@ -4516,11 +4550,35 @@
    "hallazgos": [],
    "subtipo": null
   },
+  "adt/cap3-12-A02-completada": {
+   "categoria": "rechazo_incorrecto",
+   "estado": "error",
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
+  },
   "adt/cap3-14-A02": {
    "categoria": "correcto",
    "estado": "error",
    "hallazgos": [],
    "subtipo": null
+  },
+  "adt/cap3-14-A02-completada": {
+   "categoria": "rechazo_incorrecto",
+   "estado": "error",
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
   },
   "adt/cap3-15-A03": {
    "categoria": "correcto",
@@ -4528,17 +4586,73 @@
    "hallazgos": [],
    "subtipo": null
   },
+  "adt/cap3-15-A03-completada": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido"
+  },
   "adt/cap3-36-A04": {
    "categoria": "correcto",
    "estado": "error",
    "hallazgos": [],
    "subtipo": null
   },
+  "adt/cap3-36-A04-completada": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PID-8",
+     "valor_imposible_aceptado",
+     "valor_imposible_convertido"
+    ],
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido+aceptado_imposible"
+  },
   "adt/cap3-37-A04": {
    "categoria": "correcto",
    "estado": "error",
    "hallazgos": [],
    "subtipo": null
+  },
+  "adt/cap3-37-A04-completada": {
+   "categoria": "fallo_silencioso",
+   "estado": "bundle",
+   "hallazgos": [
+    [
+     "PV1-2",
+     "fidelidad",
+     "valor_distinto"
+    ],
+    [
+     "PV1-44",
+     "fidelidad",
+     "dato_inventado"
+    ]
+   ],
+   "subtipo": "convertido"
   },
   "mdm/MDM-B01": {
    "categoria": "fallo_silencioso",
@@ -8169,9 +8283,9 @@
   "version": "v1.1.0 (Maven Central; DV-CV-3)"
  },
  "corpus": {
-  "huella": "79c4b33d41a80eabfec46a0f7fc59088e1c503a292ed1d547959df3c6cc9b561",
+  "huella": "5705c8c3faa20719be9c13b80e555dfe3c7e388e87024e13713f6339c1deeed4",
   "n": {
-   "adt": 263,
+   "adt": 270,
    "mdm": 40,
    "minimos": 68,
    "muestras": 0,
@@ -8180,8 +8294,8 @@
    "vxu": 40
   },
   "por_corpus": {
-   "adt": "7b4e7cfba0411d29fcc8a57575c6104aa6c7cabbb6718a13515c8bc6b57f6242",
-   "mdm": "ebb095e3fdfe6634b13f7a249e0e729d78940399a20d0b26b4dcc5f58092dd5c",
+   "adt": "914f3b01637ec379d59868040a1c60008f9a32ccbbb772ce7b925462fef05a61",
+   "mdm": "7c6f337a47889896adf06010da23f97a5944fd815b1e8b084b5ede2b41eca82d",
    "minimos": "53a33c15a5f16833cd4afd608e9288c04d837e61eae9ddc20722cc0be08150e1",
    "oru": "b5be5675b2047bf4429741d808e1c5d24d473f31d9aae9bc9f2a5e4f0ba90891",
    "vxu": "3bcb0eefe4ddf14f4c89e0a8ef0f413c0b36833772bd1f5c60b47db11a82bea3"
@@ -8189,7 +8303,7 @@
  },
  "creada_de": {
   "herramienta": {
-   "huella": "e0a7517a5ab41150aabf81a14adee55704a2f23a1aa97853effe585c17458b6f",
+   "huella": "4ec40da55cc22ec20c4ae795dc7d1c0d5acd3b320e08fe4a6e1f8941cf87db22",
    "version": "1.0"
   },
   "juez": {
@@ -8198,5 +8312,5 @@
   }
  },
  "formato": "linea-base-ci/1",
- "n_casos": 451
+ "n_casos": 458
 }

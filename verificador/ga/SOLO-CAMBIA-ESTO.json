@@ -1,0 +1,77 @@
+{
+ "genadt": {
+  "lugares_que_cambian": [
+   "completo ACC-1",
+   "completo DG1-2",
+   "completo DG1-6",
+   "completo GT1-2",
+   "completo GT1-3",
+   "completo OBX-11",
+   "completo PR1-2",
+   "completo PR1-5",
+   "completo PV1-37",
+   "completo ROL-2",
+   "completo UB1-2",
+   "nulos AL1-1",
+   "nulos AL1-2",
+   "nulos AL1-3",
+   "nulos DB1-1",
+   "nulos DB1-2",
+   "nulos DG1-1",
+   "nulos DG1-2",
+   "nulos DG1-6",
+   "nulos GT1-1",
+   "nulos GT1-3",
+   "nulos NK1-1",
+   "nulos OBX-1",
+   "nulos OBX-11",
+   "nulos OBX-2",
+   "nulos OBX-3",
+   "nulos OBX-5",
+   "nulos OBX-6",
+   "nulos PR1-2",
+   "nulos PR1-5",
+   "nulos ROL-2",
+   "nulos ROL-3",
+   "nulos ROL-4",
+   "nulos ROL-5",
+   "opcionales ACC-1",
+   "opcionales DG1-2",
+   "opcionales DG1-6",
+   "opcionales GT1-2",
+   "opcionales GT1-3",
+   "opcionales OBX-11",
+   "opcionales PR1-2",
+   "opcionales PR1-5",
+   "opcionales ROL-2",
+   "opcionales UB1-2"
+  ],
+  "permitidos_sin_usar": [],
+  "llamadas_al_azar": [
+   8803,
+   8803
+  ]
+ },
+ "a1": {
+  "distintas": 8
+ },
+ "cap3": {
+  "copias": 7
+ },
+ "mdm": {
+  "txa12": "DOC0036^CSSYN^2.999^ISO",
+  "txa13": [
+   "DOC0036-PADRE^CSSYN^2.999^ISO",
+   "DOC0036-PADRE^CSSYN^2.999^ISO"
+  ]
+ },
+ "gemelos": {
+  "n": 37
+ },
+ "version1": {
+  "ficheros": 18,
+  "cambiados": []
+ },
+ "mal": [],
+ "veredicto": "TODO BIEN"
+}

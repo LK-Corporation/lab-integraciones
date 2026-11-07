@@ -1,0 +1,16 @@
+{
+ "q_ga_1": {"type": "choice", "instructions": "Q-GA-1: el alcance del arreglo en los mensajes de ADT.",
+  "criteria": {"lo_de_la_30": "(a) Solo lo que la 30 sostiene: obligatorios, longitudes y estructura.", "con_tipos": "(b) Eso y los tipos y tablas de cada campo que escriben los generadores, según sus tablas de atributos."}},
+ "q_ga_2": {"type": "choice", "instructions": "Q-GA-2: las unidades de ORU y VXU (tabla 0396).",
+  "criteria": {"ucum": "(a) Se quedan en UCUM.", "iso": "(b) Los generadores de ORU y VXU, y los pares mínimos de las 12, pasan a ISO+ (o a ANS+ o local, donde ISO+ no tenga la unidad).", "gemelos": "(c) Las bases se quedan en UCUM, y solo para el apoyo de las 12 se añade una copia con ISO+."}},
+ "q_ga_3": {"type": "choice", "instructions": "Q-GA-3: los 7 ejemplos del capítulo 3.",
+  "criteria": {"como_estan": "(a) Se quedan como están, marcados como fragmentos del estándar.", "completar": "(b) Se completan con lo mínimo para ser válidos, y dejan de ser el texto del estándar.", "los_dos": "(c) Se quedan los originales y se añaden copias completadas."}},
+ "q_ga_4": {"type": "choice", "instructions": "Q-GA-4: cómo se versiona el corpus.",
+  "criteria": {"al_lado": "(a) Una versión nueva al lado: ficheros nuevos, la herramienta pasa a la nueva, y lo sellado sigue leyendo la vieja.", "en_el_sitio": "(b) En el sitio: se sobrescriben, y lo publicado antes se repite desde su commit."}},
+ "q_ga_5": {"type": "choice", "instructions": "Q-GA-5: qué se rehace.",
+  "criteria": {"todo": "(a) Todo lo que lee estos corpus (hecho 6).", "conversores": "(b) La línea de los conversores (la herramienta y la CI, los estudios 14l, VXU y MDM, y la 30); la del circuito de IRIS se declara como no rehecha.", "apoyo": "(c) Solo la 30, el apoyo de las 27 nuevas (si cada una se reproduce en un mensaje válido) y la herramienta con la CI; las demás cuentas de los estudios se declaran como no rehechas."}},
+ "q_ga_6": {"type": "choice", "instructions": "Q-GA-6: los inválidos a propósito (8 de A1 con PV1-2 vacío y L17).",
+  "criteria": {"marcados": "(a) Se quedan, marcados en la lista del corpus como inválidos a propósito.", "aparte": "(b) Salen a un juego aparte, fuera del corpus que se da por válido."}},
+ "q_ga_7": {"type": "choice", "instructions": "Q-GA-7: las diferencias nuevas que dé el juez en el corpus arreglado.",
+  "criteria": {"candidatas": "(a) Se anotan como candidatas, sin confirmarlas en esta etapa.", "confirmar": "(b) Se confirman en esta etapa con el proceso del estudio: par mínimo, búsqueda en el proyecto y revisión adversaria."}}
+}

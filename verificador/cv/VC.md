@@ -55,6 +55,11 @@ Antes de correr nada, `--solo-orden` valida el adaptador, calcula la huella e im
   - `--muestras <carpeta>` añade las muestras de los proyectos, en subcarpetas `ms/` y `lfh/`, como en el estudio;
   - `--sin-corpus-lab` quita las bases A1/E2 y las ORU del laboratorio;
   - `--sin-minimos` quita los 68 mínimos, que solo entran con los dos conversores del estudio;
+  - `--version-corpus 1|2` elige la versión de los generadores del laboratorio. Por omisión es la 2 (etapa 33,
+    [`../RESULTADO-GENERADORES.md`](../RESULTADO-GENERADORES.md)), que arregla lo que la etapa 30 encontró inválido; con la 1,
+    la herramienta junta lo de antes, byte a byte. Sin los mínimos, la 1 junta 383 casos y la 2, 390; con ellos, 451 y 458. Con
+    una línea base hecha con la 1, una corrida con la 2 sigue pasando en el modo `pasa`: anota los 7 casos nuevos y avisa del
+    corpus distinto (`corpus_distinto`);
   - `--limite-casos N` corre solo los N primeros de cada corpus, como prueba de humo.
 - **El juicio:**
   - `--sin-sensibilidad` no calcula las alternativas de Q-CV-D-3, 5 y 9;

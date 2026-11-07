@@ -1,0 +1,224 @@
+[
+ {
+  "gemelo": "VXU-AU1c-ISO.hl7",
+  "origen": "au-pares/AU1-caso.hl7",
+  "msh10_origen": "VXU-AU1c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-AU1k-ISO.hl7",
+  "origen": "au-pares/AU1-control-k.hl7",
+  "msh10_origen": "VXU-AU1k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-AU2c-ISO.hl7",
+  "origen": "au-pares/AU2-caso.hl7",
+  "msh10_origen": "VXU-AU2c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-AU2k-ISO.hl7",
+  "origen": "au-pares/AU2-control-k.hl7",
+  "msh10_origen": "VXU-AU2k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "L09c-ISO.hl7",
+  "origen": "lab/minimos/L09-obx-11-d-caso.hl7",
+  "msh10_origen": "L09c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "L09k-ISO.hl7",
+  "origen": "lab/minimos/L09-obx-11-d-control.hl7",
+  "msh10_origen": "L09k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "M01c-ISO.hl7",
+  "origen": "lab/minimos/M01-nm-punto-inicial-caso.hl7",
+  "msh10_origen": "M01c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "M01k-ISO.hl7",
+  "origen": "lab/minimos/M01-nm-punto-inicial-control.hl7",
+  "msh10_origen": "M01k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "M07c-ISO.hl7",
+  "origen": "lab/minimos/M07-oru-sin-pid-caso.hl7",
+  "msh10_origen": "M07c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "M07k-ISO.hl7",
+  "origen": "lab/minimos/M07-oru-sin-pid-control.hl7",
+  "msh10_origen": "M07k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "ORU-B20-ISO.hl7",
+  "origen": "lab/oru/ORU-B20.hl7",
+  "msh10_origen": "ORU-B20",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "ORU-B29-ISO.hl7",
+  "origen": "lab/oru/ORU-B29.hl7",
+  "msh10_origen": "ORU-B29",
+  "cambios_ce3": 2
+ },
+ {
+  "gemelo": "ORU-B30-ISO.hl7",
+  "origen": "lab/oru/ORU-B30.hl7",
+  "msh10_origen": "ORU-B30",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B11-ISO.hl7",
+  "origen": "lab/vxu/VXU-B11.hl7",
+  "msh10_origen": "VXU-B11",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B16-ISO.hl7",
+  "origen": "lab/vxu/VXU-B16.hl7",
+  "msh10_origen": "VXU-B16",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B18-ISO.hl7",
+  "origen": "lab/vxu/VXU-B18.hl7",
+  "msh10_origen": "VXU-B18",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B21-ISO.hl7",
+  "origen": "lab/vxu/VXU-B21.hl7",
+  "msh10_origen": "VXU-B21",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B37-ISO.hl7",
+  "origen": "lab/vxu/VXU-B37.hl7",
+  "msh10_origen": "VXU-B37",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-B40-ISO.hl7",
+  "origen": "lab/vxu/VXU-B40.hl7",
+  "msh10_origen": "VXU-B40",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L04c-ISO.hl7",
+  "origen": "vxu-pares/VL04-rxa21-d-caso.hl7",
+  "msh10_origen": "VXU-L04c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L04k-ISO.hl7",
+  "origen": "vxu-pares/VL04-rxa21-d-control.hl7",
+  "msh10_origen": "VXU-L04k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L06c-ISO.hl7",
+  "origen": "vxu-pares/VL06-dos-rxa10-caso.hl7",
+  "msh10_origen": "VXU-L06c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L06k-ISO.hl7",
+  "origen": "vxu-pares/VL06-dos-rxa10-control.hl7",
+  "msh10_origen": "VXU-L06k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L07c-ISO.hl7",
+  "origen": "vxu-pares/VL07-dos-indicaciones-caso.hl7",
+  "msh10_origen": "VXU-L07c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-L07k-ISO.hl7",
+  "origen": "vxu-pares/VL07-dos-indicaciones-control.hl7",
+  "msh10_origen": "VXU-L07k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M07c-ISO.hl7",
+  "origen": "vxu-pares/VM07-lote-repetido-caso.hl7",
+  "msh10_origen": "VXU-M07c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M07k-ISO.hl7",
+  "origen": "vxu-pares/VM07-lote-repetido-control.hl7",
+  "msh10_origen": "VXU-M07k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M08c-ISO.hl7",
+  "origen": "vxu-pares/VM08-fabricante-alterno-caso.hl7",
+  "msh10_origen": "VXU-M08c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M08k-ISO.hl7",
+  "origen": "vxu-pares/VM08-fabricante-alterno-control.hl7",
+  "msh10_origen": "VXU-M08k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M10c-ISO.hl7",
+  "origen": "vxu-pares/VM10-relacion-grd-caso.hl7",
+  "msh10_origen": "VXU-M10c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M10k-ISO.hl7",
+  "origen": "vxu-pares/VM10-relacion-grd-control.hl7",
+  "msh10_origen": "VXU-M10k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M12c-ISO.hl7",
+  "origen": "vxu-pares/VM12-dos-indicaciones-caso.hl7",
+  "msh10_origen": "VXU-M12c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M12k-ISO.hl7",
+  "origen": "vxu-pares/VM12-dos-indicaciones-control.hl7",
+  "msh10_origen": "VXU-M12k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M14c-ISO.hl7",
+  "origen": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+  "msh10_origen": "VXU-M14c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M14k-ISO.hl7",
+  "origen": "vxu-pares/VM14-dosis-punto-inicial-control.hl7",
+  "msh10_origen": "VXU-M14k",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M15c-ISO.hl7",
+  "origen": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+  "msh10_origen": "VXU-M15c",
+  "cambios_ce3": 1
+ },
+ {
+  "gemelo": "VXU-M15k-ISO.hl7",
+  "origen": "vxu-pares/VM15-re-sin-rxa18-control.hl7",
+  "msh10_origen": "VXU-M15k",
+  "cambios_ce3": 1
+ }
+]

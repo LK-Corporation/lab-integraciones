@@ -415,9 +415,10 @@ def plantilla(t, regla):
 
 
 # ---------------------------------------------------------------------------- el corpus (§3 paso 4)
-def generar_corpus(carpeta, lab=True, minimos=True, propios=(), muestras=None, limite=None):
+def generar_corpus(carpeta, lab=True, minimos=True, propios=(), muestras=None, limite=None, version=1):
     textos = collections.OrderedDict((c, []) for c in CORPUS)
-    if lab:
+    assert version in (1, 2), version                                                # etapa 33: la versión del corpus
+    if lab and version == 1:
         adt = json.load(open(os.path.join(FASE, "bases_adt", "bases_e2.json"), encoding="utf-8")) + \
             json.load(open(os.path.join(FASE, "a1", "ejemplos_cap3.json"), encoding="utf-8")) + \
             json.load(open(os.path.join(FASE, "a1", "bases_a1.json"), encoding="utf-8"))
@@ -425,6 +426,18 @@ def generar_corpus(carpeta, lab=True, minimos=True, propios=(), muestras=None, l
         textos["oru"] = [("ORU-%s.hl7" % b["id"], normal(BO.cable(b))) for b in BO.BASES]
         textos["vxu"] = [("VXU-%s.hl7" % b["id"], normal(BV.cable(b))) for b in BV.BASES]     # etapa 20 (S-VX-13)
         textos["mdm"] = [("MDM-%s.hl7" % b["id"], normal(BM.cable(b))) for b in BM.BASES]     # etapa 26 (S-MD-15)
+    elif lab:                                                                         # etapa 33: la versión 2, en ga/
+        ga = os.path.join(FASE, "ga")
+        adt = json.load(open(os.path.join(ga, "bases_adt_v2.json"), encoding="utf-8")) + \
+            json.load(open(os.path.join(ga, "ejemplos_cap3_v2.json"), encoding="utf-8")) + \
+            json.load(open(os.path.join(ga, "bases_a1_v2.json"), encoding="utf-8"))
+        textos["adt"] = [(x["id"] + ".hl7", normal(x["mensaje"])) for x in adt]
+        textos["oru"] = [("ORU-%s.hl7" % b["id"], normal(BO.cable(b))) for b in BO.BASES]
+        textos["vxu"] = [("VXU-%s.hl7" % b["id"], normal(BV.cable(b))) for b in BV.BASES]
+        if ga not in sys.path:
+            sys.path.insert(0, ga)
+        import bases_mdm_v2 as BM2
+        textos["mdm"] = [("MDM-%s.hl7" % b["id"], normal(BM2.cable(b))) for b in BM2.BASES]
     if muestras:
         for c in ("ms", "lfh"):
             d = os.path.join(muestras, c)
@@ -468,6 +481,8 @@ def generar_corpus(carpeta, lab=True, minimos=True, propios=(), muestras=None, l
     open(os.path.join(carpeta, "MANIFIESTO.txt"), "w", encoding="utf-8").write("\n".join(man) + ("\n" if man else ""))
     co = {"casos": casos, "sin_msh": sin_msh, "n": n, "huella": global_.hexdigest(), "por_corpus": por,
           "huella_adt_oru_muestras": cv2.hexdigest()}
+    if version != 1:
+        co["version"] = version
     json.dump(co, open(os.path.join(carpeta, "CASOS.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return co
 
@@ -1155,7 +1170,7 @@ def _orden_tipo(ad):
 def correr(ad, salida, artefactos, ejecutor, op, imagen_digest=None, adaptador_nombre="<adaptador.json>"):
     """Pasos 3-9. -> código de salida."""
     o = {"lab": True, "minimos": False, "propios": [], "muestras": None, "sensibilidad": True, "limite": None, "json_solo": False,
-         "comparar": None}
+         "comparar": None, "version_corpus": 1}
     o.update(op)
     _preparar_salida(salida)
     _escribir_json(os.path.join(salida, "ADAPTADOR.json"), ad)
@@ -1175,7 +1190,7 @@ def correr(ad, salida, artefactos, ejecutor, op, imagen_digest=None, adaptador_n
     _escribir_json(os.path.join(salida, "CORRIDA.json"), corrida)
     _paso(4, "corpus")
     co = generar_corpus(os.path.join(salida, "corpus"), lab=o["lab"], minimos=o["minimos"], propios=o["propios"], muestras=o["muestras"],
-                        limite=o["limite"])
+                        limite=o["limite"], version=o["version_corpus"])
     corrida["corpus"] = {"huella": co["huella"], "huella_adt_oru_muestras": co["huella_adt_oru_muestras"], "n": co["n"]}
     _paso(5, "caja: %d mensajes" % len(co["casos"]))
     grupos = agrupar(ad, co["casos"], os.path.join(salida, "corpus"))
@@ -1243,6 +1258,8 @@ def main(argv=None, ejecutor=None):
     p.add_argument("--corpus", action="append", default=[], help="una carpeta con mensajes propios (*.hl7); se puede repetir")
     p.add_argument("--muestras", help="las muestras de los proyectos, en subcarpetas ms/ y lfh/, como en el estudio")
     p.add_argument("--sin-corpus-lab", action="store_true", help="sin las bases A1/E2 ni las ORU del laboratorio")
+    p.add_argument("--version-corpus", type=int, choices=(1, 2), default=2,
+                   help="la versión del corpus del laboratorio: 2 (la de la etapa 33, por omisión) o 1 (la de los resultados sellados)")
     p.add_argument("--sin-minimos", action="store_true", help="sin los 68 mínimos (solo entran con los dos conversores del estudio)")
     p.add_argument("--sin-sensibilidad", action="store_true", help="sin las alternativas de sensibilidad de Q-CV-D-3/5/9")
     p.add_argument("--limite-casos", type=int, metavar="N", help="solo los N primeros de cada corpus: una prueba de humo")
@@ -1261,7 +1278,7 @@ def main(argv=None, ejecutor=None):
         return 2
     op = {"lab": not a.sin_corpus_lab, "minimos": ad["id"] in ESTUDIO and not a.sin_minimos, "propios": a.corpus,
           "muestras": a.muestras, "sensibilidad": not a.sin_sensibilidad, "limite": a.limite_casos, "json_solo": a.json_solo,
-          "comparar": a.comparar}
+          "comparar": a.comparar, "version_corpus": a.version_corpus}
     nombre_ad = os.path.basename(a.adaptador)
     try:
         if a.desde_evidencias:
@@ -1280,7 +1297,7 @@ def main(argv=None, ejecutor=None):
             d = tempfile.mkdtemp(prefix="vc_orden_")
             try:
                 co = generar_corpus(os.path.join(d, "corpus"), lab=op["lab"], minimos=op["minimos"], propios=op["propios"],
-                                    muestras=op["muestras"], limite=op["limite"])
+                                    muestras=op["muestras"], limite=op["limite"], version=op["version_corpus"])
                 print("corpus: %s; huella %s" % (co["n"], co["huella"]))
                 grupos = agrupar(ad, co["casos"], os.path.join(d, "corpus"))
             finally:

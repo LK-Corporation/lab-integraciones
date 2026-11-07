@@ -1,0 +1,17 @@
+{
+ "que": "Etapa 33, previsión B: los dos conversores del estudio sobre la versión 2 del corpus frente a la 1, con el mismo juez (el de hoy). Sellada después de correr solo la versión 1 (dos veces por conversor, ruido 0 en los dos) y los 37 orígenes de los gemelos, y antes de correr la versión 2, los gemelos y B36 v2. Se apoya en ga/RIESGO-GA.json, que sale de la versión 1.",
+ "fecha": "2026-11-05",
+ "linea_base_v1": {"frase": {"N_nuevas_confirmadas": 15, "D_ya_declaradas": 31, "C_convenciones": 16, "rechazos_nuevos": 2, "dudosas": 3, "M_mensajes": 368},
+                   "minimos_confirmadas": [30, 34], "sin_clase": 1, "ruido": {"microsoft": 0, "linuxforhealth": 0}},
+ "prevision": [
+  {"id": "PB1", "que": "Los casos idénticos byte a byte en las dos versiones (435 por conversor) dan el mismo valor (categoría, subtipo y lo que cuenta)", "distintos": 0},
+  {"id": "PB2", "que": "Los 68 mínimos no cambian: las mismas confirmaciones en las dos versiones", "minimos_confirmadas": [30, 34]},
+  {"id": "PB3", "que": "La frase del estudio: las 15 nuevas confirmadas y las 31 ya declaradas no cambian, ni los 2 rechazos nuevos ni las 3 dudosas; las convenciones no bajan de 16; los mensajes pasan a 375 (270 de ADT)", "N_nuevas_confirmadas": 15, "D_ya_declaradas": 31, "C_convenciones_al_menos": 16, "rechazos_nuevos": 2, "dudosas": 3, "M_mensajes": 375},
+  {"id": "PB4", "que": "M-11 (Microsoft rechaza GENADT comp/opci por el CX.7 «L» de GT1-2; el estudio lo apartó como defecto del corpus) desaparece: 0 casos en la versión 2", "casos_v1": 30, "casos_v2": 0},
+  {"id": "PB5", "que": "Las otras cinco clases con todos sus casos en mensajes que cambian conservan su número de casos, porque el arreglo no toca su campo (PID-16, XTN, el nulo de ACC-1 en nulos, PDA)", "clases": {"L-10": 2, "L-8": 5, "M-10": 1, "M-12": 18, "M-18": 5}},
+  {"id": "PB6", "que": "Los 30 mensajes que Microsoft rechazaba por M-11 se convierten (estado bundle) en la versión 2", "cifra": 30},
+  {"id": "PB7", "que": "Aparece al menos una clave de mecanismo sin clase en la versión 2 que no estaba en la 1 (una candidata, Q-GA-7)", "al_menos": 1},
+  {"id": "PB8", "que": "Las 12 nuevas que solo tenían apoyo sin decidir por UCUM se reproducen en sus gemelos con ISO+, igual que en sus orígenes (los pares, confirmados; las bases, con el hallazgo)", "cifra": 12},
+  {"id": "PB9", "que": "B36 en sus cinco eventos: la categoría no cambia de la versión 1 a la 2 en ninguno de los dos conversores", "distintos_de_categoria": 0}
+ ]
+}

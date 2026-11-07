@@ -1,0 +1,546 @@
+{
+ "nuevas": {
+  "M-23": {
+   "conversor": "microsoft",
+   "par": "M07-oru-sin-pid",
+   "objetivo": [
+    [
+     "PID-3",
+     "PID"
+    ],
+    "referencia_rota",
+    "subject"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B30.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "lab/minimos/M07-oru-sin-pid-caso.hl7",
+     "tipo": "par",
+     "par": "M07-oru-sin-pid",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "M-24": {
+   "conversor": "microsoft",
+   "par": "M01-nm-punto-inicial",
+   "objetivo": [
+    "OBX-5",
+    "valor_distinto",
+    "valueQuantity.value"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B29.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "lab/minimos/M01-nm-punto-inicial-caso.hl7",
+     "tipo": "par",
+     "par": "M01-nm-punto-inicial",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "L-18": {
+   "conversor": "linuxforhealth",
+   "par": "L09-obx-11-d",
+   "objetivo": [
+    "OBX-11",
+    "codigo_mal_mapeado",
+    "status"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/oru/ORU-B20.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "lab/minimos/L09-obx-11-d-caso.hl7",
+     "tipo": "par",
+     "par": "L09-obx-11-d",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M7": {
+   "conversor": "microsoft",
+   "par": "VM07-lote-repetido",
+   "objetivo": [
+    "RXA-15",
+    "valor_distinto",
+    "lotNumber"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B16.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VM07-lote-repetido-caso.hl7",
+     "tipo": "par",
+     "par": "VM07-lote-repetido",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M8": {
+   "conversor": "microsoft",
+   "par": "VM08-fabricante-alterno",
+   "objetivo": [
+    "RXA-17",
+    "valor_distinto",
+    "Organization.name"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B18.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VM08-fabricante-alterno-caso.hl7",
+     "tipo": "par",
+     "par": "VM08-fabricante-alterno",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M10": {
+   "conversor": "microsoft",
+   "par": "VM10-relacion-grd",
+   "objetivo": [
+    "NK1-3",
+    "codigo_mal_mapeado",
+    "relationship"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B37.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": false
+     },
+     "gemelo": {
+      "sale": false
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VM10-relacion-grd-caso.hl7",
+     "tipo": "par",
+     "par": "VM10-relacion-grd",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": false,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M12": {
+   "conversor": "microsoft",
+   "par": "VM12-dos-indicaciones",
+   "objetivo": [
+    "RXA-19",
+    "dato_perdido",
+    "reasonCode"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B40.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VM12-dos-indicaciones-caso.hl7",
+     "tipo": "par",
+     "par": "VM12-dos-indicaciones",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M14": {
+   "conversor": "microsoft",
+   "par": "VM14-dosis-punto-inicial",
+   "objetivo": [
+    "RXA-6",
+    "valor_distinto",
+    "doseQuantity.value"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "vxu-pares/VM14-dosis-punto-inicial-caso.hl7",
+     "tipo": "par",
+     "par": "VM14-dosis-punto-inicial",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-M15": {
+   "conversor": "microsoft",
+   "par": "VM15-re-sin-rxa18",
+   "objetivo": [
+    "RXA-20",
+    "codigo_mal_mapeado",
+    "status"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "vxu-pares/VM15-re-sin-rxa18-caso.hl7",
+     "tipo": "par",
+     "par": "VM15-re-sin-rxa18",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    },
+    {
+     "apoyo": "au-pares/AU1-caso.hl7",
+     "tipo": "par",
+     "par": "AU1",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-L6": {
+   "conversor": "linuxforhealth",
+   "par": "VL04-rxa21-d",
+   "objetivo": [
+    "RXA-21",
+    "valor_distinto",
+    "status"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B11.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VL04-rxa21-d-caso.hl7",
+     "tipo": "par",
+     "par": "VL04-rxa21-d",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-L8": {
+   "conversor": "linuxforhealth",
+   "par": "VL06-dos-rxa10",
+   "objetivo": [
+    "RXA-10",
+    "dato_perdido",
+    "performer"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B21.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VL06-dos-rxa10-caso.hl7",
+     "tipo": "par",
+     "par": "VL06-dos-rxa10",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    },
+    {
+     "apoyo": "au-pares/AU2-caso.hl7",
+     "tipo": "par",
+     "par": "AU2",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  },
+  "VX-L9": {
+   "conversor": "linuxforhealth",
+   "par": "VL07-dos-indicaciones",
+   "objetivo": [
+    "RXA-19",
+    "dato_perdido",
+    "reasonCode"
+   ],
+   "apoyos": [
+    {
+     "apoyo": "lab/vxu/VXU-B40.hl7",
+     "tipo": "base",
+     "origen": {
+      "sale": true
+     },
+     "gemelo": {
+      "sale": true
+     }
+    },
+    {
+     "apoyo": "vxu-pares/VL07-dos-indicaciones-caso.hl7",
+     "tipo": "par",
+     "par": "VL07-dos-indicaciones",
+     "origen": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     },
+     "gemelo": {
+      "caso": true,
+      "controles": [
+       false
+      ],
+      "confirmada": true
+     }
+    }
+   ],
+   "se_reproduce_en_gemelos": true,
+   "igual_que_en_el_origen": true
+  }
+ },
+ "se_reproducen": [
+  "L-18",
+  "M-23",
+  "M-24",
+  "VX-L6",
+  "VX-L8",
+  "VX-L9",
+  "VX-M12",
+  "VX-M14",
+  "VX-M15",
+  "VX-M7",
+  "VX-M8"
+ ],
+ "no": [
+  "VX-M10"
+ ],
+ "distintas_del_origen": []
+}
