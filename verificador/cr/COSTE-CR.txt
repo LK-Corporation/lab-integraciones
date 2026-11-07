@@ -1,0 +1,8 @@
+# Etapa 35: lo que tarda leer el remoto de GitHub, la parte de la comprobación que no es local. Cinco veces, desde la máquina del
+# laboratorio, por https y solo lectura, el 07-11-2026 15:50:
+#   git ls-remote https://github.com/LK-Corporation/lab-integraciones.git refs/heads/main
+0.47
+0.48
+0.5
+0.46
+0.44

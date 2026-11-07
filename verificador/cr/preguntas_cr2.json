@@ -1,0 +1,19 @@
+{
+ "q_cr_2": {
+  "type": "choice",
+  "instructions": "Q-CR-2: qué flujos tienen que estar ensayados para que pase.",
+  "criteria": {
+   "los_tres": "(a) Siempre los tres.",
+   "por_paths": "(b) Los que GitHub dispararía, según los filtros paths:, y el rojo como aviso.",
+   "los_dados": "(c) Los que se den, con un aviso por cada uno que falte."
+  }
+ },
+ "q_cr_5": {
+  "type": "choice",
+  "instructions": "Q-CR-5: la comprobación antes del push.",
+  "criteria": {
+   "solo_despues": "(a) Solo después.",
+   "tambien_local": "(b) También con --local antes del push."
+  }
+ }
+}

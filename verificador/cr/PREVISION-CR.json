@@ -1,0 +1,23 @@
+{
+ "que": "Etapa 35, la previsión del ANTES, sellada antes de correr los controles",
+ "fecha": "07-11-2026 15:12",
+ "jev": {
+  "p1_controles_a_la_primera": "alta (0,9 o más), 0,92; confianza 0,88",
+  "p2_push_de_la_etapa_a_la_primera": "media (0,6 a 0,9), 0,96; confianza 0,94",
+  "decision": "cr/decision-jev-prevision-cr.md"
+ },
+ "disenador": {
+  "p1": 0.95,
+  "p2": 0.8,
+  "fuente": "cr/diseno-cr-fable.md §8"
+ },
+ "huellas": {
+  "cv/ci/comprobar_publicado.py": "9eea77788b79587f3c163dcbd3f17bd677be8262788b995691b8ae9c70a5f768",
+  "cv/ci/prueba_ci.py": "9d4c09937d7b377dbcc2944f80fb5bdcba46201ee35e98578d0c1a31ee35610f",
+  "cr/controles_cr.sh": "fe3d12ca005058be2a7ab71c4080edd0a9ee5a2b61b584bc11a844a6770898b4",
+  "cr/parche_prueba_cr.py": "39a24e5f13bbcdb269ec72b650ccae357b683e715e25acc93c74a8444c7497cc",
+  "cr/diseno-cr-fable.md": "e96afb64bb72b5abf61df59a9bc3d2f59ab3f8e8c32b46d8553e64f349ce7933",
+  "cr/decision-jev-cr.md": "9eb2cd221484b3e819a4d0fe3d3930763828075ec0762c5ce95d7d4afefac454",
+  "cr/decision-jev-cr2.md": "40ca9d59d722e8ddc69e5deae7dde95dd59a0b73b27002e1d2d78acbbbd697c3"
+ }
+}

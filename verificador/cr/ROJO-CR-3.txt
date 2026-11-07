@@ -1,0 +1,8 @@
+# Etapa 35, tras la segunda pasada de la revisión a ciegas: P-CR-15 con -o sobre un fichero y un ENSAYO.json que no se lee, contra la
+# comprobación de antes de cr/parche_comprobar_cr2.py, en la misma exportación del público: cd verificador && python3 cv/ci/prueba_ci.py.
+# Cae P-CR-15: -o sobre un fichero revienta con una traza (FileExistsError). Las rutas, relativas a la exportación.
+  EXCEPCIÓN P-CR-15: File "verificador/cv/ci/comprobar_publicado.py", line 249, in comprobar
+    os.makedirs(opts["-o"], exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [Errno 17] File exists: '/tmp/prueba_ci_g9edquyp/cr_fichero_6ezw5i8q/no-es-carpeta'
+PRUEBAS CI: 1 MAL (249 comprobaciones, 56 pruebas)

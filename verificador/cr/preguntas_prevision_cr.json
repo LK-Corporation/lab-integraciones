@@ -1,0 +1,4 @@
+{
+ "p1_controles": {"type": "choice", "instructions": "P1: probabilidad de que los controles salgan a la primera (los dos positivos caen y el negativo pasa).", "criteria": {"alta": "(a) Alta: 0,9 o más.", "media": "(b) Media: de 0,6 a 0,9.", "baja": "(c) Baja: menos de 0,6."}},
+ "p2_push": {"type": "choice", "instructions": "P2: probabilidad de que el push de la etapa pase la comprobación a la primera.", "criteria": {"alta": "(a) Alta: 0,9 o más.", "media": "(b) Media: de 0,6 a 0,9.", "baja": "(c) Baja: menos de 0,6."}}
+}

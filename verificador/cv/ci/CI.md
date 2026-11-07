@@ -204,7 +204,39 @@ Los códigos de salida:
 - 2, no se ensayó por el estado del clon: cambios sin `git add`, ficheros sin seguimiento o un HEAD sin commit.
 
 El ensayo no ve lo de siempre: GitHub de verdad, la red, el Docker del runner, los permisos del token y el commit de fusión de
-un PR. Tampoco ve si el commit fijado está ya en GitHub.
+un PR. Tampoco ve si el commit fijado está ya en GitHub. Lo que se publique después del ensayo lo mira la comprobación de
+la sección siguiente.
+
+## Después del push: la comprobación
+
+El ensayo no sabe qué se publicó después: un `git add` o un `commit --amend` posteriores cambian el árbol sin aviso.
+[`comprobar_publicado.py`](comprobar_publicado.py) cierra el círculo (desde la etapa 35). Lee el commit que el remoto tiene
+(`git ls-remote`), saca su árbol y lo compara con el que cada `ENSAYO.json` dice haber ensayado.
+
+```bash
+python3 cv/ci/comprobar_publicado.py <clon> <ENSAYO.json de la demo> <del ejemplo> <del rojo> [--rama main] [-o <carpeta>]
+```
+
+- **Sale con 0** si los tres flujos tienen un ensayo de sus jobs sobre el árbol publicado.
+- **Sale con 1** si falta un ensayo, si no ensayó nada o no dice su árbol, si le faltan jobs o si ensayó otro árbol. Entonces
+  da la orden para re-ensayar ese flujo, y lista las rutas que difieren si el árbol ensayado sigue en el clon.
+- **Sale con 2** si no pudo comprobar: el remoto o la rama no se leen, un `ENSAYO.json` no es válido, hay dos ensayos del
+  mismo flujo, no hay flujos que comprobar, los argumentos están mal, o un fichero no se lee o no se escribe.
+- **Un ensayo en rojo** sobre el árbol publicado da un aviso, no un 1.
+
+El commit no cuenta, el árbol sí. Un amend que solo cambia el mensaje pasa. Un push de varios commits pasa si la cabeza es el
+árbol ensayado, con un aviso por los intermedios, que GitHub no corre.
+
+En un PR, compruébalo sobre la rama (`--rama <rama>`). Con `--base main` prevé el árbol del commit de fusión con
+`git merge-tree`, y avisa si `main` avanzó, porque ese árbol no está ensayado. Después de fusionar, compruébalo sobre `main` con
+los mismos `ENSAYO.json`.
+
+La comprobación no ve:
+- si los `ENSAYO.json` son los últimos: un ensayo viejo sobre el mismo árbol pasa, porque el árbol es el contenido;
+- el commit de fusión real de un PR;
+- nada de lo que pasa en el runner.
+
+`PUBLICADO.json` guarda lo comparado.
 
 ## Cómo repetirlo en tu máquina
 

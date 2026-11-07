@@ -1,0 +1,31 @@
+sin mutar: CAEN: ninguna
+muere: M1, iguales siempre  CAEN: P-CR-3 P-CR-4 P-CR-7 P-CR-8 P-CR-9 P-CR-13 P-CR-14
+muere: M2, sin las rutas que difieren  CAEN: P-CR-3 P-CR-4 P-CR-8 P-CR-9 P-CR-13 P-CR-14
+muere: M3, dos ensayos del mismo flujo no paran  CAEN: P-CR-15
+muere: M4, el umbral de los commits intermedios  CAEN: P-CR-2
+muere: M5, sin el aviso de otra historia  CAEN: P-CR-5
+muere: M6, sin los jobs mínimos  CAEN: P-CR-12
+muere: M7, sin el aviso de un ensayo en rojo  CAEN: P-CR-12
+muere: M8, la fusión con conflictos como si no los hubiera  CAEN: P-CR-10
+muere: M9, un flujo sin ensayo no abre el círculo  CAEN: P-CR-6
+muere: M10, sin fetch  CAEN: P-CR-14
+muere: M11, la rama de seguimiento del clon en vez del remoto  CAEN: P-CR-14
+muere: M12, el HEAD del clon en vez del remoto  CAEN: P-CR-13 P-CR-14
+muere: M13, ningún flujo da verde  CAEN: P-CR-15
+muere: M14, un ENSAYO.json raro no para  CAEN: P-CR-15
+muere: M15, sin la frase del amend  CAEN: P-CR-4
+muere: M16, un ensayo que no ensayó pasa por uno sin árbol  CAEN: P-CR-6
+muere: M17, otro árbol no abre el círculo  CAEN: P-CR-3 P-CR-4 P-CR-7 P-CR-8 P-CR-9 P-CR-13 P-CR-14
+muere: M18, la fusión siempre igual  CAEN: P-CR-10
+muere: M19, la fusión sin fetch de la base  CAEN: P-CR-10
+muere: M20, main no captura los argumentos  CAEN: P-CR-15
+muere: M21, el diff al revés  CAEN: P-CR-3
+muere: M22, igual contra el árbol del HEAD del clon  CAEN: P-CR-13 P-CR-14
+muere: M23, un ENSAYO.json sin árbol no abre  CAEN: P-CR-6
+muere: M24, un job que falta no abre  CAEN: P-CR-12
+muere: M25, el rojo al revés  CAEN: P-CR-12
+muere: M26, ignora --remoto  CAEN: P-CR-11
+muere: M27, el código 0 aunque haya abiertos  CAEN: P-CR-3 P-CR-4 P-CR-6 P-CR-7 P-CR-8 P-CR-9 P-CR-12 P-CR-13 P-CR-14
+muere: M28, otro árbol solo abre si lista rutas  CAEN: P-CR-7
+muere: M29, main no captura un fichero que no se lee o no se escribe  CAEN: P-CR-15
+mueren 29 de 29

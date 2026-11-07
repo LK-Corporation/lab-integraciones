@@ -1,0 +1,28 @@
+# Etapa 35: las pruebas P-CR-1..12 antes de escribir cv/ci/comprobar_publicado.py, en una exportación del público (464bbb2) con el
+# cv/ci/prueba_ci.py de 53 pruebas: cd verificador && python3 cv/ci/prueba_ci.py. Caen las doce porque el guion no existe; las 41
+# de antes, en verde (198 comprobaciones). Las rutas, relativas a la exportación.
+  EXCEPCIÓN P-CR-1: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-2: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-3: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-4: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-5: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-6: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-7: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-8: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-9: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-10: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-11: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+  EXCEPCIÓN P-CR-12: File "<frozen importlib._bootstrap_external>", line 1128, in get_code
+FileNotFoundError: [Errno 2] No such file or directory: 'verificador/cv/ci/comprobar_publicado.py'
+PRUEBAS CI: 12 MAL (198 comprobaciones, 53 pruebas)

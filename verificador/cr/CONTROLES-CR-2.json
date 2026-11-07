@@ -1,0 +1,276 @@
+{
+ "_lectura": "Etapa 35, la segunda tanda de cr/controles_cr.sh, con la comprobación de después de la revisión a ciegas (DV-CR-3): lo mismo que la primera, sobre un remoto de prueba local hecho del clon del público en 464bbb2. Las rutas, relativas a la carpeta de los controles.",
+ "controles": {
+  "negativo": {
+   "codigo": 0,
+   "esperado": 0,
+   "diferencias": {
+    "demo-ci": null,
+    "ejemplo-ci": null,
+    "rojo-ci": null
+   },
+   "como_se_esperaba": true,
+   "segundos": "0.04",
+   "ultima_linea": "círculo cerrado: 3 flujos se ensayaron sobre el árbol f07968687b3f, el del commit 60473696b33e en origin negativo",
+   "publicado": {
+    "remoto": "origin",
+    "rama": "negativo",
+    "commit": "60473696b33e95b4054bf8c1eb1c67acef3f48a3",
+    "arbol": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+    "flujos": {
+     "demo-ci": {
+      "ensayo": "ens/demo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "negativo",
+       "positivo",
+       "positivo-comprobado",
+       "pruebas"
+      ],
+      "rojo": [],
+      "igual": true,
+      "mismo_commit": false,
+      "diferencia": null,
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "ejemplo-ci": {
+      "ensayo": "ens/ejemplo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "ejemplo",
+       "ejemplo-comprobado",
+       "ejemplo-propio"
+      ],
+      "rojo": [],
+      "igual": true,
+      "mismo_commit": false,
+      "diferencia": null,
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "rojo-ci": {
+      "ensayo": "ens/rojo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "rojo",
+       "rojo-comprobado"
+      ],
+      "rojo": [],
+      "igual": true,
+      "mismo_commit": false,
+      "diferencia": null,
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     }
+    },
+    "avisos": [],
+    "fusion": null,
+    "cerrado": true,
+    "codigo": 0
+   }
+  },
+  "positivo-add": {
+   "codigo": 1,
+   "esperado": 1,
+   "diferencias": {
+    "demo-ci": [
+     "A\tverificador/DE-MAS-35.txt"
+    ],
+    "ejemplo-ci": [
+     "A\tverificador/DE-MAS-35.txt"
+    ],
+    "rojo-ci": [
+     "A\tverificador/DE-MAS-35.txt"
+    ]
+   },
+   "como_se_esperaba": true,
+   "segundos": "0.05",
+   "ultima_linea": "CÍRCULO ABIERTO: demo-ci se ensayó sobre otro árbol; ejemplo-ci se ensayó sobre otro árbol; rojo-ci se ensayó sobre otro árbol",
+   "publicado": {
+    "remoto": "origin",
+    "rama": "positivo-add",
+    "commit": "c2d854c952ba196d3ed15efdb2fc366d399f7eb1",
+    "arbol": "d299ef53851621cfbbe16d03d87073e3f48e3f5a",
+    "flujos": {
+     "demo-ci": {
+      "ensayo": "ens/demo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "negativo",
+       "positivo",
+       "positivo-comprobado",
+       "pruebas"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "A\tverificador/DE-MAS-35.txt"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "ejemplo-ci": {
+      "ensayo": "ens/ejemplo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "ejemplo",
+       "ejemplo-comprobado",
+       "ejemplo-propio"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "A\tverificador/DE-MAS-35.txt"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "rojo-ci": {
+      "ensayo": "ens/rojo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "rojo",
+       "rojo-comprobado"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "A\tverificador/DE-MAS-35.txt"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     }
+    },
+    "avisos": [],
+    "fusion": null,
+    "cerrado": false,
+    "codigo": 1
+   }
+  },
+  "positivo-amend": {
+   "codigo": 1,
+   "esperado": 1,
+   "diferencias": {
+    "demo-ci": [
+     "M\tverificador/cv/ci/CI.md"
+    ],
+    "ejemplo-ci": [
+     "M\tverificador/cv/ci/CI.md"
+    ],
+    "rojo-ci": [
+     "M\tverificador/cv/ci/CI.md"
+    ]
+   },
+   "como_se_esperaba": true,
+   "segundos": "0.05",
+   "ultima_linea": "CÍRCULO ABIERTO: demo-ci se ensayó sobre otro árbol; ejemplo-ci se ensayó sobre otro árbol; rojo-ci se ensayó sobre otro árbol",
+   "publicado": {
+    "remoto": "origin",
+    "rama": "positivo-amend",
+    "commit": "27280c3aa0db4d449d2a86229aa1e14f5f527177",
+    "arbol": "d603140f765ac1388292fa472781aa199c0f5f6a",
+    "flujos": {
+     "demo-ci": {
+      "ensayo": "ens/demo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "negativo",
+       "positivo",
+       "positivo-comprobado",
+       "pruebas"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "M\tverificador/cv/ci/CI.md"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "ejemplo-ci": {
+      "ensayo": "ens/ejemplo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "ejemplo",
+       "ejemplo-comprobado",
+       "ejemplo-propio"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "M\tverificador/cv/ci/CI.md"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     },
+     "rojo-ci": {
+      "ensayo": "ens/rojo/ENSAYO.json",
+      "arbol_ensayado": "f07968687b3f81bf27491c2b2107572b8d514d9e",
+      "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+      "tipo": "arbol",
+      "jobs": [
+       "rojo",
+       "rojo-comprobado"
+      ],
+      "rojo": [],
+      "igual": false,
+      "mismo_commit": false,
+      "diferencia": [
+       "M\tverificador/cv/ci/CI.md"
+      ],
+      "commits_nuevos": 1,
+      "otra_historia": false,
+      "amend": false,
+      "faltan": []
+     }
+    },
+    "avisos": [],
+    "fusion": null,
+    "cerrado": false,
+    "codigo": 1
+   }
+  }
+ },
+ "huellas": {
+  "comprobar_publicado.py": "0cdf7a917a289acc88e8e8e27715383ff5490b3dba74cb6a00959e5ae8a6593c",
+  "ensayo_flujo.py": "983746e8b32737c770977d617086586555cee0fb9ba30d075567341113b6f196"
+ }
+}

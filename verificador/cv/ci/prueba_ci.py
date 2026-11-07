@@ -5,7 +5,8 @@ del positivo y los dos flujos de GitHub Actions. Etapa 24 (cv/ci/diseno-ci2-fabl
 los endurecimientos, el proyecto de ejemplo, la forma remota y el run en rojo; P-CI-27, en el segundo push. Etapa 25
 (cv/ci/diseno-mant-fable.md §5): P-CI-28..31, las acciones en Node.js 24, y las de la 24 leen las plantillas de github-mant/. Etapa 34
 (en/diseno-en-fable.md §4; en/decision-jev-en.md): P-EN-1..10, el ensayo local con lo que se publica, sobre repositorios de git
-mínimos. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
+mínimos. Etapa 35 (cr/diseno-cr-fable.md §5; cr/decision-jev-cr.md): P-CR-1..15, la comprobación de después del push, con un
+remoto vacío al lado. Corren sin Docker y sin red, con el conversor de juguete. Los YAML se validan
 con PyYAML (la única dependencia, solo de pruebas).
 
 Antes del código fallan todas: linea_base.py, sembrar_juguete.py, POSITIVO-CI.json y los YAML no existen.
@@ -1431,9 +1432,340 @@ def en10():
     mira("lo dice", "el HEAD no apunta a ningún commit" in out, True)
 
 
+# Etapa 35: la comprobación de después del push (cr/diseno-cr-fable.md §5), con un remoto vacío al lado.
+def remoto_para(r):
+    b = os.path.join(tmp("cr_remoto"), "remoto.git")
+    subprocess.run(["git"] + GIT_C + ["init", "--bare", "-q", b], check=True, capture_output=True)
+    g(r, "remote", "add", "origin", b)
+    return b
+
+
+def empujar(r, destino="main"):
+    g(r, "push", "-q", "origin", "HEAD:refs/heads/" + destino)
+
+
+def cargar_comprobacion():
+    spec = importlib.util.spec_from_file_location("comprobar_publicado_cr", os.path.join(CI_D, "comprobar_publicado.py"))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def ens_de(repo, jobs="uno"):
+    """El ENSAYO.json de un ensayo del flujo mini sobre repo."""
+    return os.path.join(ensayar(repo, jobs)[3], "ENSAYO.json")
+
+
+def comprobar(repo, ensayos, *extra, flujos="mini", minimos=("mini=uno",)):
+    o = tmp("cr_o")
+    args = [repo] + list(ensayos) + ["--flujos", flujos, "-o", o] + list(extra)
+    for m in minimos:
+        args += ["--jobs-minimos", m]
+    buf = io.StringIO()
+    with redirect_stdout(buf):
+        try:
+            rc = cargar_comprobacion().main(args)
+        except SystemExit as ex:
+            rc = "SystemExit: %s" % ex
+    p = os.path.join(o, "PUBLICADO.json")
+    return rc, buf.getvalue(), (leer_json(p) if os.path.exists(p) else None)
+
+
+def ultima(out):
+    return (out.strip().splitlines() or [""])[-1]
+
+
+def flujo_de(pub, f="mini"):
+    return ((pub or {}).get("flujos") or {}).get(f) or {}
+
+
+def cr1():
+    """Negativo, con el ensayo del HEAD: pasa, el mismo commit."""
+    r = repo_minimo()
+    remoto_para(r)
+    e = ens_de(r)
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 0", rc, 0)
+    mira("el mismo commit", "es el mismo commit" in out, True)
+    mira("cerrado e igual", ((pub or {}).get("cerrado"), flujo_de(pub).get("igual")), (True, True))
+    mira("la última línea", ultima(out).startswith("círculo cerrado"), True)
+
+
+def cr2():
+    """Negativo, con el ensayo del índice: pasa, el commit es nuevo sobre el árbol ensayado."""
+    r = repo_minimo()
+    remoto_para(r)
+    escribir(r, "MARCA", "v2\n")
+    g(r, "add", "MARCA")
+    e = ens_de(r)
+    g(r, "commit", "-q", "-m", "dos")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 0", rc, 0)
+    mira("el commit es nuevo sobre el árbol", "el commit es nuevo sobre él" in out, True)
+    mira("igual, y otro commit", (flujo_de(pub).get("igual"), flujo_de(pub).get("mismo_commit")), (True, False))
+    mira("sin aviso de commits intermedios: uno es lo normal", "commits nuevos" in out, False)
+
+
+def cr3():
+    """Un git add de más después del ensayo: cae, con la ruta."""
+    r = repo_minimo()
+    remoto_para(r)
+    escribir(r, "MARCA", "v2\n")
+    g(r, "add", "MARCA")
+    e = ens_de(r)
+    escribir(r, "OTRO", "de más\n")
+    g(r, "add", "OTRO")
+    g(r, "commit", "-q", "-m", "dos")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 1", rc, 1)
+    mira("lo dice, con la ruta", ("OTRO ÁRBOL" in out, "1 ruta" in out, flujo_de(pub).get("diferencia")), (True, True, ["A\tOTRO"]))
+    mira("la última línea", ultima(out).startswith("CÍRCULO ABIERTO"), True)
+
+
+def cr4():
+    """Un commit --amend con cambio después del ensayo del HEAD: cae, con la ruta, y dice que el commit ensayado ya no está."""
+    r = repo_minimo()
+    remoto_para(r)
+    e = ens_de(r)
+    escribir(r, "MARCA", "v3\n")
+    g(r, "add", "MARCA")
+    g(r, "commit", "-q", "--amend", "--no-edit")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 1", rc, 1)
+    mira("la ruta", flujo_de(pub).get("diferencia"), ["M\tMARCA"])
+    mira("el commit ensayado ya no está", "ya no está en main" in out, True)
+
+
+def cr5():
+    """Un amend que solo cambia el mensaje: pasa, el mismo árbol."""
+    r = repo_minimo()
+    remoto_para(r)
+    e = ens_de(r)
+    g(r, "commit", "-q", "--amend", "-m", "otro mensaje")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 0", rc, 0)
+    mira("el commit es nuevo sobre el mismo árbol", "el commit es nuevo sobre él" in out, True)
+    mira("avisa de otra historia", "otra historia" in out, True)
+
+
+def cr6():
+    """Sin ensayo, y ensayos que no valen: cae; un fichero que no es JSON: 2."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    rc, out, pub = comprobar(r, [])
+    mira("ningún ensayo", (rc, "no hay ensayo" in out), (1, True))
+    rc, out, pub = comprobar(r, [os.path.join(tmp("cr_nada"), "ENSAYO.json")])
+    mira("una ruta que no existe", (rc, "no hay ensayo" in out), (1, True))
+    e = ens_de(r)
+    d = leer_json(e)
+    d.pop("clon")
+    sin_clon = escribir_json(os.path.join(tmp("cr_sin_clon"), "ENSAYO.json"), d)
+    mira("sin clon", comprobar(r, [sin_clon])[:2][0], 1)
+    mira("sin clon: lo dice", "no dice qué árbol ensayó" in comprobar(r, [sin_clon])[1], True)
+    x = tmp("cr_export")
+    a = subprocess.run(["git", "-C", r, "archive", "HEAD"], capture_output=True, check=True).stdout
+    subprocess.run(["tar", "-x", "-C", x], input=a, check=True)
+    rc, out, pub = comprobar(r, [ens_de(x)])
+    mira("sin .git", (rc, "no dice qué árbol ensayó" in out), (1, True))
+    escribir(r, "nuevo.txt", "x\n")
+    rc, out, pub = comprobar(r, [ens_de(r)])
+    mira("un ensayo que no ensayó", (rc, "no ensayó nada" in out), (1, True))
+    malo = os.path.join(tmp("cr_malo"), "ENSAYO.json")
+    open(malo, "w").write("{no es json")
+    mira("no es JSON: 2", comprobar(r, [malo])[0], 2)
+
+
+def cr7():
+    """Otra copia: con otro contenido, cae sin poder listar; con el mismo contenido, pasa."""
+    r = repo_minimo()
+    b = remoto_para(r)
+    empujar(r)
+    d = leer_json(ens_de(r))
+    d["clon"]["arbol"] = "ab" * 20
+    otro = escribir_json(os.path.join(tmp("cr_otro"), "ENSAYO.json"), d)
+    rc, out, pub = comprobar(r, [otro])
+    mira("otro contenido: cae", (rc, "no está en este clon" in out, flujo_de(pub).get("diferencia", "x")), (1, True, None))
+    r2 = os.path.join(tmp("cr_clon2"), "c")
+    subprocess.run(["git"] + GIT_C + ["clone", "-q", b, r2], check=True, capture_output=True)
+    mira("el mismo contenido, en otra copia: pasa", comprobar(r, [ens_de(r2)])[0], 0)
+
+
+def cr8():
+    """Dos flujos sobre árboles distintos: cae el del árbol viejo, con su ruta, y solo él."""
+    r = repo_minimo()
+    remoto_para(r)
+    d = leer_json(ens_de(r))
+    d["flujo"] = "otro"
+    viejo = escribir_json(os.path.join(tmp("cr_viejo"), "ENSAYO.json"), d)
+    escribir(r, "MARCA", "v2\n")
+    g(r, "add", "MARCA")
+    e = ens_de(r)
+    g(r, "commit", "-q", "-m", "dos")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e, viejo], flujos="mini,otro", minimos=("mini=uno", "otro=uno"))
+    mira("devuelve 1", rc, 1)
+    mira("mini igual; otro, con la ruta", (flujo_de(pub).get("igual"), flujo_de(pub, "otro").get("diferencia")), (True, ["M\tMARCA"]))
+    mira("la última línea nombra solo otro", ("otro" in ultima(out), "mini" in ultima(out)), (True, False))
+
+
+def cr9():
+    """Varios commits: pasa con aviso si la cabeza es el árbol ensayado; cae si no."""
+    r = repo_minimo()
+    remoto_para(r)
+    escribir(r, "MARCA", "v2\n")
+    escribir(r, "OTRO", "x\n")
+    g(r, "add", "MARCA", "OTRO")
+    e = ens_de(r)
+    g(r, "commit", "-q", "-m", "a", "--", "MARCA")
+    g(r, "commit", "-q", "-m", "b")
+    empujar(r)
+    rc, out, pub = comprobar(r, [e])
+    mira("pasa, con aviso de 2 commits", (rc, "2 commits nuevos" in out, flujo_de(pub).get("commits_nuevos")), (0, True, 2))
+    r2 = repo_minimo()
+    remoto_para(r2)
+    e2 = ens_de(r2)
+    for v in ("v2", "v3"):
+        escribir(r2, "MARCA", v + "\n")
+        g(r2, "commit", "-q", "-am", v)
+    empujar(r2)
+    rc, out, pub = comprobar(r2, [e2])
+    mira("la cabeza no es lo ensayado: cae", (rc, flujo_de(pub).get("diferencia")), (1, ["M\tMARCA"]))
+
+
+def cr10():
+    """Un PR: se comprueba la rama; con --base, la fusión prevista, y un aviso si main avanzó."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    g(r, "checkout", "-q", "-b", "rama")
+    escribir(r, "MARCA", "v2\n")
+    g(r, "commit", "-q", "-am", "rama")
+    e = ens_de(r)
+    empujar(r, "rama")
+    rc, out, pub = comprobar(r, [e], "--rama", "rama", "--base", "main")
+    mira("la rama: pasa, y la fusión tiene el mismo árbol", (rc, ((pub or {}).get("fusion") or {}).get("igual")), (0, True))
+    g(r, "checkout", "-q", "main")
+    escribir(r, "OTRO", "main avanza\n")
+    g(r, "add", "OTRO")
+    g(r, "commit", "-q", "-m", "main")
+    empujar(r)
+    g(r, "checkout", "-q", "rama")
+    rc, out, pub = comprobar(r, [e], "--rama", "rama", "--base", "main")
+    mira("main avanzó: pasa, con aviso de la fusión", (rc, "aviso" in out and "fusión" in out, ((pub or {}).get("fusion") or {}).get("igual")),
+         (0, True, False))
+    escribir(r, "MARCA", "v3 en la rama\n")
+    g(r, "commit", "-q", "-am", "la rama choca")
+    g(r, "checkout", "-q", "main")
+    escribir(r, "MARCA", "v3 en main\n")
+    g(r, "commit", "-q", "-am", "main choca")
+    empujar(r)
+    g(r, "checkout", "-q", "rama")
+    e3 = ens_de(r)
+    empujar(r, "rama")
+    rc, out, pub = comprobar(r, [e3], "--rama", "rama", "--base", "main")
+    mira("la fusión con conflictos: avisa, sin árbol", (rc, "conflictos" in out, ((pub or {}).get("fusion") or {}).get("arbol", "x")),
+         (0, True, None))
+
+
+def cr11():
+    """No se puede comprobar: el remoto no se lee, o la rama no está: 2."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    e = ens_de(r)
+    rc, out, pub = comprobar(r, [e], "--remoto", os.path.join(tmp("cr_no"), "no-existe.git"))
+    mira("el remoto no se lee", (rc, "no se pudo" in out), (2, True))
+    mira("la rama no está", comprobar(r, [e], "--rama", "no-esta")[0], 2)
+
+
+def cr12():
+    """Un ensayo en rojo sobre el árbol publicado avisa (Q-CR-4); un job que falta de la lista mínima cae (Q-CR-7)."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    e = ens_de(r)
+    for clave, valor in (("como_se_esperaba", {"uno": False}), ("informes_iguales", {"negativo": False})):
+        d = leer_json(e)
+        d[clave] = valor
+        rojo = escribir_json(os.path.join(tmp("cr_rojo"), "ENSAYO.json"), d)
+        rc, out, pub = comprobar(r, [rojo])
+        mira("en rojo (%s): pasa con aviso" % clave, (rc, "aviso" in out and "salió en rojo" in out), (0, True))
+    rc, out, pub = comprobar(r, [e], minimos=("mini=uno,dos",))
+    mira("falta un job de la lista: cae", (rc, "no corrió dos" in out), (1, True))
+
+
+def cr13():
+    """Sin push: el remoto sigue en el commit de antes; cae, con la ruta, y dice que el clon está en otro commit."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    escribir(r, "MARCA", "v2\n")
+    g(r, "add", "MARCA")
+    e = ens_de(r)
+    g(r, "commit", "-q", "-m", "sin push")
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 1, con la ruta", (rc, flujo_de(pub).get("diferencia")), (1, ["M\tMARCA"]))
+    mira("dice que el clon está en otro commit", "el clon está en otro commit" in out, True)
+
+
+def cr14():
+    """El remoto avanzó desde otro clon: trae el commit, y cae con la ruta (lee el remoto, no el clon)."""
+    r = repo_minimo()
+    b = remoto_para(r)
+    empujar(r)
+    e = ens_de(r)
+    r2 = os.path.join(tmp("cr_otro_clon"), "c")
+    subprocess.run(["git"] + GIT_C + ["clone", "-q", b, r2], check=True, capture_output=True)
+    escribir(r2, "MARCA", "v2 desde otro clon\n")
+    g(r2, "commit", "-q", "-am", "otro clon")
+    g(r2, "push", "-q", "origin", "HEAD:refs/heads/main")
+    rc, out, pub = comprobar(r, [e])
+    mira("devuelve 1, con la ruta", (rc, flujo_de(pub).get("diferencia")), (1, ["M\tMARCA"]))
+    mira("el commit publicado no es el del clon", (pub or {}).get("commit") not in (None, g(r, "rev-parse", "HEAD")), True)
+
+
+def cr15():
+    """No se puede comprobar: ENSAYO.json raros, argumentos mal puestos, ningún flujo y dos ensayos del mismo flujo dan 2."""
+    r = repo_minimo()
+    remoto_para(r)
+    empujar(r)
+    e = ens_de(r)
+    bueno = leer_json(e)
+    for nombre, cambio in (("clon no es un objeto", {"clon": "x"}), ("flujo no es un texto", {"flujo": ["mini"]}),
+                           ("clon.head no es un texto", {"clon": dict(bueno["clon"], head=7)}),
+                           ("como_se_esperaba no es un objeto", {"como_se_esperaba": ["uno"]})):
+        raro = escribir_json(os.path.join(tmp("cr_raro"), "ENSAYO.json"), dict(bueno, **cambio))
+        rc, out, pub = comprobar(r, [raro])
+        mira("%s: 2" % nombre, (rc, "no se pudo" in out), (2, True))
+    mira("--jobs-minimos sin «=»: 2", comprobar(r, [e], minimos=("mini",))[0], 2)
+    mira("--rama sin valor: 2", comprobar(r, [e], "--rama", minimos=())[0], 2)
+    rc, out, pub = comprobar(r, [e], flujos="")
+    mira("ningún flujo: 2", (rc, "no hay flujos" in out), (2, True))
+    otra = escribir_json(os.path.join(tmp("cr_dos"), "ENSAYO.json"), bueno)
+    mira("dos ensayos del mismo flujo: 2", comprobar(r, [e, otra])[0], 2)
+    fichero = os.path.join(tmp("cr_fichero"), "no-es-carpeta")
+    open(fichero, "w").write("x")
+    buf = io.StringIO()
+    with redirect_stdout(buf):
+        rc = cargar_comprobacion().main([r, e, "--flujos", "mini", "--jobs-minimos", "mini=uno", "-o", fichero])
+    mira("-o sobre un fichero: 2", (rc, "no se pudo" in buf.getvalue()), (2, True))
+    no_lee = escribir_json(os.path.join(tmp("cr_no_lee"), "ENSAYO.json"), bueno)
+    os.chmod(no_lee, 0)
+    if not os.access(no_lee, os.R_OK):                                  # como root se lee igual, y no hay caso
+        mira("un ENSAYO.json que no se lee: 2", comprobar(r, [no_lee])[0], 2)
+    os.chmod(no_lee, 0o644)
+
+
 PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24,
            p25, p26, p27, p28, p29, p30, p31, en1, en2, en3, en4, en5, en6, en7, en8,
-           en9, en10]
+           en9, en10, cr1, cr2, cr3, cr4, cr5, cr6, cr7, cr8, cr9, cr10, cr11, cr12,
+           cr13, cr14, cr15]
 
 
 def main():
@@ -1443,7 +1775,8 @@ def main():
             if m is None:
                 print("  no se importa: %s" % globals().get(n))
     for p in PRUEBAS:
-        grupo[0] = ("P-EN-%d" % int(p.__name__[2:])) if p.__name__.startswith("en") else ("P-CI-%d" % int(p.__name__[1:]))
+        pre = p.__name__[:2]
+        grupo[0] = ("P-%s-%d" % (pre.upper(), int(p.__name__[2:]))) if pre in ("en", "cr") else ("P-CI-%d" % int(p.__name__[1:]))
         try:
             p()
         except Exception as ex:                                             # en rojo, lo esperado es que el código no exista

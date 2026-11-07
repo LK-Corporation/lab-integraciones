@@ -1,0 +1,3 @@
+negativo rc=0 s=0.04
+positivo-add rc=1 s=0.05
+positivo-amend rc=1 s=0.05

@@ -1,0 +1,1 @@
+{"q_cr_5": {"type": "choice", "instructions": "Q-CR-5: la comprobación antes del push.", "criteria": {"solo_despues": "(a) Solo la de después del push.", "tambien_local": "(b) También un modo --local, sobre el HEAD del clon y sin red, para correrlo justo antes del push."}}}

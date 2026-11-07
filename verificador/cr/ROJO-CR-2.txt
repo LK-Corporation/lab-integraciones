@@ -1,0 +1,7 @@
+# Etapa 35, tras la revisión a ciegas: P-CR-13..15 y las comprobaciones nuevas de P-CR-2, 5 y 10, contra la comprobación de antes del
+# arreglo (cr/sellada/comprobar_publicado.py), en una exportación del público (464bbb2) con el cv/ci/prueba_ci.py de 56 pruebas:
+# cd verificador && python3 cv/ci/prueba_ci.py. Cae P-CR-15 (las entradas raras revientan con una traza). Las demás pasan ya: miran lo que
+# la comprobación hacía bien, y su rojo está en cr/MUTANTES-CR.txt, que las corre contra comprobaciones rotas a propósito.
+  EXCEPCIÓN P-CR-15: File "verificador/cv/ci/comprobar_publicado.py", line 151, in main
+AttributeError: 'str' object has no attribute 'get'
+PRUEBAS CI: 1 MAL (241 comprobaciones, 56 pruebas)

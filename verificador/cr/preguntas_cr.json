@@ -1,0 +1,9 @@
+{
+ "q_cr_1": {"type": "choice", "instructions": "Q-CR-1: dónde vive la comprobación.", "criteria": {"local": "(a) Una orden local después del push, y nada en GitHub.", "local_y_testigo": "(b) La orden local más un testigo en GitHub con una línea Ensayado: en el mensaje del commit.", "solo_github": "(c) Solo el testigo de GitHub."}},
+ "q_cr_2": {"type": "choice", "instructions": "Q-CR-2: qué flujos tienen que estar ensayados para que pase.", "criteria": {"los_tres": "(a) Siempre los tres.", "por_paths": "(b) Los que GitHub dispararía, según los filtros paths:, y el rojo como aviso.", "los_dados": "(c) Los que se den, con un aviso por cada uno que falte."}},
+ "q_cr_3": {"type": "choice", "instructions": "Q-CR-3: un ensayo sobre un árbol distinto del publicado.", "criteria": {"cae": "(a) Cae siempre, con las rutas y la orden para re-ensayar.", "por_paths": "(b) Pasa con aviso si las rutas quedan fuera de los filtros paths: del flujo."}},
+ "q_cr_4": {"type": "choice", "instructions": "Q-CR-4: un ensayo en rojo sobre el árbol publicado.", "criteria": {"cae": "(a) Cae.", "avisa": "(b) Solo compara árboles y avisa."}},
+ "q_cr_5": {"type": "choice", "instructions": "Q-CR-5: la comprobación antes del push.", "criteria": {"solo_despues": "(a) Solo después.", "tambien_local": "(b) También con --local antes del push."}},
+ "q_cr_6": {"type": "choice", "instructions": "Q-CR-6: dónde queda el registro del caso real.", "criteria": {"segundo_commit": "(a) En un segundo commit, con cr/PUBLICADO-PUSH.json.", "fuera": "(b) Fuera del repositorio público, citado por su contenido."}},
+ "q_cr_7": {"type": "choice", "instructions": "Q-CR-7: qué jobs tiene que haber ensayado cada flujo.", "criteria": {"cualquiera": "(a) Cualquiera.", "lista_fija": "(b) Una lista mínima fija por flujo."}}
+}
