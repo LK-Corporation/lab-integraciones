@@ -1,0 +1,25 @@
+# Etapa 34: las pruebas P-EN-1..8 contra el ensayo de antes (el de 74a6a99, sha256 3c60b7f3a7aef242…), en una exportación del índice
+# del público, con el ensayo cambiado por el de antes: cd verificador && python3 cv/ci/prueba_ci.py. En el laboratorio dieron las mismas
+# 21 líneas con 164 comprobaciones: P-CI-26 y 27 cuentan más cuando están los flujos de .github/ (revisión a ciegas, hallazgo 1).
+  MAL P-EN-1 el checkout sin ref y el de github.sha sacan el índice (MARCA v2), no el HEAD: ['v2', 'v1'] != ['v2', 'v2']
+  MAL P-EN-1 github.sha es el árbol del índice: False != True
+  MAL P-EN-1 clon: árbol y lo publicado: (None, None) != ('arbol', '740aac68323cbb08fa8baeb5a9f5cc62d9e36e49')
+  MAL P-EN-1 la línea del checkout dice «árbol del índice»: False != True
+  MAL P-EN-1 ninguna línea dice «git archive» del HEAD: True != False
+  MAL P-EN-2 devuelve 2: 0 != 2
+  MAL P-EN-2 no corre ningún job: True != False
+  MAL P-EN-2 lo dice, con la ruta: (False, False) != (True, True)
+  MAL P-EN-2 ENSAYO.json: no_ensayado y sin jobs: (False, {'uno': True}) != (True, {})
+  MAL P-EN-2 control MM: también para: 0 != 2
+  MAL P-EN-3 devuelve 2: 0 != 2
+  MAL P-EN-3 no corre ningún job: True != False
+  MAL P-EN-4 x.log no entra en el checkout: True != False
+  MAL P-EN-4 ni para ni lo nombra: (False, True) != (False, False)
+  MAL P-EN-5 los dos checkouts salen del HEAD (hoy, el sin ref copia el árbol): 1 != 2
+  MAL P-EN-5 clon: commit, y lo publicado es el HEAD: (None, None) != ('commit', '603a4d4b8d7c62528e03b734444cb6ccf11d3407')
+  MAL P-EN-6 clon: sin git: None != False
+  MAL P-EN-6 un ref de 40 hex sin .git: copia, con aviso: (0, False) != (0, True)
+  MAL P-EN-7 con aviso de que no está: False != True
+  MAL P-EN-8 y clon: False != True
+  MAL P-EN-8 con el código 2: las mismas claves, sin jobs y con no_ensayado: (['flujo', 'jobs', 'esperado_rojo', 'como_se_esperaba', 'informes_iguales', 'needs'], {'uno': True}, False) != (['flujo', 'jobs', 'esperado_rojo', 'como_se_esperaba', 'informes_iguales', 'needs'], {}, True)
+PRUEBAS CI: 21 MAL (171 comprobaciones, 39 pruebas)

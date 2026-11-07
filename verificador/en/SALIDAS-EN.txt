@@ -1,0 +1,49 @@
+# Etapa 34, segunda tanda: lo que cambia en la salida del propio ensayo entre el de antes (-) y el arreglado (+), par a par
+== limpio/demo
++== lo que se publica: el commit HEAD 74a6a99a3ba4 (índice igual)
+-  [pruebas] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (copia del árbol)
++  [pruebas] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (git archive 74a6a99a3ba4)
+-  [negativo/verificar] ✓ El proyecto (el repositorio que llama) (copia del árbol)
++  [negativo/verificar] ✓ El proyecto (el repositorio que llama) (git archive 74a6a99a3ba4)
+-  [positivo/verificar] ✓ El proyecto (el repositorio que llama) (copia del árbol)
++  [positivo/verificar] ✓ El proyecto (el repositorio que llama) (git archive 74a6a99a3ba4)
+-  [positivo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (copia del árbol)
++  [positivo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (git archive 74a6a99a3ba4)
+-ensayo: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde
++ensayo sobre el commit HEAD 74a6a99a3ba4: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde
+== limpio/ejemplo
++== lo que se publica: el commit HEAD 74a6a99a3ba4 (índice igual)
+-  [ejemplo/verificar] ✓ El proyecto (el repositorio que llama) (copia del árbol)
++  [ejemplo/verificar] ✓ El proyecto (el repositorio que llama) (git archive 74a6a99a3ba4)
+-  [ejemplo-propio/verificar] ✓ El proyecto (el repositorio que llama) (copia del árbol)
++  [ejemplo-propio/verificar] ✓ El proyecto (el repositorio que llama) (git archive 74a6a99a3ba4)
+-  [ejemplo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (copia del árbol)
++  [ejemplo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (git archive 74a6a99a3ba4)
+-ensayo: ejemplo verde, ejemplo-propio verde, ejemplo-comprobado verde
++ensayo sobre el commit HEAD 74a6a99a3ba4: ejemplo verde, ejemplo-propio verde, ejemplo-comprobado verde
+== limpio/rojo
++== lo que se publica: el commit HEAD 74a6a99a3ba4 (índice igual)
+-  [rojo/verificar] ✓ El proyecto (el repositorio que llama) (copia del árbol)
++  [rojo/verificar] ✓ El proyecto (el repositorio que llama) (git archive 74a6a99a3ba4)
+-  [rojo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (copia del árbol)
++  [rojo-comprobado] ✓ actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 (git archive 74a6a99a3ba4)
+-ensayo: rojo ROJO (se esperaba rojo), rojo-comprobado verde
++ensayo sobre el commit HEAD 74a6a99a3ba4: rojo ROJO (se esperaba rojo), rojo-comprobado verde
+== export/demo
++== la carpeta no tiene .git: se ensaya tal cual; quien la exportó responde de que sea lo que se publica
+-ensayo: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde
++ensayo sobre la carpeta sin .git: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde
+== export/ejemplo
++== la carpeta no tiene .git: se ensaya tal cual; quien la exportó responde de que sea lo que se publica
+-  [ejemplo/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; repository LK-Corporation/lab-integraciones sin resolver)
++  [ejemplo/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; el commit 54e8b9f9017e no se puede resolver sin .git; repository LK-Corporation/lab-integraciones sin resolver)
+-  [ejemplo-propio/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; repository LK-Corporation/lab-integraciones sin resolver)
++  [ejemplo-propio/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; el commit 54e8b9f9017e no se puede resolver sin .git; repository LK-Corporation/lab-integraciones sin resolver)
+-ensayo: ejemplo verde, ejemplo-propio verde, ejemplo-comprobado verde
++ensayo sobre la carpeta sin .git: ejemplo verde, ejemplo-propio verde, ejemplo-comprobado verde
+== export/rojo
++== la carpeta no tiene .git: se ensaya tal cual; quien la exportó responde de que sea lo que se publica
+-  [rojo/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; repository LK-Corporation/lab-integraciones sin resolver)
++  [rojo/verificar] ✓ El laboratorio, en el commit fijado (copia del árbol; el commit 54e8b9f9017e no se puede resolver sin .git; repository LK-Corporation/lab-integraciones sin resolver)
+-ensayo: rojo ROJO (se esperaba rojo), rojo-comprobado verde
++ensayo sobre la carpeta sin .git: rojo ROJO (se esperaba rojo), rojo-comprobado verde

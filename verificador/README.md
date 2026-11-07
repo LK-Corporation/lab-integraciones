@@ -190,6 +190,22 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## El ensayo local que ensaya lo que se publica (34, 7-nov-2026)
+
+> **Con el índice distinto del commit que emula, el ensayo ya no da verde sobre lo viejo; cuando coinciden, da lo mismo que
+> antes, informe a informe.**
+
+- **Qué cambia:** [`cv/ci/ensayo_flujo.py`](cv/ci/ensayo_flujo.py) emula los checkouts con lo que se publica: el índice del
+  clon (el HEAD, si coinciden) y, tal cual, los commits fijados. Con cambios sin `git add` o ficheros sin seguimiento no ensaya
+  nada y sale con 2. Lo cuenta la guía, [`cv/ci/CI.md`](cv/ci/CI.md).
+- **De dónde sale:** en la etapa 33, con la etapa nueva en el índice, el ensayo sacó el laboratorio del commit ya publicado y
+  dio verde con la herramienta y las bases viejas.
+- **Cómo:** el diseño, a ciegas; diez pruebas en rojo antes; la previsión, sellada antes de los controles; y 15 corridas de
+  control, todas con 0, repetidas con la versión final. En el estado de la 33, el informe del ensayo arreglado es el del
+  commit que se publicó después.
+
+  Está en [`RESULTADO-ENSAYO.md`](RESULTADO-ENSAYO.md); la pregunta, en [`ANTES-ETAPA-ENSAYO.md`](ANTES-ETAPA-ENSAYO.md).
+
 ## Los generadores del corpus, arreglados (33, 5-nov-2026)
 
 > **La versión 2 del corpus arregla lo que la etapa 30 encontró inválido en los generadores del laboratorio. De sus 767 mensajes,
@@ -574,9 +590,10 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 33 llevan una parte redactada,** marcados en su primera línea:
-  `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md` y `ANTES-ETAPA-GENERADORES.md`;
-  y el encargo del diseño de la 33, `ga/encargo-diseno-ga.md`.
+- **Los ANTES de las etapas 30 a 34 llevan una parte redactada,** marcados en su primera línea:
+  `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md` y
+  `ANTES-ETAPA-ENSAYO.md`; y los encargos del diseño de la 33 y la 34, `ga/encargo-diseno-ga.md` y
+  `en/encargo-diseno-en.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

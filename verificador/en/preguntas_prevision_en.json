@@ -1,0 +1,4 @@
+{
+ "p1_negativo": {"type": "choice", "instructions": "P1: probabilidad de que el control negativo dé lo mismo, informe a informe, a la primera.", "criteria": {"alta": "(a) Alta: 0,9 o más.", "media": "(b) Media: de 0,6 a 0,9.", "baja": "(c) Baja: menos de 0,6."}},
+ "p2_positivo": {"type": "choice", "instructions": "P2: probabilidad de que el control positivo deje de dar verde sobre lo viejo.", "criteria": {"alta": "(a) Alta: 0,9 o más.", "media": "(b) Media: de 0,6 a 0,9.", "baja": "(c) Baja: menos de 0,6."}}
+}

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Etapas 23 y 24: ensayo local de los flujos antes de cada push. Corre en la máquina del laboratorio los pasos `run:` de los jobs
+"""Etapas 23, 24 y 34: ensayo local de los flujos antes de cada push. Corre en la máquina del laboratorio los pasos `run:` de los jobs
 de un YAML de .github/workflows/ (demo-ci, ejemplo-ci o rojo-ci), y los del flujo reutilizable cuando un job lo llama, con las
 expresiones `${{ … }}` evaluadas como las evalúa GitHub en lo que estos YAML usan (inputs, steps, needs, jobs, github, &&, ||, !,
 ==, !=, always(), success()).
-- Los `actions/checkout` se emulan: con un `ref` de 40 hex que esté en el repositorio, con `git archive` de ese commit; si no,
-  copiando el árbol.
+- Los `actions/checkout` se emulan con lo que se publica (etapa 34, en/diseno-en-fable.md): con un `ref` de 40 hex que esté en
+  el repositorio, `git archive` de ese commit; sin `ref` o con `github.sha`, el índice del clon (`git archive` del árbol de
+  `write-tree`, o el HEAD si coinciden), y `github.sha` es ese árbol; sin `.git`, la carpeta tal cual. Con cambios sin
+  `git add` o ficheros sin seguimiento no se ensaya nada: sale con 2. Los ignorados no entran.
 - El `uses:` remoto (`owner/repo/<ruta>@<ref>`) se resuelve en la copia local: con `git show <ref>:<ruta>` si el commit está, o
   con el YAML del árbol si no (una plantilla con COMMIT_C1, por ejemplo); `owner/repo` no se resuelve.
 - `upload-artifact` registra lo que subiría (sin el prefijo común, como la acción) y `download-artifact` lo copia; un nombre
@@ -19,7 +21,9 @@ de checkout (sin red), si GitHub propaga las salidas de un job llamado que falla
           [--modo-real lote|mensaje] [--entrada k=v …] [--rojo <job>[,…]] [--evento push|pull_request]
           [--informes-como <CORRIDA-CI-1.json>]
   (tras los jobs pedidos corren los de comprobación que solo dependen de ellos: positivo-comprobado, ejemplo-comprobado,
-  rojo-comprobado…; un job que llama al flujo, como real, solo corre si se pide)"""
+  rojo-comprobado…; un job que llama al flujo, como real, solo corre si se pide)
+  Códigos: 0, todo como se esperaba; 1, algún job no, o un error del propio ensayo o de git al mirar el clon; 2, no se ensayó por
+  el estado del clon (cambios sin git add, ficheros sin seguimiento o un HEAD sin commit)."""
 import hashlib
 import json
 import os
@@ -94,14 +98,78 @@ def hay_commit(repo, ref):
     return bool(SHA40.match(ref or "")) and os.path.exists(os.path.join(repo, ".git")) and git(repo, "cat-file", "-e", ref + "^{commit}").returncode == 0
 
 
-def copiar_repo(repo, destino, ref=None):
+def estado_del_clon(repo, temporal):
+    """Etapa 34: lo que se publica, decidido una vez al empezar. Sin .git, {"git": False}. Con .git: el HEAD, el árbol del índice
+    (write-tree sobre una copia del índice, que no se toca), lo publicado (el HEAD si los árboles coinciden; si no, el árbol) y
+    las rutas distintas en el índice, sin git add y sin seguimiento (los ignorados no cuentan)."""
+    if not os.path.exists(os.path.join(repo, ".git")):
+        return {"git": False}
+    st = git(repo, "status", "--porcelain=v1", "-z", "--untracked-files=all")
+    if st.returncode != 0:
+        raise SystemExit("ENSAYO: git status falla en %s: %s" % (repo, st.stderr.decode("utf-8", "replace").strip()))
+    indice, sin_add, sin_seguimiento = [], [], []
+    partes, i = st.stdout.decode("utf-8", "replace").split("\0"), 0
+    while i < len(partes):
+        e, i = partes[i], i + 1
+        if not e:
+            continue
+        x, y, ruta = e[0], e[1], e[3:]
+        if x in "RC" or y in "RC":                                        # con -z, el origen del renombrado va aparte (DV-EN-3)
+            i += 1
+        if (x, y) == ("?", "?"):
+            sin_seguimiento.append(ruta)
+        elif "U" in (x, y) or (x, y) in (("A", "A"), ("D", "D")):         # sin fusionar
+            sin_add.append(ruta)
+        else:
+            if x in "MADRCT":
+                indice.append("%s %s" % (x, ruta))
+            if y not in " ?":
+                sin_add.append(ruta)
+    clon = {"git": True, "head": None, "arbol": None, "publicado": None, "tipo": None,
+            "indice_distinto": indice, "sin_add": sin_add, "sin_seguimiento": sin_seguimiento}
+    head = git(repo, "rev-parse", "--verify", "-q", "HEAD^{commit}").stdout.decode().strip()
+    if not SHA40.match(head):
+        return dict(clon, sin_commits=True)
+    clon["head"] = head
+    if sin_add or sin_seguimiento:
+        return clon
+    os.makedirs(os.path.dirname(temporal), exist_ok=True)
+    indice_git = git(repo, "rev-parse", "--git-path", "index").stdout.decode().strip()
+    shutil.copyfile(os.path.join(repo, indice_git), temporal)
+    w = subprocess.run(["git", "-C", repo, "write-tree"], env=dict(os.environ, GIT_INDEX_FILE=temporal), capture_output=True)
+    os.remove(temporal)
+    arbol = w.stdout.decode().strip()
+    if w.returncode != 0 or not SHA40.match(arbol):
+        raise SystemExit("ENSAYO: git write-tree falla en %s: %s" % (repo, w.stderr.decode("utf-8", "replace").strip()))
+    igual = git(repo, "rev-parse", "HEAD^{tree}").stdout.decode().strip() == arbol
+    return dict(clon, arbol=arbol, publicado=head if igual else arbol, tipo="commit" if igual else "arbol")
+
+
+def exportar(repo, destino, objeto):
+    a = subprocess.run(["git", "-C", repo, "archive", objeto], capture_output=True, check=True).stdout
+    subprocess.run(["tar", "-x", "-C", destino], input=a, check=True)
+
+
+def copiar_repo(repo, destino, ref, clon):
+    """Un checkout, con lo que se publica (etapa 34). Devuelve el texto de su línea."""
     os.makedirs(destino, exist_ok=True)
+    if not clon["git"]:
+        shutil.copytree(repo, destino, ignore=shutil.ignore_patterns(".git", "__pycache__"), dirs_exist_ok=True)
+        if ref and ref != clon["sha"]:                                    # DV-EN-1: el marcador de github.sha no avisa
+            return "copia del árbol; el commit %s no se puede resolver sin .git" % ref[:12]
+        return "copia del árbol"
+
+    def publicado():
+        exportar(repo, destino, clon["publicado"])
+        if clon["tipo"] == "commit":
+            return "git archive %s" % clon["head"][:12]
+        return "árbol del índice %s, no el HEAD %s" % (clon["arbol"][:12], clon["head"][:12])
+    if not ref or ref == clon["sha"]:
+        return publicado()
     if hay_commit(repo, ref):
-        a = subprocess.run(["git", "-C", repo, "archive", ref], capture_output=True, check=True).stdout
-        subprocess.run(["tar", "-x", "-C", destino], input=a, check=True)
+        exportar(repo, destino, ref)
         return "git archive %s" % ref[:12]
-    shutil.copytree(repo, destino, ignore=shutil.ignore_patterns(".git", "__pycache__"), dirs_exist_ok=True)
-    return "copia del árbol"
+    return "el commit %s no está en esta copia: %s" % (ref[:40], publicado())
 
 
 def leer_salidas(ruta):
@@ -161,7 +229,7 @@ def correr_pasos(nombre, job, ctx, ws, artefactos):
             destino = os.path.normpath(os.path.join(ws, w.get("path", "")))
             como = "ya estaba"
             if not os.path.exists(os.path.join(destino, "verificador")):
-                como = copiar_repo(ctx["_repo"], destino, w.get("ref"))
+                como = copiar_repo(ctx["_repo"], destino, w.get("ref"), ctx["_clon"])
             print("  [%s] ✓ %s (%s%s)" % (nombre, etiqueta, como, "; repository %s sin resolver" % w["repository"] if w.get("repository") else ""))
             continue
         if usa.startswith("actions/setup-python@"):
@@ -296,16 +364,38 @@ def main(argv):
     if os.path.exists(trabajo) and os.listdir(trabajo):
         raise SystemExit("ENSAYO: %s no está vacía" % trabajo)
     os.makedirs(trabajo, exist_ok=True)
+    clon = estado_del_clon(repo, os.path.join(trabajo, ".runner", "indice"))
+    if clon.get("sin_commits") or clon.get("sin_add") or clon.get("sin_seguimiento"):
+        def lista(rutas):
+            return " (%s%s)" % (", ".join(rutas[:20]), ", … y %d más" % (len(rutas) - 20) if len(rutas) > 20 else "") if rutas else ""
+        if clon.get("sin_commits"):
+            motivo = "el HEAD no apunta a ningún commit (un clon sin commits o una rama huérfana)"
+        else:
+            motivo = ("%d cambios sin git add%s y %d ficheros sin seguimiento%s: no entrarían en lo publicado. git add lo que vaya, "
+                      "git stash -u lo que no, o ensaya una exportación del índice (git checkout-index -a --prefix=<carpeta>/)"
+                      % (len(clon["sin_add"]), lista(clon["sin_add"]), len(clon["sin_seguimiento"]), lista(clon["sin_seguimiento"])))
+        print("== NO SE ENSAYA: %s" % motivo)
+        json.dump({"flujo": flujo, "jobs": {}, "esperado_rojo": [], "como_se_esperaba": {}, "informes_iguales": {}, "needs": {},
+                   "no_ensayado": motivo, "clon": clon}, open(os.path.join(trabajo, "ENSAYO.json"), "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=1)
+        return 2
+    if not clon["git"]:
+        print("== la carpeta no tiene .git: se ensaya tal cual; quien la exportó responde de que sea lo que se publica")
+    elif clon["tipo"] == "commit":
+        print("== lo que se publica: el commit HEAD %s (índice igual)" % clon["head"][:12])
+    else:
+        print("== lo que se publica: el árbol del índice %s (HEAD %s, %d rutas distintas); github.sha es ese árbol, no un commit"
+              % (clon["arbol"][:12], clon["head"][:12], len(clon["indice_distinto"])))
     ruta = os.path.join(repo, ".github", "workflows", flujo + ".yml")
     if not os.path.exists(ruta):
         ruta = os.path.join(repo, "verificador", "cv", "ci", "github-ci2", flujo + ".yml")
         print("== %s: no está en .github/workflows/; se ensaya su plantilla" % flujo)
     demo = yaml.safe_load(open(ruta, encoding="utf-8"))
-    cabeza = git(repo, "rev-parse", "HEAD").stdout.decode().strip() if os.path.exists(os.path.join(repo, ".git")) else ""
-    sha = cabeza if SHA40.match(cabeza) else "e0" * 20                  # 40 hex, como el de GitHub; sin .git, uno que no está
+    sha = clon["publicado"] if clon["git"] else "e0" * 20             # 40 hex, como el de GitHub: el commit o el árbol del índice;
+    clon["sha"] = sha                                                   # sin .git, uno que no está
     base_ctx = {"github": {"sha": sha, "ref": "refs/heads/main", "run_attempt": "1", "repository": "LK-Corporation/lab-integraciones",
                            "event_name": opcion("--evento", "push")},
-                "inputs": entradas_a_mano, "_repo": repo, "_env": {k: str(v) for k, v in (demo.get("env") or {}).items()}}
+                "inputs": entradas_a_mano, "_repo": repo, "_clon": clon, "_env": {k: str(v) for k, v in (demo.get("env") or {}).items()}}
     needs, artefactos, resultado = {}, {}, {}
     pendientes = list(jobs)
     while pendientes:
@@ -333,9 +423,12 @@ def main(argv):
     bien = {k: (v is False) if k in rojo else (v is True) for k, v in resultado.items()}
     iguales = informes_como(trabajo, opcion("--informes-como"), resultado) if opcion("--informes-como") else {}
     json.dump({"flujo": flujo, "jobs": resultado, "esperado_rojo": sorted(rojo), "como_se_esperaba": bien, "informes_iguales": iguales,
-               "needs": needs}, open(os.path.join(trabajo, "ENSAYO.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("ensayo: %s" % ", ".join("%s %s%s" % (k, "saltado" if v is None else "verde" if v else "ROJO", " (se esperaba rojo)" if k in rojo else "")
-                                   for k, v in resultado.items()))
+               "needs": needs, "clon": clon}, open(os.path.join(trabajo, "ENSAYO.json"), "w", encoding="utf-8"), ensure_ascii=False,
+              indent=1)
+    sobre = ("ensayo sobre la carpeta sin .git" if not clon["git"] else "ensayo sobre el commit HEAD %s" % clon["head"][:12]
+             if clon["tipo"] == "commit" else "ensayo sobre el árbol del índice %s (≠ HEAD %s)" % (clon["arbol"][:12], clon["head"][:12]))
+    print("%s: %s" % (sobre, ", ".join("%s %s%s" % (k, "saltado" if v is None else "verde" if v else "ROJO", " (se esperaba rojo)" if k in rojo else "")
+                                         for k, v in resultado.items())))
     return 0 if all(bien.values()) and all(iguales.values()) else 1
 
 

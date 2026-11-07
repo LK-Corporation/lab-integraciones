@@ -1,0 +1,13 @@
+# Etapa 34, tras la revisión a ciegas: P-EN-9 y 10 contra el arreglo de antes de DV-EN-3 (en/sellada/ensayo_flujo.py, el sellado), en
+# una exportación del índice del público con el cv/ci/prueba_ci.py de 41 pruebas: cd verificador && python3 cv/ci/prueba_ci.py. Las rutas van
+# relativas a la exportación. El juego corta cada excepción a 600 caracteres, antes del tipo de error; la última línea, con P-EN-9 sola:
+#   IndexError: string index out of range
+# Las dos comprobaciones nuevas de P-EN-6 pasan ya ahí: miran lo que el arreglo hacía (DV-EN-1; la cabecera y la última línea sin .git).
+  EXCEPCIÓN P-EN-9: File "verificador/cv/ci/ensayo_flujo.py", line 366, in main
+    clon = estado_del_clon(repo, os.path.join(trabajo, ".runner", "indice"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "verificador/cv/ci/ensayo_flujo.py", line 115, in estado_del_clon
+    x, y, ruta = e[0], e[1], e[3:]
+                       ~^^^
+  MAL P-EN-10 lo dice: False != True
+PRUEBAS CI: 2 MAL (195 comprobaciones, 41 pruebas)

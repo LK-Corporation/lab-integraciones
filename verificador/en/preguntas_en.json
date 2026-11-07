@@ -1,0 +1,10 @@
+{
+ "q_en_1": {"type": "choice", "instructions": "Q-EN-1: con el índice distinto del HEAD.", "criteria": {"indice": "(a) Se ensaya el árbol del índice; github.sha no es un commit.", "exigir_commit": "(b) Se para con el código 2 y se pide el commit.", "opcion": "(c) Como (b), salvo con una opción explícita que hace (a)."}},
+ "q_en_2": {"type": "choice", "instructions": "Q-EN-2: con cambios sin git add o ficheros sin seguimiento.", "criteria": {"parar": "(a) Parar con el código 2 antes de correr nada, con la lista.", "avisar": "(b) Avisar y seguir con el índice.", "parar_por_rutas": "(c) Parar solo si las rutas tocan lo que usan los flujos; avisar con el resto."}},
+ "q_en_3": {"type": "choice", "instructions": "Q-EN-3: cómo se exporta el índice.", "criteria": {"write_tree": "(a) git write-tree sobre una copia del índice y git archive del árbol.", "checkout_index": "(b) git checkout-index -a."}},
+ "q_en_4": {"type": "choice", "instructions": "Q-EN-4: qué vale github.sha cuando lo publicado no es un commit.", "criteria": {"arbol": "(a) El id del árbol del índice.", "marcador": "(b) Un marcador fijo.", "head": "(c) El HEAD, con la regla ref igual al HEAD, el índice."}},
+ "q_en_5": {"type": "choice", "instructions": "Q-EN-5: un commit fijado que está en el clon pero no en origin/main.", "criteria": {"nada": "(a) Nada, como hoy.", "avisar": "(b) Un aviso en la línea del checkout.", "parar": "(c) Parar."}},
+ "q_en_6": {"type": "choice", "instructions": "Q-EN-6: sin .git, un ref que no se puede resolver.", "criteria": {"copiar_con_aviso": "(a) Copiar la carpeta, como hoy, con un aviso.", "parar": "(b) Parar."}},
+ "q_en_7": {"type": "choice", "instructions": "Q-EN-7: dónde van las pruebas nuevas.", "criteria": {"prueba_ci": "(a) En cv/ci/prueba_ci.py, como un grupo nuevo.", "aparte": "(b) En un fichero aparte que prueba_ci.py importa."}},
+ "q_en_8": {"type": "choice", "instructions": "Q-EN-8: cómo se comparan los controles.", "criteria": {"guion": "(a) Un guion publicado, con su prueba en rojo.", "diff": "(b) diff -r entre las carpetas, con lo apartado listado en el resultado."}}
+}

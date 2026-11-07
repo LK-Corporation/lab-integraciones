@@ -182,6 +182,30 @@ normal, `pasa`. El job `rojo` falla por ese hallazgo, con su resumen y su artefa
 
 En una máquina se repite con los pasos 8 a 10 de `ejemplo-ci/ci/hacer_base.sh`.
 
+## Antes de cada push: el ensayo local
+
+[`ensayo_flujo.py`](ensayo_flujo.py) corre en una máquina los pasos `run:` de un flujo y emula los checkouts **con lo que se
+va a publicar** (desde la etapa 34):
+- **un `ref` de 40 hex que está en el clon** se saca con `git archive` de ese commit;
+- **sin `ref`, o con `github.sha`,** se saca el índice del clon (el HEAD, si coinciden). Lo que no está en el índice no se
+  ensaya, porque no se publica.
+
+Con cambios sin `git add` o ficheros sin seguimiento no ensaya nada y sale con 2, con la lista. Puedes añadirlos, apartarlos
+(`git stash -u`) o ensayar una exportación del índice (`git checkout-index -a --prefix=<carpeta>/`), que se ensaya tal cual.
+En una exportación no hay commits: un commit fijado, como el del proyecto de ejemplo, no se saca, y se ensaya la carpeta, con
+un aviso en la línea del checkout. Para ensayar el commit fijado, ensaya el clon.
+
+La primera línea y la última dicen sobre qué se ensayó: el commit, el árbol del índice o una carpeta sin `.git`.
+`ENSAYO.json` lo guarda en `clon`. La carpeta de trabajo va fuera del clon.
+
+Los códigos de salida:
+- 0, todo sale como se esperaba;
+- 1, algún job no, o falla el propio ensayo o git al mirar el clon;
+- 2, no se ensayó por el estado del clon: cambios sin `git add`, ficheros sin seguimiento o un HEAD sin commit.
+
+El ensayo no ve lo de siempre: GitHub de verdad, la red, el Docker del runner, los permisos del token y el commit de fusión de
+un PR. Tampoco ve si el commit fijado está ya en GitHub.
+
 ## Cómo repetirlo en tu máquina
 
 ```bash

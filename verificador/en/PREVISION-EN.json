@@ -1,0 +1,23 @@
+{
+ "que": "Etapa 34, la previsión del ANTES, sellada antes de correr los controles con el arreglo",
+ "fecha": "07-11-2026 14:02",
+ "jev": {
+  "p1_negativo_igual_a_la_primera": "media (0,6 a 0,9), 0,95; confianza 0,92",
+  "p2_positivo_deja_el_verde_sobre_lo_viejo": "alta (0,9 o más), 0,82; confianza 0,73",
+  "decision": "en/decision-jev-prevision-en.md"
+ },
+ "disenador": {
+  "p1": 0.7,
+  "p2": 0.95,
+  "fuente": "en/diseno-en-fable.md §7"
+ },
+ "huellas": {
+  "cv/ci/ensayo_flujo.py": "6d3c82023f3b43edb89f961e8e48edd1f9854453aa089e7299e51c68d9e5edaa",
+  "cv/ci/prueba_ci.py": "9856fde24122ca78b43f5132976703a566329e785006ed290c06e9c17a935541",
+  "en/controles_en.sh": "f2b4b3a5d0bcc3705832ab3ef533cfd94c75a20f489296064b02e1d1cf8854a6",
+  "en/parche_ensayo_en.py": "4c5d881bda6fb64c768733ea90ecb1722ccb653eec794e066944656a8099d87f",
+  "en/parche_prueba_en.py": "b6f7c0025638333473625903200944c3bc7f02b2750464cd5f10dbe44e2edf77",
+  "en/diseno-en-fable.md": "f462f0bd01a9cdb0261bb3fa7b461b23b3743a1aa0f8222162e52baed0e8d2d0",
+  "en/decision-jev-en.md": "907874002ea6049b6485a86acc44ad439a9579c24828cb73eced382a3100f6aa"
+ }
+}

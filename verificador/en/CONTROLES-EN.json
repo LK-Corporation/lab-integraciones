@@ -1,0 +1,681 @@
+{
+ "negativo": {
+  "limpio/demo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": true,
+    "head": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "arbol": "34f32c814e869cb6dfb3acef1e06ff28d8ca4d32",
+    "publicado": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "tipo": "commit",
+    "indice_distinto": [],
+    "sin_add": [],
+    "sin_seguimiento": [],
+    "sha": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c"
+   },
+   "distintos": [
+    {
+     "solo_en": "Only in limpio/demo/arreglo: .runner"
+    },
+    {
+     "fichero": "limpio/demo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "49a50,60",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": true,",
+      ">   \"head\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"arbol\": \"34f32c814e869cb6dfb3acef1e06ff28d8ca4d32\",",
+      ">   \"publicado\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"tipo\": \"commit\",",
+      ">   \"indice_distinto\": [],",
+      ">   \"sin_add\": [],",
+      ">   \"sin_seguimiento\": [],",
+      ">   \"sha\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\""
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/demo/hoy/negativo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:36+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:53+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    },
+    {
+     "fichero": "limpio/demo/hoy/positivo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:37+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:54+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/ejemplo-ci/ci/__pycache__/sembrar.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/ejemplo-ci/ci/__pycache__/sembrar.cpython-312.pyc and limpio/demo/arreglo/pruebas/ejemplo-ci/ci/__pycache__/sembrar.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/acuse_referencia.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/acuse_referencia.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/acuse_referencia.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/adjudicacion.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/adjudicacion.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/adjudicacion.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/almacen_adt.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/almacen_adt.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/almacen_adt.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/almacen_oru.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/almacen_oru.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/almacen_oru.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/bases_mdm.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/bases_mdm.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/bases_mdm.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/bases_oru.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/bases_oru.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/bases_oru.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/bases_vxu.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/bases_vxu.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/bases_vxu.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/conversion.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/conversion.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/conversion.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/conversion_mdm.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/conversion_mdm.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/conversion_mdm.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/conversion_vxu.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/conversion_vxu.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/conversion_vxu.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/estructuras_hl7.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/estructuras_hl7.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/estructuras_hl7.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/hechos_normativos.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/hechos_normativos.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/hechos_normativos.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/lectura_evidencia.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/lectura_evidencia.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/lectura_evidencia.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_adt.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_adt.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/mapeador_adt.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_oru.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_oru.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/mapeador_oru.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_referencia.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/mapeador_referencia.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/mapeador_referencia.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/mcp_verificador.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/mcp_verificador.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/mcp_verificador.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/prueba_conversion.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/prueba_conversion.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/prueba_conversion.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/puntos_entrada.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/puntos_entrada.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/puntos_entrada.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/__pycache__/verificador.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/__pycache__/verificador.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/__pycache__/verificador.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/__pycache__/correr_conversor.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/__pycache__/correr_conversor.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/__pycache__/correr_conversor.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/__pycache__/cv3_mecanismos.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/__pycache__/cv3_mecanismos.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/__pycache__/cv3_mecanismos.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/__pycache__/cv3_minimos.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/__pycache__/cv3_minimos.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/__pycache__/cv3_minimos.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/__pycache__/verificar_conversor.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/__pycache__/verificar_conversor.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/__pycache__/verificar_conversor.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/anotaciones_ci.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/anotaciones_ci.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/ci/__pycache__/anotaciones_ci.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/comprobar_ejemplo.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/comprobar_ejemplo.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/ci/__pycache__/comprobar_ejemplo.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/comprobar_rojo.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/comprobar_rojo.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/ci/__pycache__/comprobar_rojo.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/linea_base.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/linea_base.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/ci/__pycache__/linea_base.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/sembrar_juguete.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/cv/ci/__pycache__/sembrar_juguete.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/cv/ci/__pycache__/sembrar_juguete.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    },
+    {
+     "fichero": "limpio/demo/hoy/pruebas/verificador/ga/__pycache__/bases_mdm_v2.cpython-312.pyc",
+     "lineas_del_diff": [
+      "Binary files limpio/demo/hoy/pruebas/verificador/ga/__pycache__/bases_mdm_v2.cpython-312.pyc and limpio/demo/arreglo/pruebas/verificador/ga/__pycache__/bases_mdm_v2.cpython-312.pyc differ"
+     ],
+     "n_lineas_del_diff": 1
+    }
+   ]
+  },
+  "limpio/ejemplo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": true,
+    "head": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "arbol": "34f32c814e869cb6dfb3acef1e06ff28d8ca4d32",
+    "publicado": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "tipo": "commit",
+    "indice_distinto": [],
+    "sin_add": [],
+    "sin_seguimiento": [],
+    "sha": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c"
+   },
+   "distintos": [
+    {
+     "fichero": "limpio/ejemplo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "43a44,54",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": true,",
+      ">   \"head\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"arbol\": \"34f32c814e869cb6dfb3acef1e06ff28d8ca4d32\",",
+      ">   \"publicado\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"tipo\": \"commit\",",
+      ">   \"indice_distinto\": [],",
+      ">   \"sin_add\": [],",
+      ">   \"sin_seguimiento\": [],",
+      ">   \"sha\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\""
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/ejemplo/hoy/ejemplo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:39+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:56+00:00\",",
+      "59c59",
+      "<   \"total_s\": 1.7,",
+      "---",
+      ">   \"total_s\": 1.6,",
+      "61c61",
+      "<    \"adt-adt-1\": 0.5,",
+      "---",
+      ">    \"adt-adt-1\": 0.4,"
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/ejemplo/hoy/ejemplo-comprobado/artefacto-ejemplo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:39+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:56+00:00\",",
+      "59c59",
+      "<   \"total_s\": 1.7,",
+      "---",
+      ">   \"total_s\": 1.6,",
+      "61c61",
+      "<    \"adt-adt-1\": 0.5,",
+      "---",
+      ">    \"adt-adt-1\": 0.4,"
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/ejemplo/hoy/ejemplo-comprobado/artefacto-propio/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:42+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:59+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    },
+    {
+     "fichero": "limpio/ejemplo/hoy/ejemplo-propio/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:42+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:02:59+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    }
+   ]
+  },
+  "limpio/rojo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": true,
+    "head": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "arbol": "34f32c814e869cb6dfb3acef1e06ff28d8ca4d32",
+    "publicado": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c",
+    "tipo": "commit",
+    "indice_distinto": [],
+    "sin_add": [],
+    "sin_seguimiento": [],
+    "sha": "74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c"
+   },
+   "distintos": [
+    {
+     "fichero": "limpio/rojo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "31a32,42",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": true,",
+      ">   \"head\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"arbol\": \"34f32c814e869cb6dfb3acef1e06ff28d8ca4d32\",",
+      ">   \"publicado\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\",",
+      ">   \"tipo\": \"commit\",",
+      ">   \"indice_distinto\": [],",
+      ">   \"sin_add\": [],",
+      ">   \"sin_seguimiento\": [],",
+      ">   \"sha\": \"74a6a99a3ba4b6c329fdb4d1ae61ad3142ca7a9c\""
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/rojo/hoy/rojo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:44+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:02+00:00\",",
+      "61c61",
+      "<    \"adt-adt-1\": 0.3,",
+      "---",
+      ">    \"adt-adt-1\": 0.5,",
+      "65c65",
+      "<    \"mdm-mdm-5\": 0.5",
+      "---",
+      ">    \"mdm-mdm-5\": 0.3"
+     ],
+     "n_lineas_del_diff": 12
+    },
+    {
+     "fichero": "limpio/rojo/hoy/rojo-comprobado/artefacto/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:02:44+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:02+00:00\",",
+      "61c61",
+      "<    \"adt-adt-1\": 0.3,",
+      "---",
+      ">    \"adt-adt-1\": 0.5,",
+      "65c65",
+      "<    \"mdm-mdm-5\": 0.5",
+      "---",
+      ">    \"mdm-mdm-5\": 0.3"
+     ],
+     "n_lineas_del_diff": 12
+    }
+   ]
+  },
+  "export/demo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": false,
+    "sha": "e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0"
+   },
+   "distintos": [
+    {
+     "fichero": "export/demo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "49a50,53",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": false,",
+      ">   \"sha\": \"e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0\""
+     ],
+     "n_lineas_del_diff": 5
+    },
+    {
+     "fichero": "export/demo/hoy/negativo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:10+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:27+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    },
+    {
+     "fichero": "export/demo/hoy/positivo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:11+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:28+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    }
+   ]
+  },
+  "export/ejemplo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": false,
+    "sha": "e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0"
+   },
+   "distintos": [
+    {
+     "fichero": "export/ejemplo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "43a44,47",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": false,",
+      ">   \"sha\": \"e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0\""
+     ],
+     "n_lineas_del_diff": 5
+    },
+    {
+     "fichero": "export/ejemplo/hoy/ejemplo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:13+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:30+00:00\",",
+      "61c61",
+      "<    \"adt-adt-1\": 0.4,",
+      "---",
+      ">    \"adt-adt-1\": 0.3,"
+     ],
+     "n_lineas_del_diff": 8
+    },
+    {
+     "fichero": "export/ejemplo/hoy/ejemplo-comprobado/artefacto-ejemplo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:13+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:30+00:00\",",
+      "61c61",
+      "<    \"adt-adt-1\": 0.4,",
+      "---",
+      ">    \"adt-adt-1\": 0.3,"
+     ],
+     "n_lineas_del_diff": 8
+    },
+    {
+     "fichero": "export/ejemplo/hoy/ejemplo-comprobado/artefacto-propio/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:16+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:33+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    },
+    {
+     "fichero": "export/ejemplo/hoy/ejemplo-propio/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:16+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:33+00:00\","
+     ],
+     "n_lineas_del_diff": 4
+    }
+   ]
+  },
+  "export/rojo": {
+   "claves_iguales": {
+    "flujo": true,
+    "jobs": true,
+    "esperado_rojo": true,
+    "como_se_esperaba": true,
+    "informes_iguales": true,
+    "needs": true
+   },
+   "clon_en_el_arreglo": {
+    "git": false,
+    "sha": "e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0"
+   },
+   "distintos": [
+    {
+     "fichero": "export/rojo/hoy/ENSAYO.json",
+     "lineas_del_diff": [
+      "31a32,35",
+      ">  },",
+      ">  \"clon\": {",
+      ">   \"git\": false,",
+      ">   \"sha\": \"e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0e0\""
+     ],
+     "n_lineas_del_diff": 5
+    },
+    {
+     "fichero": "export/rojo/hoy/rojo/trabajo/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:18+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:35+00:00\",",
+      "64c64",
+      "<    \"propio-propio-4\": 0.3,",
+      "---",
+      ">    \"propio-propio-4\": 0.4,"
+     ],
+     "n_lineas_del_diff": 8
+    },
+    {
+     "fichero": "export/rojo/hoy/rojo-comprobado/artefacto/corrida/CORRIDA.json",
+     "lineas_del_diff": [
+      "38c38",
+      "<  \"fecha\": \"2026-11-07T13:03:18+00:00\",",
+      "---",
+      ">  \"fecha\": \"2026-11-07T13:03:35+00:00\",",
+      "64c64",
+      "<    \"propio-propio-4\": 0.3,",
+      "---",
+      ">    \"propio-propio-4\": 0.4,"
+     ],
+     "n_lineas_del_diff": 8
+    }
+   ]
+  }
+ },
+ "positivo": {
+  "lineas_del_laboratorio": {
+   "hoy": [
+    "[negativo/verificar] ✓ El laboratorio, en el commit fijado (git archive 371937c9fb43; repository LK-Corporation/lab-integraciones sin resolver)",
+    "[positivo/verificar] ✓ El laboratorio, en el commit fijado (git archive 371937c9fb43; repository LK-Corporation/lab-integraciones sin resolver)"
+   ],
+   "arreglo": [
+    "[negativo/verificar] ✓ El laboratorio, en el commit fijado (árbol del índice c92b44f2f344, no el HEAD 371937c9fb43; repository LK-Corporation/lab-integraciones sin resolver)",
+    "[positivo/verificar] ✓ El laboratorio, en el commit fijado (árbol del índice c92b44f2f344, no el HEAD 371937c9fb43; repository LK-Corporation/lab-integraciones sin resolver)"
+   ],
+   "hoy_54": [
+    "[negativo/verificar] ✓ El laboratorio, en el commit fijado (git archive 54e8b9f9017e; repository LK-Corporation/lab-integraciones sin resolver)",
+    "[positivo/verificar] ✓ El laboratorio, en el commit fijado (git archive 54e8b9f9017e; repository LK-Corporation/lab-integraciones sin resolver)"
+   ]
+  },
+  "git_archive_del_head_viejo": {
+   "hoy": true,
+   "arreglo": false,
+   "hoy_54": false
+  },
+  "ultima_linea": {
+   "hoy": "ensayo: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde",
+   "arreglo": "ensayo sobre el árbol del índice c92b44f2f344 (≠ HEAD 371937c9fb43): pruebas verde, negativo verde, positivo verde, positivo-comprobado verde",
+   "hoy_54": "ensayo: pruebas verde, negativo verde, positivo verde, positivo-comprobado verde"
+  },
+  "clon_en_el_arreglo": {
+   "tipo": "arbol",
+   "publicado": "c92b44f2f3449c10a6f3c1ad41c96fe99da0f384",
+   "head": "371937c9fb43b6fea89221262b9f777cb14aae15"
+  },
+  "arbol_de_54e8b9f": "c92b44f2f3449c10a6f3c1ad41c96fe99da0f384",
+  "informes": {
+   "negativo": {
+    "hoy_en_33": "1c8bf463587e500a5d9f86925efeed0632e0f91978ae4b4cfd644a680ced44d2",
+    "arreglo_en_33": "5118717ea53614462aa631fb3310edd7a83eb78475fdf28763934976dbe6433d",
+    "hoy_en_54e8b9f": "5118717ea53614462aa631fb3310edd7a83eb78475fdf28763934976dbe6433d"
+   },
+   "positivo": {
+    "hoy_en_33": "a385a85293c0874a748d4d612faed000a3950ba862e16dcdbd207ed368f994cc",
+    "arreglo_en_33": "2ab260f6f16e02233c8a11e18e3230ce72773002d686adae782f4fdeb7f851d9",
+    "hoy_en_54e8b9f": "2ab260f6f16e02233c8a11e18e3230ce72773002d686adae782f4fdeb7f851d9"
+   }
+  }
+ },
+ "_lectura": "Etapa 34, en/controles_en.sh: negativo (limpio en 74a6a99 y su exportación; demo, ejemplo y rojo; hoy y arreglo, la misma carpeta de trabajo) y positivo (el estado de la 33 con hoy y arreglo, y hoy sobre un clon limpio en 54e8b9f). Los 15 códigos, en CODIGOS-EN.txt. Las rutas, relativas a la carpeta de resultados."
+}
