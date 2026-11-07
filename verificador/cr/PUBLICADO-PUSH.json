@@ -1,0 +1,69 @@
+{
+ "remoto": "origin",
+ "rama": "main",
+ "commit": "c923e6a95af27a7004a70378f8d214d57c1f6f46",
+ "arbol": "bdb116af73c04bab33a788fd9fa74bdc33dd80c8",
+ "flujos": {
+  "demo-ci": {
+   "ensayo": "ens35d/ENSAYO.json",
+   "arbol_ensayado": "bdb116af73c04bab33a788fd9fa74bdc33dd80c8",
+   "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+   "tipo": "arbol",
+   "jobs": [
+    "negativo",
+    "positivo",
+    "positivo-comprobado",
+    "pruebas"
+   ],
+   "rojo": [],
+   "igual": true,
+   "mismo_commit": false,
+   "diferencia": null,
+   "commits_nuevos": 1,
+   "otra_historia": false,
+   "amend": false,
+   "faltan": []
+  },
+  "ejemplo-ci": {
+   "ensayo": "ens35e/ENSAYO.json",
+   "arbol_ensayado": "bdb116af73c04bab33a788fd9fa74bdc33dd80c8",
+   "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+   "tipo": "arbol",
+   "jobs": [
+    "ejemplo",
+    "ejemplo-comprobado",
+    "ejemplo-propio"
+   ],
+   "rojo": [],
+   "igual": true,
+   "mismo_commit": false,
+   "diferencia": null,
+   "commits_nuevos": 1,
+   "otra_historia": false,
+   "amend": false,
+   "faltan": []
+  },
+  "rojo-ci": {
+   "ensayo": "ens35r/ENSAYO.json",
+   "arbol_ensayado": "bdb116af73c04bab33a788fd9fa74bdc33dd80c8",
+   "head_ensayado": "464bbb2eb4e4cf8c83b99c52abb8fa8ee1609fad",
+   "tipo": "arbol",
+   "jobs": [
+    "rojo",
+    "rojo-comprobado"
+   ],
+   "rojo": [],
+   "igual": true,
+   "mismo_commit": false,
+   "diferencia": null,
+   "commits_nuevos": 1,
+   "otra_historia": false,
+   "amend": false,
+   "faltan": []
+  }
+ },
+ "avisos": [],
+ "fusion": null,
+ "cerrado": true,
+ "codigo": 0
+}

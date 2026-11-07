@@ -137,8 +137,10 @@ En un remoto de prueba hecho a partir del clon del público en `464bbb2`, nunca 
 segundos (0,04 a 0,05). Desde ella, el guion guarda las huellas de la comprobación y del ensayo que corre, y son las de lo que se
 publica.
 
-**El caso real,** el push de esta etapa, se comprueba después de publicarla, con los tres ensayos de ese push. Su registro y su
-resultado van en un segundo push, en `cr/PUBLICADO-PUSH.json` (`Q-CR-6`).
+**El caso real,** el push de esta etapa (`c923e6a`), se comprobó justo después, con los tres ensayos de ese push: círculo
+cerrado, a la primera. Los tres flujos se ensayaron sobre el árbol `bdb116af73c0`, que es el del commit publicado
+([`cr/PUBLICADO-PUSH.json`](cr/PUBLICADO-PUSH.json), en un segundo push, `Q-CR-6`). La CI, en verde, con las P-CR
+corriendo en el runner: higiene, demo-ci (con las 56 pruebas: 251 comprobaciones), ejemplo-ci y Pages.
 
 **Lo que no cambia** (las condiciones 1 y 5 del ANTES):
 - **El juez, la herramienta, las bases y los flujos no cambian.** Fuera de la documentación de la etapa, el push solo añade
@@ -154,7 +156,7 @@ resultado van en un segundo push, en `cr/PUBLICADO-PUSH.json` (`Q-CR-6`).
 | | Jev | El diseñador | Lo que pasó |
 |---|---|---|---|
 | Los controles, a la primera | Alta, 0,9 o más (confianza 0,88) | 0,95 | Sí |
-| El push de la etapa pasa la comprobación a la primera | Media, de 0,6 a 0,9 (confianza 0,94) | 0,8 | En el segundo push |
+| El push de la etapa pasa la comprobación a la primera | Media, de 0,6 a 0,9 (confianza 0,94) | 0,8 | Sí |
 
 ## Las desviaciones del diseño (DV-CR-n)
 
