@@ -35,8 +35,9 @@ n_casos() {
   python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["n_casos"])' "$1"
 }
 esperado() {   # <lab|propio>: los casos que junta la herramienta en este commit; el numero no va a mano (etapa 27)
+               # y la version del corpus es la 2, la que usa la linea de ordenes por omision (etapa 33)
   python3 -c 'import os, sys, tempfile; sys.path.insert(0, "cv"); import verificar_conversor as V
-co = V.generar_corpus(os.path.join(tempfile.mkdtemp(), "c"), lab=sys.argv[1] == "lab", minimos=False, propios=[sys.argv[2]])
+co = V.generar_corpus(os.path.join(tempfile.mkdtemp(), "c"), lab=sys.argv[1] == "lab", minimos=False, propios=[sys.argv[2]], version=2)
 print(len(co["casos"]))' "$1" "$EJ/corpus"
 }
 base() {   # <nombre> <fichero de la base> <n esperado> [opciones mas]

@@ -207,6 +207,9 @@ corrido en lote, un proceso por carpeta.
   mensajes pasan de 368 a 375. Desaparece un rechazo que el estudio había apartado como defecto del corpus: Microsoft rechazaba 30
   mensajes por un tipo mal escrito en GT1-2, y ahora los convierte. Aparecen 2 candidatas, sin confirmar.
 - **Un instrumento nuevo:** un comprobador de tipos y tablas de v2.5, que mira lo que IRIS no ve, con 93 mutantes de control.
+- **El proyecto de ejemplo y el run en rojo** suben su pin a `54e8b9f`, el commit de la versión 2, en un segundo push. El
+  ejemplo rehace sus dos bases con su receta ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)), que
+  ahora cuenta los casos de la versión 2: pasa de 389 a 396.
 - **Cómo:** el diseño, a ciegas; la versión 2 se comprueba campo a campo contra la 1; las dos previsiones se sellaron antes de
   correr.
 
