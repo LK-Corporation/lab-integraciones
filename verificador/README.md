@@ -201,7 +201,9 @@ corrido en lote, un proceso por carpeta.
   límite L-CV-18.
 - **Las pruebas son sintéticas,** P-CV-33 y P-CV-34: 5.655 evidencias de ADT traen PD1, y en todas PD1-7 viene vacío.
 - **La huella del juez publicado** pasa de `4a75a245…` a `6b98df04…`. En las tres bases de la demostración solo cambia eso. El
-  proyecto de ejemplo y el run en rojo suben su pin en un segundo push.
+  proyecto de ejemplo y el run en rojo suben su pin a `b31f9f0`, el commit de este juez, en un segundo push. El ejemplo rehace
+  sus dos bases con su receta ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)): solo cambia la huella
+  del juez ([`pd/BASES-PD-ejemplo.json`](pd/BASES-PD-ejemplo.json)), y el rojo cae solo por su defecto, en 164 casos.
 - **Cómo:**
   - el diseño, a ciegas, y cuatro decisiones de Jev;
   - las pruebas, en rojo antes, y 18 mutantes del juez que tienen que hacerlas caer;
