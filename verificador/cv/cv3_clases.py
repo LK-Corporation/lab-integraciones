@@ -3,7 +3,7 @@
 """CV3: la clase de cada mecanismo (§4.3 del diseño: nueva / ya_declarada / convención, más lo que se aparta con motivo) y las
 cuentas de la frase fija. Las reglas de abajo son el resultado de leer las salidas esperadas, pruebas, documentación e issues
 de cada proyecto (referencias en cada regla y en cv/RESULTADO-CV3.md); este script solo las aplica caso a caso, sobre el juicio
-del juez final, y comprueba que nada que cuente quede sin clase.
+del juez final, y lista lo que queda sin clase: no falla por ello, pero lo cuenta en su salida y avisa al final (etapa 39).
 
   python3 cv/cv3_clases.py <juicio.jsonl> <minimos.json> <evidencias> <salida.json>
 """
@@ -20,7 +20,7 @@ MS, LFH = "microsoft", "linuxforhealth"
 ESP = "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/"
 LFH_T = "src/test/java/io/github/linuxforhealth/hl7/"
 
-# (id, conversor, mecanismos, texto que debe estar en el «que» (o tupla de textos, de los que basta uno) o None, casos o prefijos de caso o None,
+# (id, conversor, mecanismos, texto que debe estar en el «que» (o tupla de textos, de los que basta uno) o None, casos o prefijos de caso o None (o, por mecanismo, {mecanismo: eso}),
 #  clase, referencia, par mínimo, fuerza, qué)
 # clases: nueva | nueva_rechazo (falla a la vista: no es de las ocho clases de S-CV-5) | ya_declarada | convencion |
 #         dudosa (pasa a Q-CV-D, no cuenta) | no_cambia | fuera_juez | fuera_corpus | fuera_ambiguedad | fuera_version |
@@ -83,7 +83,7 @@ R = [
      "ContactPoint.use «home» donde la guía da «mobile» (XTN.3 CP)"),
     ("M-27", MS, {"MC-ADT-8"}, "Patient.telecom: falta", None, "dudosa", "Q-CV-D-15", None, None,
      "número de XTN escrito con otro formato: el juez busca los componentes literales"),
-    ("M-28", MS, {"MC-ORU-7", "fuera:Observation|recurso_sin_mapa"}, None, ("ms-ADT",), "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json", None, "media",
+    ("M-28", MS, {"MC-ORU-7", "fuera:Observation|recurso_sin_mapa"}, None, {"MC-ORU-7": ("ms-ADT",), "fuera:Observation|recurso_sin_mapa": None}, "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json", None, "media",
      "Observation de PDA (certificado de defunción, autopsia…) o de ACC (injury-incident) que la guía no mapea"),
     ("M-29", MS, {"MC-ORU-7", "fuera:falta|recurso_ausente"}, None, ("lfh-ORU",), "fuera_muestra_invalida",
      "lfh-ORU-multiline-short(-mixed): OBX-3 vacío (obligatorio): los OBX chocan de id", None, None, "muestra con OBX-3 vacío"),
@@ -165,6 +165,8 @@ def regla(conv, mc, q, caso):
             continue
         if texto and not any(t in q for t in ((texto,) if isinstance(texto, str) else texto)):   # etapa 38: una tupla, basta uno
             continue
+        if isinstance(casos, dict):   # etapa 39: el límite de casos, por mecanismo (M-28: MC-ORU-7 solo en las muestras)
+            casos = casos[mc]
         if casos is not None and not (caso in casos if isinstance(casos, set) else caso.startswith(casos)):
             continue
         return r
@@ -217,7 +219,7 @@ def main(juicio, minimos, evidencias, salida):
     por = lambda c: [x for x in clases if x["clase"] == c and x["casos"]]  # noqa: E731
     nuevas = [x for x in por("nueva") if x["confirmada_con_par"]]
     res = {"juez": __import__("mcp_verificador")._version()["huella"], "clases": clases,
-           "sin_clase": {"%s | %s | %s" % k: n for k, n in sin.items()},
+           "sin_clase": {"%s | %s | %s" % k: n for k, n in sin.items()}, "n_sin_clase": sum(sin.values()),
            "convenciones": {"%s | %s | %s" % k: len(v) for k, v in sorted(conv.items())},
            "frase": {"N_nuevas_confirmadas": len(nuevas),
                      "N_por_conversor": dict(collections.Counter(x["conversor"] for x in nuevas)),
@@ -240,6 +242,10 @@ def main(juicio, minimos, evidencias, salida):
     print("convenciones (%d):" % len(conv))
     for k, n in sorted(res["convenciones"].items()):
         print("   %3d %s" % (n, k[:150]))
+    if sin:   # etapa 39 (Q-SC-2 b): lo sin clase no para el aparato, pero no pasa sin verse; por stderr, que arrastre.py no redirige
+        print("AVISO cv3_clases: %d entradas sin clase (%d firmas) en %s: %s" % (
+            sum(sin.values()), len(sin), os.path.join(*os.path.normpath(salida).split(os.sep)[-2:]),
+            json.dumps(res["sin_clase"], ensure_ascii=False)), file=sys.stderr)
 
 
 if __name__ == "__main__":

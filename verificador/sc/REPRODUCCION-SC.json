@@ -1,0 +1,123 @@
+{
+ "otros": {
+  "juicio-cv-despues.jsonl": {
+   "casos_que_cambian_de_clase": {
+    "linuxforhealth|adt|A1-A02-09": [
+     [],
+     [
+      "L-4"
+     ]
+    ],
+    "linuxforhealth|adt|A1-A11-25": [
+     [],
+     [
+      "L-4"
+     ]
+    ],
+    "linuxforhealth|adt|A1-A11-29": [
+     [],
+     [
+      "L-4"
+     ]
+    ],
+    "linuxforhealth|adt|A1-A13-34": [
+     [],
+     [
+      "L-4"
+     ]
+    ],
+    "linuxforhealth|muestras|ms-LRI_2.0-NG_CBC_Typ_Message": [
+     [
+      "L-13",
+      "L-14",
+      "L-17",
+      "L-24",
+      "L-26"
+     ],
+     [
+      "L-13",
+      "L-14",
+      "L-17",
+      "L-26"
+     ]
+    ],
+    "linuxforhealth|muestras|ms-ORU-R01-01": [
+     [
+      "L-13",
+      "L-17",
+      "L-24"
+     ],
+     [
+      "L-13",
+      "L-17"
+     ]
+    ],
+    "microsoft|muestras|ms-LRI_2.0-NG_CBC_Typ_Message": [
+     [
+      "M-36"
+     ],
+     []
+    ]
+   },
+   "clases_que_difieren": {
+    "L-24": {
+     "casos": [
+      {
+       "muestras": 2
+      },
+      {}
+     ],
+     "ejemplos": [
+      {
+       "muestras": [
+        "ms-LRI_2.0-NG_CBC_Typ_Message",
+        "ms-ORU-R01-01"
+       ]
+      },
+      {}
+     ]
+    },
+    "L-4": {
+     "casos": [
+      {
+       "adt": 92,
+       "muestras": 3
+      },
+      {
+       "adt": 96,
+       "muestras": 3
+      }
+     ]
+    },
+    "M-36": {
+     "casos": [
+      {
+       "muestras": 1
+      },
+      {}
+     ],
+     "ejemplos": [
+      {
+       "muestras": [
+        "ms-LRI_2.0-NG_CBC_Typ_Message"
+       ]
+      },
+      {}
+     ]
+    }
+   },
+   "frase_que_difiere": {},
+   "sin_clase": {}
+  }
+ },
+ "publicado": {
+  "juez": "54a90cd9e08d15c08b84bb2e231db116d91f962daf0785be170d672648f88f7e"
+ },
+ "receta": {
+  "clases_que_difieren": {},
+  "frase_que_difiere": {},
+  "juicio": "juicio-rejuicio2.jsonl",
+  "se_reproduce": true,
+  "sin_clase": {}
+ }
+}

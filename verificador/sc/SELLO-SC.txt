@@ -1,0 +1,13 @@
+Etapa 39, sello de la previsión (2026-11-08T15:38:36+01:00), antes de medir:
+3da951584e506b0ee9192d2fdb4058b39a97ee633d12c830a9a47ed973e1ac58  sc/PREVISION-SC.json
+
+Etapa 39, después del cambio del aparato y de las dos pasadas de la revisión a ciegas (2026-11-08T16:40:00+01:00):
+d7efce6062ac2383e490ec2fb879a0803aaaed6c16eefef588af97c6eabc24a9  sc/parche_sc.py
+1d6d9c778b989292464a88c89f053a2f4fd3fe8aed46c9951fdfde605ef9d5a4  cv/prueba_cv3_clases.py
+9a0fd2cad42506fdfa86ea55d7732d86472a94e662e24bb62c9578e9757be920  sc/ROJO-SC.txt
+ff0f1b3022281ecb56020dd10a3f584ddafdac02fb500a120811c1bd1192a816  sc/ROJO-SC-2.txt
+28cf4280161f68cd4b1f0241f24854de18015f80691be42e9cd0f08ca5903fbc  sc/PRUEBA-SC.txt
+1c303bc8d6a88aa6671bb343760e04522900960a76286178eb4bb2d9a9d1bf70  sc/SINCLASE-SC.json
+75f18f760424a9b06561e74084b3c68eb19341881dc8911c1ecb66ecb19afdba  sc/SINCLASE-SC-despues.json
+8f92b6a1c51547f1ae22d849c9531db33a5e7327c2e48d12bb6a1be61629393a  sc/REPRODUCCION-SC.json
+369bc63b736e9b1e899928da8c3155a2490c7639f78a2376a6471ed23ae0a08f  cv/cv3_clases.py

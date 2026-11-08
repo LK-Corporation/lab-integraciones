@@ -123,3 +123,7 @@ SELLO DE LA ETAPA 33, bloque 8 (7-nov-2026, 17:58): desde la etapa 37, M-28 reco
 SELLO DE LA ETAPA 33, bloque 9 (8-nov-2026, 14:40): desde la etapa 38, M-4 reconoce también el texto del juez de CV4 (cl/decision-jev-cl.md, Q-CL-1 a)
 # M-4: texto «falta la descripción» -> («falta la descripción», «contiene PL.9»), y regla() admite una tupla de textos de los que basta uno; la clase, su texto y su referencia no cambian
 eea9c119f8f5780955a4a9811a33bccde29b79cb5c8c6b7a71360a2b28ff58e0  cv/cv3_clases.py
+
+SELLO DE LA ETAPA 33, bloque 10 (8-nov-2026, 16:22): desde la etapa 39, M-28 reconoce el corpus del laboratorio para la Observation sin mapa, y el aparato avisa de lo sin clase (sc/decision-jev-sc.md, Q-SC-1 a y Q-SC-2 b)
+# M-28: casos ("ms-ADT",) -> {"MC-ORU-7": ("ms-ADT",), "fuera:Observation|recurso_sin_mapa": None}, y regla() admite un diccionario de casos por mecanismo; main() escribe n_sin_clase y avisa por stderr al final; la clase, su texto y su referencia no cambian, ni el código de salida
+369bc63b736e9b1e899928da8c3155a2490c7639f78a2376a6471ed23ae0a08f  cv/cv3_clases.py

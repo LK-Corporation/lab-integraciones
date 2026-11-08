@@ -1,0 +1,4 @@
+== PRUEBA de la etapa 39, tras sc/parche_sc.py y las dos pasadas de la revisión a ciegas (2026-11-08T16:40:00+01:00); cv/cv3_clases.py 369bc63b736e, cv/prueba_cv3_clases.py 1d6d9c778b98
+   python3 cv/prueba_cv3_clases.py
+PRUEBAS CV3 CLASES: TODO BIEN (29 comprobaciones)
+rc=0

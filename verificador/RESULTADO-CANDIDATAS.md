@@ -56,6 +56,8 @@ Las dos primeras son del ANTES del estudio de conversores (`ANTES-ETAPA-CONVERSO
   - En el estudio solo miraba las muestras de Microsoft, y allí ya contaba esta Observation. En la muestra `ADT-A31-01`, que lleva
     ACC y no PDA, la Observation que cuenta es la `injury-incident`.
   - La etapa 33 la vio como candidata porque los 30 ADT con ACC son del corpus del laboratorio, que M-28 no miraba.
+    *Desde la etapa 39 (8-nov) los mira: con el juez de hoy, los 30 caen en M-28
+    ([`RESULTADO-SINCLASE.md`](RESULTADO-SINCLASE.md)).*
 - **La descripción de M-28 se corrige,** de «Observation de PDA» a «Observation de PDA o de ACC».
   - **Lo decidió Jev en `Q-CA-2`,** dos veces con el mismo estado (`ca/estado_ca3.md`): por la tabla y el código, 0,50 y 0,51; solo
     la tabla, 0,36 y 0,35; con confianza 0,25 y 0,26. Casi un empate, y con esa decisión se reabre el sello de otra etapa.

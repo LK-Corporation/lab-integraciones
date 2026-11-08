@@ -4,6 +4,11 @@
 Microsoft es M-28, una de las 31 ya declaradas, que el estudio ya contaba en las muestras de Microsoft; la de LinuxForHealth es
 una convención ([`RESULTADO-CANDIDATAS.md`](RESULTADO-CANDIDATAS.md)). Las cifras de abajo no cambian.
 
+**Y el 8-nov (etapa 39):** con el juez y el aparato de hoy, la versión 2 da 0 hallazgos sin clase y 17 convenciones. La
+decimoséptima es la de LinuxForHealth con PID-8 fuera de la 0001, que la etapa 36 dio por convención y la 37 llevó al juez. Las
+cifras de abajo (16 convenciones y 2 candidatas) son las del juez y el aparato de entonces
+([`RESULTADO-SINCLASE.md`](RESULTADO-SINCLASE.md)).
+
 > **De los 767 mensajes de la versión 2 del corpus, 392 son válidos en v2.5, 16 inválidos (todos a propósito o fragmentos del
 > estándar) y 359 sin decidir.** Los sin decidir son estos:
 > - 206 por TXA-3: 200 con `TEXT` y 6 con `multipart` (B17, en T02 y en sus cinco eventos);

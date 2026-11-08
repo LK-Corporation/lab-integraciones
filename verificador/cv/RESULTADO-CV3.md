@@ -289,4 +289,13 @@ la regla de M-4 de `cv/cv3_clases.py` solo pedía el primero («falta la descrip
 
 La frase no cambia (`RESULTADO-CLASES.md`). `cv/CLASES-CV3.json` no se toca: se reproduce con su receta, el juicio del estudio.
 
+## Marca de la etapa 39 (8-nov-2026)
+
+- **La Observation «recurso sin mapa» de ACC o PDA es M-28 en cualquier corpus de Microsoft,** no solo en las muestras (bloque 10
+  del sello de la etapa 33). El mecanismo con que la veía el juez de antes de la etapa 37 (MC-ORU-7) sigue limitado a los
+  casos `ms-ADT`.
+- **En el estudio no cambia nada:** M-28 sigue con sus 7 muestras.
+- **`cv/cv3_clases.py` ya no deja pasar sin verse lo que queda sin clase:** lo cuenta en su salida (`n_sin_clase`) y avisa al final,
+  sin fallar (`RESULTADO-SINCLASE.md`).
+
 > *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

@@ -1,0 +1,6 @@
+== ROJO-2 de la etapa 39 (tras la revisión a ciegas): cv/prueba_cv3_clases.py con P-SC-5 (el texto del aviso), P-SC-7 y P-SC-8, contra el cv/cv3_clases.py del primer arreglo (4b667b2; huella 58ee940f3653); prueba 99e45bb10dc8
+  MAL P-SC-5 y avisa al final, por la salida de error, con lo que cuenta: entradas («que») y firmas: False != True
+  MAL P-SC-7 dos entradas de la misma firma: n_sin_clase 2, una firma, y el aviso lo dice: (2, 1, False) != (2, 1, True)
+  MAL P-SC-8 como proceso, con algo sin clase: sale con 0 y el aviso es la última línea de la salida de error: (0, False) != (0, True)
+PRUEBAS CV3 CLASES: 3 MAL (26 comprobaciones)
+rc=1

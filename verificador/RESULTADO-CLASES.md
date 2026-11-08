@@ -111,6 +111,8 @@ Acertó las dos, con un estado al que le faltaba el hecho decisivo (abajo).
 - **`cv/cv3_clases.py` dice que «comprueba que nada que cuente quede sin clase», pero solo lo lista, sin fallar.** Así pasaron sin
   verse los 8 de M-4, también en las clases que calculó la etapa 37. Hacerlo fallar cambia un aparato sellado que usan otras
   etapas; queda fuera de esta. Desde esta etapa, `cl/reproducir_clases_cl.py` guarda lo que queda sin clase.
+  *Etapa 39 (8-nov):* el aparato ya lo cuenta en su salida (`n_sin_clase`) y avisa al final, sin fallar
+  ([`RESULTADO-SINCLASE.md`](RESULTADO-SINCLASE.md)).
 - **Los 8 casos de M-4 cuya descripción lleva una secuencia de escape** siguen con el texto de CV3: el juez no la encuentra en la
   descripción de Microsoft. Cuentan como M-4 con las dos reglas. Si deberían llevar el texto de CV4 es cosa del juez, y queda fuera.
 

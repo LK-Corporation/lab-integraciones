@@ -1,0 +1,9 @@
+== ROJO de la etapa 39: cv/prueba_cv3_clases.py ampliada (P-SC-1..6), contra el cv/cv3_clases.py de antes (fdb58b4, sin sc/parche_sc.py; huella eea9c119f8f5); prueba 891509590ed6
+  MAL P-SC-1 la Observation de ACC sin mapa, en un ADT del laboratorio, es M-28: None != 'M-28'
+  MAL P-SC-1 la de PDA también: None != 'M-28'
+  MAL P-SC-4 solo M-28 lleva el diccionario: [] != ['M-28']
+  MAL P-SC-5 con algo sin clase, la salida JSON lo cuenta (n_sin_clase): None != 1
+  MAL P-SC-5 y avisa al final, por la salida de error: False != True
+  MAL P-SC-6 sin nada sin clase, n_sin_clase es 0 y no hay aviso: (None, False) != (0, False)
+PRUEBAS CV3 CLASES: 6 MAL (21 comprobaciones)
+rc=1

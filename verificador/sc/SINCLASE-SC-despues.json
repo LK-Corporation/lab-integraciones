@@ -1,0 +1,67 @@
+{
+ "estudio": {
+  "con_el_juez_de_hoy": {
+   "frase": {
+    "C_convenciones": 16,
+    "D_ya_declaradas": 31,
+    "M_mensajes": 368,
+    "N_nuevas_confirmadas": 15
+   },
+   "juez": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase": 0,
+   "sin_clase": {}
+  }
+ },
+ "ga-v1": {
+  "con_el_juez_de_hoy": {
+   "frase": {
+    "C_convenciones": 16,
+    "D_ya_declaradas": 31,
+    "M_mensajes": 368,
+    "N_nuevas_confirmadas": 15
+   },
+   "juez": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase": 0,
+   "sin_clase": {}
+  },
+  "con_el_juicio_guardado": {
+   "frase": {
+    "C_convenciones": 16,
+    "D_ya_declaradas": 31,
+    "M_mensajes": 368,
+    "N_nuevas_confirmadas": 15
+   },
+   "juez": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase": 0,
+   "sin_clase": {}
+  }
+ },
+ "ga-v2": {
+  "con_el_juez_de_hoy": {
+   "frase": {
+    "C_convenciones": 17,
+    "D_ya_declaradas": 31,
+    "M_mensajes": 375,
+    "N_nuevas_confirmadas": 15
+   },
+   "juez": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase": 0,
+   "sin_clase": {}
+  },
+  "con_el_juicio_guardado": {
+   "frase": {
+    "C_convenciones": 17,
+    "D_ya_declaradas": 31,
+    "M_mensajes": 375,
+    "N_nuevas_confirmadas": 15
+   },
+   "juez": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase": 31,
+   "sin_clase": {
+    "linuxforhealth | fuera:Patient.gender|valor_imposible_convertido | Patient.gender: <v> convertido desde <v>, fuera de la <n>": 1,
+    "microsoft | MC-ORU-7 | Observation <id> sin origen propio en el mensaje": 30
+   }
+  }
+ },
+ "total_hoy": 0
+}

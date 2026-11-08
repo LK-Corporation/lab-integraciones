@@ -1,0 +1,22 @@
+{
+ "etapa": 39,
+ "sellada": "antes de medir (8-nov-2026)",
+ "de": "Jev, sc/decision-jev-prevision-sc.md y sc/decision-jev-prevision-sc-b.md",
+ "Q-PREV-SC-1": {
+  "respuesta": "ninguno sin clase en la versión 2 del corpus",
+  "p": 0.5,
+  "confianza": 0.25,
+  "repreguntada": {
+   "respuesta": "ninguno",
+   "p": 0.47,
+   "confianza": 0.2
+  },
+  "segunda": "entre 1 y 10 (0,35 y 0,40)"
+ },
+ "Q-PREV-SC-2": {
+  "respuesta": "avisar sin fallar",
+  "p": 0.72,
+  "confianza": 0.58,
+  "segunda": "fallar (0,25)"
+ }
+}

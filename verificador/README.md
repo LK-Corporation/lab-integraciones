@@ -190,6 +190,22 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Lo sin clase del estudio (39, 8-nov-2026)
+
+> **Con el juez y el aparato de hoy quedan 0 hallazgos sin clase en los corpus que clasifica `cv/cv3_clases.py`; el aparato no
+> falla cuando queda alguno: lo cuenta en su salida y avisa al final.** La frase del estudio no cambia.
+
+- **Antes quedaban 30,** en la versión 2 del corpus de la 33: la Observation de ACC de Microsoft en el corpus del laboratorio, que
+  la etapa 36 dio por M-28. La regla de M-28 solo miraba las muestras ADT de Microsoft (`ms-ADT`); ahora la mira en cualquier
+  corpus de Microsoft (bloque 10 del sello de la 33).
+- **El aparato decía que comprobaba que nada quedara sin clase, y solo lo listaba.** Ahora escribe cuántas entradas quedan sin
+  clase (`n_sin_clase`) y avisa al final por la salida de error, sin fallar.
+- **De paso:** la versión 2 da hoy 17 convenciones, y no 16, por la de PID-8 que la etapa 37 llevó al juez.
+- **Cómo:** la previsión de Jev, sellada antes de medir, que falló en lo sin clase (dijo «ninguno», con confianza baja); dos
+  decisiones de Jev; el diseño, a ciegas; la prueba, en rojo antes; y un lector a ciegas.
+
+  Está en [`RESULTADO-SINCLASE.md`](RESULTADO-SINCLASE.md); la pregunta, en [`ANTES-ETAPA-SINCLASE.md`](ANTES-ETAPA-SINCLASE.md).
+
 ## Las clases publicadas del estudio (38, 8-nov-2026)
 
 > **Las clases publicadas del estudio de conversores se reproducen con su receta; la diferencia de M-4, M-36 y L-24 viene del
@@ -664,11 +680,12 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 38 llevan una parte redactada,** marcados en su primera línea:
+- **Los ANTES de las etapas 30 a 39 llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md`,
-  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md`, `ANTES-ETAPA-JUEZ.md` y
-  `ANTES-ETAPA-CLASES.md`; y los encargos del diseño de la 33 a la 35, de la 37 y de la 38, `ga/encargo-diseno-ga.md`,
-  `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`, `jz/encargo-diseno-jz.md` y `cl/encargo-diseno-cl.md`.
+  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md`, `ANTES-ETAPA-JUEZ.md`,
+  `ANTES-ETAPA-CLASES.md` y `ANTES-ETAPA-SINCLASE.md`; y los encargos del diseño de la 33 a la 35 y de la 37 a la 39,
+  `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`, `jz/encargo-diseno-jz.md`,
+  `cl/encargo-diseno-cl.md` y `sc/encargo-diseno-sc.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.
