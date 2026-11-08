@@ -1,0 +1,14 @@
+== ROJO-2 de la etapa 37: los controles de P-VX-20, P-MD-24 y P-MD-25 (d), nuevos, contra el juez de antes (una copia de 912e311 sin privado, con jz/parche_prueba_jz2.py)
+   Rehecho el 8-nov con el código de salida de cada suite: el del 7-nov daba, tras VXU, el de la tubería (rc=0), y no lo daba tras MDM.
+  MAL P-VX-20 control: perfil_guia_adt y _oru sin cambios: (21, 16) != (22, 16)
+  MAL P-VX-24 NK1-15 S a unknown: convención: ([('valor_imposible_convertido', 'NK1-15')], False) != ([], True)
+  MAL P-VX-24 NK1-15 S a S: FHIR inválido: [('valor_imposible_convertido', 'NK1-15')] != [('fhir_invalido', 'NK1-15')]
+  MAL P-VX-24 rechazo de un VXU con PID-8 X: ('correcto', None) != ('rechazo_incorrecto', 'error')
+PRUEBAS VXU: 4 MAL (154 comprobaciones, 24 pruebas)
+rc=1
+  MAL P-MD-25 base (a) prueba_conversion.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (a) prueba_conversion_vxu.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (d) lo que exportan conversion y puntos_entrada: ('5dabbc37ec4a7909', 'd8b3a2eb651b1ac4', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', '6fb1b433ac5d4d8f') != ('5dabbc37ec4a7909', 'a06d3df87c0bd01c', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', '6fb1b433ac5d4d8f')
+  MAL P-MD-24 control: perfiles de ADT, ORU y VXU sin cambios: (21, 16, 27) != (22, 16, 27)
+PRUEBAS MDM: 4 MAL (272 comprobaciones, 27 pruebas)
+rc=1

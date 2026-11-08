@@ -1,0 +1,23 @@
+== ROJO de la etapa 37: las pruebas nuevas contra el juez de antes (HEAD 0d639c2, juez sin tocar)
+  MAL P-CV-12 control X fusionado: (1, {'fhir_invalido', 'valor_imposible_convertido'}) != (1, {'fhir_invalido'})
+  MAL P-CV-29 S a unknown: convención: (('fallo_silencioso', 'aceptado_imposible'), [('valor_imposible_aceptado', 'valor_imposible_convertido', 'PID-8')], [('valor_imposible_aceptado', 'valor_imposible_convertido')]) != (('correcto', None), [], [('nota', 'convencion')])
+  MAL P-CV-29 S a other: convención: (('fallo_silencioso', 'aceptado_imposible'), [('valor_imposible_aceptado', 'valor_imposible_convertido', 'PID-8')], [('valor_imposible_aceptado', 'valor_imposible_convertido')]) != (('correcto', None), [], [('nota', 'convencion')])
+  MAL P-CV-29 Z a unknown: convención: (('fallo_silencioso', 'aceptado_imposible'), [('valor_imposible_aceptado', 'valor_imposible_convertido', 'PID-8')], [('valor_imposible_aceptado', 'valor_imposible_convertido')]) != (('correcto', None), [], [('nota', 'convencion')])
+  MAL P-CV-29 la nota cita la 0001 de v2.5: False != True
+  MAL P-CV-29 S a S: solo FHIR inválido: (('fallo_silencioso', 'aceptado_imposible'), [('valor_imposible_aceptado', 'valor_imposible_convertido+fhir_invalido', 'PID-8')]) != (('fallo_silencioso', 'convertido'), [('fidelidad', 'fhir_invalido', 'PID-8')])
+  MAL P-CV-29 con otro hallazgo, sin aceptado_imposible: ('fallo_silencioso', 'convertido+aceptado_imposible') != ('fallo_silencioso', 'convertido')
+  MAL P-CV-30 ACC por la fecha: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'recurso_sin_mapa', 'ACC')]
+  MAL P-CV-30 ACC: cita la hoja, dice el dato y no «sin origen propio»: False != (True, True, False)
+  MAL P-CV-30 ACC por el texto: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'recurso_sin_mapa', 'ACC')]
+  MAL P-CV-30 PDA: tres de solo Y/N, por la 0136: ([('fidelidad', 'recurso_inventado', 'OBX')], ('fallo_silencioso', 'convertido')) != ([('fidelidad', 'recurso_sin_mapa', 'PDA')], ('fallo_silencioso', 'convertido'))
+  MAL P-CV-30 OBX y ACC, ACC primero: ([('fidelidad', 'recurso_inventado', 'OBX')], True) != ([('fidelidad', 'recurso_sin_mapa', 'ACC')], True)
+  MAL P-CV-30 OBX y ACC, OBX primero: ([('fidelidad', 'recurso_inventado', 'OBX')], True) != ([('fidelidad', 'recurso_sin_mapa', 'ACC')], True)
+  MAL P-CV-30 2.8: cuenta igual: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'recurso_sin_mapa', 'ACC')]
+  MAL P-CV-31 rechazo con PID-8 X: ('correcto', None) != ('rechazo_incorrecto', 'error')
+PRUEBAS CONVERSIÓN: 15 MAL (127 comprobaciones, 31 pruebas)
+rc=1
+  MAL P-VX-24 NK1-15 S a unknown: convención: ([('valor_imposible_convertido', 'NK1-15')], False) != ([], True)
+  MAL P-VX-24 NK1-15 S a S: FHIR inválido: [('valor_imposible_convertido', 'NK1-15')] != [('fhir_invalido', 'NK1-15')]
+  MAL P-VX-24 rechazo de un VXU con PID-8 X: ('correcto', None) != ('rechazo_incorrecto', 'error')
+PRUEBAS VXU: 3 MAL (155 comprobaciones, 24 pruebas)
+rc=1

@@ -1,0 +1,10 @@
+== ROJO-5 de la etapa 37: P-CV-32 y la huella de INFO de P-MD-25 (d), nuevas (8-nov, tras la revisión a ciegas), contra el juez de antes del tercer parche (387bed8, sin jz/parche_juez_jz3.py)
+  MAL P-CV-32 L-CV-17: una Observation de solo Y/N que no sale de ACC ni de PDA (PD1-7, o una inventada) se da por de ellos: (True, False, False) != (True, True, True)
+  MAL P-CV-32 L-CV-17: una de ACC o PDA ya no ocupa el sitio de la de un OBX: False != True
+  MAL P-CV-32 la versión del servidor nombra L-CV-17: False != True
+PRUEBAS CONVERSIÓN: 3 MAL (142 comprobaciones, 32 pruebas)
+rc=1
+  MAL P-MD-25 base (a) prueba_conversion.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (d) lo que exportan conversion y puntos_entrada: ('5dabbc37ec4a7909', '3b2cbbf9084ffdc1', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', '6fb1b433ac5d4d8f') != ('5dabbc37ec4a7909', 'cbb618aa5d7c14dc', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', '6fb1b433ac5d4d8f')
+PRUEBAS MDM: 2 MAL (276 comprobaciones, 27 pruebas)
+rc=1

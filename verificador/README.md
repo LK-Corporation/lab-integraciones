@@ -190,6 +190,30 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Los dos fallos del juez de la etapa 36 (37, 8-nov-2026)
+
+> **El juez deja de contar mal las dos conductas de la etapa 36; en el rejuicio de lo publicado cambian 662 evidencias: 660 de
+> esas dos conductas, y 2 de una lectura de NK1-15 que el juez ya hacía mal.** Las cifras del estudio de conversores no cambian.
+
+- **PID-8 o NK1-15 fuera de la 0001,** que en v2.5 es una tabla de usuario (499 evidencias): si el conversor da un código de
+  FHIR, es una nota de convención; si da otro, FHIR inválido; y el valor ya no justifica un rechazo. Cambia lo que cuenta en
+  195; en las demás, solo una nota o la lista de un rechazo que sigue aceptable.
+- **La Observation de ACC o de PDA en un ADT,** dos segmentos que la hoja de ADT_A01 de la guía lista sin destino (161
+  evidencias): cuenta como «recurso sin mapa», con el segmento por hecho, y no como «sin origen propio en el mensaje». Los
+  dos riesgos de cómo la reconoce van declarados en el límite L-CV-17.
+- **En el estudio,** L-4 suma 4 casos de ADT, y M-28 reconoce también el hallazgo nuevo (bloque 8 del sello de la 33).
+- **La huella del juez publicado** pasa de `ff9f1087…` a `4a75a245…`. Las tres bases de la demostración se rehacen, y solo
+  cambian, además de la huella, los 6 casos previstos en cada una de las de LinuxForHealth. El proyecto de ejemplo y el run en
+  rojo suben su pin en un segundo push.
+- **Cómo:**
+  - el diseño, a ciegas, y nueve decisiones de Jev;
+  - las pruebas, en rojo antes;
+  - la previsión, sellada antes del rejuicio. Falló en las convenciones: previó 17;
+  - un clasificador que mira cada caso, con un control de siete defectos sembrados en el juez;
+  - un lector a ciegas, en dos pasadas.
+
+  Está en [`RESULTADO-JUEZ.md`](RESULTADO-JUEZ.md); la pregunta, en [`ANTES-ETAPA-JUEZ.md`](ANTES-ETAPA-JUEZ.md).
+
 ## Las 2 candidatas de la etapa 33 (36, 7-nov-2026)
 
 > **De las 2 candidatas de la etapa 33, ninguna es nueva.** La de Microsoft es M-28, una de las 31 ya declaradas, que el estudio
@@ -201,7 +225,8 @@ corrido en lote, un proceso por carpeta.
 - **LinuxForHealth** convierte PID-8 = `S` (un valor del ejemplo mismo de v2.5, en una tabla de usuario) en `unknown`. La guía no
   dice qué hacer con un valor fuera de su mapa de la 0001, y FHIR obliga a uno de cuatro códigos.
 - **Cómo:** el método de las etapas 20 y 26 (par mínimo, contraste con cada proyecto y revisión adversaria), con la previsión
-  sellada antes, que las daba por nuevas. El juez no cambia, y las cifras del estudio de conversores tampoco.
+  sellada antes, que las daba por nuevas. El juez no cambia (lo arregla la etapa 37), y las cifras del estudio de
+  conversores tampoco.
 
   Está en [`RESULTADO-CANDIDATAS.md`](RESULTADO-CANDIDATAS.md); la pregunta, en [`ANTES-ETAPA-CANDIDATAS.md`](ANTES-ETAPA-CANDIDATAS.md).
 
@@ -594,8 +619,8 @@ publica.
 - **`medida/encargo_medida.md` es un extracto.** En el laboratorio, ese fichero es un encargo de la fase 13 que lleva el
   capítulo 2 de HL7 v2.5 entero, y su texto no se puede redistribuir. Aquí solo quedan las filas de las tres tablas que el juez
   lee de él (0003, 0004 y 0211). Se comprobó que el juez lee del extracto exactamente las mismas: 285, 9 y 21 valores.
-- **Por eso la huella del juez publicado es otra.** El fichero entra en la huella, así que la del juez publicado es `0dd3ae5c…`
-  y la del laboratorio `40bbc3ef…`. Las dos están en el manifiesto, con la huella del original. Los otros 14 ficheros de la
+- **Por eso la huella del juez publicado es otra.** El fichero entra en la huella, así que la del juez publicado no es la
+  del laboratorio. Las dos están en la cabecera del manifiesto, con la huella del original. Los otros 14 ficheros de la
   huella son idénticos.
 - **`adjudicacion.py` es un extracto.** Solo lleva `cable()`, la única función que usa el juez. El módulo entero es de la fase
   13 y lleva material de la clave del banco. No entra en la huella.
@@ -620,10 +645,11 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 36 llevan una parte redactada,** marcados en su primera línea:
+- **Los ANTES de las etapas 30 a 37 llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md`,
-  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md` y `ANTES-ETAPA-CANDIDATAS.md`; y los encargos del diseño de la 33 a la 35,
-  `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md` y `cr/encargo-diseno-cr.md`.
+  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md` y `ANTES-ETAPA-JUEZ.md`; y los encargos
+  del diseño de la 33 a la 35 y de la 37, `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`
+  y `jz/encargo-diseno-jz.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

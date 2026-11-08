@@ -416,8 +416,8 @@ def p12():
          [("fidelidad", "dato_inventado", "PID-8")])
     r = j(ev(msg(pid={8: "X"}), adt_bundle(p=con(pac, gender="X"))))
     h8 = [h for h in r["hallazgos"] if h["cuenta"] and h["hecho"] == "PID-8"]
-    mira("control X fusionado", (len(h8), set(h8[0]["subtipo"].split("+")) if h8 else None),
-         (1, {"valor_imposible_convertido", "fhir_invalido"}))
+    mira("control X fusionado", (len(h8), set(h8[0]["subtipo"].split("+")) if h8 else None),      # etapa 37: la 0001 es user-defined
+         (1, {"fhir_invalido"}))
     mira("J2 minúscula literal", cuentan(j(ev(msg(pid={8: "f"}), adt_bundle(p=con(pac, gender="f"))))),       # CV2 rep. 1
          [("fidelidad", "fhir_invalido", "PID-8")])
 
@@ -454,7 +454,7 @@ def p15():
         "dato_perdido": (msg(), adt_bundle(p=sin_clave(pac(), "address")), "PID-11"),
         "dato_inventado": (msg(), adt_bundle(p=con(pac, deceasedBoolean=False)), "PID-30"),
         "codigo_mal_mapeado": (msg(), adt_bundle(e=con(enc, **{"class": {"system": S["0004"], "code": "I"}})), "PV1-2"),
-        "valor_imposible_convertido": (msg(pid={8: "X"}), adt_bundle(p=con(pac, gender="other")), "PID-8"),
+        "valor_imposible_convertido": (msg(pid={30: "X"}), adt_bundle(p=con(pac, deceasedBoolean=False)), "PID-30"),   # etapa 37
         "recurso_ausente": (msg(), adt_bundle(sin=("Encounter",)), "PV1"),
         "recurso_duplicado": (msg(), adt_bundle(extra=[con(enc, id="e2", identifier=[])]), "PV1"),
         "recurso_inventado": (msg(), adt_bundle(extra=[{"resourceType": "Observation", "id": "ox", "status": "final", "code": cc("loinc", "1")}]), "OBX"),
@@ -637,9 +637,119 @@ def p28():
     mira("ORU sin PID con subject colgado", sorted({x[2] for x in cuentan(j(ev(m, b, pe="oru_conv")))}), ["PID"])
     mira("control con PID", cuentan(j(ev(oru_msg(), oru_bundle(), pe="oru_conv"))), [])
 
+# ---------------------------------------------------------------------------- etapa 37: las dos conductas de la etapa 36
+def p29():
+    """Conducta 1 (jz/decision-jev-jz.md, Q-JZ-5 a): PID-8 fuera de la 0001, que es user-defined (Ch03.txt:5032-5044),
+    convertido a un código de administrative-gender es convención; a uno que no es de FHIR, solo FHIR inválido; sin gender,
+    nada."""
+    def pid8(r):
+        return sorted((h["clase"], h["subtipo"]) for h in r["hallazgos"] if h["hecho"] == "PID-8")
+    for v, g in (("S", "unknown"), ("S", "other"), ("Z", "unknown")):
+        r = j(ev(msg(pid={8: v}), adt_bundle(p=con(pac, gender=g))))
+        mira("%s a %s: convención" % (v, g), (cat(r), cuentan(r), pid8(r)), (("correcto", None), [], [("nota", "convencion")]))
+    r = j(ev(msg(pid={8: "S"}), adt_bundle(p=con(pac, gender="unknown"))))
+    h = [x for x in r["hallazgos"] if x["hecho"] == "PID-8"]
+    mira("la nota cita la 0001 de v2.5", bool(h) and "[E3 Ch03.txt:5032-5044]" in h[0]["citas"], True)
+    r = j(ev(msg(pid={8: "S"}), adt_bundle(p=con(pac, gender="S"))))
+    mira("S a S: solo FHIR inválido", (cat(r), cuentan(r)), (("fallo_silencioso", "convertido"), [("fidelidad", "fhir_invalido", "PID-8")]))
+    r = j(ev(msg(pid={8: "S"}), adt_bundle(p=sin_clave(pac(), "gender"))))
+    mira("S sin gender: nada (Q-JZ-5)", (cat(r), pid8(r)), (("correcto", None), []))
+    r = j(ev(msg(pid={8: "S"}, msh={12: "2.8"}), adt_bundle(p=con(pac, gender="unknown"))))
+    mira("2.8, S a unknown: nota version", pid8(r), [("nota", "version")])
+    r = j(ev(msg(pid={8: "S"}), adt_bundle(p=con(pac, gender="unknown", birthDate="1980-02-16"))))
+    mira("con otro hallazgo, sin aceptado_imposible", cat(r), ("fallo_silencioso", "convertido"))
+    mira("control F a male", cuentan(j(ev(msg(), adt_bundle(p=con(pac, gender="male"))))), [("fidelidad", "valor_distinto", "PID-8")])
+    r = j(ev(msg(pid={8: "f"}), adt_bundle(p=con(pac, gender="female"))))
+    mira("control f a female (AMB-CV-1)", (cuentan(r), pid8(r)), ([], [("nota", "convencion")]))
+
+
+CS = "http://example.org/observation-code"
+CS0136 = "http://terminology.hl7.org/CodeSystem/v2-0136"
+ACC = seg("ACC", {1: "20260102", 3: "Calle Mayor 5", 5: "N", 6: "N", 8: "caida en casa"})
+PDA = seg("PDA", {1: "I21^Infarto^I10", 3: "Y", 4: "20260103120000", 6: "Y", 9: "N"})
+OBX_ADT = seg("OBX", {1: "1", 2: "NM", 3: "8867-4^Frecuencia^LN", 5: "60", 11: "F", 14: "20260102"})
+
+
+def obs_acc(i="oa", fecha="2026-01-02", texto_="caida en casa", codigo="injury-incident"):
+    return {"resourceType": "Observation", "id": i, "status": "final", "code": cc(CS, codigo), "subject": {"reference": "urn:uuid:p1"},
+            "effectiveDateTime": fecha, "valueString": texto_}
+
+
+def obs_sn(i, codigo, valor):
+    return {"resourceType": "Observation", "id": i, "status": "final", "code": cc(CS, codigo), "subject": {"reference": "urn:uuid:p1"},
+            "valueCodeableConcept": cc(CS0136, valor)}
+
+
+def obs_obx(i="ox", fecha="2026-01-02"):
+    return {"resourceType": "Observation", "id": i, "status": "final", "code": cc("loinc", "8867-4"), "subject": {"reference": "urn:uuid:p1"},
+            "effectiveDateTime": fecha, "valueQuantity": {"value": 60}}
+
+
+def con_segs(m, *segs):
+    return "\r".join([m] + list(segs))
+
+
+def p30():
+    """Conducta 2 (Q-JZ-2 a, Q-JZ-3 d, Q-JZ-4 a): una Observation de un ADT que sale de ACC o de PDA, que la hoja de ADT_A01
+    lista sin destino (MSG_ADT_A01.csv:78, 81), cuenta como recurso_sin_mapa con hecho el segmento; se reconoce por un dato
+    igual o, si solo lleva un valor de la 0136, por un campo de la 0136 con ese valor. Sin eso, sigue como recurso_inventado."""
+    r = j(ev(con_segs(msg(), ACC), adt_bundle(extra=[obs_acc()])))
+    mira("ACC por la fecha", cuentan(r), [("fidelidad", "recurso_sin_mapa", "ACC")])
+    h = [x for x in r["hallazgos"] if x["hecho"] == "ACC"]
+    mira("ACC: cita la hoja, dice el dato y no «sin origen propio»",
+         bool(h) and ("[G MSG_ADT_A01.csv:78]" in h[0]["citas"], any("ACC-1" in q for q in h[0]["que"]),
+                      any("sin origen propio" in q for q in h[0]["que"])), (True, True, False))
+    mira("ACC por el texto", cuentan(j(ev(con_segs(msg(), ACC), adt_bundle(extra=[obs_acc(fecha="2025-05-05")])))),
+         [("fidelidad", "recurso_sin_mapa", "ACC")])
+    mira("control sin ACC en el mensaje", cuentan(j(ev(msg(), adt_bundle(extra=[obs_acc()])))), [("fidelidad", "recurso_inventado", "OBX")])
+    mira("control ACC sin dato común", cuentan(j(ev(con_segs(msg(), ACC), adt_bundle(extra=[obs_acc(fecha="2025-05-05", texto_="otra")])))),
+         [("fidelidad", "recurso_inventado", "OBX")])
+    tres = [obs_sn("o1", "death-certificate", "Y"), obs_sn("o2", "autopsy", "Y"), obs_sn("o3", "coroner", "N")]
+    r = j(ev(con_segs(msg("A02"), PDA), adt_bundle(extra=tres)))
+    mira("PDA: tres de solo Y/N, por la 0136", (cuentan(r), cat(r)), ([("fidelidad", "recurso_sin_mapa", "PDA")], ("fallo_silencioso", "convertido")))
+    pda_vacio = seg("PDA", {1: "I21^Infarto^I10"})
+    mira("control PDA sin campos de la 0136", cuentan(j(ev(con_segs(msg("A02"), pda_vacio), adt_bundle(extra=tres[:1])))),
+         [("fidelidad", "recurso_inventado", "OBX")])
+    mira("control PDA con la 0136 de otro valor", cuentan(j(ev(con_segs(msg("A02"), seg("PDA", {3: "N", 6: "N", 9: "N"})), adt_bundle(extra=tres[:1])))),
+         [("fidelidad", "recurso_inventado", "OBX")])
+    for orden, extra in (("ACC primero", [obs_acc(), obs_obx()]), ("OBX primero", [obs_obx(), obs_acc()])):
+        r = j(ev(con_segs(msg(), OBX_ADT, ACC), adt_bundle(extra=extra)))
+        mira("OBX y ACC, %s" % orden, (cuentan(r), "fuera_proyeccion" in notas(r)), ([("fidelidad", "recurso_sin_mapa", "ACC")], True))
+    r = j(ev(con_segs(msg(), OBX_ADT, ACC), adt_bundle(extra=[obs_obx()])))
+    mira("la del OBX con la fecha de ACC-1 es del OBX (su código)", (cuentan(r), "fuera_proyeccion" in notas(r)), ([], True))
+    mira("2.8: cuenta igual", cuentan(j(ev(con_segs(msg(msh={12: "2.8"}), ACC), adt_bundle(extra=[obs_acc()])))),
+         [("fidelidad", "recurso_sin_mapa", "ACC")])
+    x = {"resourceType": "Observation", "id": "o9", "status": "final", "code": cc("loinc", "9"), "subject": {"reference": "urn:uuid:p1"}}
+    mira("control ORU: una Observation de más sigue inventada",
+         ("fidelidad", "recurso_inventado", "OBX") in cuentan(j(ev(oru_msg(), oru_bundle([pac_oru(), dr(), obs1(), obs2(), x]), pe="oru_conv"))), True)
+
+
+def p31():
+    """Q-JZ-1 b: PID-8 fuera de la 0001 ya no es un valor imposible; el rechazo solo por él es rechazo incorrecto."""
+    err = {"codigo": "1", "texto": "genero"}
+    mira("rechazo con PID-8 X", cat(j(ev(msg(pid={8: "X"}), estado="error", error=err))), ("rechazo_incorrecto", "error"))
+    mira("rechazo con PID-8 X y sin PV1: aceptable", cat(j(ev(msg(pid={8: "X"}, sin_pv1=True), estado="error", error=err))), ("correcto", None))
+    mira("control PID-7 imposible: aceptable", cat(j(ev(msg(pid={7: "19801301"}), estado="error", error=err))), ("correcto", None))
+
+
+def p32():
+    """Etapa 37, tras la revisión a ciegas (jz/decision-jev-jz2.md, Q-JZ-6 b): L-CV-17 dice los dos riesgos de la regla de la 0136,
+    y el texto de versión del servidor nombra L-CV-17."""
+    import conversion as CV
+    import mcp_verificador as M
+    l17 = CV.L_CV["L-CV-17"]
+    mira("L-CV-17: una Observation de solo Y/N que no sale de ACC ni de PDA (PD1-7, o una inventada) se da por de ellos",
+         ("0136" in l17, "PD1-7" in l17, "inventada" in l17), (True, True, True))
+    mira("L-CV-17: una de ACC o PDA ya no ocupa el sitio de la de un OBX", "ya no ocupa el sitio de la de un OBX" in l17, True)
+    entradas = M.REVISION.split("; antes, ")          # la etapa más reciente, primero (Q-JZ-9 a)
+    mira("la versión del servidor: la primera entrada es la de la etapa 37, con L-CV-17",
+         (entradas[0].startswith("etapa 37"), "L-CV-17" in entradas[0]), (True, True))
+    mira("la versión del servidor: la entrada de la 14l, con L-CV-1..16",
+         [e for e in entradas if e.startswith("14l")][:1] and "L-CV-1..16" in [e for e in entradas if e.startswith("14l")][0], True)
+
 
 PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24,
-           p25, p26, p27, p28]
+           p25, p26, p27, p28, p29, p30, p31, p32]
 
 
 def main():

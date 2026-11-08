@@ -2689,10 +2689,16 @@
    "subtipo": "error"
   },
   "adt/A1-A02-09": {
-   "categoria": "correcto",
+   "categoria": "rechazo_incorrecto",
    "estado": "error",
-   "hallazgos": [],
-   "subtipo": null
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
   },
   "adt/A1-A03-10": {
    "categoria": "fallo_silencioso",
@@ -3035,10 +3041,16 @@
    "subtipo": "convertido"
   },
   "adt/A1-A11-25": {
-   "categoria": "correcto",
+   "categoria": "rechazo_incorrecto",
    "estado": "error",
-   "hallazgos": [],
-   "subtipo": null
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
   },
   "adt/A1-A11-26": {
    "categoria": "rechazo_incorrecto",
@@ -3077,10 +3089,16 @@
    "subtipo": "error"
   },
   "adt/A1-A11-29": {
-   "categoria": "correcto",
+   "categoria": "rechazo_incorrecto",
    "estado": "error",
-   "hallazgos": [],
-   "subtipo": null
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
   },
   "adt/A1-A13-30": {
    "categoria": "rechazo_incorrecto",
@@ -3131,10 +3149,16 @@
    "subtipo": "error"
   },
   "adt/A1-A13-34": {
-   "categoria": "correcto",
+   "categoria": "rechazo_incorrecto",
    "estado": "error",
-   "hallazgos": [],
-   "subtipo": null
+   "hallazgos": [
+    [
+     "MSH-9",
+     "rechazo",
+     "incorrecto"
+    ]
+   ],
+   "subtipo": "error"
   },
   "adt/A1-A31-35": {
    "categoria": "fallo_silencioso",
@@ -4614,11 +4638,6 @@
    "estado": "bundle",
    "hallazgos": [
     [
-     "PID-8",
-     "valor_imposible_aceptado",
-     "valor_imposible_convertido"
-    ],
-    [
      "PV1-2",
      "fidelidad",
      "valor_distinto"
@@ -4629,7 +4648,7 @@
      "dato_inventado"
     ]
    ],
-   "subtipo": "convertido+aceptado_imposible"
+   "subtipo": "convertido"
   },
   "adt/cap3-37-A04": {
    "categoria": "correcto",
@@ -6476,11 +6495,6 @@
    "estado": "bundle",
    "hallazgos": [
     [
-     "PID-8",
-     "valor_imposible_aceptado",
-     "valor_imposible_convertido"
-    ],
-    [
      "PV1-2",
      "fidelidad",
      "valor_distinto"
@@ -6496,7 +6510,7 @@
      "dato_inventado"
     ]
    ],
-   "subtipo": "convertido+aceptado_imposible"
+   "subtipo": "convertido"
   },
   "minimos/M02-genero-fuera-de-tabla-control": {
    "categoria": "fallo_silencioso",
@@ -8437,7 +8451,7 @@
    "version": "1.0"
   },
   "juez": {
-   "huella": "ff9f10876b910384b8e70c80841d9cf9b5b19fae7c398bfc194788c1fe82a1c8",
+   "huella": "4a75a2453c7a8473380c39b094d1d85163ab102ba6efa12578f35b265e4c856b",
    "servidor": "1.4"
   }
  },

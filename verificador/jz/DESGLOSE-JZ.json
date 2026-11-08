@@ -1,0 +1,38 @@
+{
+ "observation_sin_mapa_por_hecho": {
+  "ACC": 149,
+  "ACC/PDA": 180,
+  "PDA": 36
+ },
+ "tipos": {
+  "1: fhir_invalido y nota:version -> fhir_invalido": 136,
+  "1: nota:version -> nota:version": 140,
+  "1: rechazo aceptable -> aceptable": 28,
+  "1: rechazo aceptable -> incorrecto": 112,
+  "1: valor_imposible_convertido -> nota:convencion": 30,
+  "1: valor_imposible_convertido+fhir_invalido -> fhir_invalido": 53,
+  "2: ACC": 89,
+  "2: ACC y ACC/PDA": 60,
+  "2: PDA": 12,
+  "lectura: nota:version -> nota:version": 2
+ },
+ "un_ejemplo_por_tipo": {
+  "1: fhir_invalido y nota:version -> fhir_invalido": "ar/control/MS/evidencias/microsoft/adt/A1-A01-04.json",
+  "1: nota:version -> nota:version": "ar/control/L1/evidencias/linuxforhealth/adt/A1-A01-04.json",
+  "1: rechazo aceptable -> aceptable": "ar/control/L1/evidencias/linuxforhealth/adt/cap3-36-A04.json",
+  "1: rechazo aceptable -> incorrecto": "ar/control/L1/evidencias/linuxforhealth/adt/A1-A02-09.json",
+  "1: valor_imposible_convertido -> nota:convencion": "ar/control/L1/evidencias/linuxforhealth/minimos/M02-genero-fuera-de-tabla-caso.json",
+  "1: valor_imposible_convertido+fhir_invalido -> fhir_invalido": "ar/control/MS/evidencias/microsoft/adt/A1-A11-25.json",
+  "2: ACC": "ar/control/MS/evidencias/microsoft/minimos/R01-nulo-en-dtm-control.json",
+  "2: ACC y ACC/PDA": "ar/control/MS/evidencias/microsoft/muestras/ms-ADT-A01-01.json",
+  "2: PDA": "ar/control/MS/evidencias/microsoft/muestras/ms-ADT-A02-01.json",
+  "lectura: nota:version -> nota:version": "vx/vx2c/muestras-microsoft/evidencias/microsoft/muestras/ms-VXU-V04-01.json"
+ },
+ "veredictos": {
+  "correcto/None -> correcto/None": 28,
+  "correcto/None -> rechazo_incorrecto/error": 112,
+  "fallo_silencioso/aceptado_imposible -> fallo_silencioso/convertido": 20,
+  "fallo_silencioso/convertido -> fallo_silencioso/convertido": 439,
+  "fallo_silencioso/convertido+aceptado_imposible -> fallo_silencioso/convertido": 63
+ }
+}

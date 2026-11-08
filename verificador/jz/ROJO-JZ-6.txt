@@ -1,0 +1,5 @@
+== ROJO-6 de la etapa 37: P-CV-32 con las entradas del texto de versión (8-nov, tras la segunda pasada de la revisión a ciegas), contra el juez de antes del cuarto parche (0c9ba62, sin jz/parche_juez_jz4.py)
+  MAL P-CV-32 la versión del servidor: la primera entrada es la de la etapa 37, con L-CV-17: (False, False) != (True, True)
+  MAL P-CV-32 la versión del servidor: la entrada de la 14l, con L-CV-1..16: False != True
+PRUEBAS CONVERSIÓN: 2 MAL (144 comprobaciones, 32 pruebas)
+rc=1

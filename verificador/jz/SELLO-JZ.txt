@@ -1,0 +1,3 @@
+Etapa 37, sello de la previsión (2026-11-07T17:55:25+01:00), antes de correr con el juez nuevo el rejuicio, su control y las clases:
+20a87a0cd67ac0112ce84ace3b7c8e338424536798439a8fd987ca8e10266b52  jz/PREVISION-JZ.json
+juez nuevo (en el árbol, sin commit aún): f46be6dd75820e59

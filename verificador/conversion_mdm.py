@@ -220,7 +220,7 @@ def _octetos(ed4, ed5):
 
 def imposibles(m):
     """§2.3: los valores imposibles de un MDM (fijan el rechazo aceptable, Q-CV-D-7). Los de tabla, solo en 2.5 (L18)."""
-    out = CV._imposibles(m, "mdm")                                    # PID-7, PID-8 y OBX-5 NM, como en ADT y ORU
+    out = CV._imposibles(m, "mdm")                                    # PID-7 y OBX-5 NM, como en ADT y ORU (PID-8 no: etapa 37)
     v25 = _comp(m, _f(m, m.segs[0], 12), 1) in ("2.5", "")
     for i, txa in enumerate(m.segmentos("TXA"), 1):
         v = lambda n: _t(m, (_reps(m, _f(m, txa, n)) or [""])[0], 1)  # noqa: E731

@@ -1,0 +1,331 @@
+{
+ "etapa": 37,
+ "sellada": "antes de correr el rejuicio, su control y las clases con el juez nuevo (7-nov-2026)",
+ "como": "contada sobre la línea base del juez de antes con jz/prever_jz.py (reglas de jz/decision-jev-jz.md), sin correr el juez nuevo; las clases, sobre jz/CLASES-JZ-antes.json (el juez de antes, hoy)",
+ "rejuicio": {
+  "evidencias": 30118,
+  "conducta_1": {
+   "evidencias": 501,
+   "linuxforhealth": 310,
+   "microsoft": 191,
+   "rechazos": {
+    "total": 140,
+    "a_rechazo_incorrecto": 112,
+    "siguen_aceptables": 28
+   },
+   "nota": "en VXU ninguna: no hay NK1-15 fuera de la 0001 en las evidencias"
+  },
+  "conducta_2": {
+   "evidencias": 161,
+   "microsoft": 161,
+   "nota": "161 si se reconocen todas; menos si alguna Observation de PDA no tiene un campo de la 0136 con su valor"
+  },
+  "las_dos": 0,
+  "fuera": 0,
+  "faltan": 0,
+  "punto_cambia": 0,
+  "diferencias": 662,
+  "control": "las tres pasadas (PID-5, PID-8, RXA-20): toda evidencia con el defecto, «fuera»",
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 7,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 18,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 108,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   }
+  ]
+ },
+ "estudio": {
+  "N_nuevas_confirmadas": 15,
+  "D_ya_declaradas": {
+   "con_bloque_8": 31,
+   "sin_bloque_8": 30,
+   "por_que": "M-28 se reconoce por MC-ORU-7 (hecho OBX y recurso_inventado); el hallazgo nuevo da fuera:Observation|recurso_sin_mapa"
+  },
+  "C_convenciones": {
+   "antes": 16,
+   "despues": 17,
+   "por_que": "una clave nueva: linuxforhealth | PID-8 | la nota de convención (S, X o Z a unknown)"
+  },
+  "rechazos_nuevos": 2,
+  "dudosas": 3,
+  "M_mensajes": 368,
+  "clases": {
+   "L-4": {
+    "adt": "92 -> 96 (A1-A02-09, A1-A11-25, A1-A11-29 y A1-A13-34 pasan a rechazo incorrecto: MC-ADT-11)"
+   },
+   "M-28": {
+    "muestras": "7, con el bloque 8"
+   },
+   "M-16": {
+    "adt": "11, igual (fhir_invalido solo)"
+   },
+   "L-12": {
+    "adt": "1, igual"
+   }
+  }
+ },
+ "bases_ci": {
+  "LINEA-BASE-linuxforhealth.json": {
+   "cambian": 6,
+   "casos": {
+    "adt/A1-A02-09": "correcto -> rechazo_incorrecto",
+    "adt/A1-A11-25": "correcto -> rechazo_incorrecto",
+    "adt/A1-A11-29": "correcto -> rechazo_incorrecto",
+    "adt/A1-A13-34": "correcto -> rechazo_incorrecto",
+    "adt/cap3-36-A04-completada": "sin el hallazgo de PID-8; subtipo convertido+aceptado_imposible -> convertido",
+    "minimos/M02-genero-fuera-de-tabla-caso": "sin el hallazgo de PID-8; subtipo convertido+aceptado_imposible -> convertido"
+   },
+   "no_cambia": {
+    "adt/cap3-36-A04": "PID-8 S y sin PV1: sigue aceptable (las notas no van a la base)"
+   }
+  },
+  "LINEA-BASE-linuxforhealth-mensaje.json": {
+   "cambian": 6,
+   "casos": "los mismos 6"
+  },
+  "LINEA-BASE-juguete.json": {
+   "cambian": 0
+  },
+  "ejemplo-ci/ci/LINEA-BASE.json": {
+   "cambian": 0
+  },
+  "ejemplo-ci/ci/LINEA-BASE-propio.json": {
+   "cambian": 0
+  },
+  "en_todas": "la huella del juez"
+ },
+ "laboratorio": "las líneas base privadas de P-VX-22 y P-MD-25 (b, c) dejan de dar 0 diferencias: se rehacen con el juez nuevo cuando el rejuicio explique cada diferencia"
+}

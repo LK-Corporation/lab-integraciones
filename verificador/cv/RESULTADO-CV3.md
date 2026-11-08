@@ -268,4 +268,15 @@ mensajes públicos; además ve 31 de las ya declaradas, y 16 diferencias son con
 - el generador de E2 desplaza GT1 en las familias «comp» y «opci»;
 - hay dos muestras de LinuxForHealth mal formadas, que no se tocan porque son de terceros.
 
+## Marca de la etapa 37 (8-nov-2026)
+
+El juez de la etapa 37 (`RESULTADO-JUEZ.md`) deja de contar mal las dos conductas que encontró la etapa 36. Con él, el corpus de
+este estudio da la misma frase (15 nuevas, 31 ya declaradas, 16 convenciones):
+- **M-28:** la Observation de ACC o de PDA sale ahora como «recurso sin mapa», con el segmento por hecho. `cv/cv3_clases.py`
+  reconoce también ese mecanismo (bloque 8 del sello de la etapa 33); sin él, M-28 se quedaría sin casos.
+- **L-4:** suma 4 casos (`A1-A02-09`, `A1-A11-25`, `A1-A11-29` y `A1-A13-34`). LinuxForHealth los rechaza por el tipo de
+  mensaje, y el juez de antes daba el rechazo por aceptable por su PID-8 `X` o `Z`.
+
+`cv/CLASES-CV3.json` no se toca: conserva la huella de su juez.
+
 > *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

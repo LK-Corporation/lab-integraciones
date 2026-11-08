@@ -1,0 +1,6257 @@
+{
+ "ACC-PDA-cambiado": {
+  "control": {
+   "con_defecto": 161,
+   "con_defecto_y_fuera": 161,
+   "defecto": "ACC-PDA-cambiado"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 7,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 18,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 108,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "lectura",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 662,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 499,
+   "fuera": 161,
+   "lectura": 2
+  },
+  "punto_cambia": []
+ },
+ "OBX-por-ACC": {
+  "control": {
+   "con_defecto": 909,
+   "con_defecto_y_fuera": 909,
+   "defecto": "OBX-por-ACC"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 6,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 6,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 12,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 180,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 110,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 180,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 25,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 18,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 6,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 12,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 96,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "lectura",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 1438,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 499,
+   "2": 28,
+   "fuera": 909,
+   "lectura": 2
+  },
+  "punto_cambia": []
+ },
+ "PID-5": {
+  "control": {
+   "con_defecto": 23765,
+   "con_defecto_y_fuera": 23765,
+   "defecto": "PID-5"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 20,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 726,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1268,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 177,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 812,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1276,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 735,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 210,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 70,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 938,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1544,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 224,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 120,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23905,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 140,
+   "fuera": 23765
+  },
+  "punto_cambia": []
+ },
+ "PID-8": {
+  "control": {
+   "con_defecto": 23765,
+   "con_defecto_y_fuera": 23765,
+   "defecto": "PID-8"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 20,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 726,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1268,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 177,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 812,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1276,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 735,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 210,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 70,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 938,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1544,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 224,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 120,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23905,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 140,
+   "fuera": 23765
+  },
+  "punto_cambia": []
+ },
+ "PID-8-dentro-cuenta": {
+  "control": {
+   "con_defecto": 22737,
+   "con_defecto_y_fuera": 22737,
+   "defecto": "PID-8-dentro-cuenta"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 681,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1220,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 780,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1218,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 154,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 154,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 135,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 687,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 874,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1434,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 174,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 174,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 208,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 94,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23236,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 499,
+   "fuera": 22737
+  },
+  "punto_cambia": []
+ },
+ "PID-8-dentro-nota": {
+  "control": {
+   "con_defecto": 22737,
+   "con_defecto_y_fuera": 22737,
+   "defecto": "PID-8-dentro-nota"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "conducta": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 681,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 231,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 225,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 492,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1220,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 780,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1218,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 154,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 154,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 187,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 135,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 687,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 874,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1434,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 174,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 174,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 208,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 94,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23236,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 499,
+   "fuera": 22737
+  },
+  "punto_cambia": []
+ },
+ "RXA-20": {
+  "control": {
+   "con_defecto": 2334,
+   "con_defecto_y_fuera": 2334,
+   "defecto": "RXA-20"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 66,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "linuxforhealth",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 44,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 10,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "1",
+    "conversor": "microsoft",
+    "evidencias": 11,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 7,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 18,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 108,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "2",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "conducta": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 111,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 72,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "conducta": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "conducta": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 2994,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_conducta": {
+   "1": 499,
+   "2": 161,
+   "fuera": 2334
+  },
+  "punto_cambia": []
+ }
+}

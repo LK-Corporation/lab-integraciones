@@ -545,7 +545,7 @@ def p20():
     mira("perfil_guia_vxu con nivel y citas", bool(t["entradas"]) and all("nivel" in f and f.get("citas") for f in t["entradas"]), True)
     info = M.t_info({})[0]
     mira("info declara vxu_conv", ("vxu_conv" in info["puntos_entrada"], "vxu" in info["conversores"]), (True, True))
-    mira("control: perfil_guia_adt y _oru sin cambios", (len(CV.PERFIL_GUIA_ADT), len(CV.PERFIL_GUIA_ORU)), (21, 16))
+    mira("control: perfil_guia_adt y _oru sin cambios", (len(CV.PERFIL_GUIA_ADT), len(CV.PERFIL_GUIA_ORU)), (22, 16))  # etapa 37: L-CV-17
 
 
 def p21():
@@ -598,8 +598,24 @@ def p23():
     otra["segmentos"] = [s.replace("LOT-B01", "LOT-B99") for s in otra["segmentos"]]
     mira("control: una copia con un campo distinto rompe la firma", bool(BV.firma(bases + [otra])), True)
 
+# ---------------------------------------------------------------------------- etapa 37: NK1-15 y el rechazo por PID-8
+def p24():
+    """Conducta 1 en VXU (jz/decision-jev-jz.md): NK1-15 fuera de la 0001 es convención si el código es de administrative-gender
+    y FHIR inválido si no; PID-8 fuera de la 0001 ya no hace aceptable el rechazo (Q-JZ-1 b)."""
+    nk1 = lambda v: seg("NK1", {1: "1", 2: "Prueba^Lucia^^^^^L", 3: "MTH^Madre^HL70063", 5: "^PRN^PH^^^^5551234", 15: v, 16: "19900301"})  # noqa: E731
+    r = juzga(msg(antes_orden=[nk1("S")]), bundle(extra=[dict(madre(), gender="unknown")]))
+    mira("NK1-15 S a unknown: convención", (sh(r), "convencion" in notas(r)), ([], True))
+    r = juzga(msg(antes_orden=[nk1("S")]), bundle(extra=[dict(madre(), gender="S")]))
+    mira("NK1-15 S a S: FHIR inválido", sh(r), [("fhir_invalido", "NK1-15")])
+    r = juzga(msg(antes_orden=[nk1("S")]), bundle(extra=[{k: v for k, v in madre().items() if k != "gender"}]))
+    mira("NK1-15 S sin gender: nada", [h for h in r["hallazgos"] if h["hecho"] == "NK1-15"], [])
+    mira("control NK1-15 F a male", sh(juzga(msg(antes_orden=[nk1("F")]), bundle(extra=[dict(madre(), gender="male")]))),
+         [("valor_distinto", "NK1-15")])
+    r = j(ev_vxu(msg(pid={8: "X"}), estado="error", error={"codigo": "1", "texto": "genero"}))
+    mira("rechazo de un VXU con PID-8 X", cat(r), ("rechazo_incorrecto", "error"))
 
-PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23]
+
+PRUEBAS = [p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24]
 
 
 def main():

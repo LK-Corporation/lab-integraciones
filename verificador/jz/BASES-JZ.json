@@ -1,0 +1,69 @@
+{
+ "antes": "387bed8",
+ "bases": {
+  "LINEA-BASE-juguete.json": {
+   "cambian": [],
+   "casos": 390,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "ff9f10876b910384",
+    "4a75a2453c7a8473"
+   ]
+  },
+  "LINEA-BASE-linuxforhealth-mensaje.json": {
+   "cambian": [
+    "adt/A1-A02-09",
+    "adt/A1-A11-25",
+    "adt/A1-A11-29",
+    "adt/A1-A13-34",
+    "adt/cap3-36-A04-completada",
+    "minimos/M02-genero-fuera-de-tabla-caso"
+   ],
+   "casos": 458,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "ff9f10876b910384",
+    "4a75a2453c7a8473"
+   ]
+  },
+  "LINEA-BASE-linuxforhealth.json": {
+   "cambian": [
+    "adt/A1-A02-09",
+    "adt/A1-A11-25",
+    "adt/A1-A11-29",
+    "adt/A1-A13-34",
+    "adt/cap3-36-A04-completada",
+    "minimos/M02-genero-fuera-de-tabla-caso"
+   ],
+   "casos": 458,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "ff9f10876b910384",
+    "4a75a2453c7a8473"
+   ]
+  }
+ },
+ "control": {
+  "LINEA-BASE-juguete.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso no previsto cambia (adt/A01-001)": "cae"
+  },
+  "LINEA-BASE-linuxforhealth-mensaje.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso no previsto cambia (adt/A01-001)": "cae",
+   "un caso previsto no cambia (adt/A1-A02-09)": "cae"
+  },
+  "LINEA-BASE-linuxforhealth.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso no previsto cambia (adt/A01-001)": "cae",
+   "un caso previsto no cambia (adt/A1-A02-09)": "cae"
+  }
+ },
+ "resultado": "CUADRA"
+}

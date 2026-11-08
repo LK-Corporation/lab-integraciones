@@ -1,0 +1,11 @@
+inicio=2026-11-08T12:57:18+01:00
+rc_bases=0
+rc_herramienta=0
+cmp=0
+linea_base: pasa (lo esperado); nuevos 0, arreglos 0, casos nuevos 0, ausentes 0
+igual=0
+diferencias juguete (1): .creada_de.juez.huella: 58fa0df16e7fea30afd2 -> 4a75a2453c7a8473380c
+diferencias linuxforhealth (1): .creada_de.juez.huella: 58fa0df16e7fea30afd2 -> 4a75a2453c7a8473380c
+diferencias linuxforhealth-mensaje (1): .creada_de.juez.huella: 58fa0df16e7fea30afd2 -> 4a75a2453c7a8473380c
+fin=2026-11-08T13:46:50+01:00
+FIN

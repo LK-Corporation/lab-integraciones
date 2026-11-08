@@ -1,0 +1,99 @@
+{
+ "ACC-PDA-cambiado": {
+  "con_defecto": 161,
+  "firmas": {
+   "entra fidelidad/recurso_sin_mapa ACC | sale fidelidad/recurso_inventado OBX": 12,
+   "entra fidelidad/recurso_sin_mapa ACC/PDA | entra fidelidad/recurso_sin_mapa PDA | sale fidelidad/recurso_inventado OBX": 60,
+   "entra fidelidad/recurso_sin_mapa PDA | sale fidelidad/recurso_inventado OBX": 89
+  },
+  "fuera": 161
+ },
+ "OBX-por-ACC": {
+  "con_defecto": 909,
+  "firmas": {
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/recurso_sin_mapa ACC/PDA | sale fidelidad/recurso_inventado OBX | sale nota/fuera_proyeccion OBX": 60,
+   "entra fidelidad/recurso_sin_mapa ACC | sale fidelidad/recurso_inventado OBX | sale nota/fuera_proyeccion OBX": 73,
+   "entra fidelidad/recurso_sin_mapa ACC | sale nota/fuera_proyeccion OBX": 776
+  },
+  "fuera": 909
+ },
+ "PID-5": {
+  "con_defecto": 23765,
+  "firmas": {
+   "entra fidelidad/fhir_invalido PID-8 | entra fidelidad/valor_distinto PID-5 | sale valor_imposible_aceptado/valor_imposible_convertido+fhir_invalido PID-8 | veredicto fallo_silencioso -> fallo_silencioso": 53,
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/recurso_sin_mapa ACC/PDA | entra fidelidad/valor_distinto PID-5 | sale fidelidad/recurso_inventado OBX | sale fidelidad/valor_distinto PID-5": 60,
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/valor_distinto PID-5 | sale fidelidad/recurso_inventado OBX": 77,
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/valor_distinto PID-5 | sale fidelidad/recurso_inventado OBX | sale fidelidad/valor_distinto PID-5": 12,
+   "entra fidelidad/recurso_sin_mapa PDA | entra fidelidad/valor_distinto PID-5 | sale fidelidad/recurso_inventado OBX | sale fidelidad/valor_distinto PID-5": 12,
+   "entra fidelidad/valor_distinto PID-5": 16060,
+   "entra fidelidad/valor_distinto PID-5 | entra nota/convencion PID-8 | sale valor_imposible_aceptado/valor_imposible_convertido PID-8 | veredicto fallo_silencioso -> fallo_silencioso": 30,
+   "entra fidelidad/valor_distinto PID-5 | entra nota/version NK1-15 | sale fidelidad/valor_distinto PID-5 | sale nota/version NK1-15": 2,
+   "entra fidelidad/valor_distinto PID-5 | entra nota/version PID-8 | sale nota/version PID-8": 140,
+   "entra fidelidad/valor_distinto PID-5 | sale fidelidad/valor_distinto PID-5": 108,
+   "entra fidelidad/valor_distinto PID-5 | sale nota/version PID-8": 136,
+   "entra fidelidad/valor_distinto PID-5 | veredicto correcto -> fallo_silencioso": 1835,
+   "entra fidelidad/valor_distinto+codigo_mal_mapeado PID-5 | sale fidelidad/codigo_mal_mapeado PID-5": 4,
+   "entra fidelidad/valor_distinto+dato_inventado PID-5 | sale fidelidad/dato_inventado PID-5": 11,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/dato_perdido PID-5": 2316,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/valor_distinto+dato_perdido PID-5": 2909
+  },
+  "fuera": 23765
+ },
+ "PID-8": {
+  "con_defecto": 23765,
+  "firmas": {
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/recurso_sin_mapa ACC/PDA | entra fidelidad/valor_distinto PID-8 | sale fidelidad/recurso_inventado OBX": 60,
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/valor_distinto PID-8 | sale fidelidad/recurso_inventado OBX": 89,
+   "entra fidelidad/recurso_sin_mapa PDA | entra fidelidad/valor_distinto PID-8 | sale fidelidad/recurso_inventado OBX": 12,
+   "entra fidelidad/valor_distinto PID-8": 20512,
+   "entra fidelidad/valor_distinto PID-8 | entra nota/convencion PID-8 | sale valor_imposible_aceptado/valor_imposible_convertido PID-8 | veredicto fallo_silencioso -> fallo_silencioso": 30,
+   "entra fidelidad/valor_distinto PID-8 | entra nota/version NK1-15 | sale nota/version NK1-15": 2,
+   "entra fidelidad/valor_distinto PID-8 | entra nota/version PID-8 | sale nota/version PID-8": 140,
+   "entra fidelidad/valor_distinto PID-8 | sale fidelidad/valor_distinto PID-8": 879,
+   "entra fidelidad/valor_distinto PID-8 | veredicto correcto -> fallo_silencioso": 1835,
+   "entra fidelidad/valor_distinto+fhir_invalido PID-8 | sale fidelidad/fhir_invalido PID-8": 17,
+   "entra fidelidad/valor_distinto+fhir_invalido PID-8 | sale fidelidad/fhir_invalido PID-8 | sale nota/version PID-8": 136,
+   "entra fidelidad/valor_distinto+fhir_invalido PID-8 | sale valor_imposible_aceptado/valor_imposible_convertido+fhir_invalido PID-8 | veredicto fallo_silencioso -> fallo_silencioso": 53
+  },
+  "fuera": 23765
+ },
+ "PID-8-dentro-cuenta": {
+  "con_defecto": 22737,
+  "firmas": {
+   "entra fidelidad/fhir_invalido PID-8": 20027,
+   "entra fidelidad/fhir_invalido PID-8 | entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/recurso_sin_mapa ACC/PDA | sale fidelidad/recurso_inventado OBX": 60,
+   "entra fidelidad/fhir_invalido PID-8 | entra fidelidad/recurso_sin_mapa ACC | sale fidelidad/recurso_inventado OBX": 89,
+   "entra fidelidad/fhir_invalido PID-8 | entra fidelidad/recurso_sin_mapa PDA | sale fidelidad/recurso_inventado OBX": 12,
+   "entra fidelidad/fhir_invalido PID-8 | entra nota/version NK1-15 | sale nota/version NK1-15": 2,
+   "entra fidelidad/fhir_invalido PID-8 | veredicto correcto -> fallo_silencioso": 1668,
+   "entra fidelidad/fhir_invalido+valor_distinto PID-8 | sale fidelidad/valor_distinto PID-8": 879
+  },
+  "fuera": 22737
+ },
+ "PID-8-dentro-nota": {
+  "con_defecto": 22737,
+  "firmas": {
+   "entra fidelidad/recurso_sin_mapa ACC | entra fidelidad/recurso_sin_mapa ACC/PDA | entra nota/convencion PID-8 | sale fidelidad/recurso_inventado OBX": 60,
+   "entra fidelidad/recurso_sin_mapa ACC | entra nota/convencion PID-8 | sale fidelidad/recurso_inventado OBX": 89,
+   "entra fidelidad/recurso_sin_mapa PDA | entra nota/convencion PID-8 | sale fidelidad/recurso_inventado OBX": 12,
+   "entra nota/convencion PID-8": 22574,
+   "entra nota/convencion PID-8 | entra nota/version NK1-15 | sale nota/version NK1-15": 2
+  },
+  "fuera": 22737
+ },
+ "RXA-20": {
+  "con_defecto": 2334,
+  "firmas": {
+   "entra fidelidad/valor_distinto RXA(2)-20": 7,
+   "entra fidelidad/valor_distinto RXA(2)-20 | entra fidelidad/valor_distinto RXA(3)-20 | entra fidelidad/valor_distinto RXA-20": 40,
+   "entra fidelidad/valor_distinto RXA(2)-20 | entra fidelidad/valor_distinto RXA(3)-20 | entra fidelidad/valor_distinto RXA-20 | entra nota/version NK1-15 | sale nota/version NK1-15": 1,
+   "entra fidelidad/valor_distinto RXA(2)-20 | entra fidelidad/valor_distinto RXA-20": 88,
+   "entra fidelidad/valor_distinto RXA-20": 2177,
+   "entra fidelidad/valor_distinto RXA-20 | entra nota/version NK1-15 | sale nota/version NK1-15": 1,
+   "entra fidelidad/valor_distinto RXA-20 | sale fidelidad/valor_distinto RXA-20": 2,
+   "entra fidelidad/valor_distinto RXA-20 | veredicto correcto -> fallo_silencioso": 2,
+   "entra fidelidad/valor_distinto+codigo_mal_mapeado RXA-20 | sale fidelidad/codigo_mal_mapeado RXA-20": 16
+  },
+  "fuera": 2334
+ }
+}

@@ -1,0 +1,17 @@
+== ROJO-4 de la etapa 37: la prueba del clasificador, segunda versión (8-nov, tras la revisión a ciegas), contra el clasificador de antes (d02c0c6)
+  MAL control: el mismo cambio en NK1-15 (el primero, = M, dentro de la 0001) es de fuera: {'1'} != {'fuera'}
+  MAL control: rechazo con PID-8 = M, dentro de la 0001, es de fuera: {'1'} != {'fuera'}
+  MAL control: un fhir_invalido de más en PID-8 = M es de fuera: {'1'} != {'fuera'}
+  MAL control: una nota de convención de más en PID-8 = M es de fuera: {'1'} != {'fuera'}
+  MAL control: un valor_imposible_convertido que entra (el juez nuevo no lo da) es de fuera: {'1'} != {'fuera'}
+  MAL control: PID-8 vacío y un hallazgo de PID-8, de fuera: {'1'} != {'fuera'}
+  MAL la lectura de NK1-15 = F^^^M, aparte: {'1'} != {'lectura'}
+  MAL control: con F^^^M, un hallazgo que cuenta es de fuera: {'1'} != {'fuera'}
+  MAL control: un recurso_inventado nuevo en un ADT con ACC es de fuera: {'2'} != {'fuera'}
+  MAL control: sale inventada una Observation y entra sin mapa otra, de fuera: {'2'} != {'fuera'}
+  MAL control: el dato citado no es el del mensaje, de fuera: {'2'} != {'fuera'}
+  MAL control: el hecho no es el segmento del texto, de fuera: {'2'} != {'fuera'}
+  MAL control: el campo de la 0136 no tiene ese valor, de fuera: {'2'} != {'fuera'}
+  MAL control: ACC/PDA con un solo segmento en el mensaje, de fuera: {'2'} != {'fuera'}
+PRUEBAS REJUICIO JZ: 14 MAL (19 comprobaciones)
+rc=1

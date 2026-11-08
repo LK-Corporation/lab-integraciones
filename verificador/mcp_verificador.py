@@ -56,7 +56,8 @@ except Exception as _ex:                          # AP-3
     sys.exit(2)
 
 SERVIDOR = "1.4"                                   # 1.4: etapa de MDM (26); la identidad sigue siendo la huella
-REVISION = ("etapa de MDM (26): mdm_conv y perfil «guía» de DocumentReference (S-MD-1..17), L-MD-1..17, AMB-MD-1..25, Q-MD-D-1..12, "
+REVISION = ("etapa 37: las dos conductas de la etapa 36 en adt_conv y vxu_conv, recurso_sin_mapa (S-CV-5) y L-CV-17; "
+            "antes, etapa de MDM (26): mdm_conv y perfil «guía» de DocumentReference (S-MD-1..17), L-MD-1..17, AMB-MD-1..25, Q-MD-D-1..12, "
             "DV-MD-0..14; antes, 20: vxu_conv y perfil «guía» de Immunization (S-VX-1..14), L-VX-1..14, AMB-VX-1..13, Q-VX-D-1..10, "
             "DV-VX-1..9; antes, 14l: adt_conv/oru_conv y perfil «guía» (S-CV-1..6), L-CV-1..16, AMB-CV-1..10, "
             "Q-CV-D-1..14 (abiertas Q-CV-D-15/16), DV-CV-1..18; antes, 14k: S104-S107, L-VE-1..8, DV-VE-1..14")

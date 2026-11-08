@@ -115,3 +115,7 @@ cdff82605e644175b677917539efa2518ec702719eb4c41bc9f10be988f8a224  ga/preparar_pu
 SELLO DE LA ETAPA 33, bloque 7 (7-nov-2026, 17:02): desde la etapa 36, la descripción de M-28 corregida (Q-CA-2, ca/decision-jev-ca3.md)
 # M-28 también cuenta la Observation de ACC (injury-incident); solo cambia su texto, no la clase ni sus casos
 0f451e27afc814a46580a19aedce8b1934bfaeec1e28b92150a449499c7d9167  cv/cv3_clases.py
+
+SELLO DE LA ETAPA 33, bloque 8 (7-nov-2026, 17:58): desde la etapa 37, M-28 reconoce también el hallazgo nuevo del juez (jz/decision-jev-jz.md, Q-JZ-2 a)
+# M-28: {MC-ORU-7} -> {MC-ORU-7, fuera:Observation|recurso_sin_mapa}; la clase, su texto y sus casos no cambian
+03f8bf980b0b3b1bde73684a11e46462394e9d45fad093dbd2794ab1ab3baa89  cv/cv3_clases.py

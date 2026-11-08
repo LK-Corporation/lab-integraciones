@@ -1,0 +1,5 @@
+== ROJO-3 de la etapa 37: la prueba del clasificador antes de escribirlo (jz/rejuicio_jz.py no existe)
+  File "jz/prueba_rejuicio_jz.py", line 37, in main
+    import rejuicio_jz as R
+ModuleNotFoundError: No module named 'rejuicio_jz'
+rc=1

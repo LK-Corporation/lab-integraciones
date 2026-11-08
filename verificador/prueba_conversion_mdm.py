@@ -54,7 +54,9 @@ def huella(o):
 
 
 # Medidos el 31-oct con el juez bde94016ca58 (HEAD 8502678), antes de MDM (P-MD-1 base y P-MD-25 d).
-ANTES = {"mdm": "75ab855348d66163", "C": "5dabbc37ec4a7909", "INFO": "d8b3a2eb651b1ac4", "TIPOS_PROY": "415c77f208321377",
+# Etapa 37 (7-nov): INFO cambia a propósito (S-CV-5 y L-CV-17; antes, d8b3a2eb651b1ac4); C y lo demás, igual.
+# Y el 8-nov, tras la revisión a ciegas: L-CV-17 con los dos riesgos de la regla de la 0136 (antes, 3b2cbbf9084ffdc1).
+ANTES = {"mdm": "75ab855348d66163", "C": "5dabbc37ec4a7909", "INFO": "cbb618aa5d7c14dc", "TIPOS_PROY": "415c77f208321377",
          "CVX.TIPOS": "9cf86194ce1b29a6", "PUNTOS": "08fc6c6fea93f4af", "MAPAS": "6fb1b433ac5d4d8f"}
 V2 = "http://terminology.hl7.org/CodeSystem/v2-%s"
 V3_CONF = "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -778,7 +780,7 @@ def p24():
          {"cuenta": 39, "convencion": 2, "nota": 4, "forma": 1})
     mira("control: perfiles de ADT, ORU y VXU sin cambios", (len(M.t_tabla({"tabla": "perfil_guia_adt"})[0]["entradas"]),
                                                               len(M.t_tabla({"tabla": "perfil_guia_oru"})[0]["entradas"]),
-                                                              len(M.t_tabla({"tabla": "perfil_guia_vxu"})[0]["entradas"])), (21, 16, 27))
+                                                              len(M.t_tabla({"tabla": "perfil_guia_vxu"})[0]["entradas"])), (22, 16, 27))
     info = M.t_info({})[0]
     mira("info declara mdm_conv", ("mdm_conv" in info["puntos_entrada"], "mdm" in info["conversores"]), (True, True))
     mira("punto de MDM", VC.punto(msg()), "mdm_conv")

@@ -1,5 +1,9 @@
 # RESULTADO de la etapa 36: las 2 candidatas de la etapa 33 (7-nov-2026)
 
+**Completado el 8-nov (etapa 37):** el juez deja de contar mal las dos conductas de este resultado
+([`RESULTADO-JUEZ.md`](RESULTADO-JUEZ.md)). La `S` a `unknown` de LinuxForHealth es ahora una nota de convención, y la
+Observation de ACC, un «recurso sin mapa».
+
 > **De las 2 candidatas de la etapa 33, ninguna es nueva.** La de Microsoft es M-28, una de las 31 ya declaradas del estudio de
 > conversores, que el estudio ya contaba en las muestras de Microsoft. La de LinuxForHealth es una convención, y el juez la cuenta
 > por error.
@@ -92,7 +96,7 @@ Las dos primeras son del ANTES del estudio de conversores (`ANTES-ETAPA-CONVERSO
   - Su función para las demás tablas de usuario dice «fuera de la tabla (user-defined), convención».
   - Las 16 convenciones del estudio son notas de convención del juez, y esta no es una de ellas: el juez la cuenta.
   - **El juez se equivoca aquí:** por la regla, una convención no cuenta. El hallazgo seguirá saliendo, porque el juez no cambia en
-    esta etapa.
+    esta etapa (lo arregla la etapa 37).
 
 **Clase: convención.**
 
@@ -102,7 +106,7 @@ Las dos primeras son del ANTES del estudio de conversores (`ANTES-ETAPA-CONVERSO
 - **El resultado de la etapa 33** lleva una línea arriba, como hizo la 28 con el de la 26, y la marca donde dice que las
   candidatas no se confirmaron. También la marca su sección del README. Sus JSON sellados (`ga/CIFRAS-GA-B.json` y
   `ga/CLASES-GA-v2.json`) se quedan como están.
-- **El juez no cambia en esta etapa** (lo fija el ANTES).
+- **El juez no cambia en esta etapa** (lo fija el ANTES; lo cambia la etapa 37).
 - **Las cifras del estudio no cambian.** De su texto, solo la descripción de M-28.
   - Las 15 nuevas, las 31 ya declaradas y las 16 convenciones de los conversores siguen igual.
   - La candidata de Microsoft era ya M-28, y la de LinuxForHealth es una convención que el juez cuenta por error, no una de las 16.

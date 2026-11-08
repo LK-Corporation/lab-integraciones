@@ -186,7 +186,7 @@ def grupos(m):
 
 def imposibles(m):
     """§2.3: los valores imposibles de un VXU (fijan el rechazo aceptable, Q-CV-D-7). Los de tabla, solo en 2.5 (L18)."""
-    out = CV._imposibles(m, "vxu")                                   # PID-7, PID-8 y OBX-5 NM, como en ADT y ORU
+    out = CV._imposibles(m, "vxu")                                   # PID-7 y OBX-5 NM, como en ADT y ORU (PID-8 no: etapa 37)
     v25 = _comp(m, _f(m, m.segs[0], 12), 1) in ("2.5", "")
     for g in grupos(m)[0]:
         rxa = g["rxa"]
@@ -1008,10 +1008,13 @@ def _genero(J, m, v, obs, hecho, ruta):
             _cuenta(J, "dato_inventado", hecho, "%s.gender %r sin NK1-15" % (ruta, obs))
         return
     t = CV.mapa("0001", v)
-    if t == FUERA:
-        if obs is not None:
-            _cuenta(J, "valor_imposible_convertido", hecho, "%s.gender %r desde %r, fuera de la 0001" % (ruta, obs, v),
-                     clase="valor_imposible_aceptado", tabla=True)
+    if t == FUERA:                   # etapa 37: la 0001 es user-defined; fuera del mapa, convención (Q-JZ-5 a: sin gender, nada)
+        if obs in CV.GENERO_FHIR:
+            J.hs.append(CV._h("nota", "convencion" if J.v25 else "version", hecho,
+                              "%s.gender %r para %r, fuera del ConceptMap (la 0001 es user-defined)" % (ruta, obs, v), cuenta=False,
+                              citas=list(_cit(hecho)) + ["[E3 Ch03.txt:5032-5044]"]))
+        elif obs is not None:
+            _cuenta(J, "fhir_invalido", hecho, "%s.gender %r fuera de administrative-gender (required)" % (ruta, obs))
         return
     if obs is None:
         _cuenta(J, "dato_perdido", hecho, "%s.gender: falta %r (de %r)" % (ruta, t[1], v))
