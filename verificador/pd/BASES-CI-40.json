@@ -1,0 +1,186 @@
+{
+ "juguete": {
+  "corrida_1": {
+   "rc": 0,
+   "juez": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+   "huella": "f0c40cac6025e3db8a88173f4e3bf0da48d18e389e3da590e5e8300df9c55de4",
+   "huella_con_nombres": "68ce758661279daa8cbdf57bb2e79da83d6c23a3c58749df0b4a18d7adcb4958",
+   "imagen_digest": null,
+   "n": {
+    "adt": 270,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 0,
+    "minimos": 0,
+    "propio": 0,
+    "mdm": 40
+   },
+   "sin_evidencia": [],
+   "reintentos": [],
+   "segundos": 0.1
+  },
+  "corrida_2": {
+   "rc": 0,
+   "juez": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+   "huella": "f0c40cac6025e3db8a88173f4e3bf0da48d18e389e3da590e5e8300df9c55de4",
+   "huella_con_nombres": "68ce758661279daa8cbdf57bb2e79da83d6c23a3c58749df0b4a18d7adcb4958",
+   "imagen_digest": null,
+   "n": {
+    "adt": 270,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 0,
+    "minimos": 0,
+    "propio": 0,
+    "mdm": 40
+   },
+   "sin_evidencia": [],
+   "reintentos": [],
+   "segundos": 0.1
+  },
+  "igual": {
+   "rc": 0,
+   "salida": "linea_base: pasa (lo esperado); nuevos 0, arreglos 0, casos nuevos 0, ausentes 0"
+  },
+  "categorias": {
+   "adt": {
+    "fallo_silencioso": 267,
+    "correcto": 3
+   },
+   "mdm": {
+    "fallo_silencioso": 40
+   },
+   "oru": {
+    "fallo_silencioso": 39,
+    "indeterminado": 1
+   },
+   "vxu": {
+    "fallo_silencioso": 40
+   }
+  },
+  "n_casos": 390,
+  "positivo": {
+   "rc": 0,
+   "nuevos": 344,
+   "nuevos_distintos": [
+    [
+     "PID-7",
+     "fidelidad",
+     "dato_perdido"
+    ]
+   ],
+   "casos_con_el_hallazgo": 344
+  }
+ },
+ "linuxforhealth": {
+  "corrida_1": {
+   "rc": 0,
+   "juez": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "n": {
+    "adt": 270,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 0,
+    "minimos": 68,
+    "propio": 0,
+    "mdm": 40
+   },
+   "sin_evidencia": [],
+   "reintentos": [],
+   "segundos": 20.9
+  },
+  "corrida_2": {
+   "rc": 0,
+   "juez": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "n": {
+    "adt": 270,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 0,
+    "minimos": 68,
+    "propio": 0,
+    "mdm": 40
+   },
+   "sin_evidencia": [],
+   "reintentos": [],
+   "segundos": 20.7
+  },
+  "igual": {
+   "rc": 0,
+   "salida": "linea_base: pasa (lo esperado); nuevos 0, arreglos 0, casos nuevos 0, ausentes 0"
+  },
+  "categorias": {
+   "adt": {
+    "fallo_silencioso": 165,
+    "rechazo_incorrecto": 98,
+    "correcto": 7
+   },
+   "mdm": {
+    "fallo_silencioso": 40
+   },
+   "minimos": {
+    "fallo_silencioso": 45,
+    "correcto": 21,
+    "rechazo_incorrecto": 2
+   },
+   "oru": {
+    "fallo_silencioso": 36,
+    "correcto": 4
+   },
+   "vxu": {
+    "fallo_silencioso": 40
+   }
+  },
+  "n_casos": 458
+ },
+ "linuxforhealth-mensaje": {
+  "corrida_1": {
+   "rc": 0,
+   "juez": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+   "huella": "ac41f71b98ee75bac637ecd4b68f58b463f0798bf66cfa941f4194cb2a50acf2",
+   "huella_con_nombres": "7ad4d5463640901ae4eccd12afd34d6a6ce70c7fa169575caca148c8232db6aa",
+   "imagen_digest": "sha256:7bb84a451705605a47d24eb844d4d9ab03e33e131a507db76aafe25db3907f64",
+   "n": {
+    "adt": 270,
+    "oru": 40,
+    "vxu": 40,
+    "muestras": 0,
+    "minimos": 68,
+    "propio": 0,
+    "mdm": 40
+   },
+   "sin_evidencia": [],
+   "reintentos": [],
+   "segundos": 1462.9
+  },
+  "categorias": {
+   "adt": {
+    "fallo_silencioso": 165,
+    "rechazo_incorrecto": 98,
+    "correcto": 7
+   },
+   "mdm": {
+    "fallo_silencioso": 40
+   },
+   "minimos": {
+    "fallo_silencioso": 45,
+    "correcto": 21,
+    "rechazo_incorrecto": 2
+   },
+   "oru": {
+    "fallo_silencioso": 36,
+    "correcto": 4
+   },
+   "vxu": {
+    "fallo_silencioso": 40
+   }
+  },
+  "n_casos": 458
+ }
+}

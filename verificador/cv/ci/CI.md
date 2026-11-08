@@ -173,7 +173,8 @@ otro que suba el pin. Es lo que le pasa a cualquier proyecto.
 
 Si el juez del commit nuevo es otro, la comparación lo avisa (`juez_distinto`), y un hallazgo nuevo puede venir del juez y no
 de tu conversor: lo dice el resultado de la etapa que lo cambió. La 37, por ejemplo, cambió lo que dice de dos conductas
-([`../../RESULTADO-JUEZ.md`](../../RESULTADO-JUEZ.md)). El ejemplo rehace sus bases en el mismo push que sube el pin.
+([`../../RESULTADO-JUEZ.md`](../../RESULTADO-JUEZ.md)); la 40 lo cambió sin que cambiara ningún caso de las bases, solo la
+huella del juez ([`../../RESULTADO-PD17.md`](../../RESULTADO-PD17.md)). El ejemplo rehace sus bases en el mismo push que sube el pin.
 
 ## El run en rojo, para verlo fallar
 

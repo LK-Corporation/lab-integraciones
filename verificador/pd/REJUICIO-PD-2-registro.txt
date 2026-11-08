@@ -1,0 +1,6 @@
+carpetas: 45
+rejuicio pd (comparar): 30118 evidencias, 0 diferencias {}; faltan 0, punto cambia 0; juez 3ce339c745ef
+comparar rc=0
+juzgar_cv2 rc=0
+cv3_clases rc=0
+FIN REJUICIO PD 2

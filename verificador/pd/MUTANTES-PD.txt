@@ -1,0 +1,22 @@
+# Etapa 40: los mutantes del juez contra prueba_conversion.py, con las pruebas del primer parche (afa1739). 2026-11-08T18:33:28+01:00
+## python3 pd/mutantes_pd.py <copia>
+sin el criterio del sistema              MUERE P-CV-33
+sin el criterio del código               MUERE P-CV-33
+la última candidata                      MUERE P-CV-33
+sin preferir el sistema                  MUERE P-CV-33
+sin apartar las del OBX                  MUERE P-CV-33
+la de PD1-7 sigue en la lista            MUERE P-CV-33
+ausente como nota                        MUERE P-CV-33
+sin ausente                              MUERE P-CV-33 (excepción)
+solo en 2.5                              MUERE P-CV-33
+sin status                               MUERE P-CV-33
+sin sujeto                               MUERE P-CV-33
+valor y código cambiados                 MUERE P-CV-33
+convención en toda versión               MUERE P-CV-33
+nota aunque el código sea el mismo       VIVE  
+el campo entero                          VIVE  
+PD1-6 en vez de PD1-7                    MUERE P-CV-33
+la 0315 con F a N                        MUERE P-CV-33, P-CV-34
+el paso de PD1-7 tras ACC y PDA          MUERE P-CV-33
+mutantes: 18, vivos: 2 ['nota aunque el código sea el mismo', 'el campo entero']
+rc=1

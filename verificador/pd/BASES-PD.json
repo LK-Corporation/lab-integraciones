@@ -1,0 +1,54 @@
+{
+ "antes": "8a20784",
+ "bases": {
+  "LINEA-BASE-juguete.json": {
+   "casos": 390,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "4a75a2453c7a8473",
+    "6b98df04859f41ab"
+   ]
+  },
+  "LINEA-BASE-linuxforhealth-mensaje.json": {
+   "casos": 458,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "4a75a2453c7a8473",
+    "6b98df04859f41ab"
+   ]
+  },
+  "LINEA-BASE-linuxforhealth.json": {
+   "casos": 458,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "4a75a2453c7a8473",
+    "6b98df04859f41ab"
+   ]
+  }
+ },
+ "control": {
+  "LINEA-BASE-juguete.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez es otra que la publicada": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso cambia (adt/A01-001)": "cae"
+  },
+  "LINEA-BASE-linuxforhealth-mensaje.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez es otra que la publicada": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso cambia (adt/A01-001)": "cae"
+  },
+  "LINEA-BASE-linuxforhealth.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez es otra que la publicada": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso cambia (adt/A01-001)": "cae"
+  }
+ },
+ "huella_publicada": "6b98df04859f41abd13691052a5685bd65b0463edf36abcf97ab2618c5aaafd0",
+ "resultado": "CUADRA"
+}

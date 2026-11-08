@@ -545,7 +545,7 @@ def p20():
     mira("perfil_guia_vxu con nivel y citas", bool(t["entradas"]) and all("nivel" in f and f.get("citas") for f in t["entradas"]), True)
     info = M.t_info({})[0]
     mira("info declara vxu_conv", ("vxu_conv" in info["puntos_entrada"], "vxu" in info["conversores"]), (True, True))
-    mira("control: perfil_guia_adt y _oru sin cambios", (len(CV.PERFIL_GUIA_ADT), len(CV.PERFIL_GUIA_ORU)), (22, 16))  # etapa 37: L-CV-17
+    mira("control: perfil_guia_adt y _oru sin cambios", (len(CV.PERFIL_GUIA_ADT), len(CV.PERFIL_GUIA_ORU)), (23, 16))  # etapa 37: L-CV-17; etapa 40: PD1-7
 
 
 def p21():

@@ -1,0 +1,36 @@
+# Etapa 40: el rojo del segundo parche de las pruebas (pd/parche_prueba_pd_2.py aplicado sobre e9f22c3: el juez de antes, huella 7a9bf9b711917b78)
+# 2026-11-08T18:34:02+01:00
+
+## python3 prueba_conversion.py
+  MAL P-CV-32 L-CV-17: una Observation de solo Y/N que no sale de ACC ni de PDA (una inventada, o la de PD1-7 sin valueCodeableConcept) se da por de ellos; la de PD1-7 que la guía mapea, ya no (etapa 40): (True, True, False, True) != (True, True, True, False)
+  MAL P-CV-33 PD1-7 = F y su Observation, sin OBX: correcta, y de PD1-7 por el sistema: (('fallo_silencioso', 'convertido'), [('fidelidad', 'recurso_inventado', 'OBX')], None) != (('correcto', None), [], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 con OBX y las dos, PD1 primero: nada cuenta y la nota del OBX: ([('fidelidad', 'recurso_inventado', 'OBX')], True, None) != ([], True, ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 con OBX y las dos, OBX primero: nada cuenta y la nota del OBX: ([('fidelidad', 'recurso_inventado', 'OBX')], True, None) != ([], True, ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 con OBX y solo la de PD1-7: ya no se toma por la del OBX: None != ('PD1-7', 'sistema', 'urn:uuid:op')
+  MAL P-CV-33 PD1-7 = F sin Observation: recurso_ausente, que cuenta y cita la hoja: ([], ('correcto', None), False) != ([('fidelidad', 'recurso_ausente', 'PD1-7')], ('fallo_silencioso', 'convertido'), True)
+  MAL P-CV-33 (F) con el sistema de la 0136: codigo_mal_mapeado: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'codigo_mal_mapeado', 'PD1-7')]
+  MAL P-CV-33 (F) sin sistema: codigo_mal_mapeado: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'codigo_mal_mapeado', 'PD1-7')]
+  MAL P-CV-33 (v2-0315, Y) con PD1-7 = F: valor_distinto: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'valor_distinto', 'PD1-7')]
+  MAL P-CV-33 PD1-7 = X, fuera de la 0315, con el código X: nada, ni una nota: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], [])
+  MAL P-CV-33 PD1-7 = X con (v2-0315, W): nota convencion en 2.5: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], ['convencion'])
+  MAL P-CV-33 PD1-7 = X con (v2-0315, W): nota version en 2.8: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], ['version'])
+  MAL P-CV-33 PD1-7 = Y y ACC-5 = Y, una (v2-0315, Y): es la de PD1-7, no de ACC: ([('fidelidad', 'recurso_sin_mapa', 'ACC')], None) != ([], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 ... y otra (v2-0136, Y), la de la 0315 primero: la de la 0315 es de PD1-7; la otra, de ACC: ([('fidelidad', 'recurso_sin_mapa', 'ACC')], None) != ([('fidelidad', 'recurso_sin_mapa', 'ACC')], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 ... y otra (v2-0136, Y), la de la 0136 primero: la de la 0315 es de PD1-7; la otra, de ACC: ([('fidelidad', 'recurso_sin_mapa', 'ACC')], None) != ([('fidelidad', 'recurso_sin_mapa', 'ACC')], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-33 ... dos de solo Y sin sistema: la primera, de PD1-7 (sin el sistema: codigo_mal_mapeado); la segunda, de ACC (Q-PD-2 a): ([('fidelidad', 'recurso_sin_mapa', 'ACC')], None) != ([('fidelidad', 'codigo_mal_mapeado', 'PD1-7'), ('fidelidad', 'recurso_sin_mapa', 'ACC')], ('PD1-7', 'codigo', 'urn:uuid:o1'))
+  MAL P-CV-33 con el código del OBX y el valor de PD1-7: es la del OBX, y PD1-7 sale ausente: ([], True) != ([('fidelidad', 'recurso_ausente', 'PD1-7')], True)
+  MAL P-CV-33 valueString F: no se reconoce; recurso_ausente PD1-7 y recurso_inventado OBX (L-CV-18): [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'recurso_ausente', 'PD1-7'), ('fidelidad', 'recurso_inventado', 'OBX')]
+  MAL P-CV-33 sin status: fhir_invalido PD1-7: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'fhir_invalido', 'PD1-7')]
+  MAL P-CV-33 subject a otro Patient: referencia_rota PD1-7: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'referencia_rota', 'PD1-7')]
+  MAL P-CV-33 2.8 con (v2-0315, F): nada cuenta, de PD1-7, con la nota de versión: ([('fidelidad', 'recurso_inventado', 'OBX')], None, True) != ([], ('PD1-7', 'sistema', 'urn:uuid:op'), True)
+  MAL P-CV-33 2.8 sin Observation: recurso_ausente cuenta igual: [] != [('fidelidad', 'recurso_ausente', 'PD1-7')]
+  MAL P-CV-33 2.8, PD1-7 con componentes (CWE): se lee su primer componente: ([('fidelidad', 'recurso_inventado', 'OBX')], [], None) != ([], [], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-34 el perfil de ADT: 23 filas, una de PD1-7 que cuenta y cita la hoja: (22, 0, None, False) != (23, 1, 'cuenta', True)
+  MAL P-CV-34 C[PD1-7] cita el mapa de segmento y la 0315: [False, False] != [True, True]
+  MAL P-CV-34 L-CV-18 nombra PD1-7, la 0315 y ORU: (False, False, False) != (True, True, True)
+  MAL P-CV-34 S-CV-4 nombra PD1-7: False != True
+  MAL P-CV-34 la 0315: la identidad sobre Y, F, N, I, U con el sistema v2-0315: None != {'Y': ('http://terminology.hl7.org/CodeSystem/v2-0315', 'Y'), 'F': ('http://terminology.hl7.org/CodeSystem/v2-0315', 'F'), 'N': ('http://terminology.hl7.org/CodeSystem/v2-0315', 'N'), 'I': ('http://terminology.hl7.org/CodeSystem/v2-0315', 'I'), 'U': ('http://terminology.hl7.org/CodeSystem/v2-0315', 'U')}
+  MAL P-CV-34 la 0315 es la del paquete, y está en la lista de cv/extraer_mapas.py: (False, False) != (True, True)
+  MAL P-CV-34 la versión del servidor: la primera entrada, la de la etapa 40 con L-CV-18; la segunda, la de la 37 con L-CV-17: (False, False, False, False) != (True, True, True, True)
+PRUEBAS CONVERSIÓN: 30 MAL (149 comprobaciones, 34 pruebas)
+rc=1

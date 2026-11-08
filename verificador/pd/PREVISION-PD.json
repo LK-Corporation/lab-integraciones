@@ -1,0 +1,891 @@
+{
+ "conteo": {
+  "con_PD1": {
+   "adt_conv": 5655,
+   "oru_conv": 69,
+   "vxu_conv": 63
+  },
+  "control_ACC-inventada": {
+   "adt_conv": 161
+  },
+  "control_OBX-fuera-de-sitio": {
+   "adt_conv": 1513
+  },
+  "evidencias": {
+   "adt_conv": 21553,
+   "mdm_conv": 1180,
+   "oru_conv": 4424,
+   "vxu_conv": 2961
+  }
+ },
+ "detalle": [
+  {
+   "carpeta": "ar/control",
+   "conversor": "linuxforhealth",
+   "evidencias": 582,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ar/control",
+   "conversor": "microsoft",
+   "evidencias": 291,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ca/corridas",
+   "conversor": "linuxforhealth",
+   "evidencias": 2,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ca/corridas",
+   "conversor": "microsoft",
+   "evidencias": 2,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-1",
+   "conversor": "juguete",
+   "evidencias": 144,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "juguete",
+   "evidencias": 144,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-1",
+   "conversor": "juguete",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-2",
+   "conversor": "juguete",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-sembrado",
+   "conversor": "juguete",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-ej",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e1",
+   "conversor": "juguete",
+   "evidencias": 144,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e2",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e3",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "juguete",
+   "evidencias": 144,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-ej",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/trabajo",
+   "conversor": "ejemplo",
+   "evidencias": 216,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/cv2",
+   "conversor": "linuxforhealth",
+   "evidencias": 97,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/cv2",
+   "conversor": "microsoft",
+   "evidencias": 97,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/vc",
+   "conversor": "linuxforhealth",
+   "evidencias": 338,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/vc",
+   "conversor": "microsoft",
+   "evidencias": 338,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "linuxforhealth",
+   "evidencias": 582,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "microsoft",
+   "evidencias": 582,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "juguete",
+   "evidencias": 144,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-ej",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "microsoft",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "microsoft",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "microsoft",
+   "evidencias": 72,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vxpre",
+   "conversor": "linuxforhealth",
+   "evidencias": 4,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vxpre",
+   "conversor": "microsoft",
+   "evidencias": 4,
+   "punto": "adt_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ar/control",
+   "conversor": "linuxforhealth",
+   "evidencias": 6,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ar/control",
+   "conversor": "microsoft",
+   "evidencias": 3,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-1",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-1",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-2",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-sembrado",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e1",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e2",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e3",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/trabajo",
+   "conversor": "ejemplo",
+   "evidencias": 3,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/cv2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/cv2",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/vc",
+   "conversor": "linuxforhealth",
+   "evidencias": 4,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "cv/vc",
+   "conversor": "microsoft",
+   "evidencias": 4,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "linuxforhealth",
+   "evidencias": 6,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "microsoft",
+   "evidencias": 6,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "oru_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ar/control",
+   "conversor": "linuxforhealth",
+   "evidencias": 4,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-1",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/ensayo-3",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-1",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-2",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/juguete-sembrado",
+   "conversor": "juguete",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci/linuxforhealth-mensaje-2",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/c2-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e1",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e2",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/e3",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/ensayo-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ci2/trabajo",
+   "conversor": "ejemplo",
+   "evidencias": 3,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "linuxforhealth",
+   "evidencias": 3,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "ga/corridas",
+   "conversor": "microsoft",
+   "evidencias": 3,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "juguete",
+   "evidencias": 2,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-demo",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-ej",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mant/e-rojo",
+   "conversor": "ejemplo",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "linuxforhealth",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "mdm/md2c-r1",
+   "conversor": "microsoft",
+   "evidencias": 1,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "linuxforhealth",
+   "evidencias": 9,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  },
+  {
+   "carpeta": "vx/vx2c",
+   "conversor": "microsoft",
+   "evidencias": 8,
+   "punto": "vxu_conv",
+   "que": "con_PD1"
+  }
+ ],
+ "etapa": 40,
+ "linea_base": {
+  "evidencias": 30118,
+  "fichero": "base-antes.jsonl",
+  "sha256": "3c9360cc5f6c5c65687826dbfb2e27f8c427b7a962265456809ff96ea96c85d3"
+ },
+ "prevision": {
+  "bases": {
+   "demostracion": "en las tres cambia solo creada_de.juez.huella; ningún caso; las dos corridas de cada una, iguales byte a byte",
+   "ejemplo": "en las dos cambia solo la huella del juez; ningún caso",
+   "juguete_positivo_casos": 344
+  },
+  "clases": {
+   "frase_antes": {
+    "C_convenciones": 16,
+    "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+    "D_por_conversor": {
+     "linuxforhealth": 12,
+     "microsoft": 19
+    },
+    "D_ya_declaradas": 31,
+    "K_conversores": 2,
+    "M_mensajes": 368,
+    "N_fuertes": 7,
+    "N_nuevas_confirmadas": 15,
+    "N_por_conversor": {
+     "linuxforhealth": 10,
+     "microsoft": 5
+    },
+    "dudosas": 3,
+    "rechazos_nuevos": 2
+   },
+   "iguales_caso_a_caso_salvo_la_huella_del_juez": true,
+   "juez_antes": "7a9bf9b711917b7812ef5da5106dc544e68b4815a4e6fd5f21534d2c4e3039ef",
+   "n_sin_clase_antes": 0
+  },
+  "control": {
+   "con_defecto": {
+    "ACC-inventada": 161,
+    "OBX-fuera-de-sitio": 1513,
+    "PD1-7-ausente": "más de 0 y como mucho 21553 (los ADT que llegan al juicio)",
+    "PD1-7-valor-ajeno": "como mucho 5655 (los ADT con PD1); con 0, se declara",
+    "PID-5": "más de 0",
+    "PID-8": "más de 0"
+   },
+   "todas_fuera": true
+  },
+  "rejuicio": {
+   "diferencias": 0,
+   "faltan": 0,
+   "fuera": 0,
+   "pd17": 0,
+   "por_que": "Ninguna evidencia de adt_conv lleva PD1-7 valorado (0 en adt_conv, 0 en total): el paso nuevo del emparejamiento y el juicio nuevo solo se dan con él, y nada más cambia en el camino de una Observation sin él. ORU, VXU y MDM no se tocan.",
+   "punto_cambia": 0
+  }
+ }
+}

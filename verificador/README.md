@@ -52,9 +52,9 @@ debe terminar en verde:
 | `python3 acuse_referencia.py --autoprueba` | `AUTOPRUEBA DE acuse_referencia: TODO BIEN` |
 | `python3 contratos/generar_contrato.py --comprobar` | `contrato_canonico_adt.md: IGUAL a la generación` |
 | `python3 ve/prueba_ve.py` | `PRUEBAS VE (despues): TODO BIEN (21 pruebas, 7 controles)` |
-| `python3 prueba_conversion.py` | `PRUEBAS CONVERSIÓN: TODO BIEN (116 comprobaciones, 28 pruebas)` |
+| `python3 prueba_conversion.py` | `PRUEBAS CONVERSIÓN: TODO BIEN (180 comprobaciones, 34 pruebas)` |
 | `python3 conversion.py --autoprueba` | `AUTOPRUEBA DE conversion: TODO BIEN` |
-| `python3 cv/prueba_vc.py` | `PRUEBAS VC: TODO BIEN (152 comprobaciones, 26 pruebas)` |
+| `python3 cv/prueba_vc.py` | `PRUEBAS VC: TODO BIEN (154 comprobaciones, 26 pruebas)` |
 
 Sin los perfiles privados (abajo), `prueba_adt.py` salta la prueba que depende de ellos (S95). Y la P58 del MCP espera 3
 casos en vez de 6, porque el corpus de la fase 13 tampoco está aquí.
@@ -189,6 +189,27 @@ corrido en lote, un proceso por carpeta.
 | El control, las ramas y las corridas | [`vx/rv/IDENTIDADES-RV.json`](vx/rv/IDENTIDADES-RV.json), [`vx/rv/CONTROL-RV.json`](vx/rv/CONTROL-RV.json), [`vx/rv/RAMAS-RV.json`](vx/rv/RAMAS-RV.json), [`vx/rv/RESULTADO-RV-minimos-fijada-lote.json`](vx/rv/RESULTADO-RV-minimos-fijada-lote.json), [`vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json`](vx/rv/RESULTADO-RV-minimos-fijada-mensaje.json), [`vx/rv/RESULTADO-RV-minimos-main.json`](vx/rv/RESULTADO-RV-minimos-main.json), [`vx/rv/SECUENCIA-RV.json`](vx/rv/SECUENCIA-RV.json), [`vx/rv/CORRIDAS-RV.json`](vx/rv/CORRIDAS-RV.json) |
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
+
+## La Observation de PD1-7 en el juez (40, 8-nov-2026)
+
+> **El juez empareja con su campo la Observation de PD1-7; en el rejuicio de lo publicado cambian 0 evidencias.** Ninguna
+> evidencia guardada lleva PD1-7, y las cifras del estudio de conversores no cambian.
+
+- **En un ADT con PD1-7,** la guía crea una Observation desde ese campo (`MSG_ADT_A01.csv:19`). El juez de antes la tomaba por
+  la de un OBX, por orden, y sin OBX la contaba como inventada. Ahora la reconoce por el sistema de la tabla 0315 o por el
+  código de PD1-7, y juzga su valor, su status y su sujeto; si falta, cuenta como recurso ausente. Lo que no hace va en el
+  límite L-CV-18.
+- **Las pruebas son sintéticas,** P-CV-33 y P-CV-34: 5.655 evidencias de ADT traen PD1, y en todas PD1-7 viene vacío.
+- **La huella del juez publicado** pasa de `4a75a245…` a `6b98df04…`. En las tres bases de la demostración solo cambia eso. El
+  proyecto de ejemplo y el run en rojo suben su pin en un segundo push.
+- **Cómo:**
+  - el diseño, a ciegas, y cuatro decisiones de Jev;
+  - las pruebas, en rojo antes, y 18 mutantes del juez que tienen que hacerlas caer;
+  - la previsión, sellada antes del rejuicio: 0 diferencias;
+  - un clasificador de cinco reglas, con un control de seis defectos sembrados en el juez;
+  - un lector a ciegas, en dos pasadas.
+
+  Está en [`RESULTADO-PD17.md`](RESULTADO-PD17.md); la pregunta, en [`ANTES-ETAPA-PD17.md`](ANTES-ETAPA-PD17.md).
 
 ## Lo sin clase del estudio (39, 8-nov-2026)
 
@@ -680,12 +701,13 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 39 llevan una parte redactada,** marcados en su primera línea:
+- **Los ANTES de las etapas 30 a 40 llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md`,
   `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md`, `ANTES-ETAPA-JUEZ.md`,
-  `ANTES-ETAPA-CLASES.md` y `ANTES-ETAPA-SINCLASE.md`; y los encargos del diseño de la 33 a la 35 y de la 37 a la 39,
-  `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`, `jz/encargo-diseno-jz.md`,
-  `cl/encargo-diseno-cl.md` y `sc/encargo-diseno-sc.md`.
+  `ANTES-ETAPA-CLASES.md`, `ANTES-ETAPA-SINCLASE.md` y `ANTES-ETAPA-PD17.md`; y los encargos del diseño de la 33 a la 35
+  y de la 37 a la 40, `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`,
+  `jz/encargo-diseno-jz.md`, `cl/encargo-diseno-cl.md`, `sc/encargo-diseno-sc.md` y `pd/encargo-diseno-pd.md`. También
+  `pd/ROJO-PD-2.txt`, con la ruta de la máquina cambiada.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

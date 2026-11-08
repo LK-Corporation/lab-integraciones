@@ -1,0 +1,13 @@
+# Etapa 40: el rojo del tercer parche de las pruebas (Q-PD-4 a1), contra el juez de antes del segundo parche del juez (a4a88d2, huella d153f791f368c318)
+# 2026-11-08T18:42:57+01:00
+
+## python3 prueba_conversion.py
+  MAL P-CV-34 L-CV-18 nombra el caso de Q-PD-4: una de solo Y/N sin el sistema de la 0315, también con el de la 0136, es la de PD1-7: (False, False, False) != (True, True, True)
+PRUEBAS CONVERSIÓN: 1 MAL (180 comprobaciones, 34 pruebas)
+rc=1
+
+## python3 prueba_conversion_mdm.py
+  MAL P-MD-25 base (a) prueba_conversion.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (d) lo que exportan conversion y puntos_entrada: ('cfd33a3662852137', '4fc316780b5e8ded', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', 'efd2c02a08bded34') != ('cfd33a3662852137', 'ad4d46c08f6702a3', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', 'efd2c02a08bded34')
+PRUEBAS MDM: 2 MAL (276 comprobaciones, 27 pruebas)
+rc=1

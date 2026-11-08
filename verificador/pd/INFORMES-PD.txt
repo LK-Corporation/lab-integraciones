@@ -1,0 +1,6 @@
+# Etapa 40: P-MD-25 (c). Con el juez nuevo, las 137 corridas cambian solo en limites/L-CV (17 -> 18, L-CV-18); el juicio, igual.
+# La base de antes se guarda en privado/pd/informes_base-antes-pd.json; se rehace con el juez nuevo. 2026-11-08T17:19:04+01:00
+informes (informes_comparar): 137 corridas, 137 con el INFORME o el juicio distinto; juez d153f791f368
+informes: 137 corridas (18830 evidencias), juez d153f791f368
+informes (informes_comparar): 137 corridas, 0 con el INFORME o el juicio distinto; juez d153f791f368
+rc=0

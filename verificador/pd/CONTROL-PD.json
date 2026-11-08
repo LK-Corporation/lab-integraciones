@@ -1,0 +1,3187 @@
+{
+ "ACC-inventada": {
+  "control": {
+   "con_defecto": 161,
+   "con_defecto_y_fuera": 161,
+   "defecto": "ACC-inventada"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 7,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 18,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 108,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1,
+    "punto": "adt_conv"
+   }
+  ],
+  "diferencias": 161,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 161
+  },
+  "punto_cambia": []
+ },
+ "OBX-fuera-de-sitio": {
+  "control": {
+   "con_defecto": 1513,
+   "con_defecto_y_fuera": 1513,
+   "defecto": "OBX-fuera-de-sitio"
+  },
+  "detalle": [
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 210,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 35,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 130,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 30,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 96,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 32,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 112,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 252,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   }
+  ],
+  "diferencias": 1513,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 1513
+  },
+  "punto_cambia": []
+ },
+ "PD1-7-ausente": {
+  "control": {
+   "con_defecto": 15979,
+   "con_defecto_y_fuera": 15979,
+   "defecto": "PD1-7-ausente"
+  },
+  "detalle": [
+   {
+    "carpeta": "cv/cv1d",
+    "clase": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 248,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 242,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 248,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 242,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 248,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 242,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 732,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 248,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 242,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 526,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 526,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 263,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 263,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 263,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 526,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 526,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 526,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1274,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 178,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 816,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1282,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 162,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 162,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 196,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 741,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 212,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 70,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 946,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1556,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 191,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 191,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 226,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   }
+  ],
+  "diferencias": 15979,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 15979
+  },
+  "punto_cambia": []
+ },
+ "PD1-7-valor-ajeno": {
+  "control": {
+   "con_defecto": 3658,
+   "con_defecto_y_fuera": 3658,
+   "defecto": "PD1-7-valor-ajeno"
+  },
+  "detalle": [
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 216,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 144,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 144,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 72,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 144,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 144,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 144,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 306,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 51,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 192,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 306,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 45,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 99,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 33,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 114,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 258,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 24,
+    "punto": "adt_conv"
+   }
+  ],
+  "diferencias": 3658,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 3658
+  },
+  "punto_cambia": []
+ },
+ "PID-5": {
+  "control": {
+   "con_defecto": 23765,
+   "con_defecto_y_fuera": 23765,
+   "defecto": "PID-5"
+  },
+  "detalle": [
+   {
+    "carpeta": "cv/cv1d",
+    "clase": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "clase": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 726,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1268,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 177,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 812,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1276,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 735,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 210,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 70,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 938,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1544,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 224,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 120,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23765,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 23765
+  },
+  "punto_cambia": []
+ },
+ "PID-8": {
+  "control": {
+   "con_defecto": 23765,
+   "con_defecto_y_fuera": 23765,
+   "defecto": "PID-8"
+  },
+  "detalle": [
+   {
+    "carpeta": "cv/cv1d",
+    "clase": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv1d",
+    "clase": "fuera",
+    "conversor": "?",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/c2-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e2",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e3",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-c2e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/runner-pr-e",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 3,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/t-41136715322",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 1,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 726,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 127,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/trabajo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 125,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 246,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-ej",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 43,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 240,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-rojo",
+    "clase": "fuera",
+    "conversor": "ejemplo",
+    "evidencias": 41,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-2",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 261,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/juguete-sembrado",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/e1",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 522,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 76,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "juguete",
+    "evidencias": 80,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1268,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 463,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 170,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/ensayo-3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci/linuxforhealth-mensaje-2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ci2/ensayo-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 177,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 46,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 68,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 62,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 812,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 294,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 1276,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 122,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 476,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mant/e-demo",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 39,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 40,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 14,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 265,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 195,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 70,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 161,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "clase": "fuera",
+    "conversor": "linuxforhealth",
+    "evidencias": 53,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 735,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ar/control",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 225,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "au/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 4,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "ca/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 5,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 210,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv2",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 45,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 70,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/cv3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 60,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 938,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 286,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 1544,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 121,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 464,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "ga/corridas",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 176,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-muestras-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 189,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 38,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "mdm/md2c-r1",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 40,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "mdm/mev",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 39,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "mdm/pares-main",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 13,
+    "punto": "mdm_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 200,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 224,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 68,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/vx2c",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 120,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "vx/vx3",
+    "clase": "fuera",
+    "conversor": "microsoft",
+    "evidencias": 50,
+    "punto": "vxu_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 4,
+    "punto": "adt_conv"
+   },
+   {
+    "carpeta": "cv/vc",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 2,
+    "punto": "oru_conv"
+   },
+   {
+    "carpeta": "vx/rv",
+    "clase": "fuera",
+    "conversor": "propio",
+    "evidencias": 109,
+    "punto": "vxu_conv"
+   }
+  ],
+  "diferencias": 23765,
+  "evidencias": 30118,
+  "faltan": [],
+  "juez_ahora": "d153f791f368c318200fa4df808c1b92c6a9f9700dafc512a74859c9c1666f57",
+  "modo": "control",
+  "n_faltan": 0,
+  "n_fuera": 0,
+  "n_punto_cambia": 0,
+  "por_clase": {
+   "fuera": 23765
+  },
+  "punto_cambia": []
+ }
+}

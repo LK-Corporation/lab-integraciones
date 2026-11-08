@@ -1,0 +1,62 @@
+{
+ "ACC-inventada": {
+  "forma": {
+   "entra fidelidad/recurso_inventado OBX | sale fidelidad/recurso_sin_mapa ACC": 89,
+   "entra fidelidad/recurso_inventado OBX | sale fidelidad/recurso_sin_mapa ACC | sale fidelidad/recurso_sin_mapa ACC/PDA": 60,
+   "entra fidelidad/recurso_inventado OBX | sale fidelidad/recurso_sin_mapa PDA": 12
+  },
+  "reglas": {
+   "R1+R4": 161
+  }
+ },
+ "OBX-fuera-de-sitio": {
+  "forma": {
+   "entra fidelidad/recurso_inventado OBX | sale nota/fuera_proyeccion OBX": 1513
+  },
+  "reglas": {
+   "R1+R4": 1513
+  }
+ },
+ "PD1-7-ausente": {
+  "forma": {
+   "entra fidelidad/recurso_ausente PD1-7": 15703,
+   "entra fidelidad/recurso_ausente PD1-7 | veredicto correcto -> fallo_silencioso": 276
+  },
+  "reglas": {
+   "R1+R3": 15979
+  }
+ },
+ "PD1-7-valor-ajeno": {
+  "forma": {
+   "entra fidelidad/recurso_ausente PD1-7": 3658
+  },
+  "reglas": {
+   "R1+R3": 3658
+  }
+ },
+ "PID-5": {
+  "forma": {
+   "entra fidelidad/valor_distinto PID-5": 16496,
+   "entra fidelidad/valor_distinto PID-5 | sale fidelidad/valor_distinto PID-5": 194,
+   "entra fidelidad/valor_distinto PID-5 | veredicto correcto -> fallo_silencioso": 1835,
+   "entra fidelidad/valor_distinto+codigo_mal_mapeado PID-5 | sale fidelidad/codigo_mal_mapeado PID-5": 4,
+   "entra fidelidad/valor_distinto+dato_inventado PID-5 | sale fidelidad/dato_inventado PID-5": 11,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/dato_perdido PID-5": 2316,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/valor_distinto+dato_perdido PID-5": 2909
+  },
+  "reglas": {
+   "R1+R2": 23765
+  }
+ },
+ "PID-8": {
+  "forma": {
+   "entra fidelidad/valor_distinto PID-8": 20845,
+   "entra fidelidad/valor_distinto PID-8 | sale fidelidad/valor_distinto PID-8": 879,
+   "entra fidelidad/valor_distinto PID-8 | veredicto correcto -> fallo_silencioso": 1835,
+   "entra fidelidad/valor_distinto+fhir_invalido PID-8 | sale fidelidad/fhir_invalido PID-8": 206
+  },
+  "reglas": {
+   "R1+R2": 23765
+  }
+ }
+}

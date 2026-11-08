@@ -11,7 +11,8 @@ MAPAS = ["table-hl70001-to-administrative-gender", "table-hl70002-to-v3-maritals
          "table-hl70069-to-service-type", "table-hl70136-to-special-values", "table-hl70190-to-address-use",
          "table-hl70190-to-address-type", "table-hl70200-to-name-use", "table-hl70201-to-contact-point-use",
          "table-hl70202-to-contact-point-system", "table-hl70078-to-v3-observationinterpretation",
-         "table-hl70085-to-observation-status", "table-hl70123-queries-to-diagnostic-report-status"]
+         "table-hl70085-to-observation-status", "table-hl70123-queries-to-diagnostic-report-status",
+         "table-hl70315-to-v2-0315"]   # etapa 40
 
 
 def mapa(carpeta, nombre):

@@ -1,0 +1,1 @@
+{"q_pd_4": {"type": "choice", "instructions": "PD1-7 en Y o N, ACC o PDA con ese valor, y una sola Observation de solo Y/N con el sistema de la 0136: de quién es.", "criteria": {"pd1_7": "(a) Como está: es la de PD1-7, con código mal mapeado; se declara en L-CV-18 y se prueba.", "acc_pda": "(b) Con el sistema de la 0136 no es de PD1-7: sin mapa de ACC o PDA, y PD1-7 ausente."}}}

@@ -1,0 +1,8 @@
+# Copia pública: la ruta de la máquina del laboratorio va cambiada por la relativa a su raíz; el resto, literal.
+# Etapa 40: el rojo de la prueba del clasificador del rejuicio, antes de que exista pd/rejuicio_pd.py (d006554)
+# 2026-11-08T17:24:16+01:00
+## python3 pd/prueba_rejuicio_pd.py
+  File "pd/prueba_rejuicio_pd.py", line 70, in main
+    import rejuicio_pd as R
+ModuleNotFoundError: No module named 'rejuicio_pd'
+rc=1

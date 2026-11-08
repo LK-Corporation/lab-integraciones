@@ -1,0 +1,9 @@
+Etapa 40: la previsión del rejuicio, sellada antes de correr pd/rejuicio_pd.py con el juez nuevo sobre las evidencias.
+
+pd/PREVISION-PD.json  sha256 be8ac06a524eee0a5c00f8d5669290e8c648899c68f6b88e39dc6079d0924822
+Contada por pd/prever_pd.py sobre privado/pd/base-antes.jsonl (el juez de antes, 7a9bf9b711917b78) y los mensajes de las
+evidencias, y pd/CLASES-PD-antes.json (cv/cv3_clases.py con el juez de antes, en una copia de e9f22c3). Sellada el 2026-11-08T17:26:15+01:00.
+
+Declarado: antes de este sello, la suite de MDM (P-MD-25 b, al poner en verde las pruebas con el juez nuevo) ya rejuzgó con el juez
+nuevo las evidencias de su propia línea base (14 carpetas de privado/) y pasó, con «0 diferencias». La previsión de 0 diferencias
+no es, por eso, ciega para esas carpetas; se apoya en el recuento de PD1-7 de PREVISION-PD.json, que no depende del juez.

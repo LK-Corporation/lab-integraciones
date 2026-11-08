@@ -1,0 +1,20 @@
+carpetas: 45
+rejuicio pd (comparar): 30118 evidencias, 0 diferencias {}; faltan 0, punto cambia 0; juez d153f791f368
+comparar rc=0
+rejuicio pd (control PD1-7-ausente): 30118 evidencias, 15979 diferencias {'fuera': 15979}; faltan 0, punto cambia 0; juez d153f791f368
+  15979 evidencias con el defecto, 15979 de ellas «fuera»; reglas: {'R1+R3': 15979}
+rejuicio pd (control ACC-inventada): 30118 evidencias, 161 diferencias {'fuera': 161}; faltan 0, punto cambia 0; juez d153f791f368
+  161 evidencias con el defecto, 161 de ellas «fuera»; reglas: {'R1+R4': 161}
+rejuicio pd (control OBX-fuera-de-sitio): 30118 evidencias, 1513 diferencias {'fuera': 1513}; faltan 0, punto cambia 0; juez d153f791f368
+  1513 evidencias con el defecto, 1513 de ellas «fuera»; reglas: {'R1+R4': 1513}
+rejuicio pd (control PD1-7-valor-ajeno): 30118 evidencias, 3658 diferencias {'fuera': 3658}; faltan 0, punto cambia 0; juez d153f791f368
+  3658 evidencias con el defecto, 3658 de ellas «fuera»; reglas: {'R1+R3': 3658}
+rejuicio pd (control PID-5): 30118 evidencias, 23765 diferencias {'fuera': 23765}; faltan 0, punto cambia 0; juez d153f791f368
+  23765 evidencias con el defecto, 23765 de ellas «fuera»; reglas: {'R1+R2': 23765}
+rejuicio pd (control PID-8): 30118 evidencias, 23765 diferencias {'fuera': 23765}; faltan 0, punto cambia 0; juez d153f791f368
+  23765 evidencias con el defecto, 23765 de ellas «fuera»; reglas: {'R1+R2': 23765}
+control: PASA (las 6 pasadas)
+control rc=0
+juzgar_cv2 rc=0
+cv3_clases rc=0
+FIN REJUICIO PD
