@@ -1,0 +1,4 @@
+== PRUEBA de la etapa 38, tras cl/parche_m4_cl.py (2026-11-08T15:08:30+01:00); cv/cv3_clases.py eea9c119f8f5, cv/prueba_cv3_clases.py 38581319c4a9
+   python3 cv/prueba_cv3_clases.py
+PRUEBAS CV3 CLASES: TODO BIEN (10 comprobaciones)
+rc=0

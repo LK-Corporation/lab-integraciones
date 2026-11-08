@@ -1,0 +1,16 @@
+{
+ "etapa": 38,
+ "sellada": "antes de medir la causa (8-nov-2026)",
+ "de": "Jev, cl/decision-jev-prevision-cl.md",
+ "Q-PREV-CL-1": {
+  "respuesta": "varias",
+  "p": 0.64,
+  "confianza": 0.52,
+  "segunda": "entrada (0,31)"
+ },
+ "Q-PREV-CL-2": {
+  "respuesta": "no cambia la frase",
+  "p": 0.77,
+  "confianza": 0.54
+ }
+}

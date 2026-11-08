@@ -279,4 +279,14 @@ este estudio da la misma frase (15 nuevas, 31 ya declaradas, 16 convenciones):
 
 `cv/CLASES-CV3.json` no se toca: conserva la huella de su juez.
 
+## Marca de la etapa 38 (8-nov-2026)
+
+El juez de CV4 escribe el hallazgo de PL.9 de Microsoft con un segundo texto («la descripción … contiene PL.9 … sin ser PL.9»), y
+la regla de M-4 de `cv/cv3_clases.py` solo pedía el primero («falta la descripción»).
+- **Con el juez publicado desde CV4,** el hallazgo de PL.9 de 8 de los 16 casos de M-4 quedaba sin clase.
+- **Desde esta etapa la regla reconoce los dos** (bloque 9 del sello de la etapa 33), y M-4 vuelve a sus 16 casos.
+- **M-36 y L-24 no tienen casos con el juez de CV4:** eran los falsos positivos de CX.4, ya apartados.
+
+La frase no cambia (`RESULTADO-CLASES.md`). `cv/CLASES-CV3.json` no se toca: se reproduce con su receta, el juicio del estudio.
+
 > *Copia pública: donde decía el nombre del autor, dice «el autor». El resto es el original.*

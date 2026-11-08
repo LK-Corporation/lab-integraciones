@@ -119,6 +119,10 @@ En LinuxForHealth:
 Ninguna discrepancia nueva aparece ni desaparece: M-36 y L-24 ya estaban apartadas, y M-4 es ya declarada en los dos jueces.
 **La frase no cambia.**
 
+> *Etapa 38 (8-nov-2026): de la clase, es cierto; del aparato, se quedaba corto. Con el juez de CV4, la regla de M-4 de
+> `cv/cv3_clases.py` reconocía 8 de sus 16 hallazgos, y los otros 8 quedaban sin clase. Desde la etapa 38 los reconoce todos
+> ([`RESULTADO-CLASES.md`](RESULTADO-CLASES.md)).*
+
 ## Lo que el resultado no dice
 
 - **No es una certificación de conformidad.** Es lo que un juez determinista, con decisiones declaradas, ve en estos mensajes y

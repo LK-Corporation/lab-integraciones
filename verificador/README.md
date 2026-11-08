@@ -190,6 +190,23 @@ corrido en lote, un proceso por carpeta.
 | El estado y el contraste | [`vx/rv/ESTADO-RV.json`](vx/rv/ESTADO-RV.json), [`vx/rv/CONTRASTE-RV.json`](vx/rv/CONTRASTE-RV.json) |
 | El resultado, con la frase | [`RESULTADO-RAMAS-VXU.md`](RESULTADO-RAMAS-VXU.md) |
 
+## Las clases publicadas del estudio (38, 8-nov-2026)
+
+> **Las clases publicadas del estudio de conversores se reproducen con su receta; la diferencia de M-4, M-36 y L-24 viene del
+> juez de CV4 y, en M-4, también de su regla, que no reconocía el texto nuevo del juez.** La frase del estudio no cambia.
+
+- **El JSON publicado,** `cv/CLASES-CV3.json`, da las mismas clases, casos, ejemplos y frase con el juicio del estudio (CV3), y
+  nada queda sin clase.
+- **El juez de CV4** (24-oct, declarado en `RESULTADO-CONVERSORES.md`) quitó tres falsos positivos de CX.4. Por eso M-36 y L-24,
+  que eran esos falsos positivos y estaban apartadas, se quedan sin casos.
+- **La regla de M-4** solo reconocía el texto de CV3 para PL.9: con el juez de CV4, el hallazgo de PL.9 de 8 de sus 16 casos
+  quedaba sin clase. Ahora reconoce los dos (bloque 9 del sello de la 33), con su prueba en rojo antes,
+  [`cv/prueba_cv3_clases.py`](cv/prueba_cv3_clases.py).
+- **Cómo:** la previsión de Jev, sellada antes de medir, que acertó con un estado al que le faltaba el hecho decisivo; la
+  decisión de arreglar la regla, de Jev; el diseño, a ciegas; y un lector a ciegas, en dos pasadas.
+
+  Está en [`RESULTADO-CLASES.md`](RESULTADO-CLASES.md); la pregunta, en [`ANTES-ETAPA-CLASES.md`](ANTES-ETAPA-CLASES.md).
+
 ## Los dos fallos del juez de la etapa 36 (37, 8-nov-2026)
 
 > **El juez deja de contar mal las dos conductas de la etapa 36; en el rejuicio de lo publicado cambian 662 evidencias: 660 de
@@ -647,11 +664,11 @@ publica.
   `md/estado_md0_modelo.md`. Y los dos
   `md/contraste-md3-*.json` llevan sus referencias relativas a cada proyecto: a su repositorio en la versión fijada o, en
   LinuxForHealth, a su jar.
-- **Los ANTES de las etapas 30 a 37 llevan una parte redactada,** marcados en su primera línea:
+- **Los ANTES de las etapas 30 a 38 llevan una parte redactada,** marcados en su primera línea:
   `ANTES-ETAPA-IRISVAL.md`, `ANTES-ETAPA-IVMUESTRAS.md`, `ANTES-ETAPA-IVDECLARADA.md`, `ANTES-ETAPA-GENERADORES.md`,
-  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md` y `ANTES-ETAPA-JUEZ.md`; y los encargos
-  del diseño de la 33 a la 35 y de la 37, `ga/encargo-diseno-ga.md`, `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`
-  y `jz/encargo-diseno-jz.md`.
+  `ANTES-ETAPA-ENSAYO.md`, `ANTES-ETAPA-CIRCULO.md`, `ANTES-ETAPA-CANDIDATAS.md`, `ANTES-ETAPA-JUEZ.md` y
+  `ANTES-ETAPA-CLASES.md`; y los encargos del diseño de la 33 a la 35, de la 37 y de la 38, `ga/encargo-diseno-ga.md`,
+  `en/encargo-diseno-en.md`, `cr/encargo-diseno-cr.md`, `jz/encargo-diseno-jz.md` y `cl/encargo-diseno-cl.md`.
 - **El juez publicado no lleva el corte C19 del laboratorio.** Es una línea de trabajo aparte, que pasa a tablas de datos la
   decisión del acuse y la disposición, equivalente byte a byte. `verificador.py` y `acuse_referencia.py` van como en la
   publicación anterior. La cabecera de `MANIFIESTO.txt` da las dos huellas.

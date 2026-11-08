@@ -20,7 +20,7 @@ MS, LFH = "microsoft", "linuxforhealth"
 ESP = "src/Microsoft.Health.Fhir.Liquid.Converter.FunctionalTests/TestData/Expected/Hl7v2/"
 LFH_T = "src/test/java/io/github/linuxforhealth/hl7/"
 
-# (id, conversor, mecanismos, texto que debe estar en el «que» o None, casos o prefijos de caso o None,
+# (id, conversor, mecanismos, texto que debe estar en el «que» (o tupla de textos, de los que basta uno) o None, casos o prefijos de caso o None,
 #  clase, referencia, par mínimo, fuerza, qué)
 # clases: nueva | nueva_rechazo (falla a la vista: no es de las ocho clases de S-CV-5) | ya_declarada | convencion |
 #         dudosa (pasa a Q-CV-D, no cuenta) | no_cambia | fuera_juez | fuera_corpus | fuera_ambiguedad | fuera_version |
@@ -34,7 +34,7 @@ R = [
      "Encounter.location sin status (1..1 en la guía para PV1-3)"),
     ("M-2", MS, {"MC-ADT-3", "fuera:Encounter.location|valor_distinto"}, "status: esperado", None, "ya_declarada",
      ESP + "ADT_A01/ADT-A01-01-expected.json", None, "débil", "Encounter.location.status distinto del de la guía (PV1-11 «planned»; PV1-2 = P «active»)"),
-    ("M-4", MS, {"MC-ADT-3"}, "falta la descripción", None, "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json (descripción concatenada en 114 salidas esperadas); data/Templates/Hl7v2/Resource/_PLLocation.liquid:62-63; Q-CV-D-14 (Jev: cuenta)", "M10-pl9-descripcion", "débil",
+    ("M-4", MS, {"MC-ADT-3"}, ("falta la descripción", "contiene PL.9"), None, "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json (descripción concatenada en 114 salidas esperadas); data/Templates/Hl7v2/Resource/_PLLocation.liquid:62-63; Q-CV-D-14 (Jev: cuenta)", "M10-pl9-descripcion", "débil",
      "PL.9 va dentro de una descripción que concatena todo el PL («UCI--3--1--HOSP--Box 3»), no sola"),
     ("M-5", MS, {"MC-ADT-5"}, None, None, "ya_declarada", ESP + "ADT_A01/ADT-A01-01-expected.json", None, "débil",
      "PV1-10 a serviceType sin system ni el mapa de la guía"),
@@ -161,7 +161,9 @@ R = [
 def regla(conv, mc, q, caso):
     for r in R:
         rid, cv, mcs, texto, casos = r[:5]
-        if cv != conv or mc not in mcs or (texto and texto not in q):
+        if cv != conv or mc not in mcs:
+            continue
+        if texto and not any(t in q for t in ((texto,) if isinstance(texto, str) else texto)):   # etapa 38: una tupla, basta uno
             continue
         if casos is not None and not (caso in casos if isinstance(casos, set) else caso.startswith(casos)):
             continue

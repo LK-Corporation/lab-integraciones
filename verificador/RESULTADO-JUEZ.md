@@ -265,6 +265,10 @@ antes y con el nuevo.
 
   La frase es la misma. Queda fuera de la etapa.
 
+  *Etapa 38 (8-nov):* la causa está medida en [`RESULTADO-CLASES.md`](RESULTADO-CLASES.md). En M-4, el juez de CV4 y la
+  regla de `cv/cv3_clases.py`, que no reconocía su texto: 8 hallazgos sin clase, también en `jz/CLASES-JZ-*.json`. En M-36 y
+  L-24, el juez de CV4. Los `jz/CLASES-JZ-*.json` se quedan como se escribieron.
+
 ## Las pruebas, en el repositorio publicado
 
 | | Comprobaciones | Pruebas |

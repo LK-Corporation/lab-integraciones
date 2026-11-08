@@ -1,0 +1,11 @@
+Etapa 38, sello de la previsión (2026-11-08T14:29:32+01:00), antes de medir la causa:
+f850623671dcd85d57e64f2392b7dd68c6948bfda9709e49a9e9bab0f0763b9f  cl/PREVISION-CL.json
+
+Etapa 38, después del arreglo de la regla de M-4 y de la revisión a ciegas (2026-11-08T15:08:30+01:00):
+7adb4b29fdf5a18157d87c07d713978725354abea655e15bb97874ee1dc1bc82  cl/parche_m4_cl.py
+38581319c4a9d6e37ddc7cd98f0817b25fa396b04cd6f80bb52815caac1f0883  cv/prueba_cv3_clases.py
+6ff49b3f42199be3f32b1dee5a01ffcad65062dabf1b2a87370ec7faa2f31d1a  cl/ROJO-CL.txt
+c006c4d4d8ddc8e561f0b1bc47f541a813481476535e61d2bd0f7762ddcacba2  cl/PRUEBA-CLASES.txt
+14dcacadc777a9085af862a05c3f965f8230c2fd4ad9131bc77ce50c576a2f73  cl/REPRODUCCION-CL.json
+1991e6a339cb53f44f6f053b62e294d79f9b6c579aded16792380d8ee1a1e03d  cl/REPRODUCCION-CL-despues.json
+eea9c119f8f5780955a4a9811a33bccde29b79cb5c8c6b7a71360a2b28ff58e0  cv/cv3_clases.py

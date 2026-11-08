@@ -1,0 +1,5 @@
+== ROJO de la etapa 38: cv/prueba_cv3_clases.py, nueva, contra el cv/cv3_clases.py de antes (387bed8, sin cl/parche_m4_cl.py; huella 03f8bf980b0b)
+  MAL P-CL-2 el texto de CV4 es M-4: None != 'M-4'
+  MAL P-CL-7 solo M-4 lleva una tupla: [] != ['M-4']
+PRUEBAS CV3 CLASES: 2 MAL (8 comprobaciones)
+rc=1
