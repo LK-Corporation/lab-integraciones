@@ -1018,7 +1018,8 @@ M1 = "e704b97b560a252cfac2cdeae68ed1530cc78be7"                              # e
 P27 = "c9d49d9566d14121cef9fc7a21dbaf1ee906d494"                             # etapa 27: el pin subido al commit con MDM
 PNC = "19761c164a5eda0b51df811106dd289855afc4d7"                             # 4-nov: el pin, al commit del juez con el texto nuevo de S95 y S96
 PGA = "54e8b9f9017ea7fb7e0b245783b02ad55d49ab21"                             # etapa 33: el pin, al commit de la versión 2 del corpus
-PIN_ESPERADO = PGA or PNC or P27 or M1 or C1
+PJZ = "078349257ecfbf2010d1b1aca54ccfabdea02e26"                             # etapa 37: el pin, al commit del juez que deja de contar mal las dos conductas de la 36
+PIN_ESPERADO = PJZ or PGA or PNC or P27 or M1 or C1
 
 
 def comprobar_vivos(vivos):

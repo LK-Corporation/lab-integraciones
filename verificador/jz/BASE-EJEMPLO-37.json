@@ -1,0 +1,36 @@
+{
+ "huella": "af1f387dc3d433a573969d08cf7a089235ee26a48dc936c2706e153c51adcc95",
+ "huella_con_nombres": "deacb4159fafaa1906efde5abdaf76fed34418c73101e4521237baf99899c422",
+ "imagen_digest": "sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704",
+ "n_casos": {
+  "LINEA-BASE.json": 396,
+  "LINEA-BASE-propio.json": 6
+ },
+ "categorias": {
+  "adt": {
+   "fallo_silencioso": 242,
+   "rechazo_incorrecto": 24,
+   "correcto": 4
+  },
+  "mdm": {
+   "rechazo_incorrecto": 40
+  },
+  "oru": {
+   "fallo_silencioso": 40
+  },
+  "propio": {
+   "fallo_silencioso": 6
+  },
+  "vxu": {
+   "fallo_silencioso": 40
+  }
+ },
+ "rojo_n_casos": 164,
+ "rojo_nuevos_distintos": [
+  [
+   "PID-8",
+   "fidelidad",
+   "valor_distinto"
+  ]
+ ]
+}

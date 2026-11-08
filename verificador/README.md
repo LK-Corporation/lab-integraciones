@@ -204,7 +204,9 @@ corrido en lote, un proceso por carpeta.
 - **En el estudio,** L-4 suma 4 casos de ADT, y M-28 reconoce también el hallazgo nuevo (bloque 8 del sello de la 33).
 - **La huella del juez publicado** pasa de `ff9f1087…` a `4a75a245…`. Las tres bases de la demostración se rehacen, y solo
   cambian, además de la huella, los 6 casos previstos en cada una de las de LinuxForHealth. El proyecto de ejemplo y el run en
-  rojo suben su pin en un segundo push.
+  rojo suben su pin a `0783492`, el commit de este juez, en un segundo push. El ejemplo rehace sus dos bases con su receta
+  ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)): solo cambia la huella del juez
+  ([`jz/BASES-JZ-ejemplo.json`](jz/BASES-JZ-ejemplo.json)), y el rojo cae solo por su defecto, en 164 casos.
 - **Cómo:**
   - el diseño, a ciegas, y nueve decisiones de Jev;
   - las pruebas, en rojo antes;
