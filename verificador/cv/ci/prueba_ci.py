@@ -1020,7 +1020,8 @@ PNC = "19761c164a5eda0b51df811106dd289855afc4d7"                             # 4
 PGA = "54e8b9f9017ea7fb7e0b245783b02ad55d49ab21"                             # etapa 33: el pin, al commit de la versión 2 del corpus
 PJZ = "078349257ecfbf2010d1b1aca54ccfabdea02e26"                             # etapa 37: el pin, al commit del juez que deja de contar mal las dos conductas de la 36
 PPD = "b31f9f091485638b9033cf920420c561c092508a"                             # etapa 40: el pin, al commit del juez con la Observation de PD1-7
-PIN_ESPERADO = PPD or PJZ or PGA or PNC or P27 or M1 or C1
+PPO = "385bf7525545ce5bf63c34189d4a19ca62ae712a"                             # etapa 41: el pin, al commit del juez con la Observation de PD1-7 en ORU
+PIN_ESPERADO = PPO or PPD or PJZ or PGA or PNC or P27 or M1 or C1
 
 
 def comprobar_vivos(vivos):

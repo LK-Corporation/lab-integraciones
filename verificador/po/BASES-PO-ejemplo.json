@@ -1,0 +1,39 @@
+{
+ "antes": "HEAD",
+ "bases": {
+  "ejemplo-ci/ci/LINEA-BASE-propio.json": {
+   "casos": 6,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "6b98df04859f41ab",
+    "20c4f52a6ef5e811"
+   ]
+  },
+  "ejemplo-ci/ci/LINEA-BASE.json": {
+   "casos": 396,
+   "cuadra": true,
+   "fallos": [],
+   "juez": [
+    "6b98df04859f41ab",
+    "20c4f52a6ef5e811"
+   ]
+  }
+ },
+ "control": {
+  "ejemplo-ci/ci/LINEA-BASE-propio.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez es otra que la publicada": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso cambia (propio/EJ-ADT-A01)": "cae"
+  },
+  "ejemplo-ci/ci/LINEA-BASE.json": {
+   "la huella del corpus cambia": "cae",
+   "la huella del juez es otra que la publicada": "cae",
+   "la huella del juez no cambia": "cae",
+   "un caso cambia (adt/A01-001)": "cae"
+  }
+ },
+ "huella_publicada": "20c4f52a6ef5e811ae7f302a5ddd958768f9fd356a039a36ad366cf5a1127008",
+ "resultado": "CUADRA"
+}

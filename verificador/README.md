@@ -201,7 +201,9 @@ corrido en lote, un proceso por carpeta.
   mensaje.
 - **Las pruebas son sintéticas,** P-CV-35 y P-CV-36: de 4.424 evidencias de ORU, 69 traen PD1, y en todas PD1-7 viene vacío.
 - **La huella del juez publicado** pasa de `6b98df04…` a `20c4f52a…`. En las tres bases de la demostración solo cambia eso. El
-  proyecto de ejemplo y el run en rojo suben su pin en un segundo push.
+  proyecto de ejemplo y el run en rojo suben su pin a `385bf75`, el commit de este juez, en un segundo push. El ejemplo rehace
+  sus dos bases con su receta ([`../ejemplo-ci/ci/hacer_base.sh`](../ejemplo-ci/ci/hacer_base.sh)): solo cambia la huella
+  del juez ([`po/BASES-PO-ejemplo.json`](po/BASES-PO-ejemplo.json)), y el rojo cae solo por su defecto, en 164 casos.
 - **Cómo:**
   - el diseño, a ciegas, y dos decisiones de Jev;
   - las pruebas, en rojo antes, y 28 mutantes del juez que tienen que hacerlas caer;
