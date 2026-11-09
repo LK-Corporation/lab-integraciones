@@ -1,0 +1,32 @@
+# Etapa 41: los mutantes del juez contra prueba_conversion.py, con las pruebas de po/parche_prueba_po.py (af65ef2). 2026-11-08T23:41:59+01:00
+## python3 po/mutantes_po.py <copia>
+sin el criterio del sistema                        MUERE P-CV-33, P-CV-35
+sin el criterio del código                         MUERE P-CV-33, P-CV-35
+la última candidata                                MUERE P-CV-33
+sin preferir el sistema                            MUERE P-CV-33
+sin apartar las del OBX                            MUERE P-CV-33, P-CV-35
+la de PD1-7 sigue en la lista                      MUERE P-CV-33, P-CV-35
+ausente como nota                                  MUERE P-CV-33, P-CV-35
+sin ausente                                        MUERE P-CV-33 (excepción), P-CV-35 (excepción)
+solo en 2.5                                        MUERE P-CV-33, P-CV-35
+sin status                                         MUERE P-CV-33, P-CV-35
+sin sujeto                                         MUERE P-CV-33, P-CV-35
+valor y código cambiados                           MUERE P-CV-33, P-CV-35
+convención en toda versión                         MUERE P-CV-33, P-CV-35
+nota aunque el código sea el mismo                 MUERE P-CV-33, P-CV-35
+el campo entero                                    MUERE P-CV-33, P-CV-35
+PD1-6 en vez de PD1-7                              MUERE P-CV-33, P-CV-35
+la 0315 con F a N                                  MUERE P-CV-33, P-CV-34, P-CV-35
+el paso de PD1-7 tras ACC y PDA                    MUERE P-CV-33
+ORU sin apartar_pd17                               MUERE P-CV-35
+ORU sin _juzgar_pd17                               MUERE P-CV-35
+ORU: apartar_pd17 tras las sobrantes               MUERE P-CV-35
+_origen_pd17 solo con los OBX de ORDER_OBSERVATION MUERE P-CV-33, P-CV-35
+_juzgar_pd17 solo en ADT                           MUERE P-CV-35
+ORU con las citas de ADT                           MUERE P-CV-35
+sin la fila de PD1-7 en el perfil de ORU           MUERE P-CV-36
+L-CV-18 sin ORU                                    MUERE P-CV-36
+S-CV-4 sin ORU                                     MUERE P-CV-36
+el texto de versión sin la 41                      MUERE P-CV-36
+mutantes: 28, vivos: 0 []
+rc=0

@@ -1,0 +1,151 @@
+{
+ "ADT-PD1-7-ausente": {
+  "forma": {
+   "entra fidelidad/recurso_ausente PD1-7": 15703,
+   "entra fidelidad/recurso_ausente PD1-7 | veredicto correcto -> fallo_silencioso": 276
+  },
+  "reglas": {
+   "R1+R3": 15979
+  }
+ },
+ "OBX-5": {
+  "forma": {
+   "entra fidelidad/valor_distinto OBX(10)-5 | entra fidelidad/valor_distinto OBX(11)-5 | entra fidelidad/valor_distinto OBX(12)-5 | entra fidelidad/valor_distinto OBX(13)-5 | entra fidelidad/valor_distinto OBX(14)-5 | entra fidelidad/valor_distinto OBX(15)-5 | entra fidelidad/valor_distinto OBX(16)-5 | entra fidelidad/valor_distinto OBX(17)-5 | entra fidelidad/valor_distinto OBX(18)-5 | entra fidelidad/valor_distinto OBX(19)-5 | entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(20)-5 | entra fidelidad/valor_distinto OBX(21)-5 | entra fidelidad/valor_distinto OBX(22)-5 | entra fidelidad/valor_distinto OBX(23)-5 | entra fidelidad/valor_distinto OBX(24)-5 | entra fidelidad/valor_distinto OBX(25)-5 | entra fidelidad/valor_distinto OBX(26)-5 | entra fidelidad/valor_distinto OBX(27)-5 | entra fidelidad/valor_distinto OBX(28)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX(6)-5 | entra fidelidad/valor_distinto OBX(7)-5 | entra fidelidad/valor_distinto OBX(8)-5 | entra fidelidad/valor_distinto OBX(9)-5 | entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 12,
+   "entra fidelidad/valor_distinto OBX(10)-5 | entra fidelidad/valor_distinto OBX(11)-5 | entra fidelidad/valor_distinto OBX(12)-5 | entra fidelidad/valor_distinto OBX(13)-5 | entra fidelidad/valor_distinto OBX(14)-5 | entra fidelidad/valor_distinto OBX(15)-5 | entra fidelidad/valor_distinto OBX(16)-5 | entra fidelidad/valor_distinto OBX(17)-5 | entra fidelidad/valor_distinto OBX(18)-5 | entra fidelidad/valor_distinto OBX(19)-5 | entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(20)-5 | entra fidelidad/valor_distinto OBX(21)-5 | entra fidelidad/valor_distinto OBX(22)-5 | entra fidelidad/valor_distinto OBX(23)-5 | entra fidelidad/valor_distinto OBX(24)-5 | entra fidelidad/valor_distinto OBX(25)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX(6)-5 | entra fidelidad/valor_distinto OBX(7)-5 | entra fidelidad/valor_distinto OBX(8)-5 | entra fidelidad/valor_distinto OBX(9)-5 | entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX(20)-5 | sale fidelidad/valor_distinto OBX(21)-5 | sale fidelidad/valor_distinto OBX(22)-5 | sale fidelidad/valor_distinto OBX(23)-5 | sale fidelidad/valor_distinto OBX(24)-5 | sale fidelidad/valor_distinto OBX(25)-5": 15,
+   "entra fidelidad/valor_distinto OBX(10)-5 | entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX(6)-5 | entra fidelidad/valor_distinto OBX(7)-5 | entra fidelidad/valor_distinto OBX(8)-5 | entra fidelidad/valor_distinto OBX(9)-5 | entra fidelidad/valor_distinto OBX-5": 54,
+   "entra fidelidad/valor_distinto OBX(2)-5": 28,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX(6)-5 | entra fidelidad/valor_distinto OBX-5": 52,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX(6)-5 | entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 17,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(5)-5 | entra fidelidad/valor_distinto OBX-5": 1,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX-5": 84,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX-5": 11,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 34,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto+dato_perdido OBX-5 | sale fidelidad/dato_perdido OBX-5": 13,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX-5": 130,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 105,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX-5": 1,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX-5": 369,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX(2)-5": 28,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX(2)-5 | sale fidelidad/valor_distinto OBX-5": 33,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX-5": 30,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 349,
+   "entra fidelidad/valor_distinto OBX(2)-5 | entra fidelidad/valor_distinto+dato_inventado OBX-5 | sale fidelidad/dato_inventado OBX-5": 11,
+   "entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5": 1,
+   "entra fidelidad/valor_distinto OBX(3)-5 | entra fidelidad/valor_distinto OBX(4)-5 | entra fidelidad/valor_distinto OBX(6)-5": 1,
+   "entra fidelidad/valor_distinto OBX-5": 1168,
+   "entra fidelidad/valor_distinto OBX-5 | entra fidelidad/valor_distinto+dato_perdido OBX(2)-5 | sale fidelidad/dato_perdido OBX(2)-5": 28,
+   "entra fidelidad/valor_distinto OBX-5 | entra fidelidad/valor_distinto+dato_perdido OBX(2)-5 | sale fidelidad/dato_perdido OBX(2)-5 | sale fidelidad/valor_distinto OBX-5": 13,
+   "entra fidelidad/valor_distinto OBX-5 | sale fidelidad/valor_distinto OBX-5": 293,
+   "entra fidelidad/valor_distinto OBX-5 | veredicto correcto -> fallo_silencioso": 1099,
+   "entra fidelidad/valor_distinto+dato_inventado OBX-5 | sale fidelidad/dato_inventado OBX-5": 11,
+   "entra fidelidad/valor_distinto+dato_perdido OBX(2)-5 | entra fidelidad/valor_distinto+dato_perdido OBX-5 | sale fidelidad/dato_perdido OBX(2)-5 | sale fidelidad/dato_perdido OBX-5": 39,
+   "entra fidelidad/valor_distinto+dato_perdido OBX-5 | sale fidelidad/dato_perdido OBX-5": 188
+  },
+  "reglas": {
+   "R1+R2": 4218
+  }
+ },
+ "ORU-L-CV-7-inventada": {
+  "forma": {
+   "entra fidelidad/recurso_inventado OBX | sale nota/fuera_proyeccion OBX": 36,
+   "entra fidelidad/recurso_inventado OBX | sale nota/fuera_proyeccion OBX | veredicto correcto -> fallo_silencioso": 17
+  },
+  "reglas": {
+   "R1+R4": 53
+  }
+ },
+ "ORU-OBX-fuera-de-sitio": {
+  "forma": {
+   "entra fidelidad/recurso_ausente OBX(2)-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX(2)-8": 28,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR": 273,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | entra fidelidad/referencia_rota PID | sale fidelidad/codigo_mal_mapeado OBX-6 | sale fidelidad/referencia_rota PID": 2,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | entra fidelidad/referencia_rota PID | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8 | sale fidelidad/referencia_rota PID": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | entra fidelidad/referencia_rota PID | sale fidelidad/fhir_invalido OBX-14 | sale fidelidad/referencia_rota PID": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | entra fidelidad/referencia_rota PID | sale fidelidad/referencia_rota PID": 35,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11": 53,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/codigo_mal_mapeado OBX-8": 29,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/codigo_mal_mapeado OBX-8 | sale fidelidad/dato_perdido OBX-6": 1,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/dato_perdido OBX-14": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8": 52,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/dato_perdido OBX-6": 1,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-11 | sale fidelidad/fhir_invalido OBX-14": 22,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-6": 5,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-6 | sale fidelidad/valor_distinto OBX-5": 2,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8": 678,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale fidelidad/dato_perdido OBX-6": 2,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale fidelidad/valor_distinto OBX-3 | sale fidelidad/valor_distinto OBX-5": 15,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale fidelidad/valor_distinto OBX-5": 28,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale fidelidad/valor_distinto OBX-6": 15,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale nota/convencion OBX-11": 28,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/codigo_mal_mapeado OBX-8 | sale nota/convencion OBX-5": 28,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_inventado OBX-5 | sale fidelidad/fhir_invalido OBX-14": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_inventado OBX-5 | sale fidelidad/fhir_invalido OBX-14 | sale nota/convencion OBX-11": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14": 39,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-5": 39,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-5 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8": 39,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-5 | sale fidelidad/dato_perdido OBX-8": 26,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8": 117,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8 | sale fidelidad/referencia_rota OBR": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8 | sale fidelidad/valor_distinto OBX-5": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8 | sale nota/convencion OBX-11": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale nota/convencion OBX-11": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/valor_distinto OBX-5": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale nota/convencion OBX-11": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale nota/convencion OBX-11 | sale nota/convencion OBX-8": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-14 | sale nota/convencion OBX-5": 13,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-5": 136,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-6": 21,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8": 26,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/fhir_invalido OBX-14": 154,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/fhir_invalido OBX-14 | sale fidelidad/referencia_rota OBR": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/fhir_invalido OBX-14 | sale fidelidad/valor_distinto OBX-5": 110,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/fhir_invalido OBX-14 | sale nota/convencion OBX-11": 11,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/fhir_invalido OBX-14 | sale nota/convencion OBX-5": 44,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/recurso_inventado OBX | sale fidelidad/referencia_rota OBR": 12,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/valor_distinto OBX-5": 199,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale fidelidad/valor_distinto OBX-6": 27,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale nota/convencion OBX-11": 27,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale nota/convencion OBX-11 | sale nota/convencion OBX-8 | veredicto correcto -> fallo_silencioso": 45,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale nota/convencion OBX-11 | veredicto correcto -> fallo_silencioso": 34,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | sale nota/convencion OBX-5 | veredicto correcto -> fallo_silencioso": 34,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota OBR | veredicto correcto -> fallo_silencioso": 1503,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | entra fidelidad/referencia_rota+recurso_inventado OBR | sale fidelidad/recurso_inventado OBR": 12,
+   "entra fidelidad/recurso_ausente OBX-3 | entra fidelidad/recurso_inventado OBX | sale fidelidad/dato_perdido OBX-14 | sale fidelidad/dato_perdido OBX-6 | sale fidelidad/dato_perdido OBX-7 | sale fidelidad/dato_perdido OBX-8": 26
+  },
+  "reglas": {
+   "R1+R2+R4": 4150
+  }
+ },
+ "ORU-PD1-7-ausente": {
+  "forma": {
+   "entra fidelidad/recurso_ausente PD1-7": 2740,
+   "entra fidelidad/recurso_ausente PD1-7 | veredicto correcto -> fallo_silencioso": 1638
+  },
+  "reglas": {
+   "R1+R3": 4378
+  }
+ },
+ "ORU-PD1-7-valor-ajeno": {
+  "forma": {
+   "entra fidelidad/recurso_ausente PD1-7": 52,
+   "entra fidelidad/recurso_ausente PD1-7 | veredicto correcto -> fallo_silencioso": 17
+  },
+  "reglas": {
+   "R1+R3": 69
+  }
+ },
+ "PID-5": {
+  "forma": {
+   "entra fidelidad/valor_distinto PID-5": 16496,
+   "entra fidelidad/valor_distinto PID-5 | sale fidelidad/valor_distinto PID-5": 194,
+   "entra fidelidad/valor_distinto PID-5 | veredicto correcto -> fallo_silencioso": 1835,
+   "entra fidelidad/valor_distinto+codigo_mal_mapeado PID-5 | sale fidelidad/codigo_mal_mapeado PID-5": 4,
+   "entra fidelidad/valor_distinto+dato_inventado PID-5 | sale fidelidad/dato_inventado PID-5": 11,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/dato_perdido PID-5": 2316,
+   "entra fidelidad/valor_distinto+dato_perdido PID-5 | sale fidelidad/valor_distinto+dato_perdido PID-5": 2909
+  },
+  "reglas": {
+   "R1+R2": 23765
+  }
+ }
+}

@@ -1,0 +1,2 @@
+{"q_po_1": {"type": "choice", "instructions": "La Observation de PD1-7 referida desde DiagnosticReport.result en un ORU.", "criteria": {"referencia_rota": "(a) Sigue siendo referencia_rota del OBR, que cuenta, como hoy.", "nota": "(b) Una nota de convención, que no cuenta, en vez de la referencia rota."}},
+ "q_po_2": {"type": "choice", "instructions": "Las citas de los hallazgos de PD1-7.", "criteria": {"una_lista": "(a) Una lista: C[PD1-7] gana también la hoja de ORU.", "por_familia": "(b) Por familia: cada hallazgo cita la hoja de su mensaje; C[PD1-7] queda como está."}}}

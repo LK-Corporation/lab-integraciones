@@ -1,0 +1,22 @@
+carpetas: 45
+rejuicio po (comparar): 30118 evidencias, 0 diferencias {}; faltan 0, punto cambia 0; juez d8e30444fa82
+comparar rc=0
+rejuicio po (control ORU-PD1-7-ausente): 30118 evidencias, 4378 diferencias {'fuera': 4378}; faltan 0, punto cambia 0; juez d8e30444fa82
+  4378 evidencias con el defecto, 4378 de ellas «fuera»; reglas: {'R1+R3': 4378}
+rejuicio po (control ORU-PD1-7-valor-ajeno): 30118 evidencias, 69 diferencias {'fuera': 69}; faltan 0, punto cambia 0; juez d8e30444fa82
+  69 evidencias con el defecto, 69 de ellas «fuera»; reglas: {'R1+R3': 69}
+rejuicio po (control ORU-OBX-fuera-de-sitio): 30118 evidencias, 4150 diferencias {'fuera': 4150}; faltan 0, punto cambia 0; juez d8e30444fa82
+  4150 evidencias con el defecto, 4150 de ellas «fuera»; reglas: {'R1+R2+R4': 4150}
+rejuicio po (control ORU-L-CV-7-inventada): 30118 evidencias, 53 diferencias {'fuera': 53}; faltan 0, punto cambia 0; juez d8e30444fa82
+  53 evidencias con el defecto, 53 de ellas «fuera»; reglas: {'R1+R4': 53}
+rejuicio po (control OBX-5): 30118 evidencias, 4218 diferencias {'fuera': 4218}; faltan 0, punto cambia 0; juez d8e30444fa82
+  4218 evidencias con el defecto, 4218 de ellas «fuera»; reglas: {'R1+R2': 4218}
+rejuicio po (control PID-5): 30118 evidencias, 23765 diferencias {'fuera': 23765}; faltan 0, punto cambia 0; juez d8e30444fa82
+  23765 evidencias con el defecto, 23765 de ellas «fuera»; reglas: {'R1+R2': 23765}
+rejuicio po (control ADT-PD1-7-ausente): 30118 evidencias, 15979 diferencias {'fuera': 15979}; faltan 0, punto cambia 0; juez d8e30444fa82
+  15979 evidencias con el defecto, 15979 de ellas «fuera»; reglas: {'R1+R3': 15979}
+control: PASA (las 7 pasadas)
+control rc=0
+juzgar_cv2 rc=0
+cv3_clases rc=0
+FIN REJUICIO PO

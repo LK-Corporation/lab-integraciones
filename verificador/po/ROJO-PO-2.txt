@@ -1,0 +1,6 @@
+# Etapa 41: el rojo de la prueba del clasificador del rejuicio, antes de que exista po/rejuicio_po.py (57f4d8a)
+# 2026-11-08T23:37:42+01:00
+## python3 po/prueba_rejuicio_po.py
+    import rejuicio_po as R
+ModuleNotFoundError: No module named 'rejuicio_po'
+rc=1

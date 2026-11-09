@@ -1,0 +1,9 @@
+Etapa 41: la previsión del rejuicio, sellada antes de correr el juez nuevo sobre las evidencias.
+
+po/PREVISION-PO.json  sha256 235ab317d84941bf8c06c4e558d8ee7e9887b3a5f0accb20cf81ddabb7551b6c
+Contada por po/prever_po.py sobre privado/po/base-antes.jsonl (el juez de antes: 3ce339c745eff52b en el laboratorio, 6b98df04 publicado, el de la etapa 40) y
+los mensajes de las evidencias, y po/CLASES-PO-antes.json (las clases del estudio con ese juez: pd/CLASES-PD-despues.json). Sellada
+el 2026-11-08T23:38:22+01:00, con el juez nuevo aún sin aplicar en el laboratorio.
+
+Hasta este sello, el juez nuevo solo ha corrido en una copia fuera del laboratorio, sin privado/: allí P-MD-25 (b) y (c), que
+rejuzgan evidencias, saltan. Ninguna evidencia guardada se ha juzgado con él.

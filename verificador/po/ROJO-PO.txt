@@ -1,0 +1,47 @@
+# Etapa 41: el rojo de las pruebas (po/parche_prueba_po.py aplicado; el juez de hoy, aa80dc4, huella 3ce339c745eff52b)
+# 2026-11-08T23:35:00+01:00
+
+## python3 prueba_conversion.py
+  MAL P-CV-35 ORU, PD1-7 = F y su Observation: correcta, y de PD1-7 por el sistema: (('fallo_silencioso', 'convertido'), [('fidelidad', 'recurso_inventado', 'OBX')], None) != (('correcto', None), [], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 con dos OBR: de PD1-7, y nada cuenta: ([('fidelidad', 'recurso_inventado', 'OBX')], None) != ([], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 referida desde DiagnosticReport.result: de PD1-7, y el OBR sigue con referencia_rota (Q-PO-1 a): ([('fidelidad', 'recurso_inventado', 'OBX'), ('fidelidad', 'referencia_rota', 'OBR')], None) != ([('fidelidad', 'referencia_rota', 'OBR')], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 sin Observation: recurso_ausente, que cita la hoja de ORU y no la de ADT (Q-PO-2 b): ([], False, False) != ([('fidelidad', 'recurso_ausente', 'PD1-7')], True, False)
+  MAL P-CV-35 2.8 sin Observation: recurso_ausente cuenta igual: [] != [('fidelidad', 'recurso_ausente', 'PD1-7')]
+  MAL P-CV-35 (v2-0315, Y) con PD1-7 = F: valor_distinto: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'valor_distinto', 'PD1-7')]
+  MAL P-CV-35 (F) con el sistema de la 0136: codigo_mal_mapeado: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'codigo_mal_mapeado', 'PD1-7')]
+  MAL P-CV-35 (F) sin sistema: codigo_mal_mapeado: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'codigo_mal_mapeado', 'PD1-7')]
+  MAL P-CV-35 PD1-7 = X con el código X: nada, ni una nota: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], [])
+  MAL P-CV-35 PD1-7 = X con (v2-0315, W): nota convencion en 2.5: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], ['convencion'])
+  MAL P-CV-35 PD1-7 = X con (v2-0315, W): nota version en 2.8: ([('fidelidad', 'recurso_inventado', 'OBX')], []) != ([], ['version'])
+  MAL P-CV-35 valueString F: recurso_ausente PD1-7 y recurso_inventado OBX (L-CV-18): [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'recurso_ausente', 'PD1-7'), ('fidelidad', 'recurso_inventado', 'OBX')]
+  MAL P-CV-35 sin status: fhir_invalido PD1-7: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'fhir_invalido', 'PD1-7')]
+  MAL P-CV-35 subject a otro Patient: referencia_rota PD1-7: [('fidelidad', 'recurso_inventado', 'OBX')] != [('fidelidad', 'referencia_rota', 'PD1-7')]
+  MAL P-CV-35 sin subject: dato_perdido PD1-7, con la cita de la hoja de ORU: ([('fidelidad', 'recurso_inventado', 'OBX')], False) != ([('fidelidad', 'dato_perdido', 'PD1-7')], True)
+  MAL P-CV-35 un OBX con el código F y las dos Observation: la de código F es del OBX; la otra, de PD1-7: ([('fidelidad', 'recurso_inventado', 'OBX')], None) != ([], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 la de un OBX con su código y el valor (v2-0315, F), sin la de PD1-7: es del OBX, y PD1-7 sale ausente: (False, None) != (True, ('PD1-7', None, None))
+  MAL P-CV-35 un OBX fuera de ORDER_OBSERVATION sin su Observation, y la de PD1-7: de PD1-7, sin la nota de L-CV-7: ([], True, None) != ([], False, ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 un OBX fuera con su Observation y la de PD1-7, la del OBX fuera primero: la nota, de la del OBX; la otra, de PD1-7: ([('fidelidad', 'recurso_inventado', 'OBX')], True, None) != ([], True, ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 un OBX fuera con su Observation y la de PD1-7, la de PD1-7 primero: la nota, de la del OBX; la otra, de PD1-7: ([('fidelidad', 'recurso_inventado', 'OBX')], True, None) != ([], True, ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 la del OBX fuera con su código y el valor (v2-0315, F), sin la de PD1-7: nota de L-CV-7, y PD1-7 ausente: ([], True) != ([('fidelidad', 'recurso_ausente', 'PD1-7')], True)
+  MAL P-CV-35 2.8, PD1-7 con componentes (CWE): se lee su primer componente: ([('fidelidad', 'recurso_inventado', 'OBX')], [], None) != ([], [], ('PD1-7', 'sistema', 'urn:uuid:op'))
+  MAL P-CV-35 2.8 con (v2-0315, F): nada cuenta, de PD1-7, con la nota de versión: ([('fidelidad', 'recurso_inventado', 'OBX')], None, True) != ([], ('PD1-7', 'sistema', 'urn:uuid:op'), True)
+  MAL P-CV-36 el perfil de ORU: 17 filas, una de PD1-7 que cuenta y cita la hoja de ORU, no la de ADT: (16, 0, None, False, False) != (17, 1, 'cuenta', True, False)
+  MAL P-CV-36 las citas por familia (Q-PO-2 b): la de ORU con su hoja; la de ADT y C[PD1-7], como en la 40: (False, False, False, False) != (True, False, True, False)
+  MAL P-CV-36 L-CV-18 nombra oru_conv, DiagnosticReport.result y L-CV-7, y ya no dice que siga como recurso_inventado: (True, False, False, True) != (True, True, True, False)
+  MAL P-CV-36 S-CV-4 nombra ORU: False != True
+  MAL P-CV-36 la versión del servidor: la primera entrada, la de la etapa 41 con L-CV-18; la segunda, la de la 40: (False, True, False) != (True, True, True)
+PRUEBAS CONVERSIÓN: 28 MAL (182 comprobaciones, 36 pruebas)
+rc=1
+
+## python3 prueba_conversion_vxu.py
+  MAL P-VX-20 control: perfil_guia_adt y _oru sin cambios: (23, 16) != (23, 17)
+PRUEBAS VXU: 1 MAL (157 comprobaciones, 24 pruebas)
+rc=1
+
+## python3 prueba_conversion_mdm.py
+  MAL P-MD-25 base (a) prueba_conversion.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (a) prueba_conversion_vxu.py en verde: (1, False) != (0, True)
+  MAL P-MD-25 base (d) lo que exportan conversion y puntos_entrada: ('cfd33a3662852137', 'ad4d46c08f6702a3', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', 'efd2c02a08bded34') != ('cfd33a3662852137', '503c6bd6735c9736', '415c77f208321377', '9cf86194ce1b29a6', '08fc6c6fea93f4af', 'efd2c02a08bded34')
+  MAL P-MD-24 control: perfiles de ADT, ORU y VXU sin cambios: (23, 16, 27) != (23, 17, 27)
+PRUEBAS MDM: 4 MAL (274 comprobaciones, 27 pruebas)
+rc=1

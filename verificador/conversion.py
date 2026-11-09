@@ -111,6 +111,8 @@ C = {"PID-3": ["[CM datatype-cx-to-identifier CX.1 → value, CX.4 → system/as
 C["PD1-7"] = ["[CM segment-pd1-livingwill-to-observation PD1-7 → valueCodeableConcept]", "[CM table-hl70315-to-v2-0315]",
               "[G MSG_ADT_A01.csv:19]", "[E3 Ch03.txt:8504]", "[E3 Ch03.txt:8630-8643]"]   # etapa 40
 S0315 = "http://terminology.hl7.org/CodeSystem/v2-0315"
+CITAS_PD17 = {"adt": C["PD1-7"], "oru": [c if c != "[G MSG_ADT_A01.csv:19]" else "[G MSG_ORU_R01.csv:17]"   # etapa 41
+                                        for c in C["PD1-7"]]}                                       # (Q-PO-2 b)
 
 
 def _cit(clave):
@@ -443,6 +445,13 @@ def emparejar(m, entries, familia, notas=()):
         x, _ = resolver(entries, e["r"].get("subject"), e, "Patient")
         return pat is not None and x is pat
 
+    def apartar_pd17(lista):                                       # etapas 40 y 41 (L-CV-18): la Observation de PD1-7, aparte
+        pd17 = _origen_pd17(m, lista)
+        if pd17 is None:
+            return lista
+        rol("Observation#PD1", "PD1-7", pd17[0], pd17[1], pd17[2])
+        return [e for e in lista if pd17[0] is None or e is not pd17[0]]
+
     if familia == "vxu":                                            # gancho 4 (etapa 20): Immunization, Observation, NK1, PV1
         CVX.emparejar(m, entries, top, out, pat, rol, usados)
     elif familia == "mdm":                                          # gancho 2 (etapa 26): DocumentReference, ServiceRequest, PV1
@@ -477,10 +486,7 @@ def emparejar(m, entries, familia, notas=()):
                 usados.add(e["i"])
         n_obx = len(m.segmentos("OBX"))
         obs = [e for e in top if e["tipo"] in ("Observation", "DiagnosticReport")]
-        pd17 = _origen_pd17(m, obs)                                        # etapa 40 (L-CV-18): antes que ACC y PDA (Q-PD-2 a)
-        if pd17 is not None:
-            rol("Observation#PD1", "PD1-7", pd17[0], pd17[1], pd17[2])
-            obs = [e for e in obs if pd17[0] is None or e is not pd17[0]]
+        obs = apartar_pd17(obs)                                            # etapa 40 (L-CV-18): antes que ACC y PDA (Q-PD-2 a)
         k = 0
         for e in obs:
             sm = _origen_sin_mapa(m, e["r"]) if e["tipo"] == "Observation" else None      # etapa 37 (L-CV-17)
@@ -497,6 +503,7 @@ def emparejar(m, entries, familia, notas=()):
         grupos, fuera = _grupos_oru(m)
         drs = [e for e in top if e["tipo"] == "DiagnosticReport"]
         ob = [e for e in top if e["tipo"] == "Observation"]
+        ob = apartar_pd17(ob)                                              # etapa 41: antes de los OBX y de los huecos de L-CV-7
         libres = list(drs)
         asignados = {}
         for i, (obr, _) in enumerate(grupos, 1):
@@ -1074,22 +1081,22 @@ def _status_encounter(J, ev, c2, p45, obs):
             J.cuenta("valor_distinto", hecho, "Encounter.status: esperado uno de %r, observado %r" % (sorted(adm), obs))
 
 
-def _sujeto(J, m, r, desde, pat_entry, ruta, hecho):
+def _sujeto(J, m, r, desde, pat_entry, ruta, hecho, citas=None):      # citas: etapa 41 (por omisión, las del hecho)
     ref = r.get("subject")
     if ref is None:
         if pat_entry is not None:
-            J.cuenta("dato_perdido", hecho, "%s: falta" % ruta)
+            J.cuenta("dato_perdido", hecho, "%s: falta" % ruta, citas=citas)
         return
     x, forma = resolver(J.entries, ref, desde, "Patient")
     if x is not None and x is pat_entry:
         if forma == "logica":
-            J.nota("convencion", hecho, "%s: referencia lógica por identifier" % ruta)
+            J.nota("convencion", hecho, "%s: referencia lógica por identifier" % ruta, citas=citas)
         return
     if forma == "logica" and x is None:
         pid = _seg(m, "PID")
         ids3 = {_t(m, rr, 1) for rr in _reps(m, _f(m, pid, 3))} if pid else set()
         if (ref.get("identifier") or {}).get("value") in ids3:
-            J.nota("convencion", hecho, "%s: referencia lógica a %r" % (ruta, ref["identifier"]["value"]))
+            J.nota("convencion", hecho, "%s: referencia lógica a %r" % (ruta, ref["identifier"]["value"]), citas=citas)
             return
     if _seg(m, "PID") is None:                               # CV4 (CV3, M-23): el hecho es el PID que falta, no PID-3
         J.cuenta("referencia_rota", "PID", "%s: %r apunta a un Patient %s, y el mensaje no trae PID" %
@@ -1619,26 +1626,42 @@ def verificar(e, pe, dec=None):
     return out
 
 
-def _livingwill(J, m, v, r, entry, pat_entry):
+def _livingwill(J, m, v, r, entry, pat_entry, citas=None):
     """Etapa 40 (L-CV-18): la Observation de PD1-7. El paquete solo fija PD1-7 → valueCodeableConcept por la 0315 (identidad); además,
-    su status (FHIR R4, 1..1, required) y su sujeto. Code, effective[x] y lo demás no se juzgan."""
+    su status (FHIR R4, 1..1, required) y su sujeto. Code, effective[x] y lo demás no se juzgan. Etapa 41: cita la hoja de su
+    mensaje (CITAS_PD17, Q-PO-2 b)."""
+    citas = citas or C["PD1-7"]
     st = r.get("status")
     if st not in ESTADO_FHIR["0085"]:
-        J.cuenta("fhir_invalido", "PD1-7", "Observation.status: %r fuera de observation-status (required)" % (st,), citas=C["PD1-7"])
+        J.cuenta("fhir_invalido", "PD1-7", "Observation.status: %r fuera de observation-status (required)" % (st,), citas=citas)
     obs = _codigos(r.get("valueCodeableConcept"))
     t = mapa("0315", v)
     if t in (FUERA, None):                      # la 0315 es de usuario: fuera de ella, el mismo código vale; otro, convención
         if obs and v not in {c for _, c in obs}:
             J.nota("convencion" if J.v25 else "version", "PD1-7", "Observation.valueCodeableConcept: %r para %r, fuera del ConceptMap "
-                   "(la 0315 es user-defined)" % (obs, v), citas=C["PD1-7"])
+                   "(la 0315 es user-defined)" % (obs, v), citas=citas)
     elif tuple(t) not in obs:
         if any(s == S0315 for s, _ in obs):
             J.cuenta("valor_distinto", "PD1-7", "Observation.valueCodeableConcept: esperado %r, observado %r" % (
-                t[1], [c for s, c in obs if s == S0315]), citas=C["PD1-7"])
+                t[1], [c for s, c in obs if s == S0315]), citas=citas)
         else:
             J.cuenta("codigo_mal_mapeado", "PD1-7", "Observation.valueCodeableConcept: esperado %r (de %r), observado %r" % (t, v, obs),
-                     citas=C["PD1-7"])
-    _sujeto(J, m, r, entry, pat_entry, "Observation.subject", "PD1-7")
+                     citas=citas)
+    _sujeto(J, m, r, entry, pat_entry, "Observation.subject", "PD1-7", citas=citas)
+
+
+def _juzgar_pd17(J, m, roles, pat_entry, familia):
+    """Etapas 40 y 41 (Q-PD-3 a, Q-PO-2 b): con PD1-7 valorado, la Observation de PD1-7 (PD1[Observation-LivingWill]) en ADT y en ORU;
+    sin ella, recurso ausente. Cada hallazgo cita la hoja de su mensaje."""
+    v7 = _valor_pd17(m)
+    if not v7:
+        return
+    citas = CITAS_PD17[familia]
+    o = roles.get("Observation#PD1")
+    if o is None or o["entry"] is None:
+        J.cuenta("recurso_ausente", "PD1-7", "falta la Observation de PD1-7 = %r (PD1[Observation-LivingWill])" % v7, citas=citas)
+    else:
+        _livingwill(J, m, v7, o["entry"]["r"], o["entry"], pat_entry, citas)
 
 
 def _juzgar(J, m, lec, familia):
@@ -1663,14 +1686,7 @@ def _juzgar(J, m, lec, familia):
                     J.cuenta("recurso_ausente", "PV1", "falta el Encounter del PV1" + (" (PV1-2 = N: Q-CV-D-6)" if c2 == "N" else ""))
             else:
                 _encounter(J, m, pv1, en["entry"]["r"], lec["entries"], pat_entry, en["entry"])
-        v7 = _valor_pd17(m)                                            # etapa 40 (Q-PD-3 a): la Observation de PD1-7
-        if v7:
-            o = roles.get("Observation#PD1")
-            if o is None or o["entry"] is None:
-                J.cuenta("recurso_ausente", "PD1-7", "falta la Observation de PD1-7 = %r (PD1[Observation-LivingWill])" % v7,
-                         citas=C["PD1-7"])
-            else:
-                _livingwill(J, m, v7, o["entry"]["r"], o["entry"], pat_entry)
+        _juzgar_pd17(J, m, roles, pat_entry, "adt")                    # etapa 40 (Q-PD-3 a): la Observation de PD1-7
     elif familia == "vxu":                                          # gancho 5 (etapa 20)
         CVX.juzgar(J, m, lec, pat_entry)
     elif familia == "mdm":                                          # gancho 6 (etapa 26)
@@ -1691,6 +1707,7 @@ def _juzgar(J, m, lec, familia):
                 J.cuenta("recurso_ausente", _hecho("OBR", i, 4), "falta el DiagnosticReport del OBR %d" % i, citas=_cit("OBR"))
             else:
                 _informe(J, m, obr, d["entry"]["r"], d["entry"], pat_entry, i, obs_e, lec["entries"])
+        _juzgar_pd17(J, m, roles, pat_entry, "oru")                    # etapa 41 (MSG_ORU_R01.csv:17)
     for s in lec["sobrantes"]:
         if s["motivo"] == "origen_guia":
             J.nota("fuera_proyeccion", s["hecho"], "%s sin OBR que la guía crea desde un OBX fuera de ORDER_OBSERVATION (L-CV-7)" % s["resourceType"])
@@ -1745,6 +1762,7 @@ PERFIL_GUIA_ORU = [
     {"elemento": "Observation.valueQuantity.unit/code/system", "campo": "OBX-6", "regla": "unit CWE.2 o CWE.1; code CWE.1 y system CWE.3 si ambos; UCUM canónico", "nivel": "cuenta", "citas": C["OBX-6"]},
     {"elemento": "Observation.interpretation[]", "campo": "OBX-8", "regla": "por la 0078 a v3-ObservationInterpretation", "nivel": "cuenta", "citas": C["OBX-8"]},
     {"elemento": "Observation.referenceRange[]", "campo": "OBX-7", "regla": "text igual o low/high", "nivel": "convencion", "citas": C["OBX-7"]},
+    {"elemento": "Observation (de PD1-7)", "campo": "PD1-7", "regla": "IF PD1-7 VALUED: valueCodeableConcept por la 0315 (identidad), status y subject; se reconoce por el sistema de la 0315 o el código de PD1-7, aparte antes de casar las de los OBX; sin ella, recurso ausente (L-CV-18, etapa 41)", "nivel": "cuenta", "citas": CITAS_PD17["oru"]},
     {"elemento": "Observation.identifier propio, subject lógico, otros elementos", "campo": "—", "regla": "las 6 filas de convención del laboratorio se apartan (§3.3)", "nivel": "convencion", "citas": ["[D-ORU-1]", "[S58]", "[S69]"]},
 ]
 
@@ -1752,7 +1770,7 @@ PERFIL_GUIA_ORU = [
 S_CV = {"S-CV-1": "Dos puntos de entrada de solo transformación, adt_conv y oru_conv, con el contrato de su familia; el juez despacha antes de leer acuse, log o canónico (Q-CV-D-1).",
         "S-CV-2": "La evidencia es {mensaje, punto_entrada, conversion}: quién convirtió y qué devolvió (Bundle como texto, o error).",
         "S-CV-3": "Lo esperado es la proyección «guía» (ConceptMap de v2-to-FHIR 1.0.0), no el canónico del laboratorio; las S-n del laboratorio no cuentan contra un tercero.",
-        "S-CV-4": "El lector empareja por papel (Patient del PID, Encounter del PV1, DiagnosticReport por OBR, Observation por OBX y, desde la etapa 40, la de PD1-7 por su valor o el sistema de la 0315) resolviendo las referencias del Bundle.",
+        "S-CV-4": "El lector empareja por papel (Patient del PID, Encounter del PV1, DiagnosticReport por OBR, Observation por OBX y, desde la etapa 40, la de PD1-7 por su valor o el sistema de la 0315, en ADT y, desde la etapa 41, en ORU) resolviendo las referencias del Bundle.",
         "S-CV-5": "Cuenta lo que cambia el significado del dato: valor distinto, dato perdido, dato inventado, código mal mapeado, valor imposible convertido, recurso ausente/duplicado/inventado/sin mapa (etapa 37), referencia rota y FHIR inválido; lo demás es forma.",
         "S-CV-6": "Manda la versión escrita en MSH-12; con MSH-12 ≠ 2.5, lo que dependa de las tablas o estructuras de 2.5 no cuenta (L18); MSH-9.3 nunca cuenta."}
 L_CV = {"L-CV-1": "Con MSH-12 ≠ 2.5 la legalidad de un código o de la estructura no se juzga (nota version, L18); MSH-9.3 nunca cuenta en adt_conv/oru_conv.",
@@ -1789,9 +1807,12 @@ L_CV = {"L-CV-1": "Con MSH-12 ≠ 2.5 la legalidad de un código o de la estruct
                    "otro value[x] no se reconoce: sale recurso_ausente de PD1-7 y la Observation sigue por los pasos de siempre "
                    "(recurso_inventado, o ACC/PDA por la 0136). Con PD1-7 en Y o N y ACC o PDA con ese valor, una Observation de "
                    "solo Y/N sin el sistema de la 0315 (sin sistema, o con el de la 0136) es la de PD1-7, con código mal mapeado, y "
-                   "no de ACC o PDA (Q-PD-4); si hay dos así, la primera, y la otra sigue la regla de la 0136. Solo en ADT: la hoja "
-                   "de ORU también la crea "
-                   "(MSG_ORU_R01.csv:17) y en oru_conv sigue como recurso_inventado."}
+                   "no de ACC o PDA (Q-PD-4); si hay dos así, la primera, y la otra sigue la regla de la 0136. En ADT y, desde la "
+                   "etapa 41, en ORU (MSG_ORU_R01.csv:17): en oru_conv se aparta antes de casar las de los OBX y nunca ocupa un "
+                   "hueco de L-CV-7; una referencia a ella desde DiagnosticReport.result sigue siendo referencia_rota del OBR, "
+                   "porque la hoja no la pone en result (Q-PO-1); se lee el primer PD1, como el primer PID, aunque el ORU traiga "
+                   "varios PATIENT_RESULT; con el código de un OBX, también de uno fuera de ORDER_OBSERVATION, es la de ese OBX, y "
+                   "la Observation de un OBX que pierde su código y lleva el valor de PD1-7 pasa por la de PD1-7."}
 AMB_CV = {"AMB-CV-1": "Código origen en minúscula: mapearlo o no, ambos aceptables.",
           "AMB-CV-2": "FN con subcomponentes: Jev (Q-CV-D-9) admite solo FN.1 en family; la alternativa admite FN.1-5 unidos.",
           "AMB-CV-3": "XPN.3 / XCN.4 con varios nombres: entero o partido en given.",

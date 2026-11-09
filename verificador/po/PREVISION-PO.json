@@ -1,0 +1,78 @@
+{
+ "conteo": {
+  "con_PD1": {
+   "adt_conv": 5655,
+   "oru_conv": 69,
+   "vxu_conv": 63
+  },
+  "control_ORU-L-CV-7-inventada": {
+   "oru_conv": 53
+  },
+  "control_ORU-OBX-fuera-de-sitio_cota": {
+   "oru_conv": 4347
+  },
+  "evidencias": {
+   "adt_conv": 21553,
+   "mdm_conv": 1180,
+   "oru_conv": 4424,
+   "vxu_conv": 2961
+  }
+ },
+ "etapa": 41,
+ "linea_base": {
+  "evidencias": 30118,
+  "fichero": "base-antes.jsonl",
+  "sha256": "3c9360cc5f6c5c65687826dbfb2e27f8c427b7a962265456809ff96ea96c85d3"
+ },
+ "prevision": {
+  "bases": {
+   "demostracion": "en las tres cambia solo creada_de.juez.huella; ningún caso; las dos corridas de cada una, iguales byte a byte",
+   "ejemplo": "en las dos cambia solo la huella del juez; ningún caso",
+   "juguete_positivo_casos": 344
+  },
+  "clases": {
+   "frase_antes": {
+    "C_convenciones": 16,
+    "C_nota": "notas de nivel convención del juez final, por conversor, hecho y firma, más PV1-19 «VN» en los dos (DV-CV-15)",
+    "D_por_conversor": {
+     "linuxforhealth": 12,
+     "microsoft": 19
+    },
+    "D_ya_declaradas": 31,
+    "K_conversores": 2,
+    "M_mensajes": 368,
+    "N_fuertes": 7,
+    "N_nuevas_confirmadas": 15,
+    "N_por_conversor": {
+     "linuxforhealth": 10,
+     "microsoft": 5
+    },
+    "dudosas": 3,
+    "rechazos_nuevos": 2
+   },
+   "iguales_caso_a_caso_salvo_la_huella_del_juez": true,
+   "juez_antes": "3ce339c745eff52ba78a806722ff6bb74aff77936c94a3520bb7634b7ca3b3ae",
+   "n_sin_clase_antes": 0
+  },
+  "control": {
+   "con_defecto": {
+    "ADT-PD1-7-ausente": 15979,
+    "OBX-5": "más de 0",
+    "ORU-L-CV-7-inventada": 53,
+    "ORU-OBX-fuera-de-sitio": "más de 0 y como mucho 4347 (los ORU con un OBX en ORDER_OBSERVATION)",
+    "ORU-PD1-7-ausente": "más de 0 y como mucho 4424 (los ORU que llegan al juicio)",
+    "ORU-PD1-7-valor-ajeno": "como mucho 69 (los ORU con PD1)",
+    "PID-5": 23765
+   },
+   "todas_fuera": true
+  },
+  "rejuicio": {
+   "diferencias": 0,
+   "faltan": 0,
+   "fuera": 0,
+   "pd17oru": 0,
+   "por_que": "Ninguna evidencia lleva PD1-7 valorado (0 en oru_conv, 0 en total): el paso nuevo del emparejamiento de ORU y el juicio nuevo solo se dan con él; en ADT el código es el mismo, movido a dos ayudantes y llamado en el mismo punto, con las mismas citas.",
+   "punto_cambia": 0
+  }
+ }
+}
